@@ -1,0 +1,20 @@
+# Aetherdrift Commander Case.
+# 2 unique decks (Eternal Might, Living Energy), 2 of each per case (4 decks total).
+# TCGPlayer doesn't sell a full case for DRC — only the "Set of 2" (product 609612).
+# case cost = 2 × set-of-2 market price.
+key: aetherdrift-commander-display
+name: Aetherdrift Commander Case
+game: mtg
+set_code: drc
+type: commander_case
+product_display_key: mtg-drc-commander-display
+product_set_of_n_tcgplayer_id: "609612"
+sets_of_n_per_case: 2
+
+decks:
+  - deck_key: aetherdrift-commander-eternal-might
+    copies: 2
+  - deck_key: aetherdrift-commander-living-energy
+    copies: 2
+
+extra_components: []

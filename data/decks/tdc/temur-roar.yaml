@@ -1,0 +1,470 @@
+key: tdc-commander-temur-roar
+name: Temur Roar
+game: mtg
+set_code: tdc
+product_display_key: mtg-tdc-commander-temur-roar
+product_tcgplayer_id: "619668"
+image: /img/decks/tdc-commander-temur-roar.jpg
+channels: [tcgplayer, manapool]
+components:
+  - display_key: mtg-tdc-3-f
+    qty: 1
+    name: "Eshki, Temur's Roar"
+    tcgplayer_product_id: "623910"
+    finish: f
+    note: commander
+  - display_key: mtg-tdc-9-f
+    qty: 1
+    name: Ureni of the Unwritten
+    tcgplayer_product_id: "623916"
+    finish: f
+  - display_key: mtg-tdc-19-nf
+    qty: 1
+    name: Deceptive Frostkite
+    tcgplayer_product_id: "625123"
+    finish: nf
+  - display_key: mtg-tdc-21-nf
+    qty: 1
+    name: Hammerhead Tyrant
+    tcgplayer_product_id: "624915"
+    finish: nf
+  - display_key: mtg-tdc-24-nf
+    qty: 1
+    name: Will of the Temur
+    tcgplayer_product_id: "624916"
+    finish: nf
+  - display_key: mtg-tdc-36-nf
+    qty: 1
+    name: Parapet Thrasher
+    tcgplayer_product_id: "624922"
+    finish: nf
+  - display_key: mtg-tdc-38-nf
+    qty: 1
+    name: Thundermane Dragon
+    tcgplayer_product_id: "624923"
+    finish: nf
+  - display_key: mtg-tdc-41-nf
+    qty: 1
+    name: Zenith Festival
+    tcgplayer_product_id: "624924"
+    finish: nf
+  - display_key: mtg-tdc-43-nf
+    qty: 1
+    name: Become the Avalanche
+    tcgplayer_product_id: "624953"
+    finish: nf
+  - display_key: mtg-tdc-44-nf
+    qty: 1
+    name: Broodcaller Scourge
+    tcgplayer_product_id: "624954"
+    finish: nf
+  - display_key: mtg-tdc-156-nf
+    qty: 1
+    name: "Keiga, the Tide Star"
+    tcgplayer_product_id: "624918"
+    finish: nf
+  - display_key: mtg-tdc-164-nf
+    qty: 1
+    name: Reflections of Littjara
+    tcgplayer_product_id: "624921"
+    finish: nf
+  - display_key: mtg-tdc-204-nf
+    qty: 1
+    name: "Atsushi, the Blazing Sky"
+    tcgplayer_product_id: "624927"
+    finish: nf
+  - display_key: mtg-tdc-207-nf
+    qty: 1
+    name: Blasphemous Act
+    tcgplayer_product_id: "624928"
+    finish: nf
+  - display_key: mtg-tdc-208-nf
+    qty: 1
+    name: Chaos Warp
+    tcgplayer_product_id: "624929"
+    finish: nf
+  - display_key: mtg-tdc-211-nf
+    qty: 1
+    name: Dragonmaster Outcast
+    tcgplayer_product_id: "624931"
+    finish: nf
+  - display_key: mtg-tdc-214-nf
+    qty: 1
+    name: "Gadrak, the Crown-Scourge"
+    tcgplayer_product_id: "624932"
+    finish: nf
+  - display_key: mtg-tdc-215-nf
+    qty: 1
+    name: Glorybringer
+    tcgplayer_product_id: "624933"
+    finish: nf
+  - display_key: mtg-tdc-218-nf
+    qty: 1
+    name: Hellkite Courser
+    tcgplayer_product_id: "624934"
+    finish: nf
+  - display_key: mtg-tdc-219-nf
+    qty: 1
+    name: "Lathliss, Dragon Queen"
+    tcgplayer_product_id: "624935"
+    finish: nf
+  - display_key: mtg-tdc-221-nf
+    qty: 1
+    name: Leyline Tyrant
+    tcgplayer_product_id: "624936"
+    finish: nf
+  - display_key: mtg-tdc-225-nf
+    qty: 1
+    name: Nesting Dragon
+    tcgplayer_product_id: "624937"
+    finish: nf
+  - display_key: mtg-tdc-226-nf
+    qty: 1
+    name: "Nogi, Draco-Zealot"
+    tcgplayer_product_id: "624938"
+    finish: nf
+  - display_key: mtg-tdc-228-nf
+    qty: 1
+    name: Opportunistic Dragon
+    tcgplayer_product_id: "624939"
+    finish: nf
+  - display_key: mtg-tdc-230-nf
+    qty: 1
+    name: Scourge of the Throne
+    tcgplayer_product_id: "624941"
+    finish: nf
+  - display_key: mtg-tdc-233-nf
+    qty: 1
+    name: Skarrgan Hellkite
+    tcgplayer_product_id: "624942"
+    finish: nf
+  - display_key: mtg-tdc-234-nf
+    qty: 1
+    name: Spit Flame
+    tcgplayer_product_id: "624943"
+    finish: nf
+  - display_key: mtg-tdc-236-nf
+    qty: 1
+    name: "Storm's Wrath"
+    tcgplayer_product_id: "624944"
+    finish: nf
+  - display_key: mtg-tdc-237-nf
+    qty: 1
+    name: Stormbreath Dragon
+    tcgplayer_product_id: "624945"
+    finish: nf
+  - display_key: mtg-tdc-238-nf
+    qty: 1
+    name: Taurean Mauler
+    tcgplayer_product_id: "624946"
+    finish: nf
+  - display_key: mtg-tdc-240-nf
+    qty: 1
+    name: Territorial Hellkite
+    tcgplayer_product_id: "624947"
+    finish: nf
+  - display_key: mtg-tdc-241-nf
+    qty: 1
+    name: Thunderbreak Regent
+    tcgplayer_product_id: "624948"
+    finish: nf
+  - display_key: mtg-tdc-242-nf
+    qty: 1
+    name: Vengeful Ancestor
+    tcgplayer_product_id: "624949"
+    finish: nf
+  - display_key: mtg-tdc-243-nf
+    qty: 1
+    name: Verix Bladewing
+    tcgplayer_product_id: "624950"
+    finish: nf
+  - display_key: mtg-tdc-256-nf
+    qty: 1
+    name: Frontier Siege
+    tcgplayer_product_id: "624957"
+    finish: nf
+  - display_key: mtg-tdc-269-nf
+    qty: 1
+    name: "Selvala's Stampede"
+    tcgplayer_product_id: "624960"
+    finish: nf
+  - display_key: mtg-tdc-281-nf
+    qty: 1
+    name: "Atarka, World Render"
+    tcgplayer_product_id: "624961"
+    finish: nf
+  - display_key: mtg-tdc-285-nf
+    qty: 1
+    name: Dragonlord Atarka
+    tcgplayer_product_id: "624962"
+    finish: nf
+  - display_key: mtg-tdc-291-nf
+    qty: 1
+    name: Harbinger of the Hunt
+    tcgplayer_product_id: "624963"
+    finish: nf
+  - display_key: mtg-tdc-301-nf
+    qty: 1
+    name: "Sarkhan, Soul Aflame"
+    tcgplayer_product_id: "624964"
+    finish: nf
+  - display_key: mtg-tdc-305-nf
+    qty: 1
+    name: Temur Ascendancy
+    tcgplayer_product_id: "624965"
+    finish: nf
+  - display_key: mtg-tdc-317-nf
+    qty: 1
+    name: "Dragon's Hoard"
+    tcgplayer_product_id: "624966"
+    finish: nf
+  - display_key: mtg-tdc-327-nf
+    qty: 1
+    name: Steel Hellkite
+    tcgplayer_product_id: "624967"
+    finish: nf
+  - display_key: mtg-tdc-350-nf
+    qty: 1
+    name: Cinder Glade
+    tcgplayer_product_id: "624972"
+    finish: nf
+  - display_key: mtg-tdc-360-nf
+    qty: 1
+    name: Exotic Orchard
+    tcgplayer_product_id: "624207"
+    finish: nf
+  - display_key: mtg-tdc-364-nf
+    qty: 1
+    name: Flooded Grove
+    tcgplayer_product_id: "624973"
+    finish: nf
+  - display_key: mtg-tdc-370-nf
+    qty: 1
+    name: Haven of the Spirit Dragon
+    tcgplayer_product_id: "624974"
+    finish: nf
+  - display_key: mtg-tdc-371-nf
+    qty: 1
+    name: Hinterland Harbor
+    tcgplayer_product_id: "624466"
+    finish: nf
+  - display_key: mtg-tdc-374-nf
+    qty: 1
+    name: Karplusan Forest
+    tcgplayer_product_id: "624975"
+    finish: nf
+  - display_key: mtg-tdc-375-nf
+    qty: 1
+    name: Kessig Wolf Run
+    tcgplayer_product_id: "624976"
+    finish: nf
+  - display_key: mtg-tdc-378-nf
+    qty: 1
+    name: Mossfire Valley
+    tcgplayer_product_id: "624977"
+    finish: nf
+  - display_key: mtg-tdc-379-nf
+    qty: 1
+    name: Mosswort Bridge
+    tcgplayer_product_id: "624978"
+    finish: nf
+  - display_key: mtg-tdc-387-nf
+    qty: 1
+    name: Rockfall Vale
+    tcgplayer_product_id: "624979"
+    finish: nf
+  - display_key: mtg-tdc-388-nf
+    qty: 1
+    name: Rootbound Crag
+    tcgplayer_product_id: "624980"
+    finish: nf
+  - display_key: mtg-tdc-392-nf
+    qty: 1
+    name: Sheltered Thicket
+    tcgplayer_product_id: "624981"
+    finish: nf
+  - display_key: mtg-tdc-393-nf
+    qty: 1
+    name: Shivan Reef
+    tcgplayer_product_id: "624216"
+    finish: nf
+  - display_key: mtg-tdc-396-nf
+    qty: 1
+    name: Sulfur Falls
+    tcgplayer_product_id: "624218"
+    finish: nf
+  - display_key: mtg-tdc-400-nf
+    qty: 1
+    name: Temple of Abandon
+    tcgplayer_product_id: "624982"
+    finish: nf
+  - display_key: mtg-tdc-404-nf
+    qty: 1
+    name: Temple of Mystery
+    tcgplayer_product_id: "624983"
+    finish: nf
+  - display_key: mtg-tdc-413-nf
+    qty: 1
+    name: Yavimaya Coast
+    tcgplayer_product_id: "624984"
+    finish: nf
+  - display_key: mtg-tdc-94-nf
+    qty: 1
+    name: Dragon Tempest
+    tcgplayer_product_id: "624926"
+    finish: nf
+  - display_key: mtg-tdm-101-nf
+    qty: 1
+    name: Breaching Dragonstorm
+    tcgplayer_product_id: "624575"
+    finish: nf
+  - display_key: mtg-tdc-104-nf
+    qty: 1
+    name: Temple of the Dragon Queen
+    tcgplayer_product_id: "624970"
+    finish: nf
+  - display_key: mtg-tdc-105-nf
+    qty: 1
+    name: Arcane Signet
+    tcgplayer_product_id: "624048"
+    finish: nf
+  - display_key: mtg-tdc-106-nf
+    qty: 1
+    name: Sol Ring
+    tcgplayer_product_id: "624049"
+    finish: nf
+  - display_key: mtg-tdc-107-nf
+    qty: 1
+    name: Command Tower
+    tcgplayer_product_id: "623982"
+    finish: nf
+  - display_key: mtg-tdm-124-nf
+    qty: 1
+    name: Stormshriek Feral // Flush Out
+    tcgplayer_product_id: "624736"
+    finish: nf
+  - display_key: mtg-tdm-142-nf
+    qty: 1
+    name: Encroaching Dragonstorm
+    tcgplayer_product_id: "624951"
+    finish: nf
+  - display_key: mtg-tdc-151-nf
+    qty: 1
+    name: Draconic Lore
+    tcgplayer_product_id: "624917"
+    finish: nf
+  - display_key: mtg-tdc-162-nf
+    qty: 1
+    name: Rapid Hybridization
+    tcgplayer_product_id: "624919"
+    finish: nf
+  - display_key: mtg-tdc-163-nf
+    qty: 1
+    name: Reality Shift
+    tcgplayer_product_id: "624920"
+    finish: nf
+  - display_key: mtg-tdc-210-nf
+    qty: 1
+    name: "Dragonlord's Servant"
+    tcgplayer_product_id: "624930"
+    finish: nf
+  - display_key: mtg-tdc-229-nf
+    qty: 1
+    name: Rapacious Dragon
+    tcgplayer_product_id: "624940"
+    finish: nf
+  - display_key: mtg-tdm-234-nf
+    qty: 1
+    name: Whirlwing Stormbrood // Dynamic Soar
+    tcgplayer_product_id: "624407"
+    finish: nf
+  - display_key: mtg-tdc-249-nf
+    qty: 1
+    name: Beast Within
+    tcgplayer_product_id: "624955"
+    finish: nf
+  - display_key: mtg-tdc-254-nf
+    qty: 1
+    name: Elemental Bond
+    tcgplayer_product_id: "624956"
+    finish: nf
+  - display_key: mtg-tdc-255-nf
+    qty: 1
+    name: Farseek
+    tcgplayer_product_id: "624453"
+    finish: nf
+  - display_key: mtg-tdm-255-nf
+    qty: 1
+    name: Evolving Wilds
+    tcgplayer_product_id: "624263"
+    finish: nf
+  - display_key: mtg-tdm-256-nf
+    qty: 1
+    name: Frontier Bivouac
+    tcgplayer_product_id: "624264"
+    finish: nf
+  - display_key: mtg-tdc-261-nf
+    qty: 1
+    name: "Kodama's Reach"
+    tcgplayer_product_id: "624958"
+    finish: nf
+  - display_key: mtg-tdc-262-nf
+    qty: 1
+    name: Migration Path
+    tcgplayer_product_id: "624959"
+    finish: nf
+  - display_key: mtg-tdc-318-nf
+    qty: 1
+    name: Fellwar Stone
+    tcgplayer_product_id: "624374"
+    finish: nf
+  - display_key: mtg-tdc-330-nf
+    qty: 1
+    name: Talisman of Creativity
+    tcgplayer_product_id: "624968"
+    finish: nf
+  - display_key: mtg-tdc-332-nf
+    qty: 1
+    name: Talisman of Impulse
+    tcgplayer_product_id: "624969"
+    finish: nf
+  - display_key: mtg-tdc-342-nf
+    qty: 1
+    name: Bountiful Landscape
+    tcgplayer_product_id: "624971"
+    finish: nf
+  - display_key: mtg-tdc-382-nf
+    qty: 1
+    name: Path of Ancestry
+    tcgplayer_product_id: "624211"
+    finish: nf
+  - display_key: mtg-tdm-279-nf
+    qty: 2
+    name: Island
+    tcgplayer_product_id: "623968"
+    finish: nf
+  - display_key: mtg-tdm-280-nf
+    qty: 1
+    name: Island
+    tcgplayer_product_id: "623969"
+    finish: nf
+  - display_key: mtg-tdm-283-nf
+    qty: 3
+    name: Mountain
+    tcgplayer_product_id: "623975"
+    finish: nf
+  - display_key: mtg-tdm-284-nf
+    qty: 3
+    name: Mountain
+    tcgplayer_product_id: "623977"
+    finish: nf
+  - display_key: mtg-tdm-285-nf
+    qty: 3
+    name: Forest
+    tcgplayer_product_id: "623978"
+    finish: nf
+  - display_key: mtg-tdm-286-nf
+    qty: 2
+    name: Forest
+    tcgplayer_product_id: "623979"
+    finish: nf

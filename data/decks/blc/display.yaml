@@ -1,0 +1,19 @@
+key: blc-commander-display
+name: Bloomburrow Commander Case
+game: mtg
+set_code: blc
+type: commander_case
+product_display_key: mtg-blc-commander-display
+product_tcgplayer_id: "541250"
+
+decks:
+  - deck_key: blc-commander-animated-army
+    copies: 1
+  - deck_key: blc-commander-family-matters
+    copies: 1
+  - deck_key: blc-commander-peace-offering
+    copies: 1
+  - deck_key: blc-commander-squirreled-away
+    copies: 1
+
+extra_components: []

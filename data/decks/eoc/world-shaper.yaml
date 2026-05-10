@@ -1,0 +1,460 @@
+key: eoc-commander-world-shaper
+name: World Shaper
+game: mtg
+set_code: eoc
+product_display_key: mtg-eoc-commander-world-shaper
+product_tcgplayer_id: "619676"
+image: /img/decks/eoc-commander-world-shaper.jpg
+channels: [tcgplayer, manapool]
+components:
+  - display_key: mtg-eoc-1-f
+    qty: 1
+    name: "Hearthhull, the Worldseed"
+    tcgplayer_product_id: "641861"
+    finish: f
+    note: commander
+  - display_key: mtg-eoc-4-f
+    qty: 1
+    name: "Szarel, Genesis Shepherd"
+    tcgplayer_product_id: "638907"
+    finish: f
+  - display_key: mtg-eoc-8-nf
+    qty: 1
+    name: Eumidian Wastewaker
+    tcgplayer_product_id: "641959"
+    finish: nf
+  - display_key: mtg-eoc-10-nf
+    qty: 1
+    name: Evendo Brushrazer
+    tcgplayer_product_id: "641965"
+    finish: nf
+  - display_key: mtg-eoc-12-nf
+    qty: 1
+    name: Planetary Annihilation
+    tcgplayer_product_id: "641967"
+    finish: nf
+  - display_key: mtg-eoc-13-nf
+    qty: 1
+    name: Baloth Prime
+    tcgplayer_product_id: "641975"
+    finish: nf
+  - display_key: mtg-eoc-14-nf
+    qty: 1
+    name: Exploration Broodship
+    tcgplayer_product_id: "641978"
+    finish: nf
+  - display_key: mtg-eoc-15-nf
+    qty: 1
+    name: Horizon Explorer
+    tcgplayer_product_id: "641983"
+    finish: nf
+  - display_key: mtg-eoc-16-nf
+    qty: 1
+    name: Scouring Swarm
+    tcgplayer_product_id: "642007"
+    finish: nf
+  - display_key: mtg-eoc-20-nf
+    qty: 1
+    name: Eumidian Hatchery
+    tcgplayer_product_id: "642026"
+    finish: nf
+  - display_key: mtg-eoc-21-nf
+    qty: 1
+    name: Festering Thicket
+    tcgplayer_product_id: "642027"
+    finish: nf
+  - display_key: mtg-eoc-24-nf
+    qty: 1
+    name: Vernal Fen
+    tcgplayer_product_id: "642028"
+    finish: nf
+  - display_key: mtg-eoc-60-nf
+    qty: 1
+    name: Fabled Passage
+    tcgplayer_product_id: "642033"
+    finish: nf
+  - display_key: mtg-eoc-82-nf
+    qty: 1
+    name: "Braids, Arisen Nightmare"
+    tcgplayer_product_id: "641961"
+    finish: nf
+  - display_key: mtg-eoc-83-nf
+    qty: 1
+    name: God-Eternal Bontu
+    tcgplayer_product_id: "641962"
+    finish: nf
+  - display_key: mtg-eoc-86-nf
+    qty: 1
+    name: Blasphemous Act
+    tcgplayer_product_id: "641969"
+    finish: nf
+  - display_key: mtg-eoc-88-nf
+    qty: 1
+    name: Hammer of Purphoros
+    tcgplayer_product_id: "641970"
+    finish: nf
+  - display_key: mtg-eoc-89-nf
+    qty: 1
+    name: "Moraug, Fury of Akoum"
+    tcgplayer_product_id: "641971"
+    finish: nf
+  - display_key: mtg-eoc-92-nf
+    qty: 1
+    name: Augur of Autumn
+    tcgplayer_product_id: "641988"
+    finish: nf
+  - display_key: mtg-eoc-94-nf
+    qty: 1
+    name: Centaur Vinecrasher
+    tcgplayer_product_id: "641990"
+    finish: nf
+  - display_key: mtg-eoc-96-nf
+    qty: 1
+    name: Formless Genesis
+    tcgplayer_product_id: "641991"
+    finish: nf
+  - display_key: mtg-eoc-99-nf
+    qty: 1
+    name: Loamcrafter Faun
+    tcgplayer_product_id: "641994"
+    finish: nf
+  - display_key: mtg-eoc-100-nf
+    qty: 1
+    name: "Multani, Yavimaya's Avatar"
+    tcgplayer_product_id: "641995"
+    finish: nf
+  - display_key: mtg-eoc-102-nf
+    qty: 1
+    name: Oracle of Mul Daya
+    tcgplayer_product_id: "641997"
+    finish: nf
+  - display_key: mtg-eoc-103-nf
+    qty: 1
+    name: Pest Infestation
+    tcgplayer_product_id: "641998"
+    finish: nf
+  - display_key: mtg-eoc-104-nf
+    qty: 1
+    name: Rampaging Baloths
+    tcgplayer_product_id: "641999"
+    finish: nf
+  - display_key: mtg-eoc-108-nf
+    qty: 1
+    name: Splendid Reclamation
+    tcgplayer_product_id: "642002"
+    finish: nf
+  - display_key: mtg-eoc-110-nf
+    qty: 1
+    name: Tireless Tracker
+    tcgplayer_product_id: "642004"
+    finish: nf
+  - display_key: mtg-eoc-111-nf
+    qty: 1
+    name: "Titania, Protector of Argoth"
+    tcgplayer_product_id: "642005"
+    finish: nf
+  - display_key: mtg-eoc-112-nf
+    qty: 1
+    name: World Breaker
+    tcgplayer_product_id: "642006"
+    finish: nf
+  - display_key: mtg-eoc-115-nf
+    qty: 1
+    name: Escape to the Wilds
+    tcgplayer_product_id: "642010"
+    finish: nf
+  - display_key: mtg-eoc-116-nf
+    qty: 1
+    name: Gaze of Granite
+    tcgplayer_product_id: "642011"
+    finish: nf
+  - display_key: mtg-eoc-117-nf
+    qty: 1
+    name: The Gitrog Monster
+    tcgplayer_product_id: "642012"
+    finish: nf
+  - display_key: mtg-eoc-120-nf
+    qty: 1
+    name: "Korvold, Fae-Cursed King"
+    tcgplayer_product_id: "642014"
+    finish: nf
+  - display_key: mtg-eoc-122-nf
+    qty: 1
+    name: "Mazirek, Kraul Death Priest"
+    tcgplayer_product_id: "642016"
+    finish: nf
+  - display_key: mtg-eoc-123-nf
+    qty: 1
+    name: "Omnath, Locus of Rage"
+    tcgplayer_product_id: "642017"
+    finish: nf
+  - display_key: mtg-eoc-126-nf
+    qty: 1
+    name: Soul of Windgrace
+    tcgplayer_product_id: "642020"
+    finish: nf
+  - display_key: mtg-eoc-129-nf
+    qty: 1
+    name: "Windgrace's Judgment"
+    tcgplayer_product_id: "642022"
+    finish: nf
+  - display_key: mtg-eoc-130-nf
+    qty: 1
+    name: "Worldsoul's Rage"
+    tcgplayer_product_id: "642023"
+    finish: nf
+  - display_key: mtg-eoc-152-nf
+    qty: 1
+    name: Canyon Slough
+    tcgplayer_product_id: "642058"
+    finish: nf
+  - display_key: mtg-eoc-154-nf
+    qty: 1
+    name: Cinder Glade
+    tcgplayer_product_id: "642059"
+    finish: nf
+  - display_key: mtg-eoc-164-nf
+    qty: 1
+    name: Karplusan Forest
+    tcgplayer_product_id: "642063"
+    finish: nf
+  - display_key: mtg-eoc-165-nf
+    qty: 1
+    name: Llanowar Wastes
+    tcgplayer_product_id: "642064"
+    finish: nf
+  - display_key: mtg-eoc-178-nf
+    qty: 1
+    name: Sheltered Thicket
+    tcgplayer_product_id: "642069"
+    finish: nf
+  - display_key: mtg-eoc-182-nf
+    qty: 1
+    name: Smoldering Marsh
+    tcgplayer_product_id: "642070"
+    finish: nf
+  - display_key: mtg-eoc-185-nf
+    qty: 1
+    name: Sulfurous Springs
+    tcgplayer_product_id: "642071"
+    finish: nf
+  - display_key: mtg-eoc-189-nf
+    qty: 1
+    name: Twilight Mire
+    tcgplayer_product_id: "642072"
+    finish: nf
+  - display_key: mtg-eoc-190-nf
+    qty: 1
+    name: Viridescent Bog
+    tcgplayer_product_id: "642073"
+    finish: nf
+  - display_key: mtg-eoc-50-nf
+    qty: 1
+    name: Farseek
+    tcgplayer_product_id: "641985"
+    finish: nf
+  - display_key: mtg-eoc-51-nf
+    qty: 1
+    name: Springbloom Druid
+    tcgplayer_product_id: "641986"
+    finish: nf
+  - display_key: mtg-eoc-52-nf
+    qty: 1
+    name: Binding the Old Gods
+    tcgplayer_product_id: "642009"
+    finish: nf
+  - display_key: mtg-eoc-53-nf
+    qty: 1
+    name: Arcane Signet
+    tcgplayer_product_id: "642024"
+    finish: nf
+  - display_key: mtg-eoc-57-nf
+    qty: 1
+    name: Sol Ring
+    tcgplayer_product_id: "642025"
+    finish: nf
+  - display_key: mtg-eoc-59-nf
+    qty: 1
+    name: Command Tower
+    tcgplayer_product_id: "642032"
+    finish: nf
+  - display_key: mtg-eoc-61-nf
+    qty: 1
+    name: Mountain Valley
+    tcgplayer_product_id: "642034"
+    finish: nf
+  - display_key: mtg-eoc-62-nf
+    qty: 1
+    name: Terramorphic Expanse
+    tcgplayer_product_id: "642035"
+    finish: nf
+  - display_key: mtg-eoc-84-nf
+    qty: 1
+    name: Infernal Grasp
+    tcgplayer_product_id: "641963"
+    finish: nf
+  - display_key: mtg-eoc-85-nf
+    qty: 1
+    name: "Night's Whisper"
+    tcgplayer_product_id: "641964"
+    finish: nf
+  - display_key: mtg-eoc-90-nf
+    qty: 1
+    name: Sprouting Goblin
+    tcgplayer_product_id: "641972"
+    finish: nf
+  - display_key: mtg-eoc-91-nf
+    qty: 1
+    name: Aftermath Analyst
+    tcgplayer_product_id: "641987"
+    finish: nf
+  - display_key: mtg-eoc-93-nf
+    qty: 1
+    name: Beast Within
+    tcgplayer_product_id: "641989"
+    finish: nf
+  - display_key: mtg-eoc-95-nf
+    qty: 1
+    name: Cultivate
+    tcgplayer_product_id: "644795"
+    finish: nf
+  - display_key: mtg-eoc-97-nf
+    qty: 1
+    name: Groundskeeper
+    tcgplayer_product_id: "641992"
+    finish: nf
+  - display_key: mtg-eoc-98-nf
+    qty: 1
+    name: Harrow
+    tcgplayer_product_id: "641993"
+    finish: nf
+  - display_key: mtg-eoc-101-nf
+    qty: 1
+    name: "Nature's Lore"
+    tcgplayer_product_id: "641996"
+    finish: nf
+  - display_key: mtg-eoc-105-nf
+    qty: 1
+    name: Roiling Regrowth
+    tcgplayer_product_id: "644796"
+    finish: nf
+  - display_key: mtg-eoc-106-nf
+    qty: 1
+    name: Satyr Wayfinder
+    tcgplayer_product_id: "642000"
+    finish: nf
+  - display_key: mtg-eoc-107-nf
+    qty: 1
+    name: Skyshroud Claim
+    tcgplayer_product_id: "642001"
+    finish: nf
+  - display_key: mtg-eoc-109-nf
+    qty: 1
+    name: Tear Asunder
+    tcgplayer_product_id: "642003"
+    finish: nf
+  - display_key: mtg-eoc-119-nf
+    qty: 1
+    name: "Juri, Master of the Revue"
+    tcgplayer_product_id: "642013"
+    finish: nf
+  - display_key: mtg-eoc-121-nf
+    qty: 1
+    name: Mayhem Devil
+    tcgplayer_product_id: "642015"
+    finish: nf
+  - display_key: mtg-eoc-124-nf
+    qty: 1
+    name: Putrefy
+    tcgplayer_product_id: "642018"
+    finish: nf
+  - display_key: mtg-eoc-125-nf
+    qty: 1
+    name: Rakdos Charm
+    tcgplayer_product_id: "642019"
+    finish: nf
+  - display_key: mtg-eoc-127-nf
+    qty: 1
+    name: "Uurg, Spawn of Turg"
+    tcgplayer_product_id: "642021"
+    finish: nf
+  - display_key: mtg-eoc-149-nf
+    qty: 1
+    name: Bojuka Bog
+    tcgplayer_product_id: "642036"
+    finish: nf
+  - display_key: mtg-eoc-151-nf
+    qty: 1
+    name: Cabaretti Courtyard
+    tcgplayer_product_id: "642037"
+    finish: nf
+  - display_key: mtg-eoc-156-nf
+    qty: 1
+    name: Dakmor Salvage
+    tcgplayer_product_id: "642060"
+    finish: nf
+  - display_key: mtg-eoc-157-nf
+    qty: 1
+    name: Escape Tunnel
+    tcgplayer_product_id: "642061"
+    finish: nf
+  - display_key: mtg-eoc-158-nf
+    qty: 1
+    name: Evolving Wilds
+    tcgplayer_product_id: "642062"
+    finish: nf
+  - display_key: mtg-eoc-167-nf
+    qty: 1
+    name: Maestros Theater
+    tcgplayer_product_id: "642065"
+    finish: nf
+  - display_key: mtg-eoc-169-nf
+    qty: 1
+    name: Myriad Landscape
+    tcgplayer_product_id: "642066"
+    finish: nf
+  - display_key: mtg-eoc-172-nf
+    qty: 1
+    name: Riveteers Overlook
+    tcgplayer_product_id: "642067"
+    finish: nf
+  - display_key: mtg-eoc-173-nf
+    qty: 1
+    name: Rocky Tar Pit
+    tcgplayer_product_id: "642068"
+    finish: nf
+  - display_key: mtg-eoc-191-nf
+    qty: 1
+    name: Wastes
+    tcgplayer_product_id: "642074"
+    finish: nf
+  - display_key: mtg-eoe-271-nf
+    qty: 3
+    name: Swamp
+    tcgplayer_product_id: "641842"
+    finish: nf
+  - display_key: mtg-eoe-272-nf
+    qty: 2
+    name: Swamp
+    tcgplayer_product_id: "641843"
+    finish: nf
+  - display_key: mtg-eoe-273-nf
+    qty: 2
+    name: Mountain
+    tcgplayer_product_id: "641844"
+    finish: nf
+  - display_key: mtg-eoe-274-nf
+    qty: 1
+    name: Mountain
+    tcgplayer_product_id: "641845"
+    finish: nf
+  - display_key: mtg-eoe-275-nf
+    qty: 4
+    name: Forest
+    tcgplayer_product_id: "641846"
+    finish: nf
+  - display_key: mtg-eoe-276-nf
+    qty: 4
+    name: Forest
+    tcgplayer_product_id: "641847"
+    finish: nf

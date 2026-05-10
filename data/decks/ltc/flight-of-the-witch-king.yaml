@@ -1,0 +1,37 @@
+key: ltc-commander-flight-of-the-witch-king
+name: Flight of the Witch King
+game: mtg
+set_code: ltc
+product_display_key: mtg-ltc-commander-flight-of-the-witch-king
+channels: [tcgplayer, manapool]
+components:
+  - display_key: mtg-ltc-509-f
+    qty: 1
+    name: Call Forth the Tempest
+    tcgplayer_product_id: "517913"
+    finish: f
+  - display_key: mtg-ltc-510-f
+    qty: 1
+    name: Nazgûl Battle-Mace
+    tcgplayer_product_id: "517259"
+    finish: f
+  - display_key: mtg-ltc-511-f
+    qty: 1
+    name: "Witch-king, Sky Scourge"
+    tcgplayer_product_id: "517948"
+    finish: f
+  - display_key: mtg-ltc-512-f
+    qty: 1
+    name: Mordor on the March
+    tcgplayer_product_id: "517901"
+    finish: f
+  - display_key: mtg-ltc-513-f
+    qty: 1
+    name: Fell Beast of Mordor
+    tcgplayer_product_id: "517862"
+    finish: f
+  - display_key: mtg-ltc-514-f
+    qty: 1
+    name: "Minas Morgul, Dark Fortress"
+    tcgplayer_product_id: "526146"
+    finish: f

@@ -1,0 +1,494 @@
+key: eoc-commander-counter-intelligence
+name: Counter Intelligence
+game: mtg
+set_code: eoc
+product_display_key: mtg-eoc-commander-counter-intelligence
+product_tcgplayer_id: "619677"
+image: /img/decks/eoc-commander-counter-intelligence.jpg
+channels: [tcgplayer, manapool]
+components:
+  - display_key: mtg-eoc-2-f
+    qty: 1
+    name: "Inspirit, Flagship Vessel"
+    tcgplayer_product_id: "641865"
+    finish: f
+    note: commander
+  - display_key: mtg-eoc-3-f
+    qty: 1
+    name: "Kilo, Apogee Mind"
+    tcgplayer_product_id: "638906"
+    finish: f
+  - display_key: mtg-eoc-5-nf
+    qty: 1
+    name: Patrolling Peacemaker
+    tcgplayer_product_id: "642782"
+    finish: nf
+  - display_key: mtg-eoc-6-nf
+    qty: 1
+    name: Insight Engine
+    tcgplayer_product_id: "642789"
+    finish: nf
+  - display_key: mtg-eoc-7-nf
+    qty: 1
+    name: Uthros Research Craft
+    tcgplayer_product_id: "642790"
+    finish: nf
+  - display_key: mtg-eoc-9-nf
+    qty: 1
+    name: Depthshaker Titan
+    tcgplayer_product_id: "642811"
+    finish: nf
+  - display_key: mtg-eoc-11-nf
+    qty: 1
+    name: Long-Range Sensor
+    tcgplayer_product_id: "642812"
+    finish: nf
+  - display_key: mtg-eoc-17-nf
+    qty: 1
+    name: Moxite Refinery
+    tcgplayer_product_id: "642821"
+    finish: nf
+  - display_key: mtg-eoc-18-nf
+    qty: 1
+    name: Solar Array
+    tcgplayer_product_id: "642822"
+    finish: nf
+  - display_key: mtg-eoc-19-nf
+    qty: 1
+    name: Surge Conductor
+    tcgplayer_product_id: "642823"
+    finish: nf
+  - display_key: mtg-eoc-22-nf
+    qty: 1
+    name: Glittering Massif
+    tcgplayer_product_id: "642843"
+    finish: nf
+  - display_key: mtg-eoc-23-nf
+    qty: 1
+    name: Radiant Summit
+    tcgplayer_product_id: "642844"
+    finish: nf
+  - display_key: mtg-eoc-46-nf
+    qty: 1
+    name: Swan Song
+    tcgplayer_product_id: "642791"
+    finish: nf
+  - display_key: mtg-eoc-49-nf
+    qty: 1
+    name: Chaos Warp
+    tcgplayer_product_id: "642813"
+    finish: nf
+  - display_key: mtg-eoc-54-nf
+    qty: 1
+    name: Cloud Key
+    tcgplayer_product_id: "642824"
+    finish: nf
+  - display_key: mtg-eoc-55-nf
+    qty: 1
+    name: Gavel of the Righteous
+    tcgplayer_product_id: "642825"
+    finish: nf
+  - display_key: mtg-eoc-58-nf
+    qty: 1
+    name: Battlefield Forge
+    tcgplayer_product_id: "642845"
+    finish: nf
+  - display_key: mtg-eoc-63-nf
+    qty: 1
+    name: Angel of the Ruins
+    tcgplayer_product_id: "642784"
+    finish: nf
+  - display_key: mtg-eoc-65-nf
+    qty: 1
+    name: Fumigate
+    tcgplayer_product_id: "644794"
+    finish: nf
+  - display_key: mtg-eoc-66-nf
+    qty: 1
+    name: Organic Extinction
+    tcgplayer_product_id: "642787"
+    finish: nf
+  - display_key: mtg-eoc-67-nf
+    qty: 1
+    name: Resourceful Defense
+    tcgplayer_product_id: "642788"
+    finish: nf
+  - display_key: mtg-eoc-68-nf
+    qty: 1
+    name: Chrome Host Seedshark
+    tcgplayer_product_id: "642794"
+    finish: nf
+  - display_key: mtg-eoc-69-nf
+    qty: 1
+    name: Cyberdrive Awakener
+    tcgplayer_product_id: "642795"
+    finish: nf
+  - display_key: mtg-eoc-70-nf
+    qty: 1
+    name: Deepglow Skate
+    tcgplayer_product_id: "642796"
+    finish: nf
+  - display_key: mtg-eoc-71-nf
+    qty: 1
+    name: "Emry, Lurker of the Loch"
+    tcgplayer_product_id: "642797"
+    finish: nf
+  - display_key: mtg-eoc-74-nf
+    qty: 1
+    name: Kappa Cannoneer
+    tcgplayer_product_id: "642803"
+    finish: nf
+  - display_key: mtg-eoc-75-nf
+    qty: 1
+    name: Phyrexian Metamorph
+    tcgplayer_product_id: "642804"
+    finish: nf
+  - display_key: mtg-eoc-76-nf
+    qty: 1
+    name: Pull from Tomorrow
+    tcgplayer_product_id: "642805"
+    finish: nf
+  - display_key: mtg-eoc-77-nf
+    qty: 1
+    name: Ripples of Potential
+    tcgplayer_product_id: "642806"
+    finish: nf
+  - display_key: mtg-eoc-78-nf
+    qty: 1
+    name: "Tekuthal, Inquiry Dominus"
+    tcgplayer_product_id: "642807"
+    finish: nf
+  - display_key: mtg-eoc-79-nf
+    qty: 1
+    name: Thought Monitor
+    tcgplayer_product_id: "642808"
+    finish: nf
+  - display_key: mtg-eoc-81-nf
+    qty: 1
+    name: Universal Surveillance
+    tcgplayer_product_id: "642810"
+    finish: nf
+  - display_key: mtg-eoc-87-nf
+    qty: 1
+    name: Chain Reaction
+    tcgplayer_product_id: "642814"
+    finish: nf
+  - display_key: mtg-eoc-113-nf
+    qty: 1
+    name: "Alibou, Ancient Witness"
+    tcgplayer_product_id: "642815"
+    finish: nf
+  - display_key: mtg-eoc-118-nf
+    qty: 1
+    name: "Jhoira, Weatherlight Captain"
+    tcgplayer_product_id: "642818"
+    finish: nf
+  - display_key: mtg-eoc-128-nf
+    qty: 1
+    name: Wake the Past
+    tcgplayer_product_id: "642819"
+    finish: nf
+  - display_key: mtg-eoc-131-nf
+    qty: 1
+    name: Astral Cornucopia
+    tcgplayer_product_id: "642827"
+    finish: nf
+  - display_key: mtg-eoc-133-nf
+    qty: 1
+    name: Crystalline Crawler
+    tcgplayer_product_id: "642829"
+    finish: nf
+  - display_key: mtg-eoc-134-nf
+    qty: 1
+    name: Darksteel Reactor
+    tcgplayer_product_id: "642830"
+    finish: nf
+  - display_key: mtg-eoc-135-nf
+    qty: 1
+    name: Empowered Autogenerator
+    tcgplayer_product_id: "642831"
+    finish: nf
+  - display_key: mtg-eoc-139-nf
+    qty: 1
+    name: Hangarback Walker
+    tcgplayer_product_id: "642835"
+    finish: nf
+  - display_key: mtg-eoc-140-nf
+    qty: 1
+    name: Lux Artillery
+    tcgplayer_product_id: "642836"
+    finish: nf
+  - display_key: mtg-eoc-141-nf
+    qty: 1
+    name: Lux Cannon
+    tcgplayer_product_id: "642837"
+    finish: nf
+  - display_key: mtg-eoc-144-nf
+    qty: 1
+    name: Steel Overseer
+    tcgplayer_product_id: "642840"
+    finish: nf
+  - display_key: mtg-eoc-145-nf
+    qty: 1
+    name: Threefold Thunderhulk
+    tcgplayer_product_id: "642841"
+    finish: nf
+  - display_key: mtg-eoc-146-nf
+    qty: 1
+    name: Titan Forge
+    tcgplayer_product_id: "642842"
+    finish: nf
+  - display_key: mtg-eoc-147-nf
+    qty: 1
+    name: Adarkar Wastes
+    tcgplayer_product_id: "642846"
+    finish: nf
+  - display_key: mtg-eoc-153-nf
+    qty: 1
+    name: Cascade Bluffs
+    tcgplayer_product_id: "642849"
+    finish: nf
+  - display_key: mtg-eoc-155-nf
+    qty: 1
+    name: Clifftop Retreat
+    tcgplayer_product_id: "642850"
+    finish: nf
+  - display_key: mtg-eoc-159-nf
+    qty: 1
+    name: Exotic Orchard
+    tcgplayer_product_id: "642851"
+    finish: nf
+  - display_key: mtg-eoc-160-nf
+    qty: 1
+    name: Glacial Fortress
+    tcgplayer_product_id: "642852"
+    finish: nf
+  - display_key: mtg-eoc-162-nf
+    qty: 1
+    name: Irrigated Farmland
+    tcgplayer_product_id: "642854"
+    finish: nf
+  - display_key: mtg-eoc-163-nf
+    qty: 1
+    name: "Karn's Bastion"
+    tcgplayer_product_id: "642855"
+    finish: nf
+  - display_key: mtg-eoc-168-nf
+    qty: 1
+    name: The Mycosynth Gardens
+    tcgplayer_product_id: "642857"
+    finish: nf
+  - display_key: mtg-eoc-174-nf
+    qty: 1
+    name: Rugged Prairie
+    tcgplayer_product_id: "642860"
+    finish: nf
+  - display_key: mtg-eoc-179-nf
+    qty: 1
+    name: Shivan Reef
+    tcgplayer_product_id: "642864"
+    finish: nf
+  - display_key: mtg-eoc-181-nf
+    qty: 1
+    name: Skycloud Expanse
+    tcgplayer_product_id: "642866"
+    finish: nf
+  - display_key: mtg-eoc-183-nf
+    qty: 1
+    name: Spire of Industry
+    tcgplayer_product_id: "642867"
+    finish: nf
+  - display_key: mtg-eoc-184-nf
+    qty: 1
+    name: Sulfur Falls
+    tcgplayer_product_id: "642868"
+    finish: nf
+  - display_key: mtg-eoc-186-nf
+    qty: 1
+    name: Temple of Enlightenment
+    tcgplayer_product_id: "642869"
+    finish: nf
+  - display_key: mtg-eoc-187-nf
+    qty: 1
+    name: Temple of Epiphany
+    tcgplayer_product_id: "642870"
+    finish: nf
+  - display_key: mtg-eoc-188-nf
+    qty: 1
+    name: Temple of Triumph
+    tcgplayer_product_id: "642871"
+    finish: nf
+  - display_key: mtg-eoc-45-nf
+    qty: 1
+    name: Swords to Plowshares
+    tcgplayer_product_id: "642783"
+    finish: nf
+  - display_key: mtg-eoc-47-nf
+    qty: 1
+    name: "Tezzeret's Gambit"
+    tcgplayer_product_id: "642792"
+    finish: nf
+  - display_key: mtg-eoc-48-nf
+    qty: 1
+    name: Thirst for Knowledge
+    tcgplayer_product_id: "642793"
+    finish: nf
+  - display_key: mtg-eoc-53-nf
+    qty: 1
+    name: Arcane Signet
+    tcgplayer_product_id: "642024"
+    finish: nf
+  - display_key: mtg-eoc-56-nf
+    qty: 1
+    name: Pentad Prism
+    tcgplayer_product_id: "642826"
+    finish: nf
+  - display_key: mtg-eoc-57-nf
+    qty: 1
+    name: Sol Ring
+    tcgplayer_product_id: "642025"
+    finish: nf
+  - display_key: mtg-eoc-59-nf
+    qty: 1
+    name: Command Tower
+    tcgplayer_product_id: "642032"
+    finish: nf
+  - display_key: mtg-eoc-64-nf
+    qty: 1
+    name: Dispatch
+    tcgplayer_product_id: "642785"
+    finish: nf
+  - display_key: mtg-eoc-72-nf
+    qty: 1
+    name: Etherium Sculptor
+    tcgplayer_product_id: "642801"
+    finish: nf
+  - display_key: mtg-eoc-73-nf
+    qty: 1
+    name: Experimental Augury
+    tcgplayer_product_id: "642802"
+    finish: nf
+  - display_key: mtg-eoc-80-nf
+    qty: 1
+    name: Thrummingbird
+    tcgplayer_product_id: "642809"
+    finish: nf
+  - display_key: mtg-eoc-114-nf
+    qty: 1
+    name: Enthusiastic Mechanaut
+    tcgplayer_product_id: "642816"
+    finish: nf
+  - display_key: mtg-eoc-132-nf
+    qty: 1
+    name: Coretapper
+    tcgplayer_product_id: "642828"
+    finish: nf
+  - display_key: mtg-eoc-136-nf
+    qty: 1
+    name: Etched Oracle
+    finish: nf
+  - display_key: mtg-eoc-137-nf
+    qty: 1
+    name: Everflowing Chalice
+    tcgplayer_product_id: "642833"
+    finish: nf
+  - display_key: mtg-eoc-138-nf
+    qty: 1
+    name: Golem Foundry
+    tcgplayer_product_id: "642834"
+    finish: nf
+  - display_key: mtg-eoc-142-nf
+    qty: 1
+    name: Mindless Automaton
+    tcgplayer_product_id: "642838"
+    finish: nf
+  - display_key: mtg-eoc-143-nf
+    qty: 1
+    name: Soul-Guide Lantern
+    tcgplayer_product_id: "642839"
+    finish: nf
+  - display_key: mtg-eoc-148-nf
+    qty: 1
+    name: Ancient Den
+    tcgplayer_product_id: "642847"
+    finish: nf
+  - display_key: mtg-eoc-150-nf
+    qty: 1
+    name: Buried Ruin
+    tcgplayer_product_id: "642848"
+    finish: nf
+  - display_key: mtg-eoc-158-nf
+    qty: 1
+    name: Evolving Wilds
+    tcgplayer_product_id: "642062"
+    finish: nf
+  - display_key: mtg-eoc-161-nf
+    qty: 1
+    name: Great Furnace
+    tcgplayer_product_id: "642853"
+    finish: nf
+  - display_key: mtg-eoc-166-nf
+    qty: 1
+    name: Lonely Sandbar
+    tcgplayer_product_id: "642856"
+    finish: nf
+  - display_key: mtg-eoc-170-nf
+    qty: 1
+    name: Mystic Monastery
+    tcgplayer_product_id: "642858"
+    finish: nf
+  - display_key: mtg-eoc-171-nf
+    qty: 1
+    name: Razortide Bridge
+    tcgplayer_product_id: "642859"
+    finish: nf
+  - display_key: mtg-eoc-175-nf
+    qty: 1
+    name: Rustvale Bridge
+    tcgplayer_product_id: "642861"
+    finish: nf
+  - display_key: mtg-eoc-176-nf
+    qty: 1
+    name: Seat of the Synod
+    tcgplayer_product_id: "642862"
+    finish: nf
+  - display_key: mtg-eoc-177-nf
+    qty: 1
+    name: Secluded Steppe
+    tcgplayer_product_id: "642863"
+    finish: nf
+  - display_key: mtg-eoc-180-nf
+    qty: 1
+    name: Silverbluff Bridge
+    tcgplayer_product_id: "642865"
+    finish: nf
+  - display_key: mtg-eoe-267-nf
+    qty: 2
+    name: Plains
+    tcgplayer_product_id: "641838"
+    finish: nf
+  - display_key: mtg-eoe-268-nf
+    qty: 1
+    name: Plains
+    tcgplayer_product_id: "641839"
+    finish: nf
+  - display_key: mtg-eoe-269-nf
+    qty: 2
+    name: Island
+    tcgplayer_product_id: "641840"
+    finish: nf
+  - display_key: mtg-eoe-270-nf
+    qty: 1
+    name: Island
+    tcgplayer_product_id: "641841"
+    finish: nf
+  - display_key: mtg-eoe-273-nf
+    qty: 2
+    name: Mountain
+    tcgplayer_product_id: "641844"
+    finish: nf
+  - display_key: mtg-eoe-274-nf
+    qty: 1
+    name: Mountain
+    tcgplayer_product_id: "641845"
+    finish: nf

@@ -1,0 +1,17 @@
+{{ define "main" }}
+<p><a href="{{ "/commander/" | relURL }}">&larr; All displays</a></p>
+<h1 id="display-name">Loading…</h1>
+<div id="totals" class="totals"></div>
+<div class="platform-bar">
+  <span class="platform-label">Sell singles on:</span>
+  <div class="platform-toggle" id="platform-toggle">
+    <button class="plat-btn active" data-plat="tcgplayer">TCGPlayer</button>
+    <button class="plat-btn" data-plat="manapool">Manapool</button>
+  </div>
+</div>
+<div id="decks" class="deck-grid"></div>
+{{ end }}
+
+{{ define "scripts" }}
+<script src="{{ "/js/commander-display.js" | relURL }}"></script>
+{{ end }}

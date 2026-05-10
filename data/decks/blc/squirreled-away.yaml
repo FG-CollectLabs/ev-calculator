@@ -1,0 +1,445 @@
+key: blc-commander-squirreled-away
+name: Squirreled Away
+game: mtg
+set_code: blc
+product_display_key: mtg-blc-commander-squirreled-away
+product_tcgplayer_id: "541249"
+image: /img/decks/blc-commander-squirreled-away.jpg
+channels: [tcgplayer, manapool]
+components:
+  - display_key: mtg-blc-2-f
+    qty: 1
+    name: Hazel of the Rootbloom
+    tcgplayer_product_id: "558383"
+    finish: f
+    note: commander
+  - display_key: mtg-blc-7-f
+    qty: 1
+    name: The Odd Acorn Gang
+    tcgplayer_product_id: "560000"
+    finish: f
+  - display_key: mtg-blc-99-f
+    qty: 1
+    name: "Garruk, Cursed Huntsman"
+    tcgplayer_product_id: "559926"
+    finish: f
+  - display_key: mtg-blc-180-nf
+    qty: 1
+    name: Chittering Witch
+    tcgplayer_product_id: "559932"
+    finish: nf
+  - display_key: mtg-blc-18-nf
+    qty: 1
+    name: Insatiable Frugivore
+    tcgplayer_product_id: "560003"
+    finish: nf
+  - display_key: mtg-blc-19-nf
+    qty: 1
+    name: Moonstone Eulogist
+    tcgplayer_product_id: "560004"
+    finish: nf
+  - display_key: mtg-blc-20-nf
+    qty: 1
+    name: Swarmyard Massacre
+    tcgplayer_product_id: "560007"
+    finish: nf
+  - display_key: mtg-blc-17-nf
+    qty: 1
+    name: "Hazel's Brewmaster"
+    tcgplayer_product_id: "560002"
+    finish: nf
+  - display_key: mtg-blc-189-nf
+    qty: 1
+    name: Woe Strider
+    tcgplayer_product_id: "559937"
+    finish: nf
+  - display_key: mtg-blc-113-nf
+    qty: 1
+    name: Saw in Half
+    tcgplayer_product_id: "560019"
+    finish: nf
+  - display_key: mtg-blc-186-nf
+    qty: 1
+    name: Ogre Slumlord
+    tcgplayer_product_id: "560206"
+    finish: nf
+  - display_key: mtg-blc-182-nf
+    qty: 1
+    name: Decree of Pain
+    tcgplayer_product_id: "560037"
+    finish: nf
+  - display_key: mtg-blc-31-nf
+    qty: 1
+    name: "Gourmand's Talent"
+    tcgplayer_product_id: "560001"
+    finish: nf
+  - display_key: mtg-blc-32-nf
+    qty: 1
+    name: Rootcast Apprenticeship
+    tcgplayer_product_id: "560005"
+    finish: nf
+  - display_key: mtg-blc-33-nf
+    qty: 1
+    name: Scurry of Squirrels
+    tcgplayer_product_id: "560006"
+    finish: nf
+  - display_key: mtg-blc-214-nf
+    qty: 1
+    name: End-Raze Forerunners
+    tcgplayer_product_id: "559939"
+    finish: nf
+  - display_key: mtg-blc-205-nf
+    qty: 1
+    name: Arasta of the Endless Web
+    tcgplayer_product_id: "559941"
+    finish: nf
+  - display_key: mtg-blc-213-nf
+    qty: 1
+    name: Deep Forest Hermit
+    tcgplayer_product_id: "559944"
+    finish: nf
+  - display_key: mtg-blc-244-nf
+    qty: 1
+    name: "Toski, Bearer of Secrets"
+    tcgplayer_product_id: "559947"
+    finish: nf
+  - display_key: mtg-blc-118-nf
+    qty: 1
+    name: Beastmaster Ascension
+    tcgplayer_product_id: "560047"
+    finish: nf
+  - display_key: mtg-blc-123-nf
+    qty: 1
+    name: Second Harvest
+    tcgplayer_product_id: "560021"
+    finish: nf
+  - display_key: mtg-blc-237-nf
+    qty: 1
+    name: Shamanic Revelation
+    tcgplayer_product_id: "560040"
+    finish: nf
+  - display_key: mtg-blc-209-nf
+    qty: 1
+    name: "Chatterfang, Squirrel General"
+    tcgplayer_product_id: "559964"
+    finish: nf
+  - display_key: mtg-blc-341-nf
+    qty: 1
+    name: Temple of Malady
+    tcgplayer_product_id: "560017"
+    finish: nf
+  - display_key: mtg-blc-125-nf
+    qty: 1
+    name: Casualties of War
+    tcgplayer_product_id: "560041"
+    finish: nf
+  - display_key: mtg-blc-263-nf
+    qty: 1
+    name: "Windgrace's Judgment"
+    tcgplayer_product_id: "560024"
+    finish: nf
+  - display_key: mtg-blc-279-nf
+    qty: 1
+    name: Maskwood Nexus
+    tcgplayer_product_id: "560057"
+    finish: nf
+  - display_key: mtg-blc-264-nf
+    qty: 1
+    name: Academy Manufactor
+    tcgplayer_product_id: "559952"
+    finish: nf
+  - display_key: mtg-blc-354-nf
+    qty: 1
+    name: Woodland Cemetery
+    tcgplayer_product_id: "560018"
+    finish: nf
+  - display_key: mtg-blc-319-nf
+    qty: 1
+    name: Necroblossom Snarl
+    tcgplayer_product_id: "560020"
+    finish: nf
+  - display_key: mtg-blc-320-nf
+    qty: 1
+    name: "Oran-Rief, the Vastwood"
+    tcgplayer_product_id: "560026"
+    finish: nf
+  - display_key: mtg-blc-133-nf
+    qty: 1
+    name: Swarmyard
+    tcgplayer_product_id: "560030"
+    finish: nf
+  - display_key: mtg-blc-131-nf
+    qty: 1
+    name: Exotic Orchard
+    tcgplayer_product_id: "559727"
+    finish: nf
+  - display_key: mtg-blc-315-nf
+    qty: 1
+    name: Llanowar Wastes
+    tcgplayer_product_id: "560033"
+    finish: nf
+  - display_key: mtg-blc-309-nf
+    qty: 1
+    name: Grim Backwoods
+    tcgplayer_product_id: "560036"
+    finish: nf
+  - display_key: mtg-blc-352-nf
+    qty: 1
+    name: Viridescent Bog
+    tcgplayer_product_id: "560038"
+    finish: nf
+  - display_key: mtg-blc-351-nf
+    qty: 1
+    name: Twilight Mire
+    tcgplayer_product_id: "560039"
+    finish: nf
+  - display_key: mtg-blc-221-nf
+    qty: 1
+    name: Gilded Goose
+    tcgplayer_product_id: "559955"
+    finish: nf
+  - display_key: mtg-blc-211-nf
+    qty: 1
+    name: Chitterspitter
+    tcgplayer_product_id: "560058"
+    finish: nf
+  - display_key: mtg-blc-126-nf
+    qty: 1
+    name: Maelstrom Pulse
+    tcgplayer_product_id: "560043"
+    finish: nf
+  - display_key: mtg-blc-247-nf
+    qty: 1
+    name: Beledros Witherbloom
+    tcgplayer_product_id: "559957"
+    finish: nf
+  - display_key: mtg-blc-277-nf
+    qty: 1
+    name: Idol of Oblivion
+    tcgplayer_product_id: "560060"
+    finish: nf
+  - display_key: mtg-blc-40-nf
+    qty: 1
+    name: Sword of the Squeak
+    tcgplayer_product_id: "560008"
+    finish: nf
+  - display_key: mtg-blc-183-nf
+    qty: 1
+    name: Morbid Opportunist
+    tcgplayer_product_id: "559968"
+    finish: nf
+  - display_key: mtg-blc-184-nf
+    qty: 1
+    name: "Nadier's Nightblade"
+    tcgplayer_product_id: "560065"
+    finish: nf
+  - display_key: mtg-blc-188-nf
+    qty: 1
+    name: Plumb the Forbidden
+    tcgplayer_product_id: "560027"
+    finish: nf
+  - display_key: mtg-blc-179-nf
+    qty: 1
+    name: Bastion of Remembrance
+    tcgplayer_product_id: "560049"
+    finish: nf
+  - display_key: mtg-blc-187-nf
+    qty: 1
+    name: Plaguecrafter
+    tcgplayer_product_id: "559971"
+    finish: nf
+  - display_key: mtg-blb-167-nf
+    qty: 1
+    name: Cache Grab
+    tcgplayer_product_id: "558407"
+    finish: nf
+  - display_key: mtg-blc-210-nf
+    qty: 1
+    name: Chatterstorm
+    tcgplayer_product_id: "560046"
+    finish: nf
+  - display_key: mtg-blc-256-nf
+    qty: 1
+    name: Poison-Tip Archer
+    tcgplayer_product_id: "559975"
+    finish: nf
+  - display_key: mtg-blc-255-nf
+    qty: 1
+    name: Moldervine Reclamation
+    tcgplayer_product_id: "560050"
+    finish: nf
+  - display_key: mtg-blc-258-nf
+    qty: 1
+    name: Ravenous Squirrel
+    tcgplayer_product_id: "559977"
+    finish: nf
+  - display_key: mtg-blc-261-nf
+    qty: 1
+    name: Skyfisher Spider
+    tcgplayer_product_id: "559980"
+    finish: nf
+  - display_key: mtg-blc-248-nf
+    qty: 1
+    name: Binding the Old Gods
+    tcgplayer_product_id: "560053"
+    finish: nf
+  - display_key: mtg-blc-308-nf
+    qty: 1
+    name: Golgari Rot Farm
+    tcgplayer_product_id: "560042"
+    finish: nf
+  - display_key: mtg-blc-313-nf
+    qty: 1
+    name: Jungle Hollow
+    tcgplayer_product_id: "560044"
+    finish: nf
+  - display_key: mtg-blc-311-nf
+    qty: 1
+    name: Haunted Mire
+    tcgplayer_product_id: "560045"
+    finish: nf
+  - display_key: mtg-blc-185-nf
+    qty: 1
+    name: Nested Shambler
+    tcgplayer_product_id: "559982"
+    finish: nf
+  - display_key: mtg-blc-181-nf
+    qty: 1
+    name: Deadly Dispute
+    tcgplayer_product_id: "560032"
+    finish: nf
+  - display_key: mtg-blc-190-nf
+    qty: 1
+    name: Zulaport Cutthroat
+    tcgplayer_product_id: "559984"
+    finish: nf
+  - display_key: mtg-blc-240-nf
+    qty: 1
+    name: Squirrel Sovereign
+    tcgplayer_product_id: "559986"
+    finish: nf
+  - display_key: mtg-blc-121-nf
+    qty: 1
+    name: Prosperous Innkeeper
+    tcgplayer_product_id: "559989"
+    finish: nf
+  - display_key: mtg-blc-274-nf
+    qty: 1
+    name: Haywire Mite
+    tcgplayer_product_id: "559990"
+    finish: nf
+  - display_key: mtg-blc-243-nf
+    qty: 1
+    name: Tireless Provisioner
+    tcgplayer_product_id: "560010"
+    finish: nf
+  - display_key: mtg-blc-239-nf
+    qty: 1
+    name: Squirrel Nest
+    tcgplayer_product_id: "560054"
+    finish: nf
+  - display_key: mtg-blb-178-nf
+    qty: 1
+    name: Honored Dreyleader
+    tcgplayer_product_id: "559634"
+    finish: nf
+  - display_key: mtg-blc-241-nf
+    qty: 1
+    name: Tear Asunder
+    tcgplayer_product_id: "560034"
+    finish: nf
+  - display_key: mtg-blc-246-nf
+    qty: 1
+    name: Wolfwillow Haven
+    tcgplayer_product_id: "560056"
+    finish: nf
+  - display_key: mtg-blc-257-nf
+    qty: 1
+    name: Putrefy
+    tcgplayer_product_id: "560035"
+    finish: nf
+  - display_key: mtg-blc-127-nf
+    qty: 1
+    name: Arcane Signet
+    tcgplayer_product_id: "559719"
+    finish: nf
+  - display_key: mtg-blc-272-nf
+    qty: 1
+    name: Golgari Signet
+    tcgplayer_product_id: "560061"
+    finish: nf
+  - display_key: mtg-blc-288-nf
+    qty: 1
+    name: Talisman of Resilience
+    tcgplayer_product_id: "560062"
+    finish: nf
+  - display_key: mtg-blc-129-nf
+    qty: 1
+    name: Sol Ring
+    tcgplayer_product_id: "559736"
+    finish: nf
+  - display_key: mtg-blc-283-nf
+    qty: 1
+    name: Skullclamp
+    tcgplayer_product_id: "560063"
+    finish: nf
+  - display_key: mtg-blc-345-nf
+    qty: 1
+    name: Terramorphic Expanse
+    tcgplayer_product_id: "559882"
+    finish: nf
+  - display_key: mtg-blc-322-nf
+    qty: 1
+    name: Path of Ancestry
+    tcgplayer_product_id: "559884"
+    finish: nf
+  - display_key: mtg-blc-302-nf
+    qty: 1
+    name: Evolving Wilds
+    tcgplayer_product_id: "559888"
+    finish: nf
+  - display_key: mtg-blc-130-nf
+    qty: 1
+    name: Command Tower
+    tcgplayer_product_id: "559724"
+    finish: nf
+  - display_key: mtg-blc-350-nf
+    qty: 1
+    name: Tranquil Thicket
+    tcgplayer_product_id: "559970"
+    finish: nf
+  - display_key: mtg-blc-294-nf
+    qty: 1
+    name: Bojuka Bog
+    tcgplayer_product_id: "560048"
+    finish: nf
+  - display_key: mtg-blc-337-nf
+    qty: 1
+    name: Tainted Wood
+    tcgplayer_product_id: "560051"
+    finish: nf
+  - display_key: mtg-blc-292-nf
+    qty: 1
+    name: Barren Moor
+    tcgplayer_product_id: "560052"
+    finish: nf
+  - display_key: mtg-blb-373-nf
+    qty: 4
+    name: Swamp
+    tcgplayer_product_id: "559556"
+    finish: nf
+  - display_key: mtg-blb-374-nf
+    qty: 4
+    name: Swamp
+    tcgplayer_product_id: "559555"
+    finish: nf
+  - display_key: mtg-blb-377-nf
+    qty: 5
+    name: Forest
+    tcgplayer_product_id: "559542"
+    finish: nf
+  - display_key: mtg-blb-378-nf
+    qty: 4
+    name: Forest
+    tcgplayer_product_id: "559553"
+    finish: nf

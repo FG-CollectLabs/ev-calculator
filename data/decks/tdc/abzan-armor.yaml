@@ -1,0 +1,450 @@
+key: tdc-commander-abzan-armor
+name: Abzan Armor
+game: mtg
+set_code: tdc
+product_display_key: mtg-tdc-commander-abzan-armor
+product_tcgplayer_id: "619664"
+image: /img/decks/tdc-commander-abzan-armor.jpg
+channels: [tcgplayer, manapool]
+components:
+  - display_key: mtg-tdc-4-f
+    qty: 1
+    name: Felothar the Steadfast
+    tcgplayer_product_id: "623911"
+    finish: f
+    note: commander
+  - display_key: mtg-tdc-1-f
+    qty: 1
+    name: "Betor, Ancestor's Voice"
+    tcgplayer_product_id: "625122"
+    finish: f
+  - display_key: mtg-tdc-14-nf
+    qty: 1
+    name: Protector of the Wastes
+    tcgplayer_product_id: "624670"
+    finish: nf
+  - display_key: mtg-tdc-15-nf
+    qty: 1
+    name: Reunion of the House
+    tcgplayer_product_id: "624671"
+    finish: nf
+  - display_key: mtg-tdc-27-nf
+    qty: 1
+    name: Jaws of Defeat
+    tcgplayer_product_id: "624643"
+    finish: nf
+  - display_key: mtg-tdc-29-nf
+    qty: 1
+    name: Tip the Scales
+    tcgplayer_product_id: "624644"
+    finish: nf
+  - display_key: mtg-tdc-31-nf
+    qty: 1
+    name: Will of the Abzan
+    tcgplayer_product_id: "624646"
+    finish: nf
+  - display_key: mtg-tdc-42-nf
+    qty: 1
+    name: Arbor Adherent
+    tcgplayer_product_id: "624628"
+    finish: nf
+  - display_key: mtg-tdc-45-nf
+    qty: 1
+    name: Canopy Gargantuan
+    tcgplayer_product_id: "624634"
+    finish: nf
+  - display_key: mtg-tdc-47-nf
+    qty: 1
+    name: Rampart Architect
+    tcgplayer_product_id: "624635"
+    finish: nf
+  - display_key: mtg-tdc-97-nf
+    qty: 1
+    name: Tree of Redemption
+    tcgplayer_product_id: "624649"
+    finish: nf
+  - display_key: mtg-tdc-100-nf
+    qty: 1
+    name: "Ikra Shidiqi, the Usurper"
+    tcgplayer_product_id: "624625"
+    finish: nf
+  - display_key: mtg-tdc-110-nf
+    qty: 1
+    name: "Baldin, Century Herdmaster"
+    tcgplayer_product_id: "624651"
+    finish: nf
+  - display_key: mtg-tdc-115-nf
+    qty: 1
+    name: Expel the Interlopers
+    tcgplayer_product_id: "624653"
+    finish: nf
+  - display_key: mtg-tdc-121-nf
+    qty: 1
+    name: Indomitable Ancients
+    tcgplayer_product_id: "624654"
+    finish: nf
+  - display_key: mtg-tdc-128-nf
+    qty: 1
+    name: Rhox Faithmender
+    tcgplayer_product_id: "624658"
+    finish: nf
+  - display_key: mtg-tdc-130-nf
+    qty: 1
+    name: "Shalai, Voice of Plenty"
+    tcgplayer_product_id: "624660"
+    finish: nf
+  - display_key: mtg-tdc-137-nf
+    qty: 1
+    name: Wakestone Gargoyle
+    tcgplayer_product_id: "624664"
+    finish: nf
+  - display_key: mtg-tdc-139-nf
+    qty: 1
+    name: Wall of Reverence
+    tcgplayer_product_id: "624666"
+    finish: nf
+  - display_key: mtg-tdc-140-nf
+    qty: 1
+    name: Welcoming Vampire
+    tcgplayer_product_id: "624667"
+    finish: nf
+  - display_key: mtg-tdc-142-nf
+    qty: 1
+    name: "Zetalpa, Primal Dawn"
+    tcgplayer_product_id: "624669"
+    finish: nf
+  - display_key: mtg-tdc-244-nf
+    qty: 1
+    name: Arasta of the Endless Web
+    tcgplayer_product_id: "624657"
+    finish: nf
+  - display_key: mtg-tdc-246-nf
+    qty: 1
+    name: Assault Formation
+    tcgplayer_product_id: "624662"
+    finish: nf
+  - display_key: mtg-tdc-259-nf
+    qty: 1
+    name: Hornet Nest
+    tcgplayer_product_id: "624642"
+    finish: nf
+  - display_key: mtg-tdc-268-nf
+    qty: 1
+    name: Seedborn Muse
+    tcgplayer_product_id: "624655"
+    finish: nf
+  - display_key: mtg-tdc-272-nf
+    qty: 1
+    name: Sylvan Caryatid
+    tcgplayer_product_id: "624650"
+    finish: nf
+  - display_key: mtg-tdc-276-nf
+    qty: 1
+    name: Towering Titan
+    tcgplayer_product_id: "624659"
+    finish: nf
+  - display_key: mtg-tdc-279-nf
+    qty: 1
+    name: Anguished Unmaking
+    tcgplayer_product_id: "624626"
+    finish: nf
+  - display_key: mtg-tdc-286-nf
+    qty: 1
+    name: Dragonlord Dromoka
+    tcgplayer_product_id: "624629"
+    finish: nf
+  - display_key: mtg-tdc-289-nf
+    qty: 1
+    name: Faeburrow Elder
+    tcgplayer_product_id: "624630"
+    finish: nf
+  - display_key: mtg-tdc-302-nf
+    qty: 1
+    name: Shadrix Silverquill
+    tcgplayer_product_id: "624632"
+    finish: nf
+  - display_key: mtg-tdc-303-nf
+    qty: 1
+    name: Sidar Kondo of Jamuraa
+    tcgplayer_product_id: "624633"
+    finish: nf
+  - display_key: mtg-tdc-315-nf
+    qty: 1
+    name: "Colfenor's Urn"
+    tcgplayer_product_id: "624608"
+    finish: nf
+  - display_key: mtg-tdc-326-nf
+    qty: 1
+    name: Staff of Compleation
+    tcgplayer_product_id: "624613"
+    finish: nf
+  - display_key: mtg-tdc-336-nf
+    qty: 1
+    name: Weathered Sentinels
+    tcgplayer_product_id: "624616"
+    finish: nf
+  - display_key: mtg-tdc-343-nf
+    qty: 1
+    name: Canopy Vista
+    tcgplayer_product_id: "624596"
+    finish: nf
+  - display_key: mtg-tdc-360-nf
+    qty: 1
+    name: Exotic Orchard
+    tcgplayer_product_id: "624207"
+    finish: nf
+  - display_key: mtg-tdc-366-nf
+    qty: 1
+    name: Fortified Village
+    tcgplayer_product_id: "624600"
+    finish: nf
+  - display_key: mtg-tdc-373-nf
+    qty: 1
+    name: Isolated Chapel
+    tcgplayer_product_id: "624317"
+    finish: nf
+  - display_key: mtg-tdc-381-nf
+    qty: 1
+    name: Overgrown Farmland
+    tcgplayer_product_id: "624601"
+    finish: nf
+  - display_key: mtg-tdc-397-nf
+    qty: 1
+    name: Sungrass Prairie
+    tcgplayer_product_id: "624604"
+    finish: nf
+  - display_key: mtg-tdc-399-nf
+    qty: 1
+    name: Sunpetal Grove
+    tcgplayer_product_id: "624605"
+    finish: nf
+  - display_key: mtg-tdc-403-nf
+    qty: 1
+    name: Temple of Malady
+    tcgplayer_product_id: "624479"
+    finish: nf
+  - display_key: mtg-tdc-405-nf
+    qty: 1
+    name: Temple of Plenty
+    tcgplayer_product_id: "624606"
+    finish: nf
+  - display_key: mtg-tdc-406-nf
+    qty: 1
+    name: Temple of Silence
+    tcgplayer_product_id: "624321"
+    finish: nf
+  - display_key: mtg-tdc-409-nf
+    qty: 1
+    name: Twilight Mire
+    tcgplayer_product_id: "624607"
+    finish: nf
+  - display_key: mtg-tdc-412-nf
+    qty: 1
+    name: Woodland Cemetery
+    tcgplayer_product_id: "624486"
+    finish: nf
+  - display_key: mtg-tdc-105-nf
+    qty: 1
+    name: Arcane Signet
+    tcgplayer_product_id: "624048"
+    finish: nf
+  - display_key: mtg-tdc-106-nf
+    qty: 1
+    name: Sol Ring
+    tcgplayer_product_id: "624049"
+    finish: nf
+  - display_key: mtg-tdc-107-nf
+    qty: 1
+    name: Command Tower
+    tcgplayer_product_id: "623982"
+    finish: nf
+  - display_key: mtg-tdc-126-nf
+    qty: 1
+    name: Nyx-Fleece Ram
+    tcgplayer_product_id: "624656"
+    finish: nf
+  - display_key: mtg-tdc-131-nf
+    qty: 1
+    name: Slaughter the Strong
+    tcgplayer_product_id: "624663"
+    finish: nf
+  - display_key: mtg-tdc-134-nf
+    qty: 1
+    name: Swords to Plowshares
+    tcgplayer_product_id: "624152"
+    finish: nf
+  - display_key: mtg-tdc-138-nf
+    qty: 1
+    name: Wall of Omens
+    tcgplayer_product_id: "624665"
+    finish: nf
+  - display_key: mtg-tdc-141-nf
+    qty: 1
+    name: Wingmantle Chaplain
+    tcgplayer_product_id: "624668"
+    finish: nf
+  - display_key: mtg-tdc-172-nf
+    qty: 1
+    name: Behind the Scenes
+    tcgplayer_product_id: "624636"
+    finish: nf
+  - display_key: mtg-tdc-174-nf
+    qty: 1
+    name: Blight Pile
+    tcgplayer_product_id: "624637"
+    finish: nf
+  - display_key: mtg-tdc-180-nf
+    qty: 1
+    name: Feed the Swarm
+    tcgplayer_product_id: "624638"
+    finish: nf
+  - display_key: mtg-tdc-182-nf
+    qty: 1
+    name: Infernal Grasp
+    tcgplayer_product_id: "624639"
+    finish: nf
+  - display_key: mtg-tdc-200-nf
+    qty: 1
+    name: Wall of Limbs
+    tcgplayer_product_id: "624641"
+    finish: nf
+  - display_key: mtg-tdc-245-nf
+    qty: 1
+    name: Arboreal Grazer
+    tcgplayer_product_id: "624661"
+    finish: nf
+  - display_key: mtg-tdc-248-nf
+    qty: 1
+    name: Axebane Guardian
+    tcgplayer_product_id: "624640"
+    finish: nf
+  - display_key: mtg-tdc-250-nf
+    qty: 1
+    name: Carven Caryatid
+    tcgplayer_product_id: "624647"
+    finish: nf
+  - display_key: mtg-tdm-255-nf
+    qty: 1
+    name: Evolving Wilds
+    tcgplayer_product_id: "624263"
+    finish: nf
+  - display_key: mtg-tdc-260-nf
+    qty: 1
+    name: Jaddi Offshoot
+    tcgplayer_product_id: "624652"
+    finish: nf
+  - display_key: mtg-tdc-264-nf
+    qty: 1
+    name: Overgrown Battlement
+    tcgplayer_product_id: "624622"
+    finish: nf
+  - display_key: mtg-tdm-266-nf
+    qty: 1
+    name: Sandsteppe Citadel
+    tcgplayer_product_id: "624271"
+    finish: nf
+  - display_key: mtg-tdc-275-nf
+    qty: 1
+    name: Tower Defense
+    tcgplayer_product_id: "624624"
+    finish: nf
+  - display_key: mtg-tdc-277-nf
+    qty: 1
+    name: Wall of Blossoms
+    tcgplayer_product_id: "624645"
+    finish: nf
+  - display_key: mtg-tdc-278-nf
+    qty: 1
+    name: Wall of Roots
+    tcgplayer_product_id: "624619"
+    finish: nf
+  - display_key: mtg-tdc-284-nf
+    qty: 1
+    name: Despark
+    tcgplayer_product_id: "624627"
+    finish: nf
+  - display_key: mtg-tdc-292-nf
+    qty: 1
+    name: Indulging Patrician
+    tcgplayer_product_id: "624631"
+    finish: nf
+  - display_key: mtg-tdc-316-nf
+    qty: 1
+    name: Crashing Drawbridge
+    tcgplayer_product_id: "624610"
+    finish: nf
+  - display_key: mtg-tdc-323-nf
+    qty: 1
+    name: Orzhov Signet
+    tcgplayer_product_id: "624611"
+    finish: nf
+  - display_key: mtg-tdc-324-nf
+    qty: 1
+    name: Selesnya Signet
+    tcgplayer_product_id: "624612"
+    finish: nf
+  - display_key: mtg-tdc-328-nf
+    qty: 1
+    name: Swiftfoot Boots
+    tcgplayer_product_id: "624614"
+    finish: nf
+  - display_key: mtg-tdc-334-nf
+    qty: 1
+    name: Walking Bulwark
+    tcgplayer_product_id: "624615"
+    finish: nf
+  - display_key: mtg-tdc-337-nf
+    qty: 1
+    name: Access Tunnel
+    tcgplayer_product_id: "624594"
+    finish: nf
+  - display_key: mtg-tdc-341-nf
+    qty: 1
+    name: Bojuka Bog
+    tcgplayer_product_id: "624293"
+    finish: nf
+  - display_key: mtg-tdc-356-nf
+    qty: 1
+    name: Deceptive Landscape
+    tcgplayer_product_id: "624598"
+    finish: nf
+  - display_key: mtg-tdc-382-nf
+    qty: 1
+    name: Path of Ancestry
+    tcgplayer_product_id: "624211"
+    finish: nf
+  - display_key: mtg-tdc-385-nf
+    qty: 1
+    name: Radiant Grove
+    tcgplayer_product_id: "624602"
+    finish: nf
+  - display_key: mtg-tdm-277-nf
+    qty: 3
+    name: Plains
+    tcgplayer_product_id: "623965"
+    finish: nf
+  - display_key: mtg-tdm-278-nf
+    qty: 3
+    name: Plains
+    tcgplayer_product_id: "623966"
+    finish: nf
+  - display_key: mtg-tdm-281-nf
+    qty: 3
+    name: Swamp
+    tcgplayer_product_id: "623972"
+    finish: nf
+  - display_key: mtg-tdm-282-nf
+    qty: 2
+    name: Swamp
+    tcgplayer_product_id: "623974"
+    finish: nf
+  - display_key: mtg-tdm-285-nf
+    qty: 4
+    name: Forest
+    tcgplayer_product_id: "623978"
+    finish: nf
+  - display_key: mtg-tdm-286-nf
+    qty: 3
+    name: Forest
+    tcgplayer_product_id: "623979"
+    finish: nf

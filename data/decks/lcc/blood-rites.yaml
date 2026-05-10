@@ -1,0 +1,425 @@
+key: lcc-commander-blood-rites
+name: Blood Rites
+game: mtg
+set_code: lcc
+product_display_key: mtg-lcc-commander-blood-rites
+product_tcgplayer_id: "517514"
+image: /img/decks/lcc-commander-blood-rites.jpg
+channels: [tcgplayer, manapool]
+components:
+  - display_key: mtg-lcc-2-f
+    qty: 1
+    name: "Clavileño, First of the Blessed"
+    tcgplayer_product_id: "524304"
+    finish: f
+    note: commander
+  - display_key: mtg-lcc-5-f
+    qty: 1
+    name: "Carmen, Cruel Skymarcher"
+    tcgplayer_product_id: "525709"
+    finish: f
+  - display_key: mtg-lcc-70-nf
+    qty: 1
+    name: Charismatic Conqueror
+    tcgplayer_product_id: "525710"
+    finish: nf
+  - display_key: mtg-lcc-71-nf
+    qty: 1
+    name: "Elenda's Hierophant"
+    tcgplayer_product_id: "525711"
+    finish: nf
+  - display_key: mtg-lcc-73-nf
+    qty: 1
+    name: March of the Canonized
+    tcgplayer_product_id: "525712"
+    finish: nf
+  - display_key: mtg-lcc-74-nf
+    qty: 1
+    name: Redemption Choir
+    tcgplayer_product_id: "525713"
+    finish: nf
+  - display_key: mtg-lcc-80-nf
+    qty: 1
+    name: Dusk Legion Sergeant
+    tcgplayer_product_id: "525715"
+    finish: nf
+  - display_key: mtg-lcc-83-nf
+    qty: 1
+    name: Master of Dark Rites
+    tcgplayer_product_id: "525716"
+    finish: nf
+  - display_key: mtg-lcc-84-nf
+    qty: 1
+    name: Promise of Aclazotz // Foul Rebirth
+    tcgplayer_product_id: "525717"
+    finish: nf
+  - display_key: mtg-lcc-97-nf
+    qty: 1
+    name: Order of Sacred Dusk
+    tcgplayer_product_id: "525718"
+    finish: nf
+  - display_key: mtg-lcc-126-nf
+    qty: 1
+    name: Austere Command
+    tcgplayer_product_id: "525727"
+    finish: nf
+  - display_key: mtg-lcc-129-nf
+    qty: 1
+    name: Kindred Boon
+    tcgplayer_product_id: "525747"
+    finish: nf
+  - display_key: mtg-lcc-133-nf
+    qty: 1
+    name: "Mavren Fein, Dusk Apostle"
+    tcgplayer_product_id: "525836"
+    finish: nf
+  - display_key: mtg-lcc-135-nf
+    qty: 1
+    name: Radiant Destiny
+    tcgplayer_product_id: "525750"
+    finish: nf
+  - display_key: mtg-lcc-140-nf
+    qty: 1
+    name: Welcoming Vampire
+    tcgplayer_product_id: "525839"
+    finish: nf
+  - display_key: mtg-lcc-184-nf
+    qty: 1
+    name: Bloodghast
+    tcgplayer_product_id: "525841"
+    finish: nf
+  - display_key: mtg-lcc-186-nf
+    qty: 1
+    name: Bloodtracker
+    tcgplayer_product_id: "525844"
+    finish: nf
+  - display_key: mtg-lcc-187-nf
+    qty: 1
+    name: Butcher of Malakir
+    tcgplayer_product_id: "525845"
+    finish: nf
+  - display_key: mtg-lcc-188-nf
+    qty: 1
+    name: Champion of Dusk
+    tcgplayer_product_id: "525847"
+    finish: nf
+  - display_key: mtg-lcc-189-nf
+    qty: 1
+    name: Cordial Vampire
+    tcgplayer_product_id: "525849"
+    finish: nf
+  - display_key: mtg-lcc-190-nf
+    qty: 1
+    name: Crossway Troublemakers
+    tcgplayer_product_id: "525852"
+    finish: nf
+  - display_key: mtg-lcc-191-nf
+    qty: 1
+    name: Damn
+    tcgplayer_product_id: "525729"
+    finish: nf
+  - display_key: mtg-lcc-193-nf
+    qty: 1
+    name: "Drana, Liberator of Malakir"
+    tcgplayer_product_id: "525855"
+    finish: nf
+  - display_key: mtg-lcc-195-nf
+    qty: 1
+    name: Exquisite Blood
+    tcgplayer_product_id: "525752"
+    finish: nf
+  - display_key: mtg-lcc-199-nf
+    qty: 1
+    name: Glass-Cast Heart
+    tcgplayer_product_id: "525758"
+    finish: nf
+  - display_key: mtg-lcc-202-nf
+    qty: 1
+    name: New Blood
+    tcgplayer_product_id: "525732"
+    finish: nf
+  - display_key: mtg-lcc-203-nf
+    qty: 1
+    name: Nighthawk Scavenger
+    tcgplayer_product_id: "525859"
+    finish: nf
+  - display_key: mtg-lcc-205-nf
+    qty: 1
+    name: "Olivia's Wrath"
+    tcgplayer_product_id: "525892"
+    finish: nf
+  - display_key: mtg-lcc-206-nf
+    qty: 1
+    name: Pact of the Serpent
+    tcgplayer_product_id: "525734"
+    finish: nf
+  - display_key: mtg-lcc-207-nf
+    qty: 1
+    name: Patron of the Vein
+    tcgplayer_product_id: "525860"
+    finish: nf
+  - display_key: mtg-lcc-209-nf
+    qty: 1
+    name: Sanctum Seeker
+    tcgplayer_product_id: "525862"
+    finish: nf
+  - display_key: mtg-lcc-210-nf
+    qty: 1
+    name: "Timothar, Baron of Bats"
+    tcgplayer_product_id: "525864"
+    finish: nf
+  - display_key: mtg-lcc-211-nf
+    qty: 1
+    name: Twilight Prophet
+    tcgplayer_product_id: "525866"
+    finish: nf
+  - display_key: mtg-lcc-214-nf
+    qty: 1
+    name: "Yahenni, Undying Partisan"
+    tcgplayer_product_id: "525868"
+    finish: nf
+  - display_key: mtg-lcc-268-nf
+    qty: 1
+    name: "Elenda, the Dusk Rose"
+    tcgplayer_product_id: "525870"
+    finish: nf
+  - display_key: mtg-lcc-289-nf
+    qty: 1
+    name: "Sorin, Lord of Innistrad"
+    tcgplayer_product_id: "525735"
+    finish: nf
+  - display_key: mtg-lcc-292-nf
+    qty: 1
+    name: Utter End
+    tcgplayer_product_id: "525740"
+    finish: nf
+  - display_key: mtg-lcc-293-nf
+    qty: 1
+    name: "Vona, Butcher of Magan"
+    tcgplayer_product_id: "525871"
+    finish: nf
+  - display_key: mtg-lcc-300-nf
+    qty: 1
+    name: Blade of the Bloodchief
+    tcgplayer_product_id: "525761"
+    finish: nf
+  - display_key: mtg-lcc-337-nf
+    qty: 1
+    name: Isolated Chapel
+    tcgplayer_product_id: "525791"
+    finish: nf
+  - display_key: mtg-lcc-351-nf
+    qty: 1
+    name: Shineshadow Snarl
+    tcgplayer_product_id: "525793"
+    finish: nf
+  - display_key: mtg-lcc-358-nf
+    qty: 1
+    name: Temple of Silence
+    tcgplayer_product_id: "525794"
+    finish: nf
+  - display_key: mtg-lcc-367-nf
+    qty: 1
+    name: Vault of the Archangel
+    tcgplayer_product_id: "525797"
+    finish: nf
+  - display_key: mtg-lcc-369-nf
+    qty: 1
+    name: Voldaren Estate
+    tcgplayer_product_id: "525800"
+    finish: nf
+  - display_key: mtg-lcc-370-nf
+    qty: 1
+    name: Windbrisk Heights
+    tcgplayer_product_id: "525803"
+    finish: nf
+  - display_key: mtg-lcc-132-nf
+    qty: 1
+    name: Martyr of Dusk
+    tcgplayer_product_id: "525874"
+    finish: nf
+  - display_key: mtg-lcc-136-nf
+    qty: 1
+    name: Return to Dust
+    tcgplayer_product_id: "525743"
+    finish: nf
+  - display_key: mtg-lcc-137-nf
+    qty: 1
+    name: Swords to Plowshares
+    tcgplayer_product_id: "525744"
+    finish: nf
+  - display_key: mtg-lcc-182-nf
+    qty: 1
+    name: Blood Artist
+    tcgplayer_product_id: "525876"
+    finish: nf
+  - display_key: mtg-lcc-185-nf
+    qty: 1
+    name: Bloodline Necromancer
+    tcgplayer_product_id: "525877"
+    finish: nf
+  - display_key: mtg-lcc-194-nf
+    qty: 1
+    name: Dusk Legion Zealot
+    tcgplayer_product_id: "525879"
+    finish: nf
+  - display_key: mtg-lcc-196-nf
+    qty: 1
+    name: Falkenrath Noble
+    tcgplayer_product_id: "525880"
+    finish: nf
+  - display_key: mtg-lcc-200-nf
+    qty: 1
+    name: Indulgent Aristocrat
+    tcgplayer_product_id: "525881"
+    finish: nf
+  - display_key: mtg-lcc-204-nf
+    qty: 1
+    name: Oathsworn Vampire
+    tcgplayer_product_id: "525883"
+    finish: nf
+  - display_key: mtg-lcc-212-nf
+    qty: 1
+    name: Village Rites
+    tcgplayer_product_id: "525745"
+    finish: nf
+  - display_key: mtg-lcc-213-nf
+    qty: 1
+    name: Viscera Seer
+    tcgplayer_product_id: "525885"
+    finish: nf
+  - display_key: mtg-lci-224-nf
+    qty: 1
+    name: Bartolomé del Presidio
+    tcgplayer_product_id: "524316"
+    finish: nf
+  - display_key: mtg-lcc-267-nf
+    qty: 1
+    name: Cruel Celebrant
+    tcgplayer_product_id: "525886"
+    finish: nf
+  - display_key: mtg-lcc-269-nf
+    qty: 1
+    name: Etchings of the Chosen
+    tcgplayer_product_id: "525755"
+    finish: nf
+  - display_key: mtg-lcc-275-nf
+    qty: 1
+    name: Legion Lieutenant
+    tcgplayer_product_id: "525888"
+    finish: nf
+  - display_key: mtg-lcc-299-nf
+    qty: 1
+    name: Arcane Signet
+    tcgplayer_product_id: "524261"
+    finish: nf
+  - display_key: mtg-lcc-301-nf
+    qty: 1
+    name: "Commander's Sphere"
+    tcgplayer_product_id: "525766"
+    finish: nf
+  - display_key: mtg-lcc-303-nf
+    qty: 1
+    name: Heirloom Blade
+    tcgplayer_product_id: "525770"
+    finish: nf
+  - display_key: mtg-lcc-309-nf
+    qty: 1
+    name: Mind Stone
+    tcgplayer_product_id: "525772"
+    finish: nf
+  - display_key: mtg-lcc-310-nf
+    qty: 1
+    name: Orzhov Signet
+    tcgplayer_product_id: "525775"
+    finish: nf
+  - display_key: mtg-lcc-313-nf
+    qty: 1
+    name: Sol Ring
+    tcgplayer_product_id: "525779"
+    finish: nf
+  - display_key: mtg-lcc-314-nf
+    qty: 1
+    name: Swiftfoot Boots
+    tcgplayer_product_id: "525780"
+    finish: nf
+  - display_key: mtg-lcc-315-nf
+    qty: 1
+    name: Talisman of Hierarchy
+    tcgplayer_product_id: "525786"
+    finish: nf
+  - display_key: mtg-lcc-317-nf
+    qty: 1
+    name: "Wayfarer's Bauble"
+    tcgplayer_product_id: "525789"
+    finish: nf
+  - display_key: mtg-lcc-320-nf
+    qty: 1
+    name: Bojuka Bog
+    tcgplayer_product_id: "525805"
+    finish: nf
+  - display_key: mtg-lcc-325-nf
+    qty: 1
+    name: Command Tower
+    tcgplayer_product_id: "525809"
+    finish: nf
+  - display_key: mtg-lcc-343-nf
+    qty: 1
+    name: Myriad Landscape
+    tcgplayer_product_id: "525811"
+    finish: nf
+  - display_key: mtg-lcc-345-nf
+    qty: 1
+    name: Orzhov Basilica
+    tcgplayer_product_id: "525815"
+    finish: nf
+  - display_key: mtg-lcc-346-nf
+    qty: 1
+    name: Path of Ancestry
+    tcgplayer_product_id: "524267"
+    finish: nf
+  - display_key: mtg-lcc-349-nf
+    qty: 1
+    name: "Rogue's Passage"
+    tcgplayer_product_id: "525818"
+    finish: nf
+  - display_key: mtg-lcc-350-nf
+    qty: 1
+    name: Secluded Courtyard
+    tcgplayer_product_id: "525821"
+    finish: nf
+  - display_key: mtg-lcc-356-nf
+    qty: 1
+    name: Tainted Field
+    tcgplayer_product_id: "525823"
+    finish: nf
+  - display_key: mtg-lcc-359-nf
+    qty: 1
+    name: Temple of the False God
+    tcgplayer_product_id: "525826"
+    finish: nf
+  - display_key: mtg-lcc-366-nf
+    qty: 1
+    name: Unclaimed Territory
+    tcgplayer_product_id: "525827"
+    finish: nf
+  - display_key: mtg-lci-393-nf
+    qty: 4
+    name: Plains
+    tcgplayer_product_id: "524175"
+    finish: nf
+  - display_key: mtg-lci-394-nf
+    qty: 4
+    name: Plains
+    tcgplayer_product_id: "524186"
+    finish: nf
+  - display_key: mtg-lci-397-nf
+    qty: 7
+    name: Swamp
+    tcgplayer_product_id: "524171"
+    finish: nf
+  - display_key: mtg-lci-398-nf
+    qty: 6
+    name: Swamp
+    tcgplayer_product_id: "524194"
+    finish: nf

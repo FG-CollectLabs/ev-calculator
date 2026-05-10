@@ -1,0 +1,465 @@
+key: tdc-commander-mardu-surge
+name: Mardu Surge
+game: mtg
+set_code: tdc
+product_display_key: mtg-tdc-commander-mardu-surge
+product_tcgplayer_id: "619667"
+image: /img/decks/tdc-commander-mardu-surge.jpg
+channels: [tcgplayer, manapool]
+components:
+  - display_key: mtg-tdc-10-f
+    qty: 1
+    name: Zurgo Stormrender
+    tcgplayer_product_id: "623917"
+    finish: f
+    note: commander
+  - display_key: mtg-tdc-6-f
+    qty: 1
+    name: "Neriv, Crackling Vanguard"
+    tcgplayer_product_id: "623913"
+    finish: f
+  - display_key: mtg-tdc-11-nf
+    qty: 1
+    name: Ainok Strike Leader
+    tcgplayer_product_id: "624277"
+    finish: nf
+  - display_key: mtg-tdc-13-nf
+    qty: 1
+    name: Ironwill Forger
+    tcgplayer_product_id: "624278"
+    finish: nf
+  - display_key: mtg-tdc-17-nf
+    qty: 1
+    name: Will of the Mardu
+    tcgplayer_product_id: "624279"
+    finish: nf
+  - display_key: mtg-tdc-26-nf
+    qty: 1
+    name: Bone Devourer
+    tcgplayer_product_id: "624299"
+    finish: nf
+  - display_key: mtg-tdc-32-nf
+    qty: 1
+    name: Within Range
+    tcgplayer_product_id: "624300"
+    finish: nf
+  - display_key: mtg-tdc-34-nf
+    qty: 1
+    name: Goldlust Triad
+    tcgplayer_product_id: "624325"
+    finish: nf
+  - display_key: mtg-tdc-35-nf
+    qty: 1
+    name: Infantry Shield
+    tcgplayer_product_id: "624326"
+    finish: nf
+  - display_key: mtg-tdc-37-nf
+    qty: 1
+    name: Redoubled Stormsinger
+    tcgplayer_product_id: "624327"
+    finish: nf
+  - display_key: mtg-tdc-108-nf
+    qty: 1
+    name: "Adeline, Resplendent Cathar"
+    tcgplayer_product_id: "624280"
+    finish: nf
+  - display_key: mtg-tdc-109-nf
+    qty: 1
+    name: Angel of Invention
+    tcgplayer_product_id: "624281"
+    finish: nf
+  - display_key: mtg-tdc-111-nf
+    qty: 1
+    name: "Commander's Insignia"
+    tcgplayer_product_id: "624282"
+    finish: nf
+  - display_key: mtg-tdc-113-nf
+    qty: 1
+    name: Divine Visitation
+    tcgplayer_product_id: "624283"
+    finish: nf
+  - display_key: mtg-tdc-114-nf
+    qty: 1
+    name: Emeria Angel
+    tcgplayer_product_id: "624284"
+    finish: nf
+  - display_key: mtg-tdc-118-nf
+    qty: 1
+    name: Grand Crescendo
+    tcgplayer_product_id: "624286"
+    finish: nf
+  - display_key: mtg-tdc-119-nf
+    qty: 1
+    name: Hero of Bladehold
+    tcgplayer_product_id: "624287"
+    finish: nf
+  - display_key: mtg-tdc-120-nf
+    qty: 1
+    name: Hour of Reckoning
+    tcgplayer_product_id: "624288"
+    finish: nf
+  - display_key: mtg-tdc-122-nf
+    qty: 1
+    name: Legion Loyalty
+    tcgplayer_product_id: "624289"
+    finish: nf
+  - display_key: mtg-tdc-129-nf
+    qty: 1
+    name: Selfless Spirit
+    tcgplayer_product_id: "624292"
+    finish: nf
+  - display_key: mtg-tdc-133-nf
+    qty: 1
+    name: Sun Titan
+    tcgplayer_product_id: "624296"
+    finish: nf
+  - display_key: mtg-tdc-135-nf
+    qty: 1
+    name: "Tocasia's Welcome"
+    tcgplayer_product_id: "624297"
+    finish: nf
+  - display_key: mtg-tdc-136-nf
+    qty: 1
+    name: Twilight Drover
+    tcgplayer_product_id: "624298"
+    finish: nf
+  - display_key: mtg-tdc-175-nf
+    qty: 1
+    name: Chittering Witch
+    tcgplayer_product_id: "624304"
+    finish: nf
+  - display_key: mtg-tdc-179-nf
+    qty: 1
+    name: Eliminate the Competition
+    tcgplayer_product_id: "624306"
+    finish: nf
+  - display_key: mtg-tdc-181-nf
+    qty: 1
+    name: "Gix, Yawgmoth Praetor"
+    tcgplayer_product_id: "624308"
+    finish: nf
+  - display_key: mtg-tdc-187-nf
+    qty: 1
+    name: Mindblade Render
+    tcgplayer_product_id: "624309"
+    finish: nf
+  - display_key: mtg-tdc-193-nf
+    qty: 1
+    name: Ophiomancer
+    tcgplayer_product_id: "624311"
+    finish: nf
+  - display_key: mtg-tdc-202-nf
+    qty: 1
+    name: "Yahenni, Undying Partisan"
+    tcgplayer_product_id: "624314"
+    finish: nf
+  - display_key: mtg-tdc-216-nf
+    qty: 1
+    name: "Grenzo, Havoc Raiser"
+    tcgplayer_product_id: "624329"
+    finish: nf
+  - display_key: mtg-tdc-220-nf
+    qty: 1
+    name: Legion Warboss
+    tcgplayer_product_id: "624330"
+    finish: nf
+  - display_key: mtg-tdc-227-nf
+    qty: 1
+    name: Ogre Battledriver
+    tcgplayer_product_id: "624333"
+    finish: nf
+  - display_key: mtg-tdc-232-nf
+    qty: 1
+    name: Siege-Gang Commander
+    tcgplayer_product_id: "624335"
+    finish: nf
+  - display_key: mtg-tdc-239-nf
+    qty: 1
+    name: Tempt with Vengeance
+    tcgplayer_product_id: "624337"
+    finish: nf
+  - display_key: mtg-tdc-294-nf
+    qty: 1
+    name: "Kaya, Geist Hunter"
+    tcgplayer_product_id: "624336"
+    finish: nf
+  - display_key: mtg-tdc-313-nf
+    qty: 1
+    name: Blade of Selves
+    tcgplayer_product_id: "624341"
+    finish: nf
+  - display_key: mtg-tdc-319-nf
+    qty: 1
+    name: Idol of Oblivion
+    tcgplayer_product_id: "624342"
+    finish: nf
+  - display_key: mtg-tdc-322-nf
+    qty: 1
+    name: Myr Battlesphere
+    tcgplayer_product_id: "624343"
+    finish: nf
+  - display_key: mtg-tdc-325-nf
+    qty: 1
+    name: Solemn Simulacrum
+    tcgplayer_product_id: "624344"
+    finish: nf
+  - display_key: mtg-tdc-340-nf
+    qty: 1
+    name: Battlefield Forge
+    tcgplayer_product_id: "624204"
+    finish: nf
+  - display_key: mtg-tdc-344-nf
+    qty: 1
+    name: Canyon Slough
+    tcgplayer_product_id: "624295"
+    finish: nf
+  - display_key: mtg-tdc-346-nf
+    qty: 1
+    name: Castle Ardenvale
+    tcgplayer_product_id: "624302"
+    finish: nf
+  - display_key: mtg-tdc-347-nf
+    qty: 1
+    name: Castle Embereth
+    tcgplayer_product_id: "624307"
+    finish: nf
+  - display_key: mtg-tdc-348-nf
+    qty: 1
+    name: Caves of Koilos
+    tcgplayer_product_id: "624313"
+    finish: nf
+  - display_key: mtg-tdc-351-nf
+    qty: 1
+    name: Clifftop Retreat
+    tcgplayer_product_id: "624206"
+    finish: nf
+  - display_key: mtg-tdc-357-nf
+    qty: 1
+    name: Dragonskull Summit
+    tcgplayer_product_id: "624315"
+    finish: nf
+  - display_key: mtg-tdc-360-nf
+    qty: 1
+    name: Exotic Orchard
+    tcgplayer_product_id: "624207"
+    finish: nf
+  - display_key: mtg-tdc-362-nf
+    qty: 1
+    name: Fetid Heath
+    tcgplayer_product_id: "624316"
+    finish: nf
+  - display_key: mtg-tdc-373-nf
+    qty: 1
+    name: Isolated Chapel
+    tcgplayer_product_id: "624317"
+    finish: nf
+  - display_key: mtg-tdc-391-nf
+    qty: 1
+    name: Shattered Sanctum
+    tcgplayer_product_id: "624319"
+    finish: nf
+  - display_key: mtg-tdc-395-nf
+    qty: 1
+    name: Smoldering Marsh
+    tcgplayer_product_id: "624320"
+    finish: nf
+  - display_key: mtg-tdc-406-nf
+    qty: 1
+    name: Temple of Silence
+    tcgplayer_product_id: "624321"
+    finish: nf
+  - display_key: mtg-tdc-407-nf
+    qty: 1
+    name: Temple of Triumph
+    tcgplayer_product_id: "624221"
+    finish: nf
+  - display_key: mtg-tdc-410-nf
+    qty: 1
+    name: Vault of the Archangel
+    tcgplayer_product_id: "624323"
+    finish: nf
+  - display_key: mtg-tdc-411-nf
+    qty: 1
+    name: Windbrisk Heights
+    tcgplayer_product_id: "624324"
+    finish: nf
+  - display_key: mtg-tdc-101-nf
+    qty: 1
+    name: Shadow Summoning
+    tcgplayer_product_id: "624331"
+    finish: nf
+  - display_key: mtg-tdc-102-nf
+    qty: 1
+    name: Lightning Greaves
+    tcgplayer_product_id: "624339"
+    finish: nf
+  - display_key: mtg-tdc-103-nf
+    qty: 1
+    name: Skullclamp
+    tcgplayer_product_id: "624340"
+    finish: nf
+  - display_key: mtg-tdc-105-nf
+    qty: 1
+    name: Arcane Signet
+    tcgplayer_product_id: "624048"
+    finish: nf
+  - display_key: mtg-tdc-106-nf
+    qty: 1
+    name: Sol Ring
+    tcgplayer_product_id: "624049"
+    finish: nf
+  - display_key: mtg-tdc-107-nf
+    qty: 1
+    name: Command Tower
+    tcgplayer_product_id: "623982"
+    finish: nf
+  - display_key: mtg-tdc-117-nf
+    qty: 1
+    name: Goldnight Commander
+    tcgplayer_product_id: "624285"
+    finish: nf
+  - display_key: mtg-tdc-123-nf
+    qty: 1
+    name: Lingering Souls
+    tcgplayer_product_id: "624290"
+    finish: nf
+  - display_key: mtg-tdc-127-nf
+    qty: 1
+    name: Release the Dogs
+    tcgplayer_product_id: "624291"
+    finish: nf
+  - display_key: mtg-tdc-132-nf
+    qty: 1
+    name: Stroke of Midnight
+    tcgplayer_product_id: "624294"
+    finish: nf
+  - display_key: mtg-tdc-134-nf
+    qty: 1
+    name: Swords to Plowshares
+    tcgplayer_product_id: "624152"
+    finish: nf
+  - display_key: mtg-tdc-171-nf
+    qty: 1
+    name: Bastion of Remembrance
+    tcgplayer_product_id: "624301"
+    finish: nf
+  - display_key: mtg-tdc-173-nf
+    qty: 1
+    name: Bitter Triumph
+    tcgplayer_product_id: "624303"
+    finish: nf
+  - display_key: mtg-tdc-177-nf
+    qty: 1
+    name: Deadly Dispute
+    tcgplayer_product_id: "624305"
+    finish: nf
+  - display_key: mtg-tdc-188-nf
+    qty: 1
+    name: Morbid Opportunist
+    tcgplayer_product_id: "624310"
+    finish: nf
+  - display_key: mtg-tdc-199-nf
+    qty: 1
+    name: Viscera Seer
+    tcgplayer_product_id: "624312"
+    finish: nf
+  - display_key: mtg-tdc-203-nf
+    qty: 1
+    name: Abrade
+    tcgplayer_product_id: "624178"
+    finish: nf
+  - display_key: mtg-tdc-205-nf
+    qty: 1
+    name: Beetleback Chief
+    tcgplayer_product_id: "624328"
+    finish: nf
+  - display_key: mtg-tdc-222-nf
+    qty: 1
+    name: Loyal Apprentice
+    tcgplayer_product_id: "624332"
+    finish: nf
+  - display_key: mtg-tdm-263-nf
+    qty: 1
+    name: Nomad Outpost
+    tcgplayer_product_id: "624269"
+    finish: nf
+  - display_key: mtg-tdc-280-nf
+    qty: 1
+    name: "Aron, Benalia's Ruin"
+    tcgplayer_product_id: "624334"
+    finish: nf
+  - display_key: mtg-tdc-306-nf
+    qty: 1
+    name: "Thalisse, Reverent Medium"
+    tcgplayer_product_id: "624338"
+    finish: nf
+  - display_key: mtg-tdc-318-nf
+    qty: 1
+    name: Fellwar Stone
+    tcgplayer_product_id: "624374"
+    finish: nf
+  - display_key: mtg-tdc-329-nf
+    qty: 1
+    name: Talisman of Conviction
+    tcgplayer_product_id: "624345"
+    finish: nf
+  - display_key: mtg-tdc-331-nf
+    qty: 1
+    name: Talisman of Hierarchy
+    tcgplayer_product_id: "624346"
+    finish: nf
+  - display_key: mtg-tdc-335-nf
+    qty: 1
+    name: "Wayfarer's Bauble"
+    tcgplayer_product_id: "624347"
+    finish: nf
+  - display_key: mtg-tdc-341-nf
+    qty: 1
+    name: Bojuka Bog
+    tcgplayer_product_id: "624293"
+    finish: nf
+  - display_key: mtg-tdc-382-nf
+    qty: 1
+    name: Path of Ancestry
+    tcgplayer_product_id: "624211"
+    finish: nf
+  - display_key: mtg-tdc-390-nf
+    qty: 1
+    name: Shattered Landscape
+    tcgplayer_product_id: "624318"
+    finish: nf
+  - display_key: mtg-tdc-408-nf
+    qty: 1
+    name: Terramorphic Expanse
+    tcgplayer_product_id: "624322"
+    finish: nf
+  - display_key: mtg-tdm-277-nf
+    qty: 3
+    name: Plains
+    tcgplayer_product_id: "623965"
+    finish: nf
+  - display_key: mtg-tdm-278-nf
+    qty: 2
+    name: Plains
+    tcgplayer_product_id: "623966"
+    finish: nf
+  - display_key: mtg-tdm-281-nf
+    qty: 3
+    name: Swamp
+    tcgplayer_product_id: "623972"
+    finish: nf
+  - display_key: mtg-tdm-282-nf
+    qty: 2
+    name: Swamp
+    tcgplayer_product_id: "623974"
+    finish: nf
+  - display_key: mtg-tdm-283-nf
+    qty: 3
+    name: Mountain
+    tcgplayer_product_id: "623975"
+    finish: nf
+  - display_key: mtg-tdm-284-nf
+    qty: 2
+    name: Mountain
+    tcgplayer_product_id: "623977"
+    finish: nf

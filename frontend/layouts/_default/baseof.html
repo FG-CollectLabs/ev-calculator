@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ .Title }} — {{ .Site.Title }}</title>
+  <link rel="stylesheet" href="{{ "/css/app.css" | relURL }}" />
+</head>
+<body>
+  <header class="topbar">
+    <a href="{{ "/" | relURL }}" class="logo">EV Calculator</a>
+    <nav>
+      <a href="{{ "/commander/" | relURL }}">Magic Commander</a>
+      <a href="{{ "/about/" | relURL }}">About</a>
+    </nav>
+  </header>
+  <main class="container">
+    {{ block "main" . }}{{ end }}
+  </main>
+  <script>
+    window.EV_API_BASE = "{{ .Site.Params.apiBase }}";
+  </script>
+  <script src="{{ "/js/fmt.js" | relURL }}"></script>
+  {{ block "scripts" . }}{{ end }}
+</body>
+</html>

@@ -1,0 +1,480 @@
+key: fic-commander-counter-blitz-collector-s-edition-final-fantasy-x
+name: "Counter Blitz Collector's Edition (FINAL FANTASY X)"
+game: mtg
+set_code: fic
+product_display_key: mtg-fic-commander-counter-blitz-collector-s-edition-final-fantasy-x
+product_tcgplayer_id: "618910"
+image: /img/decks/fic-commander-counter-blitz-collectors-final-fantasy-x.jpg
+channels: [tcgplayer, manapool]
+components:
+  - display_key: mtg-fic-224-f
+    qty: 1
+    name: "Tidus, Yuna's Guardian"
+    tcgplayer_product_id: "618885"
+    finish: f
+    note: commander
+  - display_key: mtg-fic-317-f
+    qty: 1
+    name: Altered Ego
+    tcgplayer_product_id: "636749"
+    finish: f
+  - display_key: mtg-fic-267-f
+    qty: 1
+    name: "An Offer You Can't Refuse"
+    tcgplayer_product_id: "636750"
+    finish: f
+  - display_key: mtg-fic-334-f
+    qty: 1
+    name: Arcane Signet
+    tcgplayer_product_id: "636756"
+    finish: f
+  - display_key: mtg-fic-374-f
+    qty: 1
+    name: Ash Barrens
+    tcgplayer_product_id: "636763"
+    finish: f
+  - display_key: mtg-fic-10-f
+    qty: 1
+    name: "Auron, Venerated Guardian"
+    tcgplayer_product_id: "636764"
+    finish: f
+  - display_key: mtg-fic-299-f
+    qty: 1
+    name: Bane of Progress
+    tcgplayer_product_id: "636769"
+    finish: f
+  - display_key: mtg-fic-34-f
+    qty: 1
+    name: Blitzball Stadium
+    tcgplayer_product_id: "636778"
+    finish: f
+  - display_key: mtg-fic-321-f
+    qty: 1
+    name: Bred for the Hunt
+    tcgplayer_product_id: "636781"
+    finish: f
+  - display_key: mtg-fic-377-f
+    qty: 1
+    name: Brushland
+    tcgplayer_product_id: "636783"
+    finish: f
+  - display_key: mtg-fic-378-f
+    qty: 1
+    name: Canopy Vista
+    tcgplayer_product_id: "636786"
+    finish: f
+  - display_key: mtg-fic-262-f
+    qty: 1
+    name: Chasm Skulker
+    tcgplayer_product_id: "636790"
+    finish: f
+  - display_key: mtg-fic-12-f
+    qty: 1
+    name: Chocobo Knights
+    tcgplayer_product_id: "636791"
+    finish: f
+  - display_key: mtg-fic-237-f
+    qty: 1
+    name: Collective Effort
+    tcgplayer_product_id: "636800"
+    finish: f
+  - display_key: mtg-fic-486-f
+    qty: 1
+    name: Command Tower
+    tcgplayer_product_id: "636806"
+    finish: f
+  - display_key: mtg-fic-239-f
+    qty: 1
+    name: Damning Verdict
+    tcgplayer_product_id: "636817"
+    finish: f
+  - display_key: mtg-fic-240-f
+    qty: 1
+    name: Destroy Evil
+    tcgplayer_product_id: "636824"
+    finish: f
+  - display_key: mtg-fic-301-f
+    qty: 1
+    name: Duskshell Crawler
+    tcgplayer_product_id: "636829"
+    finish: f
+  - display_key: mtg-fic-324-f
+    qty: 1
+    name: Endless Detour
+    tcgplayer_product_id: "636833"
+    finish: f
+  - display_key: mtg-fic-343-f
+    qty: 1
+    name: Everflowing Chalice
+    tcgplayer_product_id: "636836"
+    finish: f
+  - display_key: mtg-fic-389-f
+    qty: 1
+    name: Evolving Wilds
+    tcgplayer_product_id: "636837"
+    finish: f
+  - display_key: mtg-fic-390-f
+    qty: 1
+    name: Exotic Orchard
+    tcgplayer_product_id: "636838"
+    finish: f
+  - display_key: mtg-fic-242-f
+    qty: 1
+    name: Farewell
+    tcgplayer_product_id: "636843"
+    finish: f
+  - display_key: mtg-fic-302-f
+    qty: 1
+    name: Farseek
+    tcgplayer_product_id: "636844"
+    finish: f
+  - display_key: mtg-fic-325-f
+    qty: 1
+    name: Fathom Mage
+    tcgplayer_product_id: "636845"
+    finish: f
+  - display_key: mtg-fic-303-f
+    qty: 1
+    name: Fight Rigging
+    tcgplayer_product_id: "636847"
+    finish: f
+  - display_key: mtg-fic-393-f
+    qty: 1
+    name: Flooded Grove
+    tcgplayer_product_id: "636851"
+    finish: f
+  - display_key: mtg-fin-576-f
+    qty: 3
+    name: Forest
+    tcgplayer_product_id: "656916"
+    finish: f
+  - display_key: mtg-fic-395-f
+    qty: 1
+    name: Forge of Heroes
+    tcgplayer_product_id: "636853"
+    finish: f
+  - display_key: mtg-fic-304-f
+    qty: 1
+    name: Forgotten Ancient
+    tcgplayer_product_id: "636854"
+    finish: f
+  - display_key: mtg-fic-396-f
+    qty: 1
+    name: Fortified Village
+    tcgplayer_product_id: "636855"
+    finish: f
+  - display_key: mtg-fic-19-f
+    qty: 1
+    name: Gatta and Luzzu
+    tcgplayer_product_id: "636859"
+    finish: f
+  - display_key: mtg-fic-305-f
+    qty: 1
+    name: Generous Patron
+    tcgplayer_product_id: "636862"
+    finish: f
+  - display_key: mtg-fic-400-f
+    qty: 1
+    name: Glacial Fortress
+    tcgplayer_product_id: "636864"
+    finish: f
+  - display_key: mtg-fic-244-f
+    qty: 1
+    name: Grateful Apparition
+    tcgplayer_product_id: "636866"
+    finish: f
+  - display_key: mtg-fic-306-f
+    qty: 1
+    name: Gyre Sage
+    tcgplayer_product_id: "636868"
+    finish: f
+  - display_key: mtg-fic-307-f
+    qty: 1
+    name: Hardened Scales
+    tcgplayer_product_id: "636869"
+    finish: f
+  - display_key: mtg-fic-403-f
+    qty: 1
+    name: Hinterland Harbor
+    tcgplayer_product_id: "636879"
+    finish: f
+  - display_key: mtg-fic-404-f
+    qty: 1
+    name: Idyllic Beachfront
+    tcgplayer_product_id: "636882"
+    finish: f
+  - display_key: mtg-fic-309-f
+    qty: 1
+    name: Incubation Druid
+    tcgplayer_product_id: "636883"
+    finish: f
+  - display_key: mtg-fic-265-f
+    qty: 1
+    name: Inexorable Tide
+    tcgplayer_product_id: "636884"
+    finish: f
+  - display_key: mtg-fic-310-f
+    qty: 1
+    name: Inspiring Call
+    tcgplayer_product_id: "636885"
+    finish: f
+  - display_key: mtg-fin-573-f
+    qty: 3
+    name: Island
+    tcgplayer_product_id: "656913"
+    finish: f
+  - display_key: mtg-fic-85-f
+    qty: 1
+    name: "Kimahri, Valiant Guardian"
+    tcgplayer_product_id: "636893"
+    finish: f
+  - display_key: mtg-fic-23-f
+    qty: 1
+    name: Lord Jyscal Guado
+    tcgplayer_product_id: "636901"
+    finish: f
+  - display_key: mtg-fic-38-f
+    qty: 1
+    name: "Lulu, Stern Guardian"
+    tcgplayer_product_id: "636902"
+    finish: f
+  - display_key: mtg-fic-246-f
+    qty: 1
+    name: Luminous Broodmoth
+    tcgplayer_product_id: "636903"
+    finish: f
+  - display_key: mtg-fic-68-f
+    qty: 1
+    name: Maester Seymour
+    tcgplayer_product_id: "636905"
+    finish: f
+  - display_key: mtg-fic-408-f
+    qty: 1
+    name: Nesting Grounds
+    tcgplayer_product_id: "636916"
+    finish: f
+  - display_key: mtg-fic-39-f
+    qty: 1
+    name: "O'aka, Traveling Merchant"
+    tcgplayer_product_id: "636919"
+    finish: f
+  - display_key: mtg-fic-410-f
+    qty: 1
+    name: Overflowing Basin
+    tcgplayer_product_id: "636921"
+    finish: f
+  - display_key: mtg-fic-411-f
+    qty: 1
+    name: Path of Ancestry
+    tcgplayer_product_id: "636924"
+    finish: f
+  - display_key: mtg-fic-312-f
+    qty: 1
+    name: Path of Discovery
+    tcgplayer_product_id: "636925"
+    finish: f
+  - display_key: mtg-fic-248-f
+    qty: 1
+    name: Path to Exile
+    tcgplayer_product_id: "636926"
+    finish: f
+  - display_key: mtg-fin-572-f
+    qty: 3
+    name: Plains
+    tcgplayer_product_id: "656912"
+    finish: f
+  - display_key: mtg-fic-412-f
+    qty: 1
+    name: Port Town
+    tcgplayer_product_id: "636928"
+    finish: f
+  - display_key: mtg-fic-413-f
+    qty: 1
+    name: Prairie Stream
+    tcgplayer_product_id: "636929"
+    finish: f
+  - display_key: mtg-fic-249-f
+    qty: 1
+    name: Promise of Loyalty
+    tcgplayer_product_id: "636933"
+    finish: f
+  - display_key: mtg-fic-24-f
+    qty: 1
+    name: Protection Magic
+    tcgplayer_product_id: "636935"
+    finish: f
+  - display_key: mtg-fic-269-f
+    qty: 1
+    name: Pull from Tomorrow
+    tcgplayer_product_id: "636936"
+    finish: f
+  - display_key: mtg-fic-414-f
+    qty: 1
+    name: Radiant Grove
+    tcgplayer_product_id: "636938"
+    finish: f
+  - display_key: mtg-fic-314-f
+    qty: 1
+    name: Rampant Rejuvenator
+    tcgplayer_product_id: "636940"
+    finish: f
+  - display_key: mtg-fic-251-f
+    qty: 1
+    name: Resourceful Defense
+    tcgplayer_product_id: "636946"
+    finish: f
+  - display_key: mtg-fic-41-f
+    qty: 1
+    name: "Rikku, Resourceful Guardian"
+    tcgplayer_product_id: "636947"
+    finish: f
+  - display_key: mtg-fic-252-f
+    qty: 1
+    name: Scholar of New Horizons
+    tcgplayer_product_id: "636958"
+    finish: f
+  - display_key: mtg-fic-420-f
+    qty: 1
+    name: Seaside Citadel
+    tcgplayer_product_id: "636959"
+    finish: f
+  - display_key: mtg-fic-94-f
+    qty: 1
+    name: "Shelinda, Yevon Acolyte"
+    tcgplayer_product_id: "636966"
+    finish: f
+  - display_key: mtg-fic-95-f
+    qty: 1
+    name: "Sin, Unending Cataclysm"
+    tcgplayer_product_id: "636969"
+    finish: f
+  - display_key: mtg-fic-423-f
+    qty: 1
+    name: Skycloud Expanse
+    tcgplayer_product_id: "636971"
+    finish: f
+  - display_key: mtg-fic-358-f
+    qty: 1
+    name: Sol Ring
+    tcgplayer_product_id: "636978"
+    finish: f
+  - display_key: mtg-fic-70-f
+    qty: 1
+    name: Sphere Grid
+    tcgplayer_product_id: "636982"
+    finish: f
+  - display_key: mtg-fic-27-f
+    qty: 1
+    name: "Summon: Ixion"
+    tcgplayer_product_id: "636991"
+    finish: f
+  - display_key: mtg-fic-71-f
+    qty: 1
+    name: "Summon: Magus Sisters"
+    tcgplayer_product_id: "636993"
+    finish: f
+  - display_key: mtg-fic-42-f
+    qty: 1
+    name: "Summon: Valefor"
+    tcgplayer_product_id: "636994"
+    finish: f
+  - display_key: mtg-fic-28-f
+    qty: 1
+    name: "Summon: Yojimbo"
+    tcgplayer_product_id: "636995"
+    finish: f
+  - display_key: mtg-fic-29-f
+    qty: 1
+    name: "Summoner's Sending"
+    tcgplayer_product_id: "636996"
+    finish: f
+  - display_key: mtg-fic-428-f
+    qty: 1
+    name: Sungrass Prairie
+    tcgplayer_product_id: "636999"
+    finish: f
+  - display_key: mtg-fic-432-f
+    qty: 1
+    name: Sunpetal Grove
+    tcgplayer_product_id: "637003"
+    finish: f
+  - display_key: mtg-fic-255-f
+    qty: 1
+    name: Sunscorch Regent
+    tcgplayer_product_id: "637004"
+    finish: f
+  - display_key: mtg-fic-434-f
+    qty: 1
+    name: Tangled Islet
+    tcgplayer_product_id: "637015"
+    finish: f
+  - display_key: mtg-fic-435-f
+    qty: 1
+    name: Temple of Enlightenment
+    tcgplayer_product_id: "637017"
+    finish: f
+  - display_key: mtg-fic-436-f
+    qty: 1
+    name: Temple of Mystery
+    tcgplayer_product_id: "637018"
+    finish: f
+  - display_key: mtg-fic-437-f
+    qty: 1
+    name: Temple of Plenty
+    tcgplayer_product_id: "637019"
+    finish: f
+  - display_key: mtg-fic-438-f
+    qty: 1
+    name: Temple of the False God
+    tcgplayer_product_id: "637020"
+    finish: f
+  - display_key: mtg-fic-315-f
+    qty: 1
+    name: Three Visits
+    tcgplayer_product_id: "637025"
+    finish: f
+  - display_key: mtg-fic-316-f
+    qty: 1
+    name: Tireless Tracker
+    tcgplayer_product_id: "637026"
+    finish: f
+  - display_key: mtg-fic-257-f
+    qty: 1
+    name: Together Forever
+    tcgplayer_product_id: "637027"
+    finish: f
+  - display_key: mtg-fic-73-f
+    qty: 1
+    name: "Tromell, Seymour's Butler"
+    tcgplayer_product_id: "637033"
+    finish: f
+  - display_key: mtg-fic-440-f
+    qty: 1
+    name: Vineglimmer Snarl
+    tcgplayer_product_id: "637044"
+    finish: f
+  - display_key: mtg-fic-97-f
+    qty: 1
+    name: "Wakka, Devoted Guardian"
+    tcgplayer_product_id: "637046"
+    finish: f
+  - display_key: mtg-fic-371-f
+    qty: 1
+    name: Walking Ballista
+    tcgplayer_product_id: "637047"
+    finish: f
+  - display_key: mtg-fic-227-f
+    qty: 1
+    name: "Yuna, Grand Summoner"
+    tcgplayer_product_id: "631071"
+    finish: f
+  - display_key: mtg-fic-74-f
+    qty: 1
+    name: "Yuna's Decision"
+    tcgplayer_product_id: "637052"
+    finish: f
+  - display_key: mtg-fic-75-f
+    qty: 1
+    name: "Yuna's Whistle"
+    tcgplayer_product_id: "637053"
+    finish: f

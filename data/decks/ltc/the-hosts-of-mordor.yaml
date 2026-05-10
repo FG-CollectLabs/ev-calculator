@@ -1,0 +1,445 @@
+key: ltc-commander-the-hosts-of-mordor
+name: The Hosts of Mordor
+game: mtg
+set_code: ltc
+product_display_key: mtg-ltc-commander-the-hosts-of-mordor
+product_tcgplayer_id: "488293"
+image: /img/decks/ltc-commander-the-hosts-of-mordor.jpg
+channels: [tcgplayer, manapool]
+components:
+  - display_key: mtg-ltc-4-f
+    qty: 1
+    name: "Sauron, Lord of the Rings"
+    tcgplayer_product_id: "498468"
+    finish: f
+    note: commander
+  - display_key: mtg-ltc-8-f
+    qty: 1
+    name: "Saruman, the White Hand"
+    tcgplayer_product_id: "499735"
+    finish: f
+  - display_key: mtg-ltc-19-nf
+    qty: 1
+    name: Corsairs of Umbar
+    tcgplayer_product_id: "499726"
+    finish: nf
+  - display_key: mtg-ltc-22-nf
+    qty: 1
+    name: Monstrosity of the Lake
+    tcgplayer_product_id: "499723"
+    finish: nf
+  - display_key: mtg-ltc-24-nf
+    qty: 1
+    name: Subjugate the Hobbits
+    tcgplayer_product_id: "499724"
+    finish: nf
+  - display_key: mtg-ltc-29-nf
+    qty: 1
+    name: "Shelob, Dread Weaver"
+    tcgplayer_product_id: "499742"
+    finish: nf
+  - display_key: mtg-ltc-31-nf
+    qty: 1
+    name: Cavern-Hoard Dragon
+    tcgplayer_product_id: "499732"
+    finish: nf
+  - display_key: mtg-ltc-33-nf
+    qty: 1
+    name: Orcish Siegemaster
+    tcgplayer_product_id: "499698"
+    finish: nf
+  - display_key: mtg-ltc-34-nf
+    qty: 1
+    name: Rampaging War Mammoth
+    tcgplayer_product_id: "499721"
+    finish: nf
+  - display_key: mtg-ltc-46-nf
+    qty: 1
+    name: The Balrog of Moria
+    tcgplayer_product_id: "500087"
+    finish: nf
+  - display_key: mtg-ltc-57-nf
+    qty: 1
+    name: "Gríma, Saruman's Footman"
+    tcgplayer_product_id: "499749"
+    finish: nf
+  - display_key: mtg-ltc-58-nf
+    qty: 1
+    name: In the Darkness Bind Them
+    tcgplayer_product_id: "499606"
+    finish: nf
+  - display_key: mtg-ltc-59-nf
+    qty: 1
+    name: Lidless Gaze
+    tcgplayer_product_id: "499604"
+    finish: nf
+  - display_key: mtg-ltc-60-nf
+    qty: 1
+    name: Lord of the Nazgûl
+    tcgplayer_product_id: "499605"
+    finish: nf
+  - display_key: mtg-ltc-63-nf
+    qty: 1
+    name: Moria Scavenger
+    tcgplayer_product_id: "499603"
+    finish: nf
+  - display_key: mtg-ltc-70-nf
+    qty: 1
+    name: Summons of Saruman
+    tcgplayer_product_id: "499600"
+    finish: nf
+  - display_key: mtg-ltc-72-nf
+    qty: 1
+    name: "Too Greedily, Too Deep"
+    tcgplayer_product_id: "499599"
+    finish: nf
+  - display_key: mtg-ltc-74-nf
+    qty: 1
+    name: Wake the Dragon
+    tcgplayer_product_id: "499707"
+    finish: nf
+  - display_key: mtg-ltc-79-nf
+    qty: 1
+    name: Relic of Sauron
+    tcgplayer_product_id: "499597"
+    finish: nf
+  - display_key: mtg-ltc-80-nf
+    qty: 1
+    name: The Black Gate
+    tcgplayer_product_id: "499595"
+    finish: nf
+  - display_key: mtg-ltc-199-nf
+    qty: 1
+    name: Decree of Pain
+    tcgplayer_product_id: "499607"
+    finish: nf
+  - display_key: mtg-ltc-202-nf
+    qty: 1
+    name: Languish
+    tcgplayer_product_id: "499608"
+    finish: nf
+  - display_key: mtg-ltc-203-nf
+    qty: 1
+    name: Living Death
+    tcgplayer_product_id: "499609"
+    finish: nf
+  - display_key: mtg-ltc-206-nf
+    qty: 1
+    name: Reanimate
+    tcgplayer_product_id: "499611"
+    finish: nf
+  - display_key: mtg-ltc-211-nf
+    qty: 1
+    name: Blasphemous Act
+    tcgplayer_product_id: "499613"
+    finish: nf
+  - display_key: mtg-ltc-219-nf
+    qty: 1
+    name: Goblin Dark-Dwellers
+    tcgplayer_product_id: "499626"
+    finish: nf
+  - display_key: mtg-ltc-223-nf
+    qty: 1
+    name: Inferno Titan
+    tcgplayer_product_id: "499628"
+    finish: nf
+  - display_key: mtg-ltc-224-nf
+    qty: 1
+    name: Knollspine Dragon
+    tcgplayer_product_id: "499630"
+    finish: nf
+  - display_key: mtg-ltc-225-nf
+    qty: 1
+    name: Scourge of the Throne
+    tcgplayer_product_id: "499632"
+    finish: nf
+  - display_key: mtg-ltc-228-nf
+    qty: 1
+    name: Siege-Gang Commander
+    tcgplayer_product_id: "499634"
+    finish: nf
+  - display_key: mtg-ltc-230-nf
+    qty: 1
+    name: Treasure Nabber
+    tcgplayer_product_id: "499635"
+    finish: nf
+  - display_key: mtg-ltc-268-nf
+    qty: 1
+    name: Hostage Taker
+    tcgplayer_product_id: "499637"
+    finish: nf
+  - display_key: mtg-ltc-270-nf
+    qty: 1
+    name: Notion Thief
+    tcgplayer_product_id: "499638"
+    finish: nf
+  - display_key: mtg-ltc-299-nf
+    qty: 1
+    name: Choked Estuary
+    tcgplayer_product_id: "499670"
+    finish: nf
+  - display_key: mtg-ltc-303-nf
+    qty: 1
+    name: Desolate Lighthouse
+    tcgplayer_product_id: "499672"
+    finish: nf
+  - display_key: mtg-ltc-304-nf
+    qty: 1
+    name: Dragonskull Summit
+    tcgplayer_product_id: "499678"
+    finish: nf
+  - display_key: mtg-ltc-305-nf
+    qty: 1
+    name: Drowned Catacomb
+    tcgplayer_product_id: "499679"
+    finish: nf
+  - display_key: mtg-ltc-310-nf
+    qty: 1
+    name: Foreboding Ruins
+    tcgplayer_product_id: "499680"
+    finish: nf
+  - display_key: mtg-ltc-312-nf
+    qty: 1
+    name: Frostboil Snarl
+    tcgplayer_product_id: "499683"
+    finish: nf
+  - display_key: mtg-ltc-332-nf
+    qty: 1
+    name: Smoldering Marsh
+    tcgplayer_product_id: "499684"
+    finish: nf
+  - display_key: mtg-ltc-333-nf
+    qty: 1
+    name: Sulfur Falls
+    tcgplayer_product_id: "499687"
+    finish: nf
+  - display_key: mtg-ltc-334-nf
+    qty: 1
+    name: Sulfurous Springs
+    tcgplayer_product_id: "499691"
+    finish: nf
+  - display_key: mtg-ltc-335-nf
+    qty: 1
+    name: Sunken Hollow
+    tcgplayer_product_id: "499693"
+    finish: nf
+  - display_key: mtg-ltc-342-nf
+    qty: 1
+    name: Underground River
+    tcgplayer_product_id: "499695"
+    finish: nf
+  - display_key: mtg-ltr-74-nf
+    qty: 1
+    name: Treason of Isengard
+    tcgplayer_product_id: "498392"
+    finish: nf
+  - display_key: mtg-ltr-77-nf
+    qty: 1
+    name: Bitter Downfall
+    tcgplayer_product_id: "498823"
+    finish: nf
+  - display_key: mtg-ltr-111-nf
+    qty: 1
+    name: Troll of Khazad-dûm
+    tcgplayer_product_id: "498752"
+    finish: nf
+  - display_key: mtg-ltr-113-nf
+    qty: 1
+    name: Voracious Fell Beast
+    tcgplayer_product_id: "498394"
+    finish: nf
+  - display_key: mtg-ltr-126-nf
+    qty: 1
+    name: Fiery Inscription
+    tcgplayer_product_id: "499208"
+    finish: nf
+  - display_key: mtg-ltr-134-nf
+    qty: 1
+    name: "Grishnákh, Brash Instigator"
+    tcgplayer_product_id: "498336"
+    finish: nf
+  - display_key: mtg-ltc-184-nf
+    qty: 1
+    name: Arcane Denial
+    tcgplayer_product_id: "499644"
+    finish: nf
+  - display_key: mtg-ltc-185-nf
+    qty: 1
+    name: Boon of the Wish-Giver
+    tcgplayer_product_id: "499614"
+    finish: nf
+  - display_key: mtg-ltc-187-nf
+    qty: 1
+    name: Consider
+    tcgplayer_product_id: "499647"
+    finish: nf
+  - display_key: mtg-ltc-188-nf
+    qty: 1
+    name: Deep Analysis
+    tcgplayer_product_id: "499618"
+    finish: nf
+  - display_key: mtg-ltc-190-nf
+    qty: 1
+    name: Fact or Fiction
+    tcgplayer_product_id: "499649"
+    finish: nf
+  - display_key: mtg-ltc-191-nf
+    qty: 1
+    name: Forbidden Alchemy
+    tcgplayer_product_id: "499650"
+    finish: nf
+  - display_key: mtg-ltc-200-nf
+    qty: 1
+    name: Feed the Swarm
+    tcgplayer_product_id: "498318"
+    finish: nf
+  - display_key: mtg-ltc-204-nf
+    qty: 1
+    name: Merciless Executioner
+    tcgplayer_product_id: "499639"
+    finish: nf
+  - display_key: mtg-ltc-207-nf
+    qty: 1
+    name: Revenge of Ravens
+    tcgplayer_product_id: "499656"
+    finish: nf
+  - display_key: mtg-ltc-210-nf
+    qty: 1
+    name: Anger
+    tcgplayer_product_id: "499640"
+    finish: nf
+  - display_key: mtg-ltc-215-nf
+    qty: 1
+    name: Faithless Looting
+    tcgplayer_product_id: "499620"
+    finish: nf
+  - display_key: mtg-ltr-216-nf
+    qty: 1
+    name: The Mouth of Sauron
+    tcgplayer_product_id: "499215"
+    finish: nf
+  - display_key: mtg-ltc-218-nf
+    qty: 1
+    name: Goblin Cratermaker
+    tcgplayer_product_id: "499642"
+    finish: nf
+  - display_key: mtg-ltc-220-nf
+    qty: 1
+    name: Guttersnipe
+    tcgplayer_product_id: "499643"
+    finish: nf
+  - display_key: mtg-ltc-227-nf
+    qty: 1
+    name: Shiny Impetus
+    tcgplayer_product_id: "499659"
+    finish: nf
+  - display_key: mtg-ltc-229-nf
+    qty: 1
+    name: Thrill of Possibility
+    tcgplayer_product_id: "499652"
+    finish: nf
+  - display_key: mtg-ltc-266-nf
+    qty: 1
+    name: Extract from Darkness
+    tcgplayer_product_id: "499622"
+    finish: nf
+  - display_key: mtg-ltc-273-nf
+    qty: 1
+    name: Arcane Signet
+    tcgplayer_product_id: "499562"
+    finish: nf
+  - display_key: mtg-ltc-274-nf
+    qty: 1
+    name: Basalt Monolith
+    tcgplayer_product_id: "499661"
+    finish: nf
+  - display_key: mtg-ltc-276-nf
+    qty: 1
+    name: "Commander's Sphere"
+    tcgplayer_product_id: "499563"
+    finish: nf
+  - display_key: mtg-ltc-278-nf
+    qty: 1
+    name: Everflowing Chalice
+    tcgplayer_product_id: "499662"
+    finish: nf
+  - display_key: mtg-ltc-282-nf
+    qty: 1
+    name: Mind Stone
+    tcgplayer_product_id: "498351"
+    finish: nf
+  - display_key: mtg-ltc-284-nf
+    qty: 1
+    name: Sol Ring
+    tcgplayer_product_id: "488278"
+    finish: nf
+  - display_key: mtg-ltc-293-nf
+    qty: 1
+    name: Worn Powerstone
+    tcgplayer_product_id: "499664"
+    finish: nf
+  - display_key: mtg-ltc-301-nf
+    qty: 1
+    name: Command Tower
+    tcgplayer_product_id: "499589"
+    finish: nf
+  - display_key: mtg-ltc-302-nf
+    qty: 1
+    name: Crumbling Necropolis
+    tcgplayer_product_id: "499699"
+    finish: nf
+  - display_key: mtg-ltc-306-nf
+    qty: 1
+    name: Evolving Wilds
+    tcgplayer_product_id: "498317"
+    finish: nf
+  - display_key: mtg-ltc-308-nf
+    qty: 1
+    name: Field of Ruin
+    tcgplayer_product_id: "498410"
+    finish: nf
+  - display_key: mtg-ltc-322-nf
+    qty: 1
+    name: Path of Ancestry
+    tcgplayer_product_id: "499591"
+    finish: nf
+  - display_key: mtg-ltc-326-nf
+    qty: 1
+    name: "Rogue's Passage"
+    tcgplayer_product_id: "499592"
+    finish: nf
+  - display_key: mtg-ltc-337-nf
+    qty: 1
+    name: Terramorphic Expanse
+    tcgplayer_product_id: "499703"
+    finish: nf
+  - display_key: mtg-ltr-264-nf
+    qty: 3
+    name: Island
+    tcgplayer_product_id: "498402"
+    finish: nf
+  - display_key: mtg-ltr-265-nf
+    qty: 3
+    name: Island
+    tcgplayer_product_id: "498401"
+    finish: nf
+  - display_key: mtg-ltr-266-nf
+    qty: 3
+    name: Swamp
+    tcgplayer_product_id: "498408"
+    finish: nf
+  - display_key: mtg-ltr-267-nf
+    qty: 3
+    name: Swamp
+    tcgplayer_product_id: "498407"
+    finish: nf
+  - display_key: mtg-ltr-268-nf
+    qty: 4
+    name: Mountain
+    tcgplayer_product_id: "498404"
+    finish: nf
+  - display_key: mtg-ltr-269-nf
+    qty: 3
+    name: Mountain
+    tcgplayer_product_id: "498403"
+    finish: nf

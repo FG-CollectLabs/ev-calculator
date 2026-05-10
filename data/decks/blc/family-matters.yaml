@@ -1,0 +1,475 @@
+key: blc-commander-family-matters
+name: Family Matters
+game: mtg
+set_code: blc
+product_display_key: mtg-blc-commander-family-matters
+product_tcgplayer_id: "541247"
+image: /img/decks/blc-commander-family-matters.jpg
+channels: [tcgplayer, manapool]
+components:
+  - display_key: mtg-blc-4-f
+    qty: 1
+    name: "Zinnia, Valley's Voice"
+    tcgplayer_product_id: "558385"
+    finish: f
+    note: commander
+  - display_key: mtg-blc-5-f
+    qty: 1
+    name: "Arthur, Marigold Knight"
+    tcgplayer_product_id: "559720"
+    finish: f
+  - display_key: mtg-blc-97-f
+    qty: 1
+    name: "Elspeth, Sun's Champion"
+    tcgplayer_product_id: "559726"
+    finish: f
+  - display_key: mtg-blc-142-nf
+    qty: 1
+    name: Jazal Goldmane
+    tcgplayer_product_id: "559802"
+    finish: nf
+  - display_key: mtg-blc-146-nf
+    qty: 1
+    name: Martial Coup
+    tcgplayer_product_id: "559838"
+    finish: nf
+  - display_key: mtg-blc-156-nf
+    qty: 1
+    name: Storm of Souls
+    tcgplayer_product_id: "559839"
+    finish: nf
+  - display_key: mtg-blc-153-nf
+    qty: 1
+    name: Selfless Spirit
+    tcgplayer_product_id: "559803"
+    finish: nf
+  - display_key: mtg-blc-10-nf
+    qty: 1
+    name: Murmuration
+    tcgplayer_product_id: "559731"
+    finish: nf
+  - display_key: mtg-blc-136-nf
+    qty: 1
+    name: Blade Splicer
+    tcgplayer_product_id: "559804"
+    finish: nf
+  - display_key: mtg-blc-139-nf
+    qty: 1
+    name: Hanged Executioner
+    tcgplayer_product_id: "559807"
+    finish: nf
+  - display_key: mtg-blc-107-nf
+    qty: 1
+    name: Loyal Warhound
+    tcgplayer_product_id: "559730"
+    finish: nf
+  - display_key: mtg-blc-150-nf
+    qty: 1
+    name: Restoration Angel
+    tcgplayer_product_id: "559808"
+    finish: nf
+  - display_key: mtg-blc-9-nf
+    qty: 1
+    name: Jacked Rabbit
+    tcgplayer_product_id: "559729"
+    finish: nf
+  - display_key: mtg-blc-154-nf
+    qty: 1
+    name: Skyclave Apparition
+    tcgplayer_product_id: "560179"
+    finish: nf
+  - display_key: mtg-blc-138-nf
+    qty: 1
+    name: Dusk // Dawn
+    tcgplayer_product_id: "560149"
+    finish: nf
+  - display_key: mtg-blc-137-nf
+    qty: 1
+    name: "Boss's Chauffeur"
+    tcgplayer_product_id: "560147"
+    finish: nf
+  - display_key: mtg-blc-134-nf
+    qty: 1
+    name: Angel of the Ruins
+    tcgplayer_product_id: "559810"
+    finish: nf
+  - display_key: mtg-blc-144-nf
+    qty: 1
+    name: Luminous Broodmoth
+    tcgplayer_product_id: "560172"
+    finish: nf
+  - display_key: mtg-blc-157-nf
+    qty: 1
+    name: Sun Titan
+    tcgplayer_product_id: "559811"
+    finish: nf
+  - display_key: mtg-blc-15-nf
+    qty: 1
+    name: Pollywog Prodigy
+    tcgplayer_product_id: "559733"
+    finish: nf
+  - display_key: mtg-blc-14-nf
+    qty: 1
+    name: "Fortune Teller's Talent"
+    tcgplayer_product_id: "559728"
+    finish: nf
+  - display_key: mtg-blc-160-nf
+    qty: 1
+    name: Aether Channeler
+    tcgplayer_product_id: "559812"
+    finish: nf
+  - display_key: mtg-blc-172-nf
+    qty: 1
+    name: Pull from Tomorrow
+    tcgplayer_product_id: "559844"
+    finish: nf
+  - display_key: mtg-blc-174-nf
+    qty: 1
+    name: Shield Broker
+    tcgplayer_product_id: "559814"
+    finish: nf
+  - display_key: mtg-blc-176-nf
+    qty: 1
+    name: Stolen by the Fae
+    tcgplayer_product_id: "559840"
+    finish: nf
+  - display_key: mtg-blc-38-nf
+    qty: 1
+    name: Rapid Augmenter
+    tcgplayer_product_id: "559734"
+    finish: nf
+  - display_key: mtg-blc-162-nf
+    qty: 1
+    name: Bident of Thassa
+    tcgplayer_product_id: "559848"
+    finish: nf
+  - display_key: mtg-blc-165-nf
+    qty: 1
+    name: Curiosity Crafter
+    tcgplayer_product_id: "559815"
+    finish: nf
+  - display_key: mtg-blc-195-nf
+    qty: 1
+    name: Devilish Valet
+    tcgplayer_product_id: "559816"
+    finish: nf
+  - display_key: mtg-blc-202-nf
+    qty: 1
+    name: Siege-Gang Commander
+    tcgplayer_product_id: "559817"
+    finish: nf
+  - display_key: mtg-blc-24-nf
+    qty: 1
+    name: Echoing Assault
+    tcgplayer_product_id: "560229"
+    finish: nf
+  - display_key: mtg-blc-21-nf
+    qty: 1
+    name: Agate Instigator
+    tcgplayer_product_id: "559718"
+    finish: nf
+  - display_key: mtg-blc-23-nf
+    qty: 1
+    name: Calamity of Cinders
+    tcgplayer_product_id: "559722"
+    finish: nf
+  - display_key: mtg-blc-201-nf
+    qty: 1
+    name: Rose Room Treasurer
+    tcgplayer_product_id: "559818"
+    finish: nf
+  - display_key: mtg-blc-194-nf
+    qty: 1
+    name: Combat Celebrant
+    tcgplayer_product_id: "559819"
+    finish: nf
+  - display_key: mtg-blc-198-nf
+    qty: 1
+    name: Inferno Titan
+    tcgplayer_product_id: "559820"
+    finish: nf
+  - display_key: mtg-blc-262-nf
+    qty: 1
+    name: Time Wipe
+    tcgplayer_product_id: "559842"
+    finish: nf
+  - display_key: mtg-blc-284-nf
+    qty: 1
+    name: Solemn Simulacrum
+    tcgplayer_product_id: "559821"
+    finish: nf
+  - display_key: mtg-blc-276-nf
+    qty: 1
+    name: Helm of the Host
+    tcgplayer_product_id: "559849"
+    finish: nf
+  - display_key: mtg-blc-307-nf
+    qty: 1
+    name: Glacial Fortress
+    tcgplayer_product_id: "559857"
+    finish: nf
+  - display_key: mtg-blc-291-nf
+    qty: 1
+    name: Adarkar Wastes
+    tcgplayer_product_id: "559858"
+    finish: nf
+  - display_key: mtg-blc-339-nf
+    qty: 1
+    name: Temple of Enlightenment
+    tcgplayer_product_id: "559859"
+    finish: nf
+  - display_key: mtg-blc-298-nf
+    qty: 1
+    name: Castle Ardenvale
+    tcgplayer_product_id: "559861"
+    finish: nf
+  - display_key: mtg-blc-328-nf
+    qty: 1
+    name: Seachrome Coast
+    tcgplayer_product_id: "559864"
+    finish: nf
+  - display_key: mtg-blc-333-nf
+    qty: 1
+    name: Sulfur Falls
+    tcgplayer_product_id: "559865"
+    finish: nf
+  - display_key: mtg-blc-297-nf
+    qty: 1
+    name: Cascade Bluffs
+    tcgplayer_product_id: "559867"
+    finish: nf
+  - display_key: mtg-blc-131-nf
+    qty: 1
+    name: Exotic Orchard
+    tcgplayer_product_id: "559727"
+    finish: nf
+  - display_key: mtg-blc-300-nf
+    qty: 1
+    name: Clifftop Retreat
+    tcgplayer_product_id: "559868"
+    finish: nf
+  - display_key: mtg-blc-331-nf
+    qty: 1
+    name: Shivan Reef
+    tcgplayer_product_id: "559870"
+    finish: nf
+  - display_key: mtg-blc-344-nf
+    qty: 1
+    name: Temple of Triumph
+    tcgplayer_product_id: "559871"
+    finish: nf
+  - display_key: mtg-blc-293-nf
+    qty: 1
+    name: Battlefield Forge
+    tcgplayer_product_id: "559872"
+    finish: nf
+  - display_key: mtg-blc-332-nf
+    qty: 1
+    name: Skycloud Expanse
+    tcgplayer_product_id: "559874"
+    finish: nf
+  - display_key: mtg-blc-340-nf
+    qty: 1
+    name: Temple of Epiphany
+    tcgplayer_product_id: "559875"
+    finish: nf
+  - display_key: mtg-blc-303-nf
+    qty: 1
+    name: Ferrous Lake
+    tcgplayer_product_id: "559878"
+    finish: nf
+  - display_key: mtg-blc-327-nf
+    qty: 1
+    name: Rugged Prairie
+    tcgplayer_product_id: "559879"
+    finish: nf
+  - display_key: mtg-blc-336-nf
+    qty: 1
+    name: Sunscorched Divide
+    tcgplayer_product_id: "559881"
+    finish: nf
+  - display_key: mtg-blc-155-nf
+    qty: 1
+    name: Spirited Companion
+    tcgplayer_product_id: "559822"
+    finish: nf
+  - display_key: mtg-blc-141-nf
+    qty: 1
+    name: Inspiring Overseer
+    tcgplayer_product_id: "559823"
+    finish: nf
+  - display_key: mtg-blc-105-nf
+    qty: 1
+    name: Cut a Deal
+    tcgplayer_product_id: "559725"
+    finish: nf
+  - display_key: mtg-blc-147-nf
+    qty: 1
+    name: Path to Exile
+    tcgplayer_product_id: "559845"
+    finish: nf
+  - display_key: mtg-blc-167-nf
+    qty: 1
+    name: Illusory Ambusher
+    tcgplayer_product_id: "559825"
+    finish: nf
+  - display_key: mtg-blc-173-nf
+    qty: 1
+    name: Rowdy Research
+    tcgplayer_product_id: "559846"
+    finish: nf
+  - display_key: mtg-blb-65-nf
+    qty: 1
+    name: Plumecreed Escort
+    tcgplayer_product_id: "559144"
+    finish: nf
+  - display_key: mtg-blc-111-nf
+    qty: 1
+    name: Rapid Hybridization
+    tcgplayer_product_id: "559735"
+    finish: nf
+  - display_key: mtg-blc-169-nf
+    qty: 1
+    name: Junk Winder
+    tcgplayer_product_id: "559827"
+    finish: nf
+  - display_key: mtg-blc-161-nf
+    qty: 1
+    name: Aetherize
+    tcgplayer_product_id: "559847"
+    finish: nf
+  - display_key: mtg-blc-110-nf
+    qty: 1
+    name: Chart a Course
+    tcgplayer_product_id: "559723"
+    finish: nf
+  - display_key: mtg-blc-177-nf
+    qty: 1
+    name: "Tetsuko Umezawa, Fugitive"
+    tcgplayer_product_id: "559828"
+    finish: nf
+  - display_key: mtg-blc-204-nf
+    qty: 1
+    name: Thopter Engineer
+    tcgplayer_product_id: "559830"
+    finish: nf
+  - display_key: mtg-blc-249-nf
+    qty: 1
+    name: Cloudblazer
+    tcgplayer_product_id: "559833"
+    finish: nf
+  - display_key: mtg-blc-127-nf
+    qty: 1
+    name: Arcane Signet
+    tcgplayer_product_id: "559719"
+    finish: nf
+  - display_key: mtg-blc-128-nf
+    qty: 1
+    name: Boros Signet
+    tcgplayer_product_id: "559721"
+    finish: nf
+  - display_key: mtg-blc-281-nf
+    qty: 1
+    name: Ornithopter of Paradise
+    tcgplayer_product_id: "559835"
+    finish: nf
+  - display_key: mtg-blc-265-nf
+    qty: 1
+    name: Azorius Signet
+    tcgplayer_product_id: "559850"
+    finish: nf
+  - display_key: mtg-blc-278-nf
+    qty: 1
+    name: Izzet Signet
+    tcgplayer_product_id: "559851"
+    finish: nf
+  - display_key: mtg-blc-267-nf
+    qty: 1
+    name: Circuit Mender
+    tcgplayer_product_id: "559837"
+    finish: nf
+  - display_key: mtg-blc-269-nf
+    qty: 1
+    name: Fellwar Stone
+    tcgplayer_product_id: "559852"
+    finish: nf
+  - display_key: mtg-blc-129-nf
+    qty: 1
+    name: Sol Ring
+    tcgplayer_product_id: "559736"
+    finish: nf
+  - display_key: mtg-blc-280-nf
+    qty: 1
+    name: Mind Stone
+    tcgplayer_product_id: "559854"
+    finish: nf
+  - display_key: mtg-blc-345-nf
+    qty: 1
+    name: Terramorphic Expanse
+    tcgplayer_product_id: "559882"
+    finish: nf
+  - display_key: mtg-blc-322-nf
+    qty: 1
+    name: Path of Ancestry
+    tcgplayer_product_id: "559884"
+    finish: nf
+  - display_key: mtg-blc-348-nf
+    qty: 1
+    name: Thriving Heath
+    tcgplayer_product_id: "559886"
+    finish: nf
+  - display_key: mtg-blc-302-nf
+    qty: 1
+    name: Evolving Wilds
+    tcgplayer_product_id: "559888"
+    finish: nf
+  - display_key: mtg-blc-349-nf
+    qty: 1
+    name: Thriving Isle
+    tcgplayer_product_id: "559889"
+    finish: nf
+  - display_key: mtg-blc-346-nf
+    qty: 1
+    name: Thriving Bluff
+    tcgplayer_product_id: "559891"
+    finish: nf
+  - display_key: mtg-blc-130-nf
+    qty: 1
+    name: Command Tower
+    tcgplayer_product_id: "559724"
+    finish: nf
+  - display_key: mtg-blc-318-nf
+    qty: 1
+    name: Mystic Monastery
+    tcgplayer_product_id: "559892"
+    finish: nf
+  - display_key: mtg-blb-369-nf
+    qty: 3
+    name: Plains
+    tcgplayer_product_id: "559539"
+    finish: nf
+  - display_key: mtg-blb-370-nf
+    qty: 2
+    name: Plains
+    tcgplayer_product_id: "559559"
+    finish: nf
+  - display_key: mtg-blb-371-nf
+    qty: 2
+    name: Island
+    tcgplayer_product_id: "559548"
+    finish: nf
+  - display_key: mtg-blb-372-nf
+    qty: 2
+    name: Island
+    tcgplayer_product_id: "559546"
+    finish: nf
+  - display_key: mtg-blb-375-nf
+    qty: 2
+    name: Mountain
+    tcgplayer_product_id: "559558"
+    finish: nf
+  - display_key: mtg-blb-376-nf
+    qty: 2
+    name: Mountain
+    tcgplayer_product_id: "559557"
+    finish: nf

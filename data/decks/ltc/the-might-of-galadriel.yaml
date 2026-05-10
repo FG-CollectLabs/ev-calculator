@@ -1,0 +1,37 @@
+key: ltc-commander-the-might-of-galadriel
+name: The Might of Galadriel
+game: mtg
+set_code: ltc
+product_display_key: mtg-ltc-commander-the-might-of-galadriel
+channels: [tcgplayer, manapool]
+components:
+  - display_key: mtg-ltc-497-f
+    qty: 1
+    name: Arboreal Alliance
+    tcgplayer_product_id: "517947"
+    finish: f
+  - display_key: mtg-ltc-498-f
+    qty: 1
+    name: "Galadriel, Light of Valinor"
+    tcgplayer_product_id: "517869"
+    finish: f
+  - display_key: mtg-ltc-499-f
+    qty: 1
+    name: Rally the Galadhrim
+    tcgplayer_product_id: "517921"
+    finish: f
+  - display_key: mtg-ltc-500-f
+    qty: 1
+    name: "Galadriel's Dismissal"
+    tcgplayer_product_id: "517909"
+    finish: f
+  - display_key: mtg-ltc-501-f
+    qty: 1
+    name: Mists of Lórien
+    tcgplayer_product_id: "517246"
+    finish: f
+  - display_key: mtg-ltc-502-f
+    qty: 1
+    name: Galadhrim Brigade
+    tcgplayer_product_id: "517935"
+    finish: f

@@ -1,0 +1,37 @@
+key: ltc-commander-gandalf-in-the-pelennor-fields
+name: Gandalf in the Pelennor Fields
+game: mtg
+set_code: ltc
+product_display_key: mtg-ltc-commander-gandalf-in-the-pelennor-fields
+channels: [tcgplayer, manapool]
+components:
+  - display_key: mtg-ltc-503-f
+    qty: 1
+    name: "Olórin's Searing Light"
+    tcgplayer_product_id: "517247"
+    finish: f
+  - display_key: mtg-ltc-504-f
+    qty: 1
+    name: Sorcerous Squall
+    tcgplayer_product_id: "517904"
+    finish: f
+  - display_key: mtg-ltc-505-f
+    qty: 1
+    name: "Rammas Echor, Ancient Shield"
+    tcgplayer_product_id: "517957"
+    finish: f
+  - display_key: mtg-ltc-506-f
+    qty: 1
+    name: Courageous Resolve
+    tcgplayer_product_id: "517897"
+    finish: f
+  - display_key: mtg-ltc-507-f
+    qty: 1
+    name: Gandalf of the Secret Fire
+    tcgplayer_product_id: "517933"
+    finish: f
+  - display_key: mtg-ltc-508-f
+    qty: 1
+    name: "Fell Beast's Shriek"
+    tcgplayer_product_id: "517878"
+    finish: f

@@ -1,0 +1,21 @@
+key: tdc-commander-display
+name: "Tarkir: Dragonstorm Commander Case"
+game: mtg
+set_code: tdc
+type: commander_case
+product_display_key: mtg-tdc-commander-display
+product_tcgplayer_id: "619669"
+
+decks:
+  - deck_key: tdc-commander-abzan-armor
+    copies: 1
+  - deck_key: tdc-commander-jeskai-striker
+    copies: 1
+  - deck_key: tdc-commander-mardu-surge
+    copies: 1
+  - deck_key: tdc-commander-sultai-arisen
+    copies: 1
+  - deck_key: tdc-commander-temur-roar
+    copies: 1
+
+extra_components: []

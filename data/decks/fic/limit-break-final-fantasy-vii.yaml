@@ -1,0 +1,510 @@
+key: fic-commander-limit-break-final-fantasy-vii
+name: Limit Break (FINAL FANTASY VII)
+game: mtg
+set_code: fic
+product_display_key: mtg-fic-commander-limit-break-final-fantasy-vii
+product_tcgplayer_id: "618904"
+image: /img/decks/fic-commander-limit-break-final-fantasy-vii.jpg
+channels: [tcgplayer, manapool]
+components:
+  - display_key: mtg-fic-2-f
+    qty: 1
+    name: "Cloud, Ex-SOLDIER"
+    tcgplayer_product_id: "618871"
+    finish: f
+    note: commander
+  - display_key: mtg-fic-6-f
+    qty: 1
+    name: "Tifa, Martial Artist"
+    tcgplayer_product_id: "630712"
+    finish: f
+  - display_key: mtg-fic-13-nf
+    qty: 1
+    name: "Cid, Freeflier Pilot"
+    tcgplayer_product_id: "631092"
+    finish: nf
+  - display_key: mtg-fic-14-nf
+    qty: 1
+    name: "Cloud's Limit Break"
+    tcgplayer_product_id: "631146"
+    finish: nf
+  - display_key: mtg-fic-18-nf
+    qty: 1
+    name: "Elena, Turk Recruit"
+    tcgplayer_product_id: "631093"
+    finish: nf
+  - display_key: mtg-fic-21-nf
+    qty: 1
+    name: "Heidegger, Shinra Executive"
+    tcgplayer_product_id: "631094"
+    finish: nf
+  - display_key: mtg-fic-22-nf
+    qty: 1
+    name: Helitrooper
+    tcgplayer_product_id: "631096"
+    finish: nf
+  - display_key: mtg-fic-25-nf
+    qty: 1
+    name: SOLDIER Military Program
+    tcgplayer_product_id: "631161"
+    finish: nf
+  - display_key: mtg-fic-32-nf
+    qty: 1
+    name: "Ultimate Magic: Holy"
+    tcgplayer_product_id: "631150"
+    finish: nf
+  - display_key: mtg-fic-53-nf
+    qty: 1
+    name: Avalanche of Sector 7
+    tcgplayer_product_id: "631099"
+    finish: nf
+  - display_key: mtg-fic-54-nf
+    qty: 1
+    name: "Cait Sith, Fortune Teller"
+    tcgplayer_product_id: "631102"
+    finish: nf
+  - display_key: mtg-fic-61-nf
+    qty: 1
+    name: "Summon: Kujata"
+    tcgplayer_product_id: "631105"
+    finish: nf
+  - display_key: mtg-fic-62-nf
+    qty: 1
+    name: "Ultimate Magic: Meteor"
+    tcgplayer_product_id: "631166"
+    finish: nf
+  - display_key: mtg-fic-64-nf
+    qty: 1
+    name: "Vincent, Vengeful Atoner"
+    tcgplayer_product_id: "631107"
+    finish: nf
+  - display_key: mtg-fic-65-nf
+    qty: 1
+    name: "Yuffie, Materia Hunter"
+    tcgplayer_product_id: "631111"
+    finish: nf
+  - display_key: mtg-fic-66-nf
+    qty: 1
+    name: "Bugenhagen, Wise Elder"
+    tcgplayer_product_id: "631113"
+    finish: nf
+  - display_key: mtg-fic-67-nf
+    qty: 1
+    name: "Lifestream's Blessing"
+    tcgplayer_product_id: "631152"
+    finish: nf
+  - display_key: mtg-fic-69-nf
+    qty: 1
+    name: Professor Hojo
+    tcgplayer_product_id: "631116"
+    finish: nf
+  - display_key: mtg-fic-72-nf
+    qty: 1
+    name: Summoning Materia
+    tcgplayer_product_id: "631202"
+    finish: nf
+  - display_key: mtg-fic-76-nf
+    qty: 1
+    name: "Aerith, Last Ancient"
+    tcgplayer_product_id: "631118"
+    finish: nf
+  - display_key: mtg-fic-79-nf
+    qty: 1
+    name: "Barret, Avalanche Leader"
+    tcgplayer_product_id: "631119"
+    finish: nf
+  - display_key: mtg-fic-91-nf
+    qty: 1
+    name: "Red XIII, Proud Warrior"
+    tcgplayer_product_id: "631121"
+    finish: nf
+  - display_key: mtg-fic-92-nf
+    qty: 1
+    name: "Sephiroth, Fallen Hero"
+    tcgplayer_product_id: "631053"
+    finish: nf
+  - display_key: mtg-fic-98-nf
+    qty: 1
+    name: Conformer Shuriken
+    tcgplayer_product_id: "631204"
+    finish: nf
+  - display_key: mtg-fic-100-nf
+    qty: 1
+    name: Wrecking Ball Arm
+    tcgplayer_product_id: "631206"
+    finish: nf
+  - display_key: mtg-fic-231-nf
+    qty: 1
+    name: Austere Command
+    tcgplayer_product_id: "631171"
+    finish: nf
+  - display_key: mtg-fic-233-nf
+    qty: 1
+    name: Bastion Protector
+    tcgplayer_product_id: "631125"
+    finish: nf
+  - display_key: mtg-fic-234-nf
+    qty: 1
+    name: Bronze Guardian
+    tcgplayer_product_id: "631128"
+    finish: nf
+  - display_key: mtg-fic-236-nf
+    qty: 1
+    name: Clever Concealment
+    tcgplayer_product_id: "631155"
+    finish: nf
+  - display_key: mtg-fic-250-nf
+    qty: 1
+    name: Puresteel Paladin
+    tcgplayer_product_id: "631130"
+    finish: nf
+  - display_key: mtg-fic-259-nf
+    qty: 1
+    name: Unfinished Business
+    tcgplayer_product_id: "631175"
+    finish: nf
+  - display_key: mtg-fic-260-nf
+    qty: 1
+    name: Vanquish the Horde
+    tcgplayer_product_id: "631179"
+    finish: nf
+  - display_key: mtg-fic-291-nf
+    qty: 1
+    name: Chaos Warp
+    tcgplayer_product_id: "631156"
+    finish: nf
+  - display_key: mtg-fic-295-nf
+    qty: 1
+    name: Hellkite Tyrant
+    tcgplayer_product_id: "631132"
+    finish: nf
+  - display_key: mtg-fic-296-nf
+    qty: 1
+    name: Professional Face-Breaker
+    tcgplayer_product_id: "631136"
+    finish: nf
+  - display_key: mtg-fic-323-nf
+    qty: 1
+    name: Decimate
+    tcgplayer_product_id: "631181"
+    finish: nf
+  - display_key: mtg-fic-336-nf
+    qty: 1
+    name: Armory Automaton
+    tcgplayer_product_id: "631139"
+    finish: nf
+  - display_key: mtg-fic-337-nf
+    qty: 1
+    name: "Champion's Helm"
+    tcgplayer_product_id: "631208"
+    finish: nf
+  - display_key: mtg-fic-340-nf
+    qty: 1
+    name: "Conqueror's Flail"
+    tcgplayer_product_id: "631291"
+    finish: nf
+  - display_key: mtg-fic-342-nf
+    qty: 1
+    name: Darksteel Plate
+    tcgplayer_product_id: "631209"
+    finish: nf
+  - display_key: mtg-fic-347-nf
+    qty: 1
+    name: Inspiring Statuary
+    tcgplayer_product_id: "631212"
+    finish: nf
+  - display_key: mtg-fic-362-nf
+    qty: 1
+    name: Sword of the Animist
+    tcgplayer_product_id: "631215"
+    finish: nf
+  - display_key: mtg-fic-375-nf
+    qty: 1
+    name: Battlefield Forge
+    tcgplayer_product_id: "631249"
+    finish: nf
+  - display_key: mtg-fic-376-nf
+    qty: 1
+    name: "Bonders' Enclave"
+    tcgplayer_product_id: "631250"
+    finish: nf
+  - display_key: mtg-fic-377-nf
+    qty: 1
+    name: Brushland
+    tcgplayer_product_id: "631253"
+    finish: nf
+  - display_key: mtg-fic-378-nf
+    qty: 1
+    name: Canopy Vista
+    tcgplayer_product_id: "631255"
+    finish: nf
+  - display_key: mtg-fic-380-nf
+    qty: 1
+    name: Cinder Glade
+    tcgplayer_product_id: "631257"
+    finish: nf
+  - display_key: mtg-fic-381-nf
+    qty: 1
+    name: Clifftop Retreat
+    tcgplayer_product_id: "631259"
+    finish: nf
+  - display_key: mtg-fic-390-nf
+    qty: 1
+    name: Exotic Orchard
+    tcgplayer_product_id: "631261"
+    finish: nf
+  - display_key: mtg-fic-392-nf
+    qty: 1
+    name: Fire-Lit Thicket
+    tcgplayer_product_id: "631264"
+    finish: nf
+  - display_key: mtg-fic-396-nf
+    qty: 1
+    name: Fortified Village
+    tcgplayer_product_id: "631267"
+    finish: nf
+  - display_key: mtg-fic-397-nf
+    qty: 1
+    name: Furycalm Snarl
+    tcgplayer_product_id: "631270"
+    finish: nf
+  - display_key: mtg-fic-398-nf
+    qty: 1
+    name: Game Trail
+    tcgplayer_product_id: "631272"
+    finish: nf
+  - display_key: mtg-fic-407-nf
+    qty: 1
+    name: Mossfire Valley
+    tcgplayer_product_id: "631273"
+    finish: nf
+  - display_key: mtg-fic-416-nf
+    qty: 1
+    name: Rootbound Crag
+    tcgplayer_product_id: "631275"
+    finish: nf
+  - display_key: mtg-fic-417-nf
+    qty: 1
+    name: Rugged Prairie
+    tcgplayer_product_id: "631276"
+    finish: nf
+  - display_key: mtg-fic-419-nf
+    qty: 1
+    name: Scavenger Grounds
+    tcgplayer_product_id: "631278"
+    finish: nf
+  - display_key: mtg-fic-424-nf
+    qty: 1
+    name: "Slayers' Stronghold"
+    tcgplayer_product_id: "631280"
+    finish: nf
+  - display_key: mtg-fic-426-nf
+    qty: 1
+    name: Spire of Industry
+    tcgplayer_product_id: "631282"
+    finish: nf
+  - display_key: mtg-fic-428-nf
+    qty: 1
+    name: Sungrass Prairie
+    tcgplayer_product_id: "631283"
+    finish: nf
+  - display_key: mtg-fic-432-nf
+    qty: 1
+    name: Sunpetal Grove
+    tcgplayer_product_id: "631285"
+    finish: nf
+  - display_key: mtg-fic-433-nf
+    qty: 1
+    name: Sunscorched Divide
+    tcgplayer_product_id: "631286"
+    finish: nf
+  - display_key: mtg-fin-45-nf
+    qty: 1
+    name: Zack Fair
+    tcgplayer_product_id: "631142"
+    finish: nf
+  - display_key: mtg-fin-129-nf
+    qty: 1
+    name: Barret Wallace
+    tcgplayer_product_id: "631144"
+    finish: nf
+  - display_key: mtg-fic-241-nf
+    qty: 1
+    name: Dispatch
+    tcgplayer_product_id: "631159"
+    finish: nf
+  - display_key: mtg-fic-253-nf
+    qty: 1
+    name: Secret Rendezvous
+    tcgplayer_product_id: "630897"
+    finish: nf
+  - display_key: mtg-fic-294-nf
+    qty: 1
+    name: Furious Rise
+    tcgplayer_product_id: "631163"
+    finish: nf
+  - display_key: mtg-fic-298-nf
+    qty: 1
+    name: Vandalblast
+    tcgplayer_product_id: "631188"
+    finish: nf
+  - display_key: mtg-fic-300-nf
+    qty: 1
+    name: Cultivate
+    tcgplayer_product_id: "631191"
+    finish: nf
+  - display_key: mtg-fic-308-nf
+    qty: 1
+    name: Harmonize
+    tcgplayer_product_id: "631193"
+    finish: nf
+  - display_key: mtg-fic-311-nf
+    qty: 1
+    name: "Nature's Lore"
+    tcgplayer_product_id: "631197"
+    finish: nf
+  - display_key: mtg-fic-313-nf
+    qty: 1
+    name: Rampant Growth
+    tcgplayer_product_id: "631199"
+    finish: nf
+  - display_key: mtg-fic-320-nf
+    qty: 1
+    name: Behemoth Sledge
+    tcgplayer_product_id: "631217"
+    finish: nf
+  - display_key: mtg-fic-333-nf
+    qty: 1
+    name: Arcane Signet
+    tcgplayer_product_id: "631221"
+    finish: nf
+  - display_key: mtg-fic-338-nf
+    qty: 1
+    name: Colossus Hammer
+    tcgplayer_product_id: "631225"
+    finish: nf
+  - display_key: mtg-fic-344-nf
+    qty: 1
+    name: "Explorer's Scope"
+    tcgplayer_product_id: "631229"
+    finish: nf
+  - display_key: mtg-fic-345-nf
+    qty: 1
+    name: "Hero's Blade"
+    tcgplayer_product_id: "631231"
+    finish: nf
+  - display_key: mtg-fic-346-nf
+    qty: 1
+    name: "Hero's Heirloom"
+    tcgplayer_product_id: "631234"
+    finish: nf
+  - display_key: mtg-fic-349-nf
+    qty: 1
+    name: Lightning Greaves
+    tcgplayer_product_id: "631235"
+    finish: nf
+  - display_key: mtg-fic-350-nf
+    qty: 1
+    name: Mask of Memory
+    tcgplayer_product_id: "631238"
+    finish: nf
+  - display_key: mtg-fic-355-nf
+    qty: 1
+    name: Skullclamp
+    tcgplayer_product_id: "631240"
+    finish: nf
+  - display_key: mtg-fic-357-nf
+    qty: 1
+    name: Sol Ring
+    tcgplayer_product_id: "631243"
+    finish: nf
+  - display_key: mtg-fic-370-nf
+    qty: 1
+    name: "Trailblazer's Boots"
+    tcgplayer_product_id: "631246"
+    finish: nf
+  - display_key: mtg-fic-374-nf
+    qty: 1
+    name: Ash Barrens
+    tcgplayer_product_id: "631288"
+    finish: nf
+  - display_key: mtg-fic-389-nf
+    qty: 1
+    name: Evolving Wilds
+    tcgplayer_product_id: "631290"
+    finish: nf
+  - display_key: mtg-fic-406-nf
+    qty: 1
+    name: Jungle Shrine
+    tcgplayer_product_id: "631293"
+    finish: nf
+  - display_key: mtg-fic-411-nf
+    qty: 1
+    name: Path of Ancestry
+    tcgplayer_product_id: "631295"
+    finish: nf
+  - display_key: mtg-fic-414-nf
+    qty: 1
+    name: Radiant Grove
+    tcgplayer_product_id: "631297"
+    finish: nf
+  - display_key: mtg-fic-418-nf
+    qty: 1
+    name: Sacred Peaks
+    tcgplayer_product_id: "631213"
+    finish: nf
+  - display_key: mtg-fic-441-nf
+    qty: 1
+    name: Wooded Ridgeline
+    tcgplayer_product_id: "631299"
+    finish: nf
+  - display_key: mtg-fic-485-nf
+    qty: 1
+    name: Command Tower
+    tcgplayer_product_id: "631301"
+    finish: nf
+  - display_key: mtg-fin-303-nf
+    qty: 1
+    name: Mountain
+    tcgplayer_product_id: "630895"
+    finish: nf
+  - display_key: mtg-fin-304-nf
+    qty: 1
+    name: Mountain
+    tcgplayer_product_id: "630896"
+    finish: nf
+  - display_key: mtg-fin-305-nf
+    qty: 1
+    name: Mountain
+    tcgplayer_product_id: "630898"
+    finish: nf
+  - display_key: mtg-fin-306-nf
+    qty: 1
+    name: Forest
+    tcgplayer_product_id: "630899"
+    finish: nf
+  - display_key: mtg-fin-307-nf
+    qty: 1
+    name: Forest
+    tcgplayer_product_id: "630901"
+    finish: nf
+  - display_key: mtg-fin-308-nf
+    qty: 1
+    name: Forest
+    tcgplayer_product_id: "630903"
+    finish: nf
+  - display_key: mtg-fin-294-nf
+    qty: 1
+    name: Plains
+    tcgplayer_product_id: "630875"
+    finish: nf
+  - display_key: mtg-fin-295-nf
+    qty: 1
+    name: Plains
+    tcgplayer_product_id: "630879"
+    finish: nf
+  - display_key: mtg-fin-296-nf
+    qty: 1
+    name: Plains
+    tcgplayer_product_id: "630881"
+    finish: nf

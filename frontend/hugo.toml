@@ -1,0 +1,10 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "EV Calculator"
+disableKinds = ["taxonomy", "term", "RSS", "sitemap"]
+
+[params]
+  # Override at build time:
+  #   hugo --baseURL=https://ev.example.com -e production
+  #   hugo server -e development
+  apiBase = "http://localhost:8081"

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About — EV Calculator</title>
+  <link rel="stylesheet" href="/css/app.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a href="/" class="logo">EV Calculator</a>
+    <nav>
+      <a href="/commander/">Magic Commander</a>
+      <a href="/about/">About</a>
+    </nav>
+  </header>
+  <main class="container">
+    
+<div class="prose">
+  <h1>About EV Calculator</h1>
+
+  <p>
+    EV Calculator helps you decide whether buying a sealed Magic: The Gathering
+    product is worth it — and if so, how to sell it. It compares three scenarios
+    for every case you add:
+  </p>
+
+  <ul>
+    <li><strong>Sell sealed decks</strong> — buy the case, resell each deck sealed on
+        the secondary market. Lower effort, lower ceiling.</li>
+    <li><strong>Crack for singles</strong> — buy the case, open every deck, and sell
+        individual cards. Higher ceiling, higher effort and risk.</li>
+    <li><strong>Keep and play</strong> — implicit. If neither scenario pencils out,
+        you're paying for the play experience.</li>
+  </ul>
+
+  <p>
+    All prices come from TCGPlayer (via TCGCSV). Sell fees use the TCGPlayer Direct
+    fee schedule by default. Cards below the low-value floor ($0.25 by default)
+    are excluded from EV because shipping and handling costs make them uneconomical
+    to sell individually.
+  </p>
+
+  <h2>How to read the display page</h2>
+  <ul>
+    <li>The <strong>totals bar</strong> at the top shows case cost, both scenario
+        net revenues, and the best-scenario delta (net − cost).</li>
+    <li>Each <strong>deck card</strong> shows two tiles: <em>Sell sealed</em> and
+        <em>Crack for singles</em>. Click either to expand its detail.</li>
+    <li><strong>Sell sealed</strong> detail shows live listing depth from TCGPlayer
+        and Manapool — how many copies are listed, at what prices, and what price
+        you'd need to set to sell within your target window (currently 30 days).</li>
+    <li><strong>Crack for singles</strong> detail shows every card in the deck,
+        its market price, Direct Low price, and your net per copy and total after fees.
+        Click any sortable column header to re-sort.</li>
+  </ul>
+
+  <h2>Sell-through column</h2>
+  <p>
+    The sell-through recommendation (target listing price + expected weeks to sell)
+    requires weekly velocity data — how many copies of a card sell per week on
+    TCGPlayer. This data is tracked by the companion
+    <strong>market-tracker</strong> service. When running with the free TCGCSV
+    price source, velocity isn't available and sell-through shows "—". Connect
+    market-tracker (<code>EV_PRICE_SOURCE=market-tracker</code>) to enable it.
+  </p>
+
+  <h2>Data sources</h2>
+  <ul>
+    <li><strong>Prices</strong> — TCGPlayer via <a href="https://tcgcsv.com" target="_blank" rel="noopener">tcgcsv.com</a>
+        (free public mirror, updated daily) or the internal market-tracker service.</li>
+    <li><strong>Listing depth</strong> — scraped live from TCGPlayer's marketplace
+        search API and Manapool's SSR pages at report time.</li>
+    <li><strong>Product definitions</strong> — YAML files in the <code>data/decks/</code>
+        directory. Add a new set by dropping in a display YAML and per-deck YAMLs
+        listing every component card.</li>
+  </ul>
+
+  <p class="note">
+    Built by FG CollectLabs. Prices are for informational purposes only and
+    reflect market conditions at the time of the last price update.
+  </p>
+</div>
+
+  </main>
+  <script>
+    window.EV_API_BASE = "http:\/\/localhost:8081";
+  </script>
+  <script src="/js/fmt.js"></script>
+  
+</body>
+</html>

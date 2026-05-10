@@ -1,0 +1,13 @@
+key: tmc-commander-display
+name: Teenage Mutant Ninja Turtles Commander Case
+game: mtg
+set_code: tmc
+type: commander_case
+product_display_key: mtg-tmc-commander-display
+product_tcgplayer_id: "657866"
+
+decks:
+  - deck_key: tmc-commander-turtle-power
+    copies: 4
+
+extra_components: []

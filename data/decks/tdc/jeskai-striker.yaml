@@ -1,0 +1,470 @@
+key: tdc-commander-jeskai-striker
+name: Jeskai Striker
+game: mtg
+set_code: tdc
+product_display_key: mtg-tdc-commander-jeskai-striker
+product_tcgplayer_id: "619665"
+image: /img/decks/tdc-commander-jeskai-striker.jpg
+channels: [tcgplayer, manapool]
+components:
+  - display_key: mtg-tdc-7-f
+    qty: 1
+    name: "Shiko and Narset, Unified"
+    tcgplayer_product_id: "623914"
+    finish: f
+    note: commander
+  - display_key: mtg-tdc-2-f
+    qty: 1
+    name: "Elsha, Threefold Master"
+    tcgplayer_product_id: "623909"
+    finish: f
+  - display_key: mtg-tdc-12-nf
+    qty: 1
+    name: Aligned Heart
+    tcgplayer_product_id: "624145"
+    finish: nf
+  - display_key: mtg-tdc-16-nf
+    qty: 1
+    name: Tempest Technique
+    tcgplayer_product_id: "624146"
+    finish: nf
+  - display_key: mtg-tdc-18-nf
+    qty: 1
+    name: Adaptive Training Post
+    tcgplayer_product_id: "624153"
+    finish: nf
+  - display_key: mtg-tdc-22-nf
+    qty: 1
+    name: Transcendent Dragon
+    tcgplayer_product_id: "624154"
+    finish: nf
+  - display_key: mtg-tdc-23-nf
+    qty: 1
+    name: Voracious Bibliophile
+    tcgplayer_product_id: "624155"
+    finish: nf
+  - display_key: mtg-tdc-33-nf
+    qty: 1
+    name: Caldera Pyremaw
+    tcgplayer_product_id: "624174"
+    finish: nf
+  - display_key: mtg-tdc-39-nf
+    qty: 1
+    name: Transforming Flourish
+    tcgplayer_product_id: "624175"
+    finish: nf
+  - display_key: mtg-tdc-40-nf
+    qty: 1
+    name: Will of the Jeskai
+    tcgplayer_product_id: "624176"
+    finish: nf
+  - display_key: mtg-tdc-91-nf
+    qty: 1
+    name: Vanquish the Horde
+    tcgplayer_product_id: "624147"
+    finish: nf
+  - display_key: mtg-tdc-92-nf
+    qty: 1
+    name: "Narset's Reversal"
+    tcgplayer_product_id: "624156"
+    finish: nf
+  - display_key: mtg-tdc-112-nf
+    qty: 1
+    name: Dismantling Wave
+    tcgplayer_product_id: "624148"
+    finish: nf
+  - display_key: mtg-tdc-124-nf
+    qty: 1
+    name: "Mangara, the Diplomat"
+    tcgplayer_product_id: "624150"
+    finish: nf
+  - display_key: mtg-tdc-125-nf
+    qty: 1
+    name: Monastery Mentor
+    tcgplayer_product_id: "624151"
+    finish: nf
+  - display_key: mtg-tdc-144-nf
+    qty: 1
+    name: Ancestral Vision
+    tcgplayer_product_id: "624157"
+    finish: nf
+  - display_key: mtg-tdc-145-nf
+    qty: 1
+    name: Archmage Emeritus
+    tcgplayer_product_id: "624158"
+    finish: nf
+  - display_key: mtg-tdc-146-nf
+    qty: 1
+    name: "Baral's Expertise"
+    tcgplayer_product_id: "624159"
+    finish: nf
+  - display_key: mtg-tdc-149-nf
+    qty: 1
+    name: Curse of the Swine
+    tcgplayer_product_id: "624162"
+    finish: nf
+  - display_key: mtg-tdc-154-nf
+    qty: 1
+    name: Haughty Djinn
+    tcgplayer_product_id: "624165"
+    finish: nf
+  - display_key: mtg-tdc-157-nf
+    qty: 1
+    name: "Lier, Disciple of the Drowned"
+    tcgplayer_product_id: "624166"
+    finish: nf
+  - display_key: mtg-tdc-165-nf
+    qty: 1
+    name: Rite of Replication
+    tcgplayer_product_id: "624171"
+    finish: nf
+  - display_key: mtg-tdc-167-nf
+    qty: 1
+    name: Sublime Epiphany
+    tcgplayer_product_id: "624172"
+    finish: nf
+  - display_key: mtg-tdc-212-nf
+    qty: 1
+    name: Electrodominance
+    tcgplayer_product_id: "624181"
+    finish: nf
+  - display_key: mtg-tdc-224-nf
+    qty: 1
+    name: Manaform Hellkite
+    tcgplayer_product_id: "624185"
+    finish: nf
+  - display_key: mtg-tdc-282-nf
+    qty: 1
+    name: Baral and Kari Zev
+    tcgplayer_product_id: "624189"
+    finish: nf
+  - display_key: mtg-tdc-287-nf
+    qty: 1
+    name: Expansion // Explosion
+    tcgplayer_product_id: "625632"
+    finish: nf
+  - display_key: mtg-tdc-296-nf
+    qty: 1
+    name: Magma Opus
+    tcgplayer_product_id: "624191"
+    finish: nf
+  - display_key: mtg-tdc-299-nf
+    qty: 1
+    name: Prismari Command
+    tcgplayer_product_id: "624192"
+    finish: nf
+  - display_key: mtg-tdc-308-nf
+    qty: 1
+    name: Time Wipe
+    tcgplayer_product_id: "624194"
+    finish: nf
+  - display_key: mtg-tdc-309-nf
+    qty: 1
+    name: Velomachus Lorehold
+    tcgplayer_product_id: "624195"
+    finish: nf
+  - display_key: mtg-tdc-310-nf
+    qty: 1
+    name: "Veyran, Voice of Duality"
+    tcgplayer_product_id: "624196"
+    finish: nf
+  - display_key: mtg-tdc-311-nf
+    qty: 1
+    name: Whirlwind of Thought
+    tcgplayer_product_id: "624197"
+    finish: nf
+  - display_key: mtg-tdc-338-nf
+    qty: 1
+    name: Adarkar Wastes
+    tcgplayer_product_id: "624202"
+    finish: nf
+  - display_key: mtg-tdc-340-nf
+    qty: 1
+    name: Battlefield Forge
+    tcgplayer_product_id: "624204"
+    finish: nf
+  - display_key: mtg-tdc-345-nf
+    qty: 1
+    name: Cascade Bluffs
+    tcgplayer_product_id: "624205"
+    finish: nf
+  - display_key: mtg-tdc-351-nf
+    qty: 1
+    name: Clifftop Retreat
+    tcgplayer_product_id: "624206"
+    finish: nf
+  - display_key: mtg-tdc-360-nf
+    qty: 1
+    name: Exotic Orchard
+    tcgplayer_product_id: "624207"
+    finish: nf
+  - display_key: mtg-tdc-361-nf
+    qty: 1
+    name: Ferrous Lake
+    tcgplayer_product_id: "624208"
+    finish: nf
+  - display_key: mtg-tdc-367-nf
+    qty: 1
+    name: Glacial Fortress
+    tcgplayer_product_id: "624209"
+    finish: nf
+  - display_key: mtg-tdc-372-nf
+    qty: 1
+    name: Irrigated Farmland
+    tcgplayer_product_id: "624210"
+    finish: nf
+  - display_key: mtg-tdc-384-nf
+    qty: 1
+    name: Prairie Stream
+    tcgplayer_product_id: "624213"
+    finish: nf
+  - display_key: mtg-tdc-389-nf
+    qty: 1
+    name: Rugged Prairie
+    tcgplayer_product_id: "624215"
+    finish: nf
+  - display_key: mtg-tdc-393-nf
+    qty: 1
+    name: Shivan Reef
+    tcgplayer_product_id: "624216"
+    finish: nf
+  - display_key: mtg-tdc-394-nf
+    qty: 1
+    name: Skycloud Expanse
+    tcgplayer_product_id: "624217"
+    finish: nf
+  - display_key: mtg-tdc-396-nf
+    qty: 1
+    name: Sulfur Falls
+    tcgplayer_product_id: "624218"
+    finish: nf
+  - display_key: mtg-tdc-401-nf
+    qty: 1
+    name: Temple of Enlightenment
+    tcgplayer_product_id: "624219"
+    finish: nf
+  - display_key: mtg-tdc-402-nf
+    qty: 1
+    name: Temple of Epiphany
+    tcgplayer_product_id: "624220"
+    finish: nf
+  - display_key: mtg-tdc-407-nf
+    qty: 1
+    name: Temple of Triumph
+    tcgplayer_product_id: "624221"
+    finish: nf
+  - display_key: mtg-tdc-95-nf
+    qty: 1
+    name: Young Pyromancer
+    tcgplayer_product_id: "624177"
+    finish: nf
+  - display_key: mtg-tdc-99-nf
+    qty: 1
+    name: Goblin Electromancer
+    tcgplayer_product_id: "624188"
+    finish: nf
+  - display_key: mtg-tdc-105-nf
+    qty: 1
+    name: Arcane Signet
+    tcgplayer_product_id: "624048"
+    finish: nf
+  - display_key: mtg-tdc-106-nf
+    qty: 1
+    name: Sol Ring
+    tcgplayer_product_id: "624049"
+    finish: nf
+  - display_key: mtg-tdc-107-nf
+    qty: 1
+    name: Command Tower
+    tcgplayer_product_id: "623982"
+    finish: nf
+  - display_key: mtg-tdc-116-nf
+    qty: 1
+    name: Ghostly Prison
+    tcgplayer_product_id: "624149"
+    finish: nf
+  - display_key: mtg-tdc-134-nf
+    qty: 1
+    name: Swords to Plowshares
+    tcgplayer_product_id: "624152"
+    finish: nf
+  - display_key: mtg-tdc-147-nf
+    qty: 1
+    name: Compulsive Research
+    tcgplayer_product_id: "624160"
+    finish: nf
+  - display_key: mtg-tdc-148-nf
+    qty: 1
+    name: Consider
+    tcgplayer_product_id: "624161"
+    finish: nf
+  - display_key: mtg-tdc-150-nf
+    qty: 1
+    name: Deep Analysis
+    tcgplayer_product_id: "624163"
+    finish: nf
+  - display_key: mtg-tdc-153-nf
+    qty: 1
+    name: Frantic Search
+    tcgplayer_product_id: "624164"
+    finish: nf
+  - display_key: mtg-tdc-158-nf
+    qty: 1
+    name: Opt
+    tcgplayer_product_id: "624167"
+    finish: nf
+  - display_key: mtg-tdc-159-nf
+    qty: 1
+    name: Ponder
+    tcgplayer_product_id: "624168"
+    finish: nf
+  - display_key: mtg-tdc-160-nf
+    qty: 1
+    name: Pongify
+    tcgplayer_product_id: "624169"
+    finish: nf
+  - display_key: mtg-tdc-161-nf
+    qty: 1
+    name: Preordain
+    tcgplayer_product_id: "624170"
+    finish: nf
+  - display_key: mtg-tdc-168-nf
+    qty: 1
+    name: Think Twice
+    tcgplayer_product_id: "624173"
+    finish: nf
+  - display_key: mtg-tdc-203-nf
+    qty: 1
+    name: Abrade
+    tcgplayer_product_id: "624178"
+    finish: nf
+  - display_key: mtg-tdc-206-nf
+    qty: 1
+    name: Big Score
+    tcgplayer_product_id: "624179"
+    finish: nf
+  - display_key: mtg-tdc-209-nf
+    qty: 1
+    name: Curse of Opulence
+    tcgplayer_product_id: "624180"
+    finish: nf
+  - display_key: mtg-tdc-213-nf
+    qty: 1
+    name: Faithless Looting
+    tcgplayer_product_id: "624182"
+    finish: nf
+  - display_key: mtg-tdc-217-nf
+    qty: 1
+    name: Guttersnipe
+    tcgplayer_product_id: "624183"
+    finish: nf
+  - display_key: mtg-tdc-223-nf
+    qty: 1
+    name: Mana Geyser
+    tcgplayer_product_id: "624184"
+    finish: nf
+  - display_key: mtg-tdc-231-nf
+    qty: 1
+    name: Shiny Impetus
+    tcgplayer_product_id: "624186"
+    finish: nf
+  - display_key: mtg-tdc-235-nf
+    qty: 1
+    name: Storm-Kiln Artist
+    tcgplayer_product_id: "624187"
+    finish: nf
+  - display_key: mtg-tdm-255-nf
+    qty: 1
+    name: Evolving Wilds
+    tcgplayer_product_id: "624263"
+    finish: nf
+  - display_key: mtg-tdm-262-nf
+    qty: 1
+    name: Mystic Monastery
+    tcgplayer_product_id: "624268"
+    finish: nf
+  - display_key: mtg-tdc-288-nf
+    qty: 1
+    name: Expressive Iteration
+    tcgplayer_product_id: "624190"
+    finish: nf
+  - display_key: mtg-tdc-307-nf
+    qty: 1
+    name: Third Path Iconoclast
+    tcgplayer_product_id: "624193"
+    finish: nf
+  - display_key: mtg-tdc-312-nf
+    qty: 1
+    name: Azorius Signet
+    tcgplayer_product_id: "624198"
+    finish: nf
+  - display_key: mtg-tdc-314-nf
+    qty: 1
+    name: Boros Signet
+    tcgplayer_product_id: "624199"
+    finish: nf
+  - display_key: mtg-tdc-318-nf
+    qty: 1
+    name: Fellwar Stone
+    tcgplayer_product_id: "624374"
+    finish: nf
+  - display_key: mtg-tdc-320-nf
+    qty: 1
+    name: Izzet Signet
+    tcgplayer_product_id: "624200"
+    finish: nf
+  - display_key: mtg-tdc-333-nf
+    qty: 1
+    name: Talisman of Progress
+    tcgplayer_product_id: "624201"
+    finish: nf
+  - display_key: mtg-tdc-339-nf
+    qty: 1
+    name: Ash Barrens
+    tcgplayer_product_id: "624203"
+    finish: nf
+  - display_key: mtg-tdc-382-nf
+    qty: 1
+    name: Path of Ancestry
+    tcgplayer_product_id: "624211"
+    finish: nf
+  - display_key: mtg-tdc-383-nf
+    qty: 1
+    name: Perilous Landscape
+    tcgplayer_product_id: "624212"
+    finish: nf
+  - display_key: mtg-tdc-386-nf
+    qty: 1
+    name: Reliquary Tower
+    tcgplayer_product_id: "624214"
+    finish: nf
+  - display_key: mtg-tdm-277-nf
+    qty: 2
+    name: Plains
+    tcgplayer_product_id: "623965"
+    finish: nf
+  - display_key: mtg-tdm-278-nf
+    qty: 2
+    name: Plains
+    tcgplayer_product_id: "623966"
+    finish: nf
+  - display_key: mtg-tdm-279-nf
+    qty: 3
+    name: Island
+    tcgplayer_product_id: "623968"
+    finish: nf
+  - display_key: mtg-tdm-280-nf
+    qty: 2
+    name: Island
+    tcgplayer_product_id: "623969"
+    finish: nf
+  - display_key: mtg-tdm-283-nf
+    qty: 3
+    name: Mountain
+    tcgplayer_product_id: "623975"
+    finish: nf
+  - display_key: mtg-tdm-284-nf
+    qty: 2
+    name: Mountain
+    tcgplayer_product_id: "623977"
+    finish: nf

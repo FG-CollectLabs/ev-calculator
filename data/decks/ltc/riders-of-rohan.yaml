@@ -1,0 +1,445 @@
+key: ltc-commander-riders-of-rohan
+name: Riders of Rohan
+game: mtg
+set_code: ltc
+product_display_key: mtg-ltc-commander-riders-of-rohan
+product_tcgplayer_id: "488296"
+image: /img/decks/ltc-commander-riders-of-rohan.jpg
+channels: [tcgplayer, manapool]
+components:
+  - display_key: mtg-ltc-1-f
+    qty: 1
+    name: "Éowyn, Shieldmaiden"
+    tcgplayer_product_id: "498469"
+    finish: f
+    note: commander
+  - display_key: mtg-ltc-5-f
+    qty: 1
+    name: "Aragorn, King of Gondor"
+    tcgplayer_product_id: "499739"
+    finish: f
+  - display_key: mtg-ltc-9-nf
+    qty: 1
+    name: Beregond of the Guard
+    tcgplayer_product_id: "499748"
+    finish: nf
+  - display_key: mtg-ltc-10-nf
+    qty: 1
+    name: Champions of Minas Tirith
+    tcgplayer_product_id: "499761"
+    finish: nf
+  - display_key: mtg-ltc-13-nf
+    qty: 1
+    name: "Gilraen, Dúnedain Protector"
+    tcgplayer_product_id: "499785"
+    finish: nf
+  - display_key: mtg-ltc-14-nf
+    qty: 1
+    name: Grey Host Reinforcements
+    tcgplayer_product_id: "499789"
+    finish: nf
+  - display_key: mtg-ltc-16-nf
+    qty: 1
+    name: Lossarnach Captain
+    tcgplayer_product_id: "499792"
+    finish: nf
+  - display_key: mtg-ltc-18-nf
+    qty: 1
+    name: Archivist of Gondor
+    tcgplayer_product_id: "499743"
+    finish: nf
+  - display_key: mtg-ltc-20-nf
+    qty: 1
+    name: "Denethor, Stone Seer"
+    tcgplayer_product_id: "499769"
+    finish: nf
+  - display_key: mtg-ltc-21-nf
+    qty: 1
+    name: Fealty to the Realm
+    tcgplayer_product_id: "499779"
+    finish: nf
+  - display_key: mtg-ltc-30-nf
+    qty: 1
+    name: Call for Aid
+    tcgplayer_product_id: "499756"
+    finish: nf
+  - display_key: mtg-ltc-32-nf
+    qty: 1
+    name: Gimli of the Glittering Caves
+    tcgplayer_product_id: "499786"
+    finish: nf
+  - display_key: mtg-ltc-49-nf
+    qty: 1
+    name: "Boromir, Gondor's Hope"
+    tcgplayer_product_id: "499752"
+    finish: nf
+  - display_key: mtg-ltc-52-nf
+    qty: 1
+    name: "Éomer, King of Rohan"
+    tcgplayer_product_id: "499771"
+    finish: nf
+  - display_key: mtg-ltc-54-nf
+    qty: 1
+    name: "Faramir, Steward of Gondor"
+    tcgplayer_product_id: "499775"
+    finish: nf
+  - display_key: mtg-ltc-56-nf
+    qty: 1
+    name: "Forth Eorlingas!"
+    tcgplayer_product_id: "499782"
+    finish: nf
+  - display_key: mtg-ltc-64-nf
+    qty: 1
+    name: Oath of Eorl
+    tcgplayer_product_id: "499798"
+    finish: nf
+  - display_key: mtg-ltc-67-nf
+    qty: 1
+    name: Riders of Rohan
+    tcgplayer_product_id: "499801"
+    finish: nf
+  - display_key: mtg-ltc-71-nf
+    qty: 1
+    name: Taunt from the Rampart
+    tcgplayer_product_id: "499805"
+    finish: nf
+  - display_key: mtg-ltc-75-nf
+    qty: 1
+    name: Crown of Gondor
+    tcgplayer_product_id: "499765"
+    finish: nf
+  - display_key: mtg-ltc-162-nf
+    qty: 1
+    name: Bastion Protector
+    tcgplayer_product_id: "499790"
+    finish: nf
+  - display_key: mtg-ltc-165-nf
+    qty: 1
+    name: Dearly Departed
+    tcgplayer_product_id: "499794"
+    finish: nf
+  - display_key: mtg-ltc-169-nf
+    qty: 1
+    name: Frontline Medic
+    tcgplayer_product_id: "499797"
+    finish: nf
+  - display_key: mtg-ltc-171-nf
+    qty: 1
+    name: Increasing Devotion
+    tcgplayer_product_id: "499830"
+    finish: nf
+  - display_key: mtg-ltc-172-nf
+    qty: 1
+    name: "Marshal's Anthem"
+    tcgplayer_product_id: "499825"
+    finish: nf
+  - display_key: mtg-ltc-176-nf
+    qty: 1
+    name: Selfless Squire
+    tcgplayer_product_id: "499800"
+    finish: nf
+  - display_key: mtg-ltc-179-nf
+    qty: 1
+    name: Unbreakable Formation
+    tcgplayer_product_id: "499823"
+    finish: nf
+  - display_key: mtg-ltc-180-nf
+    qty: 1
+    name: Verge Rangers
+    tcgplayer_product_id: "499803"
+    finish: nf
+  - display_key: mtg-ltc-182-nf
+    qty: 1
+    name: Visions of Glory
+    tcgplayer_product_id: "499832"
+    finish: nf
+  - display_key: mtg-ltc-183-nf
+    qty: 1
+    name: Weathered Wayfarer
+    tcgplayer_product_id: "499806"
+    finish: nf
+  - display_key: mtg-ltc-212-nf
+    qty: 1
+    name: Combat Celebrant
+    tcgplayer_product_id: "499807"
+    finish: nf
+  - display_key: mtg-ltc-213-nf
+    qty: 1
+    name: Court of Ire
+    tcgplayer_product_id: "499827"
+    finish: nf
+  - display_key: mtg-ltc-214-nf
+    qty: 1
+    name: Earthquake
+    tcgplayer_product_id: "499833"
+    finish: nf
+  - display_key: mtg-ltc-216-nf
+    qty: 1
+    name: Flamerush Rider
+    tcgplayer_product_id: "499809"
+    finish: nf
+  - display_key: mtg-ltc-217-nf
+    qty: 1
+    name: Frontier Warmonger
+    tcgplayer_product_id: "499813"
+    finish: nf
+  - display_key: mtg-ltc-221-nf
+    qty: 1
+    name: Harsh Mentor
+    tcgplayer_product_id: "499816"
+    finish: nf
+  - display_key: mtg-ltc-226-nf
+    qty: 1
+    name: Shared Animosity
+    tcgplayer_product_id: "499828"
+    finish: nf
+  - display_key: mtg-ltc-231-nf
+    qty: 1
+    name: Zealous Conscripts
+    tcgplayer_product_id: "499819"
+    finish: nf
+  - display_key: mtg-ltc-272-nf
+    qty: 1
+    name: Supreme Verdict
+    tcgplayer_product_id: "499834"
+    finish: nf
+  - display_key: mtg-ltc-277-nf
+    qty: 1
+    name: Door of Destinies
+    tcgplayer_product_id: "499810"
+    finish: nf
+  - display_key: mtg-ltc-289-nf
+    qty: 1
+    name: "Vanquisher's Banner"
+    tcgplayer_product_id: "499811"
+    finish: nf
+  - display_key: mtg-ltc-296-nf
+    qty: 1
+    name: Battlefield Forge
+    tcgplayer_product_id: "499737"
+    finish: nf
+  - display_key: mtg-ltc-300-nf
+    qty: 1
+    name: Clifftop Retreat
+    tcgplayer_product_id: "499741"
+    finish: nf
+  - display_key: mtg-ltc-307-nf
+    qty: 1
+    name: Exotic Orchard
+    tcgplayer_product_id: "499569"
+    finish: nf
+  - display_key: mtg-ltc-313-nf
+    qty: 1
+    name: Furycalm Snarl
+    tcgplayer_product_id: "499746"
+    finish: nf
+  - display_key: mtg-ltc-315-nf
+    qty: 1
+    name: Glacial Fortress
+    tcgplayer_product_id: "499751"
+    finish: nf
+  - display_key: mtg-ltc-323-nf
+    qty: 1
+    name: Port Town
+    tcgplayer_product_id: "499757"
+    finish: nf
+  - display_key: mtg-ltc-324-nf
+    qty: 1
+    name: Prairie Stream
+    tcgplayer_product_id: "499759"
+    finish: nf
+  - display_key: mtg-ltc-333-nf
+    qty: 1
+    name: Sulfur Falls
+    tcgplayer_product_id: "499687"
+    finish: nf
+  - display_key: mtg-ltc-339-nf
+    qty: 1
+    name: Throne of the High City
+    tcgplayer_product_id: "499763"
+    finish: nf
+  - display_key: mtg-ltc-345-nf
+    qty: 1
+    name: Windbrisk Heights
+    tcgplayer_product_id: "499768"
+    finish: nf
+  - display_key: mtg-ltr-22-nf
+    qty: 1
+    name: Lost to Legend
+    tcgplayer_product_id: "499192"
+    finish: nf
+  - display_key: mtg-ltr-123-nf
+    qty: 1
+    name: "Erkenbrand, Lord of Westfold"
+    tcgplayer_product_id: "499369"
+    finish: nf
+  - display_key: mtg-ltc-161-nf
+    qty: 1
+    name: Banishing Light
+    tcgplayer_product_id: "498409"
+    finish: nf
+  - display_key: mtg-ltc-168-nf
+    qty: 1
+    name: Fiend Hunter
+    tcgplayer_product_id: "499824"
+    finish: nf
+  - display_key: mtg-ltc-174-nf
+    qty: 1
+    name: Palace Jailer
+    tcgplayer_product_id: "499826"
+    finish: nf
+  - display_key: mtg-ltc-175-nf
+    qty: 1
+    name: Path to Exile
+    tcgplayer_product_id: "499536"
+    finish: nf
+  - display_key: mtg-ltc-177-nf
+    qty: 1
+    name: Sunset Revelry
+    tcgplayer_product_id: "499835"
+    finish: nf
+  - display_key: mtg-ltc-178-nf
+    qty: 1
+    name: Swords to Plowshares
+    tcgplayer_product_id: "499538"
+    finish: nf
+  - display_key: mtg-ltc-181-nf
+    qty: 1
+    name: Village Bell-Ringer
+    tcgplayer_product_id: "499829"
+    finish: nf
+  - display_key: mtg-ltr-219-nf
+    qty: 1
+    name: Prince Imrahil the Fair
+    tcgplayer_product_id: "498373"
+    finish: nf
+  - display_key: mtg-ltc-222-nf
+    qty: 1
+    name: Humble Defector
+    tcgplayer_product_id: "499831"
+    finish: nf
+  - display_key: mtg-ltr-233-nf
+    qty: 1
+    name: "Théoden, King of Rohan"
+    tcgplayer_product_id: "498860"
+    finish: nf
+  - display_key: mtg-ltc-273-nf
+    qty: 1
+    name: Arcane Signet
+    tcgplayer_product_id: "499562"
+    finish: nf
+  - display_key: mtg-ltc-276-nf
+    qty: 1
+    name: "Commander's Sphere"
+    tcgplayer_product_id: "499563"
+    finish: nf
+  - display_key: mtg-ltc-279-nf
+    qty: 1
+    name: Heirloom Blade
+    tcgplayer_product_id: "499814"
+    finish: nf
+  - display_key: mtg-ltc-280-nf
+    qty: 1
+    name: "Herald's Horn"
+    tcgplayer_product_id: "499815"
+    finish: nf
+  - display_key: mtg-ltc-284-nf
+    qty: 1
+    name: Sol Ring
+    tcgplayer_product_id: "488278"
+    finish: nf
+  - display_key: mtg-ltc-285-nf
+    qty: 1
+    name: Talisman of Conviction
+    tcgplayer_product_id: "499817"
+    finish: nf
+  - display_key: mtg-ltc-286-nf
+    qty: 1
+    name: Talisman of Progress
+    tcgplayer_product_id: "499820"
+    finish: nf
+  - display_key: mtg-ltc-287-nf
+    qty: 1
+    name: Thought Vessel
+    tcgplayer_product_id: "499821"
+    finish: nf
+  - display_key: mtg-ltc-290-nf
+    qty: 1
+    name: "Wayfarer's Bauble"
+    tcgplayer_product_id: "499822"
+    finish: nf
+  - display_key: mtg-ltc-301-nf
+    qty: 1
+    name: Command Tower
+    tcgplayer_product_id: "499589"
+    finish: nf
+  - display_key: mtg-ltc-306-nf
+    qty: 1
+    name: Evolving Wilds
+    tcgplayer_product_id: "498317"
+    finish: nf
+  - display_key: mtg-ltc-308-nf
+    qty: 1
+    name: Field of Ruin
+    tcgplayer_product_id: "498410"
+    finish: nf
+  - display_key: mtg-ltc-322-nf
+    qty: 1
+    name: Path of Ancestry
+    tcgplayer_product_id: "499591"
+    finish: nf
+  - display_key: mtg-ltc-326-nf
+    qty: 1
+    name: "Rogue's Passage"
+    tcgplayer_product_id: "499592"
+    finish: nf
+  - display_key: mtg-ltc-330-nf
+    qty: 1
+    name: Secluded Courtyard
+    tcgplayer_product_id: "499773"
+    finish: nf
+  - display_key: mtg-ltc-337-nf
+    qty: 1
+    name: Terramorphic Expanse
+    tcgplayer_product_id: "499703"
+    finish: nf
+  - display_key: mtg-ltc-340-nf
+    qty: 1
+    name: Tranquil Cove
+    tcgplayer_product_id: "499778"
+    finish: nf
+  - display_key: mtg-ltc-344-nf
+    qty: 1
+    name: Wind-Scarred Crag
+    tcgplayer_product_id: "499781"
+    finish: nf
+  - display_key: mtg-ltr-262-nf
+    qty: 5
+    name: Plains
+    tcgplayer_product_id: "498406"
+    finish: nf
+  - display_key: mtg-ltr-263-nf
+    qty: 4
+    name: Plains
+    tcgplayer_product_id: "498405"
+    finish: nf
+  - display_key: mtg-ltr-264-nf
+    qty: 3
+    name: Island
+    tcgplayer_product_id: "498402"
+    finish: nf
+  - display_key: mtg-ltr-265-nf
+    qty: 2
+    name: Island
+    tcgplayer_product_id: "498401"
+    finish: nf
+  - display_key: mtg-ltr-268-nf
+    qty: 3
+    name: Mountain
+    tcgplayer_product_id: "498404"
+    finish: nf
+  - display_key: mtg-ltr-269-nf
+    qty: 2
+    name: Mountain
+    tcgplayer_product_id: "498403"
+    finish: nf

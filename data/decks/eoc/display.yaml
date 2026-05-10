@@ -1,0 +1,15 @@
+key: eoc-commander-display
+name: Edge of Eternities Commander Case
+game: mtg
+set_code: eoc
+type: commander_case
+product_display_key: mtg-eoc-commander-display
+product_tcgplayer_id: "619691"
+
+decks:
+  - deck_key: eoc-commander-counter-intelligence
+    copies: 2
+  - deck_key: eoc-commander-world-shaper
+    copies: 2
+
+extra_components: []

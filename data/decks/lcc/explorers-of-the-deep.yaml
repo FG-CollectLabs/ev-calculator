@@ -1,0 +1,430 @@
+key: lcc-commander-explorers-of-the-deep
+name: Explorers of the Deep
+game: mtg
+set_code: lcc
+product_display_key: mtg-lcc-commander-explorers-of-the-deep
+product_tcgplayer_id: "517515"
+image: /img/decks/lcc-commander-explorers-of-the-deep.jpg
+channels: [tcgplayer, manapool]
+components:
+  - display_key: mtg-lcc-3-f
+    qty: 1
+    name: Hakbal of the Surging Soul
+    tcgplayer_product_id: "524264"
+    finish: f
+    note: commander
+  - display_key: mtg-lcc-8-f
+    qty: 1
+    name: "Xolatoyac, the Smiling Flood"
+    tcgplayer_product_id: "525722"
+    finish: f
+  - display_key: mtg-lcc-76-nf
+    qty: 1
+    name: Mist Dancer
+    tcgplayer_product_id: "525832"
+    finish: nf
+  - display_key: mtg-lcc-77-nf
+    qty: 1
+    name: Ripples of Potential
+    tcgplayer_product_id: "525842"
+    finish: nf
+  - display_key: mtg-lcc-79-nf
+    qty: 1
+    name: Wave Goodbye
+    tcgplayer_product_id: "525857"
+    finish: nf
+  - display_key: mtg-lcc-89-nf
+    qty: 1
+    name: Bygone Marvels
+    tcgplayer_product_id: "525865"
+    finish: nf
+  - display_key: mtg-lcc-91-nf
+    qty: 1
+    name: Deeproot Historian
+    tcgplayer_product_id: "525878"
+    finish: nf
+  - display_key: mtg-lcc-95-nf
+    qty: 1
+    name: Topography Tracker
+    tcgplayer_product_id: "525895"
+    finish: nf
+  - display_key: mtg-lcc-96-nf
+    qty: 1
+    name: Tributary Instructor
+    tcgplayer_product_id: "525899"
+    finish: nf
+  - display_key: mtg-lcc-98-nf
+    qty: 1
+    name: Singer of Swift Rivers
+    tcgplayer_product_id: "525900"
+    finish: nf
+  - display_key: mtg-lcc-145-nf
+    qty: 1
+    name: Benthic Biomancer
+    tcgplayer_product_id: "525903"
+    finish: nf
+  - display_key: mtg-lcc-147-nf
+    qty: 1
+    name: Commit // Memory
+    tcgplayer_product_id: "526197"
+    finish: nf
+  - display_key: mtg-lcc-148-nf
+    qty: 1
+    name: Coralhelm Commander
+    tcgplayer_product_id: "525904"
+    finish: nf
+  - display_key: mtg-lcc-150-nf
+    qty: 1
+    name: Curse of the Swine
+    tcgplayer_product_id: "526077"
+    finish: nf
+  - display_key: mtg-lcc-155-nf
+    qty: 1
+    name: Emperor Mihail II
+    tcgplayer_product_id: "525905"
+    finish: nf
+  - display_key: mtg-lcc-158-nf
+    qty: 1
+    name: Herald of Secret Streams
+    tcgplayer_product_id: "525908"
+    finish: nf
+  - display_key: mtg-lcc-159-nf
+    qty: 1
+    name: Kindred Discovery
+    tcgplayer_product_id: "526081"
+    finish: nf
+  - display_key: mtg-lcc-160-nf
+    qty: 1
+    name: "Kopala, Warden of Waves"
+    tcgplayer_product_id: "525910"
+    finish: nf
+  - display_key: mtg-lcc-162-nf
+    qty: 1
+    name: Master of the Pearl Trident
+    tcgplayer_product_id: "525914"
+    finish: nf
+  - display_key: mtg-lcc-164-nf
+    qty: 1
+    name: Merfolk Sovereign
+    tcgplayer_product_id: "525916"
+    finish: nf
+  - display_key: mtg-lcc-168-nf
+    qty: 1
+    name: Reflections of Littjara
+    tcgplayer_product_id: "526082"
+    finish: nf
+  - display_key: mtg-lcc-170-nf
+    qty: 1
+    name: Seafloor Oracle
+    tcgplayer_product_id: "525919"
+    finish: nf
+  - display_key: mtg-lcc-174-nf
+    qty: 1
+    name: Surgespanner
+    tcgplayer_product_id: "525920"
+    finish: nf
+  - display_key: mtg-lcc-175-nf
+    qty: 1
+    name: Svyelun of Sea and Sky
+    tcgplayer_product_id: "525924"
+    finish: nf
+  - display_key: mtg-lcc-176-nf
+    qty: 1
+    name: "Thassa, God of the Sea"
+    tcgplayer_product_id: "525925"
+    finish: nf
+  - display_key: mtg-lcc-177-nf
+    qty: 1
+    name: Thieving Skydiver
+    tcgplayer_product_id: "525939"
+    finish: nf
+  - display_key: mtg-lcc-234-nf
+    qty: 1
+    name: Branching Evolution
+    tcgplayer_product_id: "526083"
+    finish: nf
+  - display_key: mtg-lcc-237-nf
+    qty: 1
+    name: Deeproot Elite
+    tcgplayer_product_id: "525940"
+    finish: nf
+  - display_key: mtg-lcc-243-nf
+    qty: 1
+    name: Hardened Scales
+    tcgplayer_product_id: "526084"
+    finish: nf
+  - display_key: mtg-lcc-250-nf
+    qty: 1
+    name: Realmwalker
+    tcgplayer_product_id: "525942"
+    finish: nf
+  - display_key: mtg-lcc-255-nf
+    qty: 1
+    name: Ruinous Intrusion
+    tcgplayer_product_id: "526087"
+    finish: nf
+  - display_key: mtg-lcc-266-nf
+    qty: 1
+    name: Cold-Eyed Selkie
+    tcgplayer_product_id: "525945"
+    finish: nf
+  - display_key: mtg-lcc-274-nf
+    qty: 1
+    name: "Kumena, Tyrant of Orazca"
+    tcgplayer_product_id: "525946"
+    finish: nf
+  - display_key: mtg-lcc-278-nf
+    qty: 1
+    name: Prime Speaker Zegana
+    tcgplayer_product_id: "525947"
+    finish: nf
+  - display_key: mtg-lcc-280-nf
+    qty: 1
+    name: Quandrix Command
+    tcgplayer_product_id: "526088"
+    finish: nf
+  - display_key: mtg-lcc-288-nf
+    qty: 1
+    name: Simic Ascendancy
+    tcgplayer_product_id: "526085"
+    finish: nf
+  - display_key: mtg-lcc-291-nf
+    qty: 1
+    name: "Tishana, Voice of Thunder"
+    tcgplayer_product_id: "525948"
+    finish: nf
+  - display_key: mtg-lcc-294-nf
+    qty: 1
+    name: Vorel of the Hull Clade
+    tcgplayer_product_id: "525950"
+    finish: nf
+  - display_key: mtg-lcc-298-nf
+    qty: 1
+    name: "Zegana, Utopian Speaker"
+    tcgplayer_product_id: "525952"
+    finish: nf
+  - display_key: mtg-lcc-308-nf
+    qty: 1
+    name: Metallic Mimic
+    tcgplayer_product_id: "525954"
+    finish: nf
+  - display_key: mtg-lcc-318-nf
+    qty: 1
+    name: "Alchemist's Refuge"
+    tcgplayer_product_id: "526094"
+    finish: nf
+  - display_key: mtg-lcc-336-nf
+    qty: 1
+    name: Hinterland Harbor
+    tcgplayer_product_id: "526095"
+    finish: nf
+  - display_key: mtg-lcc-339-nf
+    qty: 1
+    name: "Karn's Bastion"
+    tcgplayer_product_id: "526096"
+    finish: nf
+  - display_key: mtg-lcc-342-nf
+    qty: 1
+    name: Mosswort Bridge
+    tcgplayer_product_id: "525917"
+    finish: nf
+  - display_key: mtg-lcc-357-nf
+    qty: 1
+    name: Temple of Mystery
+    tcgplayer_product_id: "526097"
+    finish: nf
+  - display_key: mtg-lcc-368-nf
+    qty: 1
+    name: Vineglimmer Snarl
+    tcgplayer_product_id: "526098"
+    finish: nf
+  - display_key: mtg-lci-65-nf
+    qty: 1
+    name: Merfolk Cave-Diver
+    tcgplayer_product_id: "525351"
+    finish: nf
+  - display_key: mtg-lcc-142-nf
+    qty: 1
+    name: Aetherize
+    tcgplayer_product_id: "526089"
+    finish: nf
+  - display_key: mtg-lcc-152-nf
+    qty: 1
+    name: Deeproot Waters
+    tcgplayer_product_id: "526086"
+    finish: nf
+  - display_key: mtg-lcc-165-nf
+    qty: 1
+    name: Merrow Reejerey
+    tcgplayer_product_id: "525957"
+    finish: nf
+  - display_key: mtg-lcc-166-nf
+    qty: 1
+    name: Rapid Hybridization
+    tcgplayer_product_id: "526090"
+    finish: nf
+  - display_key: mtg-lcc-167-nf
+    qty: 1
+    name: Ravenform
+    tcgplayer_product_id: "526078"
+    finish: nf
+  - display_key: mtg-lcc-169-nf
+    qty: 1
+    name: Sage of Fables
+    tcgplayer_product_id: "525960"
+    finish: nf
+  - display_key: mtg-lcc-173-nf
+    qty: 1
+    name: Stonybrook Banneret
+    tcgplayer_product_id: "526227"
+    finish: nf
+  - display_key: mtg-lcc-233-nf
+    qty: 1
+    name: Beast Within
+    tcgplayer_product_id: "526091"
+    finish: nf
+  - display_key: mtg-lci-236-nf
+    qty: 1
+    name: "Nicanzil, Current Conductor"
+    tcgplayer_product_id: "525253"
+    finish: nf
+  - display_key: mtg-lcc-240-nf
+    qty: 1
+    name: Evolution Sage
+    tcgplayer_product_id: "525963"
+    finish: nf
+  - display_key: mtg-lcc-241-nf
+    qty: 1
+    name: Explore
+    tcgplayer_product_id: "526079"
+    finish: nf
+  - display_key: mtg-lcc-244-nf
+    qty: 1
+    name: Inspiring Call
+    tcgplayer_product_id: "526092"
+    finish: nf
+  - display_key: mtg-lcc-245-nf
+    qty: 1
+    name: "Kodama's Reach"
+    tcgplayer_product_id: "526080"
+    finish: nf
+  - display_key: mtg-lcc-270-nf
+    qty: 1
+    name: Growth Spiral
+    tcgplayer_product_id: "526093"
+    finish: nf
+  - display_key: mtg-lcc-273-nf
+    qty: 1
+    name: "Kiora's Follower"
+    tcgplayer_product_id: "525965"
+    finish: nf
+  - display_key: mtg-lcc-276-nf
+    qty: 1
+    name: Merfolk Mistbinder
+    tcgplayer_product_id: "525967"
+    finish: nf
+  - display_key: mtg-lcc-277-nf
+    qty: 1
+    name: Merfolk Skydiver
+    tcgplayer_product_id: "525969"
+    finish: nf
+  - display_key: mtg-lcc-290-nf
+    qty: 1
+    name: "Tatyova, Benthic Druid"
+    tcgplayer_product_id: "525971"
+    finish: nf
+  - display_key: mtg-lcc-299-nf
+    qty: 1
+    name: Arcane Signet
+    tcgplayer_product_id: "524261"
+    finish: nf
+  - display_key: mtg-lcc-301-nf
+    qty: 1
+    name: "Commander's Sphere"
+    tcgplayer_product_id: "525766"
+    finish: nf
+  - display_key: mtg-lcc-312-nf
+    qty: 1
+    name: Simic Signet
+    tcgplayer_product_id: "526102"
+    finish: nf
+  - display_key: mtg-lcc-313-nf
+    qty: 1
+    name: Sol Ring
+    tcgplayer_product_id: "525779"
+    finish: nf
+  - display_key: mtg-lcc-314-nf
+    qty: 1
+    name: Swiftfoot Boots
+    tcgplayer_product_id: "525780"
+    finish: nf
+  - display_key: mtg-lcc-325-nf
+    qty: 1
+    name: Command Tower
+    tcgplayer_product_id: "525809"
+    finish: nf
+  - display_key: mtg-lcc-341-nf
+    qty: 1
+    name: Llanowar Reborn
+    tcgplayer_product_id: "526099"
+    finish: nf
+  - display_key: mtg-lcc-343-nf
+    qty: 1
+    name: Myriad Landscape
+    tcgplayer_product_id: "525811"
+    finish: nf
+  - display_key: mtg-lcc-346-nf
+    qty: 1
+    name: Path of Ancestry
+    tcgplayer_product_id: "524267"
+    finish: nf
+  - display_key: mtg-lcc-348-nf
+    qty: 1
+    name: Reliquary Tower
+    tcgplayer_product_id: "526100"
+    finish: nf
+  - display_key: mtg-lcc-349-nf
+    qty: 1
+    name: "Rogue's Passage"
+    tcgplayer_product_id: "525818"
+    finish: nf
+  - display_key: mtg-lcc-350-nf
+    qty: 1
+    name: Secluded Courtyard
+    tcgplayer_product_id: "525821"
+    finish: nf
+  - display_key: mtg-lcc-352-nf
+    qty: 1
+    name: Simic Growth Chamber
+    tcgplayer_product_id: "526101"
+    finish: nf
+  - display_key: mtg-lcc-359-nf
+    qty: 1
+    name: Temple of the False God
+    tcgplayer_product_id: "525826"
+    finish: nf
+  - display_key: mtg-lcc-366-nf
+    qty: 1
+    name: Unclaimed Territory
+    tcgplayer_product_id: "525827"
+    finish: nf
+  - display_key: mtg-lci-401-nf
+    qty: 4
+    name: Forest
+    tcgplayer_product_id: "524188"
+    finish: nf
+  - display_key: mtg-lci-402-nf
+    qty: 3
+    name: Forest
+    tcgplayer_product_id: "524204"
+    finish: nf
+  - display_key: mtg-lci-395-nf
+    qty: 7
+    name: Island
+    tcgplayer_product_id: "524197"
+    finish: nf
+  - display_key: mtg-lci-396-nf
+    qty: 6
+    name: Island
+    tcgplayer_product_id: "524176"
+    finish: nf

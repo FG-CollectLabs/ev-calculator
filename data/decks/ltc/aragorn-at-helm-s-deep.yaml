@@ -1,0 +1,37 @@
+key: ltc-commander-aragorn-at-helm-s-deep
+name: "Aragorn at Helm's Deep"
+game: mtg
+set_code: ltc
+product_display_key: mtg-ltc-commander-aragorn-at-helm-s-deep
+channels: [tcgplayer, manapool]
+components:
+  - display_key: mtg-ltc-491-f
+    qty: 1
+    name: "Andúril, Narsil Reforged"
+    tcgplayer_product_id: "517251"
+    finish: f
+  - display_key: mtg-ltc-492-f
+    qty: 1
+    name: "Aragorn, Hornburg Hero"
+    tcgplayer_product_id: "517946"
+    finish: f
+  - display_key: mtg-ltc-493-f
+    qty: 1
+    name: "Legolas's Quick Reflexes"
+    tcgplayer_product_id: "517911"
+    finish: f
+  - display_key: mtg-ltc-494-f
+    qty: 1
+    name: "Gimli's Reckless Might"
+    tcgplayer_product_id: "517928"
+    finish: f
+  - display_key: mtg-ltc-495-f
+    qty: 1
+    name: Isengard Unleashed
+    tcgplayer_product_id: "517880"
+    finish: f
+  - display_key: mtg-ltc-496-f
+    qty: 1
+    name: Rohirrim Chargers
+    tcgplayer_product_id: "517898"
+    finish: f
