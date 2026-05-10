@@ -276,6 +276,7 @@
         <td class="right" data-cents="${li.market_price_cents || 0}">${EV.fmtUSD(li.market_price_cents)}</td>
         <td class="right" data-cents="${li.tcgplayer_net_cents || 0}">${EV.fmtUSD(li.tcgplayer_net_cents)}</td>
         <td class="right" data-cents="${li.manapool_net_cents || 0}">${EV.fmtUSD(li.manapool_net_cents)}</td>
+        <td class="right" data-cents="${li.ebay_net_cents || 0}">${EV.fmtUSD(li.ebay_net_cents)}</td>
         <td class="right" data-cents="${li.net_total_cents || 0}">${EV.fmtUSD(li.net_total_cents)}</td>
       </tr>`;
     }).join("");
@@ -307,6 +308,7 @@
             <th class="right" data-sort="num" title="TCGPlayer market price — midpoint of recent sales. Used as the EV basis.">TCG Market</th>
             <th class="right" data-sort="num" title="What you net per copy after TCGPlayer Direct fees (8.95% + 2.5% payment, no per-sale flat).">TCG Net</th>
             <th class="right" data-sort="num" title="What you net per copy after Manapool fees (8% flat). Manapool per-card prices use TCGPlayer market as a proxy — actual Manapool prices may differ.">Manapool Net</th>
+            <th class="right" data-sort="num" title="What you net per copy on eBay after 13.25% fees and shipping (ESE $0.89 for &lt;$20, bubble mailer $3.75 for $20+). Assumes listing at market with free shipping.">eBay Net</th>
             <th class="right" data-sort="num" title="TCGPlayer net × qty × copies in case. This is what rolls up into the singles total.">Total (case)</th>
           </tr></thead>
           <tbody>${rows}</tbody>
@@ -412,7 +414,10 @@
       const deckTag = d.name ? ` - ${d.name}` : "";
       const title = `MTG ${name}${deckTag}${foilTag} NM`;
       const photoURL = li.tcgplayer_product_id ? `${IMG_BASE}/${li.tcgplayer_product_id}.jpg` : "";
-      const priceCents = applyPricingRules(li.market_price_cents, opts);
+      // eBay: list at market (market comps already reflect free-shipping pricing).
+      // Only apply the floor — no shipping add on top of market.
+      const floorCents = opts ? opts.floorCents : 0;
+      const priceCents = li.market_price_cents != null ? Math.max(li.market_price_cents, floorCents) : null;
       const price = priceCents != null ? (priceCents / 100).toFixed(2) : "";
       rows.push([title, 183454, 2750, qty, price, photoURL]);
     }

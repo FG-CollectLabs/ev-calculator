@@ -81,6 +81,9 @@ type LineItem struct {
 	// Platform-specific net after fees, per copy.
 	TCGPlayerNetCents *int32 `json:"tcgplayer_net_cents,omitempty"` // market × (1 - TCGDirect fees)
 	ManapoolNetCents  *int32 `json:"manapool_net_cents,omitempty"`  // market × (1 - Manapool fees); nil when no Manapool price
+	// EbayNetCents is market after eBay fees (13.25%) and shipping (ESE $0.89 for <$20, bubble $3.75 for $20+).
+	// Represents what you pocket if you list at market with free shipping.
+	EbayNetCents      *int32 `json:"ebay_net_cents,omitempty"`
 	// EV roll-up fields (use market price as basis).
 	NetPerCopyCents int32 `json:"net_per_copy_cents"` // = TCGPlayerNetCents (primary channel)
 	NetTotalCents   int32 `json:"net_total_cents"`    // NetPerCopyCents × Quantity
@@ -419,6 +422,14 @@ func (b *Builder) buildDeckReport(ctx context.Context, dk decks.Deck, prices map
 		if row.MarketPriceCents != nil {
 			mpNet := fees.Get("manapool").NetCents(*row.MarketPriceCents)
 			li.ManapoolNetCents = &mpNet
+			// eBay net: list at market (free shipping baked into market comps),
+			// subtract eBay fees then subtract physical shipping cost.
+			ebayGross := fees.Get("ebay").NetCents(*row.MarketPriceCents)
+			ebayNet := ebayGross - fees.EbayShippingCents(*row.MarketPriceCents)
+			if ebayNet < 0 {
+				ebayNet = 0
+			}
+			li.EbayNetCents = &ebayNet
 		}
 
 		li.NetPerCopyCents = tcgNet

@@ -67,6 +67,22 @@ var profiles = map[string]Profile{
 	},
 }
 
+// eBay shipping costs (cents). ESE = eBay Standard Envelope (PWE + tracking,
+// buyer protection up to $20). Bubble = First Class bubble mailer with tracking.
+const (
+	EbayShippingESECents    int32 = 89  // PWE + tracking, cards < $20
+	EbayShippingBubbleCents int32 = 375 // bubble mailer, cards >= $20
+)
+
+// EbayShippingCents returns the expected shipping cost for a card at the given
+// market price. ESE for sub-$20 cards, bubble mailer for $20+.
+func EbayShippingCents(marketCents int32) int32 {
+	if marketCents < 2000 {
+		return EbayShippingESECents
+	}
+	return EbayShippingBubbleCents
+}
+
 func Get(name string) Profile {
 	if p, ok := profiles[name]; ok {
 		return p
