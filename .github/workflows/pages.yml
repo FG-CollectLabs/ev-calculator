@@ -30,11 +30,7 @@ jobs:
 
       - name: Build
         working-directory: frontend
-        run: |
-          hugo \
-            --baseURL "https://fg-collectlabs.github.io/ev-calculator/" \
-            --environment production \
-            --minify
+        run: hugo --environment production --minify
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
