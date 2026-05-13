@@ -407,7 +407,7 @@
       "CustomLabel",                      // TCGPlayer product ID — our internal SKU
       "*Category",                        // 183454 = MTG Individual Cards
       "*Title",                           // max 80 chars
-      "*ConditionID",                     // 2000 = Near Mint or Better (raw/ungraded)
+      "*ConditionID",                     // 2750 = only valid condition for cat 183454
       "CD:Card Condition - (ID: 40001)",  // Near Mint or Better
       "CD:Professional Grader - (ID: 27501)", // Not Applicable (ungraded)
       "CD:Grade - (ID: 27502)",           // Not Applicable (ungraded)
@@ -459,10 +459,10 @@
         li.tcgplayer_product_id || "",
         183454,
         title,
-        2000,                     // Near Mint or Better (raw/ungraded)
+        2750,                     // only valid raw/graded condition for cat 183454
         "Near Mint or Better",    // CD:Card Condition
-        "Not Applicable",         // CD:Professional Grader
-        "Not Applicable",         // CD:Grade
+        "Not Applicable",         // CD:Professional Grader — raw card
+        "Not Applicable",         // CD:Grade — raw card
         "Magic: The Gathering",
         name,
         setName,
