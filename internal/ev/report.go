@@ -254,12 +254,15 @@ func (b *Builder) BuildDisplay(ctx context.Context, d decks.Display) (DisplayRep
 		return out, err
 	}
 
-	// Case buy-side cost: direct product first, then set-of-N × multiplier.
+	// Case buy-side cost: market data first, then set-of-N × multiplier,
+	// then the manual YAML fallback (case_price_cents).
 	if row, ok := prices[d.ProductDisplayKey]; ok && row.MarketPriceCents != nil {
 		out.CaseCostCents = row.MarketPriceCents
 	} else if row, ok := prices[setOfNKey]; ok && row.MarketPriceCents != nil && d.SetsOfNPerCase > 0 {
 		derived := *row.MarketPriceCents * int32(d.SetsOfNPerCase)
 		out.CaseCostCents = &derived
+	} else if d.CasePriceCents != nil {
+		out.CaseCostCents = d.CasePriceCents
 	}
 
 	for _, dc := range d.Decks {
@@ -337,9 +340,15 @@ func (b *Builder) buildDeckReport(ctx context.Context, dk decks.Deck, prices map
 	}
 
 	// Sealed deck market price (gross) and net after fees.
+	// Falls back to the manual deck_price_cents YAML field when market-tracker
+	// has no sealed product data for this deck.
 	if box, ok := prices[dk.ProductDisplayKey]; ok && box.MarketPriceCents != nil {
 		r.SealedMarketCents = box.MarketPriceCents
 		net := fp.NetCents(*box.MarketPriceCents)
+		r.SealedNetCents = &net
+	} else if dk.DeckPriceCents != nil {
+		r.SealedMarketCents = dk.DeckPriceCents
+		net := fp.NetCents(*dk.DeckPriceCents)
 		r.SealedNetCents = &net
 	}
 

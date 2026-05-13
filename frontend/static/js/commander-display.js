@@ -138,20 +138,8 @@
       btn.addEventListener("click", e => {
         e.stopPropagation();
         const d = report.decks[+btn.dataset.deck];
-        const type = btn.dataset.export;
-        const panel = btn.closest(".deck-detail");
-        const opts = readPricingOpts(panel);
-        const [csv, filename] = buildExportCSV(type, d, report, opts);
+        const [csv, filename] = buildExportCSV(btn.dataset.export, d, report);
         downloadCSV(csv, filename);
-      });
-    });
-
-    // Pricing rules toggle — show/hide the options row.
-    $grid.querySelectorAll(".pricing-rules-toggle").forEach(cb => {
-      cb.addEventListener("change", e => {
-        e.stopPropagation();
-        const opts = cb.closest(".pricing-rules-wrap").querySelector(".pricing-rules-opts");
-        opts.style.display = cb.checked ? "flex" : "none";
       });
     });
   }
@@ -288,16 +276,6 @@
         <button class="export-btn" data-export="tcgplayer" data-deck="${idx}">TCGPlayer CSV</button>
         <button class="export-btn" data-export="manapool" data-deck="${idx}">Manapool CSV</button>
         <button class="export-btn" data-export="ebay" data-deck="${idx}">eBay CSV</button>
-        <div class="pricing-rules-wrap">
-          <label class="pricing-rules-label" title="Apply a pricing floor and free-shipping add-on to exported prices">
-            <input type="checkbox" class="pricing-rules-toggle"> Seller pricing rules
-          </label>
-          <div class="pricing-rules-opts" style="display:none">
-            <label class="pricing-opt-label">Floor $<input type="number" class="pricing-floor" value="0.40" min="0" step="0.01" style="width:4.5rem"></label>
-            <label class="pricing-opt-label">Free ship threshold $<input type="number" class="pricing-thresh" value="5.00" min="0" step="0.01" style="width:4.5rem"></label>
-            <label class="pricing-opt-label">Shipping add $<input type="number" class="pricing-ship-add" value="1.00" min="0" step="0.01" style="width:4.5rem"></label>
-          </div>
-        </div>
       </div>
       <div class="singles-table-wrap">
         <table class="data cards">
@@ -324,64 +302,63 @@
 
   // ── CSV export ──
 
-  // Image server base URL for eBay exports (populated by a separate image-hosting agent).
-  const IMG_BASE = "https://img.fg-collectlabs.com/tcg";
+  // TCGPlayer CDN — stock card images, no auth required.
+  // TODO: replace with GCS scan URLs once the upload flow is built.
+  const TCG_IMG_BASE = "https://product-images.tcgplayer.com/fit-in/400x550";
 
-  function readPricingOpts(panel) {
-    const cb = panel && panel.querySelector(".pricing-rules-toggle");
-    if (!cb || !cb.checked) return null;
-    const toCents = sel => Math.round(parseFloat(panel.querySelector(sel).value || 0) * 100);
-    return {
-      floorCents:    toCents(".pricing-floor"),
-      threshCents:   toCents(".pricing-thresh"),
-      shipAddCents:  toCents(".pricing-ship-add"),
-    };
+  // ── Per-platform listing price functions ──
+
+  // TCGPlayer: floor $0.40, skip below. < $5: market + 10%. ≥ $5: market as-is.
+  // Any computed price landing in [$4.60, $5.25] is set to $4.99 so buyers
+  // must add bulk to hit the $5 free-shipping threshold.
+  function tcgplayerListingPrice(marketCents) {
+    if (marketCents == null || marketCents < 40) return null;
+    const tentative = marketCents < 500
+      ? Math.round(marketCents * 1.10)
+      : marketCents;
+    if (tentative >= 460 && tentative <= 525) return 499;
+    return tentative;
   }
 
-  // Apply seller pricing rules to a market price (in cents).
-  // - Floor: price is at least floorCents.
-  // - Free-shipping zone: if price >= (thresh - floor), add shipAddCents so the card
-  //   either individually qualifies for free shipping or tips a near-$5 cart over.
-  // - Mid-range cards (floor <= price < thresh-floor): charge market as-is.
-  function applyPricingRules(marketCents, opts) {
-    if (!opts || marketCents == null) return marketCents;
-    const { floorCents, threshCents, shipAddCents } = opts;
-    let price = Math.max(marketCents, floorCents);
-    if (price >= threshCents - floorCents) price += shipAddCents;
-    return price;
+  // Manapool: market price as-is, no adjustments.
+  function manapoolListingPrice(marketCents) {
+    return marketCents ?? null;
   }
 
-  function buildExportCSV(type, d, rep, opts) {
+  // eBay: < $0.25 skip. $0.25–$4.99: market + $1.25. ≥ $5: market as-is.
+
+  function buildExportCSV(type, d, rep) {
     const slug = (d.deck_key || rep.display_key || "deck").replace(/[^a-z0-9-]/gi, "-");
     switch (type) {
-      case "tcgplayer": return buildTCGPlayerCSV(d, slug, opts);
-      case "manapool":  return buildManapoolCSV(d, slug, opts);
-      case "ebay":      return buildEbayCSV(d, slug, opts);
+      case "tcgplayer": return buildTCGPlayerCSV(d, slug);
+      case "manapool":  return buildManapoolCSV(d, slug);
+      case "ebay":      return buildEbayCSV(d, slug);
       default: return ["", "export.csv"];
     }
   }
 
   // TCGPlayer bulk price-upload CSV.
   // Format: TCGplayer Id, Quantity, Condition, Price
-  // Only rows with a tcgplayer_product_id are emitted.
-  function buildTCGPlayerCSV(d, slug, opts) {
+  // Pricing: floor $0.40, <$5 market+10% (gap avoidance at $4.60–$4.99), ≥$5 market.
+  function buildTCGPlayerCSV(d, slug) {
     const copies = d.copies || 1;
     const rows = [["TCGplayer Id", "Quantity", "Condition", "Price"]];
     for (const li of d.line_items || []) {
       if (!li.tcgplayer_product_id) continue;
       const qty = Math.round(li.qty / copies);
       if (qty <= 0) continue;
+      const priceCents = tcgplayerListingPrice(li.market_price_cents);
+      if (priceCents == null) continue;
       const condition = li.finish === "f" ? "Near Mint Foil" : "Near Mint";
-      const priceCents = applyPricingRules(li.market_price_cents, opts);
-      const price = priceCents != null ? (priceCents / 100).toFixed(2) : "";
-      rows.push([li.tcgplayer_product_id, qty, condition, price]);
+      rows.push([li.tcgplayer_product_id, qty, condition, (priceCents / 100).toFixed(2)]);
     }
     return [csvSerialize(rows), `tcgplayer-${slug}.csv`];
   }
 
   // Manapool bulk sell CSV.
   // Format: Name, Edition, Quantity, Foil, Condition, Price (USD)
-  function buildManapoolCSV(d, slug, opts) {
+  // Pricing: market price as-is.
+  function buildManapoolCSV(d, slug) {
     const copies = d.copies || 1;
     const rows = [["Name", "Edition", "Quantity", "Foil", "Condition", "Price (USD)"]];
     for (const li of d.line_items || []) {
@@ -389,39 +366,131 @@
       if (!name) continue;
       const qty = Math.round(li.qty / copies);
       if (qty <= 0) continue;
+      const priceCents = manapoolListingPrice(li.market_price_cents);
+      if (priceCents == null) continue;
       const foil = li.finish === "f" ? "Yes" : "No";
       const edition = d.deck_key ? d.deck_key.split("-")[0].toUpperCase() : "";
-      const priceCents = applyPricingRules(li.market_price_cents, opts);
-      const price = priceCents != null ? (priceCents / 100).toFixed(2) : "";
-      rows.push([name, edition, qty, foil, "Near Mint", price]);
+      rows.push([name, edition, qty, foil, "Near Mint", (priceCents / 100).toFixed(2)]);
     }
     return [csvSerialize(rows), `manapool-${slug}.csv`];
   }
 
-  // eBay listing reference CSV.
-  // Format matches eBay's simplified listing fields for MTG singles.
-  // Category 183454 = Magic: The Gathering > Individual Cards
-  // Condition ID 2750 = Near Mint or Better
-  function buildEbayCSV(d, slug, opts) {
+  // eBay: < $0.25 skip. $0.25–$4.99: market + $1.25 (covers ESE cost). ≥ $5: market as-is.
+  function ebayListingPrice(marketCents) {
+    if (marketCents == null) return null;
+    const SKIP      =  25;   // $0.25 — don't list below this
+    const THRESHOLD = 500;   // $5.00 — above this, use market as-is
+    const SHIP_ADD  = 125;   // $1.25 — covers eBay Standard Envelope
+    if (marketCents < SKIP)      return null;
+    if (marketCents < THRESHOLD) return marketCents + SHIP_ADD;
+    return marketCents;
+  }
+
+  // eBay File Exchange format (category 183454 — MTG Individual Cards).
+  //
+  // Structure:
+  //   Row 1: Info row (template metadata, not a data row)
+  //   Row 2: Column headers (exact eBay field names, starred = required)
+  //   Row 3+: Listing data rows
+  //
+  // Business policies must be created in Seller Hub → Account → Business Policies
+  // before uploading. The three names below must match exactly.
+  //
+  // UPLOAD: use Seller Hub → Listings → Create Listing → Bulk for a preview
+  // step. File Exchange (Action=Add) publishes immediately without review.
+  function buildEbayCSV(d, slug) {
     const copies = d.copies || 1;
-    const rows = [["Title", "Category ID", "Condition ID", "Quantity", "Price", "Photo URL"]];
+    const setName = report.name.replace(/\s+(commander|collector|bonus|scene).*$/i, "").trim();
+
+    const headers = [
+      "*Action(SiteID=US|Country=US|Currency=USD|Version=1193|CC=UTF-8)",
+      "CustomLabel",                      // TCGPlayer product ID — our internal SKU
+      "*Category",                        // 183454 = MTG Individual Cards
+      "*Title",                           // max 80 chars
+      "*ConditionID",                     // 2000 = Near Mint or Better (raw/ungraded)
+      "CD:Card Condition - (ID: 40001)",  // Near Mint or Better
+      "CD:Professional Grader - (ID: 27501)", // Not Applicable (ungraded)
+      "CD:Grade - (ID: 27502)",           // Not Applicable (ungraded)
+      "*C:Game",                          // required item specific
+      "C:Card Name",
+      "C:Set",
+      "C:Finish",
+      "C:Language",
+      "C:Graded",
+      "C:Card Condition",
+      "PicURL",
+      "*Description",
+      "*Format",              // FixedPrice
+      "*Duration",            // GTC
+      "*StartPrice",
+      "*Quantity",
+      "ImmediatePayRequired",
+      "*Location",            // zip code
+      "*DispatchTimeMax",     // business days to ship
+      "*ReturnsAcceptedOption",
+      "ReturnsWithinOption",
+      "RefundOption",
+      "ShippingCostPaidByOption",
+      "ShippingProfileName",
+      "ReturnProfileName",
+      "PaymentProfileName",
+    ];
+    const rows = [headers];
+
     for (const li of d.line_items || []) {
       const name = li.name || li.display_key;
       if (!name) continue;
       const qty = Math.round(li.qty / copies);
       if (qty <= 0) continue;
+
+      const priceCents = ebayListingPrice(li.market_price_cents);
+      if (priceCents == null) continue;
+
       const foilTag = li.finish === "f" ? " Foil" : "";
-      const deckTag = d.name ? ` - ${d.name}` : "";
-      const title = `MTG ${name}${deckTag}${foilTag} NM`;
-      const photoURL = li.tcgplayer_product_id ? `${IMG_BASE}/${li.tcgplayer_product_id}.jpg` : "";
-      // eBay: list at market (market comps already reflect free-shipping pricing).
-      // Only apply the floor — no shipping add on top of market.
-      const floorCents = opts ? opts.floorCents : 0;
-      const priceCents = li.market_price_cents != null ? Math.max(li.market_price_cents, floorCents) : null;
-      const price = priceCents != null ? (priceCents / 100).toFixed(2) : "";
-      rows.push([title, 183454, 2750, qty, price, photoURL]);
+      const finish  = li.finish === "f" ? "Foil" : "Non-Foil";
+      const rawTitle = `${name} ${setName} NM${foilTag} MTG Magic`;
+      const title = rawTitle.length > 80 ? rawTitle.slice(0, 79) + "…" : rawTitle;
+      const photoURL = li.tcgplayer_product_id ? `${TCG_IMG_BASE}/${li.tcgplayer_product_id}.jpg` : "";
+      const price = (priceCents / 100).toFixed(2);
+      const desc = `${name} | ${setName} | Near Mint${foilTag} | MTG Magic: The Gathering`;
+
+      rows.push([
+        "Add",
+        li.tcgplayer_product_id || "",
+        183454,
+        title,
+        2000,                     // Near Mint or Better (raw/ungraded)
+        "Near Mint or Better",    // CD:Card Condition
+        "Not Applicable",         // CD:Professional Grader
+        "Not Applicable",         // CD:Grade
+        "Magic: The Gathering",
+        name,
+        setName,
+        finish,
+        "English",
+        "No",
+        "Near Mint or Better",
+        photoURL,
+        desc,
+        "FixedPrice",
+        "GTC",
+        price,
+        qty,
+        1,
+        48071,
+        2,
+        "ReturnsAccepted",
+        "Days_30",
+        "MoneyBack",
+        "Buyer",
+        "FG Cards - Free Shipping",
+        "30 Day Returns",
+        "Immediate Payment",
+      ]);
     }
-    return [csvSerialize(rows), `ebay-${slug}.csv`];
+
+    const infoRow = "Info,Version=1.0.0,Template=fx_category_template_EBAY_US";
+    return [infoRow + "\r\n" + csvSerialize(rows), `ebay-${slug}.csv`];
   }
 
   // Serialize a 2-D array to RFC 4180 CSV.

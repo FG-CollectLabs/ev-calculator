@@ -4,6 +4,7 @@ game: mtg
 set_code: blc
 product_display_key: mtg-blc-commander-squirreled-away
 product_tcgplayer_id: "541249"
+# deck_price_cents: 3500  # set to TCGPlayer market price in cents when market-tracker has no sealed data
 image: /img/decks/blc-commander-squirreled-away.jpg
 channels: [tcgplayer, manapool]
 components:

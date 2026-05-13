@@ -4,6 +4,7 @@ game: mtg
 set_code: blc
 product_display_key: mtg-blc-commander-animated-army
 product_tcgplayer_id: "541246"
+# deck_price_cents: 3500  # set to TCGPlayer market price in cents when market-tracker has no sealed data
 image: /img/decks/blc-commander-animated-army.jpg
 channels: [tcgplayer, manapool]
 components:

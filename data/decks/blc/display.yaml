@@ -5,6 +5,7 @@ set_code: blc
 type: commander_case
 product_display_key: mtg-blc-commander-display
 product_tcgplayer_id: "541250"
+# case_price_cents: 13500  # set to TCGPlayer market price in cents when market-tracker has no sealed data
 
 decks:
   - deck_key: blc-commander-animated-army

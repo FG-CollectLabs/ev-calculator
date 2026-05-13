@@ -27,7 +27,11 @@ type Deck struct {
 	ProductManapoolSlug string      `yaml:"product_manapool_slug,omitempty"` // Manapool URL slug: "{set_code}/{slug}"
 	Image               string      `yaml:"image,omitempty"`                 // relative URL for deck image, e.g. /img/decks/foo.jpg
 	Channels            []string    `yaml:"channels,omitempty"`              // preferred sell channels: tcgplayer, ebay, manapool
-	Components         []Component `yaml:"components"`
+	// DeckPriceCents is a manual fallback for the sealed deck market price when
+	// market-tracker has no data for this product. Set to the known TCGPlayer
+	// market price in cents (e.g. 2500 = $25.00).
+	DeckPriceCents *int32      `yaml:"deck_price_cents,omitempty"`
+	Components     []Component `yaml:"components"`
 }
 
 // Component is a card line in a deck. DisplayKey points at a card row
@@ -74,8 +78,12 @@ type Display struct {
 	// and how many sets make up one case. CaseCost = sets_of_n_per_case × set_price.
 	ProductSetOfNTCGPlayerID string `yaml:"product_set_of_n_tcgplayer_id,omitempty"`
 	SetsOfNPerCase           int    `yaml:"sets_of_n_per_case,omitempty"`
-	Decks             []DeckCopies `yaml:"decks"`
-	ExtraComponents   []Component  `yaml:"extra_components,omitempty"` // promo cards, dice, etc.
+	// CasePriceCents is a manual fallback for the sealed case market price when
+	// market-tracker has no sealed product data. Set to the known TCGPlayer
+	// market price for the full case in cents (e.g. 15000 = $150.00).
+	CasePriceCents  *int32       `yaml:"case_price_cents,omitempty"`
+	Decks           []DeckCopies `yaml:"decks"`
+	ExtraComponents []Component  `yaml:"extra_components,omitempty"` // promo cards, dice, etc.
 }
 
 type DeckCopies struct {

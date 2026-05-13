@@ -96,7 +96,8 @@ func main() {
 		case "tcgcsv":
 			pricer = pricing.NewTCGCSV()
 		default:
-			pricer = pricing.NewMarketTracker(cfg.MarketTrackerBaseURL, cfg.MarketTrackerToken, "tcgplayer")
+			mt := pricing.NewMarketTracker(cfg.MarketTrackerBaseURL, cfg.MarketTrackerToken, "tcgplayer")
+			pricer = &pricing.FallbackPricer{Primary: mt, Fallback: pricing.NewTCGCSV()}
 		}
 		b := &ev.Builder{
 			Pricer:          pricer,
