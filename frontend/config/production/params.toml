@@ -1,3 +1,1 @@
-# API base for production. Set to your Cloud Run URL once deployed.
-# Leaving empty makes data pages fail visibly rather than hitting localhost.
-apiBase = ""
+apiBase = "https://ev.futuregadgetlabs.com"
