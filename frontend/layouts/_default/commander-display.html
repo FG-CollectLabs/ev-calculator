@@ -2,16 +2,95 @@
 <p><a href="{{ "/commander/" | relURL }}">&larr; All displays</a></p>
 <h1 id="display-name">Loading…</h1>
 <div id="totals" class="totals"></div>
-<div class="platform-bar">
-  <span class="platform-label">Sell singles on:</span>
-  <div class="platform-toggle" id="platform-toggle">
-    <button class="plat-btn active" data-plat="tcgplayer">TCGPlayer</button>
-    <button class="plat-btn" data-plat="manapool">Manapool</button>
+
+<div class="settings-panel">
+  <div class="settings-row">
+    <span class="settings-label">Sell on</span>
+    <div class="platform-toggle" id="platform-toggle">
+      <button class="plat-btn active" data-plat="tcgplayer">TCGPlayer</button>
+      <button class="plat-btn" data-plat="manapool">Manapool</button>
+    </div>
+  </div>
+  <div class="settings-row">
+    <span class="settings-label">eBay pricing</span>
+    <div class="platform-toggle" id="ebay-mode-toggle">
+      <button class="plat-btn ebay-mode-btn active" data-mode="freeship">Free Ship (+$1.30)</button>
+      <button class="plat-btn ebay-mode-btn" data-mode="bulk">Bulk Magnet</button>
+    </div>
+  </div>
+  <div class="settings-row">
+    <span class="settings-label">Skip rarities</span>
+    <div class="platform-toggle">
+      <button class="plat-btn rarity-skip-btn" data-rarity="Mythic Rare">Mythic</button>
+      <button class="plat-btn rarity-skip-btn" data-rarity="Rare">Rare</button>
+      <button class="plat-btn rarity-skip-btn" data-rarity="Uncommon">Uncommon</button>
+      <button class="plat-btn rarity-skip-btn" data-rarity="Common">Common</button>
+    </div>
+  </div>
+  <div class="settings-row">
+    <span class="settings-label">Sort by</span>
+    <div class="platform-toggle" id="sort-toggle">
+      <button class="plat-btn sort-btn active" data-sort="name">Name</button>
+      <button class="plat-btn sort-btn" data-sort="price-asc">Price ↑</button>
+      <button class="plat-btn sort-btn" data-sort="price-desc">Price ↓</button>
+      <button class="plat-btn sort-btn" data-sort="rarity">Rarity</button>
+    </div>
+  </div>
+  <div class="settings-row">
+    <span class="settings-label">Sift threshold</span>
+    <div class="settings-input-group">
+      <span class="settings-input-prefix">$</span>
+      <input class="settings-input" id="sift-threshold" type="number" min="0" max="10" step="0.05" value="0.25">
+      <span class="settings-input-suffix">— skip cards below this</span>
+    </div>
+  </div>
+  <div class="settings-row">
+    <span class="settings-label">Case cost</span>
+    <div class="settings-input-group">
+      <span class="settings-input-prefix">$</span>
+      <input class="settings-input" id="case-cost" type="number" min="0" step="0.01" placeholder="0.00">
+      <span class="settings-input-suffix">— distributes cost to each card</span>
+    </div>
+  </div>
+  <div class="settings-actions">
+    <button class="plat-btn" id="btn-upload-scans">Upload Scans</button>
+    <button class="plat-btn" id="download-all-csv">Download CSV</button>
+    <button class="plat-btn" id="download-reprice-csv">Download Reprice CSV</button>
   </div>
 </div>
+
+<!-- Scan modal overlay -->
+<div id="scan-modal" class="scan-modal hidden">
+  <div class="scan-modal-box">
+    <div class="scan-modal-header">
+      <span>Upload Card Scans</span>
+      <button class="scan-close" id="scan-close">✕</button>
+    </div>
+    <input type="file" id="scan-input" multiple accept="image/*" style="display:none">
+    <div class="scan-dropzone" id="scan-dropzone">
+      <div class="scan-drop-icon">⬆</div>
+      <p class="scan-drop-title">Drop card scans here</p>
+      <p class="scan-drop-sub">or <button class="scan-browse" id="scan-browse">browse files</button></p>
+      <p class="scan-hint">Images are paired in order — front, back, front, back…</p>
+    </div>
+    <div id="scan-progress" class="scan-progress hidden">
+      <div class="scan-bar-wrap"><div class="scan-bar" id="scan-bar"></div></div>
+      <span id="scan-status">Processing…</span>
+    </div>
+    <div id="scan-results" class="scan-results"></div>
+    <div class="scan-modal-footer hidden" id="scan-footer">
+      <span id="scan-summary"></span>
+      <div style="display:flex;gap:0.5rem">
+        <button class="plat-btn" id="scan-toggle-confirmed">Hide Confirmed</button>
+        <button class="plat-btn active" id="scan-done">Done</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div id="decks" class="deck-grid"></div>
 {{ end }}
 
 {{ define "scripts" }}
-<script src="{{ "/js/commander-display.js" | relURL }}"></script>
+<script src="{{ "/js/commander-display.js" | relURL }}?v={{ now.Unix }}"></script>
 {{ end }}

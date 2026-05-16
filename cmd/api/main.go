@@ -11,6 +11,7 @@ import (
 	"context"
 	"encoding/json"
 	"errors"
+	"io"
 	"log/slog"
 	"net/http"
 	"os"
@@ -127,6 +128,43 @@ func main() {
 		buildReport(w, r, r.PathValue("key"))
 	})
 
+	// Card identifier proxy — keeps the auth token server-side.
+	cardIDURL := envOr("CARD_IDENTIFIER_URL", "")
+	cardIDToken := envOr("CARD_IDENTIFIER_TOKEN", "")
+	cardClient := &http.Client{Timeout: 30 * time.Second}
+
+	proxyToCardID := func(w http.ResponseWriter, r *http.Request, path string) {
+		if cardIDURL == "" {
+			http.Error(w, "card identifier not configured", http.StatusServiceUnavailable)
+			return
+		}
+		req, err := http.NewRequestWithContext(r.Context(), http.MethodPost, cardIDURL+path, r.Body)
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+			return
+		}
+		req.Header.Set("Content-Type", r.Header.Get("Content-Type"))
+		if cardIDToken != "" {
+			req.Header.Set("Authorization", "Bearer "+cardIDToken)
+		}
+		resp, err := cardClient.Do(req)
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusBadGateway)
+			return
+		}
+		defer resp.Body.Close()
+		w.Header().Set("Content-Type", resp.Header.Get("Content-Type"))
+		w.WriteHeader(resp.StatusCode)
+		_, _ = io.Copy(w, resp.Body)
+	}
+
+	mux.HandleFunc("POST /v1/scan/identify", func(w http.ResponseWriter, r *http.Request) {
+		proxyToCardID(w, r, "/identify")
+	})
+	mux.HandleFunc("POST /v1/scan/back", func(w http.ResponseWriter, r *http.Request) {
+		proxyToCardID(w, r, "/identify/back")
+	})
+
 	srv := &http.Server{
 		Addr:              cfg.APIAddr,
 		Handler:           cors(corsOrigin, mux),
@@ -155,8 +193,8 @@ func writeJSON(w http.ResponseWriter, v any) {
 func cors(origin string, next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Access-Control-Allow-Origin", origin)
-		w.Header().Set("Access-Control-Allow-Methods", "GET, OPTIONS")
-		w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
+		w.Header().Set("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
+		w.Header().Set("Access-Control-Allow-Headers", "Content-Type, Authorization")
 		if r.Method == "OPTIONS" {
 			w.WriteHeader(http.StatusNoContent)
 			return

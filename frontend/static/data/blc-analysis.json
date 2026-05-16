@@ -1,0 +1,191 @@
+{
+  "cmd_exclusive": [
+    {
+      "name": "Bello, Bard of the Brambles",
+      "rarity": "mythic",
+      "collector_number": "1",
+      "market_cents": 213,
+      "is_exclusive": true,
+      "formats_60": [
+        "legacy",
+        "vintage"
+      ]
+    },
+    {
+      "name": "Wildsear, Scouring Maw",
+      "rarity": "mythic",
+      "collector_number": "8",
+      "market_cents": 39,
+      "is_exclusive": true,
+      "formats_60": [
+        "legacy",
+        "vintage"
+      ]
+    },
+    {
+      "name": "Prosperous Bandit",
+      "rarity": "rare",
+      "collector_number": "25",
+      "market_cents": 31,
+      "is_exclusive": true,
+      "formats_60": [
+        "legacy",
+        "vintage"
+      ]
+    },
+    {
+      "name": "Pyreswipe Hawk",
+      "rarity": "rare",
+      "collector_number": "26",
+      "market_cents": 14,
+      "is_exclusive": true,
+      "formats_60": [
+        "legacy",
+        "vintage"
+      ]
+    },
+    {
+      "name": "Alchemist's Talent",
+      "rarity": "rare",
+      "collector_number": "22",
+      "market_cents": 287,
+      "is_exclusive": true,
+      "formats_60": [
+        "legacy",
+        "vintage"
+      ]
+    },
+    {
+      "name": "Rain of Riches",
+      "rarity": "rare",
+      "collector_number": "177",
+      "market_cents": 79,
+      "is_exclusive": true,
+      "formats_60": [
+        "legacy",
+        "vintage"
+      ]
+    }
+  ],
+  "legal_60": [
+    {
+      "name": "Domri, Anarch of Bolas",
+      "rarity": "rare",
+      "collector_number": "191",
+      "market_cents": 42,
+      "is_exclusive": false,
+      "formats_60": [
+        "pioneer",
+        "modern",
+        "legacy",
+        "vintage"
+      ]
+    },
+    {
+      "name": "Etali, Primal Storm",
+      "rarity": "rare",
+      "collector_number": "194",
+      "market_cents": 41,
+      "is_exclusive": false,
+      "formats_60": [
+        "standard",
+        "pioneer",
+        "modern",
+        "legacy",
+        "vintage"
+      ]
+    },
+    {
+      "name": "Berserkers' Onslaught",
+      "rarity": "rare",
+      "collector_number": "130",
+      "market_cents": 37,
+      "is_exclusive": false,
+      "formats_60": [
+        "pioneer",
+        "modern",
+        "legacy",
+        "vintage"
+      ]
+    },
+    {
+      "name": "Outpost Siege",
+      "rarity": "rare",
+      "collector_number": "804",
+      "market_cents": 41,
+      "is_exclusive": false,
+      "formats_60": [
+        "pioneer",
+        "modern",
+        "legacy",
+        "vintage"
+      ]
+    },
+    {
+      "name": "Bello, Bard of the Brambles",
+      "rarity": "mythic",
+      "collector_number": "1",
+      "market_cents": 213,
+      "is_exclusive": true,
+      "formats_60": [
+        "legacy",
+        "vintage"
+      ]
+    },
+    {
+      "name": "Wildsear, Scouring Maw",
+      "rarity": "mythic",
+      "collector_number": "8",
+      "market_cents": 39,
+      "is_exclusive": true,
+      "formats_60": [
+        "legacy",
+        "vintage"
+      ]
+    },
+    {
+      "name": "Prosperous Bandit",
+      "rarity": "rare",
+      "collector_number": "25",
+      "market_cents": 31,
+      "is_exclusive": true,
+      "formats_60": [
+        "legacy",
+        "vintage"
+      ]
+    },
+    {
+      "name": "Pyreswipe Hawk",
+      "rarity": "rare",
+      "collector_number": "26",
+      "market_cents": 14,
+      "is_exclusive": true,
+      "formats_60": [
+        "legacy",
+        "vintage"
+      ]
+    },
+    {
+      "name": "Alchemist's Talent",
+      "rarity": "rare",
+      "collector_number": "22",
+      "market_cents": 287,
+      "is_exclusive": true,
+      "formats_60": [
+        "legacy",
+        "vintage"
+      ]
+    },
+    {
+      "name": "Rain of Riches",
+      "rarity": "rare",
+      "collector_number": "177",
+      "market_cents": 79,
+      "is_exclusive": true,
+      "formats_60": [
+        "legacy",
+        "vintage"
+      ]
+    }
+  ]
+}

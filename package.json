@@ -1,0 +1,29 @@
+{
+    "name":  "ev-calculator",
+    "version":  "1.0.0",
+    "description":  "V2 of the FutureGadgetCollections collection-admin EV tool. Decides what sealed product is worth buying by pricing every constituent single against the market-tracker price oracle, applying fees, and comparing to box cost.",
+    "main":  "index.js",
+    "directories":  {
+                        "doc":  "docs"
+                    },
+    "scripts":  {
+                    "test":  "echo \"Error: no test specified\" \u0026\u0026 exit 1"
+                },
+    "repository":  {
+                       "type":  "git",
+                       "url":  "git+https://github.com/FG-CollectLabs/ev-calculator.git"
+                   },
+    "keywords":  [
+
+                 ],
+    "author":  "",
+    "license":  "ISC",
+    "bugs":  {
+                 "url":  "https://github.com/FG-CollectLabs/ev-calculator/issues"
+             },
+    "homepage":  "https://github.com/FG-CollectLabs/ev-calculator#readme",
+    "dependencies":  {
+                         "pg":  "^8.20.0"
+                     },
+    "type":  "module"
+}

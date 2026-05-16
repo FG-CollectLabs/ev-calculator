@@ -83,6 +83,161 @@ table.data tr.excluded { opacity: 0.45; }
 .plat-btn:hover { background: rgba(255,255,255,0.04); color: var(--fg); }
 .plat-btn.active { background: var(--accent); color: #0f1115; font-weight: 600; }
 
+/* ── Settings panel ── */
+.settings-panel {
+  border: 1px solid var(--line); border-radius: 8px;
+  padding: 0.75rem 1rem; margin: 1rem 0; display: flex;
+  flex-direction: column; gap: 0.6rem;
+}
+.settings-row {
+  display: flex; align-items: center; gap: 1rem;
+}
+.settings-label {
+  color: var(--muted); font-size: 0.85rem; width: 7rem; flex-shrink: 0;
+}
+.settings-input-group {
+  display: flex; align-items: center; gap: 0.4rem;
+}
+.settings-input-prefix, .settings-input-suffix { color: var(--muted); font-size: 0.85rem; }
+.settings-input {
+  background: var(--bg2); border: 1px solid var(--line); border-radius: 5px;
+  color: var(--fg); font-size: 0.85rem; padding: 0.25rem 0.5rem;
+  width: 5rem; outline: none; text-align: right;
+}
+.settings-input:focus { border-color: var(--accent); }
+.settings-actions {
+  display: flex; gap: 0.5rem; padding-top: 0.4rem;
+  border-top: 1px solid var(--line); margin-top: 0.2rem;
+}
+td.center { text-align: center; }
+td.muted { color: var(--muted); }
+
+/* ── Scan modal ── */
+.scan-modal {
+  position: fixed; inset: 0; z-index: 200;
+  background: rgba(0,0,0,0.7);
+  display: flex; align-items: center; justify-content: center;
+}
+.scan-modal.hidden { display: none; }
+.scan-modal-box {
+  background: var(--surface, #1a1d23); border: 1px solid var(--line);
+  border-radius: 12px; width: min(920px, 96vw);
+  max-height: 92vh; display: flex; flex-direction: column;
+  overflow: hidden;
+}
+.scan-modal-header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1rem 1.25rem; border-bottom: 1px solid var(--line);
+  font-weight: 600;
+}
+.scan-close {
+  background: none; border: none; color: var(--muted); cursor: pointer;
+  font-size: 1.1rem; line-height: 1; padding: 0.25rem 0.4rem; border-radius: 4px;
+}
+.scan-close:hover { background: rgba(255,255,255,0.07); color: var(--fg); }
+.scan-dropzone {
+  margin: 1.25rem; border: 2px dashed var(--line); border-radius: 10px;
+  padding: 3rem 2rem; text-align: center; color: var(--muted);
+  transition: border-color 0.15s, background 0.15s; cursor: pointer;
+}
+.scan-dropzone.drag-over {
+  border-color: var(--accent); background: rgba(100,200,120,0.05);
+}
+.scan-drop-icon { font-size: 2.5rem; margin-bottom: 0.5rem; opacity: 0.5; }
+.scan-drop-title { font-size: 1.1rem; font-weight: 600; color: var(--fg); margin: 0 0 0.4rem; }
+.scan-drop-sub { margin: 0 0 0.75rem; }
+.scan-browse {
+  background: none; border: none; color: var(--accent);
+  cursor: pointer; font-size: inherit; text-decoration: underline; padding: 0;
+}
+.scan-hint { font-size: 0.8rem; opacity: 0.6; margin: 0; }
+.scan-progress { padding: 0 1.25rem 0.75rem; }
+.scan-progress.hidden { display: none; }
+.scan-bar-wrap {
+  height: 5px; background: var(--line); border-radius: 3px; margin-bottom: 0.5rem;
+}
+.scan-bar {
+  height: 100%; background: var(--accent); border-radius: 3px;
+  width: 0; transition: width 0.25s;
+}
+#scan-status { font-size: 0.82rem; color: var(--muted); }
+.scan-results {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0.75rem; padding: 0.5rem 1.25rem; overflow-y: auto; max-height: 420px;
+}
+.scan-card {
+  border: 1px solid var(--line); border-radius: 6px; padding: 0.5rem;
+  font-size: 0.78rem;
+}
+.scan-card.matched { border-color: var(--accent); }
+.scan-card.unmatched { border-color: #e05c5c; }
+.scan-card.needs-review { border-color: #f59e0b; }
+.scan-card-warn { font-size: 0.72rem; color: #f59e0b; margin-top: 0.25rem; }
+.scan-card-imgs { display: flex; gap: 0.3rem; margin-bottom: 0.4rem; }
+.scan-card-imgs img {
+  width: 50%; border-radius: 4px; object-fit: contain;
+  aspect-ratio: 2/3; cursor: zoom-in;
+}
+.scan-card-imgs img:hover { transform: scale(1.04); transition: transform 0.12s; }
+.scan-card-name { font-weight: 600; color: var(--fg); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.scan-card-meta { color: var(--muted); }
+.scan-modal-footer {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 0.85rem 1.25rem; border-top: 1px solid var(--line); margin-top: 0.5rem;
+}
+.scan-modal-footer.hidden { display: none; }
+.scan-pick-btn {
+  background: none; border: 1px solid var(--line); border-radius: 4px;
+  color: var(--accent); cursor: pointer; font-size: 0.75rem; padding: 0.2rem 0.4rem;
+}
+.scan-pick-btn:hover { background: rgba(110,168,254,0.1); }
+
+/* ── Card picker overlay ── */
+.card-picker {
+  position: fixed; inset: 0; z-index: 300;
+  background: rgba(0,0,0,0.75);
+  display: flex; align-items: center; justify-content: center;
+}
+.card-picker.hidden { display: none; }
+.card-picker-box {
+  background: var(--surface, #1a1d23); border: 1px solid var(--line);
+  border-radius: 12px; width: min(700px, 95vw); max-height: 85vh;
+  display: flex; flex-direction: column; overflow: hidden;
+}
+.card-picker-header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 0.85rem 1.25rem; border-bottom: 1px solid var(--line); font-weight: 600;
+}
+.card-picker-body {
+  display: flex; flex: 1; overflow: hidden;
+}
+.card-picker-preview {
+  width: 200px; flex-shrink: 0; padding: 1rem;
+  display: flex; align-items: flex-start; justify-content: center;
+  border-right: 1px solid var(--line);
+}
+.card-picker-preview img {
+  width: 100%; border-radius: 6px; object-fit: contain;
+}
+.card-picker-search-col {
+  flex: 1; display: flex; flex-direction: column; overflow: hidden; padding: 0.75rem;
+}
+.card-picker-input {
+  background: var(--bg2); border: 1px solid var(--line); border-radius: 6px;
+  color: var(--fg); font-size: 0.9rem; padding: 0.5rem 0.75rem;
+  margin-bottom: 0.5rem; outline: none; width: 100%;
+}
+.card-picker-input:focus { border-color: var(--accent); }
+.card-picker-list {
+  flex: 1; overflow-y: auto;
+}
+.picker-item {
+  padding: 0.45rem 0.6rem; border-radius: 5px; cursor: pointer;
+  font-size: 0.85rem; display: flex; justify-content: space-between; align-items: center;
+}
+.picker-item:hover { background: rgba(255,255,255,0.05); }
+.picker-finish { font-size: 0.72rem; color: var(--muted); }
+
 /* ── Deck grid (display detail page) ── */
 .deck-grid {
   display: grid;
