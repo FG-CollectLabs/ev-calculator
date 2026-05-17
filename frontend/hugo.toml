@@ -8,3 +8,10 @@ disableKinds = ["taxonomy", "term", "RSS", "sitemap"]
   #   hugo --baseURL=https://ev.example.com -e production
   #   hugo server -e development
   apiBase = "http://localhost:8081"
+  # Firebase config — leave blank locally to skip auth gate.
+  firebaseApiKey        = ""
+  firebaseAuthDomain    = ""
+  firebaseProjectId     = ""
+  firebaseStorageBucket = ""
+  firebaseMessagingSenderId = ""
+  firebaseAppId         = ""

@@ -304,6 +304,29 @@
 
   const $grid = document.querySelector("#decks");
 
+  // Per-card manual overrides for eBay export.
+  // userExcluded: cards force-excluded regardless of price (product_id → true)
+  // userIncluded: cards force-included regardless of price (product_id → true)
+  const userExcluded = new Map();
+  const userIncluded = new Map();
+
+  function isExportIncluded(li, priceCents) {
+    const pid = String(li.tcgplayer_product_id || "");
+    if (userExcluded.get(pid)) return false;
+    if (userIncluded.get(pid)) return true;
+    return priceCents != null;
+  }
+
+  function toggleCardOverride(pid, currentlyIncluded) {
+    if (currentlyIncluded) {
+      userExcluded.set(pid, true);
+      userIncluded.delete(pid);
+    } else {
+      userIncluded.set(pid, true);
+      userExcluded.delete(pid);
+    }
+  }
+
   function singlesNetForPlat(d) {
     return activePlat === "manapool" ? d.manapool_included_net_cents : d.included_net_cents;
   }
@@ -387,6 +410,19 @@
       table.querySelectorAll("th[data-sort]").forEach(th => {
         th.addEventListener("click", () => sortTable(table, +th.cellIndex, th.dataset.sort));
       });
+    });
+
+    // EV toggle — click to manually include/exclude a card from eBay export.
+    $grid.addEventListener("click", e => {
+      const cell = e.target.closest(".ev-toggle");
+      if (!cell) return;
+      const pid = cell.dataset.pid;
+      if (!pid) return;
+      const currentlyOn = !cell.classList.contains("ev-override-off") &&
+        (cell.classList.contains("ev-override-on") || cell.textContent.trim() === "✓");
+      toggleCardOverride(pid, currentlyOn);
+      // Re-render just this deck panel to reflect the change.
+      renderDecks();
     });
 
     async function runEbayExport(decks, slugOverride) {
@@ -607,8 +643,21 @@
       const profitCell  = profitCents != null
         ? `<td class="right ${profitCents >= 0 ? "pos" : "neg"}" data-cents="${profitCents}">${EV.fmtUSD(profitCents)}</td>`
         : `<td class="right muted">—</td>`;
-      return `<tr class="${li.included_in_ev ? "" : "excluded"}" data-pid="${pid}">
-        <td>${li.included_in_ev ? "✓" : "—"}</td>
+
+      // Determine effective export inclusion with manual overrides.
+      const autoPrice    = ebayListingPrice(li.market_price_cents, ebayMode);
+      const forceExclude = userExcluded.get(pid);
+      const forceInclude = userIncluded.get(pid);
+      const exportOn     = forceExclude ? false : forceInclude ? true : autoPrice != null;
+      const evIcon       = exportOn ? "✓" : "—";
+      const evTitle      = forceExclude ? "Manually excluded — click to re-include"
+                         : forceInclude ? "Manually included — click to exclude"
+                         : exportOn     ? "Above floor — click to exclude"
+                         :                "Below floor — click to include";
+      const evClass      = forceExclude ? "ev-override-off" : forceInclude ? "ev-override-on" : "";
+
+      return `<tr class="${exportOn ? "" : "excluded"}" data-pid="${pid}">
+        <td class="ev-toggle ${evClass}" data-pid="${pid}" title="${evTitle}" style="cursor:pointer">${evIcon}</td>
         ${photoCell}
         <td>${escHtml(li.name || li.display_key)}${cardLinks(li)}${reason ? `<div class="subtle">${escHtml(reason)}</div>` : ""}</td>
         <td class="right">${li.qty / copies}</td>
@@ -658,7 +707,9 @@
 
   // TCGPlayer CDN — stock card images, no auth required.
   // TODO: replace with GCS scan URLs once the upload flow is built.
-  const TCG_IMG_BASE = "https://product-images.tcgplayer.com/fit-in/400x550";
+  // Images proxied through our own API so GitHub Pages can load them
+  // without TCGPlayer hotlink restrictions.
+  const TCG_IMG_BASE = EV.api("/v1/images").replace(/\/$/, "");
 
   // ── Per-platform listing price functions ──
 
@@ -826,6 +877,28 @@
   // Build eBay CSVs for one or more decks, returning up to two files:
   // one for free-shipping cards, one for bulk-shipping cards.
   // slugOverride: used for whole-set exports; otherwise derived per-deck.
+  // Merge duplicate SKU rows by summing their quantity column (index 6).
+  // Cards appearing in multiple decks of a case generate one row per deck —
+  // this collapses them into a single listing with combined quantity.
+  function dedupeRows(rows) {
+    const skuCol   = 1; // Custom label (SKU)
+    const qtyCol   = 6; // Quantity
+    const seen     = new Map();
+    const deduped  = [];
+    for (const row of rows) {
+      const sku = row[skuCol];
+      if (sku && seen.has(sku)) {
+        const existing = seen.get(sku);
+        existing[qtyCol] = (parseInt(existing[qtyCol]) || 0) + (parseInt(row[qtyCol]) || 0);
+      } else {
+        const copy = [...row];
+        deduped.push(copy);
+        if (sku) seen.set(sku, copy);
+      }
+    }
+    return deduped;
+  }
+
   function buildEbayCSVMulti(decks, slugOverride, mode) {
     const freeRows   = [];
     const bulkRows   = [];
@@ -836,10 +909,12 @@
     const infoLines = ebayInfoLines();
     const headers   = ebayHeaders();
     const files = [];
-    if (freeRows.length)
-      files.push([infoLines + "\r\n" + csvSerialize([headers, ...freeRows]), `ebay-${slug}-freeship.csv`]);
-    if (bulkRows.length)
-      files.push([infoLines + "\r\n" + csvSerialize([headers, ...bulkRows]), `ebay-${slug}-bulk.csv`]);
+    const dedupedFree = dedupeRows(freeRows);
+    const dedupedBulk = dedupeRows(bulkRows);
+    if (dedupedFree.length)
+      files.push([infoLines + "\r\n" + csvSerialize([headers, ...dedupedFree]), `ebay-${slug}-freeship.csv`]);
+    if (dedupedBulk.length)
+      files.push([infoLines + "\r\n" + csvSerialize([headers, ...dedupedBulk]), `ebay-${slug}-bulk.csv`]);
     if (removeRows.length) {
       const removeHeaders = ["Card Name", "Set", "Rarity", "Collector #", "Qty", "Market Price", "Reason"];
       const removeData = removeRows
@@ -890,20 +965,30 @@
       const rarity = scryfallRarity(sf.rarity);
       const market = li.market_price_cents || 0;
 
-      // Skipped by rarity toggle → goes to remove list.
-      if (skipRarities.has(rarity)) {
+      const pid = String(li.tcgplayer_product_id || "");
+
+      // Skipped by rarity toggle (unless manually force-included).
+      if (skipRarities.has(rarity) && !userIncluded.get(pid)) {
         removeRows?.push({ name, setName, rarity, qty, market, reason: `Skipped rarity: ${rarity || "unknown"}`, sf });
         continue;
       }
 
+      // Manual exclude override.
+      if (userExcluded.get(pid)) {
+        removeRows?.push({ name, setName, rarity, qty, market, reason: "Manually excluded", sf });
+        continue;
+      }
+
       const priceCents = ebayListingPrice(market, mode);
-      // Below sift threshold → goes to remove list.
-      if (priceCents == null) {
+      // Below sift threshold — skip unless manually force-included.
+      if (priceCents == null && !userIncluded.get(pid)) {
         removeRows?.push({ name, setName, rarity, qty, market, reason: `Below threshold ($${(market/100).toFixed(2)})`, sf });
         continue;
       }
 
-      eligible.push({ li, name, qty, priceCents, rarity, sf });
+      // Use market price directly for force-included cards below threshold.
+      const effectivePrice = priceCents ?? Math.max(market, siftThresholdCents());
+      eligible.push({ li, name, qty, priceCents: effectivePrice, rarity, sf });
     }
 
     // Sort eligible items.

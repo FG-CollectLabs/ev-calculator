@@ -18,6 +18,7 @@ import (
 	"os/signal"
 	"path/filepath"
 	"strings"
+	"sync"
 	"syscall"
 	"time"
 
@@ -46,7 +47,7 @@ func main() {
 	}
 
 	dataDir := envOr("EV_DATA_DIR", "data/decks")
-	corsOrigin := envOr("EV_CORS_ORIGIN", "*")
+	corsOrigin := envOr("EV_CORS_ORIGIN", "https://fg-collectlabs.github.io,https://futuregadgetlabs.com,http://localhost:1313,http://localhost:5173")
 
 	mux := http.NewServeMux()
 	mux.HandleFunc("GET /healthz", func(w http.ResponseWriter, _ *http.Request) {
@@ -165,6 +166,46 @@ func main() {
 		proxyToCardID(w, r, "/identify/back")
 	})
 
+	// Image proxy — serves TCGPlayer product images through our domain so
+	// GitHub Pages (cross-origin) can load them without hotlink blocks.
+	// Images are cached in memory after the first fetch.
+	var (
+		imgCache sync.Map        // productID → []byte
+		imgMu    sync.Map        // productID → *sync.Mutex (in-flight dedup)
+	)
+	imgClient := &http.Client{Timeout: 15 * time.Second}
+	mux.HandleFunc("GET /v1/images/{id}", func(w http.ResponseWriter, r *http.Request) {
+		id := r.PathValue("id")
+		if cached, ok := imgCache.Load(id); ok {
+			w.Header().Set("Content-Type", "image/jpeg")
+			w.Header().Set("Cache-Control", "public, max-age=86400")
+			_, _ = w.Write(cached.([]byte))
+			return
+		}
+		// Per-ID mutex prevents duplicate in-flight fetches.
+		mu, _ := imgMu.LoadOrStore(id, &sync.Mutex{})
+		mu.(*sync.Mutex).Lock()
+		defer mu.(*sync.Mutex).Unlock()
+		if cached, ok := imgCache.Load(id); ok {
+			w.Header().Set("Content-Type", "image/jpeg")
+			w.Header().Set("Cache-Control", "public, max-age=86400")
+			_, _ = w.Write(cached.([]byte))
+			return
+		}
+		url := "https://product-images.tcgplayer.com/fit-in/400x550/" + id + ".jpg"
+		resp, err := imgClient.Get(url)
+		if err != nil || resp.StatusCode != http.StatusOK {
+			http.Error(w, "image not found", http.StatusNotFound)
+			return
+		}
+		defer resp.Body.Close()
+		data, _ := io.ReadAll(resp.Body)
+		imgCache.Store(id, data)
+		w.Header().Set("Content-Type", "image/jpeg")
+		w.Header().Set("Cache-Control", "public, max-age=86400")
+		_, _ = w.Write(data)
+	})
+
 	srv := &http.Server{
 		Addr:              cfg.APIAddr,
 		Handler:           cors(corsOrigin, mux),
@@ -190,11 +231,21 @@ func writeJSON(w http.ResponseWriter, v any) {
 	_ = json.NewEncoder(w).Encode(v)
 }
 
-func cors(origin string, next http.Handler) http.Handler {
+func cors(allowedOrigins string, next http.Handler) http.Handler {
+	allowed := map[string]bool{}
+	for _, o := range strings.Split(allowedOrigins, ",") {
+		if s := strings.TrimSpace(o); s != "" {
+			allowed[s] = true
+		}
+	}
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		w.Header().Set("Access-Control-Allow-Origin", origin)
+		origin := r.Header.Get("Origin")
+		if allowed[origin] || allowedOrigins == "*" {
+			w.Header().Set("Access-Control-Allow-Origin", origin)
+		}
 		w.Header().Set("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
 		w.Header().Set("Access-Control-Allow-Headers", "Content-Type, Authorization")
+		w.Header().Set("Vary", "Origin")
 		if r.Method == "OPTIONS" {
 			w.WriteHeader(http.StatusNoContent)
 			return

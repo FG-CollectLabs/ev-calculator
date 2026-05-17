@@ -111,6 +111,10 @@ table.data tr.excluded { opacity: 0.45; }
 }
 td.center { text-align: center; }
 td.muted { color: var(--muted); }
+.ev-toggle { text-align: center; user-select: none; }
+.ev-toggle:hover { background: rgba(255,255,255,0.06); }
+.ev-override-on  { color: var(--pos); font-weight: 700; }
+.ev-override-off { color: var(--neg); }
 
 /* ── Scan modal ── */
 .scan-modal {

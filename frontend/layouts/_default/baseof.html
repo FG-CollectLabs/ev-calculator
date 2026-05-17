@@ -19,8 +19,19 @@
   </main>
   <script>
     window.EV_API_BASE = "{{ .Site.Params.apiBase }}";
+    {{ if .Site.Params.firebaseApiKey }}
+    window.FG_FIREBASE_CONFIG = {
+      apiKey:            "{{ .Site.Params.firebaseApiKey }}",
+      authDomain:        "{{ .Site.Params.firebaseAuthDomain }}",
+      projectId:         "{{ .Site.Params.firebaseProjectId }}",
+      storageBucket:     "{{ .Site.Params.firebaseStorageBucket }}",
+      messagingSenderId: "{{ .Site.Params.firebaseMessagingSenderId }}",
+      appId:             "{{ .Site.Params.firebaseAppId }}"
+    };
+    {{ end }}
   </script>
   <script src="{{ "/js/fmt.js" | relURL }}"></script>
+  <script src="{{ "/js/auth.js" | relURL }}"></script>
   {{ block "scripts" . }}{{ end }}
 </body>
 </html>
