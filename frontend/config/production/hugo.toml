@@ -1,1 +1,4 @@
 canonifyURLs = true
+
+[params]
+  apiBase = "https://ev-api.futuregadgetlabs.com"
