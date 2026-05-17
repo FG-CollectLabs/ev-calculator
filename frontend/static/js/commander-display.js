@@ -26,6 +26,7 @@
   const skipRarities  = new Set();
   const userExcluded  = new Map();
   const userIncluded  = new Map();
+  const collapsedDecks = new Set();
 
   // ── Settings event handlers ───────────────────────────────────────────────
 
@@ -404,6 +405,15 @@
 
     $grid.innerHTML = (report.decks || []).map(buildDeckCard).join("");
 
+    // Restore collapsed state after re-render.
+    collapsedDecks.forEach(key => {
+      const card = $grid.querySelector(`.deck-card[data-deck-key="${key}"]`);
+      if (!card) return;
+      card.querySelector(".deck-singles")?.classList.add("hidden");
+      const btn = card.querySelector(".deck-collapse-btn");
+      if (btn) { btn.textContent = "▶ Cards"; btn.classList.add("collapsed"); }
+    });
+
     // Sort on column header click.
     $grid.querySelectorAll("table.cards").forEach(table => {
       table.querySelectorAll("th[data-sort]").forEach(th => {
@@ -447,11 +457,14 @@
       : `<div class="deck-thumb-placeholder"></div>`;
 
     return `
-      <div class="deck-card">
+      <div class="deck-card" data-deck-key="${d.deck_key}">
         <div class="deck-header">
           ${thumbHtml}
           <div class="deck-header-info">
-            <h2>${escHtml(d.name)}</h2>
+            <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:0.5rem">
+              <h2 style="margin:0">${escHtml(d.name)}</h2>
+              <button class="deck-collapse-btn" title="Collapse/expand card list">▼ Cards</button>
+            </div>
             <div class="deck-copies">${copies} cop${copies === 1 ? "y" : "ies"} in case</div>
             <div class="deck-scenarios">
               <span>Sealed: ${EV.fmtUSD(sealedMkt)}/copy → <strong>${EV.fmtUSD(sealedNet)}</strong> net</span>
@@ -468,7 +481,7 @@
   function buildSinglesPanel(d) {
     const copies = d.copies || 1;
     const platLabel = { tcgplayer: "TCG Net", manapool: "MP Net", ebay: "eBay Net" }[activePlat] || "Net";
-    const showListing = activePlat === "tcgplayer" && tcgOffsetValue() !== 0;
+    const showListing = true; // always show export price preview
 
     const lines = (d.line_items || []).slice().sort((a, b) => {
       switch (csvSort) {
@@ -507,7 +520,7 @@
       </tr>`;
     }).join("");
 
-    const listingTh = showListing ? `<th class="right" title="Listing price after TCGPlayer offset">Listing</th>` : "";
+    const listingTh = `<th class="right" title="Price you would list at on ${activePlat} given your pricing strategy">Export $</th>`;
 
     return `
       <div class="deck-singles">
@@ -536,6 +549,28 @@
   }
 
   renderDecks();
+
+  // Deck collapse toggle (delegated).
+  $grid.addEventListener("click", e => {
+    const btn = e.target.closest(".deck-collapse-btn");
+    if (!btn) return;
+    const card = btn.closest(".deck-card");
+    if (!card) return;
+    const key = card.dataset.deckKey;
+    const singles = card.querySelector(".deck-singles");
+    const collapsed = collapsedDecks.has(key);
+    if (collapsed) {
+      collapsedDecks.delete(key);
+      singles?.classList.remove("hidden");
+      btn.textContent = "▼ Cards";
+      btn.classList.remove("collapsed");
+    } else {
+      collapsedDecks.add(key);
+      singles?.classList.add("hidden");
+      btn.textContent = "▶ Cards";
+      btn.classList.add("collapsed");
+    }
+  });
 
   // Per-deck export buttons (delegated — grid content changes on re-render).
   $grid.addEventListener("click", async e => {

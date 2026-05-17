@@ -324,6 +324,15 @@ td.muted { color: var(--muted); }
 .deck-verdict-inline.win-sealed  { color: var(--accent); }
 .deck-verdict-inline.win-even    { color: var(--muted); font-weight: 400; }
 
+/* Deck collapse toggle button */
+.deck-collapse-btn {
+  background: none; border: 1px solid var(--line); border-radius: 4px;
+  color: var(--muted); cursor: pointer; font-size: 0.72rem; padding: 0.2rem 0.5rem;
+  white-space: nowrap; flex-shrink: 0; transition: color 0.12s, border-color 0.12s;
+}
+.deck-collapse-btn:hover { color: var(--fg); border-color: var(--accent); }
+.deck-collapse-btn.collapsed { color: var(--accent); border-color: var(--accent); }
+
 /* Always-visible singles panel under each deck header */
 .deck-singles {
   border-top: 1px solid var(--line);
