@@ -242,10 +242,21 @@ td.muted { color: var(--muted); }
 .picker-item:hover { background: rgba(255,255,255,0.05); }
 .picker-finish { font-size: 0.72rem; color: var(--muted); }
 
+/* ── Utility ── */
+.hidden { display: none !important; }
+
+/* ── Settings select (matches .settings-input) ── */
+.settings-select {
+  background: var(--bg2); border: 1px solid var(--line); border-radius: 5px;
+  color: var(--fg); font-size: 0.85rem; padding: 0.25rem 0.5rem;
+  outline: none; cursor: pointer;
+}
+.settings-select:focus { border-color: var(--accent); }
+
 /* ── Deck grid (display detail page) ── */
 .deck-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  display: flex;
+  flex-direction: column;
   gap: 1.5rem;
   margin-top: 1.5rem;
 }
@@ -259,6 +270,70 @@ td.muted { color: var(--muted); }
   background: var(--bg2);
 }
 
+/* Compact deck header: thumbnail + info side by side */
+.deck-card .deck-header {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 0.85rem;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.deck-thumb {
+  width: 64px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  object-fit: cover;
+  aspect-ratio: 2/3;
+}
+.deck-thumb-placeholder {
+  width: 64px;
+  flex-shrink: 0;
+  aspect-ratio: 2/3;
+  border-radius: 5px;
+  background: var(--line);
+}
+
+.deck-header-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.deck-header-info h2 { margin: 0; font-size: 1rem; }
+.deck-card .deck-copies { color: var(--muted); font-size: 0.8rem; }
+
+.deck-scenarios {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.3rem;
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-top: 0.15rem;
+}
+.deck-scenario-sep { color: var(--line); }
+
+.deck-verdict-inline {
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+  font-weight: 600;
+}
+.deck-verdict-inline.win-singles { color: var(--pos); }
+.deck-verdict-inline.win-sealed  { color: var(--accent); }
+.deck-verdict-inline.win-even    { color: var(--muted); font-weight: 400; }
+
+/* Always-visible singles panel under each deck header */
+.deck-singles {
+  border-top: 1px solid var(--line);
+  padding: 0.75rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+/* Legacy image block (kept for backward compat) */
 .deck-card .deck-img {
   width: 100%;
   height: 140px;
@@ -272,13 +347,6 @@ td.muted { color: var(--muted); }
   display: flex; align-items: center; justify-content: center;
   color: var(--muted); font-size: 0.85rem;
 }
-
-.deck-card .deck-header {
-  padding: 0.75rem 1rem 0.5rem;
-  border-bottom: 1px solid var(--line);
-}
-.deck-card .deck-header h2 { margin: 0; font-size: 1rem; }
-.deck-card .deck-copies { color: var(--muted); font-size: 0.8rem; margin-top: 0.15rem; }
 
 /* ── Scenario tiles (side by side inside deck card) ── */
 .scenario-row {

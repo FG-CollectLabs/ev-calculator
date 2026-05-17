@@ -5,17 +5,55 @@
 
 <div class="settings-panel">
   <div class="settings-row">
+    <span class="settings-label">Price data</span>
+    <div class="platform-toggle" id="source-toggle">
+      <button class="plat-btn active" data-source="tcgplayer">TCGPlayer</button>
+      <button class="plat-btn" data-source="manapool" disabled title="Coming soon">Manapool</button>
+      <button class="plat-btn" data-source="ebay" disabled title="Coming soon">eBay</button>
+    </div>
+  </div>
+  <div class="settings-row">
     <span class="settings-label">Sell on</span>
     <div class="platform-toggle" id="platform-toggle">
       <button class="plat-btn active" data-plat="tcgplayer">TCGPlayer</button>
       <button class="plat-btn" data-plat="manapool">Manapool</button>
+      <button class="plat-btn" data-plat="ebay">eBay</button>
     </div>
   </div>
-  <div class="settings-row">
+
+  <!-- TCGPlayer pricing strategy -->
+  <div class="settings-row" id="strategy-tcgplayer">
+    <span class="settings-label">TCG pricing</span>
+    <div class="settings-input-group">
+      <span class="settings-input-prefix">Market</span>
+      <select id="tcg-offset-type" class="settings-select">
+        <option value="pct">+ %</option>
+        <option value="fixed">+ $</option>
+      </select>
+      <input class="settings-input" id="tcg-offset-value" type="number" min="-50" max="200" step="1" value="0">
+    </div>
+  </div>
+
+  <!-- eBay pricing strategy -->
+  <div class="settings-row hidden" id="strategy-ebay">
     <span class="settings-label">eBay pricing</span>
-    <div class="platform-toggle" id="ebay-mode-toggle">
+    <div class="settings-input-group">
+      <span class="settings-input-prefix">Sift $</span>
+      <input class="settings-input" id="sift-threshold" type="number" min="0" max="10" step="0.05" value="0.25">
+    </div>
+    <div class="platform-toggle" id="ebay-mode-toggle" style="margin-left:0.75rem">
       <button class="plat-btn ebay-mode-btn active" data-mode="freeship">Free Ship (+$1.30)</button>
       <button class="plat-btn ebay-mode-btn" data-mode="bulk">Bulk Magnet</button>
+    </div>
+  </div>
+
+  <div class="settings-row">
+    <span class="settings-label">Sort cards</span>
+    <div class="platform-toggle" id="sort-toggle">
+      <button class="plat-btn sort-btn active" data-sort="name">Name</button>
+      <button class="plat-btn sort-btn" data-sort="price-asc">Price ↑</button>
+      <button class="plat-btn sort-btn" data-sort="price-desc">Price ↓</button>
+      <button class="plat-btn sort-btn" data-sort="rarity">Rarity</button>
     </div>
   </div>
   <div class="settings-row">
@@ -28,33 +66,15 @@
     </div>
   </div>
   <div class="settings-row">
-    <span class="settings-label">Sort by</span>
-    <div class="platform-toggle" id="sort-toggle">
-      <button class="plat-btn sort-btn active" data-sort="name">Name</button>
-      <button class="plat-btn sort-btn" data-sort="price-asc">Price ↑</button>
-      <button class="plat-btn sort-btn" data-sort="price-desc">Price ↓</button>
-      <button class="plat-btn sort-btn" data-sort="rarity">Rarity</button>
-    </div>
-  </div>
-  <div class="settings-row">
-    <span class="settings-label">Sift threshold</span>
-    <div class="settings-input-group">
-      <span class="settings-input-prefix">$</span>
-      <input class="settings-input" id="sift-threshold" type="number" min="0" max="10" step="0.05" value="0.25">
-      <span class="settings-input-suffix">— skip cards below this</span>
-    </div>
-  </div>
-  <div class="settings-row">
     <span class="settings-label">Case cost</span>
     <div class="settings-input-group">
       <span class="settings-input-prefix">$</span>
       <input class="settings-input" id="case-cost" type="number" min="0" step="0.01" placeholder="0.00">
-      <span class="settings-input-suffix">— distributes cost to each card</span>
     </div>
   </div>
   <div class="settings-actions">
     <button class="plat-btn" id="btn-upload-scans">Upload Scans</button>
-    <button class="plat-btn" id="download-all-csv">Download CSV</button>
+    <button class="plat-btn" id="download-all-csv">Download eBay CSV</button>
     <button class="plat-btn" id="download-reprice-csv">Download Reprice CSV</button>
   </div>
 </div>
