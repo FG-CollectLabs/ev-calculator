@@ -1,4 +1,4 @@
-apiBase = "https://ev.futuregadgetlabs.com"
+apiBase = "https://ev-api.futuregadgetlabs.com"
 firebaseApiKey            = "AIzaSyAlbUj8Z-FH-_QQEjZGPpTmlbQFbIu-SI0"
 firebaseAuthDomain        = "collection-showcase-auth.firebaseapp.com"
 firebaseProjectId         = "collection-showcase-auth"

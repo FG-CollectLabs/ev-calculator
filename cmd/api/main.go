@@ -47,12 +47,17 @@ func main() {
 	}
 
 	dataDir := envOr("EV_DATA_DIR", "data/decks")
-	corsOrigin := envOr("EV_CORS_ORIGIN", "https://fg-collectlabs.github.io,https://futuregadgetlabs.com,http://localhost:1313,http://localhost:5173")
+	corsOrigin := envOr("EV_CORS_ORIGIN", "https://fg-collectlabs.github.io,https://futuregadgetlabs.com,https://ev-calculator.futuregadgetlabs.com,http://localhost:1313,http://localhost:5173")
 
 	mux := http.NewServeMux()
 	mux.HandleFunc("GET /healthz", func(w http.ResponseWriter, _ *http.Request) {
 		w.WriteHeader(http.StatusOK)
 		_, _ = w.Write([]byte("ok"))
+	})
+
+	mux.HandleFunc("GET /docs", func(w http.ResponseWriter, _ *http.Request) {
+		w.Header().Set("Content-Type", "text/html")
+		_, _ = w.Write([]byte(swaggerHTML))
 	})
 
 	mux.HandleFunc("GET /v1/ev/displays", func(w http.ResponseWriter, r *http.Request) {
@@ -225,6 +230,34 @@ func main() {
 	defer cancel()
 	_ = srv.Shutdown(shCtx)
 }
+
+const swaggerHTML = `<!DOCTYPE html>
+<html><head><title>EV Calculator API</title>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="https://unpkg.com/swagger-ui-dist@5/swagger-ui.css">
+</head><body>
+<div id="swagger-ui"></div>
+<script src="https://unpkg.com/swagger-ui-dist@5/swagger-ui-bundle.js"></script>
+<script>
+SwaggerUIBundle({
+  spec: {
+    openapi:"3.0.0",
+    info:{title:"EV Calculator API",version:"1.0.0",description:"Sealed product EV calculator. Pulls live prices from market-tracker."},
+    servers:[{url:"https://ev-api.futuregadgetlabs.com",description:"Production"},{url:"http://localhost:8081",description:"Local"}],
+    paths:{
+      "/healthz":{get:{summary:"Health check",responses:{"200":{description:"ok"}}}},
+      "/v1/ev/displays":{get:{summary:"List all displays",responses:{"200":{description:"Array of display index entries"}}}},
+      "/v1/ev/displays/{key}":{get:{summary:"Full EV report for one display",parameters:[{name:"key",in:"path",required:true,schema:{type:"string"},example:"blc-commander-display"}],responses:{"200":{description:"EV report with deck breakdown and pricing"},"404":{description:"Display not found"}}}},
+      "/v1/images/{id}":{get:{summary:"Proxied TCGPlayer product image",parameters:[{name:"id",in:"path",required:true,schema:{type:"string"},example:"558382.jpg"}],responses:{"200":{description:"JPEG image","content":{"image/jpeg":{}}},"404":{description:"Image not found"}}}},
+      "/v1/scan/identify":{post:{summary:"Identify a card from a front scan image",requestBody:{content:{"multipart/form-data":{schema:{type:"object",properties:{image:{type:"string",format:"binary"},restrict_set:{type:"string",description:"Set name hint for OCR lookup"}}}}}},responses:{"200":{description:"Identification result with candidates and confidence"}}}},
+      "/v1/scan/back":{post:{summary:"Submit back scan for an existing scan_id",requestBody:{content:{"multipart/form-data":{schema:{type:"object",properties:{scan_id:{type:"string"},image:{type:"string",format:"binary"}}}}}},responses:{"200":{description:"Back image URL"}}}}
+    }
+  },
+  dom_id:"#swagger-ui",
+  presets:[SwaggerUIBundle.presets.apis,SwaggerUIBundle.SwaggerUIStandalonePreset],
+  layout:"BaseLayout"
+});
+</script></body></html>`
 
 func writeJSON(w http.ResponseWriter, v any) {
 	w.Header().Set("Content-Type", "application/json")
