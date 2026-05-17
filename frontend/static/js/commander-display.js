@@ -20,13 +20,14 @@
   const ebaySetName = report.name.replace(/\s+commander.*$/i, "").trim();
 
   // ── State ──────────────────────────────────────────────────────────────────
+  // Start all decks collapsed.
   let activePlat    = "tcgplayer";
   let ebayMode      = "freeship";
   let csvSort       = "name";
   const skipRarities  = new Set();
   const userExcluded  = new Map();
   const userIncluded  = new Map();
-  const collapsedDecks = new Set();
+  const collapsedDecks = new Set((report.decks || []).map(d => d.deck_key));
 
   // ── Settings event handlers ───────────────────────────────────────────────
 
@@ -365,42 +366,59 @@
 
   function renderDecks() {
     const singlesNet   = totalSinglesNet();
-    const caseCost     = report.case_cost_cents || 0;
+    const caseCost     = caseCostCents() || report.case_cost_cents || 0;
     const decksBuyCost = report.sealed_decks_gross_cents || 0;
     const sealedNet    = report.sealed_decks_net_cents   || 0;
 
-    const singlesDeltaCase  = caseCost     ? singlesNet - caseCost     : null;
-    const sealedDeltaCase   = caseCost     ? sealedNet  - caseCost     : null;
+    const singlesDeltaCase  = caseCost ? singlesNet - caseCost : null;
+    const sealedDeltaCase   = caseCost ? sealedNet  - caseCost : null;
     const singlesDeltaDecks = decksBuyCost ? singlesNet - decksBuyCost : null;
     const decksSave         = caseCost && decksBuyCost ? caseCost - decksBuyCost : null;
     const decksCheaper      = decksSave != null && decksSave > 0;
 
     const platLabel = { tcgplayer: "TCGPlayer", manapool: "Manapool", ebay: "eBay" }[activePlat] || activePlat;
+    const paidLine  = caseCost ? `<div class="card-sub muted">Paid: ${EV.fmtUSD(caseCost)}</div>` : "";
+    const pctOf     = (delta) => EV.fmtPct(caseCost ? delta / caseCost : null);
+
+    // When a case cost is entered, profit is the headline figure.
+    // Otherwise just show net proceeds.
+    const sealedCard = caseCost
+      ? `<div class="card ${EV.deltaClass(sealedDeltaCase)}">
+           <label>Sell sealed today — profit</label>
+           <value>${EV.fmtUSD(sealedDeltaCase)} <span style="font-size:0.85rem;font-weight:400">(${pctOf(sealedDeltaCase)})</span></value>
+           <div class="card-sub">Net proceeds: ${EV.fmtUSD(sealedNet)}</div>
+           ${paidLine}
+         </div>`
+      : `<div class="card">
+           <label>Sell sealed decks (after fees)</label>
+           <value>${EV.fmtUSD(sealedNet || null)}</value>
+         </div>`;
+
+    const singlesCard = caseCost
+      ? `<div class="card ${EV.deltaClass(singlesDeltaCase)}">
+           <label>Crack singles today — profit (${platLabel})</label>
+           <value>${EV.fmtUSD(singlesDeltaCase)} <span style="font-size:0.85rem;font-weight:400">(${pctOf(singlesDeltaCase)})</span></value>
+           <div class="card-sub">Net proceeds: ${EV.fmtUSD(singlesNet)}</div>
+           ${paidLine}
+         </div>`
+      : `<div class="card">
+           <label>Crack &amp; sell singles — ${platLabel}</label>
+           <value>${EV.fmtUSD(singlesNet)}</value>
+         </div>`;
+
+    const decksCard = `
+      <div class="card ${decksCheaper ? "pos" : ""}" title="Cost if you buy each deck individually.">
+        <label>Buy decks individually</label>
+        <value>${EV.fmtUSD(decksBuyCost || null)}</value>
+        ${decksSave != null ? `<div class="card-sub ${EV.deltaClass(decksSave)}">${decksCheaper ? "Saves" : "Costs"} ${EV.fmtUSD(Math.abs(decksSave))} vs case</div>` : ""}
+        ${singlesDeltaDecks != null ? `<div class="card-sub ${EV.deltaClass(singlesDeltaDecks)}">Singles profit: ${EV.fmtUSD(singlesDeltaDecks)}</div>` : ""}
+      </div>`;
 
     document.querySelector("#totals").innerHTML = `
       <div class="totals-row">
-        <div class="card" title="Market price for the sealed case.">
-          <label>Buy: Case</label>
-          <value>${EV.fmtUSD(caseCost || null)}</value>
-          ${singlesDeltaCase != null ? `<div class="card-sub ${EV.deltaClass(singlesDeltaCase)}">Singles profit: ${EV.fmtUSD(singlesDeltaCase)} (${EV.fmtPct(caseCost ? singlesDeltaCase/caseCost : null)})</div>` : ""}
-          ${sealedDeltaCase  != null ? `<div class="card-sub ${EV.deltaClass(sealedDeltaCase)}">Flip sealed: ${EV.fmtUSD(sealedDeltaCase)} (${EV.fmtPct(caseCost ? sealedDeltaCase/caseCost : null)})</div>` : ""}
-        </div>
-        <div class="card ${decksCheaper ? "pos" : ""}" title="Cost if you buy each deck individually instead of the full case.">
-          <label>Buy: Decks individually</label>
-          <value>${EV.fmtUSD(decksBuyCost || null)}</value>
-          ${decksSave != null ? `<div class="card-sub ${EV.deltaClass(decksSave)}">${decksCheaper ? "Saves" : "Costs"} ${EV.fmtUSD(Math.abs(decksSave))} vs case</div>` : ""}
-          ${singlesDeltaDecks != null ? `<div class="card-sub ${EV.deltaClass(singlesDeltaDecks)}">Singles profit: ${EV.fmtUSD(singlesDeltaDecks)}</div>` : ""}
-        </div>
-      </div>
-      <div class="totals-row">
-        <div class="card">
-          <label>Sell sealed decks (after fees)</label>
-          <value>${EV.fmtUSD(sealedNet)}</value>
-        </div>
-        <div class="card">
-          <label>Crack &amp; sell singles — ${platLabel}</label>
-          <value>${EV.fmtUSD(singlesNet)}</value>
-        </div>
+        ${sealedCard}
+        ${singlesCard}
+        ${decksBuyCost ? decksCard : ""}
       </div>`;
 
     $grid.innerHTML = (report.decks || []).map(buildDeckCard).join("");
