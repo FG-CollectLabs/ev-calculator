@@ -2,3 +2,10 @@ canonifyURLs = true
 
 [params]
   apiBase = "https://ev-api.futuregadgetlabs.com"
+
+  firebaseApiKey            = "AIzaSyAlbUj8Z-FH-_QQEjZGPpTmlbQFbIu-SI0"
+  firebaseAuthDomain        = "collection-showcase-auth.firebaseapp.com"
+  firebaseProjectId         = "collection-showcase-auth"
+  firebaseStorageBucket     = "collection-showcase-auth.firebasestorage.app"
+  firebaseMessagingSenderId = "619611794779"
+  firebaseAppId             = "1:619611794779:web:617b87bfb19666b9eefe7e"
