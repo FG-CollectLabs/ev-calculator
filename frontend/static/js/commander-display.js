@@ -281,13 +281,13 @@
     scanSummary.textContent = `${scanImageMap.size} cards linked — download CSV to use scan images.`;
     scanFooter.classList.remove("hidden");
     document.querySelectorAll("tr[data-pid]").forEach(row => {
-      const pid  = row.dataset.pid;
+      const pid = row.dataset.pid;
       if (!pid) return;
-      const cell = row.querySelector("td.scan-cell");
-      if (!cell) return;
-      const has = scanImageMap.get(pid)?.front || scanImageMap.get(pid)?.back;
-      cell.title   = has ? "Scan linked" : "No scan";
-      cell.textContent = has ? "📷" : "—";
+      const scanData = scanImageMap.get(pid);
+      const src = scanData?.front || scanData?.back;
+      if (!src) return;
+      const img = row.querySelector("td.img-cell img");
+      if (img) img.src = src;
     });
   }
 
@@ -505,6 +505,13 @@
       switch (csvSort) {
         case "price-asc":  return (a.market_price_cents||0) - (b.market_price_cents||0);
         case "price-desc": return (b.market_price_cents||0) - (a.market_price_cents||0);
+        case "rarity": {
+          const sa = scryfallCache.get(a.display_key) || {};
+          const sb = scryfallCache.get(b.display_key) || {};
+          const ra = rarityOrder[scryfallRarity(sa.rarity)] ?? 9;
+          const rb = rarityOrder[scryfallRarity(sb.rarity)] ?? 9;
+          return ra - rb || (a.name||"").localeCompare(b.name||"");
+        }
         default:           return (a.name||"").localeCompare(b.name||"");
       }
     });
@@ -515,7 +522,14 @@
       const listing    = showListing ? platformListingPrice(li) : null;
       const caseTotal  = net != null ? net * li.qty : null;
       const pid        = String(li.tcgplayer_product_id || "");
-      const hasPhoto   = pid && (scanImageMap.get(pid)?.front || scanImageMap.get(pid)?.back);
+      const scanData   = pid ? scanImageMap.get(pid) : null;
+      const scanSrc    = scanData?.front || scanData?.back || "";
+      const stockSrc   = pid ? `${TCG_IMG_BASE}/${pid}.jpg` : "";
+      const imgSrc     = scanSrc || stockSrc;
+      const sf         = scryfallCache.get(li.display_key) || {};
+      const rarity     = scryfallRarity(sf.rarity);
+      const setCode    = (sf.set || "").toUpperCase();
+      const collNum    = sf.collector_number || "";
 
       const forceExclude = userExcluded.get(pid);
       const forceInclude = userIncluded.get(pid);
@@ -528,8 +542,11 @@
 
       return `<tr class="${li.included_in_ev ? "" : "excluded"}" data-pid="${pid}">
         <td class="ev-toggle ${evClass}" data-pid="${pid}" title="Click to toggle CSV export" style="cursor:pointer;text-align:center">${evIcon}</td>
-        <td class="scan-cell center" title="${hasPhoto ? "Scan linked" : "No scan"}">${hasPhoto ? "📷" : "—"}</td>
+        <td class="img-cell center">${imgSrc ? `<img src="${imgSrc}" class="card-thumb" loading="lazy" alt="">` : "—"}</td>
         <td>${escHtml(li.name || li.display_key)}${cardLinks(li)}</td>
+        <td class="muted" style="font-size:0.78rem">${escHtml(rarity)}</td>
+        <td class="muted" style="font-size:0.78rem">${escHtml(setCode)}</td>
+        <td class="muted right" style="font-size:0.78rem">${escHtml(collNum)}</td>
         <td class="right">${qtyPerCopy}</td>
         <td class="right">${EV.fmtUSD(li.market_price_cents)}</td>
         ${listingCell}
@@ -552,8 +569,11 @@
           <table class="data cards">
             <thead><tr>
               <th title="Toggle CSV export inclusion" style="width:2rem">EV</th>
-              <th title="Scan linked" style="width:2rem">📷</th>
+              <th style="width:3.5rem">Img</th>
               <th data-sort="text">Card</th>
+              <th>Rarity</th>
+              <th>Set</th>
+              <th class="right">#</th>
               <th class="right" data-sort="num" title="Copies per deck">Qty</th>
               <th class="right" data-sort="num">Market</th>
               ${listingTh}
@@ -627,7 +647,39 @@
       files.forEach(([csv, name]) => downloadCSV(csv, name));
     } finally {
       this.disabled = false;
-      this.textContent = "Download eBay CSV";
+      this.textContent = "Case eBay CSV";
+    }
+  });
+
+  // Whole-case TCGPlayer CSV export.
+  document.getElementById("download-all-tcg-csv").addEventListener("click", async function () {
+    if (this.disabled) return;
+    this.disabled = true;
+    this.textContent = "Building…";
+    try {
+      await scryfallReady;
+      const slug = (report.display_key || "set").replace(/[^a-z0-9-]/gi, "-");
+      const [csv, name] = buildCaseTCGPlayerCSV(report.decks, slug);
+      downloadCSV(csv, name);
+    } finally {
+      this.disabled = false;
+      this.textContent = "Case TCGPlayer CSV";
+    }
+  });
+
+  // Whole-case Manapool CSV export.
+  document.getElementById("download-all-mp-csv").addEventListener("click", async function () {
+    if (this.disabled) return;
+    this.disabled = true;
+    this.textContent = "Building…";
+    try {
+      await scryfallReady;
+      const slug = (report.display_key || "set").replace(/[^a-z0-9-]/gi, "-");
+      const [csv, name] = buildCaseManapoolCSV(report.decks, slug);
+      downloadCSV(csv, name);
+    } finally {
+      this.disabled = false;
+      this.textContent = "Case Manapool CSV";
     }
   });
 
@@ -691,6 +743,7 @@
       .flatMap(d => d.line_items || [])
       .filter(li => li.display_key);
     await fetchScryfallMeta(allLineItems);
+    renderDecks();
   })();
 
   async function loadScryfallMeta() {
@@ -756,30 +809,78 @@
 
   function buildTCGPlayerCSV(d, slug) {
     const copies = d.copies || 1;
-    const rows = [["TCGplayer Id","Quantity","Condition","Price"]];
+    const rows = [["TCGplayer Id","Condition","Add to Quantity","TCG Marketplace Price"]];
     for (const li of d.line_items || []) {
       if (!li.tcgplayer_product_id) continue;
       const qty = Math.round(li.qty / copies);
       if (qty <= 0) continue;
       const priceCents = tcgplayerListingPrice(li.market_price_cents);
       if (priceCents == null) continue;
-      rows.push([li.tcgplayer_product_id, qty, li.finish === "f" ? "Near Mint Foil" : "Near Mint", (priceCents/100).toFixed(2)]);
+      rows.push([li.tcgplayer_product_id, li.finish === "f" ? "Near Mint Foil" : "Near Mint", qty, (priceCents/100).toFixed(2)]);
     }
     return [csvSerialize(rows), `tcgplayer-${slug}.csv`];
   }
 
   function buildManapoolCSV(d, slug) {
     const copies = d.copies || 1;
-    const rows = [["Name","Edition","Quantity","Foil","Condition","Price (USD)"]];
+    const exportedAt = new Date().toISOString();
+    const rows = [["product_type","product_id","name","set","number","rarity","language","finish","condition","price","market_low","market_price","market_price_foil","quantity","exported_at"]];
     for (const li of d.line_items || []) {
       const name = li.name || li.display_key;
       if (!name) continue;
       const qty = Math.round(li.qty / copies);
       if (qty <= 0) continue;
-      const priceCents = li.market_price_cents;
-      if (priceCents == null) continue;
-      const edition = d.deck_key ? d.deck_key.split("-")[0].toUpperCase() : "";
-      rows.push([name, edition, qty, li.finish === "f" ? "Yes" : "No", "Near Mint", (priceCents/100).toFixed(2)]);
+      const sf = scryfallCache.get(li.display_key) || {};
+      rows.push([
+        "mtg_single", sf.id || "", name,
+        (sf.set || "").toUpperCase(), sf.collector_number || "", sf.rarity || "",
+        "EN", li.finish === "f" ? "F" : "NF", "NM",
+        ((li.market_price_cents || 0) / 100).toFixed(2),
+        "", "", "",
+        qty, exportedAt,
+      ]);
+    }
+    return [csvSerialize(rows), `manapool-${slug}.csv`];
+  }
+
+  function buildCaseTCGPlayerCSV(decks, slug) {
+    const tally = new Map();
+    for (const d of decks) {
+      for (const li of d.line_items || []) {
+        if (!li.tcgplayer_product_id || li.qty <= 0) continue;
+        const priceCents = tcgplayerListingPrice(li.market_price_cents);
+        if (priceCents == null) continue;
+        const condition = li.finish === "f" ? "Near Mint Foil" : "Near Mint";
+        const key = `${li.tcgplayer_product_id}|${condition}`;
+        if (tally.has(key)) {
+          tally.get(key)[2] += li.qty;
+        } else {
+          tally.set(key, [li.tcgplayer_product_id, condition, li.qty, (priceCents/100).toFixed(2)]);
+        }
+      }
+    }
+    const rows = [["TCGplayer Id","Condition","Add to Quantity","TCG Marketplace Price"]];
+    for (const row of tally.values()) rows.push(row);
+    return [csvSerialize(rows), `tcgplayer-${slug}.csv`];
+  }
+
+  function buildCaseManapoolCSV(decks, slug) {
+    const exportedAt = new Date().toISOString();
+    const rows = [["product_type","product_id","name","set","number","rarity","language","finish","condition","price","market_low","market_price","market_price_foil","quantity","exported_at"]];
+    for (const d of decks) {
+      for (const li of d.line_items || []) {
+        const name = li.name || li.display_key;
+        if (!name || li.qty <= 0) continue;
+        const sf = scryfallCache.get(li.display_key) || {};
+        rows.push([
+          "mtg_single", sf.id || "", name,
+          (sf.set || "").toUpperCase(), sf.collector_number || "", sf.rarity || "",
+          "EN", li.finish === "f" ? "F" : "NF", "NM",
+          ((li.market_price_cents || 0) / 100).toFixed(2),
+          "", "", "",
+          li.qty, exportedAt,
+        ]);
+      }
     }
     return [csvSerialize(rows), `manapool-${slug}.csv`];
   }

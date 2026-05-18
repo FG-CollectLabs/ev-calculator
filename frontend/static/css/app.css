@@ -470,6 +470,8 @@ td.muted { color: var(--muted); }
 .singles-table-wrap { overflow-x: auto; }
 table.cards { font-size: 0.82rem; }
 table.cards th, table.cards td { padding: 0.4rem 0.6rem; }
+.img-cell { width: 3.5rem; padding: 0.1rem 0.3rem !important; }
+.card-thumb { height: 60px; width: auto; border-radius: 3px; display: block; object-fit: contain; }
 
 /* Per-card marketplace icon links */
 .card-links { margin-left: 0.4rem; display: inline-flex; gap: 0.2rem; vertical-align: middle; }
