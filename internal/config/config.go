@@ -17,6 +17,7 @@ type Config struct {
 	FeeProfile            string
 	LiveDepth             bool   // EV_LIVE_DEPTH=true enables live listing scraping
 	ManapoolToken         string // MANAPOOL_TOKEN for authenticated Manapool requests
+	APIToken              string // EV_API_TOKEN — when set, /v1/* routes require Bearer auth
 }
 
 func Load() (Config, error) {
@@ -46,6 +47,7 @@ func Load() (Config, error) {
 	}
 	c.LiveDepth = os.Getenv("EV_LIVE_DEPTH") == "true"
 	c.ManapoolToken = os.Getenv("MANAPOOL_TOKEN")
+	c.APIToken = os.Getenv("EV_API_TOKEN")
 	return c, nil
 }
 

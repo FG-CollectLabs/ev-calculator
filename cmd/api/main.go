@@ -60,14 +60,16 @@ func main() {
 		_, _ = w.Write([]byte(swaggerHTML))
 	})
 
-	mux.HandleFunc("GET /v1/ev/displays", func(w http.ResponseWriter, r *http.Request) {
+	auth := requireAuth(cfg.APIToken)
+
+	mux.Handle("GET /v1/ev/displays", auth(func(w http.ResponseWriter, r *http.Request) {
 		entries, err := indexDisplays(dataDir)
 		if err != nil {
 			http.Error(w, err.Error(), http.StatusInternalServerError)
 			return
 		}
 		writeJSON(w, map[string]any{"displays": entries})
-	})
+	}))
 
 	// Build listing fetchers once at startup when EV_LIVE_DEPTH=true.
 	var listingFetchers map[string]listings.Fetcher
@@ -126,13 +128,13 @@ func main() {
 		writeJSON(w, rep)
 	}
 
-	mux.HandleFunc("GET /v1/ev/displays/{key}", func(w http.ResponseWriter, r *http.Request) {
+	mux.Handle("GET /v1/ev/displays/{key}", auth(func(w http.ResponseWriter, r *http.Request) {
 		buildReport(w, r, r.PathValue("key"))
-	})
+	}))
 
-	mux.HandleFunc("GET /v1/ev/cases/{key}", func(w http.ResponseWriter, r *http.Request) {
+	mux.Handle("GET /v1/ev/cases/{key}", auth(func(w http.ResponseWriter, r *http.Request) {
 		buildReport(w, r, r.PathValue("key"))
-	})
+	}))
 
 	// Card identifier proxy — keeps the auth token server-side.
 	cardIDURL := envOr("CARD_IDENTIFIER_URL", "")
@@ -164,12 +166,12 @@ func main() {
 		_, _ = io.Copy(w, resp.Body)
 	}
 
-	mux.HandleFunc("POST /v1/scan/identify", func(w http.ResponseWriter, r *http.Request) {
+	mux.Handle("POST /v1/scan/identify", auth(func(w http.ResponseWriter, r *http.Request) {
 		proxyToCardID(w, r, "/identify")
-	})
-	mux.HandleFunc("POST /v1/scan/back", func(w http.ResponseWriter, r *http.Request) {
+	}))
+	mux.Handle("POST /v1/scan/back", auth(func(w http.ResponseWriter, r *http.Request) {
 		proxyToCardID(w, r, "/identify/back")
-	})
+	}))
 
 	// Image proxy — serves TCGPlayer product images through our domain so
 	// GitHub Pages (cross-origin) can load them without hotlink blocks.
@@ -355,4 +357,24 @@ func envOr(k, def string) string {
 		return v
 	}
 	return def
+}
+
+// requireAuth returns a middleware that enforces Bearer token auth when token
+// is non-empty. Pass the result of requireAuth(cfg.APIToken) as `auth` and
+// wrap protected handlers with auth(handler). When EV_API_TOKEN is unset the
+// middleware is a no-op so local dev works without configuration.
+func requireAuth(token string) func(http.HandlerFunc) http.Handler {
+	return func(next http.HandlerFunc) http.Handler {
+		if token == "" {
+			return next
+		}
+		return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+			got := strings.TrimPrefix(r.Header.Get("Authorization"), "Bearer ")
+			if got != token {
+				http.Error(w, "unauthorized", http.StatusUnauthorized)
+				return
+			}
+			next(w, r)
+		})
+	}
 }
