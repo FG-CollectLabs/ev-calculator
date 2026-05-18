@@ -13,25 +13,25 @@ components:
   - display_key: mtg-ltc-492-f
     qty: 1
     name: "Aragorn, Hornburg Hero"
-    tcgplayer_product_id: "517946"
+    tcgplayer_product_id: "517237"
     finish: f
   - display_key: mtg-ltc-493-f
     qty: 1
     name: "Legolas's Quick Reflexes"
-    tcgplayer_product_id: "517911"
+    tcgplayer_product_id: "517256"
     finish: f
   - display_key: mtg-ltc-494-f
     qty: 1
     name: "Gimli's Reckless Might"
-    tcgplayer_product_id: "517928"
+    tcgplayer_product_id: "517254"
     finish: f
   - display_key: mtg-ltc-495-f
     qty: 1
     name: Isengard Unleashed
-    tcgplayer_product_id: "517880"
+    tcgplayer_product_id: "517255"
     finish: f
   - display_key: mtg-ltc-496-f
     qty: 1
     name: Rohirrim Chargers
-    tcgplayer_product_id: "517898"
+    tcgplayer_product_id: "517260"
     finish: f

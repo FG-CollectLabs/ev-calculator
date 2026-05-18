@@ -16,47 +16,47 @@ components:
   - display_key: mtg-fic-229-f
     qty: 1
     name: Angel of the Ruins
-    tcgplayer_product_id: "636751"
+    tcgplayer_product_id: "631251"
     finish: f
   - display_key: mtg-fic-289-f
     qty: 1
     name: Anger
-    tcgplayer_product_id: "636752"
+    tcgplayer_product_id: "631135"
     finish: f
   - display_key: mtg-fic-332-f
     qty: 1
     name: Arcane Signet
-    tcgplayer_product_id: "636754"
+    tcgplayer_product_id: "631162"
     finish: f
   - display_key: mtg-fic-273-f
     qty: 1
     name: Archfiend of Depravity
-    tcgplayer_product_id: "636759"
+    tcgplayer_product_id: "631223"
     finish: f
   - display_key: mtg-fic-374-f
     qty: 1
     name: Ash Barrens
-    tcgplayer_product_id: "636763"
+    tcgplayer_product_id: "631288"
     finish: f
   - display_key: mtg-fic-78-f
     qty: 1
     name: "Banon, the Returners' Leader"
-    tcgplayer_product_id: "636770"
+    tcgplayer_product_id: "631149"
     finish: f
   - display_key: mtg-fic-375-f
     qty: 1
     name: Battlefield Forge
-    tcgplayer_product_id: "636774"
+    tcgplayer_product_id: "631249"
     finish: f
   - display_key: mtg-fic-319-f
     qty: 1
     name: Bedevil
-    tcgplayer_product_id: "636775"
+    tcgplayer_product_id: "631558"
     finish: f
   - display_key: mtg-fic-290-f
     qty: 1
     name: Big Score
-    tcgplayer_product_id: "636777"
+    tcgplayer_product_id: "631561"
     finish: f
   - display_key: mtg-fic-220-f
     qty: 1
@@ -66,142 +66,142 @@ components:
   - display_key: mtg-fic-381-f
     qty: 1
     name: Clifftop Retreat
-    tcgplayer_product_id: "636797"
+    tcgplayer_product_id: "631259"
     finish: f
   - display_key: mtg-fic-15-f
     qty: 1
     name: Coin of Fate
-    tcgplayer_product_id: "636799"
+    tcgplayer_product_id: "631523"
     finish: f
   - display_key: mtg-fic-292-f
     qty: 1
     name: Combustible Gearhulk
-    tcgplayer_product_id: "636802"
+    tcgplayer_product_id: "631228"
     finish: f
   - display_key: mtg-fic-484-f
     qty: 1
     name: Command Tower
-    tcgplayer_product_id: "636804"
+    tcgplayer_product_id: "631164"
     finish: f
   - display_key: mtg-fic-339-f
     qty: 1
     name: "Commander's Sphere"
-    tcgplayer_product_id: "636807"
+    tcgplayer_product_id: "631530"
     finish: f
   - display_key: mtg-fic-322-f
     qty: 1
     name: Crackling Doom
-    tcgplayer_product_id: "636812"
+    tcgplayer_product_id: "631563"
     finish: f
   - display_key: mtg-fic-16-f
     qty: 1
     name: "Cyan, Vengeful Samurai"
-    tcgplayer_product_id: "636816"
+    tcgplayer_product_id: "631098"
     finish: f
   - display_key: mtg-fic-385-f
     qty: 1
     name: Demolition Field
-    tcgplayer_product_id: "636822"
+    tcgplayer_product_id: "631316"
     finish: f
   - display_key: mtg-fic-386-f
     qty: 1
     name: Desolate Mire
-    tcgplayer_product_id: "636823"
+    tcgplayer_product_id: "631101"
     finish: f
   - display_key: mtg-fic-387-f
     qty: 1
     name: Dragonskull Summit
-    tcgplayer_product_id: "636827"
+    tcgplayer_product_id: "631583"
     finish: f
   - display_key: mtg-fic-80-f
     qty: 1
     name: "Edgar, Master Machinist"
-    tcgplayer_product_id: "636830"
+    tcgplayer_product_id: "631153"
     finish: f
   - display_key: mtg-fic-43-f
     qty: 1
     name: Espers to Magicite
-    tcgplayer_product_id: "636834"
+    tcgplayer_product_id: "631160"
     finish: f
   - display_key: mtg-fic-389-f
     qty: 1
     name: Evolving Wilds
-    tcgplayer_product_id: "636837"
+    tcgplayer_product_id: "631290"
     finish: f
   - display_key: mtg-fic-390-f
     qty: 1
     name: Exotic Orchard
-    tcgplayer_product_id: "636838"
+    tcgplayer_product_id: "631261"
     finish: f
   - display_key: mtg-fic-391-f
     qty: 1
     name: Fetid Heath
-    tcgplayer_product_id: "636846"
+    tcgplayer_product_id: "631319"
     finish: f
   - display_key: mtg-fic-293-f
     qty: 1
     name: Flayer of the Hatebound
-    tcgplayer_product_id: "636850"
+    tcgplayer_product_id: "631237"
     finish: f
   - display_key: mtg-fic-394-f
     qty: 1
     name: Foreboding Ruins
-    tcgplayer_product_id: "636852"
+    tcgplayer_product_id: "631585"
     finish: f
   - display_key: mtg-fic-397-f
     qty: 1
     name: Furycalm Snarl
-    tcgplayer_product_id: "636857"
+    tcgplayer_product_id: "631270"
     finish: f
   - display_key: mtg-fic-55-f
     qty: 1
     name: "Gau, Feral Youth"
-    tcgplayer_product_id: "636860"
+    tcgplayer_product_id: "631122"
     finish: f
   - display_key: mtg-fic-20-f
     qty: 1
     name: General Leo Cristophe
-    tcgplayer_product_id: "636861"
+    tcgplayer_product_id: "631103"
     finish: f
   - display_key: mtg-fic-399-f
     qty: 1
     name: Geothermal Bog
-    tcgplayer_product_id: "636863"
+    tcgplayer_product_id: "631190"
     finish: f
   - display_key: mtg-fic-56-f
     qty: 1
     name: "Gogo, Mysterious Mime"
-    tcgplayer_product_id: "636865"
+    tcgplayer_product_id: "631124"
     finish: f
   - display_key: mtg-fic-401-f
     qty: 1
     name: Graven Cairns
-    tcgplayer_product_id: "636867"
+    tcgplayer_product_id: "631207"
     finish: f
   - display_key: mtg-fic-402-f
     qty: 1
     name: High Market
-    tcgplayer_product_id: "636877"
+    tcgplayer_product_id: "631587"
     finish: f
   - display_key: mtg-fic-47-f
     qty: 1
     name: "Interceptor, Shadow's Hound"
-    tcgplayer_product_id: "636887"
+    tcgplayer_product_id: "631109"
     finish: f
   - display_key: mtg-fic-405-f
     qty: 1
     name: Isolated Chapel
-    tcgplayer_product_id: "636889"
+    tcgplayer_product_id: "631324"
     finish: f
   - display_key: mtg-fic-84-f
     qty: 1
     name: "Kefka, Dancing Mad"
-    tcgplayer_product_id: "636891"
+    tcgplayer_product_id: "631158"
     finish: f
   - display_key: mtg-fic-348-f
     qty: 1
     name: Key to the City
-    tcgplayer_product_id: "636892"
+    tcgplayer_product_id: "631182"
     finish: f
   - display_key: mtg-fin-585-f
     qty: 1
@@ -211,67 +211,67 @@ components:
   - display_key: mtg-fic-326-f
     qty: 1
     name: Legions to Ashes
-    tcgplayer_product_id: "636895"
+    tcgplayer_product_id: "631138"
     finish: f
   - display_key: mtg-fic-87-f
     qty: 1
     name: "Locke, Treasure Hunter"
-    tcgplayer_product_id: "636900"
+    tcgplayer_product_id: "631170"
     finish: f
   - display_key: mtg-fic-351-f
     qty: 1
     name: Meteor Golem
-    tcgplayer_product_id: "636907"
+    tcgplayer_product_id: "631513"
     finish: f
   - display_key: mtg-fic-352-f
     qty: 1
     name: Millikin
-    tcgplayer_product_id: "636908"
+    tcgplayer_product_id: "631519"
     finish: f
   - display_key: mtg-fic-353-f
     qty: 1
     name: Mind Stone
-    tcgplayer_product_id: "636909"
+    tcgplayer_product_id: "631531"
     finish: f
   - display_key: mtg-fic-89-f
     qty: 1
     name: "Mog, Moogle Warrior"
-    tcgplayer_product_id: "636910"
+    tcgplayer_product_id: "631201"
     finish: f
   - display_key: mtg-fic-278-f
     qty: 1
     name: Morbid Opportunist
-    tcgplayer_product_id: "636911"
+    tcgplayer_product_id: "631510"
     finish: f
   - display_key: mtg-fic-327-f
     qty: 1
     name: Mortify
-    tcgplayer_product_id: "636912"
+    tcgplayer_product_id: "631565"
     finish: f
   - display_key: mtg-fin-575-f
     qty: 3
     name: Mountain
-    tcgplayer_product_id: "656915"
+    tcgplayer_product_id: "630913"
     finish: f
   - display_key: mtg-fic-280-f
     qty: 1
     name: "Night's Whisper"
-    tcgplayer_product_id: "636917"
+    tcgplayer_product_id: "631578"
     finish: f
   - display_key: mtg-fic-409-f
     qty: 1
     name: Nomad Outpost
-    tcgplayer_product_id: "636918"
+    tcgplayer_product_id: "631600"
     finish: f
   - display_key: mtg-fic-247-f
     qty: 1
     name: Palace Jailer
-    tcgplayer_product_id: "636922"
+    tcgplayer_product_id: "631173"
     finish: f
   - display_key: mtg-fic-411-f
     qty: 1
     name: Path of Ancestry
-    tcgplayer_product_id: "636924"
+    tcgplayer_product_id: "631295"
     finish: f
   - display_key: mtg-fin-578-f
     qty: 1
@@ -281,195 +281,195 @@ components:
   - display_key: mtg-fic-281-f
     qty: 1
     name: Pitiless Plunderer
-    tcgplayer_product_id: "636927"
+    tcgplayer_product_id: "631511"
     finish: f
   - display_key: mtg-fin-572-f
     qty: 4
     name: Plains
-    tcgplayer_product_id: "656912"
+    tcgplayer_product_id: "630910"
     finish: f
   - display_key: mtg-fic-328-f
     qty: 1
     name: Priest of Fell Rites
-    tcgplayer_product_id: "636930"
+    tcgplayer_product_id: "631245"
     finish: f
   - display_key: mtg-fic-282-f
     qty: 1
     name: Reanimate
-    tcgplayer_product_id: "636941"
+    tcgplayer_product_id: "631573"
     finish: f
   - display_key: mtg-fic-49-f
     qty: 1
     name: Rejoin the Fight
-    tcgplayer_product_id: "636944"
+    tcgplayer_product_id: "631567"
     finish: f
   - display_key: mtg-fic-283-f
     qty: 1
     name: Rise of the Dark Realms
-    tcgplayer_product_id: "636948"
+    tcgplayer_product_id: "631576"
     finish: f
   - display_key: mtg-fic-415-f
     qty: 1
     name: "Rogue's Passage"
-    tcgplayer_product_id: "636950"
+    tcgplayer_product_id: "631195"
     finish: f
   - display_key: mtg-fic-417-f
     qty: 1
     name: Rugged Prairie
-    tcgplayer_product_id: "636952"
+    tcgplayer_product_id: "631276"
     finish: f
   - display_key: mtg-fic-297-f
     qty: 1
     name: Ruin Grinder
-    tcgplayer_product_id: "636953"
+    tcgplayer_product_id: "631241"
     finish: f
   - display_key: mtg-fic-329-f
     qty: 1
     name: Ruinous Ultimatum
-    tcgplayer_product_id: "636954"
+    tcgplayer_product_id: "631577"
     finish: f
   - display_key: mtg-fic-57-f
     qty: 1
     name: "Sabin, Master Monk"
-    tcgplayer_product_id: "636955"
+    tcgplayer_product_id: "631127"
     finish: f
   - display_key: mtg-fic-418-f
     qty: 1
     name: Sacred Peaks
-    tcgplayer_product_id: "636956"
+    tcgplayer_product_id: "631213"
     finish: f
   - display_key: mtg-fic-284-f
     qty: 1
     name: Sepulchral Primordial
-    tcgplayer_product_id: "636962"
+    tcgplayer_product_id: "631178"
     finish: f
   - display_key: mtg-fic-93-f
     qty: 1
     name: "Setzer, Wandering Gambler"
-    tcgplayer_product_id: "636963"
+    tcgplayer_product_id: "631205"
     finish: f
   - display_key: mtg-fic-50-f
     qty: 1
     name: "Shadow, Mysterious Assassin"
-    tcgplayer_product_id: "636964"
+    tcgplayer_product_id: "631112"
     finish: f
   - display_key: mtg-fic-421-f
     qty: 1
     name: Shadowblood Ridge
-    tcgplayer_product_id: "636965"
+    tcgplayer_product_id: "631115"
     finish: f
   - display_key: mtg-fic-422-f
     qty: 1
     name: Shineshadow Snarl
-    tcgplayer_product_id: "636967"
+    tcgplayer_product_id: "631117"
     finish: f
   - display_key: mtg-fic-51-f
     qty: 1
     name: "Siegfried, Famed Swordsman"
-    tcgplayer_product_id: "636968"
+    tcgplayer_product_id: "631120"
     finish: f
   - display_key: mtg-fic-425-f
     qty: 1
     name: Smoldering Marsh
-    tcgplayer_product_id: "636973"
+    tcgplayer_product_id: "631591"
     finish: f
   - display_key: mtg-fic-58-f
     qty: 1
     name: Snort
-    tcgplayer_product_id: "636974"
+    tcgplayer_product_id: "631569"
     finish: f
   - display_key: mtg-fic-356-f
     qty: 1
     name: Sol Ring
-    tcgplayer_product_id: "636976"
+    tcgplayer_product_id: "631540"
     finish: f
   - display_key: mtg-fic-360-f
     qty: 1
     name: Solemn Simulacrum
-    tcgplayer_product_id: "636981"
+    tcgplayer_product_id: "631248"
     finish: f
   - display_key: mtg-fic-286-f
     qty: 1
     name: Stitch Together
-    tcgplayer_product_id: "636984"
+    tcgplayer_product_id: "631579"
     finish: f
   - display_key: mtg-fic-287-f
     qty: 1
     name: "Stitcher's Supplier"
-    tcgplayer_product_id: "636985"
+    tcgplayer_product_id: "631512"
     finish: f
   - display_key: mtg-fic-59-f
     qty: 1
     name: Strago and Relm
-    tcgplayer_product_id: "636986"
+    tcgplayer_product_id: "631131"
     finish: f
   - display_key: mtg-fic-427-f
     qty: 1
     name: Sulfurous Springs
-    tcgplayer_product_id: "636988"
+    tcgplayer_product_id: "631594"
     finish: f
   - display_key: mtg-fic-60-f
     qty: 1
     name: "Summon: Esper Valigarmanda"
-    tcgplayer_product_id: "636989"
+    tcgplayer_product_id: "630975"
     finish: f
   - display_key: mtg-fic-254-f
     qty: 1
     name: Sun Titan
-    tcgplayer_product_id: "636998"
+    tcgplayer_product_id: "631219"
     finish: f
   - display_key: mtg-fic-431-f
     qty: 1
     name: Sunlit Marsh
-    tcgplayer_product_id: "637002"
+    tcgplayer_product_id: "631490"
     finish: f
   - display_key: mtg-fic-433-f
     qty: 1
     name: Sunscorched Divide
-    tcgplayer_product_id: "637005"
+    tcgplayer_product_id: "631286"
     finish: f
   - display_key: mtg-fin-574-f
     qty: 3
     name: Swamp
-    tcgplayer_product_id: "656914"
+    tcgplayer_product_id: "630912"
     finish: f
   - display_key: mtg-fic-361-f
     qty: 1
     name: Swiftfoot Boots
-    tcgplayer_product_id: "637006"
+    tcgplayer_product_id: "631547"
     finish: f
   - display_key: mtg-fic-363-f
     qty: 1
     name: Talisman of Conviction
-    tcgplayer_product_id: "637010"
+    tcgplayer_product_id: "631187"
     finish: f
   - display_key: mtg-fic-366-f
     qty: 1
     name: Talisman of Indulgence
-    tcgplayer_product_id: "637013"
+    tcgplayer_product_id: "631550"
     finish: f
   - display_key: mtg-fic-45-f
     qty: 1
     name: "The Falcon, Airship Restored"
-    tcgplayer_product_id: "637022"
+    tcgplayer_product_id: "631526"
     finish: f
   - display_key: mtg-fic-99-f
     qty: 1
     name: The Warring Triad
-    tcgplayer_product_id: "637023"
+    tcgplayer_product_id: "631210"
     finish: f
   - display_key: mtg-fic-258-f
     qty: 1
     name: Tragic Arrogance
-    tcgplayer_product_id: "637030"
+    tcgplayer_product_id: "631571"
     finish: f
   - display_key: mtg-fic-63-f
     qty: 1
     name: "Umaro, Raging Yeti"
-    tcgplayer_product_id: "637036"
+    tcgplayer_product_id: "631145"
     finish: f
   - display_key: mtg-fic-372-f
     qty: 1
     name: "Wayfarer's Bauble"
-    tcgplayer_product_id: "637048"
+    tcgplayer_product_id: "631554"
     finish: f

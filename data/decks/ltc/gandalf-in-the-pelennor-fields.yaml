@@ -13,25 +13,25 @@ components:
   - display_key: mtg-ltc-504-f
     qty: 1
     name: Sorcerous Squall
-    tcgplayer_product_id: "517904"
+    tcgplayer_product_id: "517250"
     finish: f
   - display_key: mtg-ltc-505-f
     qty: 1
     name: "Rammas Echor, Ancient Shield"
-    tcgplayer_product_id: "517957"
+    tcgplayer_product_id: "517249"
     finish: f
   - display_key: mtg-ltc-506-f
     qty: 1
     name: Courageous Resolve
-    tcgplayer_product_id: "517897"
+    tcgplayer_product_id: "517239"
     finish: f
   - display_key: mtg-ltc-507-f
     qty: 1
     name: Gandalf of the Secret Fire
-    tcgplayer_product_id: "517933"
+    tcgplayer_product_id: "517245"
     finish: f
   - display_key: mtg-ltc-508-f
     qty: 1
     name: "Fell Beast's Shriek"
-    tcgplayer_product_id: "517878"
+    tcgplayer_product_id: "517240"
     finish: f
