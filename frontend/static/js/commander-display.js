@@ -27,7 +27,7 @@
   const skipRarities  = new Set();
   const userExcluded  = new Map();
   const userIncluded  = new Map();
-  const collapsedDecks = new Set((report.decks || []).map(d => d.deck_key));
+  const collapsedDecks = new Set();
 
   // ── Settings event handlers ───────────────────────────────────────────────
 
