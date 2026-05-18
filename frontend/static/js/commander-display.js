@@ -648,7 +648,7 @@
           if (!name) continue;
           const qty = Math.round(li.qty / copies);
           if (qty <= 0) continue;
-          const sf      = scryfallCache.get(name) || {};
+          const sf      = scryfallCache.get(li.display_key) || {};
           const rarity  = scryfallRarity(sf.rarity);
           if (skipRarities.has(rarity)) continue;
           const priceCents = ebayListingPrice(li.market_price_cents, ebayMode);
@@ -668,37 +668,62 @@
   });
 
   // ── Scryfall metadata ──────────────────────────────────────────────────────
+  // Cache is keyed by display_key (e.g. "mtg-blc-186-nf") so that reprints in
+  // different sets always resolve to the correct printing, not Scryfall's
+  // default for the card name.
   const scryfallCache = new Map();
+
+  // Parse "mtg-{set}-{number}-{finish}" -> { set, number } or null.
+  function parseDisplayKey(dk) {
+    if (!dk) return null;
+    const parts = dk.split("-");
+    if (parts.length < 4 || parts[0] !== "mtg") return null;
+    const finish = parts[parts.length - 1];
+    if (!["nf", "f", "e"].includes(finish)) return null;
+    const number = parts[parts.length - 2];
+    if (!/^\d+[a-z★]?$/.test(number)) return null;
+    return { set: parts.slice(1, -2).join("-"), number };
+  }
 
   const scryfallReady = (async () => {
     await loadScryfallMeta();
-    const allNames = (report.decks || [])
-      .flatMap(d => (d.line_items || []).map(li => li.name || li.display_key))
-      .filter(Boolean);
-    await fetchScryfallMeta(allNames);
+    const allLineItems = (report.decks || [])
+      .flatMap(d => d.line_items || [])
+      .filter(li => li.display_key);
+    await fetchScryfallMeta(allLineItems);
   })();
 
   async function loadScryfallMeta() {
     try {
       const res  = await fetch("/data/scryfall-meta.json");
       const data = await res.json();
-      for (const [name, meta] of Object.entries(data)) scryfallCache.set(name, meta);
+      for (const [dk, meta] of Object.entries(data)) scryfallCache.set(dk, meta);
     } catch (_) {}
   }
 
-  async function fetchScryfallMeta(names) {
-    const uncached = [...new Set(names)].filter(n => !scryfallCache.has(n));
-    if (!uncached.length) return;
-    for (let i = 0; i < uncached.length; i += 75) {
-      const batch = uncached.slice(i, i + 75);
+  async function fetchScryfallMeta(lineItems) {
+    const uncached = lineItems.filter(li => !scryfallCache.has(li.display_key));
+    const parsed = uncached.map(li => {
+      const p = parseDisplayKey(li.display_key);
+      return p ? { display_key: li.display_key, ...p } : null;
+    }).filter(Boolean);
+    if (!parsed.length) return;
+    for (let i = 0; i < parsed.length; i += 75) {
+      const batch = parsed.slice(i, i + 75);
       try {
         const res  = await fetch("https://api.scryfall.com/cards/collection", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ identifiers: batch.map(name => ({ name })) }),
+          body: JSON.stringify({
+            identifiers: batch.map(({ set, number }) => ({ set, collector_number: number })),
+          }),
         });
         const data = await res.json();
-        (data.data || []).forEach(card => scryfallCache.set(card.name, card));
+        const lookup = new Map(batch.map(({ set, number, display_key }) => [`${set}:${number}`, display_key]));
+        (data.data || []).forEach(card => {
+          const dk = lookup.get(`${card.set}:${card.collector_number}`);
+          if (dk) scryfallCache.set(dk, card);
+        });
       } catch (_) {}
     }
   }
@@ -845,7 +870,7 @@
       if (!name) continue;
       const qty = Math.round(li.qty / copies);
       if (qty <= 0) continue;
-      const sf     = scryfallCache.get(name) || {};
+      const sf     = scryfallCache.get(li.display_key) || {};
       const rarity = scryfallRarity(sf.rarity);
       const market = li.market_price_cents || 0;
       const pid    = String(li.tcgplayer_product_id || "");
