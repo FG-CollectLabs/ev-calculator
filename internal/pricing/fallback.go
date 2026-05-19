@@ -16,7 +16,9 @@ type FallbackPricer struct {
 func (f *FallbackPricer) Lookup(ctx context.Context, reqs []Lookup) (map[string]PriceRow, error) {
 	out, err := f.Primary.Lookup(ctx, reqs)
 	if err != nil {
-		return nil, err
+		slog.Warn("primary pricer failed; falling back to secondary for all keys",
+			"err", err, "key_count", len(reqs))
+		return f.Fallback.Lookup(ctx, reqs)
 	}
 
 	var missing []Lookup
