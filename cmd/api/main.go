@@ -136,6 +136,59 @@ func main() {
 		buildReport(w, r, r.PathValue("key"))
 	}))
 
+	// Deck manifest endpoint — no auth, returns static component list for a single deck.
+	// Used by card-inventory-frontend to auto-populate the break form.
+	mux.HandleFunc("GET /v1/decks/{key}", func(w http.ResponseWriter, r *http.Request) {
+		key := r.PathValue("key")
+		deckMap, err := decks.LoadAllDecks(dataDir)
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+			return
+		}
+		dk, ok := deckMap[key]
+		if !ok {
+			http.Error(w, "not found", http.StatusNotFound)
+			return
+		}
+		type compResp struct {
+			DisplayKey         string `json:"display_key"`
+			Qty                int    `json:"qty"`
+			Name               string `json:"name,omitempty"`
+			TCGPlayerProductID string `json:"tcgplayer_product_id,omitempty"`
+			Finish             string `json:"finish,omitempty"`
+		}
+		type deckResp struct {
+			Key               string      `json:"key"`
+			Name              string      `json:"name"`
+			Game              string      `json:"game"`
+			SetCode           string      `json:"set_code"`
+			ProductDisplayKey string      `json:"product_display_key"`
+			ProductTCGPlayerID string     `json:"product_tcgplayer_id,omitempty"`
+			Image             string      `json:"image,omitempty"`
+			Components        []compResp  `json:"components"`
+		}
+		comps := make([]compResp, len(dk.Components))
+		for i, c := range dk.Components {
+			comps[i] = compResp{
+				DisplayKey:         c.DisplayKey,
+				Qty:                c.Quantity,
+				Name:               c.Name,
+				TCGPlayerProductID: c.TCGPlayerProductID,
+				Finish:             c.Finish,
+			}
+		}
+		writeJSON(w, deckResp{
+			Key:               dk.Key,
+			Name:              dk.Name,
+			Game:              dk.Game,
+			SetCode:           dk.SetCode,
+			ProductDisplayKey: dk.ProductDisplayKey,
+			ProductTCGPlayerID: dk.ProductTCGPlayerID,
+			Image:             dk.Image,
+			Components:        comps,
+		})
+	})
+
 	// Card identifier proxy — keeps the auth token server-side.
 	cardIDURL := envOr("CARD_IDENTIFIER_URL", "")
 	cardIDToken := envOr("CARD_IDENTIFIER_TOKEN", "")
