@@ -2,6 +2,7 @@ key: tmc-commander-turtle-power
 name: "Turtle Power!"
 game: mtg
 set_code: tmc
+tcg_set_name: "Commander: Teenage Mutant Ninja Turtles"
 product_display_key: mtg-tmc-commander-turtle-power
 product_tcgplayer_id: "657865"
 image: /img/decks/tmc-commander-turtle-power.jpg

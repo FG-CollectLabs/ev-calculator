@@ -162,6 +162,7 @@ func main() {
 			Name              string      `json:"name"`
 			Game              string      `json:"game"`
 			SetCode           string      `json:"set_code"`
+			TCGSetName        string      `json:"tcg_set_name,omitempty"`
 			ProductDisplayKey string      `json:"product_display_key"`
 			ProductTCGPlayerID string     `json:"product_tcgplayer_id,omitempty"`
 			Image             string      `json:"image,omitempty"`
@@ -182,6 +183,7 @@ func main() {
 			Name:              dk.Name,
 			Game:              dk.Game,
 			SetCode:           dk.SetCode,
+			TCGSetName:        dk.TCGSetName,
 			ProductDisplayKey: dk.ProductDisplayKey,
 			ProductTCGPlayerID: dk.ProductTCGPlayerID,
 			Image:             dk.Image,

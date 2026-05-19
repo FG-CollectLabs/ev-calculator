@@ -22,6 +22,7 @@ type Deck struct {
 	Name               string      `yaml:"name"`                           // human-readable
 	Game               string      `yaml:"game"`                           // "mtg"
 	SetCode            string      `yaml:"set_code"`                       // "drc"
+	TCGSetName         string      `yaml:"tcg_set_name,omitempty"`         // full TCGPlayer set_name, e.g. "Commander: Teenage Mutant Ninja Turtles"
 	ProductDisplayKey  string      `yaml:"product_display_key"`            // sealed deck's key in market-tracker
 	ProductTCGPlayerID  string      `yaml:"product_tcgplayer_id,omitempty"`  // sealed deck's TCGPlayer productId
 	ProductManapoolSlug string      `yaml:"product_manapool_slug,omitempty"` // Manapool URL slug: "{set_code}/{slug}"
