@@ -411,6 +411,8 @@
   // ── Rendering ─────────────────────────────────────────────────────────────
 
   const $grid = document.querySelector("#decks");
+  const scryfallCache = new Map();
+  const TCG_IMG_BASE = EV.api("/v1/images").replace(/\/$/, "");
 
   function renderDecks() {
     const singlesNet   = totalSinglesNet();
@@ -783,7 +785,6 @@
   // Cache is keyed by display_key (e.g. "mtg-blc-186-nf") so that reprints in
   // different sets always resolve to the correct printing, not Scryfall's
   // default for the card name.
-  const scryfallCache = new Map();
 
   // Parse "mtg-{set}-{number}-{finish}" -> { set, number } or null.
   function parseDisplayKey(dk) {
@@ -854,8 +855,6 @@
   }
 
   // ── CSV export ────────────────────────────────────────────────────────────
-
-  const TCG_IMG_BASE = EV.api("/v1/images").replace(/\/$/, "");
 
   function buildExportCSV(type, d, rep, mode) {
     const slug = (d.deck_key || rep.display_key || "deck").replace(/[^a-z0-9-]/gi, "-");
