@@ -823,8 +823,7 @@
 
   function buildManapoolCSV(d, slug) {
     const copies = d.copies || 1;
-    const exportedAt = new Date().toISOString();
-    const rows = [["product_type","product_id","name","set","number","rarity","language","finish","condition","price","market_low","market_price","market_price_foil","quantity","exported_at"]];
+    const rows = [["product_type","product_id","name","set","number","rarity","language","finish","condition","price","market_low","market_price","market_price_foil","quantity"]];
     for (const li of d.line_items || []) {
       const name = li.name || li.display_key;
       if (!name) continue;
@@ -837,7 +836,7 @@
         "EN", li.finish === "f" ? "F" : "NF", "NM",
         ((li.market_price_cents || 0) / 100).toFixed(2),
         "", "", "",
-        qty, exportedAt,
+        qty,
       ]);
     }
     return [csvSerialize(rows), `manapool-${slug}.csv`];
@@ -865,8 +864,7 @@
   }
 
   function buildCaseManapoolCSV(decks, slug) {
-    const exportedAt = new Date().toISOString();
-    const rows = [["product_type","product_id","name","set","number","rarity","language","finish","condition","price","market_low","market_price","market_price_foil","quantity","exported_at"]];
+    const rows = [["product_type","product_id","name","set","number","rarity","language","finish","condition","price","market_low","market_price","market_price_foil","quantity"]];
     for (const d of decks) {
       for (const li of d.line_items || []) {
         const name = li.name || li.display_key;
@@ -878,7 +876,7 @@
           "EN", li.finish === "f" ? "F" : "NF", "NM",
           ((li.market_price_cents || 0) / 100).toFixed(2),
           "", "", "",
-          li.qty, exportedAt,
+          li.qty,
         ]);
       }
     }
