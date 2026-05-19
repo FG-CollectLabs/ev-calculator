@@ -116,6 +116,20 @@ td.muted { color: var(--muted); }
 .ev-override-on  { color: var(--pos); font-weight: 700; }
 .ev-override-off { color: var(--neg); }
 
+/* ── Sellthrough columns ── */
+.st-badge {
+  display: inline-block; font-size: 0.68rem; font-weight: 600;
+  color: #fff; border-radius: 3px; padding: 1px 5px; margin-left: 3px;
+  vertical-align: middle; white-space: nowrap;
+}
+.st-badge.st-unknown { background: #444; color: #999; }
+.st-drain { font-size: 0.7rem; color: var(--muted); margin-left: 3px; }
+.st-roi { font-size: 0.7rem; font-weight: 600; margin-left: 2px; }
+.st-roi.pos { color: var(--pos); }
+.st-roi.neg { color: var(--neg); }
+td.warn { color: #c8932a; }
+th.st-col, td.st-col { border-left: 1px solid var(--line); }
+
 /* ── Scan modal ── */
 .scan-modal {
   position: fixed; inset: 0; z-index: 200;

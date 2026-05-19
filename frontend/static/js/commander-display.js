@@ -350,6 +350,54 @@
     return (report.decks || []).reduce((s, d) => s + computeDeckNet(d), 0);
   }
 
+  // ── Sellthrough helpers ───────────────────────────────────────────────────
+
+  const tierColors = { "market": "#6a9a6a", "+10%": "#4a7fcf", "+25%": "#c8932a", "+50%": "#c84a4a", "lowest_legit": "#888" };
+
+  function sellthroughBadge(st) {
+    if (!st || st.confidence === "unknown") return `<span class="st-badge st-unknown" title="No velocity data yet">—</span>`;
+    const color = tierColors[st.target_tier] || "#888";
+    const tip = `${st.target_tier} of market · confidence: ${st.confidence}` +
+      (st.note ? ` · ${st.note}` : "");
+    return `<span class="st-badge" style="background:${color}" title="${escHtml(tip)}">${escHtml(st.target_tier)}</span>`;
+  }
+
+  function sellthroughVelCell(st) {
+    if (!st || st.confidence === "unknown" || st.weekly_velocity == null) return `<td class="right muted">—</td>`;
+    const drain = st.net_drain_week;
+    const refill = st.refill_rate_week;
+    const tip = `Sold ${st.weekly_velocity}/wk · Relisted ${refill}/wk · Net drain ${drain}/wk`;
+    const cls = drain < st.weekly_velocity && drain > 0 ? "warn" : "";
+    return `<td class="right ${cls}" title="${escHtml(tip)}">${st.weekly_velocity}<span class="st-drain" title="${escHtml(tip)}">↓${drain}</span></td>`;
+  }
+
+  function sellthroughRecCell(st, caseCostPerCard) {
+    if (!st || st.confidence === "unknown" || !st.target_price_cents) return `<td class="right muted">—</td>`;
+    const recNet = Math.round(st.target_price_cents * 0.8715); // approx TCGPlayer L4 net
+    const roi = caseCostPerCard > 0 ? ((recNet - caseCostPerCard) / caseCostPerCard * 100).toFixed(0) : null;
+    const roiStr = roi != null ? ` <span class="st-roi ${+roi >= 0 ? "pos" : "neg"}">${+roi >= 0 ? "+" : ""}${roi}%</span>` : "";
+    return `<td class="right" title="${sellthroughTip(st)}">${EV.fmtUSD(st.target_price_cents)}${roiStr} ${sellthroughBadge(st)}</td>`;
+  }
+
+  function sellthroughWksCell(st) {
+    if (!st || st.confidence === "unknown" || st.expected_weeks == null || st.expected_weeks === 0) return `<td class="right muted">—</td>`;
+    const wks = st.expected_weeks.toFixed(1);
+    const cls = st.expected_weeks <= 1 ? "pos" : st.expected_weeks <= 3 ? "" : "warn";
+    return `<td class="right ${cls}" title="${sellthroughTip(st)}">${wks}wk</td>`;
+  }
+
+  function sellthroughTip(st) {
+    if (!st) return "";
+    return `Rec: ${st.target_tier} · ${st.depth_ahead_units} units ahead · ${st.weekly_velocity} sold/wk · ${st.net_drain_week} net drain/wk · exp ${st.expected_weeks?.toFixed(1)} wks`;
+  }
+
+  function totalCardsPerCase() {
+    return (report.decks || []).reduce((s, d) => {
+      const copies = d.copies || 1;
+      return s + (d.line_items || []).reduce((ls, li) => ls + Math.round(li.qty / copies), 0);
+    }, 0);
+  }
+
   function caseCostCents() {
     const v = parseFloat(document.getElementById("case-cost")?.value || "0");
     return Math.round((isNaN(v) ? 0 : v) * 100);
@@ -516,6 +564,10 @@
       }
     });
 
+    const caseCostCentsVal = caseCostCents() || report.case_cost_cents || 0;
+    const totalCards = totalCardsPerCase();
+    const costPerCard = caseCostCentsVal > 0 && totalCards > 0 ? caseCostCentsVal / totalCards : 0;
+
     const rows = lines.map(li => {
       const qtyPerCopy = Math.round(li.qty / copies);
       const net        = platformNet(li);
@@ -540,6 +592,8 @@
 
       const listingCell = showListing ? `<td class="right">${EV.fmtUSD(listing)}</td>` : "";
 
+      const st = li.sellthrough;
+
       return `<tr class="${li.included_in_ev ? "" : "excluded"}" data-pid="${pid}">
         <td class="ev-toggle ${evClass}" data-pid="${pid}" title="Click to toggle CSV export" style="cursor:pointer;text-align:center">${evIcon}</td>
         <td class="img-cell center">${imgSrc ? `<img src="${imgSrc}" class="card-thumb" loading="lazy" alt="">` : "—"}</td>
@@ -552,6 +606,9 @@
         ${listingCell}
         <td class="right ${net == null ? "muted" : ""}">${EV.fmtUSD(net)}</td>
         <td class="right ${caseTotal == null ? "muted" : ""}">${EV.fmtUSD(caseTotal)}</td>
+        ${sellthroughVelCell(st)}
+        ${sellthroughRecCell(st, costPerCard)}
+        ${sellthroughWksCell(st)}
       </tr>`;
     }).join("");
 
@@ -579,6 +636,9 @@
               ${listingTh}
               <th class="right" data-sort="num">${platLabel}</th>
               <th class="right" data-sort="num" title="Net × qty × copies in case">Case Total</th>
+              <th class="right st-col" data-sort="num" title="Units sold/week (↓ = net drain after relisting)">Vel/wk</th>
+              <th class="right st-col" title="Recommended listing price · tier = how far above market · ROI vs case cost/card">Rec Price</th>
+              <th class="right st-col" data-sort="num" title="Expected weeks to sell at recommended price">Sell In</th>
             </tr></thead>
             <tbody>${rows}</tbody>
           </table>

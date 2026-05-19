@@ -125,12 +125,14 @@ func (s *TCGPlayerScraper) fetchPage(ctx context.Context, productID, from, size 
 	var result struct {
 		Results []struct {
 			Results []struct {
-				TotalListings float64 `json:"totalListings"` // total listings for this product
+				TotalListings float64 `json:"totalListings"`
 				Listings      []struct {
-					Price     float64 `json:"price"`
-					Quantity  float64 `json:"quantity"`
-					Condition string  `json:"condition"`
-					Printing  string  `json:"printing"`
+					Price         float64 `json:"price"`
+					ShippingPrice float64 `json:"shippingPrice"`
+					Quantity      float64 `json:"quantity"`
+					Condition     string  `json:"condition"`
+					Printing      string  `json:"printing"`
+					ChannelID     int     `json:"channelId"` // 1 = TCGPlayer Direct (free ship)
 				} `json:"listings"`
 			} `json:"results"`
 		} `json:"results"`
@@ -152,11 +154,15 @@ func (s *TCGPlayerScraper) fetchPage(ctx context.Context, productID, from, size 
 		if cents <= 0 || qty <= 0 {
 			continue
 		}
+		shipCents := int32(l.ShippingPrice*100 + 0.5)
+		isDirect := l.ChannelID == 1
 		listings = append(listings, Listing{
-			PriceCents: cents,
-			Quantity:   qty,
-			Condition:  l.Condition,
-			Printing:   l.Printing,
+			PriceCents:    cents,
+			ShippingCents: shipCents,
+			IsFreeship:    isDirect || shipCents == 0,
+			Quantity:      qty,
+			Condition:     l.Condition,
+			Printing:      l.Printing,
 		})
 	}
 	return listings, total, nil

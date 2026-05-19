@@ -22,10 +22,12 @@ import (
 
 // Listing is a single marketplace offer: one seller at one price with N copies.
 type Listing struct {
-	PriceCents int32
-	Quantity   int
-	Condition  string // "Near Mint", "Lightly Played", etc.
-	Printing   string // "Normal", "Foil", etc.
+	PriceCents   int32
+	ShippingCents int32 // 0 for free ship / TCGPlayer Direct
+	IsFreeship   bool  // true when shipping_cents == 0 or is TCG Direct
+	Quantity     int
+	Condition    string // "Near Mint", "Lightly Played", etc.
+	Printing     string // "Normal", "Foil", etc.
 }
 
 // Depth is the full set of live listings for a product, sorted ascending
@@ -51,6 +53,25 @@ func (d *Depth) QueueAhead(priceCents int32) int {
 			break
 		}
 		total += l.Quantity
+	}
+	return total
+}
+
+// QueueAheadFreeship counts only free-shipping listings below priceCents.
+// For cards priced above freeshipThreshCents, buyers strongly prefer free-ship
+// sellers — paid-shipping listings are effectively invisible competition.
+func (d *Depth) QueueAheadFreeship(priceCents, freeshipThreshCents int32) int {
+	if priceCents < freeshipThreshCents {
+		return d.QueueAhead(priceCents)
+	}
+	total := 0
+	for _, l := range d.Listings {
+		if l.PriceCents >= priceCents {
+			break
+		}
+		if l.IsFreeship {
+			total += l.Quantity
+		}
 	}
 	return total
 }
@@ -116,19 +137,27 @@ func buildDepth(listings []Listing) Depth {
 	return d
 }
 
+// freeshipThreshCents is the card price above which buyers strongly prefer
+// free-shipping sellers. Below this threshold, shipping adds are expected
+// and all listings compete equally.
+const freeshipThreshCents = 500 // $5.00
+
 // SellRecommendation bundles the output of a sell-time analysis for one product.
 type SellRecommendation struct {
-	ProductID     string  `json:"product_id"`
-	Platform      string  `json:"platform"` // "tcgplayer" | "manapool"
-	LowestCents   int32   `json:"lowest_cents"`
-	UnitsAtLowest int     `json:"units_at_lowest"`
-	TotalUnits    int     `json:"total_units"`
-	TargetDays    int     `json:"target_days"`
-	TargetCents   int32   `json:"target_cents"`    // price to hit target
-	QueueAhead    int     `json:"queue_ahead"`      // units below target price
-	DailyRate     float64 `json:"daily_rate"`
-	ExpectedDays  float64 `json:"expected_days"`
-	Achievable    bool    `json:"achievable"`
+	ProductID            string  `json:"product_id"`
+	Platform             string  `json:"platform"` // "tcgplayer" | "manapool"
+	LowestCents          int32   `json:"lowest_cents"`
+	UnitsAtLowest        int     `json:"units_at_lowest"`
+	TotalUnits           int     `json:"total_units"`
+	FreeshipUnits        int     `json:"freeship_units"`        // total free-ship units in depth
+	TargetDays           int     `json:"target_days"`
+	TargetCents          int32   `json:"target_cents"`          // price to hit target (all listings)
+	FreeshipTargetCents  int32   `json:"freeship_target_cents"` // price vs only free-ship competition
+	QueueAhead           int     `json:"queue_ahead"`
+	FreeshipQueueAhead   int     `json:"freeship_queue_ahead"`  // free-ship-only queue depth
+	DailyRate            float64 `json:"daily_rate"`
+	ExpectedDays         float64 `json:"expected_days"`
+	Achievable           bool    `json:"achievable"`
 }
 
 // Recommend computes a sell recommendation for targetDays given the listing
@@ -142,6 +171,12 @@ func Recommend(d Depth, productID, platform string, unitsSoldWeek int32, targetD
 		TotalUnits:    d.TotalUnits,
 		TargetDays:    targetDays,
 	}
+	for _, l := range d.Listings {
+		if l.IsFreeship {
+			rec.FreeshipUnits += l.Quantity
+		}
+	}
+
 	dailyRate := float64(unitsSoldWeek) / 7.0
 	rec.DailyRate = dailyRate
 
@@ -151,6 +186,49 @@ func Recommend(d Depth, productID, platform string, unitsSoldWeek int32, targetD
 		rec.TargetCents = price
 		rec.QueueAhead = d.QueueAhead(price)
 		rec.ExpectedDays = d.DaysToSell(price, dailyRate)
+		// Free-ship perspective: how many free-ship units are ahead of our target?
+		rec.FreeshipQueueAhead = d.QueueAheadFreeship(price, freeshipThreshCents)
+		// If our target price is above the threshold, suggest undercutting
+		// the free-ship queue rather than the all-listings queue.
+		if price >= freeshipThreshCents {
+			freePrice, freeOk := d.PriceToSellInFreeship(targetDays, dailyRate)
+			if freeOk {
+				rec.FreeshipTargetCents = freePrice
+			}
+		}
 	}
 	return rec
+}
+
+// PriceToSellInFreeship is like PriceToSellIn but only counts free-shipping
+// listings as competition for cards priced above freeshipThreshCents.
+func (d *Depth) PriceToSellInFreeship(targetDays int, dailyRate float64) (int32, bool) {
+	if dailyRate <= 0 || len(d.Listings) == 0 {
+		return 0, false
+	}
+	targetQueue := dailyRate * float64(targetDays)
+	cumulative := 0
+	for _, l := range d.Listings {
+		if !l.IsFreeship {
+			continue
+		}
+		if float64(cumulative) >= targetQueue {
+			price := l.PriceCents - 1
+			if price < 1 {
+				price = 1
+			}
+			return price, true
+		}
+		cumulative += l.Quantity
+	}
+	if cumulative == 0 {
+		return 0, false
+	}
+	// All free-ship listings within target: list at or above the last free-ship price.
+	for i := len(d.Listings) - 1; i >= 0; i-- {
+		if d.Listings[i].IsFreeship {
+			return d.Listings[i].PriceCents, true
+		}
+	}
+	return 0, false
 }

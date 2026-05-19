@@ -22,6 +22,7 @@ type PriceRow struct {
 	MedianPriceCents     *int32   `json:"median_price_cents"`
 	ListingCount         *int32   `json:"listing_count,omitempty"`
 	UnitsSoldWeek        *int32   `json:"units_sold_week,omitempty"`
+	AddBackUnitsWeek     *int32   `json:"add_back_units_week,omitempty"`
 	DepthToPlus10Units   *int32   `json:"depth_to_plus_10_units,omitempty"`
 	DepthToPlus25Units   *int32   `json:"depth_to_plus_25_units,omitempty"`
 	DepthToPlus50Units   *int32   `json:"depth_to_plus_50_units,omitempty"`
