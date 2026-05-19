@@ -12,12 +12,13 @@ package fees
 //
 // All cents.
 type ShippingProfile struct {
-	Name              string
-	PWECostCents      int32 // materials + 1oz stamp for plain-white-envelope shipment
-	TrackedCostCents  int32 // bubble mailer + tracked label + postage
-	BuyerPaidCents    int32 // what we charge buyer for shipping on sub-FreeShipThreshold sales
-	TrackedThreshold  int32 // card price at which we switch from PWE to tracked
-	FreeShipThreshold int32 // card price at which we bake shipping into the listing
+	Name                    string
+	PWECostCents            int32 // materials + 1oz stamp for plain-white-envelope shipment
+	TrackedCostCents        int32 // bubble mailer + tracked label + postage
+	BuyerPaidCents          int32 // what we charge buyer for shipping on sub-FreeShipThreshold sales
+	TrackedThreshold        int32 // card price at which we switch from PWE to tracked
+	FreeShipThreshold       int32 // card price at which we bake shipping into the listing
+	SealedDeckShippingCents int32 // sealed-deck shipping (small box; can't bubble-mailer a sealed deck)
 }
 
 // DefaultTCGPlayerShipping is the locked-in default from the 2026-05-19
@@ -25,12 +26,13 @@ type ShippingProfile struct {
 // `.github/projects/ev-calculator/shipping-net-strategy.md` for the
 // per-item cost breakdown and rationale.
 var DefaultTCGPlayerShipping = ShippingProfile{
-	Name:              "tcgplayer-default",
-	PWECostCents:      93,   // $0.15 materials + $0.78 USPS Forever
-	TrackedCostCents:  375,  // bubble + Ground Advantage 2oz tracked
-	BuyerPaidCents:    150,  // what we charge buyer on sub-$5 sales
-	TrackedThreshold:  2000, // $20 — matches eBay bubble cutoff
-	FreeShipThreshold: 500,  // $5 — TCGPlayer free-shipping badge cutoff
+	Name:                    "tcgplayer-default",
+	PWECostCents:            93,   // $0.15 materials + $0.78 USPS Forever
+	TrackedCostCents:        375,  // bubble + Ground Advantage 2oz tracked
+	BuyerPaidCents:          150,  // what we charge buyer on sub-$5 sales
+	TrackedThreshold:        2000, // $20 — matches eBay bubble cutoff
+	FreeShipThreshold:       500,  // $5 — TCGPlayer free-shipping badge cutoff
+	SealedDeckShippingCents: 500,  // ~$5 small box + Ground Advantage; sealed decks won't bubble-mailer
 }
 
 // Regime constants for the breakdown's Regime field.

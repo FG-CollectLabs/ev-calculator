@@ -346,13 +346,23 @@ func (b *Builder) buildDeckReport(ctx context.Context, dk decks.Deck, prices map
 	// Sealed deck market price (gross) and net after fees.
 	// Falls back to the manual deck_price_cents YAML field when market-tracker
 	// has no sealed product data for this deck.
+	// Sealed decks ship in a small box (~$5) — we can't bubble-mailer them —
+	// so we deduct SealedDeckShippingCents from net after fees.
+	sealedShip := fees.DefaultTCGPlayerShipping.SealedDeckShippingCents
+	sealedNetAfter := func(gross int32) int32 {
+		n := fp.NetCents(gross) - sealedShip
+		if n < 0 {
+			n = 0
+		}
+		return n
+	}
 	if box, ok := prices[dk.ProductDisplayKey]; ok && box.MarketPriceCents != nil {
 		r.SealedMarketCents = box.MarketPriceCents
-		net := fp.NetCents(*box.MarketPriceCents)
+		net := sealedNetAfter(*box.MarketPriceCents)
 		r.SealedNetCents = &net
 	} else if dk.DeckPriceCents != nil {
 		r.SealedMarketCents = dk.DeckPriceCents
-		net := fp.NetCents(*dk.DeckPriceCents)
+		net := sealedNetAfter(*dk.DeckPriceCents)
 		r.SealedNetCents = &net
 	}
 
