@@ -318,20 +318,21 @@
     if (!li.market_price_cents) return null;
     switch (activePlat) {
       case "tcgplayer": {
-        if (li.tcgplayer_net_cents == null) return null;
+        const tcgNet = li.tcgplayer_net?.net_per_copy_cents;
+        if (tcgNet == null) return null;
         const ov = tcgOffsetValue();
         if (tcgOffsetType() === "pct") {
           // Listing scales up → net scales proportionally.
-          return Math.round(li.tcgplayer_net_cents * (1 + ov / 100));
+          return Math.round(tcgNet * (1 + ov / 100));
         } else {
           // Fixed $ offset: extra gross × fee-keep rate.
-          const keepRate = li.tcgplayer_net_cents / li.market_price_cents;
-          return Math.round(li.tcgplayer_net_cents + Math.round(ov * 100) * keepRate);
+          const keepRate = tcgNet / li.market_price_cents;
+          return Math.round(tcgNet + Math.round(ov * 100) * keepRate);
         }
       }
       case "manapool": return li.manapool_net_cents ?? null;
       case "ebay":     return li.ebay_net_cents ?? null;
-      default:         return li.tcgplayer_net_cents ?? null;
+      default:         return li.tcgplayer_net?.net_per_copy_cents ?? null;
     }
   }
 
