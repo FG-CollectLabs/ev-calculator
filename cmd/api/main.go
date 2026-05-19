@@ -47,7 +47,7 @@ func main() {
 	}
 
 	dataDir := envOr("EV_DATA_DIR", "data/decks")
-	corsOrigin := envOr("EV_CORS_ORIGIN", "https://fg-collectlabs.github.io,https://futuregadgetlabs.com,https://ev-calculator.futuregadgetlabs.com,http://localhost:1313,http://localhost:5173")
+	corsOrigin := envOr("EV_CORS_ORIGIN", "https://fg-collectlabs.github.io,https://futuregadgetlabs.com,https://ev-calculator.futuregadgetlabs.com,https://inventory.futuregadgetlabs.com,http://localhost:1313,http://localhost:5173,http://localhost:5174")
 
 	mux := http.NewServeMux()
 	mux.HandleFunc("GET /healthz", func(w http.ResponseWriter, _ *http.Request) {
