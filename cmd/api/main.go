@@ -228,6 +228,32 @@ func main() {
 		proxyToCardID(w, r, "/identify/back")
 	}))
 
+	// Catalog search — GET proxy (passes query string through).
+	mux.HandleFunc("GET /v1/scan/catalog", func(w http.ResponseWriter, r *http.Request) {
+		if cardIDURL == "" {
+			http.Error(w, "card identifier not configured", http.StatusServiceUnavailable)
+			return
+		}
+		upstream := cardIDURL + "/catalog/search?" + r.URL.RawQuery
+		req, err := http.NewRequestWithContext(r.Context(), http.MethodGet, upstream, nil)
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+			return
+		}
+		if cardIDToken != "" {
+			req.Header.Set("Authorization", "Bearer "+cardIDToken)
+		}
+		resp, err := cardClient.Do(req)
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusBadGateway)
+			return
+		}
+		defer resp.Body.Close()
+		w.Header().Set("Content-Type", resp.Header.Get("Content-Type"))
+		w.WriteHeader(resp.StatusCode)
+		_, _ = io.Copy(w, resp.Body)
+	})
+
 	// Image proxy — serves TCGPlayer product images through our domain so
 	// GitHub Pages (cross-origin) can load them without hotlink blocks.
 	// Images are cached in memory after the first fetch.
