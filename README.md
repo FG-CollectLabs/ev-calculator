@@ -37,8 +37,8 @@ no name-resolution layer.
 | Env                         | Default                  | Notes |
 |-----------------------------|--------------------------|-------|
 | `EV_API_ADDR`               | `:8081`                  | API listen addr |
-| `MARKET_TRACKER_BASE_URL`   | `http://localhost:8080`  | market-tracker-backend root |
-| `MARKET_TRACKER_TOKEN`      | (empty)                  | Bearer if you ever gate `/v1/prices/batch` |
+| `EV_MARKET_TRACKER_BASE_URL`| `http://localhost:8080`  | market-tracker-backend root |
+| `EV_MARKET_TRACKER_TOKEN`   | (empty)                  | Bearer if you ever gate `/v1/prices/batch` |
 | `EV_LOW_VALUE_FLOOR_CENTS`  | `25`                     | Cards below this are excluded from the singles EV |
 | `EV_TARGET_SELLTHROUGH_DAYS`| `90`                     | Default window for sell-through pricing |
 | `EV_FEE_PROFILE`            | `tcgplayer-direct`       | See `internal/fees` |
