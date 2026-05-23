@@ -262,6 +262,13 @@ func main() {
 		imgMu    sync.Map        // productID → *sync.Mutex (in-flight dedup)
 	)
 	imgClient := &http.Client{Timeout: 15 * time.Second}
+
+	// Build a tcgID → display_key index from deck manifests at startup so the
+	// image proxy can fall back to Scryfall by set+collector-number when
+	// TCGPlayer and Scryfall's tcgplayer index both miss (common for newly
+	// released sets like TMC).
+	tcgIDIndex := buildTCGIDIndex(dataDir)
+	slog.Info("tcg image index built", "entries", len(tcgIDIndex))
 	mux.HandleFunc("GET /v1/images/{id}", func(w http.ResponseWriter, r *http.Request) {
 		id := r.PathValue("id")
 		if cached, ok := imgCache.Load(id); ok {
@@ -280,18 +287,41 @@ func main() {
 			_, _ = w.Write(cached.([]byte))
 			return
 		}
+		// Try TCGPlayer's CDN first.
 		url := "https://product-images.tcgplayer.com/fit-in/400x550/" + id + ".jpg"
-		resp, err := imgClient.Get(url)
-		if err != nil || resp.StatusCode != http.StatusOK {
-			http.Error(w, "image not found", http.StatusNotFound)
+		if data, ok := fetchJPEG(imgClient, url); ok {
+			imgCache.Store(id, data)
+			w.Header().Set("Content-Type", "image/jpeg")
+			w.Header().Set("Cache-Control", "public, max-age=86400")
+			_, _ = w.Write(data)
 			return
 		}
-		defer resp.Body.Close()
-		data, _ := io.ReadAll(resp.Body)
-		imgCache.Store(id, data)
-		w.Header().Set("Content-Type", "image/jpeg")
-		w.Header().Set("Cache-Control", "public, max-age=86400")
-		_, _ = w.Write(data)
+		// Fallback 1: ask Scryfall for the card by TCGPlayer id.
+		if scryURL := scryfallImageByTCGPlayerID(imgClient, id); scryURL != "" {
+			if data, ok := fetchJPEG(imgClient, scryURL); ok {
+				imgCache.Store(id, data)
+				w.Header().Set("Content-Type", "image/jpeg")
+				w.Header().Set("Cache-Control", "public, max-age=86400")
+				_, _ = w.Write(data)
+				return
+			}
+		}
+		// Fallback 2: look up tcgID → display_key in our deck manifests, parse
+		// out set+collector-number, and query Scryfall by set/number. Covers
+		// newly listed cards (e.g. TMC foil borderless commanders) that aren't
+		// in Scryfall's tcgplayer index yet.
+		if setCode, number, ok := lookupSetNumber(tcgIDIndex, id); ok {
+			if scryURL := scryfallImageBySetNumber(imgClient, setCode, number); scryURL != "" {
+				if data, ok := fetchJPEG(imgClient, scryURL); ok {
+					imgCache.Store(id, data)
+					w.Header().Set("Content-Type", "image/jpeg")
+					w.Header().Set("Cache-Control", "public, max-age=86400")
+					_, _ = w.Write(data)
+					return
+				}
+			}
+		}
+		http.Error(w, "image not found", http.StatusNotFound)
 	})
 
 	srv := &http.Server{
@@ -458,4 +488,126 @@ func requireAuth(token string) func(http.HandlerFunc) http.Handler {
 			next(w, r)
 		})
 	}
+}
+
+// fetchJPEG GETs a URL and returns the body when the response is a 200 OK.
+// Used by the image proxy for both TCGPlayer and Scryfall sources.
+func fetchJPEG(client *http.Client, url string) ([]byte, bool) {
+	resp, err := client.Get(url)
+	if err != nil {
+		return nil, false
+	}
+	defer resp.Body.Close()
+	if resp.StatusCode != http.StatusOK {
+		return nil, false
+	}
+	data, err := io.ReadAll(resp.Body)
+	if err != nil {
+		return nil, false
+	}
+	return data, true
+}
+
+// buildTCGIDIndex scans every deck YAML under dataDir and returns a map of
+// tcgplayer_product_id → display_key so the image proxy can recover
+// set+collector-number when TCGPlayer and Scryfall's tcgplayer index miss.
+func buildTCGIDIndex(dataDir string) map[string]string {
+	idx := map[string]string{}
+	deckMap, err := decks.LoadAllDecks(dataDir)
+	if err != nil {
+		slog.Warn("buildTCGIDIndex: LoadAllDecks failed", "err", err)
+		return idx
+	}
+	for _, d := range deckMap {
+		for _, c := range d.Components {
+			if c.TCGPlayerProductID != "" && c.DisplayKey != "" {
+				idx[c.TCGPlayerProductID] = c.DisplayKey
+			}
+		}
+	}
+	return idx
+}
+
+// lookupSetNumber parses a display_key like "mtg-tmc-6-f" into set code and
+// collector number. Returns ok=false when the id isn't in the index or the
+// key doesn't have the expected shape.
+func lookupSetNumber(idx map[string]string, tcgID string) (string, string, bool) {
+	key, ok := idx[tcgID]
+	if !ok {
+		return "", "", false
+	}
+	parts := strings.Split(key, "-")
+	if len(parts) < 4 {
+		return "", "", false
+	}
+	return parts[1], parts[2], true
+}
+
+// scryfallImageBySetNumber queries Scryfall by set code + collector number
+// and returns a normal-size image URL, or "" if not found.
+func scryfallImageBySetNumber(client *http.Client, setCode, number string) string {
+	return scryfallGetImage(client, "https://api.scryfall.com/cards/"+setCode+"/"+number)
+}
+
+// scryfallGetImage issues a Scryfall API GET with the headers Scryfall
+// requires (without User-Agent + Accept, the API returns 400) and decodes
+// the image URL from the card-object response.
+func scryfallGetImage(client *http.Client, url string) string {
+	req, err := http.NewRequest(http.MethodGet, url, nil)
+	if err != nil {
+		return ""
+	}
+	req.Header.Set("Accept", "application/json")
+	req.Header.Set("User-Agent", "fg-ev-calculator/1.0 (https://futuregadgetlabs.com)")
+	resp, err := client.Do(req)
+	if err != nil {
+		return ""
+	}
+	defer resp.Body.Close()
+	if resp.StatusCode != http.StatusOK {
+		return ""
+	}
+	return decodeScryfallImage(resp.Body)
+}
+
+// scryfallImageByTCGPlayerID looks up a card on Scryfall by its TCGPlayer
+// product id and returns a normal-size image URL, or "" if not found.
+func scryfallImageByTCGPlayerID(client *http.Client, tcgID string) string {
+	return scryfallGetImage(client, "https://api.scryfall.com/cards/tcgplayer/"+tcgID)
+}
+
+// decodeScryfallImage extracts a card image URL from a Scryfall card-object
+// JSON response. Prefers top-level image_uris (single-face cards) and falls
+// back to the front face for dual-face cards.
+func decodeScryfallImage(body io.Reader) string {
+	var card struct {
+		ImageURIs struct {
+			Normal string `json:"normal"`
+			Large  string `json:"large"`
+		} `json:"image_uris"`
+		CardFaces []struct {
+			ImageURIs struct {
+				Normal string `json:"normal"`
+				Large  string `json:"large"`
+			} `json:"image_uris"`
+		} `json:"card_faces"`
+	}
+	if err := json.NewDecoder(body).Decode(&card); err != nil {
+		return ""
+	}
+	if card.ImageURIs.Normal != "" {
+		return card.ImageURIs.Normal
+	}
+	if card.ImageURIs.Large != "" {
+		return card.ImageURIs.Large
+	}
+	if len(card.CardFaces) > 0 {
+		if u := card.CardFaces[0].ImageURIs.Normal; u != "" {
+			return u
+		}
+		if u := card.CardFaces[0].ImageURIs.Large; u != "" {
+			return u
+		}
+	}
+	return ""
 }
