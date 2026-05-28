@@ -227,6 +227,29 @@ func main() {
 	mux.Handle("POST /v1/scan/back", auth(func(w http.ResponseWriter, r *http.Request) {
 		proxyToCardID(w, r, "/identify/back")
 	}))
+	mux.HandleFunc("DELETE /v1/scan/scans", func(w http.ResponseWriter, r *http.Request) {
+		if cardIDURL == "" {
+			http.Error(w, "card identifier not configured", http.StatusServiceUnavailable)
+			return
+		}
+		req, err := http.NewRequestWithContext(r.Context(), http.MethodDelete, cardIDURL+"/identify/scans", nil)
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+			return
+		}
+		if cardIDToken != "" {
+			req.Header.Set("Authorization", "Bearer "+cardIDToken)
+		}
+		resp, err := cardClient.Do(req)
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusBadGateway)
+			return
+		}
+		defer resp.Body.Close()
+		w.Header().Set("Content-Type", resp.Header.Get("Content-Type"))
+		w.WriteHeader(resp.StatusCode)
+		_, _ = io.Copy(w, resp.Body)
+	})
 
 	// Catalog search — GET proxy (passes query string through).
 	mux.HandleFunc("GET /v1/scan/catalog", func(w http.ResponseWriter, r *http.Request) {
@@ -389,7 +412,7 @@ func cors(allowedOrigins string, next http.Handler) http.Handler {
 		if allowed[origin] || allowedOrigins == "*" {
 			w.Header().Set("Access-Control-Allow-Origin", origin)
 		}
-		w.Header().Set("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
+		w.Header().Set("Access-Control-Allow-Methods", "GET, POST, DELETE, OPTIONS")
 		w.Header().Set("Access-Control-Allow-Headers", "Content-Type, Authorization")
 		w.Header().Set("Vary", "Origin")
 		if r.Method == "OPTIONS" {
