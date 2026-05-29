@@ -1,0 +1,548 @@
+﻿key: otc-commander-desert-bloom
+name: Desert Bloom
+game: mtg
+set_code: otc
+tcg_set_name: "Commander: Outlaws of Thunder Junction"
+product_display_key: mtg-otc-commander-desert-bloom
+product_tcgplayer_id: "541100"
+image: /img/decks/otc-commander-desert-bloom.jpg
+channels: [tcgplayer, manapool]
+components:
+  # Generated from desert-bloom_cards_2026-05-24.csv by scripts/import-deck-csv.js
+  # â”€â”€ Foil â€” OTC â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  - display_key: mtg-otc-4-f
+    qty: 1
+    name: "Yuma, Proud Protector"
+    tcgplayer_product_id: "544316"
+    tcgplayer_sku_id: "7821991"
+    finish: f
+  - display_key: mtg-otc-7-f
+    qty: 1
+    name: "Kirri, Talented Sprout"
+    tcgplayer_product_id: "545051"
+    tcgplayer_sku_id: "7850387"
+    finish: f
+  # â”€â”€ Non-foil â€” OTC â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  - display_key: mtg-otc-9-nf
+    qty: 1
+    name: Angel of Indemnity
+    tcgplayer_product_id: "545120"
+    tcgplayer_sku_id: "7852397"
+    finish: nf
+  - display_key: mtg-otc-11-nf
+    qty: 1
+    name: Sand Scout
+    tcgplayer_product_id: "545114"
+    tcgplayer_sku_id: "7852237"
+    finish: nf
+  - display_key: mtg-otc-24-nf
+    qty: 1
+    name: Cataclysmic Prospecting
+    tcgplayer_product_id: "545119"
+    tcgplayer_sku_id: "7852367"
+    finish: nf
+  - display_key: mtg-otc-28-nf
+    qty: 1
+    name: Embrace the Unknown
+    tcgplayer_product_id: "545116"
+    tcgplayer_sku_id: "7852297"
+    finish: nf
+  - display_key: mtg-otc-31-nf
+    qty: 1
+    name: Dune Chanter
+    tcgplayer_product_id: "545118"
+    tcgplayer_sku_id: "7852337"
+    finish: nf
+  - display_key: mtg-otc-32-nf
+    qty: 1
+    name: Rumbleweed
+    tcgplayer_product_id: "545115"
+    tcgplayer_sku_id: "7852267"
+    finish: nf
+  - display_key: mtg-otc-35-nf
+    qty: 1
+    name: Vengeful Regrowth
+    tcgplayer_product_id: "545112"
+    tcgplayer_sku_id: "7852197"
+    finish: nf
+  - display_key: mtg-otc-40-nf
+    qty: 1
+    name: Cactus Preserve
+    tcgplayer_product_id: "545121"
+    tcgplayer_sku_id: "7852427"
+    finish: nf
+  - display_key: mtg-otc-78-nf
+    qty: 1
+    name: Angel of the Ruins
+    tcgplayer_product_id: "545084"
+    tcgplayer_sku_id: "7851377"
+    finish: nf
+  - display_key: mtg-otc-80-nf
+    qty: 1
+    name: Descend upon the Sinful
+    tcgplayer_product_id: "545087"
+    tcgplayer_sku_id: "7851467"
+    finish: nf
+  - display_key: mtg-otc-82-nf
+    qty: 1
+    name: "Marshal's Anthem"
+    tcgplayer_product_id: "545101"
+    tcgplayer_sku_id: "7851887"
+    finish: nf
+  - display_key: mtg-otc-85-nf
+    qty: 1
+    name: Path to Exile
+    tcgplayer_product_id: "545110"
+    tcgplayer_sku_id: "7852157"
+    finish: nf
+  - display_key: mtg-otc-86-nf
+    qty: 1
+    name: "Sevinne's Reclamation"
+    tcgplayer_product_id: "545089"
+    tcgplayer_sku_id: "7851527"
+    finish: nf
+  - display_key: mtg-otc-87-nf
+    qty: 1
+    name: Sun Titan
+    tcgplayer_product_id: "545068"
+    tcgplayer_sku_id: "7850897"
+    finish: nf
+  - display_key: mtg-otc-88-nf
+    qty: 1
+    name: Valorous Stance
+    tcgplayer_product_id: "545106"
+    tcgplayer_sku_id: "7852037"
+    finish: nf
+  - display_key: mtg-otc-156-nf
+    qty: 1
+    name: Bitter Reunion
+    tcgplayer_product_id: "545104"
+    tcgplayer_sku_id: "7851977"
+    finish: nf
+  - display_key: mtg-otc-163-nf
+    qty: 1
+    name: Electric Revelation
+    tcgplayer_product_id: "545108"
+    tcgplayer_sku_id: "7852097"
+    finish: nf
+  - display_key: mtg-otc-173-nf
+    qty: 1
+    name: Magmatic Insight
+    tcgplayer_product_id: "545455"
+    tcgplayer_sku_id: "7862402"
+    finish: nf
+  - display_key: mtg-otc-176-nf
+    qty: 1
+    name: Nesting Dragon
+    tcgplayer_product_id: "545074"
+    tcgplayer_sku_id: "7851077"
+    finish: nf
+  - display_key: mtg-otc-182-nf
+    qty: 1
+    name: Unholy Heat
+    tcgplayer_product_id: "545107"
+    tcgplayer_sku_id: "7852067"
+    finish: nf
+  - display_key: mtg-otc-186-nf
+    qty: 1
+    name: Ancient Greenwarden
+    tcgplayer_product_id: "545554"
+    tcgplayer_sku_id: "7866422"
+    finish: nf
+  - display_key: mtg-otc-187-nf
+    qty: 1
+    name: Avenger of Zendikar
+    tcgplayer_product_id: "545077"
+    tcgplayer_sku_id: "7851167"
+    finish: nf
+  - display_key: mtg-otc-189-nf
+    qty: 1
+    name: Crawling Sensation
+    tcgplayer_product_id: "545103"
+    tcgplayer_sku_id: "7851947"
+    finish: nf
+  - display_key: mtg-otc-190-nf
+    qty: 1
+    name: Eccentric Farmer
+    tcgplayer_product_id: "545083"
+    tcgplayer_sku_id: "7851347"
+    finish: nf
+  - display_key: mtg-otc-191-nf
+    qty: 1
+    name: Elvish Rejuvenator
+    tcgplayer_product_id: "545081"
+    tcgplayer_sku_id: "7851287"
+    finish: nf
+  - display_key: mtg-otc-192-nf
+    qty: 1
+    name: Explore
+    tcgplayer_product_id: "545092"
+    tcgplayer_sku_id: "7851617"
+    finish: nf
+  - display_key: mtg-otc-193-nf
+    qty: 1
+    name: Genesis Hydra
+    tcgplayer_product_id: "545078"
+    tcgplayer_sku_id: "7851197"
+    finish: nf
+  - display_key: mtg-otc-194-nf
+    qty: 1
+    name: Harrow
+    tcgplayer_product_id: "545109"
+    tcgplayer_sku_id: "7852127"
+    finish: nf
+  - display_key: mtg-otc-195-nf
+    qty: 1
+    name: Hour of Promise
+    tcgplayer_product_id: "545088"
+    tcgplayer_sku_id: "7851497"
+    finish: nf
+  - display_key: mtg-otc-197-nf
+    qty: 1
+    name: The Mending of Dominaria
+    tcgplayer_product_id: "545102"
+    tcgplayer_sku_id: "7851917"
+    finish: nf
+  - display_key: mtg-otc-198-nf
+    qty: 1
+    name: Nantuko Cultivator
+    tcgplayer_product_id: "545086"
+    tcgplayer_sku_id: "7851437"
+    finish: nf
+  - display_key: mtg-otc-200-nf
+    qty: 1
+    name: Oracle of Mul Daya
+    tcgplayer_product_id: "545071"
+    tcgplayer_sku_id: "7850987"
+    finish: nf
+  - display_key: mtg-otc-202-nf
+    qty: 1
+    name: Ramunap Excavator
+    tcgplayer_product_id: "545072"
+    tcgplayer_sku_id: "7851017"
+    finish: nf
+  - display_key: mtg-otc-203-nf
+    qty: 1
+    name: Return of the Wildspeaker
+    tcgplayer_product_id: "545105"
+    tcgplayer_sku_id: "7852007"
+    finish: nf
+  - display_key: mtg-otc-204-nf
+    qty: 1
+    name: Satyr Wayfinder
+    tcgplayer_product_id: "545079"
+    tcgplayer_sku_id: "7851227"
+    finish: nf
+  - display_key: mtg-otc-205-nf
+    qty: 1
+    name: Scute Swarm
+    tcgplayer_product_id: "545070"
+    tcgplayer_sku_id: "7850957"
+    finish: nf
+  - display_key: mtg-otc-207-nf
+    qty: 1
+    name: Skullwinder
+    tcgplayer_product_id: "545080"
+    tcgplayer_sku_id: "7851257"
+    finish: nf
+  - display_key: mtg-otc-208-nf
+    qty: 1
+    name: Springbloom Druid
+    tcgplayer_product_id: "545082"
+    tcgplayer_sku_id: "7851317"
+    finish: nf
+  - display_key: mtg-otc-210-nf
+    qty: 1
+    name: "Titania, Protector of Argoth"
+    tcgplayer_product_id: "545076"
+    tcgplayer_sku_id: "7851137"
+    finish: nf
+  - display_key: mtg-otc-211-nf
+    qty: 1
+    name: Turntimber Sower
+    tcgplayer_product_id: "545075"
+    tcgplayer_sku_id: "7851107"
+    finish: nf
+  - display_key: mtg-otc-213-nf
+    qty: 1
+    name: Winding Way
+    tcgplayer_product_id: "545093"
+    tcgplayer_sku_id: "7851647"
+    finish: nf
+  - display_key: mtg-otc-214-nf
+    qty: 1
+    name: World Shaper
+    tcgplayer_product_id: "545073"
+    tcgplayer_sku_id: "7851047"
+    finish: nf
+  - display_key: mtg-otc-220-nf
+    qty: 1
+    name: Decimate
+    tcgplayer_product_id: "545091"
+    tcgplayer_sku_id: "7851587"
+    finish: nf
+  - display_key: mtg-otc-223-nf
+    qty: 1
+    name: Escape to the Wilds
+    tcgplayer_product_id: "545090"
+    tcgplayer_sku_id: "7851557"
+    finish: nf
+  - display_key: mtg-otc-229-nf
+    qty: 1
+    name: "Hazezon, Shaper of Sand"
+    tcgplayer_product_id: "545595"
+    tcgplayer_sku_id: "7868042"
+    finish: nf
+  - display_key: mtg-otc-230-nf
+    qty: 1
+    name: Heaven // Earth
+    tcgplayer_product_id: "545594"
+    tcgplayer_sku_id: "7868012"
+    finish: nf
+  - display_key: mtg-otc-236-nf
+    qty: 1
+    name: "Omnath, Locus of Rage"
+    tcgplayer_product_id: "545069"
+    tcgplayer_sku_id: "7850927"
+    finish: nf
+  - display_key: mtg-otc-245-nf
+    qty: 1
+    name: Thrilling Discovery
+    tcgplayer_product_id: "545094"
+    tcgplayer_sku_id: "7851677"
+    finish: nf
+  - display_key: mtg-otc-250-nf
+    qty: 1
+    name: Wreck and Rebuild
+    tcgplayer_product_id: "545095"
+    tcgplayer_sku_id: "7851707"
+    finish: nf
+  - display_key: mtg-otc-252-nf
+    qty: 1
+    name: Arcane Signet
+    tcgplayer_product_id: "545100"
+    tcgplayer_sku_id: "7851857"
+    finish: nf
+  - display_key: mtg-otc-255-nf
+    qty: 1
+    name: Chromatic Lantern
+    tcgplayer_product_id: "545096"
+    tcgplayer_sku_id: "7851737"
+    finish: nf
+  - display_key: mtg-otc-262-nf
+    qty: 1
+    name: Perennial Behemoth
+    tcgplayer_product_id: "545444"
+    tcgplayer_sku_id: "7861932"
+    finish: nf
+  - display_key: mtg-otc-263-nf
+    qty: 1
+    name: Perpetual Timepiece
+    tcgplayer_product_id: "545099"
+    tcgplayer_sku_id: "7851827"
+    finish: nf
+  - display_key: mtg-otc-266-nf
+    qty: 1
+    name: Scaretiller
+    tcgplayer_product_id: "545085"
+    tcgplayer_sku_id: "7851407"
+    finish: nf
+  - display_key: mtg-otc-267-nf
+    qty: 1
+    name: Sol Ring
+    tcgplayer_product_id: "545098"
+    tcgplayer_sku_id: "7851797"
+    finish: nf
+  - display_key: mtg-otc-268-nf
+    qty: 1
+    name: Swiftfoot Boots
+    tcgplayer_product_id: "545097"
+    tcgplayer_sku_id: "7851767"
+    finish: nf
+  - display_key: mtg-otc-280-nf
+    qty: 1
+    name: Command Tower
+    tcgplayer_product_id: "545058"
+    tcgplayer_sku_id: "7850597"
+    finish: nf
+  - display_key: mtg-otc-284-nf
+    qty: 1
+    name: Desert of the Fervent
+    tcgplayer_product_id: "545063"
+    tcgplayer_sku_id: "7850747"
+    finish: nf
+  - display_key: mtg-otc-285-nf
+    qty: 1
+    name: Desert of the Indomitable
+    tcgplayer_product_id: "545061"
+    tcgplayer_sku_id: "7850687"
+    finish: nf
+  - display_key: mtg-otc-286-nf
+    qty: 1
+    name: Desert of the True
+    tcgplayer_product_id: "545060"
+    tcgplayer_sku_id: "7850657"
+    finish: nf
+  - display_key: mtg-otc-291-nf
+    qty: 1
+    name: Dunes of the Dead
+    tcgplayer_product_id: "545064"
+    tcgplayer_sku_id: "7850777"
+    finish: nf
+  - display_key: mtg-otc-292-nf
+    qty: 1
+    name: Evolving Wilds
+    tcgplayer_product_id: "545057"
+    tcgplayer_sku_id: "7850567"
+    finish: nf
+  - display_key: mtg-otc-299-nf
+    qty: 1
+    name: Hashep Oasis
+    tcgplayer_product_id: "545066"
+    tcgplayer_sku_id: "7850837"
+    finish: nf
+  - display_key: mtg-otc-303-nf
+    qty: 1
+    name: Jungle Shrine
+    tcgplayer_product_id: "545062"
+    tcgplayer_sku_id: "7850717"
+    finish: nf
+  - display_key: mtg-otc-304-nf
+    qty: 1
+    name: Krosan Verge
+    tcgplayer_product_id: "545059"
+    tcgplayer_sku_id: "7850627"
+    finish: nf
+  - display_key: mtg-otc-309-nf
+    qty: 1
+    name: Painted Bluffs
+    tcgplayer_product_id: "545600"
+    tcgplayer_sku_id: "7868252"
+    finish: nf
+  - display_key: mtg-otc-311-nf
+    qty: 1
+    name: Ramunap Ruins
+    tcgplayer_product_id: "545067"
+    tcgplayer_sku_id: "7850867"
+    finish: nf
+  - display_key: mtg-otc-315-nf
+    qty: 1
+    name: Scattered Groves
+    tcgplayer_product_id: "545054"
+    tcgplayer_sku_id: "7850477"
+    finish: nf
+  - display_key: mtg-otc-316-nf
+    qty: 1
+    name: Scavenger Grounds
+    tcgplayer_product_id: "545052"
+    tcgplayer_sku_id: "7850417"
+    finish: nf
+  - display_key: mtg-otc-318-nf
+    qty: 1
+    name: Shefet Dunes
+    tcgplayer_product_id: "545065"
+    tcgplayer_sku_id: "7850807"
+    finish: nf
+  - display_key: mtg-otc-319-nf
+    qty: 1
+    name: Sheltered Thicket
+    tcgplayer_product_id: "545053"
+    tcgplayer_sku_id: "7850447"
+    finish: nf
+  - display_key: mtg-otc-326-nf
+    qty: 1
+    name: Sunscorched Divide
+    tcgplayer_product_id: "545055"
+    tcgplayer_sku_id: "7850507"
+    finish: nf
+  - display_key: mtg-otc-336-nf
+    qty: 1
+    name: Terramorphic Expanse
+    tcgplayer_product_id: "545056"
+    tcgplayer_sku_id: "7850537"
+    finish: nf
+  # â”€â”€ Non-foil â€” OTJ â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  - display_key: mtg-otj-6-nf
+    qty: 1
+    name: Bovine Intervention
+    tcgplayer_product_id: "544344"
+    tcgplayer_sku_id: "7823728"
+    finish: nf
+  - display_key: mtg-otj-26-nf
+    qty: 1
+    name: Requisition Raid
+    tcgplayer_product_id: "544454"
+    tcgplayer_sku_id: "7830044"
+    finish: nf
+  - display_key: mtg-otj-170-nf
+    qty: 1
+    name: Map the Frontier
+    tcgplayer_product_id: "544711"
+    tcgplayer_sku_id: "7841352"
+    finish: nf
+  - display_key: mtg-otj-251-nf
+    qty: 1
+    name: Abraded Bluffs
+    tcgplayer_product_id: "544226"
+    tcgplayer_sku_id: "7816700"
+    finish: nf
+  - display_key: mtg-otj-253-nf
+    qty: 1
+    name: Bristling Backwoods
+    tcgplayer_product_id: "544228"
+    tcgplayer_sku_id: "7816860"
+    finish: nf
+  - display_key: mtg-otj-254-nf
+    qty: 1
+    name: Conduit Pylons
+    tcgplayer_product_id: "544694"
+    tcgplayer_sku_id: "7840112"
+    finish: nf
+  - display_key: mtg-otj-255-nf
+    qty: 1
+    name: Creosote Heath
+    tcgplayer_product_id: "544231"
+    tcgplayer_sku_id: "7817100"
+    finish: nf
+  - display_key: mtg-otj-262-nf
+    qty: 1
+    name: Mirage Mesa
+    tcgplayer_product_id: "544641"
+    tcgplayer_sku_id: "7836150"
+    finish: nf
+  - display_key: mtg-otj-277-nf
+    qty: 3
+    name: Plains
+    tcgplayer_product_id: "545654"
+    tcgplayer_sku_id: "7870272"
+    finish: nf
+  - display_key: mtg-otj-278-nf
+    qty: 3
+    name: Plains
+    tcgplayer_product_id: "545655"
+    tcgplayer_sku_id: "7870352"
+    finish: nf
+  - display_key: mtg-otj-283-nf
+    qty: 2
+    name: Mountain
+    tcgplayer_product_id: "545652"
+    tcgplayer_sku_id: "7870112"
+    finish: nf
+  - display_key: mtg-otj-284-nf
+    qty: 2
+    name: Mountain
+    tcgplayer_product_id: "545653"
+    tcgplayer_sku_id: "7870192"
+    finish: nf
+  - display_key: mtg-otj-285-nf
+    qty: 4
+    name: Forest
+    tcgplayer_product_id: "545649"
+    tcgplayer_sku_id: "7869872"
+    finish: nf
+  - display_key: mtg-otj-286-nf
+    qty: 3
+    name: Forest
+    tcgplayer_product_id: "545648"
+    tcgplayer_sku_id: "7869792"
+    finish: nf

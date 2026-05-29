@@ -1,0 +1,613 @@
+﻿key: who-commander-masters-of-evil
+name: Masters of Evil
+game: mtg
+set_code: who
+tcg_set_name: "Universes Beyond: Doctor Who"
+product_display_key: mtg-who-commander-masters-of-evil
+product_tcgplayer_id: "496070"
+image: /img/decks/who-commander-masters-of-evil.jpg
+channels: [tcgplayer, manapool]
+components:
+  # Generated from masters-of-evil_cards_2026-05-24.csv by scripts/import-deck-csv.js
+  # â”€â”€ Foil â€” WHO â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  - display_key: mtg-who-1-f
+    qty: 1
+    name: "Davros, Dalek Creator"
+    tcgplayer_product_id: "509585"
+    tcgplayer_sku_id: "7334346"
+    finish: f
+  - display_key: mtg-who-8-f
+    qty: 1
+    name: Missy
+    tcgplayer_product_id: "509576"
+    tcgplayer_sku_id: "7334121"
+    finish: f
+  # â”€â”€ Non-foil â€” WHO â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  - display_key: mtg-who-36-nf
+    qty: 1
+    name: Auton Soldier
+    tcgplayer_product_id: "519779"
+    tcgplayer_sku_id: "7467168"
+    finish: nf
+  - display_key: mtg-who-38-nf
+    qty: 1
+    name: Cyber Conversion
+    tcgplayer_product_id: "520020"
+    tcgplayer_sku_id: "7469887"
+    finish: nf
+  - display_key: mtg-who-40-nf
+    qty: 1
+    name: "Don't Blink"
+    tcgplayer_product_id: "518801"
+    tcgplayer_sku_id: "7452263"
+    finish: nf
+  - display_key: mtg-who-45-nf
+    qty: 1
+    name: The Flood of Mars
+    tcgplayer_product_id: "520013"
+    tcgplayer_sku_id: "7469782"
+    finish: nf
+  - display_key: mtg-who-46-nf
+    qty: 1
+    name: Hunted by The Family
+    tcgplayer_product_id: "519747"
+    tcgplayer_sku_id: "7466613"
+    finish: nf
+  - display_key: mtg-who-53-nf
+    qty: 1
+    name: Renegade Silent
+    tcgplayer_product_id: "519759"
+    tcgplayer_sku_id: "7466973"
+    finish: nf
+  - display_key: mtg-who-63-nf
+    qty: 1
+    name: Zygon Infiltrator
+    tcgplayer_product_id: "519741"
+    tcgplayer_sku_id: "7466433"
+    finish: nf
+  - display_key: mtg-who-64-nf
+    qty: 1
+    name: Dalek Drone
+    tcgplayer_product_id: "519742"
+    tcgplayer_sku_id: "7466463"
+    finish: nf
+  - display_key: mtg-who-65-nf
+    qty: 1
+    name: Dalek Squadron
+    tcgplayer_product_id: "519740"
+    tcgplayer_sku_id: "7466403"
+    finish: nf
+  - display_key: mtg-who-66-nf
+    qty: 1
+    name: Death in Heaven
+    tcgplayer_product_id: "509587"
+    tcgplayer_sku_id: "7334396"
+    finish: nf
+  - display_key: mtg-who-67-nf
+    qty: 1
+    name: Doomsday Confluence
+    tcgplayer_product_id: "519484"
+    tcgplayer_sku_id: "7462608"
+    finish: nf
+  - display_key: mtg-who-68-nf
+    qty: 1
+    name: "Exterminate!"
+    tcgplayer_product_id: "507040"
+    tcgplayer_sku_id: "7296871"
+    finish: nf
+  - display_key: mtg-who-69-nf
+    qty: 1
+    name: Genesis of the Daleks
+    tcgplayer_product_id: "518808"
+    tcgplayer_sku_id: "7452403"
+    finish: nf
+  - display_key: mtg-who-70-nf
+    qty: 1
+    name: This Is How It Ends
+    tcgplayer_product_id: "519910"
+    tcgplayer_sku_id: "7468505"
+    finish: nf
+  - display_key: mtg-who-71-nf
+    qty: 1
+    name: Time Reaper
+    tcgplayer_product_id: "519743"
+    tcgplayer_sku_id: "7466493"
+    finish: nf
+  - display_key: mtg-who-72-nf
+    qty: 1
+    name: "The Toymaker's Trap"
+    tcgplayer_product_id: "519872"
+    tcgplayer_sku_id: "7468045"
+    finish: nf
+  - display_key: mtg-who-73-nf
+    qty: 1
+    name: Vashta Nerada
+    tcgplayer_product_id: "519753"
+    tcgplayer_sku_id: "7466793"
+    finish: nf
+  - display_key: mtg-who-74-nf
+    qty: 1
+    name: Vislor Turlough
+    tcgplayer_product_id: "519736"
+    tcgplayer_sku_id: "7466308"
+    finish: nf
+  - display_key: mtg-who-79-nf
+    qty: 1
+    name: Day of the Moon
+    tcgplayer_product_id: "518820"
+    tcgplayer_sku_id: "7452553"
+    finish: nf
+  - display_key: mtg-who-81-nf
+    qty: 1
+    name: Delete
+    tcgplayer_product_id: "519760"
+    tcgplayer_sku_id: "7467003"
+    finish: nf
+  - display_key: mtg-who-84-nf
+    qty: 1
+    name: Ensnared by the Mara
+    tcgplayer_product_id: "519746"
+    tcgplayer_sku_id: "7466583"
+    finish: nf
+  - display_key: mtg-who-96-nf
+    qty: 1
+    name: Sontaran General
+    tcgplayer_product_id: "519763"
+    tcgplayer_sku_id: "7467093"
+    finish: nf
+  - display_key: mtg-who-97-nf
+    qty: 1
+    name: The Sound of Drums
+    tcgplayer_product_id: "519756"
+    tcgplayer_sku_id: "7466883"
+    finish: nf
+  - display_key: mtg-who-113-nf
+    qty: 1
+    name: "Ashad, the Lone Cyberman"
+    tcgplayer_product_id: "519749"
+    tcgplayer_sku_id: "7466673"
+    finish: nf
+  - display_key: mtg-who-114-nf
+    qty: 1
+    name: "The Beast, Deathless Prince"
+    tcgplayer_product_id: "519963"
+    tcgplayer_sku_id: "7469245"
+    finish: nf
+  - display_key: mtg-who-116-nf
+    qty: 1
+    name: Blink
+    tcgplayer_product_id: "518800"
+    tcgplayer_sku_id: "7452243"
+    finish: nf
+  - display_key: mtg-who-117-nf
+    qty: 1
+    name: Cult of Skaro
+    tcgplayer_product_id: "519865"
+    tcgplayer_sku_id: "7467950"
+    finish: nf
+  - display_key: mtg-who-119-nf
+    qty: 1
+    name: The Cyber-Controller
+    tcgplayer_product_id: "519920"
+    tcgplayer_sku_id: "7468625"
+    finish: nf
+  - display_key: mtg-who-120-nf
+    qty: 1
+    name: The Dalek Emperor
+    tcgplayer_product_id: "518921"
+    tcgplayer_sku_id: "7454281"
+    finish: nf
+  - display_key: mtg-who-133-nf
+    qty: 1
+    name: "Great Intelligence's Plan"
+    tcgplayer_product_id: "519761"
+    tcgplayer_sku_id: "7467033"
+    finish: nf
+  - display_key: mtg-who-143-nf
+    qty: 1
+    name: "The Master, Formed Anew"
+    tcgplayer_product_id: "519918"
+    tcgplayer_sku_id: "7468585"
+    finish: nf
+  - display_key: mtg-who-144-nf
+    qty: 1
+    name: "The Master, Gallifrey's End"
+    tcgplayer_product_id: "519755"
+    tcgplayer_sku_id: "7466853"
+    finish: nf
+  - display_key: mtg-who-145-nf
+    qty: 1
+    name: "The Master, Mesmerist"
+    tcgplayer_product_id: "519757"
+    tcgplayer_sku_id: "7466913"
+    finish: nf
+  - display_key: mtg-who-146-nf
+    qty: 1
+    name: "The Master, Multiplied"
+    tcgplayer_product_id: "519758"
+    tcgplayer_sku_id: "7466943"
+    finish: nf
+  - display_key: mtg-who-149-nf
+    qty: 1
+    name: The Rani
+    tcgplayer_product_id: "519762"
+    tcgplayer_sku_id: "7467063"
+    finish: nf
+  - display_key: mtg-who-150-nf
+    qty: 1
+    name: "Rassilon, the War President"
+    tcgplayer_product_id: "519754"
+    tcgplayer_sku_id: "7466823"
+    finish: nf
+  - display_key: mtg-who-161-nf
+    qty: 1
+    name: Sycorax Commander
+    tcgplayer_product_id: "519485"
+    tcgplayer_sku_id: "7462638"
+    finish: nf
+  - display_key: mtg-who-165-nf
+    qty: 1
+    name: The Valeyard
+    tcgplayer_product_id: "509577"
+    tcgplayer_sku_id: "7334146"
+    finish: nf
+  - display_key: mtg-who-168-nf
+    qty: 1
+    name: Weeping Angel
+    tcgplayer_product_id: "514530"
+    tcgplayer_sku_id: "7419165"
+    finish: nf
+  - display_key: mtg-who-172-nf
+    qty: 1
+    name: Clockwork Droid
+    tcgplayer_product_id: "519483"
+    tcgplayer_sku_id: "7462578"
+    finish: nf
+  - display_key: mtg-who-174-nf
+    qty: 1
+    name: Cyberman Patrol
+    tcgplayer_product_id: "519738"
+    tcgplayer_sku_id: "7466343"
+    finish: nf
+  - display_key: mtg-who-175-nf
+    qty: 1
+    name: Cybermat
+    tcgplayer_product_id: "519745"
+    tcgplayer_sku_id: "7466553"
+    finish: nf
+  - display_key: mtg-who-176-nf
+    qty: 1
+    name: Cybermen Squadron
+    tcgplayer_product_id: "519739"
+    tcgplayer_sku_id: "7466373"
+    finish: nf
+  - display_key: mtg-who-177-nf
+    qty: 1
+    name: Cybership
+    tcgplayer_product_id: "519744"
+    tcgplayer_sku_id: "7466523"
+    finish: nf
+  - display_key: mtg-who-178-nf
+    qty: 1
+    name: Laser Screwdriver
+    tcgplayer_product_id: "519276"
+    tcgplayer_sku_id: "7459433"
+    finish: nf
+  - display_key: mtg-who-179-nf
+    qty: 1
+    name: Midnight Crusader Shuttle
+    tcgplayer_product_id: "519752"
+    tcgplayer_sku_id: "7466763"
+    finish: nf
+  - display_key: mtg-who-188-nf
+    qty: 1
+    name: Gallifrey Council Chamber
+    tcgplayer_product_id: "518914"
+    tcgplayer_sku_id: "7454031"
+    finish: nf
+  - display_key: mtg-who-189-nf
+    qty: 1
+    name: Ominous Cemetery
+    tcgplayer_product_id: "519143"
+    tcgplayer_sku_id: "7457193"
+    finish: nf
+  - display_key: mtg-who-198-nf
+    qty: 1
+    name: Island
+    tcgplayer_product_id: "519085"
+    tcgplayer_sku_id: "7456417"
+    finish: nf
+  - display_key: mtg-who-199-nf
+    qty: 1
+    name: Island
+    tcgplayer_product_id: "496080"
+    tcgplayer_sku_id: "7151341"
+    finish: nf
+  - display_key: mtg-who-200-nf
+    qty: 1
+    name: Swamp
+    tcgplayer_product_id: "519097"
+    tcgplayer_sku_id: "7456617"
+    finish: nf
+  - display_key: mtg-who-201-nf
+    qty: 1
+    name: Swamp
+    tcgplayer_product_id: "496079"
+    tcgplayer_sku_id: "7151291"
+    finish: nf
+  - display_key: mtg-who-202-nf
+    qty: 1
+    name: Mountain
+    tcgplayer_product_id: "518934"
+    tcgplayer_sku_id: "7454511"
+    finish: nf
+  - display_key: mtg-who-203-nf
+    qty: 1
+    name: Mountain
+    tcgplayer_product_id: "496082"
+    tcgplayer_sku_id: "7151441"
+    finish: nf
+  - display_key: mtg-who-219-nf
+    qty: 1
+    name: Propaganda
+    tcgplayer_product_id: "519750"
+    tcgplayer_sku_id: "7466703"
+    finish: nf
+  - display_key: mtg-who-221-nf
+    qty: 1
+    name: Feed the Swarm
+    tcgplayer_product_id: "519854"
+    tcgplayer_sku_id: "7467700"
+    finish: nf
+  - display_key: mtg-who-222-nf
+    qty: 1
+    name: Snuff Out
+    tcgplayer_product_id: "519996"
+    tcgplayer_sku_id: "7469567"
+    finish: nf
+  - display_key: mtg-who-223-nf
+    qty: 1
+    name: Wound Reflection
+    tcgplayer_product_id: "519748"
+    tcgplayer_sku_id: "7466643"
+    finish: nf
+  - display_key: mtg-who-224-nf
+    qty: 1
+    name: Blasphemous Act
+    tcgplayer_product_id: "519751"
+    tcgplayer_sku_id: "7466733"
+    finish: nf
+  - display_key: mtg-who-239-nf
+    qty: 1
+    name: Arcane Signet
+    tcgplayer_product_id: "519216"
+    tcgplayer_sku_id: "7457903"
+    finish: nf
+  - display_key: mtg-who-240-nf
+    qty: 1
+    name: "Commander's Sphere"
+    tcgplayer_product_id: "519863"
+    tcgplayer_sku_id: "7467900"
+    finish: nf
+  - display_key: mtg-who-243-nf
+    qty: 1
+    name: Lightning Greaves
+    tcgplayer_product_id: "519257"
+    tcgplayer_sku_id: "7459003"
+    finish: nf
+  - display_key: mtg-who-244-nf
+    qty: 1
+    name: Mind Stone
+    tcgplayer_product_id: "519238"
+    tcgplayer_sku_id: "7458483"
+    finish: nf
+  - display_key: mtg-who-245-nf
+    qty: 1
+    name: Sol Ring
+    tcgplayer_product_id: "519305"
+    tcgplayer_sku_id: "7460043"
+    finish: nf
+  - display_key: mtg-who-246-nf
+    qty: 1
+    name: Solemn Simulacrum
+    tcgplayer_product_id: "520002"
+    tcgplayer_sku_id: "7469652"
+    finish: nf
+  - display_key: mtg-who-250-nf
+    qty: 1
+    name: Talisman of Dominance
+    tcgplayer_product_id: "519303"
+    tcgplayer_sku_id: "7460003"
+    finish: nf
+  - display_key: mtg-who-252-nf
+    qty: 1
+    name: Talisman of Indulgence
+    tcgplayer_product_id: "519236"
+    tcgplayer_sku_id: "7458443"
+    finish: nf
+  - display_key: mtg-who-255-nf
+    qty: 1
+    name: Thought Vessel
+    tcgplayer_product_id: "519283"
+    tcgplayer_sku_id: "7459573"
+    finish: nf
+  - display_key: mtg-who-256-nf
+    qty: 1
+    name: "Wayfarer's Bauble"
+    tcgplayer_product_id: "519946"
+    tcgplayer_sku_id: "7468990"
+    finish: nf
+  - display_key: mtg-who-259-nf
+    qty: 1
+    name: Canyon Slough
+    tcgplayer_product_id: "519892"
+    tcgplayer_sku_id: "7468330"
+    finish: nf
+  - display_key: mtg-who-261-nf
+    qty: 1
+    name: Choked Estuary
+    tcgplayer_product_id: "519862"
+    tcgplayer_sku_id: "7467870"
+    finish: nf
+  - display_key: mtg-who-266-nf
+    qty: 1
+    name: Command Tower
+    tcgplayer_product_id: "519326"
+    tcgplayer_sku_id: "7460503"
+    finish: nf
+  - display_key: mtg-who-267-nf
+    qty: 1
+    name: Creeping Tar Pit
+    tcgplayer_product_id: "520024"
+    tcgplayer_sku_id: "7469962"
+    finish: nf
+  - display_key: mtg-who-268-nf
+    qty: 1
+    name: Crumbling Necropolis
+    tcgplayer_product_id: "519923"
+    tcgplayer_sku_id: "7468715"
+    finish: nf
+  - display_key: mtg-who-269-nf
+    qty: 1
+    name: Darkwater Catacombs
+    tcgplayer_product_id: "519922"
+    tcgplayer_sku_id: "7468685"
+    finish: nf
+  - display_key: mtg-who-272-nf
+    qty: 1
+    name: Dragonskull Summit
+    tcgplayer_product_id: "519933"
+    tcgplayer_sku_id: "7468860"
+    finish: nf
+  - display_key: mtg-who-274-nf
+    qty: 1
+    name: Drowned Catacomb
+    tcgplayer_product_id: "519889"
+    tcgplayer_sku_id: "7468290"
+    finish: nf
+  - display_key: mtg-who-276-nf
+    qty: 1
+    name: Exotic Orchard
+    tcgplayer_product_id: "519200"
+    tcgplayer_sku_id: "7457705"
+    finish: nf
+  - display_key: mtg-who-277-nf
+    qty: 1
+    name: Fetid Pools
+    tcgplayer_product_id: "519885"
+    tcgplayer_sku_id: "7468230"
+    finish: nf
+  - display_key: mtg-who-278-nf
+    qty: 1
+    name: Fiery Islet
+    tcgplayer_product_id: "519239"
+    tcgplayer_sku_id: "7458513"
+    finish: nf
+  - display_key: mtg-who-279-nf
+    qty: 1
+    name: Foreboding Ruins
+    tcgplayer_product_id: "519951"
+    tcgplayer_sku_id: "7469085"
+    finish: nf
+  - display_key: mtg-who-282-nf
+    qty: 1
+    name: Frostboil Snarl
+    tcgplayer_product_id: "519242"
+    tcgplayer_sku_id: "7458593"
+    finish: nf
+  - display_key: mtg-who-286-nf
+    qty: 1
+    name: Haunted Ridge
+    tcgplayer_product_id: "519906"
+    tcgplayer_sku_id: "7468460"
+    finish: nf
+  - display_key: mtg-who-289-nf
+    qty: 1
+    name: Lavaclaw Reaches
+    tcgplayer_product_id: "519857"
+    tcgplayer_sku_id: "7467785"
+    finish: nf
+  - display_key: mtg-who-293-nf
+    qty: 1
+    name: Path of Ancestry
+    tcgplayer_product_id: "519251"
+    tcgplayer_sku_id: "7458823"
+    finish: nf
+  - display_key: mtg-who-296-nf
+    qty: 1
+    name: Reliquary Tower
+    tcgplayer_product_id: "519530"
+    tcgplayer_sku_id: "7463703"
+    finish: nf
+  - display_key: mtg-who-297-nf
+    qty: 1
+    name: River of Tears
+    tcgplayer_product_id: "519883"
+    tcgplayer_sku_id: "7468195"
+    finish: nf
+  - display_key: mtg-who-303-nf
+    qty: 1
+    name: Shadowblood Ridge
+    tcgplayer_product_id: "519877"
+    tcgplayer_sku_id: "7468120"
+    finish: nf
+  - display_key: mtg-who-305-nf
+    qty: 1
+    name: Shipwreck Marsh
+    tcgplayer_product_id: "519921"
+    tcgplayer_sku_id: "7468655"
+    finish: nf
+  - display_key: mtg-who-307-nf
+    qty: 1
+    name: Smoldering Marsh
+    tcgplayer_product_id: "519856"
+    tcgplayer_sku_id: "7467745"
+    finish: nf
+  - display_key: mtg-who-308-nf
+    qty: 1
+    name: Stormcarved Coast
+    tcgplayer_product_id: "519301"
+    tcgplayer_sku_id: "7459963"
+    finish: nf
+  - display_key: mtg-who-312-nf
+    qty: 1
+    name: Sunken Hollow
+    tcgplayer_product_id: "519932"
+    tcgplayer_sku_id: "7468830"
+    finish: nf
+  - display_key: mtg-who-314-nf
+    qty: 1
+    name: Temple of Deceit
+    tcgplayer_product_id: "519845"
+    tcgplayer_sku_id: "7467610"
+    finish: nf
+  - display_key: mtg-who-316-nf
+    qty: 1
+    name: Temple of Epiphany
+    tcgplayer_product_id: "519223"
+    tcgplayer_sku_id: "7458103"
+    finish: nf
+  - display_key: mtg-who-317-nf
+    qty: 1
+    name: Temple of Malice
+    tcgplayer_product_id: "519992"
+    tcgplayer_sku_id: "7469502"
+    finish: nf
+  - display_key: mtg-who-320-nf
+    qty: 1
+    name: Temple of the False God
+    tcgplayer_product_id: "519241"
+    tcgplayer_sku_id: "7458563"
+    finish: nf
+  - display_key: mtg-who-322-nf
+    qty: 1
+    name: Terramorphic Expanse
+    tcgplayer_product_id: "519947"
+    tcgplayer_sku_id: "7469020"
+    finish: nf
+  - display_key: mtg-who-328-nf
+    qty: 1
+    name: Thriving Moor
+    tcgplayer_product_id: "520015"
+    tcgplayer_sku_id: "7469817"
+    finish: nf

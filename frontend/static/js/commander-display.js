@@ -19,15 +19,63 @@
 
   const ebaySetName = report.name.replace(/\s+commander.*$/i, "").trim();
 
+  // ── LocalStorage keys ──────────────────────────────────────────────────────
+  const LS = {
+    plat:          "ev_plat",
+    ebayMode:      "ev_ebay_mode",
+    sort:          "ev_sort",
+    skipRarities:  "ev_skip_rarities",
+    tcgOffsetType: "ev_tcg_offset_type",
+    tcgOffsetVal:  "ev_tcg_offset_val",
+    sift:          "ev_sift_threshold",
+  };
+
+  function lsGet(k, def) { try { return localStorage.getItem(k) ?? def; } catch { return def; } }
+  function lsSet(k, v)   { try { localStorage.setItem(k, String(v)); } catch {} }
+  function lsGetJSON(k, def) { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : def; } catch { return def; } }
+  function lsSetJSON(k, v)   { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} }
+
   // ── State ──────────────────────────────────────────────────────────────────
-  // Start all decks collapsed.
-  let activePlat    = "tcgplayer";
-  let ebayMode      = "freeship";
-  let csvSort       = "name";
-  const skipRarities  = new Set();
+  let activePlat   = lsGet(LS.plat, "tcgplayer");
+  let ebayMode     = lsGet(LS.ebayMode, "freeship");
+  let csvSort      = lsGet(LS.sort, "name");
+  const skipRarities  = new Set(lsGetJSON(LS.skipRarities, []));
   const userExcluded  = new Map();
   const userIncluded  = new Map();
   const collapsedDecks = new Set();
+
+  // ── Apply saved settings to DOM ────────────────────────────────────────────
+  function applySavedSettings() {
+    // Platform
+    document.querySelectorAll("#platform-toggle .plat-btn").forEach(b =>
+      b.classList.toggle("active", b.dataset.plat === activePlat));
+
+    // Sort
+    document.querySelectorAll("#sort-toggle .plat-btn").forEach(b =>
+      b.classList.toggle("active", b.dataset.sort === csvSort));
+
+    // Rarity skip buttons
+    document.querySelectorAll(".rarity-skip-btn").forEach(b =>
+      b.classList.toggle("active", skipRarities.has(b.dataset.rarity)));
+
+    // TCG offset
+    const savedType = lsGet(LS.tcgOffsetType, "pct");
+    const savedVal  = lsGet(LS.tcgOffsetVal, "0");
+    const $type = document.getElementById("tcg-offset-type");
+    const $val  = document.getElementById("tcg-offset-value");
+    if ($type) $type.value = savedType;
+    if ($val)  $val.value  = savedVal;
+
+    // Sift threshold
+    const $sift = document.getElementById("sift-threshold");
+    if ($sift) $sift.value = lsGet(LS.sift, "0.25");
+
+    // eBay mode
+    document.querySelectorAll(".ebay-mode-btn").forEach(b =>
+      b.classList.toggle("active", b.dataset.mode === ebayMode));
+
+    updateStrategyPanel();
+  }
 
   // ── Settings event handlers ───────────────────────────────────────────────
 
@@ -35,6 +83,7 @@
   document.querySelectorAll("#platform-toggle .plat-btn").forEach(btn => {
     btn.addEventListener("click", () => {
       activePlat = btn.dataset.plat;
+      lsSet(LS.plat, activePlat);
       document.querySelectorAll("#platform-toggle .plat-btn")
         .forEach(b => b.classList.toggle("active", b === btn));
       updateStrategyPanel();
@@ -43,13 +92,20 @@
   });
 
   // TCGPlayer offset inputs
-  document.getElementById("tcg-offset-type").addEventListener("change", renderDecks);
-  document.getElementById("tcg-offset-value").addEventListener("input", renderDecks);
+  document.getElementById("tcg-offset-type").addEventListener("change", function() {
+    lsSet(LS.tcgOffsetType, this.value);
+    renderDecks();
+  });
+  document.getElementById("tcg-offset-value").addEventListener("input", function() {
+    lsSet(LS.tcgOffsetVal, this.value);
+    renderDecks();
+  });
 
   // eBay mode toggle
   document.querySelectorAll("#ebay-mode-toggle .plat-btn").forEach(btn => {
     btn.addEventListener("click", () => {
       ebayMode = btn.dataset.mode;
+      lsSet(LS.ebayMode, ebayMode);
       document.querySelectorAll("#ebay-mode-toggle .plat-btn")
         .forEach(b => b.classList.toggle("active", b === btn));
       renderDecks();
@@ -60,6 +116,7 @@
   document.querySelectorAll("#sort-toggle .plat-btn").forEach(btn => {
     btn.addEventListener("click", () => {
       csvSort = btn.dataset.sort;
+      lsSet(LS.sort, csvSort);
       document.querySelectorAll("#sort-toggle .plat-btn")
         .forEach(b => b.classList.toggle("active", b === btn));
       renderDecks();
@@ -72,7 +129,13 @@
       btn.classList.toggle("active");
       if (btn.classList.contains("active")) skipRarities.add(btn.dataset.rarity);
       else skipRarities.delete(btn.dataset.rarity);
+      lsSetJSON(LS.skipRarities, [...skipRarities]);
     });
+  });
+
+  // Sift threshold
+  document.getElementById("sift-threshold").addEventListener("input", function() {
+    lsSet(LS.sift, this.value);
   });
 
   // Case cost
@@ -83,220 +146,13 @@
     document.getElementById("strategy-ebay").classList.toggle("hidden", activePlat !== "ebay");
   }
 
-  // ── Scan panel ─────────────────────────────────────────────────────────────
-  const scanImageMap = new Map();
-  const scanModal    = document.getElementById("scan-modal");
-  const scanDropzone = document.getElementById("scan-dropzone");
-  const scanInput    = document.getElementById("scan-input");
-  const scanProgress = document.getElementById("scan-progress");
-  const scanBar      = document.getElementById("scan-bar");
-  const scanStatus   = document.getElementById("scan-status");
-  const scanResults  = document.getElementById("scan-results");
-  const scanFooter   = document.getElementById("scan-footer");
-  const scanSummary  = document.getElementById("scan-summary");
-
-  const openScanModal  = () => scanModal.classList.remove("hidden");
-  const closeScanModal = () => scanModal.classList.add("hidden");
-
-  document.getElementById("btn-upload-scans").addEventListener("click", openScanModal);
-  document.getElementById("scan-close").addEventListener("click", closeScanModal);
-  document.getElementById("scan-done").addEventListener("click", closeScanModal);
-  scanModal.addEventListener("click", e => { if (e.target === scanModal) closeScanModal(); });
-  scanDropzone.addEventListener("click", () => scanInput.click());
-
-  let confirmedHidden = false;
-  document.getElementById("scan-toggle-confirmed").addEventListener("click", function () {
-    confirmedHidden = !confirmedHidden;
-    this.textContent = confirmedHidden ? "Show All" : "Hide Confirmed";
-    this.classList.toggle("active", confirmedHidden);
-    scanResults.querySelectorAll(".scan-card.matched").forEach(el => {
-      el.style.display = confirmedHidden ? "none" : "";
-    });
-  });
-  document.getElementById("scan-browse").addEventListener("click", () => scanInput.click());
-  scanInput.addEventListener("change", () => processScans([...scanInput.files]));
-  scanDropzone.addEventListener("dragover", e => { e.preventDefault(); scanDropzone.classList.add("drag-over"); });
-  scanDropzone.addEventListener("dragleave", () => scanDropzone.classList.remove("drag-over"));
-  scanDropzone.addEventListener("drop", e => {
-    e.preventDefault();
-    scanDropzone.classList.remove("drag-over");
-    processScans([...e.dataTransfer.files]);
-  });
-
-  function deriveRestrictSet(name) {
-    const m = name.match(/^(.+?)\s+Commander(?:\s+(?:Case|Display|Box|Set))?$/i);
-    return m ? `Commander: ${m[1].trim()}` : "";
-  }
-  const scanRestrictSet = deriveRestrictSet(report.name);
-
-  // Flat map of all cards in the display: product_id → {name, finish}
-  const displayCardMap = new Map();
-  for (const d of report.decks || []) {
-    for (const li of d.line_items || []) {
-      if (li.tcgplayer_product_id) {
-        displayCardMap.set(String(li.tcgplayer_product_id), {
-          name:   li.name || li.display_key,
-          finish: li.finish === "f" ? "Foil" : "Non-Foil",
-          id:     String(li.tcgplayer_product_id),
-        });
-      }
-    }
-  }
-
-  // Card picker overlay
-  const picker = document.createElement("div");
-  picker.className = "card-picker hidden";
-  picker.innerHTML = `
-    <div class="card-picker-box">
-      <div class="card-picker-header">
-        <span>Select card</span>
-        <button class="scan-close" id="picker-close">✕</button>
-      </div>
-      <div class="card-picker-body">
-        <div class="card-picker-preview"><img id="picker-front" alt="front scan"></div>
-        <div class="card-picker-search-col">
-          <input class="card-picker-input" id="picker-input" placeholder="Search card name…" autocomplete="off">
-          <div class="card-picker-list" id="picker-list"></div>
-        </div>
-      </div>
-    </div>`;
-  document.body.appendChild(picker);
-
-  let pickerCallback = null;
-  document.getElementById("picker-close").addEventListener("click", () => picker.classList.add("hidden"));
-  picker.addEventListener("click", e => { if (e.target === picker) picker.classList.add("hidden"); });
-
-  const pickerInput = document.getElementById("picker-input");
-  const pickerList  = document.getElementById("picker-list");
-
-  function renderPickerList(query) {
-    const q = query.toLowerCase();
-    const cards = [...displayCardMap.values()]
-      .filter(c => !q || c.name.toLowerCase().includes(q))
-      .sort((a, b) => a.name.localeCompare(b.name));
-    pickerList.innerHTML = cards.map(c =>
-      `<div class="picker-item" data-id="${c.id}">${c.name} <span class="picker-finish">${c.finish}</span></div>`
-    ).join("");
-    pickerList.querySelectorAll(".picker-item").forEach(el => {
-      el.addEventListener("click", () => {
-        picker.classList.add("hidden");
-        pickerCallback?.(el.dataset.id);
-      });
-    });
-  }
-  pickerInput.addEventListener("input", () => renderPickerList(pickerInput.value));
-
-  function openCardPicker(cardEl, frontURL, backURL) {
-    document.getElementById("picker-front").src = frontURL || "";
-    pickerInput.value = "";
-    renderPickerList("");
-    picker.classList.remove("hidden");
-    pickerInput.focus();
-    pickerCallback = (productId) => {
-      const info = displayCardMap.get(productId);
-      scanImageMap.set(productId, { front: frontURL, back: backURL });
-      cardEl.className = "scan-card matched";
-      cardEl.querySelector(".scan-card-name").textContent = info?.name || `ID ${productId}`;
-      cardEl.querySelector(".scan-card-meta").textContent = "manual match";
-      const btn = cardEl.querySelector(".scan-pick-btn");
-      if (btn) btn.remove();
-    };
-  }
-
-  async function processScans(files) {
-    if (!files.length) return;
-    files.sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true }));
-    const pairs = [];
-    for (let i = 0; i < files.length; i += 2) pairs.push({ front: files[i], back: files[i + 1] || null });
-
-    scanProgress.classList.remove("hidden");
-    scanResults.innerHTML = "";
-    scanBar.style.width = "0%";
-
-    for (let i = 0; i < pairs.length; i++) {
-      const { front, back } = pairs[i];
-      scanStatus.textContent = `Processing ${i + 1} of ${pairs.length}…`;
-      scanBar.style.width = `${Math.round((i / pairs.length) * 100)}%`;
-
-      try {
-        const fd = new FormData();
-        fd.append("image", front);
-        if (scanRestrictSet) fd.append("restrict_set", scanRestrictSet);
-        const r1 = await fetch(EV.api("/v1/scan/identify"), { method: "POST", body: fd });
-        if (!r1.ok) throw new Error("identify failed");
-        const d1 = await r1.json();
-
-        const scanId    = d1.scan_id;
-        const frontURL  = d1.front_image || "";
-        const productId = d1.candidates?.[0]?.tcgplayer_product_id;
-        const confidence = d1.confidence || "none";
-
-        let backURL = "";
-        if (back && scanId) {
-          const fd2 = new FormData();
-          fd2.append("scan_id", scanId);
-          fd2.append("image", back);
-          const r2 = await fetch(EV.api("/v1/scan/back"), { method: "POST", body: fd2 });
-          if (r2.ok) { const d2 = await r2.json(); backURL = d2.back_image || ""; }
-        }
-
-        const cardName    = productId ? (displayCardMap.get(String(productId))?.name || `ID ${productId}`) : null;
-        const needsReview = d1.needs_review;
-        const ocrName     = d1.ocr_name || "";
-        const nameOK      = d1.name_confirmed;
-
-        if (productId) scanImageMap.set(String(productId), { front: frontURL, back: backURL });
-
-        const statusClass  = !productId ? "unmatched" : needsReview ? "needs-review" : "matched";
-        const reviewBadge  = needsReview ? `<div class="scan-card-warn">⚠️ OCR: "${ocrName}" — verify card</div>` : "";
-
-        const card = document.createElement("div");
-        card.className = `scan-card ${statusClass}`;
-        card.dataset.frontUrl = frontURL;
-        card.dataset.backUrl  = backURL;
-        card.innerHTML = `
-          <div class="scan-card-imgs">
-            ${frontURL ? `<img src="${frontURL}" alt="front">` : "<div style='width:50%'></div>"}
-            ${backURL  ? `<img src="${backURL}"  alt="back">`  : ""}
-          </div>
-          <div class="scan-card-name">${cardName || "Unmatched"}</div>
-          <div class="scan-card-meta">${confidence}${nameOK ? " ✓" : ""} · ${front.name}</div>
-          ${reviewBadge}
-          ${(!productId || needsReview) ? `<button class="scan-pick-btn" style="margin-top:0.3rem;width:100%">Select Card</button>` : ""}`;
-        if (!productId || needsReview) {
-          card.querySelector(".scan-pick-btn").addEventListener("click", () => openCardPicker(card, frontURL, backURL));
-        }
-        if (confirmedHidden && card.classList.contains("matched")) card.style.display = "none";
-        scanResults.appendChild(card);
-      } catch (e) {
-        const card = document.createElement("div");
-        card.className = "scan-card unmatched";
-        card.innerHTML = `<div class="scan-card-name">Error</div><div class="scan-card-meta">${front.name}: ${e.message}</div>`;
-        scanResults.appendChild(card);
-      }
-    }
-
-    scanBar.style.width = "100%";
-    scanStatus.textContent = `Done — ${scanImageMap.size} of ${pairs.length} cards matched.`;
-    scanSummary.textContent = `${scanImageMap.size} cards linked — download CSV to use scan images.`;
-    scanFooter.classList.remove("hidden");
-    document.querySelectorAll("tr[data-pid]").forEach(row => {
-      const pid = row.dataset.pid;
-      if (!pid) return;
-      const scanData = scanImageMap.get(pid);
-      const src = scanData?.front || scanData?.back;
-      if (!src) return;
-      const img = row.querySelector("td.img-cell img");
-      if (img) img.src = src;
-    });
-  }
+  applySavedSettings();
 
   // ── Pricing helpers ────────────────────────────────────────────────────────
 
   function tcgOffsetType()  { return document.getElementById("tcg-offset-type").value; }
   function tcgOffsetValue() { return parseFloat(document.getElementById("tcg-offset-value").value) || 0; }
 
-  // Listing price the user intends to put on the platform.
   function platformListingPrice(li) {
     if (!li.market_price_cents) return null;
     const market = li.market_price_cents;
@@ -313,7 +169,6 @@
     }
   }
 
-  // Net proceeds after platform fees.
   function platformNet(li) {
     if (!li.market_price_cents) return null;
     switch (activePlat) {
@@ -322,10 +177,8 @@
         if (tcgNet == null) return null;
         const ov = tcgOffsetValue();
         if (tcgOffsetType() === "pct") {
-          // Listing scales up → net scales proportionally.
           return Math.round(tcgNet * (1 + ov / 100));
         } else {
-          // Fixed $ offset: extra gross × fee-keep rate.
           const keepRate = tcgNet / li.market_price_cents;
           return Math.round(tcgNet + Math.round(ov * 100) * keepRate);
         }
@@ -336,19 +189,44 @@
     }
   }
 
+  function siftThresholdCents() {
+    const v = parseFloat(document.getElementById("sift-threshold")?.value || "0.25");
+    return Math.round((isNaN(v) ? 25 : v) * 100);
+  }
+
+  function ebayListingPrice(marketCents, mode) {
+    if (marketCents == null || marketCents < siftThresholdCents()) return null;
+    const ENVELOPE = 130;
+    if (mode === "freeship") return marketCents < 500 ? marketCents + ENVELOPE : marketCents;
+    if (marketCents < 100) return marketCents + ENVELOPE;
+    return marketCents;
+  }
+
   function computeDeckNet(d) {
     let total = 0;
     for (const li of d.line_items || []) {
       if (!li.included_in_ev) continue;
       const net = platformNet(li);
       if (net == null) continue;
-      total += net * li.qty; // li.qty already scaled by copies
+      total += net * li.qty;
     }
     return total;
   }
 
   function totalSinglesNet() {
     return (report.decks || []).reduce((s, d) => s + computeDeckNet(d), 0);
+  }
+
+  function caseCostCents() {
+    const v = parseFloat(document.getElementById("case-cost")?.value || "0");
+    return Math.round((isNaN(v) ? 0 : v) * 100);
+  }
+
+  function totalCardsPerCase() {
+    return (report.decks || []).reduce((s, d) => {
+      const copies = d.copies || 1;
+      return s + (d.line_items || []).reduce((ls, li) => ls + Math.round(li.qty / copies), 0);
+    }, 0);
   }
 
   // ── Sellthrough helpers ───────────────────────────────────────────────────
@@ -363,50 +241,76 @@
     return `<span class="st-badge" style="background:${color}" title="${escHtml(tip)}">${escHtml(st.target_tier)}</span>`;
   }
 
-  function sellthroughVelCell(st) {
-    if (!st || st.confidence === "unknown" || st.weekly_velocity == null) return `<td class="right muted">—</td>`;
-    const drain = st.net_drain_week;
-    const refill = st.refill_rate_week;
-    const tip = `Sold ${st.weekly_velocity}/wk · Relisted ${refill}/wk · Net drain ${drain}/wk`;
-    const cls = drain < st.weekly_velocity && drain > 0 ? "warn" : "";
-    return `<td class="right ${cls}" title="${escHtml(tip)}">${st.weekly_velocity}<span class="st-drain" title="${escHtml(tip)}">↓${drain}</span></td>`;
+  function sellthroughVelCell(st, price) {
+    // Show sales/day and refill/day from price row when available, fall back to sellthrough rec.
+    const soldWeek  = price?.units_sold_week   ?? st?.weekly_velocity ?? null;
+    const refillWk  = price?.add_back_units_week ?? st?.refill_rate_week ?? null;
+    if (soldWeek == null) return `<td class="right muted st-col" data-cents="0">—</td>`;
+
+    const soldDay   = (soldWeek / 7).toFixed(1);
+    const refillDay = refillWk != null ? (refillWk / 7).toFixed(1) : null;
+    const drain     = refillWk != null ? soldWeek - refillWk : null;
+    const tip = [
+      `Sold: ${soldWeek}/wk (${soldDay}/day)`,
+      refillWk != null ? `Relisted: ${refillWk}/wk (${refillDay}/day)` : null,
+      drain != null ? `Net drain: ${drain}/wk` : null,
+    ].filter(Boolean).join(" · ");
+    const cls = drain != null && drain < soldWeek && drain > 0 ? "warn" : "";
+    return `<td class="right st-col ${cls}" data-cents="${Math.round(soldWeek * 10)}" title="${escHtml(tip)}">${soldDay}/d${refillDay ? `<span class="st-drain">↺${refillDay}</span>` : ""}</td>`;
+  }
+
+  function listedCell(price) {
+    const cnt = price?.listing_count;
+    if (cnt == null) return `<td class="right st-col muted" data-cents="0">—</td>`;
+    return `<td class="right st-col" data-cents="${cnt}" title="${cnt} active listings">${cnt}</td>`;
+  }
+
+  // Days-to-sell at each depth tier, using price row depth fields.
+  function daysDepthCell(st, price) {
+    const soldWeek = price?.units_sold_week ?? st?.weekly_velocity ?? null;
+    const refillWk = price?.add_back_units_week ?? st?.refill_rate_week ?? null;
+    const velocity = soldWeek != null
+      ? (refillWk != null ? Math.max(soldWeek - refillWk, 0) : soldWeek)
+      : null;
+
+    if (!velocity || velocity === 0) return `<td class="right st-col muted">—</td>`;
+
+    const mkt  = price?.market_price_cents;
+    const d10  = price?.depth_to_plus_10_units;
+    const d25  = price?.depth_to_plus_25_units;
+    const d50  = price?.depth_to_plus_50_units;
+
+    const rows = [];
+    if (mkt)  rows.push({ label: "mkt",  days: 0,                      price: mkt });
+    if (d10 != null) rows.push({ label: "+10%", days: Math.round(d10  / velocity * 7), price: Math.round(mkt * 1.10) });
+    if (d25 != null) rows.push({ label: "+25%", days: Math.round(d25  / velocity * 7), price: Math.round(mkt * 1.25) });
+    if (d50 != null) rows.push({ label: "+50%", days: Math.round(d50  / velocity * 7), price: Math.round(mkt * 1.50) });
+
+    if (!rows.length) return `<td class="right st-col muted" data-cents="0">—</td>`;
+
+    const tip = rows.map(r =>
+      `${r.label}: ${EV.fmtUSD(r.price)} → ${r.days === 0 ? "instant" : r.days + "d"}`
+    ).join(" · ");
+
+    // Display the recommended tier from sellthrough rec, with full tooltip.
+    const rec   = st?.target_tier;
+    const wks   = st?.expected_weeks;
+    const label = wks != null && wks > 0
+      ? `${wks.toFixed(1)}wk`
+      : rows.length ? (rows[rows.length - 1].days > 0 ? rows[rows.length - 1].days + "d" : "instant") : "—";
+    const cls   = wks != null ? (wks <= 1 ? "pos" : wks <= 3 ? "" : "warn") : "";
+
+    const sortVal = wks != null ? Math.round(wks * 10) : 9999;
+    return `<td class="right st-col ${cls}" data-cents="${sortVal}" title="${escHtml(tip)}">${label}${sellthroughBadge(st)}</td>`;
   }
 
   function sellthroughRecCell(st, caseCostPerCard) {
     if (!st || st.confidence === "unknown" || !st.target_price_cents) return `<td class="right muted">—</td>`;
-    const recNet = Math.round(st.target_price_cents * 0.8715); // approx TCGPlayer L4 net
+    const recNet = Math.round(st.target_price_cents * 0.8715);
     const roi = caseCostPerCard > 0 ? ((recNet - caseCostPerCard) / caseCostPerCard * 100).toFixed(0) : null;
     const roiStr = roi != null ? ` <span class="st-roi ${+roi >= 0 ? "pos" : "neg"}">${+roi >= 0 ? "+" : ""}${roi}%</span>` : "";
-    return `<td class="right" title="${sellthroughTip(st)}">${EV.fmtUSD(st.target_price_cents)}${roiStr} ${sellthroughBadge(st)}</td>`;
-  }
-
-  function sellthroughWksCell(st) {
-    if (!st || st.confidence === "unknown" || st.expected_weeks == null || st.expected_weeks === 0) return `<td class="right muted">—</td>`;
-    const wks = st.expected_weeks.toFixed(1);
-    const cls = st.expected_weeks <= 1 ? "pos" : st.expected_weeks <= 3 ? "" : "warn";
-    return `<td class="right ${cls}" title="${sellthroughTip(st)}">${wks}wk</td>`;
-  }
-
-  function sellthroughTip(st) {
-    if (!st) return "";
-    return `Rec: ${st.target_tier} · ${st.depth_ahead_units} units ahead · ${st.weekly_velocity} sold/wk · ${st.net_drain_week} net drain/wk · exp ${st.expected_weeks?.toFixed(1)} wks`;
-  }
-
-  function totalCardsPerCase() {
-    return (report.decks || []).reduce((s, d) => {
-      const copies = d.copies || 1;
-      return s + (d.line_items || []).reduce((ls, li) => ls + Math.round(li.qty / copies), 0);
-    }, 0);
-  }
-
-  function caseCostCents() {
-    const v = parseFloat(document.getElementById("case-cost")?.value || "0");
-    return Math.round((isNaN(v) ? 0 : v) * 100);
-  }
-
-  function siftThresholdCents() {
-    const v = parseFloat(document.getElementById("sift-threshold")?.value || "0.25");
-    return Math.round((isNaN(v) ? 25 : v) * 100);
+    const tip = `Rec: ${st.target_tier} · ${st.depth_ahead_units} units ahead · ${st.weekly_velocity} sold/wk · exp ${st.expected_weeks?.toFixed(1)} wks`;
+    return `<td class="right" title="${escHtml(tip)}">${EV.fmtUSD(st.target_price_cents)}${roiStr} ${sellthroughBadge(st)}</td>`;
   }
 
   // ── Rendering ─────────────────────────────────────────────────────────────
@@ -431,8 +335,6 @@
     const paidLine  = caseCost ? `<div class="card-sub muted">Paid: ${EV.fmtUSD(caseCost)}</div>` : "";
     const pctOf     = (delta) => EV.fmtPct(caseCost ? delta / caseCost : null);
 
-    // When a case cost is entered, profit is the headline figure.
-    // Otherwise just show net proceeds.
     const sealedCard = caseCost
       ? `<div class="card ${EV.deltaClass(sealedDeltaCase)}">
            <label>Sell sealed today — profit</label>
@@ -474,7 +376,6 @@
 
     $grid.innerHTML = (report.decks || []).map(buildDeckCard).join("");
 
-    // Restore collapsed state after re-render.
     collapsedDecks.forEach(key => {
       const card = $grid.querySelector(`.deck-card[data-deck-key="${key}"]`);
       if (!card) return;
@@ -483,14 +384,12 @@
       if (btn) { btn.textContent = "▶ Cards"; btn.classList.add("collapsed"); }
     });
 
-    // Sort on column header click.
     $grid.querySelectorAll("table.cards").forEach(table => {
       table.querySelectorAll("th[data-sort]").forEach(th => {
         th.addEventListener("click", () => sortTable(table, +th.cellIndex, th.dataset.sort));
       });
     });
 
-    // EV toggle (include/exclude from CSV export).
     $grid.querySelectorAll(".ev-toggle").forEach(cell => {
       cell.addEventListener("click", () => {
         const pid = cell.dataset.pid;
@@ -550,7 +449,6 @@
   function buildSinglesPanel(d) {
     const copies = d.copies || 1;
     const platLabel = { tcgplayer: "TCG Net", manapool: "MP Net", ebay: "eBay Net" }[activePlat] || "Net";
-    const showListing = true; // always show export price preview
 
     const lines = (d.line_items || []).slice().sort((a, b) => {
       switch (csvSort) {
@@ -563,7 +461,7 @@
           const rb = rarityOrder[scryfallRarity(sb.rarity)] ?? 9;
           return ra - rb || (a.name||"").localeCompare(b.name||"");
         }
-        default:           return (a.name||"").localeCompare(b.name||"");
+        default: return (a.name||"").localeCompare(b.name||"");
       }
     });
 
@@ -574,61 +472,55 @@
     const rows = lines.map(li => {
       const qtyPerCopy = Math.round(li.qty / copies);
       const net        = platformNet(li);
-      const listing    = showListing ? platformListingPrice(li) : null;
+      const listing    = platformListingPrice(li);
       const caseTotal  = net != null ? net * li.qty : null;
       const pid        = String(li.tcgplayer_product_id || "");
-      const scanData   = pid ? scanImageMap.get(pid) : null;
-      const scanSrc    = scanData?.front || scanData?.back || "";
       const stockSrc   = pid ? `${TCG_IMG_BASE}/${pid}.jpg` : "";
-      const imgSrc     = scanSrc || stockSrc;
       const sf         = scryfallCache.get(li.display_key) || {};
       const rarity     = scryfallRarity(sf.rarity);
       const setCode    = (sf.set || "").toUpperCase();
       const collNum    = sf.collector_number || "";
+      const price      = li.price || {};
 
       const forceExclude = userExcluded.get(pid);
       const forceInclude = userIncluded.get(pid);
-      const autoPrice    = platformListingPrice(li);
-      const exportOn     = forceExclude ? false : forceInclude ? true : autoPrice != null;
+      const exportOn     = forceExclude ? false : forceInclude ? true : listing != null;
       const evIcon  = exportOn ? "✓" : "—";
       const evClass = forceExclude ? "ev-override-off" : forceInclude ? "ev-override-on" : "";
 
-      const listingCell = showListing ? `<td class="right">${EV.fmtUSD(listing)}</td>` : "";
-
       const st = li.sellthrough;
 
+      // Low listed: lowest TCGPlayer Direct price (vetted sellers, free shipping)
+      const lowListedCell = `<td class="right" data-cents="${price.lowest_legit_cents ?? 0}" title="Lowest TCGPlayer Direct listing${price.lowest_legit_cents ? '' : ' — no data'}">${EV.fmtUSD(price.lowest_legit_cents)}</td>`;
+
       return `<tr class="${li.included_in_ev ? "" : "excluded"}" data-pid="${pid}">
-        <td class="ev-toggle ${evClass}" data-pid="${pid}" title="Click to toggle CSV export" style="cursor:pointer;text-align:center">${evIcon}</td>
-        <td class="img-cell center">${imgSrc ? `<img src="${imgSrc}" class="card-thumb" loading="lazy" alt="">` : "—"}</td>
+        <td class="ev-toggle ${evClass}" data-pid="${pid}" title="Toggle inclusion" style="cursor:pointer;text-align:center">${evIcon}</td>
+        <td class="img-cell center">${stockSrc ? `<img src="${stockSrc}" class="card-thumb" loading="lazy" alt="">` : "—"}</td>
         <td>${escHtml(li.name || li.display_key)}${cardLinks(li)}</td>
         <td class="muted" style="font-size:0.78rem">${escHtml(rarity)}</td>
         <td class="muted" style="font-size:0.78rem">${escHtml(setCode)}</td>
         <td class="muted right" style="font-size:0.78rem">${escHtml(collNum)}</td>
         <td class="right">${qtyPerCopy}</td>
-        <td class="right">${EV.fmtUSD(li.market_price_cents)}</td>
-        ${listingCell}
-        <td class="right ${net == null ? "muted" : ""}">${EV.fmtUSD(net)}</td>
-        <td class="right ${caseTotal == null ? "muted" : ""}">${EV.fmtUSD(caseTotal)}</td>
-        ${sellthroughVelCell(st)}
+        <td class="right" data-cents="${li.market_price_cents ?? 0}">${EV.fmtUSD(li.market_price_cents)}</td>
+        ${lowListedCell}
+        <td class="right">${EV.fmtUSD(listing)}</td>
+        <td class="right ${net == null ? "muted" : ""}" data-cents="${net ?? 0}">${EV.fmtUSD(net)}</td>
+        <td class="right ${caseTotal == null ? "muted" : ""}" data-cents="${caseTotal ?? 0}">${EV.fmtUSD(caseTotal)}</td>
+        ${listedCell(price)}
+        ${sellthroughVelCell(st, price)}
         ${sellthroughRecCell(st, costPerCard)}
-        ${sellthroughWksCell(st)}
+        ${daysDepthCell(st, price)}
       </tr>`;
     }).join("");
 
-    const listingTh = `<th class="right" title="Price you would list at on ${activePlat} given your pricing strategy">Export $</th>`;
+    const listingTh = `<th class="right" title="Price you would list at on ${activePlat} given your pricing strategy">List $</th>`;
 
     return `
       <div class="deck-singles">
-        <div class="export-bar">
-          <span class="export-label">Export singles:</span>
-          <button class="export-btn" data-export="tcgplayer" data-deck-key="${d.deck_key}">TCGPlayer CSV</button>
-          <button class="export-btn" data-export="manapool"  data-deck-key="${d.deck_key}">Manapool CSV</button>
-          <button class="export-btn" data-export="ebay"      data-deck-key="${d.deck_key}">eBay CSV</button>
-        </div>
         <div class="singles-table-wrap">
           <table class="data cards">
             <thead><tr>
-              <th title="Toggle CSV export inclusion" style="width:2rem">EV</th>
+              <th title="Toggle inclusion" style="width:2rem">EV</th>
               <th style="width:3.5rem">Img</th>
               <th data-sort="text">Card</th>
               <th>Rarity</th>
@@ -636,12 +528,14 @@
               <th class="right">#</th>
               <th class="right" data-sort="num" title="Copies per deck">Qty</th>
               <th class="right" data-sort="num">Market</th>
+              <th class="right" data-sort="num" title="Lowest TCGPlayer Direct listing (vetted sellers, typically includes free shipping)">Low</th>
               ${listingTh}
               <th class="right" data-sort="num">${platLabel}</th>
               <th class="right" data-sort="num" title="Net × qty × copies in case">Case Total</th>
-              <th class="right st-col" data-sort="num" title="Units sold/week (↓ = net drain after relisting)">Vel/wk</th>
-              <th class="right st-col" title="Recommended listing price · tier = how far above market · ROI vs case cost/card">Rec Price</th>
-              <th class="right st-col" data-sort="num" title="Expected weeks to sell at recommended price">Sell In</th>
+              <th class="right st-col" data-sort="num" title="Active listings on TCGPlayer">Listed</th>
+              <th class="right st-col" data-sort="num" title="Sales per day · ↺ refill rate per day">Vel/d</th>
+              <th class="right st-col" title="Recommended listing price · tier relative to market · ROI vs case cost/card">Rec Price</th>
+              <th class="right st-col" data-sort="num" title="Expected time to sell at recommended tier. Hover for days at all price tiers (+0% market, +10%, +25%, +50%).">Days@</th>
             </tr></thead>
             <tbody>${rows}</tbody>
           </table>
@@ -673,121 +567,10 @@
     }
   });
 
-  // Per-deck export buttons (delegated — grid content changes on re-render).
-  $grid.addEventListener("click", async e => {
-    const btn = e.target.closest(".export-btn");
-    if (!btn) return;
-    const deckKey = btn.dataset.deckKey;
-    const d = (report.decks || []).find(x => x.deck_key === deckKey);
-    if (!d) return;
-    btn.disabled = true;
-    const orig = btn.textContent;
-    btn.textContent = "Building…";
-    try {
-      await scryfallReady;
-      if (btn.dataset.export === "ebay") {
-        const files = buildEbayCSVMulti([d], null, ebayMode);
-        files.forEach(([csv, name]) => downloadCSV(csv, name));
-      } else {
-        const [csv, name] = buildExportCSV(btn.dataset.export, d, report, ebayMode);
-        downloadCSV(csv, name);
-      }
-    } finally {
-      btn.disabled = false;
-      btn.textContent = orig;
-    }
-  });
-
-  // Whole-case eBay CSV export.
-  document.getElementById("download-all-csv").addEventListener("click", async function () {
-    if (this.disabled) return;
-    this.disabled = true;
-    this.textContent = "Building…";
-    try {
-      await scryfallReady;
-      const slug  = (report.display_key || "set").replace(/[^a-z0-9-]/gi, "-");
-      const files = buildEbayCSVMulti(report.decks, slug, ebayMode);
-      files.forEach(([csv, name]) => downloadCSV(csv, name));
-    } finally {
-      this.disabled = false;
-      this.textContent = "Case eBay CSV";
-    }
-  });
-
-  // Whole-case TCGPlayer CSV export.
-  document.getElementById("download-all-tcg-csv").addEventListener("click", async function () {
-    if (this.disabled) return;
-    this.disabled = true;
-    this.textContent = "Building…";
-    try {
-      await scryfallReady;
-      const slug = (report.display_key || "set").replace(/[^a-z0-9-]/gi, "-");
-      const [csv, name] = buildCaseTCGPlayerCSV(report.decks, slug);
-      downloadCSV(csv, name);
-    } finally {
-      this.disabled = false;
-      this.textContent = "Case TCGPlayer CSV";
-    }
-  });
-
-  // Whole-case Manapool CSV export.
-  document.getElementById("download-all-mp-csv").addEventListener("click", async function () {
-    if (this.disabled) return;
-    this.disabled = true;
-    this.textContent = "Building…";
-    try {
-      await scryfallReady;
-      const slug = (report.display_key || "set").replace(/[^a-z0-9-]/gi, "-");
-      const [csv, name] = buildCaseManapoolCSV(report.decks, slug);
-      downloadCSV(csv, name);
-    } finally {
-      this.disabled = false;
-      this.textContent = "Case Manapool CSV";
-    }
-  });
-
-  // Reprice CSV.
-  document.getElementById("download-reprice-csv").addEventListener("click", async function () {
-    if (this.disabled) return;
-    this.disabled = true;
-    this.textContent = "Building…";
-    try {
-      await scryfallReady;
-      const slug = (report.display_key || "set").replace(/[^a-z0-9-]/gi, "-");
-      const rows = [["Action(SiteID=US|Country=US|Currency=USD|Version=1193|CC=UTF-8)", "Custom label (SKU)", "StartPrice", "Quantity"]];
-      for (const d of report.decks) {
-        const copies  = d.copies || 1;
-        const setCode = (report.set_code || "").toUpperCase();
-        for (const li of d.line_items || []) {
-          const name = li.name || li.display_key;
-          if (!name) continue;
-          const qty = Math.round(li.qty / copies);
-          if (qty <= 0) continue;
-          const sf      = scryfallCache.get(li.display_key) || {};
-          const rarity  = scryfallRarity(sf.rarity);
-          if (skipRarities.has(rarity)) continue;
-          const priceCents = ebayListingPrice(li.market_price_cents, ebayMode);
-          if (priceCents == null) continue;
-          const numPadded = (sf.collector_number || "").padStart(4, "0");
-          const finCode   = li.finish === "f" ? "F" : "N";
-          const sku = setCode && numPadded ? `M-${setCode}-${numPadded}-${finCode}` : "";
-          if (!sku) continue;
-          rows.push(["Revise", sku, (priceCents / 100).toFixed(2), qty]);
-        }
-      }
-      if (rows.length > 1) downloadCSV(csvSerialize(rows), `ebay-${slug}-reprice.csv`);
-    } finally {
-      this.disabled = false;
-      this.textContent = "Download Reprice CSV";
-    }
-  });
-
   // ── Scryfall metadata ──────────────────────────────────────────────────────
-  // Cache is keyed by display_key (e.g. "mtg-blc-186-nf") so that reprints in
-  // different sets always resolve to the correct printing, not Scryfall's
-  // default for the card name.
 
-  // Parse "mtg-{set}-{number}-{finish}" -> { set, number } or null.
+  const rarityOrder = { "Mythic Rare":0, "Rare":1, "Uncommon":2, "Common":3 };
+
   function parseDisplayKey(dk) {
     if (!dk) return null;
     const parts = dk.split("-");
@@ -853,288 +636,6 @@
   function scryfallRarity(rarity) {
     const map = { common: "Common", uncommon: "Uncommon", rare: "Rare", mythic: "Mythic Rare", special: "Special/Bonus Card" };
     return map[rarity] || "";
-  }
-
-  // ── CSV export ────────────────────────────────────────────────────────────
-
-  function buildExportCSV(type, d, rep, mode) {
-    const slug = (d.deck_key || rep.display_key || "deck").replace(/[^a-z0-9-]/gi, "-");
-    switch (type) {
-      case "tcgplayer": return buildTCGPlayerCSV(d, slug);
-      case "manapool":  return buildManapoolCSV(d, slug);
-      case "ebay":      return buildEbayCSV(d, slug, mode);
-      default: return ["", "export.csv"];
-    }
-  }
-
-  function buildTCGPlayerCSV(d, slug) {
-    const copies = d.copies || 1;
-    const rows = [["TCGplayer Id","Condition","Add to Quantity","TCG Marketplace Price"]];
-    for (const li of d.line_items || []) {
-      if (!li.tcgplayer_product_id) continue;
-      const qty = Math.round(li.qty / copies);
-      if (qty <= 0) continue;
-      const priceCents = tcgplayerListingPrice(li.market_price_cents);
-      if (priceCents == null) continue;
-      rows.push([li.tcgplayer_product_id, li.finish === "f" ? "Near Mint Foil" : "Near Mint", qty, (priceCents/100).toFixed(2)]);
-    }
-    return [csvSerialize(rows), `tcgplayer-${slug}.csv`];
-  }
-
-  function buildManapoolCSV(d, slug) {
-    const copies = d.copies || 1;
-    const rows = [["product_type","product_id","name","set","number","rarity","language","finish","condition","price","market_low","market_price","market_price_foil","quantity"]];
-    for (const li of d.line_items || []) {
-      const name = li.name || li.display_key;
-      if (!name) continue;
-      const qty = Math.round(li.qty / copies);
-      if (qty <= 0) continue;
-      const sf = scryfallCache.get(li.display_key) || {};
-      rows.push([
-        "mtg_single", sf.id || "", name,
-        (sf.set || "").toUpperCase(), sf.collector_number || "", sf.rarity || "",
-        "EN", li.finish === "f" ? "F" : "NF", "NM",
-        ((li.market_price_cents || 0) / 100).toFixed(2),
-        "", "", "",
-        qty,
-      ]);
-    }
-    return [csvSerialize(rows), `manapool-${slug}.csv`];
-  }
-
-  function buildCaseTCGPlayerCSV(decks, slug) {
-    const tally = new Map();
-    for (const d of decks) {
-      for (const li of d.line_items || []) {
-        if (!li.tcgplayer_product_id || li.qty <= 0) continue;
-        const priceCents = tcgplayerListingPrice(li.market_price_cents);
-        if (priceCents == null) continue;
-        const condition = li.finish === "f" ? "Near Mint Foil" : "Near Mint";
-        const key = `${li.tcgplayer_product_id}|${condition}`;
-        if (tally.has(key)) {
-          tally.get(key)[2] += li.qty;
-        } else {
-          tally.set(key, [li.tcgplayer_product_id, condition, li.qty, (priceCents/100).toFixed(2)]);
-        }
-      }
-    }
-    const rows = [["TCGplayer Id","Condition","Add to Quantity","TCG Marketplace Price"]];
-    for (const row of tally.values()) rows.push(row);
-    return [csvSerialize(rows), `tcgplayer-${slug}.csv`];
-  }
-
-  function buildCaseManapoolCSV(decks, slug) {
-    const rows = [["product_type","product_id","name","set","number","rarity","language","finish","condition","price","market_low","market_price","market_price_foil","quantity"]];
-    for (const d of decks) {
-      for (const li of d.line_items || []) {
-        const name = li.name || li.display_key;
-        if (!name || li.qty <= 0) continue;
-        const sf = scryfallCache.get(li.display_key) || {};
-        rows.push([
-          "mtg_single", sf.id || "", name,
-          (sf.set || "").toUpperCase(), sf.collector_number || "", sf.rarity || "",
-          "EN", li.finish === "f" ? "F" : "NF", "NM",
-          ((li.market_price_cents || 0) / 100).toFixed(2),
-          "", "", "",
-          li.qty,
-        ]);
-      }
-    }
-    return [csvSerialize(rows), `manapool-${slug}.csv`];
-  }
-
-  function buildEbayCSV(d, slug, mode) {
-    const free = [], bulk = [], remove = [];
-    buildEbayRows(d, mode, free, bulk, remove);
-    const infoLines = ebayInfoLines();
-    const headers   = ebayHeaders();
-    const files     = [];
-    const df = dedupeRows(free);
-    const db = dedupeRows(bulk);
-    if (df.length) files.push([infoLines + "\r\n" + csvSerialize([headers, ...df]), `ebay-${slug}-freeship.csv`]);
-    if (db.length) files.push([infoLines + "\r\n" + csvSerialize([headers, ...db]), `ebay-${slug}-bulk.csv`]);
-    return files[0] || ["", `ebay-${slug}.csv`];
-  }
-
-  const ENVELOPE = 130;
-
-  function ebayListingPrice(marketCents, mode) {
-    if (marketCents == null || marketCents < siftThresholdCents()) return null;
-    if (mode === "freeship") return marketCents < 500 ? marketCents + ENVELOPE : marketCents;
-    if (marketCents < 100) return marketCents + ENVELOPE;
-    return marketCents;
-  }
-
-  function tcgplayerListingPrice(marketCents) {
-    if (marketCents == null || marketCents < 40) return null;
-    // Apply user-configured offset.
-    const ov = tcgOffsetValue();
-    let gross = tcgOffsetType() === "pct"
-      ? Math.round(marketCents * (1 + ov / 100))
-      : marketCents + Math.round(ov * 100);
-    if (gross >= 460 && gross <= 525) gross = 499; // gap avoidance
-    return gross;
-  }
-
-  function ebayShippingPolicy(marketCents, mode) {
-    if (mode === "freeship") return "FG Cards: Free Shipping";
-    if (marketCents >= 100 && marketCents < 500) return "FG Cards: Bulk Shipping";
-    return "FG Cards: Free Shipping";
-  }
-
-  function dedupeRows(rows) {
-    const skuCol = 1, qtyCol = 6;
-    const seen = new Map(), out = [];
-    for (const row of rows) {
-      const sku = row[skuCol];
-      if (sku && seen.has(sku)) {
-        seen.get(sku)[qtyCol] = (parseInt(seen.get(sku)[qtyCol])||0) + (parseInt(row[qtyCol])||0);
-      } else {
-        const copy = [...row];
-        out.push(copy);
-        if (sku) seen.set(sku, copy);
-      }
-    }
-    return out;
-  }
-
-  function buildEbayCSVMulti(decks, slugOverride, mode) {
-    const free = [], bulk = [], remove = [];
-    for (const d of decks) buildEbayRows(d, mode, free, bulk, remove);
-    const slug     = slugOverride || (decks[0]?.deck_key || "deck").replace(/[^a-z0-9-]/gi, "-");
-    const info     = ebayInfoLines();
-    const headers  = ebayHeaders();
-    const files    = [];
-    const df = dedupeRows(free), db = dedupeRows(bulk);
-    if (df.length) files.push([info + "\r\n" + csvSerialize([headers, ...df]), `ebay-${slug}-freeship.csv`]);
-    if (db.length) files.push([info + "\r\n" + csvSerialize([headers, ...db]), `ebay-${slug}-bulk.csv`]);
-    if (remove.length) {
-      const rh = ["Card Name","Set","Rarity","Collector #","Qty","Market Price","Reason"];
-      const rd = remove.sort((a,b) => a.name.localeCompare(b.name))
-        .map(r => [r.name, r.setName, r.rarity, r.sf?.collector_number||"", r.qty, `$${(r.market/100).toFixed(2)}`, r.reason]);
-      files.push([csvSerialize([rh,...rd]), `${slug}-remove.csv`]);
-    }
-    return files;
-  }
-
-  const rarityOrder = { "Mythic Rare":0, "Rare":1, "Uncommon":2, "Common":3 };
-
-  function buildEbayRows(d, mode, freeRows, bulkRows, removeRows) {
-    const copies  = d.copies || 1;
-    const setName = report.name.replace(/\s+(commander|collector|bonus|scene).*$/i,"").trim();
-    const eligible = [];
-
-    for (const li of d.line_items || []) {
-      const name = li.name || li.display_key;
-      if (!name) continue;
-      const qty = Math.round(li.qty / copies);
-      if (qty <= 0) continue;
-      const sf     = scryfallCache.get(li.display_key) || {};
-      const rarity = scryfallRarity(sf.rarity);
-      const market = li.market_price_cents || 0;
-      const pid    = String(li.tcgplayer_product_id || "");
-
-      if (skipRarities.has(rarity) && !userIncluded.get(pid)) {
-        removeRows?.push({ name, setName, rarity, qty, market, reason: `Skipped rarity: ${rarity||"unknown"}`, sf });
-        continue;
-      }
-      if (userExcluded.get(pid)) {
-        removeRows?.push({ name, setName, rarity, qty, market, reason: "Manually excluded", sf });
-        continue;
-      }
-      const priceCents = ebayListingPrice(market, mode);
-      if (priceCents == null && !userIncluded.get(pid)) {
-        removeRows?.push({ name, setName, rarity, qty, market, reason: `Below threshold ($${(market/100).toFixed(2)})`, sf });
-        continue;
-      }
-      const effectivePrice = priceCents ?? Math.max(market, siftThresholdCents());
-      eligible.push({ li, name, qty, priceCents: effectivePrice, rarity, sf });
-    }
-
-    eligible.sort((a, b) => {
-      switch (csvSort) {
-        case "price-asc":  return a.priceCents - b.priceCents;
-        case "price-desc": return b.priceCents - a.priceCents;
-        case "rarity":     return (rarityOrder[a.rarity]??9) - (rarityOrder[b.rarity]??9) || a.name.localeCompare(b.name);
-        default:           return a.name.localeCompare(b.name);
-      }
-    });
-
-    for (const { li, name, qty, priceCents, rarity, sf } of eligible) {
-      const shipPolicy  = ebayShippingPolicy(li.market_price_cents, mode);
-      const foilTag     = li.finish === "f" ? " Foil" : "";
-      const finish      = li.finish === "f" ? "Foil" : "Non-Foil";
-      const stockURL    = li.tcgplayer_product_id ? `${TCG_IMG_BASE}/${li.tcgplayer_product_id}.jpg` : "";
-      const scans       = scanImageMap.get(String(li.tcgplayer_product_id||"")) || {};
-      const photoURL    = [scans.front, scans.back, stockURL].filter(Boolean).join("|");
-      const price       = (priceCents/100).toFixed(2);
-      const cardType    = scryfallCardType(sf.type_line);
-      const isLegendary = (sf.type_line||"").includes("Legendary");
-      const character   = isLegendary ? name : "";
-      const rarityShort = { "Mythic Rare":"Mythic","Rare":"Rare","Uncommon":"Uncommon","Common":"Common" }[rarity]||"";
-      const cardNumber  = sf.collector_number||"";
-      const rarityNum   = [rarityShort, cardNumber?`#${cardNumber}`:""].filter(Boolean).join(" ");
-      const rawTitle    = `${name} ${setName} NM${foilTag}${rarityNum?" "+rarityNum:""} MTG Magic`;
-      const title       = rawTitle.length > 80 ? rawTitle.slice(0,79)+"…" : rawTitle;
-      const desc        = `${name} | ${setName} | Near Mint${foilTag} | MTG Magic: The Gathering`;
-      const sfColors    = sf.colors||[];
-      const cardColor   = sfColors.length>1 ? "Multicolored"
-        : sfColors.length===1 ? ({W:"White",U:"Blue",B:"Black",R:"Red",G:"Green"}[sfColors[0]]||"") : "Colorless";
-      const yearMfg     = sf.released_at ? sf.released_at.slice(0,4) : "";
-      const setCode     = (report.set_code||"").toUpperCase();
-      const numPadded   = cardNumber ? cardNumber.padStart(4,"0") : "";
-      const finishCode  = li.finish==="f" ? "F" : "N";
-      const sku         = setCode && numPadded ? `M-${setCode}-${numPadded}-${finishCode}` : "";
-      const row = [
-        "Draft", sku, 183454, title, "", price, qty, photoURL,
-        "UNGRADED", desc, "FixedPrice", shipPolicy, "30 Day Returns", "Immediate Payment", 48071,
-        "Magic: The Gathering", name, setName, finish, "English", "No", "Near Mint or Better",
-        cardType, rarity, character, cardColor, cardNumber, yearMfg, "Standard","13+","Wizards of the Coast",
-      ];
-      if (shipPolicy === "FG Cards: Bulk Shipping") bulkRows.push(row);
-      else freeRows.push(row);
-    }
-  }
-
-  function ebayInfoLines() {
-    return [
-      "#INFO,Version=0.0.2,Template= eBay-draft-listings-template_US,,,,,,,,",
-      "#INFO Action and Category ID are required fields. 1) Set Action to Draft 2) Please find the category ID for your listings here: https://pages.ebay.com/sellerinformation/news/categorychanges.html,,,,,,,,,,",
-      "\"#INFO After you've successfully uploaded your draft from the Seller Hub Reports tab, complete your drafts to active listings here: https://www.ebay.com/sh/lst/drafts\",,,,,,,,,,",
-      "#INFO,,,,,,,,,,",
-    ].join("\r\n");
-  }
-
-  function ebayHeaders() {
-    return [
-      "Action(SiteID=US|Country=US|Currency=USD|Version=1193|CC=UTF-8)",
-      "Custom label (SKU)","Category ID","Title","UPC","Price","Quantity",
-      "Item photo URL","Condition ID","Description","Format",
-      "ShippingProfileName","ReturnProfileName","PaymentProfileName","Location",
-      "C:Game","C:Card Name","C:Set","C:Finish","C:Language","C:Graded",
-      "C:Card Condition","C:Card Type","C:Rarity","C:Character","C:Color",
-      "C:Card Number","C:Year Manufactured","C:Card Size","C:Age Level","C:Manufacturer",
-    ];
-  }
-
-  function csvSerialize(rows) {
-    return rows.map(cols =>
-      cols.map(v => {
-        const s = String(v == null ? "" : v);
-        return /[",\r\n]/.test(s) ? `"${s.replace(/"/g,'""')}"` : s;
-      }).join(",")
-    ).join("\r\n");
-  }
-
-  function downloadCSV(csv, filename) {
-    const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
-    const url  = URL.createObjectURL(blob);
-    const a    = document.createElement("a");
-    a.href = url; a.download = filename; a.style.display = "none";
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
   }
 
   // ── Helpers ───────────────────────────────────────────────────────────────

@@ -1,0 +1,476 @@
+﻿key: otc-commander-quick-draw
+name: Quick Draw
+game: mtg
+set_code: otc
+tcg_set_name: "Commander: Outlaws of Thunder Junction"
+product_display_key: mtg-otc-commander-quick-draw
+product_tcgplayer_id: "541099"
+image: /img/decks/otc-commander-quick-draw.jpg
+channels: [tcgplayer, manapool]
+components:
+  # Generated from quick-draw_cards_2026-05-24.csv by scripts/import-deck-csv.js
+  # â”€â”€ Foil â€” OTC â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  - display_key: mtg-otc-3-f
+    qty: 1
+    name: "Stella Lee, Wild Card"
+    tcgplayer_product_id: "544321"
+    tcgplayer_sku_id: "7822158"
+    finish: f
+  - display_key: mtg-otc-5-f
+    qty: 1
+    name: "Eris, Roar of the Storm"
+    tcgplayer_product_id: "545354"
+    tcgplayer_sku_id: "7859712"
+    finish: f
+  # â”€â”€ Non-foil â€” OTC â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  - display_key: mtg-otc-14-nf
+    qty: 1
+    name: "Forger's Foundry"
+    tcgplayer_product_id: "545360"
+    tcgplayer_sku_id: "7859892"
+    finish: nf
+  - display_key: mtg-otc-15-nf
+    qty: 1
+    name: Lock and Load
+    tcgplayer_product_id: "545369"
+    tcgplayer_sku_id: "7860162"
+    finish: nf
+  - display_key: mtg-otc-17-nf
+    qty: 1
+    name: Thunderclap Drake
+    tcgplayer_product_id: "545381"
+    tcgplayer_sku_id: "7860522"
+    finish: nf
+  - display_key: mtg-otc-25-nf
+    qty: 1
+    name: Crackling Spellslinger
+    tcgplayer_product_id: "545342"
+    tcgplayer_sku_id: "7859352"
+    finish: nf
+  - display_key: mtg-otc-27-nf
+    qty: 1
+    name: Elemental Eruption
+    tcgplayer_product_id: "545345"
+    tcgplayer_sku_id: "7859442"
+    finish: nf
+  - display_key: mtg-otc-29-nf
+    qty: 1
+    name: Pyretic Charge
+    tcgplayer_product_id: "545372"
+    tcgplayer_sku_id: "7860252"
+    finish: nf
+  - display_key: mtg-otc-30-nf
+    qty: 1
+    name: Smoldering Stagecoach
+    tcgplayer_product_id: "545378"
+    tcgplayer_sku_id: "7860432"
+    finish: nf
+  - display_key: mtg-otc-39-nf
+    qty: 1
+    name: Leyline Dowser
+    tcgplayer_product_id: "545363"
+    tcgplayer_sku_id: "7859982"
+    finish: nf
+  - display_key: mtg-otc-89-nf
+    qty: 1
+    name: Arcane Denial
+    tcgplayer_product_id: "545310"
+    tcgplayer_sku_id: "7858572"
+    finish: nf
+  - display_key: mtg-otc-90-nf
+    qty: 1
+    name: Archmage Emeritus
+    tcgplayer_product_id: "545203"
+    tcgplayer_sku_id: "7855482"
+    finish: nf
+  - display_key: mtg-otc-91-nf
+    qty: 1
+    name: "Baral's Expertise"
+    tcgplayer_product_id: "545257"
+    tcgplayer_sku_id: "7857042"
+    finish: nf
+  - display_key: mtg-otc-92-nf
+    qty: 1
+    name: Curse of the Swine
+    tcgplayer_product_id: "545204"
+    tcgplayer_sku_id: "7855512"
+    finish: nf
+  - display_key: mtg-otc-94-nf
+    qty: 1
+    name: Deep Analysis
+    tcgplayer_product_id: "545275"
+    tcgplayer_sku_id: "7857552"
+    finish: nf
+  - display_key: mtg-otc-95-nf
+    qty: 1
+    name: Dig Through Time
+    tcgplayer_product_id: "545303"
+    tcgplayer_sku_id: "7858392"
+    finish: nf
+  - display_key: mtg-otc-97-nf
+    qty: 1
+    name: Finale of Revelation
+    tcgplayer_product_id: "545259"
+    tcgplayer_sku_id: "7857102"
+    finish: nf
+  - display_key: mtg-otc-99-nf
+    qty: 1
+    name: Haughty Djinn
+    tcgplayer_product_id: "545210"
+    tcgplayer_sku_id: "7855692"
+    finish: nf
+  - display_key: mtg-otc-100-nf
+    qty: 1
+    name: Midnight Clock
+    tcgplayer_product_id: "545292"
+    tcgplayer_sku_id: "7858049"
+    finish: nf
+  - display_key: mtg-otc-102-nf
+    qty: 1
+    name: Murmuring Mystic
+    tcgplayer_product_id: "545229"
+    tcgplayer_sku_id: "7856262"
+    finish: nf
+  - display_key: mtg-otc-103-nf
+    qty: 1
+    name: "Octavia, Living Thesis"
+    tcgplayer_product_id: "545216"
+    tcgplayer_sku_id: "7855872"
+    finish: nf
+  - display_key: mtg-otc-104-nf
+    qty: 1
+    name: Opt
+    tcgplayer_product_id: "545308"
+    tcgplayer_sku_id: "7858512"
+    finish: nf
+  - display_key: mtg-otc-105-nf
+    qty: 1
+    name: Ponder
+    tcgplayer_product_id: "545273"
+    tcgplayer_sku_id: "7857492"
+    finish: nf
+  - display_key: mtg-otc-106-nf
+    qty: 1
+    name: Pongify
+    tcgplayer_product_id: "545311"
+    tcgplayer_sku_id: "7858602"
+    finish: nf
+  - display_key: mtg-otc-107-nf
+    qty: 1
+    name: Preordain
+    tcgplayer_product_id: "545271"
+    tcgplayer_sku_id: "7857432"
+    finish: nf
+  - display_key: mtg-otc-108-nf
+    qty: 1
+    name: Propaganda
+    tcgplayer_product_id: "545466"
+    tcgplayer_sku_id: "7862872"
+    finish: nf
+  - display_key: mtg-otc-109-nf
+    qty: 1
+    name: Pteramander
+    tcgplayer_product_id: "545240"
+    tcgplayer_sku_id: "7856562"
+    finish: nf
+  - display_key: mtg-otc-110-nf
+    qty: 1
+    name: Radical Idea
+    tcgplayer_product_id: "545307"
+    tcgplayer_sku_id: "7858482"
+    finish: nf
+  - display_key: mtg-otc-112-nf
+    qty: 1
+    name: Serum Visions
+    tcgplayer_product_id: "545278"
+    tcgplayer_sku_id: "7857642"
+    finish: nf
+  - display_key: mtg-otc-113-nf
+    qty: 1
+    name: Shark Typhoon
+    tcgplayer_product_id: "545315"
+    tcgplayer_sku_id: "7858692"
+    finish: nf
+  - display_key: mtg-otc-116-nf
+    qty: 1
+    name: "Talrand, Sky Summoner"
+    tcgplayer_product_id: "545213"
+    tcgplayer_sku_id: "7855782"
+    finish: nf
+  - display_key: mtg-otc-117-nf
+    qty: 1
+    name: "Tezzeret's Gambit"
+    tcgplayer_product_id: "545258"
+    tcgplayer_sku_id: "7857072"
+    finish: nf
+  - display_key: mtg-otc-119-nf
+    qty: 1
+    name: Think Twice
+    tcgplayer_product_id: "545309"
+    tcgplayer_sku_id: "7858542"
+    finish: nf
+  - display_key: mtg-otc-120-nf
+    qty: 1
+    name: Treasure Cruise
+    tcgplayer_product_id: "545269"
+    tcgplayer_sku_id: "7857372"
+    finish: nf
+  - display_key: mtg-otc-123-nf
+    qty: 1
+    name: Windfall
+    tcgplayer_product_id: "545285"
+    tcgplayer_sku_id: "7857852"
+    finish: nf
+  - display_key: mtg-otc-124-nf
+    qty: 1
+    name: Winged Boots
+    tcgplayer_product_id: "545294"
+    tcgplayer_sku_id: "7858122"
+    finish: nf
+  - display_key: mtg-otc-154-nf
+    qty: 1
+    name: Arcane Bombardment
+    tcgplayer_product_id: "545314"
+    tcgplayer_sku_id: "7858662"
+    finish: nf
+  - display_key: mtg-otc-155-nf
+    qty: 1
+    name: Big Score
+    tcgplayer_product_id: "545312"
+    tcgplayer_sku_id: "7858632"
+    finish: nf
+  - display_key: mtg-otc-157-nf
+    qty: 1
+    name: Bloodthirsty Adversary
+    tcgplayer_product_id: "545220"
+    tcgplayer_sku_id: "7855992"
+    finish: nf
+  - display_key: mtg-otc-160-nf
+    qty: 1
+    name: Chaos Warp
+    tcgplayer_product_id: "545304"
+    tcgplayer_sku_id: "7858422"
+    finish: nf
+  - display_key: mtg-otc-161-nf
+    qty: 1
+    name: Cursed Mirror
+    tcgplayer_product_id: "545297"
+    tcgplayer_sku_id: "7858212"
+    finish: nf
+  - display_key: mtg-otc-164-nf
+    qty: 1
+    name: Electrostatic Field
+    tcgplayer_product_id: "545247"
+    tcgplayer_sku_id: "7856772"
+    finish: nf
+  - display_key: mtg-otc-165-nf
+    qty: 1
+    name: Faithless Looting
+    tcgplayer_product_id: "545280"
+    tcgplayer_sku_id: "7857702"
+    finish: nf
+  - display_key: mtg-otc-166-nf
+    qty: 1
+    name: Finale of Promise
+    tcgplayer_product_id: "545266"
+    tcgplayer_sku_id: "7857282"
+    finish: nf
+  - display_key: mtg-otc-169-nf
+    qty: 1
+    name: Guttersnipe
+    tcgplayer_product_id: "545250"
+    tcgplayer_sku_id: "7856862"
+    finish: nf
+  - display_key: mtg-otc-175-nf
+    qty: 1
+    name: "Mizzix's Mastery"
+    tcgplayer_product_id: "545261"
+    tcgplayer_sku_id: "7857132"
+    finish: nf
+  - display_key: mtg-otc-178-nf
+    qty: 1
+    name: Rousing Refrain
+    tcgplayer_product_id: "545264"
+    tcgplayer_sku_id: "7857222"
+    finish: nf
+  - display_key: mtg-otc-181-nf
+    qty: 1
+    name: Storm-Kiln Artist
+    tcgplayer_product_id: "545242"
+    tcgplayer_sku_id: "7856622"
+    finish: nf
+  - display_key: mtg-otc-183-nf
+    qty: 1
+    name: Vandalblast
+    tcgplayer_product_id: "545277"
+    tcgplayer_sku_id: "7857612"
+    finish: nf
+  - display_key: mtg-otc-184-nf
+    qty: 1
+    name: Volcanic Torrent
+    tcgplayer_product_id: "545283"
+    tcgplayer_sku_id: "7857792"
+    finish: nf
+  - display_key: mtg-otc-185-nf
+    qty: 1
+    name: Young Pyromancer
+    tcgplayer_product_id: "545245"
+    tcgplayer_sku_id: "7856712"
+    finish: nf
+  - display_key: mtg-otc-222-nf
+    qty: 1
+    name: Epic Experiment
+    tcgplayer_product_id: "545267"
+    tcgplayer_sku_id: "7857312"
+    finish: nf
+  - display_key: mtg-otc-224-nf
+    qty: 1
+    name: Expressive Iteration
+    tcgplayer_product_id: "545288"
+    tcgplayer_sku_id: "7857942"
+    finish: nf
+  - display_key: mtg-otc-227-nf
+    qty: 1
+    name: Galvanic Iteration
+    tcgplayer_product_id: "545305"
+    tcgplayer_sku_id: "7858452"
+    finish: nf
+  - display_key: mtg-otc-228-nf
+    qty: 1
+    name: Goblin Electromancer
+    tcgplayer_product_id: "545253"
+    tcgplayer_sku_id: "7856952"
+    finish: nf
+  - display_key: mtg-otc-232-nf
+    qty: 1
+    name: "Kaza, Roil Chaser"
+    tcgplayer_product_id: "545593"
+    tcgplayer_sku_id: "7867982"
+    finish: nf
+  - display_key: mtg-otc-235-nf
+    qty: 1
+    name: "Niv-Mizzet, Parun"
+    tcgplayer_product_id: "545223"
+    tcgplayer_sku_id: "7856082"
+    finish: nf
+  - display_key: mtg-otc-244-nf
+    qty: 1
+    name: Third Path Iconoclast
+    tcgplayer_product_id: "545255"
+    tcgplayer_sku_id: "7857012"
+    finish: nf
+  - display_key: mtg-otc-248-nf
+    qty: 1
+    name: "Veyran, Voice of Duality"
+    tcgplayer_product_id: "545226"
+    tcgplayer_sku_id: "7856172"
+    finish: nf
+  - display_key: mtg-otc-252-nf
+    qty: 1
+    name: Arcane Signet
+    tcgplayer_product_id: "545100"
+    tcgplayer_sku_id: "7851857"
+    finish: nf
+  - display_key: mtg-otc-259-nf
+    qty: 1
+    name: Izzet Signet
+    tcgplayer_product_id: "545299"
+    tcgplayer_sku_id: "7858272"
+    finish: nf
+  - display_key: mtg-otc-267-nf
+    qty: 1
+    name: Sol Ring
+    tcgplayer_product_id: "545098"
+    tcgplayer_sku_id: "7851797"
+    finish: nf
+  - display_key: mtg-otc-276-nf
+    qty: 1
+    name: Cascade Bluffs
+    tcgplayer_product_id: "545321"
+    tcgplayer_sku_id: "7858842"
+    finish: nf
+  - display_key: mtg-otc-280-nf
+    qty: 1
+    name: Command Tower
+    tcgplayer_product_id: "545058"
+    tcgplayer_sku_id: "7850597"
+    finish: nf
+  - display_key: mtg-otc-293-nf
+    qty: 1
+    name: Exotic Orchard
+    tcgplayer_product_id: "545235"
+    tcgplayer_sku_id: "7856412"
+    finish: nf
+  - display_key: mtg-otc-294-nf
+    qty: 1
+    name: Ferrous Lake
+    tcgplayer_product_id: "545322"
+    tcgplayer_sku_id: "7858872"
+    finish: nf
+  - display_key: mtg-otc-298-nf
+    qty: 1
+    name: Frostboil Snarl
+    tcgplayer_product_id: "545318"
+    tcgplayer_sku_id: "7858782"
+    finish: nf
+  - display_key: mtg-otc-302-nf
+    qty: 1
+    name: Izzet Boilerworks
+    tcgplayer_product_id: "545324"
+    tcgplayer_sku_id: "7858932"
+    finish: nf
+  - display_key: mtg-otc-312-nf
+    qty: 1
+    name: Reliquary Tower
+    tcgplayer_product_id: "545249"
+    tcgplayer_sku_id: "7856832"
+    finish: nf
+  - display_key: mtg-otc-320-nf
+    qty: 1
+    name: Shivan Reef
+    tcgplayer_product_id: "545316"
+    tcgplayer_sku_id: "7858722"
+    finish: nf
+  - display_key: mtg-otc-322-nf
+    qty: 1
+    name: Sulfur Falls
+    tcgplayer_product_id: "545317"
+    tcgplayer_sku_id: "7858752"
+    finish: nf
+  - display_key: mtg-otc-329-nf
+    qty: 1
+    name: Temple of Epiphany
+    tcgplayer_product_id: "545319"
+    tcgplayer_sku_id: "7858812"
+    finish: nf
+  - display_key: mtg-otc-334-nf
+    qty: 1
+    name: Temple of the False God
+    tcgplayer_product_id: "545323"
+    tcgplayer_sku_id: "7858902"
+    finish: nf
+  # â”€â”€ Non-foil â€” OTJ â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  - display_key: mtg-otj-279-nf
+    qty: 7
+    name: Island
+    tcgplayer_product_id: "545650"
+    tcgplayer_sku_id: "7869952"
+    finish: nf
+  - display_key: mtg-otj-280-nf
+    qty: 7
+    name: Island
+    tcgplayer_product_id: "545651"
+    tcgplayer_sku_id: "7870032"
+    finish: nf
+  - display_key: mtg-otj-283-nf
+    qty: 7
+    name: Mountain
+    tcgplayer_product_id: "545652"
+    tcgplayer_sku_id: "7870112"
+    finish: nf
+  - display_key: mtg-otj-284-nf
+    qty: 6
+    name: Mountain
+    tcgplayer_product_id: "545653"
+    tcgplayer_sku_id: "7870192"
+    finish: nf

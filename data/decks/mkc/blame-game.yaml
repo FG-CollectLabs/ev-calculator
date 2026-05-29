@@ -1,0 +1,542 @@
+﻿key: mkc-commander-blame-game
+name: Blame Game
+game: mtg
+set_code: mkc
+tcg_set_name: "Commander: Murders at Karlov Manor"
+product_display_key: mtg-mkc-commander-blame-game
+product_tcgplayer_id: "529980"
+image: /img/decks/mkc-commander-blame-game.jpg
+channels: [tcgplayer, manapool]
+components:
+  # Generated from blame-game_cards_2026-05-24.csv by scripts/import-deck-csv.js
+  # â”€â”€ Foil â€” MKC â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  - display_key: mtg-mkc-4-f
+    qty: 1
+    name: "Nelly Borca, Impulsive Accuser"
+    tcgplayer_product_id: "532947"
+    tcgplayer_sku_id: "7669905"
+    finish: f
+  - display_key: mtg-mkc-6-f
+    qty: 1
+    name: "Feather, Radiant Arbiter"
+    tcgplayer_product_id: "535553"
+    tcgplayer_sku_id: "7709358"
+    finish: f
+  # â”€â”€ Non-foil â€” MKC â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  - display_key: mtg-mkc-10-nf
+    qty: 1
+    name: Immortal Obligation
+    tcgplayer_product_id: "535632"
+    tcgplayer_sku_id: "7711173"
+    finish: nf
+  - display_key: mtg-mkc-12-nf
+    qty: 1
+    name: Otherworldly Escort
+    tcgplayer_product_id: "535634"
+    tcgplayer_sku_id: "7711223"
+    finish: nf
+  - display_key: mtg-mkc-13-nf
+    qty: 1
+    name: Redemption Arc
+    tcgplayer_product_id: "535638"
+    tcgplayer_sku_id: "7711308"
+    finish: nf
+  - display_key: mtg-mkc-15-nf
+    qty: 1
+    name: Trouble in Pairs
+    tcgplayer_product_id: "535640"
+    tcgplayer_sku_id: "7711358"
+    finish: nf
+  - display_key: mtg-mkc-31-nf
+    qty: 1
+    name: Havoc Eater
+    tcgplayer_product_id: "535630"
+    tcgplayer_sku_id: "7711123"
+    finish: nf
+  - display_key: mtg-mkc-32-nf
+    qty: 1
+    name: Hot Pursuit
+    tcgplayer_product_id: "535631"
+    tcgplayer_sku_id: "7711148"
+    finish: nf
+  - display_key: mtg-mkc-33-nf
+    qty: 1
+    name: Mob Verdict
+    tcgplayer_product_id: "535633"
+    tcgplayer_sku_id: "7711198"
+    finish: nf
+  - display_key: mtg-mkc-34-nf
+    qty: 1
+    name: "Prisoner's Dilemma"
+    tcgplayer_product_id: "535635"
+    tcgplayer_sku_id: "7711248"
+    finish: nf
+  - display_key: mtg-mkc-43-nf
+    qty: 1
+    name: Take the Bait
+    tcgplayer_product_id: "535639"
+    tcgplayer_sku_id: "7711333"
+    finish: nf
+  - display_key: mtg-mkc-45-nf
+    qty: 1
+    name: Ransom Note
+    tcgplayer_product_id: "535637"
+    tcgplayer_sku_id: "7711283"
+    finish: nf
+  - display_key: mtg-mkc-55-nf
+    qty: 1
+    name: Angel of the Ruins
+    tcgplayer_product_id: "535555"
+    tcgplayer_sku_id: "7709384"
+    finish: nf
+  - display_key: mtg-mkc-58-nf
+    qty: 1
+    name: Comeuppance
+    tcgplayer_product_id: "535584"
+    tcgplayer_sku_id: "7709973"
+    finish: nf
+  - display_key: mtg-mkc-59-nf
+    qty: 1
+    name: "Darien, King of Kjeldor"
+    tcgplayer_product_id: "535556"
+    tcgplayer_sku_id: "7709409"
+    finish: nf
+  - display_key: mtg-mkc-60-nf
+    qty: 1
+    name: "Duelist's Heritage"
+    tcgplayer_product_id: "535587"
+    tcgplayer_sku_id: "7710048"
+    finish: nf
+  - display_key: mtg-mkc-62-nf
+    qty: 1
+    name: "Elspeth, Sun's Champion"
+    tcgplayer_product_id: "535597"
+    tcgplayer_sku_id: "7710298"
+    finish: nf
+  - display_key: mtg-mkc-67-nf
+    qty: 1
+    name: Ghostly Prison
+    tcgplayer_product_id: "535588"
+    tcgplayer_sku_id: "7710073"
+    finish: nf
+  - display_key: mtg-mkc-68-nf
+    qty: 1
+    name: "Gideon's Sacrifice"
+    tcgplayer_product_id: "535586"
+    tcgplayer_sku_id: "7710023"
+    finish: nf
+  - display_key: mtg-mkc-70-nf
+    qty: 1
+    name: Keeper of the Accord
+    tcgplayer_product_id: "535560"
+    tcgplayer_sku_id: "7709441"
+    finish: nf
+  - display_key: mtg-mkc-71-nf
+    qty: 1
+    name: Loran of the Third Path
+    tcgplayer_product_id: "535561"
+    tcgplayer_sku_id: "7709466"
+    finish: nf
+  - display_key: mtg-mkc-72-nf
+    qty: 1
+    name: Martial Impetus
+    tcgplayer_product_id: "535589"
+    tcgplayer_sku_id: "7710098"
+    finish: nf
+  - display_key: mtg-mkc-77-nf
+    qty: 1
+    name: Orzhov Advokist
+    tcgplayer_product_id: "535582"
+    tcgplayer_sku_id: "7709923"
+    finish: nf
+  - display_key: mtg-mkc-79-nf
+    qty: 1
+    name: Promise of Loyalty
+    tcgplayer_product_id: "535598"
+    tcgplayer_sku_id: "7710323"
+    finish: nf
+  - display_key: mtg-mkc-80-nf
+    qty: 1
+    name: Seal of Cleansing
+    tcgplayer_product_id: "535590"
+    tcgplayer_sku_id: "7710123"
+    finish: nf
+  - display_key: mtg-mkc-82-nf
+    qty: 1
+    name: Selfless Squire
+    tcgplayer_product_id: "535563"
+    tcgplayer_sku_id: "7709496"
+    finish: nf
+  - display_key: mtg-mkc-83-nf
+    qty: 1
+    name: "Sevinne's Reclamation"
+    tcgplayer_product_id: "535599"
+    tcgplayer_sku_id: "7710348"
+    finish: nf
+  - display_key: mtg-mkc-84-nf
+    qty: 1
+    name: "Smuggler's Share"
+    tcgplayer_product_id: "535641"
+    tcgplayer_sku_id: "7711383"
+    finish: nf
+  - display_key: mtg-mkc-85-nf
+    qty: 1
+    name: Soul Snare
+    tcgplayer_product_id: "535591"
+    tcgplayer_sku_id: "7710148"
+    finish: nf
+  - display_key: mtg-mkc-86-nf
+    qty: 1
+    name: Stalking Leonin
+    tcgplayer_product_id: "535564"
+    tcgplayer_sku_id: "7709521"
+    finish: nf
+  - display_key: mtg-mkc-87-nf
+    qty: 1
+    name: Sun Titan
+    tcgplayer_product_id: "535567"
+    tcgplayer_sku_id: "7709548"
+    finish: nf
+  - display_key: mtg-mkc-89-nf
+    qty: 1
+    name: Vow of Duty
+    tcgplayer_product_id: "535592"
+    tcgplayer_sku_id: "7710173"
+    finish: nf
+  - display_key: mtg-mkc-90-nf
+    qty: 1
+    name: Wall of Omens
+    tcgplayer_product_id: "535583"
+    tcgplayer_sku_id: "7709948"
+    finish: nf
+  - display_key: mtg-mkc-92-nf
+    qty: 1
+    name: Windborn Muse
+    tcgplayer_product_id: "535568"
+    tcgplayer_sku_id: "7709573"
+    finish: nf
+  - display_key: mtg-mkc-93-nf
+    qty: 1
+    name: Winds of Rath
+    tcgplayer_product_id: "535600"
+    tcgplayer_sku_id: "7710373"
+    finish: nf
+  - display_key: mtg-mkc-145-nf
+    qty: 1
+    name: Agitator Ant
+    tcgplayer_product_id: "535569"
+    tcgplayer_sku_id: "7709598"
+    finish: nf
+  - display_key: mtg-mkc-148-nf
+    qty: 1
+    name: Brash Taunter
+    tcgplayer_product_id: "535570"
+    tcgplayer_sku_id: "7709623"
+    finish: nf
+  - display_key: mtg-mkc-150-nf
+    qty: 1
+    name: Curse of Opulence
+    tcgplayer_product_id: "535593"
+    tcgplayer_sku_id: "7710198"
+    finish: nf
+  - display_key: mtg-mkc-151-nf
+    qty: 1
+    name: Disrupt Decorum
+    tcgplayer_product_id: "535601"
+    tcgplayer_sku_id: "7710398"
+    finish: nf
+  - display_key: mtg-mkc-152-nf
+    qty: 1
+    name: "Etali, Primal Storm"
+    tcgplayer_product_id: "535571"
+    tcgplayer_sku_id: "7709648"
+    finish: nf
+  - display_key: mtg-mkc-153-nf
+    qty: 1
+    name: Fiendish Duo
+    tcgplayer_product_id: "535572"
+    tcgplayer_sku_id: "7709673"
+    finish: nf
+  - display_key: mtg-mkc-154-nf
+    qty: 1
+    name: Frontier Warmonger
+    tcgplayer_product_id: "535573"
+    tcgplayer_sku_id: "7709698"
+    finish: nf
+  - display_key: mtg-mkc-157-nf
+    qty: 1
+    name: "Kazuul, Tyrant of the Cliffs"
+    tcgplayer_product_id: "535574"
+    tcgplayer_sku_id: "7709723"
+    finish: nf
+  - display_key: mtg-mkc-159-nf
+    qty: 1
+    name: Rite of the Raging Storm
+    tcgplayer_product_id: "535594"
+    tcgplayer_sku_id: "7710223"
+    finish: nf
+  - display_key: mtg-mkc-161-nf
+    qty: 1
+    name: Shiny Impetus
+    tcgplayer_product_id: "535595"
+    tcgplayer_sku_id: "7710248"
+    finish: nf
+  - display_key: mtg-mkc-162-nf
+    qty: 1
+    name: Spectacular Showdown
+    tcgplayer_product_id: "535602"
+    tcgplayer_sku_id: "7710423"
+    finish: nf
+  - display_key: mtg-mkc-163-nf
+    qty: 1
+    name: Vengeful Ancestor
+    tcgplayer_product_id: "535575"
+    tcgplayer_sku_id: "7709748"
+    finish: nf
+  - display_key: mtg-mkc-164-nf
+    qty: 1
+    name: Vow of Lightning
+    tcgplayer_product_id: "535596"
+    tcgplayer_sku_id: "7710273"
+    finish: nf
+  - display_key: mtg-mkc-199-nf
+    qty: 1
+    name: "Anya, Merciless Angel"
+    tcgplayer_product_id: "535576"
+    tcgplayer_sku_id: "7709773"
+    finish: nf
+  - display_key: mtg-mkc-201-nf
+    qty: 1
+    name: Boros Reckoner
+    tcgplayer_product_id: "535577"
+    tcgplayer_sku_id: "7709798"
+    finish: nf
+  - display_key: mtg-mkc-205-nf
+    qty: 1
+    name: Deflecting Palm
+    tcgplayer_product_id: "535585"
+    tcgplayer_sku_id: "7709998"
+    finish: nf
+  - display_key: mtg-mkc-211-nf
+    qty: 1
+    name: "Gisela, Blade of Goldnight"
+    tcgplayer_product_id: "535578"
+    tcgplayer_sku_id: "7709823"
+    finish: nf
+  - display_key: mtg-mkc-222-nf
+    qty: 1
+    name: Ancient Stone Idol
+    tcgplayer_product_id: "535579"
+    tcgplayer_sku_id: "7709848"
+    finish: nf
+  - display_key: mtg-mkc-223-nf
+    qty: 1
+    name: Arcane Signet
+    tcgplayer_product_id: "535604"
+    tcgplayer_sku_id: "7710473"
+    finish: nf
+  - display_key: mtg-mkc-225-nf
+    qty: 1
+    name: Bloodthirsty Blade
+    tcgplayer_product_id: "535605"
+    tcgplayer_sku_id: "7710498"
+    finish: nf
+  - display_key: mtg-mkc-228-nf
+    qty: 1
+    name: Fellwar Stone
+    tcgplayer_product_id: "535606"
+    tcgplayer_sku_id: "7710523"
+    finish: nf
+  - display_key: mtg-mkc-232-nf
+    qty: 1
+    name: Mind Stone
+    tcgplayer_product_id: "535607"
+    tcgplayer_sku_id: "7710548"
+    finish: nf
+  - display_key: mtg-mkc-237-nf
+    qty: 1
+    name: Sol Ring
+    tcgplayer_product_id: "535608"
+    tcgplayer_sku_id: "7710573"
+    finish: nf
+  - display_key: mtg-mkc-238-nf
+    qty: 1
+    name: Solemn Simulacrum
+    tcgplayer_product_id: "535580"
+    tcgplayer_sku_id: "7709873"
+    finish: nf
+  - display_key: mtg-mkc-239-nf
+    qty: 1
+    name: Steel Hellkite
+    tcgplayer_product_id: "535581"
+    tcgplayer_sku_id: "7709898"
+    finish: nf
+  - display_key: mtg-mkc-240-nf
+    qty: 1
+    name: Talisman of Conviction
+    tcgplayer_product_id: "535609"
+    tcgplayer_sku_id: "7710598"
+    finish: nf
+  - display_key: mtg-mkc-245-nf
+    qty: 1
+    name: Thought Vessel
+    tcgplayer_product_id: "535610"
+    tcgplayer_sku_id: "7710623"
+    finish: nf
+  - display_key: mtg-mkc-246-nf
+    qty: 1
+    name: Tome of Legends
+    tcgplayer_product_id: "535603"
+    tcgplayer_sku_id: "7710448"
+    finish: nf
+  - display_key: mtg-mkc-247-nf
+    qty: 1
+    name: Access Tunnel
+    tcgplayer_product_id: "535621"
+    tcgplayer_sku_id: "7710898"
+    finish: nf
+  - display_key: mtg-mkc-248-nf
+    qty: 1
+    name: Ash Barrens
+    tcgplayer_product_id: "535622"
+    tcgplayer_sku_id: "7710923"
+    finish: nf
+  - display_key: mtg-mkc-251-nf
+    qty: 1
+    name: Boros Garrison
+    tcgplayer_product_id: "535623"
+    tcgplayer_sku_id: "7710948"
+    finish: nf
+  - display_key: mtg-mkc-253-nf
+    qty: 1
+    name: Castle Ardenvale
+    tcgplayer_product_id: "535611"
+    tcgplayer_sku_id: "7710648"
+    finish: nf
+  - display_key: mtg-mkc-256-nf
+    qty: 1
+    name: Command Tower
+    tcgplayer_product_id: "535624"
+    tcgplayer_sku_id: "7710973"
+    finish: nf
+  - display_key: mtg-mkc-260-nf
+    qty: 1
+    name: Exotic Orchard
+    tcgplayer_product_id: "535612"
+    tcgplayer_sku_id: "7710673"
+    finish: nf
+  - display_key: mtg-mkc-263-nf
+    qty: 1
+    name: Furycalm Snarl
+    tcgplayer_product_id: "535613"
+    tcgplayer_sku_id: "7710698"
+    finish: nf
+  - display_key: mtg-mkc-270-nf
+    qty: 1
+    name: Kher Keep
+    tcgplayer_product_id: "535614"
+    tcgplayer_sku_id: "7710723"
+    finish: nf
+  - display_key: mtg-mkc-272-nf
+    qty: 1
+    name: Labyrinth of Skophos
+    tcgplayer_product_id: "535615"
+    tcgplayer_sku_id: "7710748"
+    finish: nf
+  - display_key: mtg-mkc-276-nf
+    qty: 1
+    name: Myriad Landscape
+    tcgplayer_product_id: "535625"
+    tcgplayer_sku_id: "7710998"
+    finish: nf
+  - display_key: mtg-mkc-278-nf
+    qty: 1
+    name: Needle Spires
+    tcgplayer_product_id: "535616"
+    tcgplayer_sku_id: "7710773"
+    finish: nf
+  - display_key: mtg-mkc-282-nf
+    qty: 1
+    name: Reliquary Tower
+    tcgplayer_product_id: "535626"
+    tcgplayer_sku_id: "7711023"
+    finish: nf
+  - display_key: mtg-mkc-284-nf
+    qty: 1
+    name: "Rogue's Passage"
+    tcgplayer_product_id: "535627"
+    tcgplayer_sku_id: "7711048"
+    finish: nf
+  - display_key: mtg-mkc-287-nf
+    qty: 1
+    name: Scavenger Grounds
+    tcgplayer_product_id: "535617"
+    tcgplayer_sku_id: "7710798"
+    finish: nf
+  - display_key: mtg-mkc-295-nf
+    qty: 1
+    name: "Slayers' Stronghold"
+    tcgplayer_product_id: "535642"
+    tcgplayer_sku_id: "7711408"
+    finish: nf
+  - display_key: mtg-mkc-298-nf
+    qty: 1
+    name: "Sunhome, Fortress of the Legion"
+    tcgplayer_product_id: "535628"
+    tcgplayer_sku_id: "7711073"
+    finish: nf
+  - display_key: mtg-mkc-305-nf
+    qty: 1
+    name: Temple of the False God
+    tcgplayer_product_id: "535629"
+    tcgplayer_sku_id: "7711098"
+    finish: nf
+  - display_key: mtg-mkc-306-nf
+    qty: 1
+    name: Temple of Triumph
+    tcgplayer_product_id: "535618"
+    tcgplayer_sku_id: "7710823"
+    finish: nf
+  - display_key: mtg-mkc-307-nf
+    qty: 1
+    name: Throne of the High City
+    tcgplayer_product_id: "535619"
+    tcgplayer_sku_id: "7710848"
+    finish: nf
+  - display_key: mtg-mkc-310-nf
+    qty: 1
+    name: War Room
+    tcgplayer_product_id: "535620"
+    tcgplayer_sku_id: "7710873"
+    finish: nf
+  # â”€â”€ Non-foil â€” MKM â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  - display_key: mtg-mkm-261-nf
+    qty: 1
+    name: Escape Tunnel
+    tcgplayer_product_id: "535793"
+    tcgplayer_sku_id: "7678018"
+    finish: nf
+  - display_key: mtg-mkm-277-nf
+    qty: 5
+    name: Plains
+    tcgplayer_product_id: "535804"
+    tcgplayer_sku_id: "7674522"
+    finish: nf
+  - display_key: mtg-mkm-278-nf
+    qty: 4
+    name: Plains
+    tcgplayer_product_id: "535616"
+    tcgplayer_sku_id: "7674442"
+    finish: nf
+  - display_key: mtg-mkm-283-nf
+    qty: 4
+    name: Mountain
+    tcgplayer_product_id: "535797"
+    tcgplayer_sku_id: "7674607"
+    finish: nf
+  - display_key: mtg-mkm-284-nf
+    qty: 3
+    name: Mountain
+    tcgplayer_product_id: "535627"
+    tcgplayer_sku_id: "7674687"
+    finish: nf

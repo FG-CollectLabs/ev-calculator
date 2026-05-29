@@ -72,42 +72,6 @@
       <input class="settings-input" id="case-cost" type="number" min="0" step="0.01" placeholder="0.00">
     </div>
   </div>
-  <div class="settings-actions">
-    <button class="plat-btn" id="btn-upload-scans">Upload Scans</button>
-    <button class="plat-btn" id="download-all-tcg-csv">Case TCGPlayer CSV</button>
-    <button class="plat-btn" id="download-all-mp-csv">Case Manapool CSV</button>
-    <button class="plat-btn" id="download-all-csv">Case eBay CSV</button>
-    <button class="plat-btn" id="download-reprice-csv">Download Reprice CSV</button>
-  </div>
-</div>
-
-<!-- Scan modal overlay -->
-<div id="scan-modal" class="scan-modal hidden">
-  <div class="scan-modal-box">
-    <div class="scan-modal-header">
-      <span>Upload Card Scans</span>
-      <button class="scan-close" id="scan-close">✕</button>
-    </div>
-    <input type="file" id="scan-input" multiple accept="image/*" style="display:none">
-    <div class="scan-dropzone" id="scan-dropzone">
-      <div class="scan-drop-icon">⬆</div>
-      <p class="scan-drop-title">Drop card scans here</p>
-      <p class="scan-drop-sub">or <button class="scan-browse" id="scan-browse">browse files</button></p>
-      <p class="scan-hint">Images are paired in order — front, back, front, back…</p>
-    </div>
-    <div id="scan-progress" class="scan-progress hidden">
-      <div class="scan-bar-wrap"><div class="scan-bar" id="scan-bar"></div></div>
-      <span id="scan-status">Processing…</span>
-    </div>
-    <div id="scan-results" class="scan-results"></div>
-    <div class="scan-modal-footer hidden" id="scan-footer">
-      <span id="scan-summary"></span>
-      <div style="display:flex;gap:0.5rem">
-        <button class="plat-btn" id="scan-toggle-confirmed">Hide Confirmed</button>
-        <button class="plat-btn active" id="scan-done">Done</button>
-      </div>
-    </div>
-  </div>
 </div>
 
 <div id="decks" class="deck-grid"></div>

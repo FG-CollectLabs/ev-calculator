@@ -1,0 +1,560 @@
+﻿key: otc-commander-grand-larceny
+name: Grand Larceny
+game: mtg
+set_code: otc
+tcg_set_name: "Commander: Outlaws of Thunder Junction"
+product_display_key: mtg-otc-commander-grand-larceny
+product_tcgplayer_id: "541102"
+image: /img/decks/otc-commander-grand-larceny.jpg
+channels: [tcgplayer, manapool]
+components:
+  # Generated from grand-larceny_cards_2026-05-24.csv by scripts/import-deck-csv.js
+  # â”€â”€ Foil â€” OTC â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  - display_key: mtg-otc-1-f
+    qty: 1
+    name: "Gonti, Canny Acquisitor"
+    tcgplayer_product_id: "544319"
+    tcgplayer_sku_id: "7822048"
+    finish: f
+  - display_key: mtg-otc-6-f
+    qty: 1
+    name: Felix Five-Boots
+    tcgplayer_product_id: "545159"
+    tcgplayer_sku_id: "7854642"
+    finish: f
+  # â”€â”€ Non-foil â€” OTC â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  - display_key: mtg-otc-13-nf
+    qty: 1
+    name: Arcane Heist
+    tcgplayer_product_id: "545276"
+    tcgplayer_sku_id: "7857582"
+    finish: nf
+  - display_key: mtg-otc-16-nf
+    qty: 1
+    name: Smirking Spelljacker
+    tcgplayer_product_id: "545274"
+    tcgplayer_sku_id: "7857522"
+    finish: nf
+  - display_key: mtg-otc-21-nf
+    qty: 1
+    name: Heartless Conscription
+    tcgplayer_product_id: "545268"
+    tcgplayer_sku_id: "7857342"
+    finish: nf
+  - display_key: mtg-otc-22-nf
+    qty: 1
+    name: Orochi Soul-Reaver
+    tcgplayer_product_id: "545272"
+    tcgplayer_sku_id: "7857462"
+    finish: nf
+  - display_key: mtg-otc-23-nf
+    qty: 1
+    name: Thieving Varmint
+    tcgplayer_product_id: "545270"
+    tcgplayer_sku_id: "7857402"
+    finish: nf
+  - display_key: mtg-otc-33-nf
+    qty: 1
+    name: Savvy Trader
+    tcgplayer_product_id: "545265"
+    tcgplayer_sku_id: "7857252"
+    finish: nf
+  - display_key: mtg-otc-34-nf
+    qty: 1
+    name: Tower Winder
+    tcgplayer_product_id: "545263"
+    tcgplayer_sku_id: "7857192"
+    finish: nf
+  - display_key: mtg-otc-38-nf
+    qty: 1
+    name: "Dream-Thief's Bandana"
+    tcgplayer_product_id: "545262"
+    tcgplayer_sku_id: "7857162"
+    finish: nf
+  - display_key: mtg-otc-77-nf
+    qty: 1
+    name: Oblivion Sower
+    tcgplayer_product_id: "545196"
+    tcgplayer_sku_id: "7855272"
+    finish: nf
+  - display_key: mtg-otc-92-nf
+    qty: 1
+    name: Curse of the Swine
+    tcgplayer_product_id: "545204"
+    tcgplayer_sku_id: "7855512"
+    finish: nf
+  - display_key: mtg-otc-93-nf
+    qty: 1
+    name: Dazzling Sphinx
+    tcgplayer_product_id: "545180"
+    tcgplayer_sku_id: "7854792"
+    finish: nf
+  - display_key: mtg-otc-96-nf
+    qty: 1
+    name: Diluvian Primordial
+    tcgplayer_product_id: "545179"
+    tcgplayer_sku_id: "7854762"
+    finish: nf
+  - display_key: mtg-otc-98-nf
+    qty: 1
+    name: Ghostly Pilferer
+    tcgplayer_product_id: "545178"
+    tcgplayer_sku_id: "7854732"
+    finish: nf
+  - display_key: mtg-otc-101-nf
+    qty: 1
+    name: "Mind's Dilation"
+    tcgplayer_product_id: "545429"
+    tcgplayer_sku_id: "7861532"
+    finish: nf
+  - display_key: mtg-otc-111-nf
+    qty: 1
+    name: Sage of the Beyond
+    tcgplayer_product_id: "545177"
+    tcgplayer_sku_id: "7854702"
+    finish: nf
+  - display_key: mtg-otc-114-nf
+    qty: 1
+    name: Slither Blade
+    tcgplayer_product_id: "545197"
+    tcgplayer_sku_id: "7855302"
+    finish: nf
+  - display_key: mtg-otc-115-nf
+    qty: 1
+    name: Stolen Goods
+    tcgplayer_product_id: "545202"
+    tcgplayer_sku_id: "7855452"
+    finish: nf
+  - display_key: mtg-otc-118-nf
+    qty: 1
+    name: Thieving Skydiver
+    tcgplayer_product_id: "545160"
+    tcgplayer_sku_id: "7854672"
+    finish: nf
+  - display_key: mtg-otc-121-nf
+    qty: 1
+    name: Triton Shorestalker
+    tcgplayer_product_id: "545199"
+    tcgplayer_sku_id: "7855362"
+    finish: nf
+  - display_key: mtg-otc-122-nf
+    qty: 1
+    name: Whirler Rogue
+    tcgplayer_product_id: "545198"
+    tcgplayer_sku_id: "7855332"
+    finish: nf
+  - display_key: mtg-otc-126-nf
+    qty: 1
+    name: Baleful Mastery
+    tcgplayer_product_id: "545214"
+    tcgplayer_sku_id: "7855812"
+    finish: nf
+  - display_key: mtg-otc-127-nf
+    qty: 1
+    name: Brainstealer Dragon
+    tcgplayer_product_id: "545182"
+    tcgplayer_sku_id: "7854852"
+    finish: nf
+  - display_key: mtg-otc-129-nf
+    qty: 1
+    name: Cunning Rhetoric
+    tcgplayer_product_id: "545212"
+    tcgplayer_sku_id: "7855752"
+    finish: nf
+  - display_key: mtg-otc-134-nf
+    qty: 1
+    name: Feed the Swarm
+    tcgplayer_product_id: "545207"
+    tcgplayer_sku_id: "7855602"
+    finish: nf
+  - display_key: mtg-otc-135-nf
+    qty: 1
+    name: "Gonti, Lord of Luxury"
+    tcgplayer_product_id: "545181"
+    tcgplayer_sku_id: "7854822"
+    finish: nf
+  - display_key: mtg-otc-143-nf
+    qty: 1
+    name: "Nashi, Moon Sage's Scion"
+    tcgplayer_product_id: "545471"
+    tcgplayer_sku_id: "7863102"
+    finish: nf
+  - display_key: mtg-otc-147-nf
+    qty: 1
+    name: "Predators' Hour"
+    tcgplayer_product_id: "545433"
+    tcgplayer_sku_id: "7861577"
+    finish: nf
+  - display_key: mtg-otc-150-nf
+    qty: 1
+    name: Thieving Amalgam
+    tcgplayer_product_id: "545183"
+    tcgplayer_sku_id: "7854882"
+    finish: nf
+  - display_key: mtg-otc-188-nf
+    qty: 1
+    name: "Cazur, Ruthless Stalker"
+    tcgplayer_product_id: "545185"
+    tcgplayer_sku_id: "7854942"
+    finish: nf
+  - display_key: mtg-otc-196-nf
+    qty: 1
+    name: "Kodama's Reach"
+    tcgplayer_product_id: "545209"
+    tcgplayer_sku_id: "7855662"
+    finish: nf
+  - display_key: mtg-otc-199-nf
+    qty: 1
+    name: Ohran Frostfang
+    tcgplayer_product_id: "545184"
+    tcgplayer_sku_id: "7854912"
+    finish: nf
+  - display_key: mtg-otc-201-nf
+    qty: 1
+    name: Rampant Growth
+    tcgplayer_product_id: "545208"
+    tcgplayer_sku_id: "7855632"
+    finish: nf
+  - display_key: mtg-otc-206-nf
+    qty: 1
+    name: Silhana Ledgewalker
+    tcgplayer_product_id: "545200"
+    tcgplayer_sku_id: "7855392"
+    finish: nf
+  - display_key: mtg-otc-209-nf
+    qty: 1
+    name: Three Visits
+    tcgplayer_product_id: "545211"
+    tcgplayer_sku_id: "7855722"
+    finish: nf
+  - display_key: mtg-otc-212-nf
+    qty: 1
+    name: Void Attendant
+    tcgplayer_product_id: "545559"
+    tcgplayer_sku_id: "7866612"
+    finish: nf
+  - display_key: mtg-otc-215-nf
+    qty: 1
+    name: Baleful Strix
+    tcgplayer_product_id: "545192"
+    tcgplayer_sku_id: "7855152"
+    finish: nf
+  - display_key: mtg-otc-218-nf
+    qty: 1
+    name: Cold-Eyed Selkie
+    tcgplayer_product_id: "545190"
+    tcgplayer_sku_id: "7855092"
+    finish: nf
+  - display_key: mtg-otc-219-nf
+    qty: 1
+    name: Culling Ritual
+    tcgplayer_product_id: "545206"
+    tcgplayer_sku_id: "7855572"
+    finish: nf
+  - display_key: mtg-otc-221-nf
+    qty: 1
+    name: "Edric, Spymaster of Trest"
+    tcgplayer_product_id: "545188"
+    tcgplayer_sku_id: "7855032"
+    finish: nf
+  - display_key: mtg-otc-225-nf
+    qty: 1
+    name: Extract Brain
+    tcgplayer_product_id: "545205"
+    tcgplayer_sku_id: "7855542"
+    finish: nf
+  - display_key: mtg-otc-226-nf
+    qty: 1
+    name: Fallen Shinobi
+    tcgplayer_product_id: "545189"
+    tcgplayer_sku_id: "7855062"
+    finish: nf
+  - display_key: mtg-otc-231-nf
+    qty: 1
+    name: Hostage Taker
+    tcgplayer_product_id: "545187"
+    tcgplayer_sku_id: "7855002"
+    finish: nf
+  - display_key: mtg-otc-234-nf
+    qty: 1
+    name: The Mimeoplasm
+    tcgplayer_product_id: "545194"
+    tcgplayer_sku_id: "7855212"
+    finish: nf
+  - display_key: mtg-otc-237-nf
+    qty: 1
+    name: Plasm Capture
+    tcgplayer_product_id: "545591"
+    tcgplayer_sku_id: "7867902"
+    finish: nf
+  - display_key: mtg-otc-238-nf
+    qty: 1
+    name: Putrefy
+    tcgplayer_product_id: "545217"
+    tcgplayer_sku_id: "7855902"
+    finish: nf
+  - display_key: mtg-otc-240-nf
+    qty: 1
+    name: Shadowmage Infiltrator
+    tcgplayer_product_id: "545191"
+    tcgplayer_sku_id: "7855122"
+    finish: nf
+  - display_key: mtg-otc-241-nf
+    qty: 1
+    name: Silent-Blade Oni
+    tcgplayer_product_id: "545186"
+    tcgplayer_sku_id: "7854972"
+    finish: nf
+  - display_key: mtg-otc-242-nf
+    qty: 1
+    name: Siphon Insight
+    tcgplayer_product_id: "545215"
+    tcgplayer_sku_id: "7855842"
+    finish: nf
+  - display_key: mtg-otc-243-nf
+    qty: 1
+    name: Thief of Sanity
+    tcgplayer_product_id: "545193"
+    tcgplayer_sku_id: "7855182"
+    finish: nf
+  - display_key: mtg-otc-246-nf
+    qty: 1
+    name: Trygon Predator
+    tcgplayer_product_id: "545201"
+    tcgplayer_sku_id: "7855422"
+    finish: nf
+  - display_key: mtg-otc-247-nf
+    qty: 1
+    name: "Ukkima, Stalking Shadow"
+    tcgplayer_product_id: "545195"
+    tcgplayer_sku_id: "7855242"
+    finish: nf
+  - display_key: mtg-otc-249-nf
+    qty: 1
+    name: Villainous Wealth
+    tcgplayer_product_id: "545587"
+    tcgplayer_sku_id: "7867762"
+    finish: nf
+  - display_key: mtg-otc-252-nf
+    qty: 1
+    name: Arcane Signet
+    tcgplayer_product_id: "545100"
+    tcgplayer_sku_id: "7851857"
+    finish: nf
+  - display_key: mtg-otc-253-nf
+    qty: 1
+    name: Bladegriff Prototype
+    tcgplayer_product_id: "545464"
+    tcgplayer_sku_id: "7862792"
+    finish: nf
+  - display_key: mtg-otc-254-nf
+    qty: 1
+    name: Chaos Wand
+    tcgplayer_product_id: "545218"
+    tcgplayer_sku_id: "7855932"
+    finish: nf
+  - display_key: mtg-otc-256-nf
+    qty: 1
+    name: Darksteel Ingot
+    tcgplayer_product_id: "545219"
+    tcgplayer_sku_id: "7855962"
+    finish: nf
+  - display_key: mtg-otc-257-nf
+    qty: 1
+    name: Fellwar Stone
+    tcgplayer_product_id: "545221"
+    tcgplayer_sku_id: "7856022"
+    finish: nf
+  - display_key: mtg-otc-264-nf
+    qty: 1
+    name: Prismatic Lens
+    tcgplayer_product_id: "545222"
+    tcgplayer_sku_id: "7856052"
+    finish: nf
+  - display_key: mtg-otc-267-nf
+    qty: 1
+    name: Sol Ring
+    tcgplayer_product_id: "545098"
+    tcgplayer_sku_id: "7851797"
+    finish: nf
+  - display_key: mtg-otc-270-nf
+    qty: 1
+    name: Access Tunnel
+    tcgplayer_product_id: "545251"
+    tcgplayer_sku_id: "7856892"
+    finish: nf
+  - display_key: mtg-otc-280-nf
+    qty: 1
+    name: Command Tower
+    tcgplayer_product_id: "545058"
+    tcgplayer_sku_id: "7850597"
+    finish: nf
+  - display_key: mtg-otc-281-nf
+    qty: 1
+    name: Darkslick Shores
+    tcgplayer_product_id: "545243"
+    tcgplayer_sku_id: "7856652"
+    finish: nf
+  - display_key: mtg-otc-282-nf
+    qty: 1
+    name: Darkwater Catacombs
+    tcgplayer_product_id: "545231"
+    tcgplayer_sku_id: "7856292"
+    finish: nf
+  - display_key: mtg-otc-288-nf
+    qty: 1
+    name: Dimir Aqueduct
+    tcgplayer_product_id: "545252"
+    tcgplayer_sku_id: "7856922"
+    finish: nf
+  - display_key: mtg-otc-290-nf
+    qty: 1
+    name: Drowned Catacomb
+    tcgplayer_product_id: "545225"
+    tcgplayer_sku_id: "7856142"
+    finish: nf
+  - display_key: mtg-otc-293-nf
+    qty: 1
+    name: Exotic Orchard
+    tcgplayer_product_id: "545235"
+    tcgplayer_sku_id: "7856412"
+    finish: nf
+  - display_key: mtg-otc-296-nf
+    qty: 1
+    name: Fetid Pools
+    tcgplayer_product_id: "545232"
+    tcgplayer_sku_id: "7856322"
+    finish: nf
+  - display_key: mtg-otc-297-nf
+    qty: 1
+    name: Flooded Grove
+    tcgplayer_product_id: "545244"
+    tcgplayer_sku_id: "7856682"
+    finish: nf
+  - display_key: mtg-otc-300-nf
+    qty: 1
+    name: Hinterland Harbor
+    tcgplayer_product_id: "545241"
+    tcgplayer_sku_id: "7856592"
+    finish: nf
+  - display_key: mtg-otc-305-nf
+    qty: 1
+    name: Llanowar Wastes
+    tcgplayer_product_id: "545248"
+    tcgplayer_sku_id: "7856802"
+    finish: nf
+  - display_key: mtg-otc-307-nf
+    qty: 1
+    name: Opulent Palace
+    tcgplayer_product_id: "545254"
+    tcgplayer_sku_id: "7856982"
+    finish: nf
+  - display_key: mtg-otc-308-nf
+    qty: 1
+    name: Overflowing Basin
+    tcgplayer_product_id: "545224"
+    tcgplayer_sku_id: "7856112"
+    finish: nf
+  - display_key: mtg-otc-312-nf
+    qty: 1
+    name: Reliquary Tower
+    tcgplayer_product_id: "545249"
+    tcgplayer_sku_id: "7856832"
+    finish: nf
+  - display_key: mtg-otc-325-nf
+    qty: 1
+    name: Sunken Hollow
+    tcgplayer_product_id: "545238"
+    tcgplayer_sku_id: "7856502"
+    finish: nf
+  - display_key: mtg-otc-328-nf
+    qty: 1
+    name: Temple of Deceit
+    tcgplayer_product_id: "545227"
+    tcgplayer_sku_id: "7856202"
+    finish: nf
+  - display_key: mtg-otc-330-nf
+    qty: 1
+    name: Temple of Malady
+    tcgplayer_product_id: "545228"
+    tcgplayer_sku_id: "7856232"
+    finish: nf
+  - display_key: mtg-otc-332-nf
+    qty: 1
+    name: Temple of Mystery
+    tcgplayer_product_id: "545239"
+    tcgplayer_sku_id: "7856532"
+    finish: nf
+  - display_key: mtg-otc-337-nf
+    qty: 1
+    name: Twilight Mire
+    tcgplayer_product_id: "545246"
+    tcgplayer_sku_id: "7856742"
+    finish: nf
+  - display_key: mtg-otc-338-nf
+    qty: 1
+    name: Underground River
+    tcgplayer_product_id: "545236"
+    tcgplayer_sku_id: "7856442"
+    finish: nf
+  - display_key: mtg-otc-340-nf
+    qty: 1
+    name: Viridescent Bog
+    tcgplayer_product_id: "545234"
+    tcgplayer_sku_id: "7856382"
+    finish: nf
+  - display_key: mtg-otc-341-nf
+    qty: 1
+    name: Woodland Cemetery
+    tcgplayer_product_id: "545237"
+    tcgplayer_sku_id: "7856472"
+    finish: nf
+  - display_key: mtg-otc-342-nf
+    qty: 1
+    name: Yavimaya Coast
+    tcgplayer_product_id: "545233"
+    tcgplayer_sku_id: "7856352"
+    finish: nf
+  # â”€â”€ Non-foil â€” OTJ â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  - display_key: mtg-otj-201-nf
+    qty: 1
+    name: "Doc Aurlock, Grizzled Genius"
+    tcgplayer_product_id: "544683"
+    tcgplayer_sku_id: "7839371"
+    finish: nf
+  - display_key: mtg-otj-279-nf
+    qty: 3
+    name: Island
+    tcgplayer_product_id: "545650"
+    tcgplayer_sku_id: "7869952"
+    finish: nf
+  - display_key: mtg-otj-280-nf
+    qty: 2
+    name: Island
+    tcgplayer_product_id: "545651"
+    tcgplayer_sku_id: "7870032"
+    finish: nf
+  - display_key: mtg-otj-281-nf
+    qty: 3
+    name: Swamp
+    tcgplayer_product_id: "545656"
+    tcgplayer_sku_id: "7870432"
+    finish: nf
+  - display_key: mtg-otj-282-nf
+    qty: 3
+    name: Swamp
+    tcgplayer_product_id: "545657"
+    tcgplayer_sku_id: "7870512"
+    finish: nf
+  - display_key: mtg-otj-285-nf
+    qty: 2
+    name: Forest
+    tcgplayer_product_id: "545649"
+    tcgplayer_sku_id: "7869872"
+    finish: nf
+  - display_key: mtg-otj-286-nf
+    qty: 2
+    name: Forest
+    tcgplayer_product_id: "545648"
+    tcgplayer_sku_id: "7869792"
+    finish: nf

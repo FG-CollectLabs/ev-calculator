@@ -1,0 +1,577 @@
+﻿key: pip-commander-scrappy-survivors
+name: Scrappy Survivors
+game: mtg
+set_code: pip
+tcg_set_name: "Universes Beyond: Fallout"
+product_display_key: mtg-pip-commander-scrappy-survivors
+product_tcgplayer_id: "522899"
+image: /img/decks/pip-commander-scrappy-survivors.jpg
+channels: [tcgplayer, manapool]
+components:
+  # Generated from scrappy-survivors_cards_2026-05-24.csv by scripts/import-deck-csv.js
+  # â”€â”€ Foil â€” PIP â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  - display_key: mtg-pip-2-f
+    qty: 1
+    name: "Dogmeat, Ever Loyal"
+    tcgplayer_product_id: "523044"
+    tcgplayer_sku_id: "7490414"
+    finish: f
+  - display_key: mtg-pip-8-f
+    qty: 1
+    name: "Preston Garvey, Minuteman"
+    tcgplayer_product_id: "539443"
+    tcgplayer_sku_id: "7757706"
+    finish: f
+  # â”€â”€ Non-foil â€” PIP â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  - display_key: mtg-pip-12-nf
+    qty: 1
+    name: Brotherhood Outcast
+    tcgplayer_product_id: "539620"
+    tcgplayer_sku_id: "7761184"
+    finish: nf
+  - display_key: mtg-pip-14-nf
+    qty: 1
+    name: "Codsworth, Handy Helper"
+    tcgplayer_product_id: "539629"
+    tcgplayer_sku_id: "7761459"
+    finish: nf
+  - display_key: mtg-pip-15-nf
+    qty: 1
+    name: Commander Sofia Daguerre
+    tcgplayer_product_id: "539322"
+    tcgplayer_sku_id: "7755113"
+    finish: nf
+  - display_key: mtg-pip-17-nf
+    qty: 1
+    name: Idolized
+    tcgplayer_product_id: "523094"
+    tcgplayer_sku_id: "7490714"
+    finish: nf
+  - display_key: mtg-pip-21-nf
+    qty: 1
+    name: Pre-War Formalwear
+    tcgplayer_product_id: "539657"
+    tcgplayer_sku_id: "7762189"
+    finish: nf
+  - display_key: mtg-pip-28-nf
+    qty: 1
+    name: "Vault 101: Birthday Party"
+    tcgplayer_product_id: "522958"
+    tcgplayer_sku_id: "7489915"
+    finish: nf
+  - display_key: mtg-pip-53-nf
+    qty: 1
+    name: Acquired Mutation
+    tcgplayer_product_id: "539609"
+    tcgplayer_sku_id: "7760919"
+    finish: nf
+  - display_key: mtg-pip-56-nf
+    qty: 1
+    name: Crimson Caravaneer
+    tcgplayer_product_id: "539618"
+    tcgplayer_sku_id: "7761119"
+    finish: nf
+  - display_key: mtg-pip-57-nf
+    qty: 1
+    name: "Duchess, Wayward Tavernkeep"
+    tcgplayer_product_id: "539622"
+    tcgplayer_sku_id: "7761249"
+    finish: nf
+  - display_key: mtg-pip-58-nf
+    qty: 1
+    name: "Grim Reaper's Sprint"
+    tcgplayer_product_id: "539626"
+    tcgplayer_sku_id: "7761359"
+    finish: nf
+  - display_key: mtg-pip-59-nf
+    qty: 1
+    name: Ian the Reckless
+    tcgplayer_product_id: "539632"
+    tcgplayer_sku_id: "7761554"
+    finish: nf
+  - display_key: mtg-pip-60-nf
+    qty: 1
+    name: Junk Jet
+    tcgplayer_product_id: "539635"
+    tcgplayer_sku_id: "7761639"
+    finish: nf
+  - display_key: mtg-pip-61-nf
+    qty: 1
+    name: "Megaton's Fate"
+    tcgplayer_product_id: "539640"
+    tcgplayer_sku_id: "7761764"
+    finish: nf
+  - display_key: mtg-pip-69-nf
+    qty: 1
+    name: "Vault 21: House Gambit"
+    tcgplayer_product_id: "539650"
+    tcgplayer_sku_id: "7761994"
+    finish: nf
+  - display_key: mtg-pip-70-nf
+    qty: 1
+    name: "Veronica, Dissident Scribe"
+    tcgplayer_product_id: "539653"
+    tcgplayer_sku_id: "7762079"
+    finish: nf
+  - display_key: mtg-pip-72-nf
+    qty: 1
+    name: Animal Friend
+    tcgplayer_product_id: "539659"
+    tcgplayer_sku_id: "7762254"
+    finish: nf
+  - display_key: mtg-pip-73-nf
+    qty: 1
+    name: Bighorner Rancher
+    tcgplayer_product_id: "539664"
+    tcgplayer_sku_id: "7762394"
+    finish: nf
+  - display_key: mtg-pip-74-nf
+    qty: 1
+    name: Break Down
+    tcgplayer_product_id: "539670"
+    tcgplayer_sku_id: "7762499"
+    finish: nf
+  - display_key: mtg-pip-77-nf
+    qty: 1
+    name: Gunner Conscript
+    tcgplayer_product_id: "539683"
+    tcgplayer_sku_id: "7762674"
+    finish: nf
+  - display_key: mtg-pip-83-nf
+    qty: 1
+    name: Strong Back
+    tcgplayer_product_id: "539688"
+    tcgplayer_sku_id: "7762784"
+    finish: nf
+  - display_key: mtg-pip-85-nf
+    qty: 1
+    name: Super Mutant Scavenger
+    tcgplayer_product_id: "539692"
+    tcgplayer_sku_id: "7762894"
+    finish: nf
+  - display_key: mtg-pip-88-nf
+    qty: 1
+    name: Well Rested
+    tcgplayer_product_id: "539694"
+    tcgplayer_sku_id: "7762959"
+    finish: nf
+  - display_key: mtg-pip-90-nf
+    qty: 1
+    name: Almost Perfect
+    tcgplayer_product_id: "539170"
+    tcgplayer_sku_id: "7753856"
+    finish: nf
+  - display_key: mtg-pip-93-nf
+    qty: 1
+    name: Armory Paladin
+    tcgplayer_product_id: "539697"
+    tcgplayer_sku_id: "7763039"
+    finish: nf
+  - display_key: mtg-pip-96-nf
+    qty: 1
+    name: "Cait, Cage Brawler"
+    tcgplayer_product_id: "539356"
+    tcgplayer_sku_id: "7755878"
+    finish: nf
+  - display_key: mtg-pip-97-nf
+    qty: 1
+    name: "Cass, Hand of Vengeance"
+    tcgplayer_product_id: "539705"
+    tcgplayer_sku_id: "7763224"
+    finish: nf
+  - display_key: mtg-pip-105-nf
+    qty: 1
+    name: Inventory Management
+    tcgplayer_product_id: "539709"
+    tcgplayer_sku_id: "7763334"
+    finish: nf
+  - display_key: mtg-pip-110-nf
+    qty: 1
+    name: "Moira Brown, Guide Author"
+    tcgplayer_product_id: "539713"
+    tcgplayer_sku_id: "7763444"
+    finish: nf
+  - display_key: mtg-pip-120-nf
+    qty: 1
+    name: "Three Dog, Galaxy News DJ"
+    tcgplayer_product_id: "539421"
+    tcgplayer_sku_id: "7757329"
+    finish: nf
+  - display_key: mtg-pip-126-nf
+    qty: 1
+    name: Agility Bobblehead
+    tcgplayer_product_id: "539717"
+    tcgplayer_sku_id: "7763554"
+    finish: nf
+  - display_key: mtg-pip-136-nf
+    qty: 1
+    name: Mister Gutsy
+    tcgplayer_product_id: "539745"
+    tcgplayer_sku_id: "7764054"
+    finish: nf
+  - display_key: mtg-pip-139-nf
+    qty: 1
+    name: Perception Bobblehead
+    tcgplayer_product_id: "539399"
+    tcgplayer_sku_id: "7756944"
+    finish: nf
+  - display_key: mtg-pip-140-nf
+    qty: 1
+    name: Pip-Boy 3000
+    tcgplayer_product_id: "539753"
+    tcgplayer_sku_id: "7764249"
+    finish: nf
+  - display_key: mtg-pip-142-nf
+    qty: 1
+    name: Silver Shroud Costume
+    tcgplayer_product_id: "539757"
+    tcgplayer_sku_id: "7764359"
+    finish: nf
+  - display_key: mtg-pip-150-nf
+    qty: 1
+    name: Junktown
+    tcgplayer_product_id: "539788"
+    tcgplayer_sku_id: "7764869"
+    finish: nf
+  - display_key: mtg-pip-153-nf
+    qty: 1
+    name: Sunscorched Divide
+    tcgplayer_product_id: "539336"
+    tcgplayer_sku_id: "7755483"
+    finish: nf
+  - display_key: mtg-pip-155-nf
+    qty: 1
+    name: All That Glitters
+    tcgplayer_product_id: "539570"
+    tcgplayer_sku_id: "7758969"
+    finish: nf
+  - display_key: mtg-pip-165-nf
+    qty: 1
+    name: Mantle of the Ancients
+    tcgplayer_product_id: "539569"
+    tcgplayer_sku_id: "7758919"
+    finish: nf
+  - display_key: mtg-pip-169-nf
+    qty: 1
+    name: Path to Exile
+    tcgplayer_product_id: "539579"
+    tcgplayer_sku_id: "7759419"
+    finish: nf
+  - display_key: mtg-pip-170-nf
+    qty: 1
+    name: Puresteel Paladin
+    tcgplayer_product_id: "539337"
+    tcgplayer_sku_id: "7755433"
+    finish: nf
+  - display_key: mtg-pip-172-nf
+    qty: 1
+    name: Single Combat
+    tcgplayer_product_id: "539577"
+    tcgplayer_sku_id: "7759319"
+    finish: nf
+  - display_key: mtg-pip-174-nf
+    qty: 1
+    name: Valorous Stance
+    tcgplayer_product_id: "539580"
+    tcgplayer_sku_id: "7759469"
+    finish: nf
+  - display_key: mtg-pip-188-nf
+    qty: 1
+    name: Blasphemous Act
+    tcgplayer_product_id: "539397"
+    tcgplayer_sku_id: "7756879"
+    finish: nf
+  - display_key: mtg-pip-189-nf
+    qty: 1
+    name: Chaos Warp
+    tcgplayer_product_id: "539578"
+    tcgplayer_sku_id: "7759369"
+    finish: nf
+  - display_key: mtg-pip-191-nf
+    qty: 1
+    name: Sticky Fingers
+    tcgplayer_product_id: "539571"
+    tcgplayer_sku_id: "7759019"
+    finish: nf
+  - display_key: mtg-pip-194-nf
+    qty: 1
+    name: Abundant Growth
+    tcgplayer_product_id: "539572"
+    tcgplayer_sku_id: "7759069"
+    finish: nf
+  - display_key: mtg-pip-198-nf
+    qty: 1
+    name: Fertile Ground
+    tcgplayer_product_id: "539573"
+    tcgplayer_sku_id: "7759119"
+    finish: nf
+  - display_key: mtg-pip-202-nf
+    qty: 1
+    name: Heroic Intervention
+    tcgplayer_product_id: "539474"
+    tcgplayer_sku_id: "7758351"
+    finish: nf
+  - display_key: mtg-pip-205-nf
+    qty: 1
+    name: Rancor
+    tcgplayer_product_id: "539574"
+    tcgplayer_sku_id: "7759169"
+    finish: nf
+  - display_key: mtg-pip-206-nf
+    qty: 1
+    name: Squirrel Nest
+    tcgplayer_product_id: "539575"
+    tcgplayer_sku_id: "7759219"
+    finish: nf
+  - display_key: mtg-pip-208-nf
+    qty: 1
+    name: Wild Growth
+    tcgplayer_product_id: "539576"
+    tcgplayer_sku_id: "7759269"
+    finish: nf
+  - display_key: mtg-pip-211-nf
+    qty: 1
+    name: Behemoth Sledge
+    tcgplayer_product_id: "539585"
+    tcgplayer_sku_id: "7759719"
+    finish: nf
+  - display_key: mtg-pip-224-nf
+    qty: 1
+    name: Arcane Signet
+    tcgplayer_product_id: "539403"
+    tcgplayer_sku_id: "7757039"
+    finish: nf
+  - display_key: mtg-pip-225-nf
+    qty: 1
+    name: Basilisk Collar
+    tcgplayer_product_id: "539581"
+    tcgplayer_sku_id: "7759519"
+    finish: nf
+  - display_key: mtg-pip-226-nf
+    qty: 1
+    name: Bloodforged Battle-Axe
+    tcgplayer_product_id: "539582"
+    tcgplayer_sku_id: "7759569"
+    finish: nf
+  - display_key: mtg-pip-227-nf
+    qty: 1
+    name: Brass Knuckles
+    tcgplayer_product_id: "539586"
+    tcgplayer_sku_id: "7759769"
+    finish: nf
+  - display_key: mtg-pip-228-nf
+    qty: 1
+    name: "Champion's Helm"
+    tcgplayer_product_id: "539583"
+    tcgplayer_sku_id: "7759619"
+    finish: nf
+  - display_key: mtg-pip-231-nf
+    qty: 1
+    name: "Explorer's Scope"
+    tcgplayer_product_id: "539587"
+    tcgplayer_sku_id: "7759819"
+    finish: nf
+  - display_key: mtg-pip-232-nf
+    qty: 1
+    name: Fireshrieker
+    tcgplayer_product_id: "539588"
+    tcgplayer_sku_id: "7759869"
+    finish: nf
+  - display_key: mtg-pip-234-nf
+    qty: 1
+    name: Masterwork of Ingenuity
+    tcgplayer_product_id: "539584"
+    tcgplayer_sku_id: "7759669"
+    finish: nf
+  - display_key: mtg-pip-239-nf
+    qty: 1
+    name: Sol Ring
+    tcgplayer_product_id: "539393"
+    tcgplayer_sku_id: "7756734"
+    finish: nf
+  - display_key: mtg-pip-242-nf
+    qty: 1
+    name: Swiftfoot Boots
+    tcgplayer_product_id: "539589"
+    tcgplayer_sku_id: "7759919"
+    finish: nf
+  - display_key: mtg-pip-253-nf
+    qty: 1
+    name: Ash Barrens
+    tcgplayer_product_id: "539369"
+    tcgplayer_sku_id: "7756193"
+    finish: nf
+  - display_key: mtg-pip-254-nf
+    qty: 1
+    name: Buried Ruin
+    tcgplayer_product_id: "539604"
+    tcgplayer_sku_id: "7760669"
+    finish: nf
+  - display_key: mtg-pip-255-nf
+    qty: 1
+    name: Canopy Vista
+    tcgplayer_product_id: "539590"
+    tcgplayer_sku_id: "7759969"
+    finish: nf
+  - display_key: mtg-pip-257-nf
+    qty: 1
+    name: Cinder Glade
+    tcgplayer_product_id: "539591"
+    tcgplayer_sku_id: "7760019"
+    finish: nf
+  - display_key: mtg-pip-258-nf
+    qty: 1
+    name: Clifftop Retreat
+    tcgplayer_product_id: "539592"
+    tcgplayer_sku_id: "7760069"
+    finish: nf
+  - display_key: mtg-pip-259-nf
+    qty: 1
+    name: Command Tower
+    tcgplayer_product_id: "522978"
+    tcgplayer_sku_id: "7490050"
+    finish: nf
+  - display_key: mtg-pip-263-nf
+    qty: 1
+    name: Evolving Wilds
+    tcgplayer_product_id: "539363"
+    tcgplayer_sku_id: "7756018"
+    finish: nf
+  - display_key: mtg-pip-264-nf
+    qty: 1
+    name: Exotic Orchard
+    tcgplayer_product_id: "539593"
+    tcgplayer_sku_id: "7760119"
+    finish: nf
+  - display_key: mtg-pip-270-nf
+    qty: 1
+    name: Jungle Shrine
+    tcgplayer_product_id: "539605"
+    tcgplayer_sku_id: "7760719"
+    finish: nf
+  - display_key: mtg-pip-273-nf
+    qty: 1
+    name: Mossfire Valley
+    tcgplayer_product_id: "539594"
+    tcgplayer_sku_id: "7760169"
+    finish: nf
+  - display_key: mtg-pip-279-nf
+    qty: 1
+    name: Path of Ancestry
+    tcgplayer_product_id: "539349"
+    tcgplayer_sku_id: "7755698"
+    finish: nf
+  - display_key: mtg-pip-282-nf
+    qty: 1
+    name: Roadside Reliquary
+    tcgplayer_product_id: "539606"
+    tcgplayer_sku_id: "7760769"
+    finish: nf
+  - display_key: mtg-pip-283-nf
+    qty: 1
+    name: "Rogue's Passage"
+    tcgplayer_product_id: "539607"
+    tcgplayer_sku_id: "7760819"
+    finish: nf
+  - display_key: mtg-pip-284-nf
+    qty: 1
+    name: Rootbound Crag
+    tcgplayer_product_id: "539595"
+    tcgplayer_sku_id: "7760219"
+    finish: nf
+  - display_key: mtg-pip-286-nf
+    qty: 1
+    name: Scattered Groves
+    tcgplayer_product_id: "539596"
+    tcgplayer_sku_id: "7760269"
+    finish: nf
+  - display_key: mtg-pip-287-nf
+    qty: 1
+    name: Scavenger Grounds
+    tcgplayer_product_id: "539597"
+    tcgplayer_sku_id: "7760319"
+    finish: nf
+  - display_key: mtg-pip-289-nf
+    qty: 1
+    name: Sheltered Thicket
+    tcgplayer_product_id: "539598"
+    tcgplayer_sku_id: "7760369"
+    finish: nf
+  - display_key: mtg-pip-295-nf
+    qty: 1
+    name: Sungrass Prairie
+    tcgplayer_product_id: "539599"
+    tcgplayer_sku_id: "7760419"
+    finish: nf
+  - display_key: mtg-pip-297-nf
+    qty: 1
+    name: Sunpetal Grove
+    tcgplayer_product_id: "539600"
+    tcgplayer_sku_id: "7760469"
+    finish: nf
+  - display_key: mtg-pip-302-nf
+    qty: 1
+    name: Temple of Abandon
+    tcgplayer_product_id: "539601"
+    tcgplayer_sku_id: "7760519"
+    finish: nf
+  - display_key: mtg-pip-309-nf
+    qty: 1
+    name: Temple of Plenty
+    tcgplayer_product_id: "539602"
+    tcgplayer_sku_id: "7760569"
+    finish: nf
+  - display_key: mtg-pip-311-nf
+    qty: 1
+    name: Temple of the False God
+    tcgplayer_product_id: "539608"
+    tcgplayer_sku_id: "7760869"
+    finish: nf
+  - display_key: mtg-pip-312-nf
+    qty: 1
+    name: Temple of Triumph
+    tcgplayer_product_id: "539603"
+    tcgplayer_sku_id: "7760619"
+    finish: nf
+  - display_key: mtg-pip-313-nf
+    qty: 1
+    name: Terramorphic Expanse
+    tcgplayer_product_id: "539333"
+    tcgplayer_sku_id: "7755368"
+    finish: nf
+  - display_key: mtg-pip-317-nf
+    qty: 2
+    name: Plains
+    tcgplayer_product_id: "522987"
+    tcgplayer_sku_id: "7490099"
+    finish: nf
+  - display_key: mtg-pip-318-nf
+    qty: 2
+    name: Plains
+    tcgplayer_product_id: "523002"
+    tcgplayer_sku_id: "7490189"
+    finish: nf
+  - display_key: mtg-pip-323-nf
+    qty: 2
+    name: Mountain
+    tcgplayer_product_id: "522931"
+    tcgplayer_sku_id: "7489760"
+    finish: nf
+  - display_key: mtg-pip-324-nf
+    qty: 2
+    name: Mountain
+    tcgplayer_product_id: "523000"
+    tcgplayer_sku_id: "7490174"
+    finish: nf
+  - display_key: mtg-pip-325-nf
+    qty: 2
+    name: Forest
+    tcgplayer_product_id: "522959"
+    tcgplayer_sku_id: "7489925"
+    finish: nf
+  - display_key: mtg-pip-326-nf
+    qty: 2
+    name: Forest
+    tcgplayer_product_id: "522972"
+    tcgplayer_sku_id: "7490010"
+    finish: nf

@@ -1,9 +1,47 @@
 {{ define "main" }}
-<section class="hero">
-  <h1>Sealed-product Expected Value</h1>
-  <p>Pick a category.</p>
-  <ul class="cat-list">
-    <li><a href="{{ "/commander/" | relURL }}">Magic — Commander Decks</a></li>
-  </ul>
-</section>
+<div class="home-hero">
+  <div class="home-hero-inner">
+    <img
+      src="https://c2.scryfall.com/file/scryfall-symbols/sets/m21.svg"
+      class="home-mtg-symbol"
+      alt=""
+      aria-hidden="true"
+    >
+    <div class="home-hero-text">
+      <div class="home-mtg-eyebrow">Magic: The Gathering</div>
+      <h1 class="home-title">EV Calculator</h1>
+      <p class="home-subtitle">Market-driven expected value for sealed products.<br>Compare cracking vs. flipping using live TCGPlayer data.</p>
+    </div>
+  </div>
+</div>
+
+<div class="home-sections">
+  <a href="{{ "/commander/" | relURL }}" class="home-section-card">
+    <div class="home-section-header">
+      <img
+        src="https://c2.scryfall.com/file/scryfall-symbols/sets/cmd.svg"
+        class="home-section-symbol"
+        alt="Commander"
+      >
+      <span class="home-section-badge">Live</span>
+    </div>
+    <h2 class="home-section-title">Commander Decks</h2>
+    <p class="home-section-desc">Buy a case → compare selling each deck sealed vs. cracking for singles. Pricing from TCGPlayer market data.</p>
+    <span class="home-section-cta">View all sets →</span>
+  </a>
+
+  <div class="home-section-card home-section-soon">
+    <div class="home-section-header">
+      <img
+        src="https://c2.scryfall.com/file/scryfall-symbols/sets/blb.svg"
+        class="home-section-symbol home-section-symbol-dim"
+        alt="Booster Boxes"
+      >
+      <span class="home-section-badge home-section-badge-soon">Soon</span>
+    </div>
+    <h2 class="home-section-title">Booster Boxes</h2>
+    <p class="home-section-desc">EV for draft, set, and collector booster boxes. Compare sealed price vs. expected singles value per box.</p>
+    <span class="home-section-cta home-section-cta-dim">Coming soon</span>
+  </div>
+</div>
 {{ end }}

@@ -19,7 +19,8 @@ a:hover { text-decoration: underline; }
   display: flex; align-items: center; gap: 1.5rem;
   padding: 0.75rem 1.25rem; border-bottom: 1px solid var(--line);
 }
-.topbar .logo { font-weight: 700; font-size: 1.05rem; color: var(--fg); }
+.topbar .logo { font-weight: 700; font-size: 1.05rem; color: var(--fg); display: flex; align-items: center; gap: 0.5rem; }
+.topbar-symbol { width: 20px; height: 20px; opacity: 0.7; filter: invert(80%) sepia(20%) saturate(300%) hue-rotate(160deg); }
 .topbar nav a { color: var(--muted); margin-right: 1rem; }
 .topbar nav a:hover { color: var(--fg); }
 .topbar nav a.active { color: var(--fg); font-weight: 600; }
@@ -36,7 +37,71 @@ p { line-height: 1.6; }
 .error { color: var(--neg); padding: 0.75rem; }
 .loading { color: var(--muted); padding: 0.75rem; font-style: italic; }
 
-/* ── Home category list ── */
+/* ── Home page hero ── */
+.home-hero {
+  padding: 2.5rem 0 2rem;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 2rem;
+}
+.home-hero-inner {
+  display: flex; align-items: center; gap: 1.5rem;
+}
+.home-mtg-symbol {
+  width: 72px; height: 72px; opacity: 0.85; flex-shrink: 0;
+  filter: invert(70%) sepia(40%) saturate(400%) hue-rotate(160deg);
+}
+.home-hero-text { display: flex; flex-direction: column; gap: 0.3rem; }
+.home-mtg-eyebrow {
+  font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.15em;
+  color: var(--accent); font-weight: 600;
+}
+.home-title { margin: 0; font-size: 2.2rem; font-style: italic; font-weight: 800; }
+.home-subtitle { margin: 0; color: var(--muted); font-size: 0.9rem; line-height: 1.5; }
+
+/* ── Home page section cards ── */
+.home-sections {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+.home-section-card {
+  display: flex; flex-direction: column; gap: 0.75rem;
+  padding: 1.5rem; border: 1px solid var(--line); border-radius: var(--card-radius);
+  background: var(--bg2); text-decoration: none; color: var(--fg);
+  transition: border-color 0.15s, background 0.15s;
+}
+a.home-section-card:hover { border-color: var(--accent); background: rgba(110,168,254,0.05); text-decoration: none; }
+.home-section-soon { opacity: 0.6; cursor: default; }
+.home-section-header {
+  display: flex; align-items: center; justify-content: space-between;
+}
+.home-section-symbol { width: 40px; height: 40px; }
+.home-section-symbol-dim { opacity: 0.4; }
+.home-section-badge {
+  font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;
+  padding: 0.15rem 0.45rem; border-radius: 3px;
+  background: rgba(74,222,128,0.15); color: var(--pos);
+}
+.home-section-badge-soon { background: rgba(139,143,153,0.15); color: var(--muted); }
+.home-section-title { margin: 0; font-size: 1.25rem; font-weight: 700; }
+.home-section-desc { margin: 0; color: var(--muted); font-size: 0.85rem; line-height: 1.55; flex: 1; }
+.home-section-cta { font-size: 0.82rem; color: var(--accent); font-weight: 600; margin-top: auto; }
+.home-section-cta-dim { color: var(--muted); }
+
+/* ── Page header with symbol (commander list) ── */
+.page-header {
+  display: flex; align-items: center; gap: 1rem; margin-bottom: 0.5rem;
+}
+.page-header-symbol { width: 40px; height: 40px; opacity: 0.8; }
+.page-header-title { margin: 0; font-size: 1.75rem; }
+
+/* ── Fetch error badge (commander list) ── */
+.fetch-error-badge {
+  display: inline-block; font-size: 0.68rem; font-weight: 600; color: var(--neg);
+  border: 1px solid var(--neg); border-radius: 3px; padding: 0.1rem 0.35rem;
+  margin-left: 0.35rem; vertical-align: middle; cursor: help;
+}
+
+/* ── Home category list (legacy, kept for safety) ── */
 .cat-list { list-style: none; padding: 0; }
 .cat-list li { padding: 0.75rem 1rem; border: 1px solid var(--line); border-radius: 6px; margin-bottom: 0.5rem; }
 
@@ -49,8 +114,25 @@ table.data th {
 }
 table.data th[data-sort] { cursor: pointer; }
 table.data th[data-sort]:hover { color: var(--fg); }
+table.data th[data-sort]::after { content: " ↕"; color: var(--line); font-size: 0.75em; }
+table.data th[data-sort][aria-sort="ascending"]::after  { content: " ↑"; color: var(--accent); }
+table.data th[data-sort][aria-sort="descending"]::after { content: " ↓"; color: var(--accent); }
 table.data th[title] { cursor: help; border-bottom: 1px dotted var(--muted); }
 table.data tr.excluded { opacity: 0.45; }
+
+/* ── List page controls (search + fee override) ── */
+.list-controls {
+  display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;
+  margin: 0.75rem 0 1rem;
+}
+.list-search-wrap { flex: 1 1 220px; }
+.list-search {
+  width: 100%; padding: 0.4rem 0.7rem; background: var(--bg2);
+  border: 1px solid var(--line); border-radius: 6px; color: var(--fg);
+  font-size: 0.92rem; outline: none;
+}
+.list-search:focus { border-color: var(--accent); }
+.fee-note { font-size: 0.78rem; }
 
 /* ── Summary stat cards (list page totals) ── */
 .totals { display: flex; flex-direction: column; gap: 0.5rem; margin: 1rem 0 1.5rem; }
@@ -130,7 +212,7 @@ td.muted { color: var(--muted); }
 td.warn { color: #c8932a; }
 th.st-col, td.st-col { border-left: 1px solid var(--line); }
 
-/* ── Scan modal ── */
+/* ── Scan modal (kept for potential future use) ── */
 .scan-modal {
   position: fixed; inset: 0; z-index: 200;
   background: rgba(0,0,0,0.7);

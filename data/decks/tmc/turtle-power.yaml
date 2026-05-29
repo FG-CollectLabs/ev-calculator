@@ -14,412 +14,494 @@ components:
     qty: 1
     name: "Leonardo, the Balance"
     tcgplayer_product_id: "657747"
+    tcgplayer_sku_id: "8957800"
     finish: f
   - display_key: mtg-tmc-2-f
     qty: 1
     name: "Donatello, the Brains"
     tcgplayer_product_id: "657752"
+    tcgplayer_sku_id: "8957995"
     finish: f
   - display_key: mtg-tmc-3-f
     qty: 1
     name: "Splinter, the Mentor"
     tcgplayer_product_id: "657756"
+    tcgplayer_sku_id: "8958135"
     finish: f
   - display_key: mtg-tmc-4-f
     qty: 1
     name: "Raphael, the Muscle"
     tcgplayer_product_id: "657760"
+    tcgplayer_sku_id: "8958300"
     finish: f
   - display_key: mtg-tmc-5-f
     qty: 1
     name: "Michelangelo, the Heart"
     tcgplayer_product_id: "657762"
+    tcgplayer_sku_id: "8958370"
     finish: f
   - display_key: mtg-tmc-6-f
     qty: 1
     name: Heroes in a Half Shell
     tcgplayer_product_id: "657766"
+    tcgplayer_sku_id: "8958580"
     finish: f
   # ── Non-foil — TMC ─────────────────────────────────────────────
   - display_key: mtg-tmc-7-nf
     qty: 1
     name: "Continue?"
-    tcgplayer_product_id: "679567"
+    tcgplayer_product_id: "680794"
+    tcgplayer_sku_id: "9152862"
     finish: nf
   - display_key: mtg-tmc-8-nf
     qty: 1
     name: Endless Foot Assault
     tcgplayer_product_id: "679568"
+    tcgplayer_sku_id: "9152902"
     finish: nf
   - display_key: mtg-tmc-9-nf
     qty: 1
     name: "April O'Neil, Live on the Scene"
     tcgplayer_product_id: "679572"
+    tcgplayer_sku_id: "9153082"
     finish: nf
   - display_key: mtg-tmc-10-nf
     qty: 1
     name: "Baxter, Fly in the Ointment"
     tcgplayer_product_id: "679089"
+    tcgplayer_sku_id: "9146076"
     finish: nf
   - display_key: mtg-tmc-11-nf
     qty: 1
     name: "Here Comes a New Hero!"
     tcgplayer_product_id: "679574"
+    tcgplayer_sku_id: "9153127"
     finish: nf
   - display_key: mtg-tmc-12-nf
     qty: 1
     name: "Irma, Part-Time Mutant"
     tcgplayer_product_id: "679576"
+    tcgplayer_sku_id: "9153207"
     finish: nf
   - display_key: mtg-tmc-13-nf
     qty: 1
     name: "Krang, the All-Powerful"
     tcgplayer_product_id: "679577"
+    tcgplayer_sku_id: "9153247"
     finish: nf
   - display_key: mtg-tmc-14-nf
     qty: 1
     name: "Ray Fillet, Wave Warrior"
     tcgplayer_product_id: "679578"
+    tcgplayer_sku_id: "9153287"
     finish: nf
   - display_key: mtg-tmc-15-nf
     qty: 1
     name: "Bebop, Skull & Crossbones"
     tcgplayer_product_id: "679582"
+    tcgplayer_sku_id: "9153447"
     finish: nf
   - display_key: mtg-tmc-16-nf
     qty: 1
     name: Dimension X Pizzasaur
     tcgplayer_product_id: "679583"
+    tcgplayer_sku_id: "9153487"
     finish: nf
   - display_key: mtg-tmc-17-nf
     qty: 1
     name: Foot Chopper
     tcgplayer_product_id: "679585"
+    tcgplayer_sku_id: "9153567"
     finish: nf
   - display_key: mtg-tmc-18-nf
     qty: 1
     name: Game Over
     tcgplayer_product_id: "679111"
+    tcgplayer_sku_id: "9146906"
     finish: nf
   - display_key: mtg-tmc-19-nf
     qty: 1
     name: "Rat King, Pale Piper"
     tcgplayer_product_id: "679586"
+    tcgplayer_sku_id: "9153607"
     finish: nf
   - display_key: mtg-tmc-20-nf
     qty: 1
     name: "Shredder, Shadow Master"
     tcgplayer_product_id: "679112"
+    tcgplayer_sku_id: "9146946"
     finish: nf
   - display_key: mtg-tmc-21-nf
     qty: 1
     name: Swift Demise
     tcgplayer_product_id: "679588"
+    tcgplayer_sku_id: "9153687"
     finish: nf
   - display_key: mtg-tmc-22-nf
     qty: 1
     name: "Casey Jones, Back Alley Brute"
     tcgplayer_product_id: "679589"
+    tcgplayer_sku_id: "9153727"
     finish: nf
   - display_key: mtg-tmc-23-nf
     qty: 1
     name: Electric Seaweed
     tcgplayer_product_id: "679135"
+    tcgplayer_sku_id: "9147721"
     finish: nf
   - display_key: mtg-tmc-24-nf
     qty: 1
     name: Fast Forward
     tcgplayer_product_id: "679591"
+    tcgplayer_sku_id: "9153807"
     finish: nf
   - display_key: mtg-tmc-25-nf
     qty: 1
     name: Shellshock
     tcgplayer_product_id: "679593"
+    tcgplayer_sku_id: "9153887"
     finish: nf
   - display_key: mtg-tmc-26-nf
     qty: 1
     name: Special Move
     tcgplayer_product_id: "679594"
+    tcgplayer_sku_id: "9153927"
     finish: nf
   - display_key: mtg-tmc-27-nf
     qty: 1
     name: "Tempestra, Dame of Games"
     tcgplayer_product_id: "679595"
+    tcgplayer_sku_id: "9153967"
     finish: nf
   - display_key: mtg-tmc-28-nf
     qty: 1
     name: "Tokka & Rahzar, Unsupervised"
     tcgplayer_product_id: "679597"
+    tcgplayer_sku_id: "9154047"
     finish: nf
   - display_key: mtg-tmc-29-nf
     qty: 1
     name: High Score
     tcgplayer_product_id: "679158"
+    tcgplayer_sku_id: "9148396"
     finish: nf
   - display_key: mtg-tmc-30-nf
     qty: 1
     name: "Leatherhead, Iron Gator"
     tcgplayer_product_id: "679235"
+    tcgplayer_sku_id: "9151137"
     finish: nf
   - display_key: mtg-tmc-31-nf
     qty: 1
     name: Level Up
     tcgplayer_product_id: "679160"
+    tcgplayer_sku_id: "9148441"
     finish: nf
   - display_key: mtg-tmc-32-nf
     qty: 1
     name: Ninja Pizza
     tcgplayer_product_id: "679161"
+    tcgplayer_sku_id: "9148481"
     finish: nf
   - display_key: mtg-tmc-33-nf
     qty: 1
     name: "Rocksteady, Mutant Marauder"
     tcgplayer_product_id: "679575"
+    tcgplayer_sku_id: "9153167"
     finish: nf
   - display_key: mtg-tmc-34-nf
     qty: 1
     name: Super Combo
     tcgplayer_product_id: "679579"
+    tcgplayer_sku_id: "9153327"
     finish: nf
   - display_key: mtg-tmc-35-nf
     qty: 1
     name: Double Jump // Flying Kick
     tcgplayer_product_id: "679604"
+    tcgplayer_sku_id: "9154347"
     finish: nf
   - display_key: mtg-tmc-36-nf
     qty: 1
     name: Arcade Cabinet
     tcgplayer_product_id: "679205"
+    tcgplayer_sku_id: "9150096"
     finish: nf
   - display_key: mtg-tmc-37-nf
     qty: 1
     name: Big Mother Mouser
     tcgplayer_product_id: "679602"
+    tcgplayer_sku_id: "9154267"
     finish: nf
   - display_key: mtg-tmc-38-nf
     qty: 1
     name: Coin of Mastery
     tcgplayer_product_id: "679603"
+    tcgplayer_sku_id: "9154307"
     finish: nf
   - display_key: mtg-tmc-39-nf
     qty: 1
     name: Exploding Barrel
     tcgplayer_product_id: "679608"
+    tcgplayer_sku_id: "9154472"
     finish: nf
   - display_key: mtg-tmc-40-nf
     qty: 1
     name: Mole Module
     tcgplayer_product_id: "679611"
+    tcgplayer_sku_id: "9154632"
     finish: nf
   - display_key: mtg-tmc-41-nf
     qty: 1
     name: Roadkill Rodney
     tcgplayer_product_id: "679612"
+    tcgplayer_sku_id: "9154672"
     finish: nf
   - display_key: mtg-tmc-42-nf
     qty: 1
     name: "Big Apple, 3 a.m."
     tcgplayer_product_id: "679613"
+    tcgplayer_sku_id: "9154712"
     finish: nf
   - display_key: mtg-tmc-43-nf
     qty: 1
     name: Hidden Hideout
     tcgplayer_product_id: "679615"
+    tcgplayer_sku_id: "9154812"
     finish: nf
   - display_key: mtg-tmc-44-nf
     qty: 1
     name: Together Forever
     tcgplayer_product_id: "679570"
+    tcgplayer_sku_id: "9152982"
     finish: nf
   - display_key: mtg-tmc-45-nf
     qty: 1
     name: Vanquish the Horde
     tcgplayer_product_id: "679571"
+    tcgplayer_sku_id: "9153022"
     finish: nf
   - display_key: mtg-tmc-46-nf
     qty: 1
     name: Wave Goodbye
     tcgplayer_product_id: "679580"
+    tcgplayer_sku_id: "9153367"
     finish: nf
   - display_key: mtg-tmc-47-nf
     qty: 1
     name: Blasphemous Act
     tcgplayer_product_id: "679599"
+    tcgplayer_sku_id: "9154127"
     finish: nf
   - display_key: mtg-tmc-48-nf
     qty: 1
     name: Marauding Mutagen - Acidic Slime
     tcgplayer_product_id: "679581"
+    tcgplayer_sku_id: "9153407"
     finish: nf
   - display_key: mtg-tmc-49-nf
     qty: 1
     name: Biogenic Ooze
     tcgplayer_product_id: "679584"
+    tcgplayer_sku_id: "9153527"
     finish: nf
   - display_key: mtg-tmc-50-nf
     qty: 1
     name: Cultivate
     tcgplayer_product_id: "679587"
+    tcgplayer_sku_id: "9153647"
     finish: nf
   - display_key: mtg-tmc-51-nf
     qty: 1
     name: Harmonize
     tcgplayer_product_id: "679590"
+    tcgplayer_sku_id: "9153767"
     finish: nf
   - display_key: mtg-tmc-52-nf
     qty: 1
     name: Slash Clone - Steelbane Hydra
     tcgplayer_product_id: "679592"
+    tcgplayer_sku_id: "9153847"
     finish: nf
   - display_key: mtg-tmc-53-nf
     qty: 1
     name: Heralds of the Shredder - Vigor
     tcgplayer_product_id: "679596"
+    tcgplayer_sku_id: "9154007"
     finish: nf
   - display_key: mtg-tmc-54-nf
     qty: 1
     name: Aggro Amalgam - Voracious Hydra
     tcgplayer_product_id: "679598"
+    tcgplayer_sku_id: "9154087"
     finish: nf
   - display_key: mtg-tmc-55-nf
     qty: 1
     name: "Assassin's Trophy"
     tcgplayer_product_id: "679605"
+    tcgplayer_sku_id: "9154387"
     finish: nf
   - display_key: mtg-tmc-56-nf
     qty: 1
     name: Humongous Fungus - Corpsejack Menace
     tcgplayer_product_id: "679606"
+    tcgplayer_sku_id: "9154427"
     finish: nf
   - display_key: mtg-tmc-57-nf
     qty: 1
     name: Arcane Signet
     tcgplayer_product_id: "679614"
+    tcgplayer_sku_id: "9154772"
     finish: nf
   - display_key: mtg-tmc-58-nf
     qty: 1
     name: Chromatic Lantern
     tcgplayer_product_id: "679616"
+    tcgplayer_sku_id: "9154852"
     finish: nf
   - display_key: mtg-tmc-59-nf
     qty: 1
     name: Sol Ring
     tcgplayer_product_id: "679619"
+    tcgplayer_sku_id: "9154972"
     finish: nf
   - display_key: mtg-tmc-60-nf
     qty: 1
     name: Ash Barrens
     tcgplayer_product_id: "679617"
+    tcgplayer_sku_id: "9154892"
     finish: nf
   - display_key: mtg-tmc-61-nf
     qty: 1
     name: Cinder Glade
     tcgplayer_product_id: "679618"
+    tcgplayer_sku_id: "9154932"
     finish: nf
   - display_key: mtg-tmc-62-nf
     qty: 1
     name: City of Brass
     tcgplayer_product_id: "679620"
+    tcgplayer_sku_id: "9155012"
     finish: nf
   - display_key: mtg-tmc-63-nf
     qty: 1
     name: Command Tower
     tcgplayer_product_id: "679621"
+    tcgplayer_sku_id: "9155052"
     finish: nf
   - display_key: mtg-tmc-64-nf
     qty: 1
     name: Dragonskull Summit
     tcgplayer_product_id: "679622"
+    tcgplayer_sku_id: "9155092"
     finish: nf
   - display_key: mtg-tmc-65-nf
     qty: 1
     name: Evolving Wilds
     tcgplayer_product_id: "679623"
+    tcgplayer_sku_id: "9155132"
     finish: nf
   - display_key: mtg-tmc-66-nf
     qty: 1
     name: Exotic Orchard
     tcgplayer_product_id: "679624"
+    tcgplayer_sku_id: "9155172"
     finish: nf
   - display_key: mtg-tmc-67-nf
     qty: 1
     name: Fabled Passage
     tcgplayer_product_id: "679625"
+    tcgplayer_sku_id: "9155212"
     finish: nf
   - display_key: mtg-tmc-68-nf
     qty: 1
     name: Grand Coliseum
     tcgplayer_product_id: "679626"
+    tcgplayer_sku_id: "9155252"
     finish: nf
   - display_key: mtg-tmc-69-nf
     qty: 1
     name: Hinterland Harbor
     tcgplayer_product_id: "679627"
+    tcgplayer_sku_id: "9155292"
     finish: nf
   - display_key: mtg-tmc-70-nf
     qty: 1
     name: Path of Ancestry
     tcgplayer_product_id: "679628"
+    tcgplayer_sku_id: "9155332"
     finish: nf
   - display_key: mtg-tmc-71-nf
     qty: 1
     name: Rain-Slicked Copse
     tcgplayer_product_id: "679629"
+    tcgplayer_sku_id: "9155372"
     finish: nf
   - display_key: mtg-tmc-72-nf
     qty: 1
     name: Rootbound Crag
     tcgplayer_product_id: "679630"
+    tcgplayer_sku_id: "9155412"
     finish: nf
   - display_key: mtg-tmc-73-nf
     qty: 1
     name: Smoldering Marsh
     tcgplayer_product_id: "679631"
+    tcgplayer_sku_id: "9155452"
     finish: nf
   - display_key: mtg-tmc-74-nf
     qty: 1
     name: Sodden Verdure
     tcgplayer_product_id: "679632"
+    tcgplayer_sku_id: "9155492"
     finish: nf
   - display_key: mtg-tmc-75-nf
     qty: 1
     name: Spire Garden
     tcgplayer_product_id: "679633"
+    tcgplayer_sku_id: "9155532"
     finish: nf
   - display_key: mtg-tmc-76-nf
     qty: 1
     name: Sunken Hollow
     tcgplayer_product_id: "679634"
+    tcgplayer_sku_id: "9155572"
     finish: nf
   - display_key: mtg-tmc-77-nf
     qty: 1
     name: Thriving Grove
     tcgplayer_product_id: "679635"
+    tcgplayer_sku_id: "9155612"
     finish: nf
   - display_key: mtg-tmc-78-nf
     qty: 1
     name: Thriving Isle
     tcgplayer_product_id: "679636"
+    tcgplayer_sku_id: "9155652"
     finish: nf
   - display_key: mtg-tmc-79-nf
     qty: 1
     name: Thriving Moor
     tcgplayer_product_id: "679637"
+    tcgplayer_sku_id: "9155692"
     finish: nf
   - display_key: mtg-tmc-80-nf
     qty: 1
     name: Undergrowth Stadium
     tcgplayer_product_id: "679638"
+    tcgplayer_sku_id: "9155732"
     finish: nf
   - display_key: mtg-tmc-81-nf
     qty: 1
     name: Vernal Fen
     tcgplayer_product_id: "679639"
+    tcgplayer_sku_id: "9155772"
     finish: nf
   - display_key: mtg-tmc-82-nf
     qty: 1
     name: Vibrant Cityscape
     tcgplayer_product_id: "679640"
+    tcgplayer_sku_id: "9155812"
     finish: nf
   # ── Non-foil — TMT ─────────────────────────────────────────────
   - display_key: mtg-tmt-19-nf
@@ -431,11 +513,13 @@ components:
     qty: 1
     name: "Mona Lisa, Science Geek"
     tcgplayer_product_id: "679569"
+    tcgplayer_sku_id: "9152942"
     finish: nf
   - display_key: mtg-tmt-155-nf
     qty: 1
     name: Lessons from Life
     tcgplayer_product_id: "679600"
+    tcgplayer_sku_id: "9154167"
     finish: nf
   - display_key: mtg-tmt-173-nf
     qty: 1
@@ -446,11 +530,13 @@ components:
     qty: 1
     name: Escape Tunnel
     tcgplayer_product_id: "679609"
+    tcgplayer_sku_id: "9154512"
     finish: nf
   - display_key: mtg-tmt-190-nf
     qty: 1
     name: Turtle Lair
     tcgplayer_product_id: "679610"
+    tcgplayer_sku_id: "9154572"
     finish: nf
   - display_key: mtg-tmt-315-nf
     qty: 2
@@ -465,7 +551,8 @@ components:
   - display_key: mtg-tmt-317-nf
     qty: 2
     name: Swamp
-    tcgplayer_product_id: "679227"
+    tcgplayer_product_id: "657786"
+    tcgplayer_sku_id: "9150976"
     finish: nf
   - display_key: mtg-tmt-318-nf
     qty: 2

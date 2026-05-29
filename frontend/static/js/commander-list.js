@@ -1,9 +1,18 @@
-// Renders the index table of available displays.
-// Calls /v1/ev/displays for the list, then fans out one report fetch per
-// row to populate case cost / singles net / best scenario delta columns.
+// Renders the index table of available displays with search, sort, and fee override.
 (async function() {
-  const $tbody = document.querySelector("#displays tbody");
+  const $tbody   = document.querySelector("#displays tbody");
+  const $search  = document.getElementById("list-search");
+  const $fee     = document.getElementById("fee-override");
+  const $headers = document.querySelectorAll("#displays thead th[data-sort]");
 
+  const SCRYFALL_SETS = "https://c2.scryfall.com/file/scryfall-symbols/sets/";
+
+  // ── State ─────────────────────────────────────────────────────────────────
+  let allData  = [];  // [{d, report, gross, error}]
+  let sortCol  = null;
+  let sortAsc  = true;
+
+  // ── Data loading ──────────────────────────────────────────────────────────
   async function loadIndex() {
     const r = await fetch(EV.api("/v1/ev/displays"));
     if (!r.ok) throw new Error("displays index: " + r.status);
@@ -12,56 +21,194 @@
 
   async function loadReport(key) {
     const r = await fetch(EV.api("/v1/ev/displays/" + encodeURIComponent(key)));
-    if (!r.ok) throw new Error("display " + key + ": " + r.status);
+    if (!r.ok) throw new Error("HTTP " + r.status);
     return await r.json();
   }
 
-  function renderRow(d, report) {
-    const href = "../commander/display/?key=" + encodeURIComponent(d.key);
-    const caseCost   = report ? report.case_cost_cents       : null;
-    const singlesNet = report ? report.singles_net_cents      : null;
-    const sealedNet  = report ? report.sealed_decks_net_cents : null;
-    // Show whichever scenario is best (or singles if no case cost).
-    const best        = report ? report.best_scenario : null;
-    const bestDelta   = best === "sealed_decks" ? (report ? report.sealed_decks_delta_cents : null)
-                                                : (report ? report.singles_delta_cents      : null);
-    const bestPct     = best === "sealed_decks" ? (report ? report.sealed_decks_delta_pct  : null)
-                                                : (report ? report.singles_delta_pct        : null);
-    const bestLabel   = best === "sealed_decks" ? "Sealed decks" : best === "singles" ? "Singles" : "—";
-
-    return `
-      <tr>
-        <td><a href="${href}">${d.name}</a><div class="subtle">${d.game} · ${d.set_code.toUpperCase()}</div></td>
-        <td class="right">${d.total_copies}</td>
-        <td class="right">${EV.fmtUSD(caseCost)}</td>
-        <td class="right">${EV.fmtUSD(singlesNet)}</td>
-        <td class="right">${EV.fmtUSD(sealedNet)}</td>
-        <td class="right ${EV.deltaClass(bestDelta)}">${EV.fmtUSD(bestDelta)}</td>
-        <td class="right ${EV.deltaClass(bestDelta)}">${EV.fmtPct(bestPct)}</td>
-        <td class="subtle">${bestLabel}</td>
-      </tr>`;
+  // Sum raw market value for all included line items across all decks.
+  function computeGross(report) {
+    let gross = 0;
+    for (const deck of report?.decks || []) {
+      for (const li of deck.line_items || []) {
+        if (li.included_in_ev && li.market_price_cents) {
+          gross += li.market_price_cents * (li.qty || 1);
+        }
+      }
+    }
+    return gross || null;
   }
 
+  // ── Fee helpers ───────────────────────────────────────────────────────────
+  function feeOverridePct() {
+    const v = parseFloat($fee.value);
+    return isFinite(v) && v >= 0 ? v : null;
+  }
+
+  function singlesNet(item) {
+    const fee = feeOverridePct();
+    if (fee !== null && item.gross !== null) {
+      return Math.round(item.gross * (1 - fee / 100));
+    }
+    return item.report?.singles_net_cents ?? null;
+  }
+
+  // ── Sort helpers ──────────────────────────────────────────────────────────
+  function rowValue(item, col) {
+    const NONE = sortAsc ? Infinity : -Infinity;
+    switch (col) {
+      case "name":    return item.d.name.toLowerCase();
+      case "copies":  return item.d.total_copies ?? NONE;
+      case "case":    return item.report?.case_cost_cents ?? NONE;
+      case "singles": return singlesNet(item) ?? NONE;
+      case "sealed":  return item.report?.sealed_decks_net_cents ?? NONE;
+      case "delta": {
+        const sn = singlesNet(item), sd = item.report?.sealed_decks_net_cents, cc = item.report?.case_cost_cents;
+        const best = Math.max(sn ?? -Infinity, sd ?? -Infinity);
+        return (cc && best > -Infinity) ? best - cc : NONE;
+      }
+      case "pct": {
+        const sn = singlesNet(item), sd = item.report?.sealed_decks_net_cents, cc = item.report?.case_cost_cents;
+        const best = Math.max(sn ?? -Infinity, sd ?? -Infinity);
+        return (cc && best > -Infinity) ? (best - cc) / cc : NONE;
+      }
+      default: return NONE;
+    }
+  }
+
+  function updateSortHeaders() {
+    $headers.forEach(th => {
+      const col = th.dataset.sort;
+      th.removeAttribute("aria-sort");
+      if (col === sortCol) th.setAttribute("aria-sort", sortAsc ? "ascending" : "descending");
+    });
+  }
+
+  // ── Render ────────────────────────────────────────────────────────────────
+  function setSymbolCell(setCode) {
+    const url = SCRYFALL_SETS + setCode + ".svg";
+    return `<td class="center" style="padding:0.3rem 0.5rem">
+      <img src="${url}" height="22" width="22" alt="${setCode.toUpperCase()}" title="${setCode.toUpperCase()}"
+           style="display:block;margin:0 auto;opacity:0.85" onerror="this.style.opacity='0.2'">
+    </td>`;
+  }
+
+  function renderRow(item) {
+    if (!item) return "";
+    const {d, report, error} = item;
+    const href      = "../commander/display/?key=" + encodeURIComponent(d.key);
+    const caseCost  = report?.case_cost_cents ?? null;
+    const sn        = singlesNet(item);
+    const sd        = report?.sealed_decks_net_cents ?? null;
+
+    // Error state: show the display name + error badge, dashes for data.
+    if (error && !report) {
+      return `<tr>
+        ${setSymbolCell(d.set_code)}
+        <td><a href="${href}">${d.name}</a>
+          <div class="subtle">${d.game} · ${d.set_code.toUpperCase()}</div>
+          <span class="fetch-error-badge" title="${error}">⚠ fetch failed</span>
+        </td>
+        <td class="right">${d.total_copies}</td>
+        <td class="right muted">—</td>
+        <td class="right muted">—</td>
+        <td class="right muted">—</td>
+        <td class="right muted">—</td>
+        <td class="right muted">—</td>
+        <td class="subtle muted">—</td>
+      </tr>`;
+    }
+
+    // Recompute best scenario with current fee applied.
+    let bestDelta = null, bestPct = null, bestLabel = "—";
+    const snVal = sn ?? -Infinity;
+    const sdVal = sd ?? -Infinity;
+    if (snVal > -Infinity || sdVal > -Infinity) {
+      const singlesWins = snVal >= sdVal;
+      const bestNet     = singlesWins ? sn : sd;
+      bestLabel         = singlesWins ? "Singles" : "Sealed decks";
+      if (caseCost && bestNet !== null) {
+        bestDelta = bestNet - caseCost;
+        bestPct   = bestDelta / caseCost;
+      }
+    }
+
+    const feeNote = feeOverridePct() !== null ? ` <span class="subtle fee-note">(${feeOverridePct()}% fee)</span>` : "";
+
+    return `<tr>
+      ${setSymbolCell(d.set_code)}
+      <td><a href="${href}">${d.name}</a><div class="subtle">${d.game} · ${d.set_code.toUpperCase()}</div></td>
+      <td class="right">${d.total_copies}</td>
+      <td class="right">${EV.fmtUSD(caseCost)}</td>
+      <td class="right">${EV.fmtUSD(sn)}${feeNote}</td>
+      <td class="right">${EV.fmtUSD(sd)}</td>
+      <td class="right ${EV.deltaClass(bestDelta)}">${EV.fmtUSD(bestDelta)}</td>
+      <td class="right ${EV.deltaClass(bestDelta)}">${EV.fmtPct(bestPct)}</td>
+      <td class="subtle">${bestLabel}</td>
+    </tr>`;
+  }
+
+  function render() {
+    const q = $search.value.trim().toLowerCase();
+    let rows = q ? allData.filter(item => item.d.name.toLowerCase().includes(q)) : allData.slice();
+
+    if (sortCol) {
+      rows.sort((a, b) => {
+        const av = rowValue(a, sortCol);
+        const bv = rowValue(b, sortCol);
+        if (typeof av === "string") return sortAsc ? av.localeCompare(bv) : bv.localeCompare(av);
+        return sortAsc ? av - bv : bv - av;
+      });
+    }
+
+    $tbody.innerHTML = rows.length
+      ? rows.map(renderRow).join("")
+      : `<tr><td colspan="9" class="subtle" style="padding:1rem">No results.</td></tr>`;
+
+    updateSortHeaders();
+  }
+
+  // ── Event wiring ──────────────────────────────────────────────────────────
+  $search.addEventListener("input", render);
+  $fee.addEventListener("input", render);
+
+  $headers.forEach(th => {
+    th.addEventListener("click", () => {
+      const col = th.dataset.sort;
+      if (sortCol === col) {
+        sortAsc = !sortAsc;
+      } else {
+        sortCol = col;
+        sortAsc = col === "name"; // text sorts A→Z first; numbers sort high→low first
+      }
+      render();
+    });
+  });
+
+  // ── Bootstrap ─────────────────────────────────────────────────────────────
   let displays;
   try {
     displays = await loadIndex();
   } catch (e) {
-    $tbody.innerHTML = `<tr><td colspan="8" class="error">Index failed: ${e.message}</td></tr>`;
+    $tbody.innerHTML = `<tr><td colspan="9" class="error">Index failed: ${e.message}</td></tr>`;
     return;
   }
   if (displays.length === 0) {
-    $tbody.innerHTML = `<tr><td colspan="8" class="loading">No displays defined.</td></tr>`;
+    $tbody.innerHTML = `<tr><td colspan="9" class="loading">No displays defined.</td></tr>`;
     return;
   }
 
-  $tbody.innerHTML = displays.map(d => renderRow(d, null)).join("");
-  await Promise.all(displays.map(async (d, i) => {
+  // Render stub rows immediately, then fill in data as each report loads.
+  allData = displays.map(d => ({ d, report: null, gross: null, error: null }));
+  $tbody.innerHTML = allData.map(renderRow).join("");
+
+  await Promise.all(allData.map(async (item) => {
     try {
-      const report = await loadReport(d.key);
-      $tbody.children[i].outerHTML = renderRow(d, report);
+      item.report = await loadReport(item.d.key);
+      item.gross  = computeGross(item.report);
     } catch (e) {
-      const cols = $tbody.children[i].cells.length;
-      $tbody.children[i].innerHTML = `<td class="error" colspan="${cols}">${e.message}</td>`;
+      item.error = e.message;
     }
+    // Re-render the whole table after each report arrives so sort/filter stay consistent.
+    render();
   }));
 })();

@@ -1,21 +1,38 @@
 {{ define "main" }}
-<h1>Magic Commander</h1>
-<p class="subtle">Buy a case → compare sealing-and-flipping each deck vs. cracking for singles. All prices after TCGPlayer fees.</p>
+<div class="page-header">
+  <img src="https://c2.scryfall.com/file/scryfall-symbols/sets/cmd.svg" class="page-header-symbol" alt="">
+  <div>
+    <h1 class="page-header-title">Commander Decks</h1>
+    <p class="subtle">Buy a case → compare sealing-and-flipping each deck vs. cracking for singles. All prices after TCGPlayer fees.</p>
+  </div>
+</div>
+
+<div class="list-controls">
+  <div class="list-search-wrap">
+    <input id="list-search" class="list-search" type="search" placeholder="Search displays…" autocomplete="off">
+  </div>
+  <div class="settings-input-group" title="Override the sell fee % applied to singles market prices. Leave blank to use the default TCGPlayer Direct fee profile.">
+    <span class="settings-input-prefix">Fee override</span>
+    <input id="fee-override" class="settings-input" type="number" min="0" max="100" step="0.5" placeholder="—">
+    <span class="settings-input-suffix">%</span>
+  </div>
+</div>
 
 <table id="displays" class="data">
   <thead>
     <tr>
-      <th>Display</th>
-      <th class="right">Decks</th>
-      <th class="right" title="What you pay to acquire the sealed case (market price). Used as the buy-side cost for delta calculations.">Case cost</th>
-      <th class="right" title="Total card value across all decks after selling singles and applying TCGPlayer Direct fees. Assumes you sell every card above the low-value floor.">Singles net</th>
-      <th class="right" title="Revenue if you resell each sealed deck individually on the secondary market, after applying sell fees.">Sealed decks net</th>
-      <th class="right" title="Best scenario net revenue minus case cost. Positive = profitable flip.">Best delta</th>
-      <th class="right" title="Best delta as a percentage of case cost.">%</th>
+      <th style="width:2.5rem"></th>
+      <th data-sort="name">Display</th>
+      <th class="right" data-sort="copies">Decks</th>
+      <th class="right" data-sort="case" title="What you pay to acquire the sealed case (market price). Used as the buy-side cost for delta calculations.">Case cost</th>
+      <th class="right" data-sort="singles" title="Total card value across all decks after sell fees. With fee override, uses market price × (1 − fee%).">Singles net</th>
+      <th class="right" data-sort="sealed" title="Revenue if you resell each sealed deck individually on the secondary market, after applying sell fees.">Sealed decks net</th>
+      <th class="right" data-sort="delta" title="Best scenario net revenue minus case cost. Positive = profitable flip.">Best delta</th>
+      <th class="right" data-sort="pct" title="Best delta as a percentage of case cost.">%</th>
       <th title="Whether selling sealed decks or cracking for singles produces a higher net return.">Best scenario</th>
     </tr>
   </thead>
-  <tbody><tr><td colspan="8" class="loading">Loading…</td></tr></tbody>
+  <tbody><tr><td colspan="9" class="loading">Loading…</td></tr></tbody>
 </table>
 {{ end }}
 
