@@ -664,7 +664,10 @@
     switch (activePlat) {
       case "tcgplayer": {
         if (tcgPricingMode() === "capture-pct") {
-          listing = tierListingCents(market, tcgCapturePct() / 100, "tcgplayer");
+          const capListing = tierListingCents(market, tcgCapturePct() / 100, "tcgplayer");
+          // If back-calculated listing exceeds 2× market, supplies dominate the card value —
+          // fall back to market price so the listing is realistic (net will be negative).
+          listing = capListing > market * 2 ? market : capListing;
         } else if (tcgPricingMode() === "tiered") {
           listing = tcgTieredListing(market);
         } else if (tcgPricingMode() === "beat-lowest") {
@@ -734,7 +737,6 @@
   function computeDeckNet(d) {
     let total = 0;
     for (const li of d.line_items || []) {
-      if (!li.included_in_ev) continue;
       if (userExcluded.get(String(li.tcgplayer_product_id || ""))) continue;
       const listing = platformListingPrice(li);
       const net     = platformNet(li);
@@ -769,7 +771,6 @@
     let total = 0;
     for (const d of report.decks || []) {
       for (const li of d.line_items || []) {
-        if (!li.included_in_ev) continue;
         const pid = String(li.tcgplayer_product_id || "");
         if (userExcluded.get(pid)) continue;
         if (!li.market_price_cents) continue;
@@ -1079,9 +1080,9 @@
       const forceExclude = userExcluded.get(pid);
       const forceInclude = userIncluded.get(pid);
       const filtered     = !forceInclude && autoFiltered(li, listing);
-      const exportOn     = forceExclude ? false : forceInclude ? true : li.included_in_ev && !filtered && listing != null;
-      const evIcon  = forceInclude ? "✓" : filtered ? "⊘" : !li.included_in_ev ? "—" : exportOn ? "✓" : "—";
-      const evClass = forceExclude ? "ev-override-off" : forceInclude ? "ev-override-on" : filtered ? "ev-filtered" : !li.included_in_ev ? "ev-filtered" : "";
+      const exportOn     = forceExclude ? false : forceInclude ? true : !filtered && listing != null;
+      const evIcon  = forceInclude ? "✓" : filtered ? "⊘" : forceExclude ? "⊘" : exportOn ? "✓" : "—";
+      const evClass = forceExclude ? "ev-override-off" : forceInclude ? "ev-override-on" : filtered ? "ev-filtered" : "";
 
       const st = li.sellthrough;
 
@@ -1117,7 +1118,7 @@
         ? `title="Revenue ${EV.fmtUSD(revenue)} − supplies ${EV.fmtUSD(physicalSuppliesCents(activePlat))} = ${EV.fmtUSD(net)}"`
         : "";
 
-      const rowClass = forceExclude ? "excluded" : filtered ? "filtered" : li.included_in_ev ? "" : "excluded";
+      const rowClass = forceExclude ? "excluded" : filtered ? "filtered" : "";
       return `<tr class="${rowClass}" data-pid="${pid}">
         <td class="ev-toggle ${evClass}" data-pid="${pid}" title="Toggle inclusion" style="cursor:pointer;text-align:center">${evIcon}</td>
         <td class="img-cell center">${stockSrc ? `<img src="${stockSrc}" class="card-thumb" loading="lazy" alt="">` : "—"}</td>
@@ -1357,7 +1358,7 @@
   // Intended to feed listing prices into the Box Break App.
   function buildPriceListCSV() {
     const header = ["TCGplayer Id","Card Name","Listing Price"];
-    const rows   = [header];
+    const rows   = [];
     const seen   = new Set();
 
     for (const d of report.decks || []) {
@@ -1372,7 +1373,7 @@
     }
 
     rows.sort((a, b) => a[1].localeCompare(b[1]));
-    const csv = rows.map(r => r.map(v => `"${String(v).replace(/"/g, '""')}"`).join(",")).join("\r\n");
+    const csv = [header, ...rows].map(r => r.map(v => `"${String(v).replace(/"/g, '""')}"`).join(",")).join("\r\n");
     downloadText(csv, `price-list-${report.key || "case"}.csv`, "text/csv");
   }
 
@@ -1383,7 +1384,6 @@
 
     for (const d of report.decks || []) {
       for (const li of d.line_items || []) {
-        if (!li.included_in_ev) continue;
         const pid = String(li.tcgplayer_product_id || "");
         if (!pid) continue;
         if (userExcluded.get(pid)) continue;
