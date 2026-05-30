@@ -118,7 +118,7 @@ table.data th[data-sort]::after { content: " ↕"; color: var(--line); font-size
 table.data th[data-sort][aria-sort="ascending"]::after  { content: " ↑"; color: var(--accent); }
 table.data th[data-sort][aria-sort="descending"]::after { content: " ↓"; color: var(--accent); }
 table.data th[title] { cursor: help; border-bottom: 1px dotted var(--muted); }
-table.data tr.excluded { opacity: 0.45; }
+table.data tr.excluded { opacity: 0.55; }
 
 /* ── List page controls (search + fee override) ── */
 .list-controls {
@@ -206,7 +206,7 @@ td.muted { color: var(--muted); }
 .ev-override-on  { color: var(--pos); font-weight: 700; }
 .ev-override-off { color: var(--neg); }
 .ev-filtered     { color: var(--muted); }
-table.data tr.filtered { opacity: 0.35; }
+table.data tr.filtered { opacity: 0.75; }
 
 /* ── Sellthrough columns ── */
 .st-badge {

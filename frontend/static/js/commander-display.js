@@ -1079,9 +1079,9 @@
       const forceExclude = userExcluded.get(pid);
       const forceInclude = userIncluded.get(pid);
       const filtered     = !forceInclude && autoFiltered(li, listing);
-      const exportOn     = forceExclude ? false : forceInclude ? true : !filtered && listing != null;
-      const evIcon  = forceInclude ? "✓" : filtered ? "⊘" : exportOn ? "✓" : "—";
-      const evClass = forceExclude ? "ev-override-off" : forceInclude ? "ev-override-on" : filtered ? "ev-filtered" : "";
+      const exportOn     = forceExclude ? false : forceInclude ? true : li.included_in_ev && !filtered && listing != null;
+      const evIcon  = forceInclude ? "✓" : filtered ? "⊘" : !li.included_in_ev ? "—" : exportOn ? "✓" : "—";
+      const evClass = forceExclude ? "ev-override-off" : forceInclude ? "ev-override-on" : filtered ? "ev-filtered" : !li.included_in_ev ? "ev-filtered" : "";
 
       const st = li.sellthrough;
 
