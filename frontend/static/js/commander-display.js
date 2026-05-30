@@ -968,7 +968,11 @@
         ${decksBuyCost ? decksCard : ""}
       </div>`;
 
-    $grid.innerHTML = (report.decks || []).map(buildDeckCard).join("");
+    try {
+      $grid.innerHTML = (report.decks || []).map(buildDeckCard).join("");
+    } catch (err) {
+      $grid.innerHTML = `<div style="color:red;padding:1rem">Render error: ${err.message}<br><pre style="font-size:0.75rem;white-space:pre-wrap">${err.stack}</pre></div>`;
+    }
 
     collapsedDecks.forEach(key => {
       const card = $grid.querySelector(`.deck-card[data-deck-key="${key}"]`);
