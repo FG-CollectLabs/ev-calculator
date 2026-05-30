@@ -36,7 +36,9 @@
   };
 
   // Default supply costs in cents per platform. Same defaults across all platforms.
-  const PKG_DEFAULT_SUPPLIES = { stamp:73, envelope:8, "card-saver":8, "penny-sleeve":1, label:2, "packing-slip":2, sticker:1 };
+  const PKG_DEFAULT_SUPPLIES = { stamp:73, envelope:3, "card-saver":8, "penny-sleeve":1, label:1, "packing-slip":2, sticker:1 };
+  // Per-envelope-type cost defaults (cents): no-window $15/500, window $18.50/250
+  const ENV_COST = { "no-window": 3, window: 7 };
   // Supply input ids per platform (id → supply key)
   const PKG_SUPPLY_IDS = {
     tcgplayer: { stamp:"tcg-s-stamp", envelope:"tcg-s-envelope", "card-saver":"tcg-s-card-saver", "penny-sleeve":"tcg-s-penny-sleeve", label:"tcg-s-label", "packing-slip":"tcg-s-packing-slip", sticker:"tcg-s-sticker" },
@@ -410,8 +412,13 @@
   });
   document.querySelectorAll("#tcg-env-toggle .plat-btn").forEach(btn => {
     btn.addEventListener("click", () => {
-      const saved = lsGetJSON(LS.pkgEnv, {}); saved.tcgplayer = btn.dataset.env; lsSetJSON(LS.pkgEnv, saved);
-      setEnvToggle("tcg-env-toggle", btn.dataset.env);
+      const envType = btn.dataset.env;
+      const saved = lsGetJSON(LS.pkgEnv, {}); saved.tcgplayer = envType; lsSetJSON(LS.pkgEnv, saved);
+      setEnvToggle("tcg-env-toggle", envType);
+      // Auto-populate envelope cost with canonical default for this type
+      const envEl = document.getElementById("tcg-s-envelope");
+      if (envEl) { envEl.value = (ENV_COST[envType] / 100).toFixed(2); saveSupplies("tcgplayer"); }
+      updateSupplyTotal("tcgplayer"); renderDecks();
     });
   });
 
