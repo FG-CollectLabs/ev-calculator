@@ -968,11 +968,7 @@
         ${decksBuyCost ? decksCard : ""}
       </div>`;
 
-    try {
-      $grid.innerHTML = (report.decks || []).map(buildDeckCard).join("");
-    } catch (err) {
-      $grid.innerHTML = `<div style="color:red;padding:1rem">Render error: ${err.message}<br><pre style="font-size:0.75rem;white-space:pre-wrap">${err.stack}</pre></div>`;
-    }
+    $grid.innerHTML = (report.decks || []).map(buildDeckCard).join("");
 
     collapsedDecks.forEach(key => {
       const card = $grid.querySelector(`.deck-card[data-deck-key="${key}"]`);
@@ -1108,7 +1104,7 @@
           : `title="No Direct data — using market price ${EV.fmtUSD(li.market_price_cents)}"`;
       } else if (tcgMode === "capture-pct" && listing != null) {
         const pct = tcgCapturePct();
-        listTip = `title="Capture ${pct}% of market ${EV.fmtUSD(market)} after fees & supplies → list ${EV.fmtUSD(listing)}"`;
+        listTip = `title="Capture ${pct}% of market ${EV.fmtUSD(li.market_price_cents)} after fees & supplies → list ${EV.fmtUSD(listing)}"`;
       }
 
       const saleTip = shipAmt > 0
