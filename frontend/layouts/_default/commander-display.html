@@ -72,6 +72,14 @@
       <input class="settings-input" id="case-cost" type="number" min="0" step="0.01" placeholder="0.00">
     </div>
   </div>
+  <div class="settings-row">
+    <span class="settings-label" title="Minimum take-home per card after all marketplace fees and packaging costs. Sets a floor on List $; market+offset wins when higher.">Target net/card</span>
+    <div class="settings-input-group">
+      <span class="settings-input-prefix">$</span>
+      <input class="settings-input" id="target-net-value" type="number" min="0" step="0.01" placeholder="off" style="width:5rem">
+    </div>
+    <span class="muted target-net-hint" id="target-net-hint"></span>
+  </div>
 
   <!-- Packaging & Fees -->
   <details class="settings-details" id="pkg-details">

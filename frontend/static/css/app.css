@@ -592,6 +592,9 @@ table.cards th, table.cards td { padding: 0.4rem 0.6rem; }
 .prose li { margin-bottom: 0.4rem; }
 .prose .note { color: var(--muted); font-size: 0.88rem; font-style: italic; margin-top: 2rem; }
 
+/* ── Target net hint ── */
+.target-net-hint { font-size: 0.78rem; margin-left: 0.5rem; white-space: nowrap; }
+
 /* ── Commander list: set product image ── */
 .set-img-cell { width: 3rem; padding: 0.2rem 0.4rem; vertical-align: middle; }
 .set-prod-img { height: 44px; width: auto; display: block; margin: 0 auto; border-radius: 3px; object-fit: contain; }

@@ -102,6 +102,7 @@
       document.querySelectorAll("#platform-toggle .plat-btn")
         .forEach(b => b.classList.toggle("active", b === btn));
       updateStrategyPanel();
+      updateTargetNetHint();
       renderDecks();
     });
   });
@@ -192,12 +193,50 @@
   // Total packaging cost per card: supplies + postage if seller pays it.
   function packagingCostCents(plat) {
     const supplies = packagingSupplyCents(plat);
-    // Postage is already included in supply inputs when seller pays shipping.
-    // If buyer pays, zero out the stamp portion.
-    if (!sellerPaysPostage(plat)) {
-      return supplies - postageCents(plat);
-    }
+    if (!sellerPaysPostage(plat)) return supplies - postageCents(plat);
     return supplies;
+  }
+
+  // Fraction of listing price kept after marketplace fees (before packaging).
+  function keepRate(plat) {
+    switch (plat) {
+      case "tcgplayer": return 0.8675; // 10.75% + 2.5%
+      case "manapool":  return 0.92;   // 8%
+      case "ebay":      return 0.8675; // 13.25% (+ $0.30 flat handled separately)
+      default:          return 0.8675;
+    }
+  }
+
+  // Per-order flat fee in cents (applied per card as an approximation).
+  function perOrderFlat(plat) {
+    return plat === "ebay" ? 30 : 0;
+  }
+
+  // Net from a given listing price for a platform (fees only, before packaging).
+  function netFromListing(listingCents, plat) {
+    return Math.round(listingCents * keepRate(plat)) - perOrderFlat(plat);
+  }
+
+  // Minimum listing price to achieve targetNetCents after fees AND packaging.
+  function requiredListingCents(plat) {
+    const tn  = targetNetCents();
+    if (tn <= 0) return 0;
+    const pkg = packagingCostCents(plat);
+    return Math.ceil((tn + pkg + perOrderFlat(plat)) / keepRate(plat));
+  }
+
+  function targetNetCents() {
+    const v = parseFloat(document.getElementById("target-net-value")?.value || "");
+    return isNaN(v) || v <= 0 ? 0 : Math.round(v * 100);
+  }
+
+  function updateTargetNetHint() {
+    const hint = document.getElementById("target-net-hint");
+    if (!hint) return;
+    const req = requiredListingCents(activePlat);
+    hint.textContent = req > 0
+      ? `→ list ≥ ${EV.fmtUSD(req)} on ${({tcgplayer:"TCGPlayer",manapool:"Manapool",ebay:"eBay"})[activePlat]}`
+      : "";
   }
 
   // Update live supply total display for a platform.
@@ -288,6 +327,7 @@
       document.getElementById(id)?.addEventListener("input", () => {
         saveSupplies(plat);
         updateSupplyTotal(plat);
+        updateTargetNetHint();
         renderDecks();
       });
     }
@@ -334,6 +374,18 @@
 
   loadSupplies();
 
+  // Target net input
+  const $targetNet = document.getElementById("target-net-value");
+  if ($targetNet) {
+    $targetNet.value = lsGet("ev_target_net", "");
+    $targetNet.addEventListener("input", function() {
+      lsSet("ev_target_net", this.value);
+      updateTargetNetHint();
+      renderDecks();
+    });
+  }
+  updateTargetNetHint();
+
   // ── Pricing helpers ────────────────────────────────────────────────────────
 
   function tcgOffsetType()  { return document.getElementById("tcg-offset-type").value; }
@@ -342,17 +394,23 @@
   function platformListingPrice(li) {
     if (!li.market_price_cents) return null;
     const market = li.market_price_cents;
+    let listing;
     switch (activePlat) {
       case "tcgplayer": {
         const ov = tcgOffsetValue();
-        return tcgOffsetType() === "pct"
+        listing = tcgOffsetType() === "pct"
           ? Math.round(market * (1 + ov / 100))
           : market + Math.round(ov * 100);
+        break;
       }
-      case "manapool": return market;
-      case "ebay":     return ebayListingPrice(market, ebayMode);
-      default:         return market;
+      case "manapool": listing = market; break;
+      case "ebay":     listing = ebayListingPrice(market, ebayMode); break;
+      default:         listing = market;
     }
+    // Apply target-net floor: bump up listing if needed to achieve target net.
+    const floor = requiredListingCents(activePlat);
+    if (floor > 0 && listing != null) listing = Math.max(listing, floor);
+    return listing;
   }
 
   function platformNetBeforePkg(li) {
@@ -376,9 +434,17 @@
   }
 
   function platformNet(li) {
+    const listing = platformListingPrice(li);
+    if (listing == null) return null;
+    const pkg = packagingCostCents(activePlat);
+    // When target-net mode is active, derive net from the (possibly floored) listing price
+    // so the Net column reflects exactly what you'd make at that price.
+    if (targetNetCents() > 0) {
+      return netFromListing(listing, activePlat) - pkg;
+    }
     const feesNet = platformNetBeforePkg(li);
     if (feesNet == null) return null;
-    return feesNet - packagingCostCents(activePlat);
+    return feesNet - pkg;
   }
 
   function siftThresholdCents() {
@@ -705,29 +771,35 @@
       </tr>`;
     }).join("");
 
-    const listingTh = `<th class="right" title="Price you would list at on ${activePlat} given your pricing strategy">List $</th>`;
+    const platFeeNote = {
+      tcgplayer: "10.75% marketplace + 2.5% payment = 13.25%, minus packaging costs",
+      manapool:  "8% seller fee, minus packaging costs",
+      ebay:      "13.25% FVF + $0.30/order, minus packaging costs",
+    }[activePlat] || "";
+    const tnActive = targetNetCents() > 0;
+    const listingTh = `<th class="right" title="Your listing price on ${activePlat}. ${tnActive ? `Target-net floor active — bumped up where needed to hit your target net after fees &amp; packaging.` : `Set via Market ± offset. Enable Target net/card to set a floor.`}">List $</th>`;
 
     return `
       <div class="deck-singles">
         <div class="singles-table-wrap">
           <table class="data cards">
             <thead><tr>
-              <th title="Toggle inclusion" style="width:2rem">EV</th>
-              <th style="width:3.5rem">Img</th>
-              <th data-sort="text">Card</th>
-              <th>Rarity</th>
-              <th>Set</th>
-              <th class="right">#</th>
-              <th class="right" data-sort="num" title="Copies per deck">Qty</th>
-              <th class="right" data-sort="num">Market</th>
-              <th class="right" data-sort="num" title="Lowest TCGPlayer Direct listing (vetted sellers, typically includes free shipping)">Low</th>
+              <th title="Include / exclude this card from the EV totals. Click to override. ✓ = included, — = excluded." style="width:2rem">EV</th>
+              <th style="width:3.5rem" title="Card image from TCGPlayer">Img</th>
+              <th data-sort="text" title="Card name. T / M / e links open TCGPlayer, Manapool, and eBay sold listings.">Card</th>
+              <th title="Card rarity from Scryfall (Mythic Rare / Rare / Uncommon / Common)">Rarity</th>
+              <th title="Set code of this specific printing (from Scryfall)">Set</th>
+              <th class="right" title="Collector number for this printing">№</th>
+              <th class="right" data-sort="num" title="Copies of this card per deck (before multiplying by deck copies in case)">Qty</th>
+              <th class="right" data-sort="num" title="TCGPlayer market price — weighted average of recent completed sales">Market</th>
+              <th class="right" data-sort="num" title="Lowest active TCGPlayer Direct listing (vetted sellers, free shipping included). Generally the most reliable price floor.">Low</th>
               ${listingTh}
-              <th class="right" data-sort="num">${platLabel}</th>
-              <th class="right" data-sort="num" title="Net × qty × copies in case">Case Total</th>
-              <th class="right st-col" data-sort="num" title="Active listings on TCGPlayer">Listed</th>
-              <th class="right st-col" data-sort="num" title="Sales per day · ↺ refill rate per day">Vel/d</th>
-              <th class="right st-col" title="Recommended listing price · tier relative to market · ROI vs case cost/card">Rec Price</th>
-              <th class="right st-col" data-sort="num" title="Expected time to sell at recommended tier. Hover for days at all price tiers (+0% market, +10%, +25%, +50%).">Days@</th>
+              <th class="right" data-sort="num" title="Net proceeds per card after ${activePlat} fees and packaging costs. ${platFeeNote}">${platLabel}</th>
+              <th class="right" data-sort="num" title="Net × qty-per-copy × copies in case = total net contribution of this card to your case profit">Case Total</th>
+              <th class="right st-col" data-sort="num" title="Active listings currently on TCGPlayer for this card. Lower = less competition.">Listed</th>
+              <th class="right st-col" data-sort="num" title="Sales per day (units sold last 7 days ÷ 7). ↺ = re-list rate per day (new supply coming back to market). Net drain = sold − relisted.">Vel/d</th>
+              <th class="right st-col" title="Recommended listing price based on sell-through velocity: the cheapest price tier where your copy sells within ~3 weeks. Badge shows tier. ROI shown vs case cost/card.">Rec Price</th>
+              <th class="right st-col" data-sort="num" title="Weeks (or days) to sell at the recommended tier given current velocity. Hover for breakdown at each price tier: market, +10%, +25%, +50%.">Days@</th>
             </tr></thead>
             <tbody>${rows}</tbody>
           </table>
