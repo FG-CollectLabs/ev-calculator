@@ -25,8 +25,13 @@
     ebayMode:      "ev_ebay_mode",
     sort:          "ev_sort",
     skipRarities:  "ev_skip_rarities",
-    tcgOffsetType: "ev_tcg_offset_type",
-    tcgOffsetVal:  "ev_tcg_offset_val",
+    tcgOffsetType:    "ev_tcg_offset_type",
+    tcgOffsetVal:     "ev_tcg_offset_val",
+    tcgPricingMode:   "ev_tcg_pricing_mode",   // "simple"|"tiered"
+    tcgTieredHighC:   "ev_tcg_tier_high_cents",
+    tcgTieredLowC:    "ev_tcg_tier_low_cents",
+    tcgTieredLowPct:  "ev_tcg_tier_low_pct",
+    tcgTieredFloor:   "ev_tcg_tier_floor",
     sift:          "ev_sift_threshold",
     // Packaging settings (stored as JSON objects keyed by platform)
     pkgSupplies:   "ev_pkg_supplies",   // { tcgplayer: {stamp,envelope,...}, manapool: {...}, ebay: {...} }
@@ -83,6 +88,21 @@
     if ($type) $type.value = savedType;
     if ($val)  $val.value  = savedVal;
 
+    // TCG tiered pricing
+    const tcgMode = lsGet(LS.tcgPricingMode, "simple");
+    document.querySelectorAll("#tcg-pricing-mode-toggle .plat-btn").forEach(b =>
+      b.classList.toggle("active", b.dataset.mode === tcgMode));
+    document.getElementById("tcg-simple-row")?.classList.toggle("hidden", tcgMode !== "simple");
+    document.getElementById("tcg-tiered-rows")?.classList.toggle("hidden", tcgMode !== "tiered");
+    const $highC  = document.getElementById("tcg-tier-high-cents");
+    const $lowC   = document.getElementById("tcg-tier-low-cents");
+    const $lowPct = document.getElementById("tcg-tier-low-pct");
+    const $floor  = document.getElementById("tcg-tier-floor");
+    if ($highC)  $highC.value  = (lsGet(LS.tcgTieredHighC,  "30"));
+    if ($lowC)   $lowC.value   = (lsGet(LS.tcgTieredLowC,   "15"));
+    if ($lowPct) $lowPct.value = (lsGet(LS.tcgTieredLowPct, "10"));
+    if ($floor)  $floor.value  = (parseFloat(lsGet(LS.tcgTieredFloor, "35")) / 100).toFixed(2);
+
     // Sift threshold
     const $sift = document.getElementById("sift-threshold");
     if ($sift) $sift.value = lsGet(LS.sift, "0.25");
@@ -109,7 +129,20 @@
     });
   });
 
-  // TCGPlayer offset inputs
+  // TCGPlayer pricing mode toggle
+  document.querySelectorAll("#tcg-pricing-mode-toggle .plat-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const mode = btn.dataset.mode;
+      lsSet(LS.tcgPricingMode, mode);
+      document.querySelectorAll("#tcg-pricing-mode-toggle .plat-btn")
+        .forEach(b => b.classList.toggle("active", b === btn));
+      document.getElementById("tcg-simple-row")?.classList.toggle("hidden", mode !== "simple");
+      document.getElementById("tcg-tiered-rows")?.classList.toggle("hidden", mode !== "tiered");
+      renderDecks();
+    });
+  });
+
+  // TCGPlayer offset inputs (simple mode)
   document.getElementById("tcg-offset-type").addEventListener("change", function() {
     lsSet(LS.tcgOffsetType, this.value);
     renderDecks();
@@ -117,6 +150,19 @@
   document.getElementById("tcg-offset-value").addEventListener("input", function() {
     lsSet(LS.tcgOffsetVal, this.value);
     renderDecks();
+  });
+
+  // TCGPlayer tiered pricing inputs
+  [
+    ["tcg-tier-high-cents", LS.tcgTieredHighC,  v => Math.round(parseFloat(v) || 0)],
+    ["tcg-tier-low-cents",  LS.tcgTieredLowC,   v => Math.round(parseFloat(v) || 0)],
+    ["tcg-tier-low-pct",    LS.tcgTieredLowPct, v => Math.round(parseFloat(v) || 0)],
+    ["tcg-tier-floor",      LS.tcgTieredFloor,  v => Math.round((parseFloat(v) || 0) * 100)],
+  ].forEach(([id, key, parse]) => {
+    document.getElementById(id)?.addEventListener("input", function() {
+      lsSet(key, String(parse(this.value)));
+      renderDecks();
+    });
   });
 
   // eBay mode toggle
@@ -491,16 +537,40 @@
   function tcgOffsetType()  { return document.getElementById("tcg-offset-type").value; }
   function tcgOffsetValue() { return parseFloat(document.getElementById("tcg-offset-value").value) || 0; }
 
+  function tcgPricingMode() { return lsGet(LS.tcgPricingMode, "simple"); }
+
+  function tcgTieredListing(market) {
+    const HIGH_THRESHOLD = 500; // $5
+    const highC  = parseInt(lsGet(LS.tcgTieredHighC,  "30"), 10)  || 0;
+    const lowC   = parseInt(lsGet(LS.tcgTieredLowC,   "15"), 10)  || 0;
+    const lowPct = parseInt(lsGet(LS.tcgTieredLowPct, "10"), 10)  || 0;
+    const floor  = parseInt(lsGet(LS.tcgTieredFloor,  "35"), 10)  || 0;
+
+    let listing;
+    if (market >= HIGH_THRESHOLD) {
+      listing = market + highC;
+    } else {
+      const pctAdd  = Math.round(market * lowPct / 100);
+      listing = market + Math.min(lowC, pctAdd);
+    }
+    if (floor > 0) listing = Math.max(listing, floor);
+    return listing;
+  }
+
   function platformListingPrice(li) {
     if (!li.market_price_cents) return null;
     const market = li.market_price_cents;
     let listing;
     switch (activePlat) {
       case "tcgplayer": {
-        const ov = tcgOffsetValue();
-        listing = tcgOffsetType() === "pct"
-          ? Math.round(market * (1 + ov / 100))
-          : market + Math.round(ov * 100);
+        if (tcgPricingMode() === "tiered") {
+          listing = tcgTieredListing(market);
+        } else {
+          const ov = tcgOffsetValue();
+          listing = tcgOffsetType() === "pct"
+            ? Math.round(market * (1 + ov / 100))
+            : market + Math.round(ov * 100);
+        }
         break;
       }
       case "manapool": listing = market; break;
