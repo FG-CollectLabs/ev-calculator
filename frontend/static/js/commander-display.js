@@ -27,7 +27,8 @@
     skipRarities:  "ev_skip_rarities",
     tcgOffsetType:    "ev_tcg_offset_type",
     tcgOffsetVal:     "ev_tcg_offset_val",
-    tcgPricingMode:   "ev_tcg_pricing_mode",   // "simple"|"tiered"
+    tcgPricingMode:   "ev_tcg_pricing_mode",   // "simple"|"tiered"|"beat-lowest"|"capture-pct"
+    tcgCapturePct:    "ev_tcg_capture_pct",    // 50–100, target net % of market
     tcgTieredHighC:   "ev_tcg_tier_high_cents",
     tcgTieredLowC:    "ev_tcg_tier_low_cents",
     tcgTieredLowPct:  "ev_tcg_tier_low_pct",
@@ -93,8 +94,13 @@
     const tcgMode = lsGet(LS.tcgPricingMode, "simple");
     document.querySelectorAll("#tcg-pricing-mode-toggle .plat-btn").forEach(b =>
       b.classList.toggle("active", b.dataset.mode === tcgMode));
+    document.getElementById("tcg-capture-row")?.classList.toggle("hidden", tcgMode !== "capture-pct");
     document.getElementById("tcg-simple-row")?.classList.toggle("hidden", tcgMode !== "simple");
     document.getElementById("tcg-tiered-rows")?.classList.toggle("hidden", tcgMode !== "tiered");
+    const $capturePct = document.getElementById("tcg-capture-pct");
+    if ($capturePct) $capturePct.value = lsGet(LS.tcgCapturePct, "90");
+    document.querySelectorAll("#tcg-capture-preset .plat-btn").forEach(b =>
+      b.classList.toggle("active", b.dataset.pct === lsGet(LS.tcgCapturePct, "90")));
     const $highC  = document.getElementById("tcg-tier-high-cents");
     const $lowC   = document.getElementById("tcg-tier-low-cents");
     const $lowPct = document.getElementById("tcg-tier-low-pct");
@@ -141,9 +147,28 @@
       lsSet(LS.tcgPricingMode, mode);
       document.querySelectorAll("#tcg-pricing-mode-toggle .plat-btn")
         .forEach(b => b.classList.toggle("active", b === btn));
-      document.getElementById("tcg-simple-row")?.classList.toggle("hidden", mode !== "simple");
-      document.getElementById("tcg-tiered-rows")?.classList.toggle("hidden", mode !== "tiered");
+      document.getElementById("tcg-capture-row")?.classList.toggle("hidden",     mode !== "capture-pct");
+      document.getElementById("tcg-simple-row")?.classList.toggle("hidden",       mode !== "simple");
+      document.getElementById("tcg-tiered-rows")?.classList.toggle("hidden",      mode !== "tiered");
       document.getElementById("tcg-beat-lowest-rows")?.classList.toggle("hidden", mode !== "beat-lowest");
+      renderDecks();
+    });
+  });
+
+  // Capture % input + presets
+  document.getElementById("tcg-capture-pct")?.addEventListener("input", function() {
+    lsSet(LS.tcgCapturePct, this.value);
+    document.querySelectorAll("#tcg-capture-preset .plat-btn")
+      .forEach(b => b.classList.toggle("active", b.dataset.pct === this.value));
+    renderDecks();
+  });
+  document.querySelectorAll("#tcg-capture-preset .plat-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      lsSet(LS.tcgCapturePct, btn.dataset.pct);
+      const el = document.getElementById("tcg-capture-pct");
+      if (el) el.value = btn.dataset.pct;
+      document.querySelectorAll("#tcg-capture-preset .plat-btn")
+        .forEach(b => b.classList.toggle("active", b === btn));
       renderDecks();
     });
   });
@@ -588,11 +613,11 @@
     return (sf.type_line || "").toLowerCase().includes("land");
   }
 
-  // Returns true if the card should be excluded by the automatic filters
-  // (value floor or land skip). Manual EV-toggle overrides take precedence
-  // and are handled separately in the row builder.
+  // Returns true if the card should be excluded from EV totals and exports.
+  // min-list-$ is now a PRICE FLOOR (applied in platformListingPrice), not a filter.
+  // Only lands (when skip-lands is on) and cards with no market data are excluded here.
   function autoFiltered(li, listing) {
-    if (minListCents() > 0 && (listing == null || listing < minListCents())) return true;
+    if (listing == null) return true;
     if (skipLands && isLand(li)) return true;
     return false;
   }
@@ -602,7 +627,8 @@
   function tcgOffsetType()  { return document.getElementById("tcg-offset-type").value; }
   function tcgOffsetValue() { return parseFloat(document.getElementById("tcg-offset-value").value) || 0; }
 
-  function tcgPricingMode() { return lsGet(LS.tcgPricingMode, "simple"); }
+  function tcgPricingMode()   { return lsGet(LS.tcgPricingMode, "simple"); }
+  function tcgCapturePct()    { return Math.min(100, Math.max(50, parseFloat(lsGet(LS.tcgCapturePct, "90")) || 90)); }
 
   function tcgBeatLowestListing(market, lowestLegit) {
     // Ship charge = the Fixed Rate from Packaging & Fees (one source of truth)
@@ -637,7 +663,9 @@
     let listing;
     switch (activePlat) {
       case "tcgplayer": {
-        if (tcgPricingMode() === "tiered") {
+        if (tcgPricingMode() === "capture-pct") {
+          listing = tierListingCents(market, tcgCapturePct() / 100, "tcgplayer");
+        } else if (tcgPricingMode() === "tiered") {
           listing = tcgTieredListing(market);
         } else if (tcgPricingMode() === "beat-lowest") {
           listing = tcgBeatLowestListing(market, li.price?.lowest_legit_cents || 0);
@@ -653,9 +681,12 @@
       case "ebay":     listing = ebayListingPrice(market, ebayMode); break;
       default:         listing = market;
     }
-    // Apply target-net floor: bump up listing if needed to achieve target net.
-    const floor = requiredListingCents(activePlat);
-    if (floor > 0 && listing != null) listing = Math.max(listing, floor);
+    // Apply floors: min-list-$ is an absolute floor; target-net derives a per-platform floor.
+    // Both are MAX operations — they raise the price, never lower it.
+    const minList = minListCents();
+    if (minList > 0 && listing != null) listing = Math.max(listing, minList);
+    const targetFloor = requiredListingCents(activePlat);
+    if (targetFloor > 0 && listing != null) listing = Math.max(listing, targetFloor);
     return listing;
   }
 
@@ -1062,14 +1093,18 @@
       const revenue = revenueAfterFeesCents(listing, activePlat);
       const shipAmt = buyerShipCentsPerCard(activePlat);
 
-      // List $ tooltip: for beat-lowest, show the derivation
+      // List $ tooltip: show derivation for beat-lowest and capture-pct modes
       let listTip = "";
-      if (activePlat === "tcgplayer" && tcgPricingMode() === "beat-lowest" && listing != null) {
+      const tcgMode = activePlat === "tcgplayer" ? tcgPricingMode() : "";
+      if (tcgMode === "beat-lowest" && listing != null) {
         const low  = price.lowest_legit_cents;
         const ship = currentFixedShipCents("tcgplayer");
         listTip = low
           ? `title="Low Direct ${EV.fmtUSD(low)} − Ship ${EV.fmtUSD(ship)} = ${EV.fmtUSD(listing)}"`
           : `title="No Direct data — using market price ${EV.fmtUSD(li.market_price_cents)}"`;
+      } else if (tcgMode === "capture-pct" && listing != null) {
+        const pct = tcgCapturePct();
+        listTip = `title="Capture ${pct}% of market ${EV.fmtUSD(market)} after fees & supplies → list ${EV.fmtUSD(listing)}"`;
       }
 
       const saleTip = shipAmt > 0

@@ -25,9 +25,26 @@
   <div class="settings-row" id="strategy-tcgplayer">
     <span class="settings-label">TCG pricing</span>
     <div class="platform-toggle" id="tcg-pricing-mode-toggle">
+      <button class="plat-btn" data-mode="capture-pct" title="List at the price that captures exactly X% of market value as net profit after all TCGPlayer fees, shipping, and supplies. The cleanest way to set consistent margins.">Capture %</button>
       <button class="plat-btn active" data-mode="simple">Simple</button>
       <button class="plat-btn" data-mode="tiered" title="Tiered offsets for free-ship strategy: different rules for $5+ vs under-$5 cards">Tiered</button>
       <button class="plat-btn" data-mode="beat-lowest" title="List at lowest Direct price minus your fixed shipping charge — undercuts Direct on total buyer cost">Beat Lowest</button>
+    </div>
+  </div>
+  <!-- Capture % mode -->
+  <div class="settings-row hidden" id="tcg-capture-row">
+    <span class="settings-label"></span>
+    <div style="display:flex;flex-direction:column;gap:0.35rem">
+      <div class="settings-input-group" title="Target net as a percentage of market value. Listing price is calculated to deliver exactly this % as take-home after all fees, shipping, and supplies.">
+        <span class="settings-input-prefix" style="width:5rem">Target</span>
+        <input class="settings-input" id="tcg-capture-pct" type="number" min="50" max="100" step="1" value="90" style="width:3.5rem">
+        <span class="muted" style="font-size:0.8rem">% of market</span>
+      </div>
+      <div class="platform-toggle" id="tcg-capture-preset">
+        <button class="plat-btn" data-pct="90">90%</button>
+        <button class="plat-btn" data-pct="85">85%</button>
+        <button class="plat-btn" data-pct="80">80%</button>
+      </div>
     </div>
   </div>
   <!-- Simple mode -->
@@ -110,7 +127,7 @@
     </div>
   </div>
   <div class="settings-row">
-    <span class="settings-label" title="Cards with a listing price below this threshold are auto-excluded from EV totals and exports. Useful for skipping bulk commons not worth listing individually.">Min list $</span>
+    <span class="settings-label" title="Absolute listing price floor — cards that would price below this are listed at this price instead (not excluded). Use Capture % mode to set a market-relative floor per card.">Min list $</span>
     <div class="settings-input-group">
       <span class="settings-input-prefix">$</span>
       <input class="settings-input" id="min-list-value" type="number" min="0" step="0.01" placeholder="off" style="width:5rem">
