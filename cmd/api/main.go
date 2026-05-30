@@ -178,6 +178,16 @@ func main() {
 		}
 		dk, ok := deckMap[key]
 		if !ok {
+			// Fall back: look up by product_display_key (market-tracker format, e.g. "mtg-otc-commander-desert-bloom").
+			for _, d := range deckMap {
+				if d.ProductDisplayKey == key {
+					dk = d
+					ok = true
+					break
+				}
+			}
+		}
+		if !ok {
 			http.Error(w, "not found", http.StatusNotFound)
 			return
 		}
