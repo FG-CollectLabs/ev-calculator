@@ -149,6 +149,14 @@ table.data tr.excluded { opacity: 0.45; }
 .card-sub.pos { color: var(--pos); }
 .card-sub.neg { color: var(--neg); }
 
+/* ── Capture tier breakdown (totals panel) ── */
+.tier-breakdown { margin-top: 0.6rem; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 0.4rem; display: flex; flex-direction: column; gap: 0.2rem; }
+.tier-row { display: flex; align-items: baseline; gap: 0.5rem; font-size: 0.78rem; }
+.tier-label { color: var(--muted); min-width: 6.5rem; }
+.tier-net { font-weight: 600; min-width: 4.5rem; text-align: right; }
+.tier-delta { color: var(--muted); font-size: 0.72rem; }
+.tier-col { opacity: 0.75; }
+
 /* ── Platform toggle bar ── */
 .platform-bar {
   display: flex; align-items: center; gap: 0.75rem;

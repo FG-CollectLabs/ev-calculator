@@ -719,6 +719,37 @@
     return (report.decks || []).reduce((s, d) => s + computeDeckNet(d), 0);
   }
 
+  // Configurable capture tiers (% of market value as net profit target).
+  const CAPTURE_TIERS = [0.90, 0.85, 0.80];
+
+  // Listing price required to net exactly (market × captureRate) after all fees and supplies.
+  // Formula: listing = ceil((market×rate + supplies + flat − ship×shipKeepRate) / keepRate)
+  function tierListingCents(market, captureRate, plat) {
+    const supplies = physicalSuppliesCents(plat);
+    const flat     = perOrderFlatPerCard(plat);
+    const ship     = buyerShipCentsPerCard(plat);
+    const numerator = Math.round(market * captureRate) + supplies + flat - Math.round(ship * shipKeepRate(plat));
+    return Math.ceil(numerator / keepRate(plat));
+  }
+
+  // Case-level net at a given capture rate using the same inclusion/filter logic as computeDeckNet.
+  // Net per card = market × captureRate (the exact target by definition of tierListingCents).
+  function computeTierCaseNet(captureRate) {
+    let total = 0;
+    for (const d of report.decks || []) {
+      for (const li of d.line_items || []) {
+        if (!li.included_in_ev) continue;
+        const pid = String(li.tcgplayer_product_id || "");
+        if (userExcluded.get(pid)) continue;
+        if (!li.market_price_cents) continue;
+        const tierListing = tierListingCents(li.market_price_cents, captureRate, activePlat);
+        if (!userIncluded.get(pid) && autoFiltered(li, tierListing)) continue;
+        total += Math.round(li.market_price_cents * captureRate) * li.qty;
+      }
+    }
+    return total;
+  }
+
   function caseCostCents() {
     const v = parseFloat(document.getElementById("case-cost")?.value || "0");
     return Math.round((isNaN(v) ? 0 : v) * 100);
@@ -759,6 +790,21 @@
     ].filter(Boolean).join(" · ");
     const cls = drain != null && drain < soldWeek && drain > 0 ? "warn" : "";
     return `<td class="right st-col ${cls}" data-cents="${Math.round(soldWeek * 10)}" title="${escHtml(tip)}">${soldDay}/d${refillDay ? `<span class="st-drain">↺${refillDay}</span>` : ""}</td>`;
+  }
+
+  function tierCell(li) {
+    if (!li.market_price_cents) return `<td class="right tier-col muted">—</td>`;
+    const market = li.market_price_cents;
+    const parts  = CAPTURE_TIERS.map(r => {
+      const lc  = tierListingCents(market, r, activePlat);
+      const net = Math.round(market * r);
+      return { r, lc, net };
+    });
+    const tip = parts.map(p =>
+      `${Math.round(p.r*100)}%: list ${EV.fmtUSD(p.lc)} → net ${EV.fmtUSD(p.net)}`
+    ).join(" | ");
+    const display = parts.map(p => EV.fmtUSD(p.lc)).join(" / ");
+    return `<td class="right tier-col" title="${tip}" style="font-size:0.73rem;white-space:nowrap">${display}</td>`;
   }
 
   function listedCell(price) {
@@ -823,6 +869,7 @@
 
   function renderDecks() {
     const singlesNet   = totalSinglesNet();
+    const [net90, net85, net80] = CAPTURE_TIERS.map(r => computeTierCaseNet(r));
     const caseCost     = caseCostCents() || report.case_cost_cents || 0;
     const decksBuyCost = report.sealed_decks_gross_cents || 0;
     const sealedNet    = report.sealed_decks_net_cents   || 0;
@@ -849,16 +896,30 @@
            <value>${EV.fmtUSD(sealedNet || null)}</value>
          </div>`;
 
+    const tierRows = CAPTURE_TIERS.map((r, i) => {
+      const nets   = [net90, net85, net80][i];
+      const delta  = caseCost ? nets - caseCost : null;
+      const cls    = EV.deltaClass(delta);
+      const pct    = caseCost ? ` (${EV.fmtPct(delta / caseCost)})` : "";
+      return `<div class="tier-row">
+        <span class="tier-label">${Math.round(r*100)}% capture</span>
+        <span class="tier-net ${cls}">${EV.fmtUSD(nets)}</span>
+        ${delta != null ? `<span class="tier-delta ${cls}">${EV.fmtUSD(delta)} profit${pct}</span>` : ""}
+      </div>`;
+    }).join("");
+
     const singlesCard = caseCost
       ? `<div class="card ${EV.deltaClass(singlesDeltaCase)}">
            <label>Crack singles today — profit (${platLabel})</label>
            <value>${EV.fmtUSD(singlesDeltaCase)} <span style="font-size:0.85rem;font-weight:400">(${pctOf(singlesDeltaCase)})</span></value>
            <div class="card-sub">Net proceeds: ${EV.fmtUSD(singlesNet)}</div>
            ${paidLine}
+           <div class="tier-breakdown">${tierRows}</div>
          </div>`
       : `<div class="card">
            <label>Crack &amp; sell singles — ${platLabel}</label>
            <value>${EV.fmtUSD(singlesNet)}</value>
+           <div class="tier-breakdown">${tierRows}</div>
          </div>`;
 
     const decksCard = `
@@ -1037,6 +1098,7 @@
         <td class="right muted" data-cents="${revenue ?? 0}" ${revTip}>${EV.fmtUSD(revenue)}</td>
         <td class="right ${net == null ? "muted" : ""}" data-cents="${net ?? 0}" ${netTip}>${EV.fmtUSD(net)}</td>
         <td class="right ${caseTotal == null ? "muted" : ""}" data-cents="${caseTotal ?? 0}">${EV.fmtUSD(caseTotal)}</td>
+        ${tierCell(li)}
         ${listedCell(price)}
         ${sellthroughVelCell(st, price)}
         ${sellthroughRecCell(st, costPerCard)}
@@ -1082,6 +1144,7 @@
               ${revTh}
               <th class="right" data-sort="num" title="Net profit per card = Revenue − physical supplies (${EV.fmtUSD(physicalSuppliesCents(activePlat))}/card). ${platFeeNote}. Hover a cell to verify.">${platLabel}</th>
               <th class="right" data-sort="num" title="Net profit × qty = total profit contribution of this card across all copies in the case">Case Total</th>
+              <th class="right tier-col" title="Listing price required to capture 90% / 85% / 80% of market value as net profit after all fees and supplies. Hover a cell for the breakdown. Future: velocity estimate per tier.">Tiers 90/85/80</th>
               <th class="right st-col" data-sort="num" title="Active listings currently on TCGPlayer for this card. Lower = less competition.">Listed</th>
               <th class="right st-col" data-sort="num" title="Sales per day (units sold last 7 days ÷ 7). ↺ = re-list rate per day (new supply coming back to market). Net drain = sold − relisted.">Vel/d</th>
               <th class="right st-col" title="Recommended listing price based on sell-through velocity: the cheapest price tier where your copy sells within ~3 weeks. Badge shows tier. ROI shown vs case cost/card.">Rec Price</th>
