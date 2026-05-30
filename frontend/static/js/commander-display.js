@@ -32,7 +32,6 @@
     tcgTieredLowC:    "ev_tcg_tier_low_cents",
     tcgTieredLowPct:  "ev_tcg_tier_low_pct",
     tcgTieredFloor:   "ev_tcg_tier_floor",
-    tcgBeatShip:      "ev_tcg_beat_ship",    // cents charged to buyer for shipping
     tcgBeatFloor:     "ev_tcg_beat_floor",   // cents minimum listing price
     sift:          "ev_sift_threshold",
     // Packaging settings (stored as JSON objects keyed by platform)
@@ -105,9 +104,7 @@
     if ($lowPct) $lowPct.value = (lsGet(LS.tcgTieredLowPct, "10"));
     if ($floor)  $floor.value  = (parseFloat(lsGet(LS.tcgTieredFloor, "35")) / 100).toFixed(2);
     // Beat Lowest inputs
-    const $beatShip  = document.getElementById("tcg-beat-ship");
     const $beatFloor = document.getElementById("tcg-beat-floor");
-    if ($beatShip)  $beatShip.value  = (parseFloat(lsGet(LS.tcgBeatShip,  "131")) / 100).toFixed(2);
     if ($beatFloor) $beatFloor.value = (parseFloat(lsGet(LS.tcgBeatFloor, "35"))  / 100).toFixed(2);
     document.getElementById("tcg-beat-lowest-rows")?.classList.toggle("hidden", tcgMode !== "beat-lowest");
 
@@ -167,7 +164,6 @@
     ["tcg-tier-low-cents",  LS.tcgTieredLowC,   v => Math.round(parseFloat(v) || 0)],
     ["tcg-tier-low-pct",    LS.tcgTieredLowPct, v => Math.round(parseFloat(v) || 0)],
     ["tcg-tier-floor",      LS.tcgTieredFloor,  v => Math.round((parseFloat(v) || 0) * 100)],
-    ["tcg-beat-ship",       LS.tcgBeatShip,     v => Math.round((parseFloat(v) || 0) * 100)],
     ["tcg-beat-floor",      LS.tcgBeatFloor,    v => Math.round((parseFloat(v) || 0) * 100)],
   ].forEach(([id, key, parse]) => {
     document.getElementById(id)?.addEventListener("input", function() {
@@ -316,6 +312,37 @@
   // Net from a given listing price for a platform (fees only, before packaging).
   function netFromListing(listingCents, plat) {
     return Math.round(listingCents * keepRate(plat)) - perOrderFlat(plat);
+  }
+
+  // Ship charge collected from the buyer, amortized per card.
+  // Only non-zero when using fixed-rate or beat-lowest pricing (buyer pays a fixed ship fee).
+  function buyerShipCentsPerCard(plat) {
+    const mode = currentShipMode(plat);
+    const isBeatLowest = plat === "tcgplayer" && tcgPricingMode() === "beat-lowest";
+    if (mode === "fixed" || isBeatLowest) {
+      return Math.round(currentFixedShipCents(plat) / avgCardsPerOrder(plat));
+    }
+    return 0;
+  }
+
+  // Buyer's total cost per card = listing + ship charge.
+  function salePriceCents(listing, plat) {
+    if (listing == null) return null;
+    return listing + buyerShipCentsPerCard(plat);
+  }
+
+  // Revenue after marketplace fees = sale price × keepRate − per-order flat.
+  function revenueAfterFeesCents(listing, plat) {
+    const sale = salePriceCents(listing, plat);
+    if (sale == null) return null;
+    return Math.round(sale * keepRate(plat)) - perOrderFlat(plat);
+  }
+
+  // Physical supply cost per card (stamp amortized by avg cards/order, no shipping revenue offset).
+  function physicalSuppliesCents(plat) {
+    const stamp = postageCents(plat);
+    const avg   = avgCardsPerOrder(plat);
+    return packagingSupplyCents(plat) - stamp + Math.round(stamp / avg);
   }
 
   // Minimum listing price to achieve targetNetCents after fees AND packaging.
@@ -551,8 +578,9 @@
   function tcgPricingMode() { return lsGet(LS.tcgPricingMode, "simple"); }
 
   function tcgBeatLowestListing(market, lowestLegit) {
-    const shipCharge = parseInt(lsGet(LS.tcgBeatShip,  "131"), 10) || 0;
-    const floor      = parseInt(lsGet(LS.tcgBeatFloor, "35"),  10) || 0;
+    // Ship charge = the Fixed Rate from Packaging & Fees (one source of truth)
+    const shipCharge = currentFixedShipCents("tcgplayer");
+    const floor      = parseInt(lsGet(LS.tcgBeatFloor, "35"), 10) || 0;
     // If no Direct listing data, fall back to market price
     const base = (lowestLegit > 0) ? lowestLegit - shipCharge : market;
     return Math.max(base, floor);
@@ -947,6 +975,31 @@
       // Low listed: lowest TCGPlayer Direct price (vetted sellers, free shipping)
       const lowListedCell = `<td class="right" data-cents="${price.lowest_legit_cents ?? 0}" title="Lowest TCGPlayer Direct listing${price.lowest_legit_cents ? '' : ' — no data'}">${EV.fmtUSD(price.lowest_legit_cents)}</td>`;
 
+      // Sale $ = listing + ship charge to buyer
+      const sale    = salePriceCents(listing, activePlat);
+      const revenue = revenueAfterFeesCents(listing, activePlat);
+      const shipAmt = buyerShipCentsPerCard(activePlat);
+
+      // List $ tooltip: for beat-lowest, show the derivation
+      let listTip = "";
+      if (activePlat === "tcgplayer" && tcgPricingMode() === "beat-lowest" && listing != null) {
+        const low  = price.lowest_legit_cents;
+        const ship = currentFixedShipCents("tcgplayer");
+        listTip = low
+          ? `title="Low Direct ${EV.fmtUSD(low)} − Ship ${EV.fmtUSD(ship)} = ${EV.fmtUSD(listing)}"`
+          : `title="No Direct data — using market price ${EV.fmtUSD(li.market_price_cents)}"`;
+      }
+
+      const saleTip = shipAmt > 0
+        ? `title="Buyer pays: List ${EV.fmtUSD(listing)} + Ship ${EV.fmtUSD(shipAmt)} = ${EV.fmtUSD(sale)}"`
+        : `title="Buyer pays list price only (no fixed shipping charge)"`;
+      const revTip = revenue != null
+        ? `title="Sale ${EV.fmtUSD(sale)} × ${(keepRate(activePlat)*100).toFixed(2)}% keep = ${EV.fmtUSD(revenue)}"`
+        : "";
+      const netTip = net != null
+        ? `title="Revenue ${EV.fmtUSD(revenue)} − supplies ${EV.fmtUSD(physicalSuppliesCents(activePlat))} = ${EV.fmtUSD(net)}"`
+        : "";
+
       const rowClass = forceExclude ? "excluded" : filtered ? "filtered" : li.included_in_ev ? "" : "excluded";
       return `<tr class="${rowClass}" data-pid="${pid}">
         <td class="ev-toggle ${evClass}" data-pid="${pid}" title="Toggle inclusion" style="cursor:pointer;text-align:center">${evIcon}</td>
@@ -958,8 +1011,10 @@
         <td class="right">${qtyPerCopy}</td>
         <td class="right" data-cents="${li.market_price_cents ?? 0}">${EV.fmtUSD(li.market_price_cents)}</td>
         ${lowListedCell}
-        <td class="right">${EV.fmtUSD(listing)}</td>
-        <td class="right ${net == null ? "muted" : ""}" data-cents="${net ?? 0}">${EV.fmtUSD(net)}</td>
+        <td class="right" ${listTip}>${EV.fmtUSD(listing)}</td>
+        <td class="right muted" data-cents="${sale ?? 0}" ${saleTip}>${EV.fmtUSD(sale)}</td>
+        <td class="right muted" data-cents="${revenue ?? 0}" ${revTip}>${EV.fmtUSD(revenue)}</td>
+        <td class="right ${net == null ? "muted" : ""}" data-cents="${net ?? 0}" ${netTip}>${EV.fmtUSD(net)}</td>
         <td class="right ${caseTotal == null ? "muted" : ""}" data-cents="${caseTotal ?? 0}">${EV.fmtUSD(caseTotal)}</td>
         ${listedCell(price)}
         ${sellthroughVelCell(st, price)}
@@ -973,8 +1028,18 @@
       manapool:  "8% seller fee, minus packaging costs",
       ebay:      "13.25% FVF + $0.30/order, minus packaging costs",
     }[activePlat] || "";
-    const tnActive = targetNetCents() > 0;
-    const listingTh = `<th class="right" title="Your listing price on ${activePlat}. ${tnActive ? `Target-net floor active — bumped up where needed to hit your target net after fees &amp; packaging.` : `Set via Market ± offset. Enable Target net/card to set a floor.`}">List $</th>`;
+    const tnActive  = targetNetCents() > 0;
+    const isBeatLow = activePlat === "tcgplayer" && tcgPricingMode() === "beat-lowest";
+    const shipAmt   = buyerShipCentsPerCard(activePlat);
+    const listingTh = `<th class="right" title="${
+      isBeatLow
+        ? `Beat Lowest: Low Direct − Ship rate (${EV.fmtUSD(currentFixedShipCents('tcgplayer'))}) = your list price. Hover a cell to see the exact derivation. Falls back to market price if no Direct data.`
+        : tnActive
+          ? `Target-net floor active — bumped up where needed to hit your target net after fees &amp; packaging.`
+          : `Your listing price. Set via Market ± offset above.`
+    }">List $</th>`;
+    const saleTh    = `<th class="right muted" title="Total buyer cost = List + ${shipAmt > 0 ? `Ship (${EV.fmtUSD(shipAmt)})` : `no fixed ship charge`}. Hover a cell for the breakdown.">Sale $</th>`;
+    const revTh     = `<th class="right muted" title="Revenue after ${(keepRate(activePlat)*100).toFixed(2)}% marketplace fees. Sale price × keep rate. Hover a cell to verify.">Revenue</th>`;
 
     return `
       <div class="deck-singles">
@@ -991,8 +1056,10 @@
               <th class="right" data-sort="num" title="TCGPlayer market price — weighted average of recent completed sales">Market</th>
               <th class="right" data-sort="num" title="Lowest active TCGPlayer Direct listing (vetted sellers, free shipping included). Generally the most reliable price floor.">Low</th>
               ${listingTh}
-              <th class="right" data-sort="num" title="Net proceeds per card after ${activePlat} fees and packaging costs. ${platFeeNote}">${platLabel}</th>
-              <th class="right" data-sort="num" title="Net × qty-per-copy × copies in case = total net contribution of this card to your case profit">Case Total</th>
+              ${saleTh}
+              ${revTh}
+              <th class="right" data-sort="num" title="Net profit per card = Revenue − physical supplies (${EV.fmtUSD(physicalSuppliesCents(activePlat))}/card). ${platFeeNote}. Hover a cell to verify.">${platLabel}</th>
+              <th class="right" data-sort="num" title="Net profit × qty = total profit contribution of this card across all copies in the case">Case Total</th>
               <th class="right st-col" data-sort="num" title="Active listings currently on TCGPlayer for this card. Lower = less competition.">Listed</th>
               <th class="right st-col" data-sort="num" title="Sales per day (units sold last 7 days ÷ 7). ↺ = re-list rate per day (new supply coming back to market). Net drain = sold − relisted.">Vel/d</th>
               <th class="right st-col" title="Recommended listing price based on sell-through velocity: the cheapest price tier where your copy sells within ~3 weeks. Badge shows tier. ROI shown vs case cost/card.">Rec Price</th>
