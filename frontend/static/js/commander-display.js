@@ -1075,6 +1075,38 @@
     downloadText(csv, filename, "text/csv");
   }
 
+  // Price list CSV: all cards with a computed price, no qty/filter logic.
+  // Intended to feed listing prices into the Box Break App.
+  function buildPriceListCSV() {
+    const header = ["TCGplayer Id","Card Name","Set","Collector #","Listing Price"];
+    const rows   = [header];
+    const seen   = new Set();
+
+    for (const d of report.decks || []) {
+      for (const li of d.line_items || []) {
+        const pid = String(li.tcgplayer_product_id || "");
+        if (!pid || seen.has(pid)) continue;
+        seen.add(pid);
+        const listing = platformListingPrice(li);
+        if (listing == null) continue;
+        const sf     = scryfallCache.get(li.display_key) || {};
+        const setCode = (sf.set || "").toUpperCase();
+        const collNum = sf.collector_number || "";
+        rows.push([
+          pid,
+          li.name || li.display_key,
+          setCode,
+          collNum,
+          (listing / 100).toFixed(2),
+        ]);
+      }
+    }
+
+    rows.sort((a, b) => a[1].localeCompare(b[1]));
+    const csv = rows.map(r => r.map(v => `"${String(v).replace(/"/g, '""')}"`).join(",")).join("\r\n");
+    downloadText(csv, `price-list-${report.key || "case"}.csv`, "text/csv");
+  }
+
   // TCGPlayer bulk-listing CSV: TCGplayer Id, Condition, Add to Quantity, TCG Marketplace Price
   function buildTCGPlayerCSV() {
     const header = ["TCGplayer Id","Condition","Add to Quantity","TCG Marketplace Price"];
@@ -1196,6 +1228,7 @@
   });
 
   document.getElementById("export-tcg-csv-btn")?.addEventListener("click", buildTCGPlayerCSV);
+  document.getElementById("export-price-list-btn")?.addEventListener("click", buildPriceListCSV);
 
   function escHtml(s) {
     return String(s == null ? "" : s)
