@@ -263,68 +263,91 @@
   // Corrected per-card packaging cost that accounts for:
   //   free ship    → seller pays stamp amortized by avg order size
   //   fixed rate   → shipping revenue (after TCG fees) offsets stamp cost
-  //   buyer pays   → buyer covers postage but TCG takes 13.25% of it too,
-  //                  so seller loses (1-keepRate)*stamp per card shipped
+  // TCGPlayer fee structure (per TCGPlayer docs):
+  //   Marketplace commission: 10.75% of item price only (not shipping)
+  //   Transaction fee:        2.5% of (items + shipping) + $0.30 flat per order
+  //   Total on item:          10.75% + 2.5% = 13.25%  → keepRate 0.8675
+  //   On shipping:            2.5% only               → shipKeepRate 0.975
+  //   Flat per order:         $0.30 amortized by avg cards/order
+  //
+  //   free ship    → seller eats full postage + $0.30 flat amortized
+  //   fixed rate   → seller collects ship charge; net ship rev = ship × 0.975/avg, minus flat
+  //   buyer pays   → seller collects stamp-equivalent; net = stamp × 0.975/avg, minus flat
   //   ESE (eBay)   → same as free ship; ESE cost is $0.89 built into listing
+
+  // Keep rate on the item listing price (commission + payment processing).
+  function keepRate(plat) {
+    switch (plat) {
+      case "tcgplayer": return 0.8675; // 1 - 10.75% - 2.5%
+      case "manapool":  return 0.92;   // 1 - 8%
+      case "ebay":      return 0.8675; // 1 - 13.25%
+      default:          return 0.8675;
+    }
+  }
+
+  // Keep rate on the shipping amount (payment processing only — no marketplace commission on shipping).
+  function shipKeepRate(plat) {
+    switch (plat) {
+      case "tcgplayer": return 0.975;  // 1 - 2.5% only
+      case "manapool":  return 0.92;
+      case "ebay":      return 0.8675;
+      default:          return 0.8675;
+    }
+  }
+
+  // Per-order flat fee amortized per card.
+  function perOrderFlatPerCard(plat) {
+    const avg = avgCardsPerOrder(plat);
+    switch (plat) {
+      case "tcgplayer": return Math.round(30 / avg);  // $0.30/order
+      case "ebay":      return Math.round(30 / avg);  // $0.30/order
+      default:          return 0;
+    }
+  }
+
   function packagingCostCents(plat) {
     const stamp         = postageCents(plat);
     const otherSupplies = packagingSupplyCents(plat) - stamp;
     const avg           = avgCardsPerOrder(plat);
     const mode          = currentShipMode(plat);
-    const kr            = keepRate(plat);
+    const skr           = shipKeepRate(plat);
+    const flat          = perOrderFlatPerCard(plat);
 
     switch (mode) {
       case "free":
       case "ese":
-        // Seller eats full postage, amortized across cards in the order
-        return otherSupplies + Math.round(stamp / avg);
+        return otherSupplies + Math.round(stamp / avg) + flat;
 
       case "fixed": {
-        // Shipping revenue (after TCG fees) offsets postage cost
-        const shipRevNet = Math.round(currentFixedShipCents(plat) * kr / avg);
-        return otherSupplies + Math.round(stamp / avg) - shipRevNet;
+        // Shipping revenue (after payment-processing fee only) offsets postage cost
+        const shipRevNet = Math.round(currentFixedShipCents(plat) * skr / avg);
+        return otherSupplies + Math.round(stamp / avg) - shipRevNet + flat;
       }
 
       case "buyer": {
-        // Buyer pays ~stamp cost in shipping, but TCG takes their cut of it.
-        // Net postage loss = stamp × (1 − keepRate) ÷ avg cards/order
-        const postageFeeLoss = Math.round(stamp * (1 - kr) / avg);
-        return otherSupplies + postageFeeLoss;
+        // Buyer pays ~stamp cost in shipping; seller keeps (stamp × shipKeepRate / avg)
+        const shipRevNet = Math.round(stamp * skr / avg);
+        return otherSupplies + Math.round(stamp / avg) - shipRevNet + flat;
       }
 
       default:
-        return otherSupplies + Math.round(stamp / avg);
+        return otherSupplies + Math.round(stamp / avg) + flat;
     }
   }
 
-  // Fraction of listing price kept after marketplace fees (before packaging).
-  function keepRate(plat) {
-    switch (plat) {
-      case "tcgplayer": return 0.8675; // 10.75% + 2.5%
-      case "manapool":  return 0.92;   // 8%
-      case "ebay":      return 0.8675; // 13.25% (+ $0.30 flat handled separately)
-      default:          return 0.8675;
-    }
-  }
-
-  // Per-order flat fee in cents (applied per card as an approximation).
-  function perOrderFlat(plat) {
-    return plat === "ebay" ? 30 : 0;
-  }
-
-  // Net from a given listing price for a platform (fees only, before packaging).
+  // Net from listing price after item commission only (flat and packaging handled separately).
   function netFromListing(listingCents, plat) {
-    return Math.round(listingCents * keepRate(plat)) - perOrderFlat(plat);
+    return Math.round(listingCents * keepRate(plat));
   }
 
   // Ship charge collected from the buyer, amortized per card.
-  // Only non-zero when using fixed-rate or beat-lowest pricing (buyer pays a fixed ship fee).
   function buyerShipCentsPerCard(plat) {
     const mode = currentShipMode(plat);
     const isBeatLowest = plat === "tcgplayer" && tcgPricingMode() === "beat-lowest";
     if (mode === "fixed" || isBeatLowest) {
       return Math.round(currentFixedShipCents(plat) / avgCardsPerOrder(plat));
     }
+    if (mode === "buyer") return Math.round(postageCents(plat) / avgCardsPerOrder(plat));
     return 0;
   }
 
@@ -334,11 +357,12 @@
     return listing + buyerShipCentsPerCard(plat);
   }
 
-  // Revenue after marketplace fees = sale price × keepRate − per-order flat.
+  // Revenue after all marketplace fees, per card.
+  // Item: listing × keepRate. Shipping: ship × shipKeepRate. Minus flat.
   function revenueAfterFeesCents(listing, plat) {
-    const sale = salePriceCents(listing, plat);
-    if (sale == null) return null;
-    return Math.round(sale * keepRate(plat)) - perOrderFlat(plat);
+    if (listing == null) return null;
+    const ship = buyerShipCentsPerCard(plat);
+    return Math.round(listing * keepRate(plat)) + Math.round(ship * shipKeepRate(plat)) - perOrderFlatPerCard(plat);
   }
 
   // Physical supply cost per card (stamp amortized by avg cards/order, no shipping revenue offset).
@@ -352,8 +376,8 @@
   function requiredListingCents(plat) {
     const tn  = targetNetCents();
     if (tn <= 0) return 0;
-    const pkg = packagingCostCents(plat);
-    return Math.ceil((tn + pkg + perOrderFlat(plat)) / keepRate(plat));
+    const pkg = packagingCostCents(plat); // already includes flat fee
+    return Math.ceil((tn + pkg) / keepRate(plat));
   }
 
   function targetNetCents() {
@@ -658,15 +682,9 @@
   function platformNet(li) {
     const listing = platformListingPrice(li);
     if (listing == null) return null;
-    const pkg = packagingCostCents(activePlat);
-    // When target-net mode is active, derive net from the (possibly floored) listing price
-    // so the Net column reflects exactly what you'd make at that price.
-    if (targetNetCents() > 0) {
-      return netFromListing(listing, activePlat) - pkg;
-    }
-    const feesNet = platformNetBeforePkg(li);
-    if (feesNet == null) return null;
-    return feesNet - pkg;
+    // revenue = (listing × keepRate) + (ship × shipKeepRate) − flat/card
+    // net     = revenue − physical supplies (stamp + packaging, no shipping revenue offset)
+    return revenueAfterFeesCents(listing, activePlat) - physicalSuppliesCents(activePlat);
   }
 
   function siftThresholdCents() {
@@ -1026,10 +1044,11 @@
       </tr>`;
     }).join("");
 
+    const avgCards = avgCardsPerOrder(activePlat);
     const platFeeNote = {
-      tcgplayer: "10.75% marketplace + 2.5% payment = 13.25%, minus packaging costs",
+      tcgplayer: `10.75% on item + 2.5% on item+ship + $0.30/order (÷${avgCards} cards) = 13.25% on item, 2.5% on ship, $${(0.30/avgCards).toFixed(2)} flat/card`,
       manapool:  "8% seller fee, minus packaging costs",
-      ebay:      "13.25% FVF + $0.30/order, minus packaging costs",
+      ebay:      `13.25% FVF + $0.30/order (÷${avgCards} cards)`,
     }[activePlat] || "";
     const tnActive  = targetNetCents() > 0;
     const isBeatLow = activePlat === "tcgplayer" && tcgPricingMode() === "beat-lowest";
