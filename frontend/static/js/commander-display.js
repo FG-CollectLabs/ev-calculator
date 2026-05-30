@@ -32,6 +32,8 @@
     tcgTieredLowC:    "ev_tcg_tier_low_cents",
     tcgTieredLowPct:  "ev_tcg_tier_low_pct",
     tcgTieredFloor:   "ev_tcg_tier_floor",
+    tcgBeatShip:      "ev_tcg_beat_ship",    // cents charged to buyer for shipping
+    tcgBeatFloor:     "ev_tcg_beat_floor",   // cents minimum listing price
     sift:          "ev_sift_threshold",
     // Packaging settings (stored as JSON objects keyed by platform)
     pkgSupplies:   "ev_pkg_supplies",   // { tcgplayer: {stamp,envelope,...}, manapool: {...}, ebay: {...} }
@@ -102,6 +104,12 @@
     if ($lowC)   $lowC.value   = (lsGet(LS.tcgTieredLowC,   "15"));
     if ($lowPct) $lowPct.value = (lsGet(LS.tcgTieredLowPct, "10"));
     if ($floor)  $floor.value  = (parseFloat(lsGet(LS.tcgTieredFloor, "35")) / 100).toFixed(2);
+    // Beat Lowest inputs
+    const $beatShip  = document.getElementById("tcg-beat-ship");
+    const $beatFloor = document.getElementById("tcg-beat-floor");
+    if ($beatShip)  $beatShip.value  = (parseFloat(lsGet(LS.tcgBeatShip,  "131")) / 100).toFixed(2);
+    if ($beatFloor) $beatFloor.value = (parseFloat(lsGet(LS.tcgBeatFloor, "35"))  / 100).toFixed(2);
+    document.getElementById("tcg-beat-lowest-rows")?.classList.toggle("hidden", tcgMode !== "beat-lowest");
 
     // Sift threshold
     const $sift = document.getElementById("sift-threshold");
@@ -138,6 +146,7 @@
         .forEach(b => b.classList.toggle("active", b === btn));
       document.getElementById("tcg-simple-row")?.classList.toggle("hidden", mode !== "simple");
       document.getElementById("tcg-tiered-rows")?.classList.toggle("hidden", mode !== "tiered");
+      document.getElementById("tcg-beat-lowest-rows")?.classList.toggle("hidden", mode !== "beat-lowest");
       renderDecks();
     });
   });
@@ -158,6 +167,8 @@
     ["tcg-tier-low-cents",  LS.tcgTieredLowC,   v => Math.round(parseFloat(v) || 0)],
     ["tcg-tier-low-pct",    LS.tcgTieredLowPct, v => Math.round(parseFloat(v) || 0)],
     ["tcg-tier-floor",      LS.tcgTieredFloor,  v => Math.round((parseFloat(v) || 0) * 100)],
+    ["tcg-beat-ship",       LS.tcgBeatShip,     v => Math.round((parseFloat(v) || 0) * 100)],
+    ["tcg-beat-floor",      LS.tcgBeatFloor,    v => Math.round((parseFloat(v) || 0) * 100)],
   ].forEach(([id, key, parse]) => {
     document.getElementById(id)?.addEventListener("input", function() {
       lsSet(key, String(parse(this.value)));
@@ -539,6 +550,14 @@
 
   function tcgPricingMode() { return lsGet(LS.tcgPricingMode, "simple"); }
 
+  function tcgBeatLowestListing(market, lowestLegit) {
+    const shipCharge = parseInt(lsGet(LS.tcgBeatShip,  "131"), 10) || 0;
+    const floor      = parseInt(lsGet(LS.tcgBeatFloor, "35"),  10) || 0;
+    // If no Direct listing data, fall back to market price
+    const base = (lowestLegit > 0) ? lowestLegit - shipCharge : market;
+    return Math.max(base, floor);
+  }
+
   function tcgTieredListing(market) {
     const HIGH_THRESHOLD = 500; // $5
     const highC  = parseInt(lsGet(LS.tcgTieredHighC,  "30"), 10)  || 0;
@@ -565,6 +584,8 @@
       case "tcgplayer": {
         if (tcgPricingMode() === "tiered") {
           listing = tcgTieredListing(market);
+        } else if (tcgPricingMode() === "beat-lowest") {
+          listing = tcgBeatLowestListing(market, li.price?.lowest_legit_cents || 0);
         } else {
           const ov = tcgOffsetValue();
           listing = tcgOffsetType() === "pct"

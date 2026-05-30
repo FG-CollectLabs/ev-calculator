@@ -27,6 +27,7 @@
     <div class="platform-toggle" id="tcg-pricing-mode-toggle">
       <button class="plat-btn active" data-mode="simple">Simple</button>
       <button class="plat-btn" data-mode="tiered" title="Tiered offsets for free-ship strategy: different rules for $5+ vs under-$5 cards">Tiered</button>
+      <button class="plat-btn" data-mode="beat-lowest" title="List at lowest Direct price minus your fixed shipping charge — undercuts Direct on total buyer cost">Beat Lowest</button>
     </div>
   </div>
   <!-- Simple mode -->
@@ -59,6 +60,22 @@
       <div class="settings-input-group" title="Minimum listing price — cards price-floored here still appear in EV totals (unlike Min list $, which excludes them)">
         <span class="settings-input-prefix" style="width:6rem">Floor $</span>
         <input class="settings-input" id="tcg-tier-floor" type="number" min="0" max="5" step="0.01" value="0.35" style="width:4rem">
+      </div>
+    </div>
+  </div>
+
+  <!-- Beat Lowest mode -->
+  <div class="settings-row hidden" id="tcg-beat-lowest-rows">
+    <span class="settings-label"></span>
+    <div style="display:flex;flex-direction:column;gap:0.35rem">
+      <div class="settings-input-group" title="Your fixed shipping charge to buyers. Listing price = lowest Direct − this amount, so your total cost to buyer matches theirs.">
+        <span class="settings-input-prefix" style="width:6rem">Ship charge</span>
+        <span class="settings-input-prefix">$</span>
+        <input class="settings-input" id="tcg-beat-ship" type="number" min="0" max="10" step="0.01" value="1.31" style="width:4.5rem">
+      </div>
+      <div class="settings-input-group" title="Minimum listing price floor (same as tiered floor — cards still appear in EV at this price)">
+        <span class="settings-input-prefix" style="width:6rem">Floor $</span>
+        <input class="settings-input" id="tcg-beat-floor" type="number" min="0" max="5" step="0.01" value="0.35" style="width:4rem">
       </div>
     </div>
   </div>
