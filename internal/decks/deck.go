@@ -51,6 +51,7 @@ type Component struct {
 	Quantity           int    `yaml:"qty"`
 	Name               string `yaml:"name,omitempty"`               // human label, not load-bearing
 	TCGPlayerProductID string `yaml:"tcgplayer_product_id,omitempty"`
+	TCGPlayerSKUID     string `yaml:"tcgplayer_sku_id,omitempty"`
 	Finish             string `yaml:"finish,omitempty"`             // "nf"|"f"|"e", used by TCGCSV pricer
 	Note               string `yaml:"note,omitempty"`
 	ReplaceWith        string `yaml:"replace_with,omitempty"`
