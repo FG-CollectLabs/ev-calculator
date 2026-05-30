@@ -240,7 +240,10 @@
   }
 
   function currentShipMode(plat) {
-    return lsGetJSON(LS.pkgShipping, {})[plat] || "free";
+    const saved = lsGetJSON(LS.pkgShipping, {})[plat] || "free";
+    // Beat Lowest pricing implies fixed-rate shipping — buyer always pays the fixed ship charge
+    if (saved === "free" && plat === "tcgplayer" && tcgPricingMode() === "beat-lowest") return "fixed";
+    return saved;
   }
 
   function currentFixedShipCents(plat) {
