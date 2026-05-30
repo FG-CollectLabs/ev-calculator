@@ -50,7 +50,7 @@ components:
   - display_key: mtg-tmc-7-nf
     qty: 1
     name: "Continue?"
-    tcgplayer_product_id: "680794"
+    tcgplayer_product_id: "679567"
     tcgplayer_sku_id: "9152862"
     finish: nf
   - display_key: mtg-tmc-8-nf

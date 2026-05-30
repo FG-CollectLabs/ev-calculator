@@ -610,12 +610,12 @@
 
   function isLand(li) {
     const sf = scryfallCache.get(li.display_key) || {};
-    return (sf.type_line || "").toLowerCase().includes("land");
+    return (sf.type_line || "").toLowerCase().includes("basic land");
   }
 
   // Returns true if the card should be excluded from EV totals and exports.
   // min-list-$ is now a PRICE FLOOR (applied in platformListingPrice), not a filter.
-  // Only lands (when skip-lands is on) and cards with no market data are excluded here.
+  // Only basic lands (when skip-basics is on) and cards with no market data are excluded here.
   function autoFiltered(li, listing) {
     if (listing == null) return true;
     if (skipLands && isLand(li)) return true;
