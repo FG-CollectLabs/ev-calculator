@@ -72,6 +72,134 @@
       <input class="settings-input" id="case-cost" type="number" min="0" step="0.01" placeholder="0.00">
     </div>
   </div>
+
+  <!-- Packaging & Fees -->
+  <details class="settings-details" id="pkg-details">
+    <summary class="settings-row pkg-summary">
+      <span class="settings-label">Packaging &amp; Fees</span>
+      <span class="pkg-summary-note muted" id="pkg-summary-note"></span>
+    </summary>
+
+    <div class="settings-row" style="padding-top:0.5rem">
+      <span class="settings-label">Config for</span>
+      <div class="platform-toggle" id="pkg-tab-toggle">
+        <button class="plat-btn active" data-pkg-tab="tcgplayer">TCGPlayer</button>
+        <button class="plat-btn" data-pkg-tab="manapool">Manapool</button>
+        <button class="plat-btn" data-pkg-tab="ebay">eBay</button>
+      </div>
+    </div>
+
+    <!-- TCGPlayer pane -->
+    <div class="pkg-pane" id="pkg-pane-tcgplayer">
+      <div class="settings-row">
+        <span class="settings-label">Envelope</span>
+        <div class="platform-toggle" id="tcg-env-toggle">
+          <button class="plat-btn active" data-env="no-window">#10 No Window</button>
+          <button class="plat-btn" data-env="window">#10 Window</button>
+        </div>
+      </div>
+      <div class="settings-row">
+        <span class="settings-label">Buyer shipping</span>
+        <div class="platform-toggle" id="tcg-ship-toggle">
+          <button class="plat-btn active" data-ship="free">Free Ship</button>
+          <button class="plat-btn" data-ship="fixed">Fixed Rate</button>
+          <button class="plat-btn" data-ship="buyer">Buyer Pays</button>
+        </div>
+      </div>
+      <div class="settings-row hidden" id="tcg-ship-fixed-row">
+        <span class="settings-label">Ship rate</span>
+        <div class="settings-input-group">
+          <span class="settings-input-prefix">$</span>
+          <input class="settings-input" id="tcg-ship-fixed-val" type="number" min="0" step="0.01" value="0.99" style="width:4.5rem">
+        </div>
+      </div>
+      <div class="supply-grid">
+        <div class="supply-header"><span>Supply item</span><span>$/card</span></div>
+        <label class="supply-row"><span>Postage (stamp)</span><span class="supply-prefix">$</span><input class="supply-input" id="tcg-s-stamp" type="number" min="0" step="0.01" value="0.73"></label>
+        <label class="supply-row"><span>Envelope (#10)</span><span class="supply-prefix">$</span><input class="supply-input" id="tcg-s-envelope" type="number" min="0" step="0.01" value="0.08"></label>
+        <label class="supply-row"><span>Card saver</span><span class="supply-prefix">$</span><input class="supply-input" id="tcg-s-card-saver" type="number" min="0" step="0.01" value="0.08"></label>
+        <label class="supply-row"><span>Penny sleeve</span><span class="supply-prefix">$</span><input class="supply-input" id="tcg-s-penny-sleeve" type="number" min="0" step="0.01" value="0.01"></label>
+        <label class="supply-row"><span>4×6 label</span><span class="supply-prefix">$</span><input class="supply-input" id="tcg-s-label" type="number" min="0" step="0.01" value="0.02"></label>
+        <label class="supply-row"><span>Packing slip (4×6)</span><span class="supply-prefix">$</span><input class="supply-input" id="tcg-s-packing-slip" type="number" min="0" step="0.01" value="0.02"></label>
+        <label class="supply-row"><span>Sticker / seal</span><span class="supply-prefix">$</span><input class="supply-input" id="tcg-s-sticker" type="number" min="0" step="0.01" value="0.01"></label>
+        <div class="supply-total">Supplies per card: <strong id="tcg-supply-total">$0.95</strong></div>
+      </div>
+      <div class="settings-row pkg-fee-note">
+        <span class="settings-label">Fees</span>
+        <span class="muted">10.75% marketplace + 2.5% payment = <strong>13.25%</strong> (no per-order flat on singles)</span>
+      </div>
+    </div>
+
+    <!-- Manapool pane -->
+    <div class="pkg-pane hidden" id="pkg-pane-manapool">
+      <div class="settings-row">
+        <span class="settings-label">Buyer shipping</span>
+        <div class="platform-toggle" id="mp-ship-toggle">
+          <button class="plat-btn active" data-ship="free">Free Ship</button>
+          <button class="plat-btn" data-ship="buyer">Buyer Pays</button>
+        </div>
+      </div>
+      <div class="supply-grid">
+        <div class="supply-header"><span>Supply item</span><span>$/card</span></div>
+        <label class="supply-row"><span>Postage</span><span class="supply-prefix">$</span><input class="supply-input" id="mp-s-stamp" type="number" min="0" step="0.01" value="0.73"></label>
+        <label class="supply-row"><span>Envelope</span><span class="supply-prefix">$</span><input class="supply-input" id="mp-s-envelope" type="number" min="0" step="0.01" value="0.08"></label>
+        <label class="supply-row"><span>Card saver</span><span class="supply-prefix">$</span><input class="supply-input" id="mp-s-card-saver" type="number" min="0" step="0.01" value="0.08"></label>
+        <label class="supply-row"><span>Penny sleeve</span><span class="supply-prefix">$</span><input class="supply-input" id="mp-s-penny-sleeve" type="number" min="0" step="0.01" value="0.01"></label>
+        <label class="supply-row"><span>4×6 label</span><span class="supply-prefix">$</span><input class="supply-input" id="mp-s-label" type="number" min="0" step="0.01" value="0.02"></label>
+        <label class="supply-row"><span>Packing slip (4×6)</span><span class="supply-prefix">$</span><input class="supply-input" id="mp-s-packing-slip" type="number" min="0" step="0.01" value="0.02"></label>
+        <label class="supply-row"><span>Sticker / seal</span><span class="supply-prefix">$</span><input class="supply-input" id="mp-s-sticker" type="number" min="0" step="0.01" value="0.01"></label>
+        <div class="supply-total">Supplies per card: <strong id="mp-supply-total">$0.95</strong></div>
+      </div>
+      <div class="settings-row pkg-fee-note">
+        <span class="settings-label">Fees</span>
+        <span class="muted">8% seller fee, no per-order flat</span>
+      </div>
+    </div>
+
+    <!-- eBay pane -->
+    <div class="pkg-pane hidden" id="pkg-pane-ebay">
+      <div class="settings-row">
+        <span class="settings-label">Shipping</span>
+        <div class="platform-toggle" id="ebay-pkg-ship-toggle">
+          <button class="plat-btn" data-ship="ese">eBay SE ($0.89)</button>
+          <button class="plat-btn active" data-ship="free">Free Ship</button>
+          <button class="plat-btn" data-ship="buyer">Buyer Pays</button>
+        </div>
+      </div>
+      <div class="supply-grid">
+        <div class="supply-header"><span>Supply item</span><span>$/card</span></div>
+        <label class="supply-row" id="ebay-postage-row"><span>Postage</span><span class="supply-prefix">$</span><input class="supply-input" id="ebay-s-stamp" type="number" min="0" step="0.01" value="0.73"></label>
+        <label class="supply-row"><span>Envelope</span><span class="supply-prefix">$</span><input class="supply-input" id="ebay-s-envelope" type="number" min="0" step="0.01" value="0.08"></label>
+        <label class="supply-row"><span>Card saver</span><span class="supply-prefix">$</span><input class="supply-input" id="ebay-s-card-saver" type="number" min="0" step="0.01" value="0.08"></label>
+        <label class="supply-row"><span>Penny sleeve</span><span class="supply-prefix">$</span><input class="supply-input" id="ebay-s-penny-sleeve" type="number" min="0" step="0.01" value="0.01"></label>
+        <label class="supply-row"><span>4×6 label</span><span class="supply-prefix">$</span><input class="supply-input" id="ebay-s-label" type="number" min="0" step="0.01" value="0.02"></label>
+        <label class="supply-row"><span>Packing slip (4×6)</span><span class="supply-prefix">$</span><input class="supply-input" id="ebay-s-packing-slip" type="number" min="0" step="0.01" value="0.02"></label>
+        <label class="supply-row"><span>Sticker / seal</span><span class="supply-prefix">$</span><input class="supply-input" id="ebay-s-sticker" type="number" min="0" step="0.01" value="0.01"></label>
+        <div class="supply-total">Supplies per card: <strong id="ebay-supply-total">$0.95</strong></div>
+      </div>
+      <div class="settings-row pkg-fee-note">
+        <span class="settings-label">Fees</span>
+        <span class="muted">13.25% FVF + $0.30/order (approximated per card)</span>
+      </div>
+    </div>
+  </details>
+</div>
+
+<div class="export-bar">
+  <span class="export-label">Export / Print:</span>
+  <button class="export-btn" id="export-case-btn">↓ Full Case CSV</button>
+  <button class="export-btn" id="export-deck-select-btn">↓ Select Decks…</button>
+  <button class="export-btn print-btn" id="print-pricing-btn">⎙ Print Pricing</button>
+</div>
+<div id="deck-select-modal" class="modal hidden">
+  <div class="modal-box">
+    <h3 style="margin:0 0 0.75rem">Select decks to export</h3>
+    <div id="deck-select-list"></div>
+    <div class="modal-actions">
+      <button class="plat-btn active" id="deck-select-confirm">↓ Export CSV</button>
+      <button class="plat-btn" id="deck-select-cancel">Cancel</button>
+    </div>
+  </div>
 </div>
 
 <div id="decks" class="deck-grid"></div>

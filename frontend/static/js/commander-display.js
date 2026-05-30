@@ -28,7 +28,22 @@
     tcgOffsetType: "ev_tcg_offset_type",
     tcgOffsetVal:  "ev_tcg_offset_val",
     sift:          "ev_sift_threshold",
+    // Packaging settings (stored as JSON objects keyed by platform)
+    pkgSupplies:   "ev_pkg_supplies",   // { tcgplayer: {stamp,envelope,...}, manapool: {...}, ebay: {...} }
+    pkgShipping:   "ev_pkg_shipping",   // { tcgplayer: "free"|"fixed"|"buyer", manapool: ..., ebay: ... }
+    pkgShipFixed:  "ev_pkg_ship_fixed", // { tcgplayer: cents }
+    pkgEnv:        "ev_pkg_env",        // { tcgplayer: "no-window"|"window" }
   };
+
+  // Default supply costs in cents per platform. Same defaults across all platforms.
+  const PKG_DEFAULT_SUPPLIES = { stamp:73, envelope:8, "card-saver":8, "penny-sleeve":1, label:2, "packing-slip":2, sticker:1 };
+  // Supply input ids per platform (id → supply key)
+  const PKG_SUPPLY_IDS = {
+    tcgplayer: { stamp:"tcg-s-stamp", envelope:"tcg-s-envelope", "card-saver":"tcg-s-card-saver", "penny-sleeve":"tcg-s-penny-sleeve", label:"tcg-s-label", "packing-slip":"tcg-s-packing-slip", sticker:"tcg-s-sticker" },
+    manapool:  { stamp:"mp-s-stamp",  envelope:"mp-s-envelope",  "card-saver":"mp-s-card-saver",  "penny-sleeve":"mp-s-penny-sleeve",  label:"mp-s-label",  "packing-slip":"mp-s-packing-slip",  sticker:"mp-s-sticker"  },
+    ebay:      { stamp:"ebay-s-stamp",envelope:"ebay-s-envelope","card-saver":"ebay-s-card-saver","penny-sleeve":"ebay-s-penny-sleeve",label:"ebay-s-label","packing-slip":"ebay-s-packing-slip",sticker:"ebay-s-sticker" },
+  };
+  const PKG_TOTAL_IDS = { tcgplayer:"tcg-supply-total", manapool:"mp-supply-total", ebay:"ebay-supply-total" };
 
   function lsGet(k, def) { try { return localStorage.getItem(k) ?? def; } catch { return def; } }
   function lsSet(k, v)   { try { localStorage.setItem(k, String(v)); } catch {} }
@@ -148,6 +163,177 @@
 
   applySavedSettings();
 
+  // ── Packaging & Fees state + helpers ──────────────────────────────────────
+
+  // Returns total supply cost in cents for the given platform, reading live input values.
+  function packagingSupplyCents(plat) {
+    const ids = PKG_SUPPLY_IDS[plat] || {};
+    return Object.values(ids).reduce((sum, id) => {
+      const el = document.getElementById(id);
+      const v  = el ? parseFloat(el.value) : 0;
+      return sum + (isNaN(v) ? 0 : Math.round(v * 100));
+    }, 0);
+  }
+
+  // Returns postage-only cents (stamp input for the platform).
+  function postageCents(plat) {
+    const ids = PKG_SUPPLY_IDS[plat] || {};
+    const el  = document.getElementById(ids.stamp);
+    const v   = el ? parseFloat(el.value) : 0;
+    return isNaN(v) ? 0 : Math.round(v * 100);
+  }
+
+  // Whether seller absorbs postage (free ship to buyer).
+  function sellerPaysPostage(plat) {
+    const saved = lsGetJSON(LS.pkgShipping, {})[plat] || "free";
+    return saved === "free" || saved === "ese";
+  }
+
+  // Total packaging cost per card: supplies + postage if seller pays it.
+  function packagingCostCents(plat) {
+    const supplies = packagingSupplyCents(plat);
+    // Postage is already included in supply inputs when seller pays shipping.
+    // If buyer pays, zero out the stamp portion.
+    if (!sellerPaysPostage(plat)) {
+      return supplies - postageCents(plat);
+    }
+    return supplies;
+  }
+
+  // Update live supply total display for a platform.
+  function updateSupplyTotal(plat) {
+    const el = document.getElementById(PKG_TOTAL_IDS[plat]);
+    if (!el) return;
+    const cents = packagingSupplyCents(plat);
+    el.textContent = EV.fmtUSD(cents);
+    // Update summary note on the details header
+    const note = document.getElementById("pkg-summary-note");
+    if (note) note.textContent = `${EV.fmtUSD(packagingCostCents(activePlat))}/card`;
+  }
+
+  // Persist supply values for a platform.
+  function saveSupplies(plat) {
+    const ids     = PKG_SUPPLY_IDS[plat] || {};
+    const saved   = lsGetJSON(LS.pkgSupplies, {});
+    saved[plat]   = {};
+    for (const [key, id] of Object.entries(ids)) {
+      const el = document.getElementById(id);
+      if (el) saved[plat][key] = parseFloat(el.value) || 0;
+    }
+    lsSetJSON(LS.pkgSupplies, saved);
+  }
+
+  // Load saved supply values into inputs.
+  function loadSupplies() {
+    const saved = lsGetJSON(LS.pkgSupplies, {});
+    for (const plat of ["tcgplayer", "manapool", "ebay"]) {
+      const vals = saved[plat] || {};
+      const ids  = PKG_SUPPLY_IDS[plat] || {};
+      for (const [key, id] of Object.entries(ids)) {
+        const el = document.getElementById(id);
+        if (!el) continue;
+        const def = PKG_DEFAULT_SUPPLIES[key] ?? 0;
+        el.value = ((vals[key] != null ? vals[key] : def / 100)).toFixed(2);
+      }
+    }
+    // Load shipping mode
+    const shipSaved = lsGetJSON(LS.pkgShipping, {});
+    setShipToggle("tcg-ship-toggle",      shipSaved.tcgplayer || "free");
+    setShipToggle("mp-ship-toggle",       shipSaved.manapool  || "free");
+    setShipToggle("ebay-pkg-ship-toggle", shipSaved.ebay      || "free");
+    // Load envelope toggle
+    const envSaved = lsGetJSON(LS.pkgEnv, {});
+    setEnvToggle("tcg-env-toggle", envSaved.tcgplayer || "no-window");
+    // Show/hide fixed rate row
+    document.getElementById("tcg-ship-fixed-row")
+      ?.classList.toggle("hidden", (shipSaved.tcgplayer || "free") !== "fixed");
+    const fixedSaved = lsGetJSON(LS.pkgShipFixed, {});
+    const fixedEl = document.getElementById("tcg-ship-fixed-val");
+    if (fixedEl && fixedSaved.tcgplayer != null) fixedEl.value = (fixedSaved.tcgplayer / 100).toFixed(2);
+    // Update totals
+    for (const plat of ["tcgplayer", "manapool", "ebay"]) updateSupplyTotal(plat);
+  }
+
+  function setShipToggle(toggleId, val) {
+    document.querySelectorAll(`#${toggleId} .plat-btn`).forEach(b => {
+      b.classList.toggle("active", b.dataset.ship === val);
+    });
+  }
+  function setEnvToggle(toggleId, val) {
+    document.querySelectorAll(`#${toggleId} .plat-btn`).forEach(b => {
+      b.classList.toggle("active", b.dataset.env === val);
+    });
+  }
+
+  // Active packaging config tab
+  let pkgActiveTab = "tcgplayer";
+
+  function setPkgTab(tab) {
+    pkgActiveTab = tab;
+    document.querySelectorAll("#pkg-tab-toggle .plat-btn").forEach(b =>
+      b.classList.toggle("active", b.dataset.pkgTab === tab));
+    document.querySelectorAll(".pkg-pane").forEach(p =>
+      p.classList.toggle("hidden", p.id !== `pkg-pane-${tab}`));
+  }
+
+  // Wire up packaging event handlers
+  document.querySelectorAll("#pkg-tab-toggle .plat-btn").forEach(btn => {
+    btn.addEventListener("click", () => setPkgTab(btn.dataset.pkgTab));
+  });
+
+  // Supply inputs: update total + persist on change
+  for (const plat of ["tcgplayer", "manapool", "ebay"]) {
+    const ids = PKG_SUPPLY_IDS[plat] || {};
+    for (const id of Object.values(ids)) {
+      document.getElementById(id)?.addEventListener("input", () => {
+        saveSupplies(plat);
+        updateSupplyTotal(plat);
+        renderDecks();
+      });
+    }
+  }
+
+  // Shipping toggles
+  document.querySelectorAll("#tcg-ship-toggle .plat-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const ship = btn.dataset.ship;
+      const saved = lsGetJSON(LS.pkgShipping, {}); saved.tcgplayer = ship; lsSetJSON(LS.pkgShipping, saved);
+      setShipToggle("tcg-ship-toggle", ship);
+      document.getElementById("tcg-ship-fixed-row")?.classList.toggle("hidden", ship !== "fixed");
+      updateSupplyTotal("tcgplayer");
+      renderDecks();
+    });
+  });
+  document.getElementById("tcg-ship-fixed-val")?.addEventListener("input", function() {
+    const saved = lsGetJSON(LS.pkgShipFixed, {}); saved.tcgplayer = Math.round(parseFloat(this.value || "0") * 100);
+    lsSetJSON(LS.pkgShipFixed, saved); renderDecks();
+  });
+  document.querySelectorAll("#mp-ship-toggle .plat-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const saved = lsGetJSON(LS.pkgShipping, {}); saved.manapool = btn.dataset.ship; lsSetJSON(LS.pkgShipping, saved);
+      setShipToggle("mp-ship-toggle", btn.dataset.ship);
+      updateSupplyTotal("manapool"); renderDecks();
+    });
+  });
+  document.querySelectorAll("#ebay-pkg-ship-toggle .plat-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const ship = btn.dataset.ship;
+      const saved = lsGetJSON(LS.pkgShipping, {}); saved.ebay = ship; lsSetJSON(LS.pkgShipping, saved);
+      setShipToggle("ebay-pkg-ship-toggle", ship);
+      // ESE and free ship both mean seller covers postage; buyer-pays hides the stamp
+      document.getElementById("ebay-postage-row")?.classList.toggle("hidden", ship === "buyer");
+      updateSupplyTotal("ebay"); renderDecks();
+    });
+  });
+  document.querySelectorAll("#tcg-env-toggle .plat-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const saved = lsGetJSON(LS.pkgEnv, {}); saved.tcgplayer = btn.dataset.env; lsSetJSON(LS.pkgEnv, saved);
+      setEnvToggle("tcg-env-toggle", btn.dataset.env);
+    });
+  });
+
+  loadSupplies();
+
   // ── Pricing helpers ────────────────────────────────────────────────────────
 
   function tcgOffsetType()  { return document.getElementById("tcg-offset-type").value; }
@@ -169,7 +355,7 @@
     }
   }
 
-  function platformNet(li) {
+  function platformNetBeforePkg(li) {
     if (!li.market_price_cents) return null;
     switch (activePlat) {
       case "tcgplayer": {
@@ -187,6 +373,12 @@
       case "ebay":     return li.ebay_net_cents ?? null;
       default:         return li.tcgplayer_net?.net_per_copy_cents ?? null;
     }
+  }
+
+  function platformNet(li) {
+    const feesNet = platformNetBeforePkg(li);
+    if (feesNet == null) return null;
+    return feesNet - packagingCostCents(activePlat);
   }
 
   function siftThresholdCents() {
@@ -654,6 +846,148 @@
       + `<a class="card-link card-link-ebay" href="${ebayURL}" target="_blank" rel="noopener" title="eBay sold">e</a>`
       + `</span>`;
   }
+
+  // ── Export helpers ────────────────────────────────────────────────────────
+
+  function buildExportCSV(deckKeys) {
+    const decksToExport = (report.decks || []).filter(d => deckKeys.includes(d.deck_key));
+    const platLabel = { tcgplayer:"TCGPlayer", manapool:"Manapool", ebay:"eBay" }[activePlat] || activePlat;
+    const supplyNote = `${EV.fmtUSD(packagingCostCents(activePlat))}/card supplies (${activePlat})`;
+
+    const header = ["Deck","Card","Set","#","Rarity","Qty/Copy","Copies","Total Qty","Market","Low Listed","List Price","Net After Fees","Net After Pkg","Case Total Net"];
+    const rows = [header];
+
+    for (const d of decksToExport) {
+      const copies = d.copies || 1;
+      const lines = (d.line_items || []).slice().sort((a, b) => (a.name||"").localeCompare(b.name||""));
+      for (const li of lines) {
+        const sf         = scryfallCache.get(li.display_key) || {};
+        const rarity     = scryfallRarity(sf.rarity) || "";
+        const setCode    = (sf.set || "").toUpperCase();
+        const collNum    = sf.collector_number || "";
+        const qtyPerCopy = Math.round(li.qty / copies);
+        const totalQty   = li.qty;
+        const market     = li.market_price_cents ? (li.market_price_cents / 100).toFixed(2) : "";
+        const low        = li.price?.lowest_legit_cents ? (li.price.lowest_legit_cents / 100).toFixed(2) : "";
+        const listing    = platformListingPrice(li);
+        const netFees    = platformNetBeforePkg(li);
+        const netPkg     = platformNet(li);
+        const caseTotal  = netPkg != null ? netPkg * li.qty : null;
+        rows.push([
+          d.name,
+          li.name || li.display_key,
+          setCode,
+          collNum,
+          rarity,
+          qtyPerCopy,
+          copies,
+          totalQty,
+          market,
+          low,
+          listing != null ? (listing / 100).toFixed(2) : "",
+          netFees != null ? (netFees / 100).toFixed(2) : "",
+          netPkg  != null ? (netPkg  / 100).toFixed(2) : "",
+          caseTotal != null ? (caseTotal / 100).toFixed(2) : "",
+        ]);
+      }
+    }
+
+    const csv = rows.map(r => r.map(v => `"${String(v).replace(/"/g, '""')}"`).join(",")).join("\r\n");
+    const filename = `ev-${report.key || "case"}-${platLabel.toLowerCase()}.csv`;
+    downloadText(csv, filename, "text/csv");
+  }
+
+  function downloadText(content, filename, mime) {
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(new Blob([content], { type: mime }));
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(() => { URL.revokeObjectURL(a.href); document.body.removeChild(a); }, 500);
+  }
+
+  function openPrintPricing(deckKeys) {
+    const decksToExport = (report.decks || []).filter(d => deckKeys.includes(d.deck_key));
+    const platLabel = { tcgplayer:"TCGPlayer", manapool:"Manapool", ebay:"eBay" }[activePlat] || activePlat;
+    let html = `<!DOCTYPE html><html><head><meta charset="utf-8">
+<title>Pricing — ${escHtml(report.name)}</title>
+<style>
+  body { font: 11px/1.4 sans-serif; padding: 1rem; }
+  h1 { font-size: 1.1rem; margin: 0 0 0.5rem; }
+  h2 { font-size: 0.95rem; margin: 1rem 0 0.3rem; border-bottom: 1px solid #ccc; padding-bottom: 0.2rem; }
+  table { border-collapse: collapse; width: 100%; margin-bottom: 1rem; }
+  th, td { border: 1px solid #ddd; padding: 0.2rem 0.4rem; text-align: left; }
+  th { background: #f4f4f4; }
+  .right { text-align: right; }
+  .muted { color: #888; }
+  input[type=checkbox] { margin-right: 0.3rem; }
+  @media print { .no-print { display:none; } }
+</style></head><body>
+<h1>${escHtml(report.name)} — ${platLabel} Pricing Sheet</h1>
+<p class="muted" style="margin:0 0 0.5rem;font-size:0.85em">Supplies: ${EV.fmtUSD(packagingCostCents(activePlat))}/card · Generated ${new Date().toLocaleDateString()}</p>
+<button class="no-print" onclick="window.print()">Print</button>`;
+
+    for (const d of decksToExport) {
+      const copies = d.copies || 1;
+      const lines = (d.line_items || [])
+        .filter(li => platformListingPrice(li) != null)
+        .sort((a, b) => (a.name||"").localeCompare(b.name||""));
+      html += `<h2>${escHtml(d.name)}</h2>
+<table><thead><tr><th></th><th>Card</th><th>Rarity</th><th class="right">Qty</th><th class="right">List ${platLabel}</th><th class="right">Net/card</th><th class="right">Net Total</th></tr></thead><tbody>`;
+      for (const li of lines) {
+        const sf       = scryfallCache.get(li.display_key) || {};
+        const rarity   = scryfallRarity(sf.rarity) || "";
+        const qty      = Math.round(li.qty / copies);
+        const listing  = platformListingPrice(li);
+        const netPkg   = platformNet(li);
+        html += `<tr>
+          <td><input type="checkbox"></td>
+          <td>${escHtml(li.name || li.display_key)}</td>
+          <td class="muted">${escHtml(rarity)}</td>
+          <td class="right">${qty}</td>
+          <td class="right">${EV.fmtUSD(listing)}</td>
+          <td class="right">${EV.fmtUSD(netPkg)}</td>
+          <td class="right">${EV.fmtUSD(netPkg != null ? netPkg * qty : null)}</td>
+        </tr>`;
+      }
+      html += `</tbody></table>`;
+    }
+    html += `</body></html>`;
+    const w = window.open("", "_blank");
+    w.document.write(html);
+    w.document.close();
+  }
+
+  // Export bar event wiring
+  document.getElementById("export-case-btn")?.addEventListener("click", () => {
+    buildExportCSV((report.decks || []).map(d => d.deck_key));
+  });
+
+  document.getElementById("print-pricing-btn")?.addEventListener("click", () => {
+    openPrintPricing((report.decks || []).map(d => d.deck_key));
+  });
+
+  document.getElementById("export-deck-select-btn")?.addEventListener("click", () => {
+    const modal = document.getElementById("deck-select-modal");
+    const list  = document.getElementById("deck-select-list");
+    list.innerHTML = (report.decks || []).map(d =>
+      `<label style="display:block;padding:0.25rem 0">
+        <input type="checkbox" value="${escHtml(d.deck_key)}" checked>
+        ${escHtml(d.name)} (${d.copies} cop${d.copies === 1 ? "y":"ies"})
+       </label>`
+    ).join("");
+    modal.classList.remove("hidden");
+  });
+
+  document.getElementById("deck-select-confirm")?.addEventListener("click", () => {
+    const keys = Array.from(document.querySelectorAll("#deck-select-list input:checked"))
+      .map(cb => cb.value);
+    document.getElementById("deck-select-modal").classList.add("hidden");
+    if (keys.length) buildExportCSV(keys);
+  });
+  document.getElementById("deck-select-cancel")?.addEventListener("click", () => {
+    document.getElementById("deck-select-modal").classList.add("hidden");
+  });
 
   function escHtml(s) {
     return String(s == null ? "" : s)

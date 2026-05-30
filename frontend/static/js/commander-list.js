@@ -5,7 +5,8 @@
   const $fee     = document.getElementById("fee-override");
   const $headers = document.querySelectorAll("#displays thead th[data-sort]");
 
-  const SCRYFALL_SETS = "https://c2.scryfall.com/file/scryfall-symbols/sets/";
+  const SCRYFALL_SETS  = "https://c2.scryfall.com/file/scryfall-symbols/sets/";
+  const TCG_PROD_IMG   = "https://product-images.tcgplayer.com/fit-in/68x93/";
 
   // ── State ─────────────────────────────────────────────────────────────────
   let allData  = [];  // [{d, report, gross, error}]
@@ -84,11 +85,18 @@
   }
 
   // ── Render ────────────────────────────────────────────────────────────────
-  function setSymbolCell(setCode) {
-    const url = SCRYFALL_SETS + setCode + ".svg";
-    return `<td class="center" style="padding:0.3rem 0.5rem">
-      <img src="${url}" height="22" width="22" alt="${setCode.toUpperCase()}" title="${setCode.toUpperCase()}"
-           style="display:block;margin:0 auto;opacity:0.85" onerror="this.style.opacity='0.2'">
+  function setImageCell(d) {
+    if (d.product_tcgplayer_id) {
+      const url = TCG_PROD_IMG + d.product_tcgplayer_id + ".jpg";
+      const fallback = SCRYFALL_SETS + d.set_code + ".svg";
+      return `<td class="set-img-cell">
+        <img src="${url}" class="set-prod-img" alt="${d.set_code.toUpperCase()}" title="${d.name}"
+             onerror="this.src='${fallback}';this.className='set-sym-img';this.style.opacity='0.8'">
+      </td>`;
+    }
+    const url = SCRYFALL_SETS + d.set_code + ".svg";
+    return `<td class="set-img-cell">
+      <img src="${url}" class="set-sym-img" alt="${d.set_code.toUpperCase()}" title="${d.set_code.toUpperCase()}">
     </td>`;
   }
 
@@ -103,7 +111,7 @@
     // Error state: show the display name + error badge, dashes for data.
     if (error && !report) {
       return `<tr>
-        ${setSymbolCell(d.set_code)}
+        ${setImageCell(d)}
         <td><a href="${href}">${d.name}</a>
           <div class="subtle">${d.game} · ${d.set_code.toUpperCase()}</div>
           <span class="fetch-error-badge" title="${error}">⚠ fetch failed</span>
@@ -135,7 +143,7 @@
     const feeNote = feeOverridePct() !== null ? ` <span class="subtle fee-note">(${feeOverridePct()}% fee)</span>` : "";
 
     return `<tr>
-      ${setSymbolCell(d.set_code)}
+      ${setImageCell(d)}
       <td><a href="${href}">${d.name}</a><div class="subtle">${d.game} · ${d.set_code.toUpperCase()}</div></td>
       <td class="right">${d.total_copies}</td>
       <td class="right">${EV.fmtUSD(caseCost)}</td>

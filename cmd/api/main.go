@@ -17,6 +17,7 @@ import (
 	"os"
 	"os/signal"
 	"path/filepath"
+	"sort"
 	"strings"
 	"sync"
 	"syscall"
@@ -30,13 +31,14 @@ import (
 )
 
 type displayIndexEntry struct {
-	Key         string `json:"key"`
-	Name        string `json:"name"`
-	Game        string `json:"game"`
-	SetCode     string `json:"set_code"`
-	ProductType string `json:"product_type,omitempty"`
-	DeckCount   int    `json:"deck_count"`
-	TotalCopies int    `json:"total_copies"`
+	Key                string `json:"key"`
+	Name               string `json:"name"`
+	Game               string `json:"game"`
+	SetCode            string `json:"set_code"`
+	ProductType        string `json:"product_type,omitempty"`
+	DeckCount          int    `json:"deck_count"`
+	TotalCopies        int    `json:"total_copies"`
+	ProductTCGPlayerID string `json:"product_tcgplayer_id,omitempty"`
 }
 
 func main() {
@@ -135,6 +137,35 @@ func main() {
 	mux.Handle("GET /v1/ev/cases/{key}", auth(func(w http.ResponseWriter, r *http.Request) {
 		buildReport(w, r, r.PathValue("key"))
 	}))
+
+	// Deck catalog listing — no auth, returns all known individual deck keys + names.
+	// Used by card-inventory-backend to resolve sealed products from receipts.
+	mux.HandleFunc("GET /v1/decks", func(w http.ResponseWriter, r *http.Request) {
+		deckMap, err := decks.LoadAllDecks(dataDir)
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+			return
+		}
+		type deckEntry struct {
+			Key               string `json:"key"`
+			Name              string `json:"name"`
+			Game              string `json:"game"`
+			SetCode           string `json:"set_code"`
+			ProductDisplayKey string `json:"product_display_key"`
+		}
+		entries := make([]deckEntry, 0, len(deckMap))
+		for _, d := range deckMap {
+			entries = append(entries, deckEntry{
+				Key:               d.Key,
+				Name:              d.Name,
+				Game:              d.Game,
+				SetCode:           d.SetCode,
+				ProductDisplayKey: d.ProductDisplayKey,
+			})
+		}
+		sort.Slice(entries, func(i, j int) bool { return entries[i].Key < entries[j].Key })
+		writeJSON(w, map[string]any{"decks": entries})
+	})
 
 	// Deck manifest endpoint — no auth, returns static component list for a single deck.
 	// Used by card-inventory-frontend to auto-populate the break form.
@@ -473,13 +504,18 @@ func indexDisplays(dataDir string) ([]displayIndexEntry, error) {
 		for _, dc := range d.Decks {
 			total += dc.Copies
 		}
+		productID := d.ProductTCGPlayerID
+		if productID == "" {
+			productID = d.ProductSetOfNTCGPlayerID
+		}
 		entries = append(entries, displayIndexEntry{
-			Key:         d.Key,
-			Name:        d.Name,
-			Game:        d.Game,
-			SetCode:     d.SetCode,
-			DeckCount:   len(d.Decks),
-			TotalCopies: total,
+			Key:                d.Key,
+			Name:               d.Name,
+			Game:               d.Game,
+			SetCode:            d.SetCode,
+			DeckCount:          len(d.Decks),
+			TotalCopies:        total,
+			ProductTCGPlayerID: productID,
 		})
 		return nil
 	})
