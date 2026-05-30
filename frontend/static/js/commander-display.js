@@ -1078,7 +1078,7 @@
   // Price list CSV: all cards with a computed price, no qty/filter logic.
   // Intended to feed listing prices into the Box Break App.
   function buildPriceListCSV() {
-    const header = ["TCGplayer Id","Card Name","Set","Collector #","Listing Price"];
+    const header = ["TCGplayer Id","Card Name","Listing Price"];
     const rows   = [header];
     const seen   = new Set();
 
@@ -1089,16 +1089,7 @@
         seen.add(pid);
         const listing = platformListingPrice(li);
         if (listing == null) continue;
-        const sf     = scryfallCache.get(li.display_key) || {};
-        const setCode = (sf.set || "").toUpperCase();
-        const collNum = sf.collector_number || "";
-        rows.push([
-          pid,
-          li.name || li.display_key,
-          setCode,
-          collNum,
-          (listing / 100).toFixed(2),
-        ]);
+        rows.push([pid, li.name || li.display_key, (listing / 100).toFixed(2)]);
       }
     }
 
