@@ -196,6 +196,7 @@ func main() {
 			Qty                int    `json:"qty"`
 			Name               string `json:"name,omitempty"`
 			TCGPlayerProductID string `json:"tcgplayer_product_id,omitempty"`
+			TCGPlayerSKUID     string `json:"tcgplayer_sku_id,omitempty"`
 			Finish             string `json:"finish,omitempty"`
 		}
 		type deckResp struct {
@@ -216,6 +217,7 @@ func main() {
 				Qty:                c.Quantity,
 				Name:               c.Name,
 				TCGPlayerProductID: c.TCGPlayerProductID,
+				TCGPlayerSKUID:     c.TCGPlayerSKUID,
 				Finish:             c.Finish,
 			}
 		}
