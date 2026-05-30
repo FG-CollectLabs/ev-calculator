@@ -197,6 +197,8 @@ td.muted { color: var(--muted); }
 .ev-toggle:hover { background: rgba(255,255,255,0.06); }
 .ev-override-on  { color: var(--pos); font-weight: 700; }
 .ev-override-off { color: var(--neg); }
+.ev-filtered     { color: var(--muted); }
+table.data tr.filtered { opacity: 0.35; }
 
 /* ── Sellthrough columns ── */
 .st-badge {

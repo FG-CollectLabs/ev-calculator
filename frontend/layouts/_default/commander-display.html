@@ -66,6 +66,16 @@
     </div>
   </div>
   <div class="settings-row">
+    <span class="settings-label" title="Cards with a listing price below this threshold are auto-excluded from EV totals and exports. Useful for skipping bulk commons not worth listing individually.">Min list $</span>
+    <div class="settings-input-group">
+      <span class="settings-input-prefix">$</span>
+      <input class="settings-input" id="min-list-value" type="number" min="0" step="0.01" placeholder="off" style="width:5rem">
+    </div>
+    <div class="platform-toggle" style="margin-left:0.5rem">
+      <button class="plat-btn" id="skip-lands-btn" title="Exclude basic and non-basic lands from EV totals and exports (identified via Scryfall type line)">Skip Lands</button>
+    </div>
+  </div>
+  <div class="settings-row">
     <span class="settings-label">Case cost</span>
     <div class="settings-input-group">
       <span class="settings-input-prefix">$</span>
@@ -132,6 +142,13 @@
         <label class="supply-row"><span>Sticker / seal</span><span class="supply-prefix">$</span><input class="supply-input" id="tcg-s-sticker" type="number" min="0" step="0.01" value="0.01"></label>
         <div class="supply-total">Supplies per card: <strong id="tcg-supply-total">$0.95</strong></div>
       </div>
+      <div class="settings-row" style="padding-top:0.25rem">
+        <span class="settings-label" title="Average number of cards per buyer order. Postage and fixed-shipping revenue are divided by this number so the per-card cost is realistic for bundled orders.">Cards / order</span>
+        <div class="settings-input-group">
+          <input class="settings-input" id="tcg-avg-cards" type="number" min="1" max="20" step="0.5" value="1" style="width:4rem">
+          <span class="muted" style="font-size:0.75rem;margin-left:0.35rem">postage ÷ this</span>
+        </div>
+      </div>
       <div class="settings-row pkg-fee-note">
         <span class="settings-label">Fees</span>
         <span class="muted">10.75% marketplace + 2.5% payment = <strong>13.25%</strong> (no per-order flat on singles)</span>
@@ -197,6 +214,7 @@
   <span class="export-label">Export / Print:</span>
   <button class="export-btn" id="export-case-btn">↓ Full Case CSV</button>
   <button class="export-btn" id="export-deck-select-btn">↓ Select Decks…</button>
+  <button class="export-btn tcg-csv-btn" id="export-tcg-csv-btn" title="Export TCGPlayer bulk-listing CSV (TCGplayer Id, Condition, Qty, Price). Applies active filters.">↓ TCGPlayer CSV</button>
   <button class="export-btn print-btn" id="print-pricing-btn">⎙ Print Pricing</button>
 </div>
 <div id="deck-select-modal" class="modal hidden">

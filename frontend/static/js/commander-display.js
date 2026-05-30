@@ -184,17 +184,59 @@
     return isNaN(v) ? 0 : Math.round(v * 100);
   }
 
-  // Whether seller absorbs postage (free ship to buyer).
-  function sellerPaysPostage(plat) {
-    const saved = lsGetJSON(LS.pkgShipping, {})[plat] || "free";
-    return saved === "free" || saved === "ese";
+  function currentShipMode(plat) {
+    return lsGetJSON(LS.pkgShipping, {})[plat] || "free";
   }
 
-  // Total packaging cost per card: supplies + postage if seller pays it.
+  function currentFixedShipCents(plat) {
+    if (plat !== "tcgplayer") return 0;
+    const el = document.getElementById("tcg-ship-fixed-val");
+    const v  = el ? parseFloat(el.value) : 0;
+    return isNaN(v) ? 0 : Math.round(v * 100);
+  }
+
+  function avgCardsPerOrder(plat) {
+    const idMap = { tcgplayer: "tcg-avg-cards" };
+    const el = idMap[plat] ? document.getElementById(idMap[plat]) : null;
+    const v  = el ? parseFloat(el.value) : 1;
+    return (!isNaN(v) && v >= 1) ? v : 1;
+  }
+
+  // Corrected per-card packaging cost that accounts for:
+  //   free ship    → seller pays stamp amortized by avg order size
+  //   fixed rate   → shipping revenue (after TCG fees) offsets stamp cost
+  //   buyer pays   → buyer covers postage but TCG takes 13.25% of it too,
+  //                  so seller loses (1-keepRate)*stamp per card shipped
+  //   ESE (eBay)   → same as free ship; ESE cost is $0.89 built into listing
   function packagingCostCents(plat) {
-    const supplies = packagingSupplyCents(plat);
-    if (!sellerPaysPostage(plat)) return supplies - postageCents(plat);
-    return supplies;
+    const stamp         = postageCents(plat);
+    const otherSupplies = packagingSupplyCents(plat) - stamp;
+    const avg           = avgCardsPerOrder(plat);
+    const mode          = currentShipMode(plat);
+    const kr            = keepRate(plat);
+
+    switch (mode) {
+      case "free":
+      case "ese":
+        // Seller eats full postage, amortized across cards in the order
+        return otherSupplies + Math.round(stamp / avg);
+
+      case "fixed": {
+        // Shipping revenue (after TCG fees) offsets postage cost
+        const shipRevNet = Math.round(currentFixedShipCents(plat) * kr / avg);
+        return otherSupplies + Math.round(stamp / avg) - shipRevNet;
+      }
+
+      case "buyer": {
+        // Buyer pays ~stamp cost in shipping, but TCG takes their cut of it.
+        // Net postage loss = stamp × (1 − keepRate) ÷ avg cards/order
+        const postageFeeLoss = Math.round(stamp * (1 - kr) / avg);
+        return otherSupplies + postageFeeLoss;
+      }
+
+      default:
+        return otherSupplies + Math.round(stamp / avg);
+    }
   }
 
   // Fraction of listing price kept after marketplace fees (before packaging).
@@ -241,13 +283,10 @@
 
   // Update live supply total display for a platform.
   function updateSupplyTotal(plat) {
-    const el = document.getElementById(PKG_TOTAL_IDS[plat]);
-    if (!el) return;
-    const cents = packagingSupplyCents(plat);
-    el.textContent = EV.fmtUSD(cents);
-    // Update summary note on the details header
+    const rawEl = document.getElementById(PKG_TOTAL_IDS[plat]);
+    if (rawEl) rawEl.textContent = EV.fmtUSD(packagingSupplyCents(plat));
     const note = document.getElementById("pkg-summary-note");
-    if (note) note.textContent = `${EV.fmtUSD(packagingCostCents(activePlat))}/card`;
+    if (note) note.textContent = `${EV.fmtUSD(packagingCostCents(activePlat))}/card effective`;
   }
 
   // Persist supply values for a platform.
@@ -289,6 +328,10 @@
     const fixedSaved = lsGetJSON(LS.pkgShipFixed, {});
     const fixedEl = document.getElementById("tcg-ship-fixed-val");
     if (fixedEl && fixedSaved.tcgplayer != null) fixedEl.value = (fixedSaved.tcgplayer / 100).toFixed(2);
+    // Load avg cards per order
+    const avgSaved = lsGetJSON("ev_pkg_avg_cards", {});
+    const avgEl = document.getElementById("tcg-avg-cards");
+    if (avgEl && avgSaved.tcgplayer != null) avgEl.value = avgSaved.tcgplayer;
     // Update totals
     for (const plat of ["tcgplayer", "manapool", "ebay"]) updateSupplyTotal(plat);
   }
@@ -374,6 +417,13 @@
 
   loadSupplies();
 
+  // Avg cards per order
+  document.getElementById("tcg-avg-cards")?.addEventListener("input", function() {
+    const saved = lsGetJSON("ev_pkg_avg_cards", {}); saved.tcgplayer = parseFloat(this.value) || 1;
+    lsSetJSON("ev_pkg_avg_cards", saved);
+    updateSupplyTotal("tcgplayer"); updateTargetNetHint(); renderDecks();
+  });
+
   // Target net input
   const $targetNet = document.getElementById("target-net-value");
   if ($targetNet) {
@@ -385,6 +435,49 @@
     });
   }
   updateTargetNetHint();
+
+  // ── Value floor + land filter ──────────────────────────────────────────────
+
+  let skipLands = lsGet("ev_skip_lands", "0") === "1";
+
+  const $skipLandsBtn = document.getElementById("skip-lands-btn");
+  if ($skipLandsBtn) {
+    $skipLandsBtn.classList.toggle("active", skipLands);
+    $skipLandsBtn.addEventListener("click", () => {
+      skipLands = !skipLands;
+      $skipLandsBtn.classList.toggle("active", skipLands);
+      lsSet("ev_skip_lands", skipLands ? "1" : "0");
+      renderDecks();
+    });
+  }
+
+  const $minList = document.getElementById("min-list-value");
+  if ($minList) {
+    $minList.value = lsGet("ev_min_list", "");
+    $minList.addEventListener("input", function() {
+      lsSet("ev_min_list", this.value);
+      renderDecks();
+    });
+  }
+
+  function minListCents() {
+    const v = parseFloat(document.getElementById("min-list-value")?.value || "");
+    return isNaN(v) || v <= 0 ? 0 : Math.round(v * 100);
+  }
+
+  function isLand(li) {
+    const sf = scryfallCache.get(li.display_key) || {};
+    return (sf.type_line || "").toLowerCase().includes("land");
+  }
+
+  // Returns true if the card should be excluded by the automatic filters
+  // (value floor or land skip). Manual EV-toggle overrides take precedence
+  // and are handled separately in the row builder.
+  function autoFiltered(li, listing) {
+    if (minListCents() > 0 && (listing == null || listing < minListCents())) return true;
+    if (skipLands && isLand(li)) return true;
+    return false;
+  }
 
   // ── Pricing helpers ────────────────────────────────────────────────────────
 
@@ -464,8 +557,12 @@
     let total = 0;
     for (const li of d.line_items || []) {
       if (!li.included_in_ev) continue;
-      const net = platformNet(li);
+      if (userExcluded.get(String(li.tcgplayer_product_id || ""))) continue;
+      const listing = platformListingPrice(li);
+      const net     = platformNet(li);
       if (net == null) continue;
+      // Respect manual include override; otherwise apply auto-filters
+      if (!userIncluded.get(String(li.tcgplayer_product_id || "")) && autoFiltered(li, listing)) continue;
       total += net * li.qty;
     }
     return total;
@@ -742,16 +839,18 @@
 
       const forceExclude = userExcluded.get(pid);
       const forceInclude = userIncluded.get(pid);
-      const exportOn     = forceExclude ? false : forceInclude ? true : listing != null;
-      const evIcon  = exportOn ? "✓" : "—";
-      const evClass = forceExclude ? "ev-override-off" : forceInclude ? "ev-override-on" : "";
+      const filtered     = !forceInclude && autoFiltered(li, listing);
+      const exportOn     = forceExclude ? false : forceInclude ? true : !filtered && listing != null;
+      const evIcon  = forceInclude ? "✓" : filtered ? "⊘" : exportOn ? "✓" : "—";
+      const evClass = forceExclude ? "ev-override-off" : forceInclude ? "ev-override-on" : filtered ? "ev-filtered" : "";
 
       const st = li.sellthrough;
 
       // Low listed: lowest TCGPlayer Direct price (vetted sellers, free shipping)
       const lowListedCell = `<td class="right" data-cents="${price.lowest_legit_cents ?? 0}" title="Lowest TCGPlayer Direct listing${price.lowest_legit_cents ? '' : ' — no data'}">${EV.fmtUSD(price.lowest_legit_cents)}</td>`;
 
-      return `<tr class="${li.included_in_ev ? "" : "excluded"}" data-pid="${pid}">
+      const rowClass = forceExclude ? "excluded" : filtered ? "filtered" : li.included_in_ev ? "" : "excluded";
+      return `<tr class="${rowClass}" data-pid="${pid}">
         <td class="ev-toggle ${evClass}" data-pid="${pid}" title="Toggle inclusion" style="cursor:pointer;text-align:center">${evIcon}</td>
         <td class="img-cell center">${stockSrc ? `<img src="${stockSrc}" class="card-thumb" loading="lazy" alt="">` : "—"}</td>
         <td>${escHtml(li.name || li.display_key)}${cardLinks(li)}</td>
@@ -969,6 +1068,34 @@
     downloadText(csv, filename, "text/csv");
   }
 
+  // TCGPlayer bulk-listing CSV: TCGplayer Id, Condition, Add to Quantity, TCG Marketplace Price
+  function buildTCGPlayerCSV() {
+    const header = ["TCGplayer Id","Condition","Add to Quantity","TCG Marketplace Price"];
+    const rows   = [header];
+
+    for (const d of report.decks || []) {
+      for (const li of d.line_items || []) {
+        if (!li.included_in_ev) continue;
+        const pid = String(li.tcgplayer_product_id || "");
+        if (!pid) continue;
+        if (userExcluded.get(pid)) continue;
+        const listing = platformListingPrice(li);
+        if (!userIncluded.get(pid) && autoFiltered(li, listing)) continue;
+        if (listing == null) continue;
+        rows.push([
+          pid,
+          "Near Mint",
+          li.qty,
+          (listing / 100).toFixed(2),
+        ]);
+      }
+    }
+
+    const csv = rows.map(r => r.map(v => `"${String(v).replace(/"/g, '""')}"`).join(",")).join("\r\n");
+    const filename = `tcgplayer-listing-${report.key || "case"}.csv`;
+    downloadText(csv, filename, "text/csv");
+  }
+
   function downloadText(content, filename, mime) {
     const a = document.createElement("a");
     a.href = URL.createObjectURL(new Blob([content], { type: mime }));
@@ -1060,6 +1187,8 @@
   document.getElementById("deck-select-cancel")?.addEventListener("click", () => {
     document.getElementById("deck-select-modal").classList.add("hidden");
   });
+
+  document.getElementById("export-tcg-csv-btn")?.addEventListener("click", buildTCGPlayerCSV);
 
   function escHtml(s) {
     return String(s == null ? "" : s)
