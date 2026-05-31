@@ -82,6 +82,7 @@ components:
     qty: 1
     name: Brushland
     tcgplayer_product_id: "631253"
+    tcgplayer_sku_id: "8706609"
     finish: f
   - display_key: mtg-fic-66-f
     qty: 1
@@ -182,6 +183,7 @@ components:
     qty: 1
     name: Evolving Wilds
     tcgplayer_product_id: "631290"
+    tcgplayer_sku_id: "8707719"
     finish: f
   - display_key: mtg-fic-390-f
     qty: 1
@@ -322,6 +324,7 @@ components:
     qty: 1
     name: Radiant Grove
     tcgplayer_product_id: "631297"
+    tcgplayer_sku_id: "8707929"
     finish: f
   - display_key: mtg-fic-313-f
     qty: 1
@@ -352,6 +355,7 @@ components:
     qty: 1
     name: Scavenger Grounds
     tcgplayer_product_id: "631278"
+    tcgplayer_sku_id: "8707359"
     finish: f
   - display_key: mtg-fic-253-f
     qty: 1
@@ -402,11 +406,13 @@ components:
     qty: 1
     name: Sungrass Prairie
     tcgplayer_product_id: "631283"
+    tcgplayer_sku_id: "8707509"
     finish: f
   - display_key: mtg-fic-432-f
     qty: 1
     name: Sunpetal Grove
     tcgplayer_product_id: "631285"
+    tcgplayer_sku_id: "8707569"
     finish: f
   - display_key: mtg-fic-433-f
     qty: 1

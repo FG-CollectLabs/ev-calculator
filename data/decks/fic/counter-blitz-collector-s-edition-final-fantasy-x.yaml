@@ -22,11 +22,13 @@ components:
     qty: 1
     name: "An Offer You Can't Refuse"
     tcgplayer_product_id: "631265"
+    tcgplayer_sku_id: "8706969"
     finish: f
   - display_key: mtg-fic-334-f
     qty: 1
     name: Arcane Signet
     tcgplayer_product_id: "631491"
+    tcgplayer_sku_id: "8710669"
     finish: f
   - display_key: mtg-fic-374-f
     qty: 1
@@ -42,6 +44,7 @@ components:
     qty: 1
     name: Bane of Progress
     tcgplayer_product_id: "631542"
+    tcgplayer_sku_id: "8711823"
     finish: f
   - display_key: mtg-fic-34-f
     qty: 1
@@ -57,6 +60,7 @@ components:
     qty: 1
     name: Brushland
     tcgplayer_product_id: "631253"
+    tcgplayer_sku_id: "8706609"
     finish: f
   - display_key: mtg-fic-378-f
     qty: 1
@@ -67,11 +71,13 @@ components:
     qty: 1
     name: Chasm Skulker
     tcgplayer_product_id: "631260"
+    tcgplayer_sku_id: "8706819"
     finish: f
   - display_key: mtg-fic-12-f
     qty: 1
     name: Chocobo Knights
     tcgplayer_product_id: "631141"
+    tcgplayer_sku_id: "8703219"
     finish: f
   - display_key: mtg-fic-237-f
     qty: 1
@@ -82,11 +88,13 @@ components:
     qty: 1
     name: Command Tower
     tcgplayer_product_id: "631508"
+    tcgplayer_sku_id: "8711179"
     finish: f
   - display_key: mtg-fic-239-f
     qty: 1
     name: Damning Verdict
     tcgplayer_product_id: "631176"
+    tcgplayer_sku_id: "8704299"
     finish: f
   - display_key: mtg-fic-240-f
     qty: 1
@@ -107,11 +115,13 @@ components:
     qty: 1
     name: Everflowing Chalice
     tcgplayer_product_id: "631494"
+    tcgplayer_sku_id: "8710759"
     finish: f
   - display_key: mtg-fic-389-f
     qty: 1
     name: Evolving Wilds
     tcgplayer_product_id: "631290"
+    tcgplayer_sku_id: "8707719"
     finish: f
   - display_key: mtg-fic-390-f
     qty: 1
@@ -122,26 +132,31 @@ components:
     qty: 1
     name: Farewell
     tcgplayer_product_id: "631183"
+    tcgplayer_sku_id: "8704509"
     finish: f
   - display_key: mtg-fic-302-f
     qty: 1
     name: Farseek
     tcgplayer_product_id: "631548"
+    tcgplayer_sku_id: "8711943"
     finish: f
   - display_key: mtg-fic-325-f
     qty: 1
     name: Fathom Mage
     tcgplayer_product_id: "631489"
+    tcgplayer_sku_id: "8710609"
     finish: f
   - display_key: mtg-fic-303-f
     qty: 1
     name: Fight Rigging
     tcgplayer_product_id: "631552"
+    tcgplayer_sku_id: "8712023"
     finish: f
   - display_key: mtg-fic-393-f
     qty: 1
     name: Flooded Grove
     tcgplayer_product_id: "631497"
+    tcgplayer_sku_id: "8710849"
     finish: f
   - display_key: mtg-fin-576-f
     qty: 3
@@ -152,11 +167,13 @@ components:
     qty: 1
     name: Forge of Heroes
     tcgplayer_product_id: "631498"
+    tcgplayer_sku_id: "8710879"
     finish: f
   - display_key: mtg-fic-304-f
     qty: 1
     name: Forgotten Ancient
     tcgplayer_product_id: "631555"
+    tcgplayer_sku_id: "8712093"
     finish: f
   - display_key: mtg-fic-396-f
     qty: 1
@@ -172,6 +189,7 @@ components:
     qty: 1
     name: Generous Patron
     tcgplayer_product_id: "631559"
+    tcgplayer_sku_id: "8712173"
     finish: f
   - display_key: mtg-fic-400-f
     qty: 1
@@ -187,31 +205,37 @@ components:
     qty: 1
     name: Gyre Sage
     tcgplayer_product_id: "631302"
+    tcgplayer_sku_id: "8708079"
     finish: f
   - display_key: mtg-fic-307-f
     qty: 1
     name: Hardened Scales
     tcgplayer_product_id: "631305"
+    tcgplayer_sku_id: "8708169"
     finish: f
   - display_key: mtg-fic-403-f
     qty: 1
     name: Hinterland Harbor
     tcgplayer_product_id: "631499"
+    tcgplayer_sku_id: "8710909"
     finish: f
   - display_key: mtg-fic-404-f
     qty: 1
     name: Idyllic Beachfront
     tcgplayer_product_id: "631322"
+    tcgplayer_sku_id: "8708679"
     finish: f
   - display_key: mtg-fic-309-f
     qty: 1
     name: Incubation Druid
     tcgplayer_product_id: "631307"
+    tcgplayer_sku_id: "8708229"
     finish: f
   - display_key: mtg-fic-265-f
     qty: 1
     name: Inexorable Tide
     tcgplayer_product_id: "631262"
+    tcgplayer_sku_id: "8706879"
     finish: f
   - display_key: mtg-fic-310-f
     qty: 1
@@ -227,6 +251,7 @@ components:
     qty: 1
     name: "Kimahri, Valiant Guardian"
     tcgplayer_product_id: "631320"
+    tcgplayer_sku_id: "8708619"
     finish: f
   - display_key: mtg-fic-23-f
     qty: 1
@@ -237,16 +262,19 @@ components:
     qty: 1
     name: "Lulu, Stern Guardian"
     tcgplayer_product_id: "631236"
+    tcgplayer_sku_id: "8706099"
     finish: f
   - display_key: mtg-fic-246-f
     qty: 1
     name: Luminous Broodmoth
     tcgplayer_product_id: "631192"
+    tcgplayer_sku_id: "8704779"
     finish: f
   - display_key: mtg-fic-68-f
     qty: 1
     name: Maester Seymour
     tcgplayer_product_id: "631517"
+    tcgplayer_sku_id: "8711369"
     finish: f
   - display_key: mtg-fic-408-f
     qty: 1
@@ -257,6 +285,7 @@ components:
     qty: 1
     name: "O'aka, Traveling Merchant"
     tcgplayer_product_id: "631242"
+    tcgplayer_sku_id: "8706279"
     finish: f
   - display_key: mtg-fic-410-f
     qty: 1
@@ -272,11 +301,13 @@ components:
     qty: 1
     name: Path of Discovery
     tcgplayer_product_id: "631310"
+    tcgplayer_sku_id: "8708319"
     finish: f
   - display_key: mtg-fic-248-f
     qty: 1
     name: Path to Exile
     tcgplayer_product_id: "631196"
+    tcgplayer_sku_id: "8704899"
     finish: f
   - display_key: mtg-fin-572-f
     qty: 3
@@ -297,11 +328,13 @@ components:
     qty: 1
     name: Promise of Loyalty
     tcgplayer_product_id: "631211"
+    tcgplayer_sku_id: "8705349"
     finish: f
   - display_key: mtg-fic-24-f
     qty: 1
     name: Protection Magic
     tcgplayer_product_id: "631154"
+    tcgplayer_sku_id: "8703639"
     finish: f
   - display_key: mtg-fic-269-f
     qty: 1
@@ -312,76 +345,91 @@ components:
     qty: 1
     name: Radiant Grove
     tcgplayer_product_id: "631297"
+    tcgplayer_sku_id: "8707929"
     finish: f
   - display_key: mtg-fic-314-f
     qty: 1
     name: Rampant Rejuvenator
     tcgplayer_product_id: "631312"
+    tcgplayer_sku_id: "8708379"
     finish: f
   - display_key: mtg-fic-251-f
     qty: 1
     name: Resourceful Defense
     tcgplayer_product_id: "631214"
+    tcgplayer_sku_id: "8705439"
     finish: f
   - display_key: mtg-fic-41-f
     qty: 1
     name: "Rikku, Resourceful Guardian"
     tcgplayer_product_id: "631247"
+    tcgplayer_sku_id: "8706429"
     finish: f
   - display_key: mtg-fic-252-f
     qty: 1
     name: Scholar of New Horizons
     tcgplayer_product_id: "631218"
+    tcgplayer_sku_id: "8705559"
     finish: f
   - display_key: mtg-fic-420-f
     qty: 1
     name: Seaside Citadel
     tcgplayer_product_id: "631502"
+    tcgplayer_sku_id: "8710999"
     finish: f
   - display_key: mtg-fic-94-f
     qty: 1
     name: "Shelinda, Yevon Acolyte"
     tcgplayer_product_id: "631323"
+    tcgplayer_sku_id: "8708709"
     finish: f
   - display_key: mtg-fic-95-f
     qty: 1
     name: "Sin, Unending Cataclysm"
     tcgplayer_product_id: "631325"
+    tcgplayer_sku_id: "8708769"
     finish: f
   - display_key: mtg-fic-423-f
     qty: 1
     name: Skycloud Expanse
     tcgplayer_product_id: "631478"
+    tcgplayer_sku_id: "8710419"
     finish: f
   - display_key: mtg-fic-358-f
     qty: 1
     name: Sol Ring
     tcgplayer_product_id: "631495"
+    tcgplayer_sku_id: "8710789"
     finish: f
   - display_key: mtg-fic-70-f
     qty: 1
     name: Sphere Grid
     tcgplayer_product_id: "631529"
+    tcgplayer_sku_id: "8711533"
     finish: f
   - display_key: mtg-fic-27-f
     qty: 1
     name: "Summon: Ixion"
     tcgplayer_product_id: "631157"
+    tcgplayer_sku_id: "8703729"
     finish: f
   - display_key: mtg-fic-71-f
     qty: 1
     name: "Summon: Magus Sisters"
     tcgplayer_product_id: "631532"
+    tcgplayer_sku_id: "8711623"
     finish: f
   - display_key: mtg-fic-42-f
     qty: 1
     name: "Summon: Valefor"
     tcgplayer_product_id: "631254"
+    tcgplayer_sku_id: "8706639"
     finish: f
   - display_key: mtg-fic-28-f
     qty: 1
     name: "Summon: Yojimbo"
     tcgplayer_product_id: "631165"
+    tcgplayer_sku_id: "8703969"
     finish: f
   - display_key: mtg-fic-29-f
     qty: 1
@@ -392,21 +440,25 @@ components:
     qty: 1
     name: Sungrass Prairie
     tcgplayer_product_id: "631283"
+    tcgplayer_sku_id: "8707509"
     finish: f
   - display_key: mtg-fic-432-f
     qty: 1
     name: Sunpetal Grove
     tcgplayer_product_id: "631285"
+    tcgplayer_sku_id: "8707569"
     finish: f
   - display_key: mtg-fic-255-f
     qty: 1
     name: Sunscorch Regent
     tcgplayer_product_id: "631222"
+    tcgplayer_sku_id: "8705679"
     finish: f
   - display_key: mtg-fic-434-f
     qty: 1
     name: Tangled Islet
     tcgplayer_product_id: "631503"
+    tcgplayer_sku_id: "8711029"
     finish: f
   - display_key: mtg-fic-435-f
     qty: 1
@@ -417,11 +469,13 @@ components:
     qty: 1
     name: Temple of Mystery
     tcgplayer_product_id: "631505"
+    tcgplayer_sku_id: "8711089"
     finish: f
   - display_key: mtg-fic-437-f
     qty: 1
     name: Temple of Plenty
     tcgplayer_product_id: "631506"
+    tcgplayer_sku_id: "8711119"
     finish: f
   - display_key: mtg-fic-438-f
     qty: 1
@@ -432,6 +486,7 @@ components:
     qty: 1
     name: Three Visits
     tcgplayer_product_id: "631315"
+    tcgplayer_sku_id: "8708469"
     finish: f
   - display_key: mtg-fic-316-f
     qty: 1
@@ -442,16 +497,19 @@ components:
     qty: 1
     name: Together Forever
     tcgplayer_product_id: "631227"
+    tcgplayer_sku_id: "8705829"
     finish: f
   - display_key: mtg-fic-73-f
     qty: 1
     name: "Tromell, Seymour's Butler"
     tcgplayer_product_id: "631534"
+    tcgplayer_sku_id: "8711663"
     finish: f
   - display_key: mtg-fic-440-f
     qty: 1
     name: Vineglimmer Snarl
     tcgplayer_product_id: "631507"
+    tcgplayer_sku_id: "8711149"
     finish: f
   - display_key: mtg-fic-97-f
     qty: 1
@@ -462,6 +520,7 @@ components:
     qty: 1
     name: Walking Ballista
     tcgplayer_product_id: "631496"
+    tcgplayer_sku_id: "8710819"
     finish: f
   - display_key: mtg-fic-227-f
     qty: 1
@@ -472,6 +531,7 @@ components:
     qty: 1
     name: "Yuna's Decision"
     tcgplayer_product_id: "631536"
+    tcgplayer_sku_id: "8711703"
     finish: f
   - display_key: mtg-fic-75-f
     qty: 1

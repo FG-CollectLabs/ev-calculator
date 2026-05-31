@@ -222,6 +222,7 @@ components:
     qty: 1
     name: Desolate Mire
     tcgplayer_product_id: "631101"
+    tcgplayer_sku_id: "8701989"
     finish: nf
   - display_key: mtg-fic-387-nf
     qty: 1
@@ -277,6 +278,7 @@ components:
     qty: 1
     name: Shineshadow Snarl
     tcgplayer_product_id: "631117"
+    tcgplayer_sku_id: "8702469"
     finish: nf
   - display_key: mtg-fic-425-nf
     qty: 1
@@ -422,6 +424,7 @@ components:
     qty: 1
     name: Evolving Wilds
     tcgplayer_product_id: "631290"
+    tcgplayer_sku_id: "8707719"
     finish: nf
   - display_key: mtg-fic-399-nf
     qty: 1
@@ -452,6 +455,7 @@ components:
     qty: 1
     name: Sunlit Marsh
     tcgplayer_product_id: "631490"
+    tcgplayer_sku_id: "8710639"
     finish: nf
   - display_key: mtg-fic-484-nf
     qty: 1
@@ -477,11 +481,13 @@ components:
     qty: 1
     name: Swamp
     tcgplayer_product_id: "630888"
+    tcgplayer_sku_id: "8693050"
     finish: nf
   - display_key: mtg-fin-301-nf
     qty: 1
     name: Swamp
     tcgplayer_product_id: "630890"
+    tcgplayer_sku_id: "8693150"
     finish: nf
   - display_key: mtg-fin-302-nf
     qty: 1

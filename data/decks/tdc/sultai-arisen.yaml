@@ -11,37 +11,44 @@ components:
     qty: 1
     name: "Teval, the Balanced Scale"
     tcgplayer_product_id: "619670"
+    tcgplayer_sku_id: "8586402"
     finish: f
     note: commander
   - display_key: mtg-tdc-5-f
     qty: 1
     name: "Kotis, Sibsig Champion"
     tcgplayer_product_id: "623912"
+    tcgplayer_sku_id: "8613694"
     finish: f
   - display_key: mtg-tdc-20-nf
     qty: 1
     name: Diviner of Mist
     tcgplayer_product_id: "624432"
+    tcgplayer_sku_id: "8630690"
     finish: nf
   - display_key: mtg-tdc-25-nf
     qty: 1
     name: Afterlife from the Loam
     tcgplayer_product_id: "624416"
+    tcgplayer_sku_id: "8630210"
     finish: nf
   - display_key: mtg-tdc-28-nf
     qty: 1
     name: "Teval's Judgment"
     tcgplayer_product_id: "624417"
+    tcgplayer_sku_id: "8630240"
     finish: nf
   - display_key: mtg-tdc-30-nf
     qty: 1
     name: Welcome the Dead
     tcgplayer_product_id: "624418"
+    tcgplayer_sku_id: "8630270"
     finish: nf
   - display_key: mtg-tdc-46-nf
     qty: 1
     name: Floral Evoker
     tcgplayer_product_id: "624477"
+    tcgplayer_sku_id: "8632045"
     finish: nf
   - display_key: mtg-tdc-48-nf
     qty: 1
@@ -52,21 +59,25 @@ components:
     qty: 1
     name: Will of the Sultai
     tcgplayer_product_id: "624480"
+    tcgplayer_sku_id: "8632135"
     finish: nf
   - display_key: mtg-tdc-50-nf
     qty: 1
     name: Colossal Grave-Reaver
     tcgplayer_product_id: "624504"
+    tcgplayer_sku_id: "8632530"
     finish: nf
   - display_key: mtg-tdc-93-nf
     qty: 1
     name: Gravecrawler
     tcgplayer_product_id: "624419"
+    tcgplayer_sku_id: "8630300"
     finish: nf
   - display_key: mtg-tdc-96-nf
     qty: 1
     name: Life from the Loam
     tcgplayer_product_id: "624487"
+    tcgplayer_sku_id: "8632220"
     finish: nf
   - display_key: mtg-tdc-98-nf
     qty: 1
@@ -82,41 +93,49 @@ components:
     qty: 1
     name: River Kelpie
     tcgplayer_product_id: "624440"
+    tcgplayer_sku_id: "8630930"
     finish: nf
   - display_key: mtg-tdc-176-nf
     qty: 1
     name: Dauthi Voidwalker
     tcgplayer_product_id: "624420"
+    tcgplayer_sku_id: "8630330"
     finish: nf
   - display_key: mtg-tdc-178-nf
     qty: 1
     name: Disciple of Bolas
     tcgplayer_product_id: "624421"
+    tcgplayer_sku_id: "8630360"
     finish: nf
   - display_key: mtg-tdc-183-nf
     qty: 1
     name: "Junji, the Midnight Sky"
     tcgplayer_product_id: "624422"
+    tcgplayer_sku_id: "8630390"
     finish: nf
   - display_key: mtg-tdc-184-nf
     qty: 1
     name: Lethal Scheme
     tcgplayer_product_id: "624423"
+    tcgplayer_sku_id: "8630420"
     finish: nf
   - display_key: mtg-tdc-185-nf
     qty: 1
     name: Living Death
     tcgplayer_product_id: "624424"
+    tcgplayer_sku_id: "8630450"
     finish: nf
   - display_key: mtg-tdc-186-nf
     qty: 1
     name: Lord of the Forsaken
     tcgplayer_product_id: "624425"
+    tcgplayer_sku_id: "8630480"
     finish: nf
   - display_key: mtg-tdc-189-nf
     qty: 1
     name: Necromantic Selection
     tcgplayer_product_id: "624426"
+    tcgplayer_sku_id: "8630510"
     finish: nf
   - display_key: mtg-tdc-190-nf
     qty: 1
@@ -127,81 +146,97 @@ components:
     qty: 1
     name: Noxious Gearhulk
     tcgplayer_product_id: "624428"
+    tcgplayer_sku_id: "8630570"
     finish: nf
   - display_key: mtg-tdc-192-nf
     qty: 1
     name: "Ob Nixilis, the Fallen"
     tcgplayer_product_id: "624430"
+    tcgplayer_sku_id: "8630630"
     finish: nf
   - display_key: mtg-tdc-197-nf
     qty: 1
     name: "Tasigur, the Golden Fang"
     tcgplayer_product_id: "624437"
+    tcgplayer_sku_id: "8630840"
     finish: nf
   - display_key: mtg-tdc-201-nf
     qty: 1
     name: Woe Strider
     tcgplayer_product_id: "624441"
+    tcgplayer_sku_id: "8630960"
     finish: nf
   - display_key: mtg-tdc-247-nf
     qty: 1
     name: Avenger of Zendikar
     tcgplayer_product_id: "624445"
+    tcgplayer_sku_id: "8631110"
     finish: nf
   - display_key: mtg-tdc-251-nf
     qty: 1
     name: Conduit of Worlds
     tcgplayer_product_id: "624447"
+    tcgplayer_sku_id: "8631170"
     finish: nf
   - display_key: mtg-tdc-263-nf
     qty: 1
     name: "Multani, Yavimaya's Avatar"
     tcgplayer_product_id: "624459"
+    tcgplayer_sku_id: "8631530"
     finish: nf
   - display_key: mtg-tdc-270-nf
     qty: 1
     name: "Shigeki, Jukai Visionary"
     tcgplayer_product_id: "624469"
+    tcgplayer_sku_id: "8631830"
     finish: nf
   - display_key: mtg-tdc-283-nf
     qty: 1
     name: Consuming Aberration
     tcgplayer_product_id: "624490"
+    tcgplayer_sku_id: "8632260"
     finish: nf
   - display_key: mtg-tdc-293-nf
     qty: 1
     name: "Jarad, Golgari Lich Lord"
     tcgplayer_product_id: "624494"
+    tcgplayer_sku_id: "8632330"
     finish: nf
   - display_key: mtg-tdc-295-nf
     qty: 1
     name: Lord of Extinction
     tcgplayer_product_id: "624495"
+    tcgplayer_sku_id: "8632360"
     finish: nf
   - display_key: mtg-tdc-297-nf
     qty: 1
     name: Meren of Clan Nel Toth
     tcgplayer_product_id: "624498"
+    tcgplayer_sku_id: "8632400"
     finish: nf
   - display_key: mtg-tdc-352-nf
     qty: 1
     name: Command Beacon
     tcgplayer_product_id: "624449"
+    tcgplayer_sku_id: "8631230"
     finish: nf
   - display_key: mtg-tdc-354-nf
     qty: 1
     name: Crypt of Agadeem
     tcgplayer_product_id: "624452"
+    tcgplayer_sku_id: "8631320"
     finish: nf
   - display_key: mtg-tdc-355-nf
     qty: 1
     name: Darkwater Catacombs
     tcgplayer_product_id: "624454"
+    tcgplayer_sku_id: "8631380"
     finish: nf
   - display_key: mtg-tdc-358-nf
     qty: 1
     name: Dreamroot Cascade
     tcgplayer_product_id: "624456"
+    tcgplayer_sku_id: "8631440"
     finish: nf
   - display_key: mtg-tdc-359-nf
     qty: 1
@@ -212,36 +247,43 @@ components:
     qty: 1
     name: Exotic Orchard
     tcgplayer_product_id: "624207"
+    tcgplayer_sku_id: "8622705"
     finish: nf
   - display_key: mtg-tdc-363-nf
     qty: 1
     name: Fetid Pools
     tcgplayer_product_id: "624460"
+    tcgplayer_sku_id: "8631560"
     finish: nf
   - display_key: mtg-tdc-371-nf
     qty: 1
     name: Hinterland Harbor
     tcgplayer_product_id: "624466"
+    tcgplayer_sku_id: "8631740"
     finish: nf
   - display_key: mtg-tdc-376-nf
     qty: 1
     name: Llanowar Wastes
     tcgplayer_product_id: "624468"
+    tcgplayer_sku_id: "8631800"
     finish: nf
   - display_key: mtg-tdc-398-nf
     qty: 1
     name: Sunken Hollow
     tcgplayer_product_id: "624476"
+    tcgplayer_sku_id: "8632015"
     finish: nf
   - display_key: mtg-tdc-403-nf
     qty: 1
     name: Temple of Malady
     tcgplayer_product_id: "624479"
+    tcgplayer_sku_id: "8632105"
     finish: nf
   - display_key: mtg-tdc-412-nf
     qty: 1
     name: Woodland Cemetery
     tcgplayer_product_id: "624486"
+    tcgplayer_sku_id: "8632190"
     finish: nf
   - display_key: mtg-tdm-44-nf
     qty: 1
@@ -252,16 +294,19 @@ components:
     qty: 1
     name: Arcane Signet
     tcgplayer_product_id: "624048"
+    tcgplayer_sku_id: "8619373"
     finish: nf
   - display_key: mtg-tdc-106-nf
     qty: 1
     name: Sol Ring
     tcgplayer_product_id: "624049"
+    tcgplayer_sku_id: "8619433"
     finish: nf
   - display_key: mtg-tdc-107-nf
     qty: 1
     name: Command Tower
     tcgplayer_product_id: "623982"
+    tcgplayer_sku_id: "8616599"
     finish: nf
   - display_key: mtg-tdc-152-nf
     qty: 1
@@ -272,56 +317,67 @@ components:
     qty: 1
     name: Hedron Crab
     tcgplayer_product_id: "624438"
+    tcgplayer_sku_id: "8630870"
     finish: nf
   - display_key: mtg-tdc-169-nf
     qty: 1
     name: Treasure Cruise
     tcgplayer_product_id: "624442"
+    tcgplayer_sku_id: "8630990"
     finish: nf
   - display_key: mtg-tdc-170-nf
     qty: 1
     name: Wonder
     tcgplayer_product_id: "624443"
+    tcgplayer_sku_id: "8631020"
     finish: nf
   - display_key: mtg-tdc-194-nf
     qty: 1
     name: Phyrexian Reclamation
     tcgplayer_product_id: "624431"
+    tcgplayer_sku_id: "8630660"
     finish: nf
   - display_key: mtg-tdc-195-nf
     qty: 1
     name: Reassembling Skeleton
     tcgplayer_product_id: "624433"
+    tcgplayer_sku_id: "8630720"
     finish: nf
   - display_key: mtg-tdc-196-nf
     qty: 1
     name: "Stitcher's Supplier"
     tcgplayer_product_id: "624435"
+    tcgplayer_sku_id: "8630780"
     finish: nf
   - display_key: mtg-tdc-198-nf
     qty: 1
     name: Victimize
     tcgplayer_product_id: "624439"
+    tcgplayer_sku_id: "8630900"
     finish: nf
   - display_key: mtg-tdm-201-nf
     qty: 1
     name: Kishla Skimmer
     tcgplayer_product_id: "624404"
+    tcgplayer_sku_id: "8629490"
     finish: nf
   - display_key: mtg-tdc-252-nf
     qty: 1
     name: Crawling Sensation
     tcgplayer_product_id: "624448"
+    tcgplayer_sku_id: "8631200"
     finish: nf
   - display_key: mtg-tdc-253-nf
     qty: 1
     name: Cultivate
     tcgplayer_product_id: "624450"
+    tcgplayer_sku_id: "8631260"
     finish: nf
   - display_key: mtg-tdc-255-nf
     qty: 1
     name: Farseek
     tcgplayer_product_id: "624453"
+    tcgplayer_sku_id: "8631350"
     finish: nf
   - display_key: mtg-tdc-257-nf
     qty: 1
@@ -332,26 +388,31 @@ components:
     qty: 1
     name: Harrow
     tcgplayer_product_id: "624457"
+    tcgplayer_sku_id: "8631470"
     finish: nf
   - display_key: mtg-tdm-264-nf
     qty: 1
     name: Opulent Palace
     tcgplayer_product_id: "624270"
+    tcgplayer_sku_id: "8625226"
     finish: nf
   - display_key: mtg-tdc-265-nf
     qty: 1
     name: Rampant Growth
     tcgplayer_product_id: "624461"
+    tcgplayer_sku_id: "8631590"
     finish: nf
   - display_key: mtg-tdc-266-nf
     qty: 1
     name: Sakura-Tribe Elder
     tcgplayer_product_id: "624464"
+    tcgplayer_sku_id: "8631680"
     finish: nf
   - display_key: mtg-tdc-267-nf
     qty: 1
     name: Satyr Wayfinder
     tcgplayer_product_id: "624467"
+    tcgplayer_sku_id: "8631770"
     finish: nf
   - display_key: mtg-tdc-271-nf
     qty: 1
@@ -362,46 +423,55 @@ components:
     qty: 1
     name: Tear Asunder
     tcgplayer_product_id: "624473"
+    tcgplayer_sku_id: "8631925"
     finish: nf
   - display_key: mtg-tdc-274-nf
     qty: 1
     name: Timeless Witness
     tcgplayer_product_id: "624475"
+    tcgplayer_sku_id: "8631985"
     finish: nf
   - display_key: mtg-tdc-290-nf
     qty: 1
     name: Grisly Salvage
     tcgplayer_product_id: "624491"
+    tcgplayer_sku_id: "8632290"
     finish: nf
   - display_key: mtg-tdc-298-nf
     qty: 1
     name: Nyx Weaver
     tcgplayer_product_id: "624499"
+    tcgplayer_sku_id: "8632430"
     finish: nf
   - display_key: mtg-tdc-300-nf
     qty: 1
     name: Putrefy
     tcgplayer_product_id: "624500"
+    tcgplayer_sku_id: "8632460"
     finish: nf
   - display_key: mtg-tdc-304-nf
     qty: 1
     name: Skull Prophet
     tcgplayer_product_id: "624503"
+    tcgplayer_sku_id: "8632500"
     finish: nf
   - display_key: mtg-tdc-321-nf
     qty: 1
     name: Millikin
     tcgplayer_product_id: "624429"
+    tcgplayer_sku_id: "8630600"
     finish: nf
   - display_key: mtg-tdc-349-nf
     qty: 1
     name: Cephalid Coliseum
     tcgplayer_product_id: "624446"
+    tcgplayer_sku_id: "8631140"
     finish: nf
   - display_key: mtg-tdc-353-nf
     qty: 1
     name: Contaminated Aquifer
     tcgplayer_product_id: "624451"
+    tcgplayer_sku_id: "8631290"
     finish: nf
   - display_key: mtg-tdc-365-nf
     qty: 1
@@ -412,26 +482,31 @@ components:
     qty: 1
     name: Golgari Rot Farm
     tcgplayer_product_id: "624463"
+    tcgplayer_sku_id: "8631650"
     finish: nf
   - display_key: mtg-tdc-369-nf
     qty: 1
     name: Haunted Mire
     tcgplayer_product_id: "624465"
+    tcgplayer_sku_id: "8631710"
     finish: nf
   - display_key: mtg-tdc-377-nf
     qty: 1
     name: Memorial to Folly
     tcgplayer_product_id: "624470"
+    tcgplayer_sku_id: "8631860"
     finish: nf
   - display_key: mtg-tdc-380-nf
     qty: 1
     name: Myriad Landscape
     tcgplayer_product_id: "624474"
+    tcgplayer_sku_id: "8631955"
     finish: nf
   - display_key: mtg-tdc-408-nf
     qty: 1
     name: Terramorphic Expanse
     tcgplayer_product_id: "624322"
+    tcgplayer_sku_id: "8626996"
     finish: nf
   - display_key: mtg-tdm-279-nf
     qty: 2

@@ -11,207 +11,248 @@ components:
     qty: 1
     name: "Pantlaza, Sun-Favored"
     tcgplayer_product_id: "524268"
+    tcgplayer_sku_id: "7504297"
     finish: f
     note: commander
   - display_key: mtg-lcc-7-f
     qty: 1
     name: "Wayta, Trainer Prodigy"
     tcgplayer_product_id: "525721"
+    tcgplayer_sku_id: "7530887"
     finish: f
   - display_key: mtg-lcc-69-nf
     qty: 1
     name: Bronzebeak Foragers
     tcgplayer_product_id: "525719"
+    tcgplayer_sku_id: "7530817"
     finish: nf
   - display_key: mtg-lcc-72-nf
     qty: 1
     name: From the Rubble
     tcgplayer_product_id: "526199"
+    tcgplayer_sku_id: "7543667"
     finish: nf
   - display_key: mtg-lcc-88-nf
     qty: 1
     name: Wrathful Raptors
     tcgplayer_product_id: "526217"
+    tcgplayer_sku_id: "7544077"
     finish: nf
   - display_key: mtg-lcc-90-nf
     qty: 1
     name: Curious Altisaur
     tcgplayer_product_id: "525720"
+    tcgplayer_sku_id: "7530852"
     finish: nf
   - display_key: mtg-lcc-92-nf
     qty: 1
     name: Dinosaur Egg
     tcgplayer_product_id: "526219"
+    tcgplayer_sku_id: "7544147"
     finish: nf
   - display_key: mtg-lcc-93-nf
     qty: 1
     name: Scion of Calamity
     tcgplayer_product_id: "526206"
+    tcgplayer_sku_id: "7543912"
     finish: nf
   - display_key: mtg-lcc-94-nf
     qty: 1
     name: Sunfrill Imitator
     tcgplayer_product_id: "526230"
+    tcgplayer_sku_id: "7544287"
     finish: nf
   - display_key: mtg-lcc-100-nf
     qty: 1
     name: "Progenitor's Icon"
     tcgplayer_product_id: "526218"
+    tcgplayer_sku_id: "7544112"
     finish: nf
   - display_key: mtg-lcc-125-nf
     qty: 1
     name: "Akroma's Will"
     tcgplayer_product_id: "526216"
+    tcgplayer_sku_id: "7544042"
     finish: nf
   - display_key: mtg-lcc-130-nf
     qty: 1
     name: "Kinjalli's Sunwing"
     tcgplayer_product_id: "525737"
+    tcgplayer_sku_id: "7531447"
     finish: nf
   - display_key: mtg-lcc-138-nf
     qty: 1
     name: Temple Altisaur
     tcgplayer_product_id: "525754"
+    tcgplayer_sku_id: "7532042"
     finish: nf
   - display_key: mtg-lcc-139-nf
     qty: 1
     name: "Wakening Sun's Avatar"
     tcgplayer_product_id: "525757"
+    tcgplayer_sku_id: "7532152"
     finish: nf
   - display_key: mtg-lcc-141-nf
     qty: 1
     name: "Zetalpa, Primal Dawn"
     tcgplayer_product_id: "525763"
+    tcgplayer_sku_id: "7532372"
     finish: nf
   - display_key: mtg-lcc-220-nf
     qty: 1
     name: "Chandra's Ignition"
     tcgplayer_product_id: "525875"
+    tcgplayer_sku_id: "7536297"
     finish: nf
   - display_key: mtg-lcc-224-nf
     qty: 1
     name: "Etali, Primal Storm"
     tcgplayer_product_id: "525767"
+    tcgplayer_sku_id: "7532512"
     finish: nf
   - display_key: mtg-lcc-226-nf
     qty: 1
     name: Fiery Confluence
     tcgplayer_product_id: "525882"
+    tcgplayer_sku_id: "7536542"
     finish: nf
   - display_key: mtg-lcc-228-nf
     qty: 1
     name: Marauding Raptor
     tcgplayer_product_id: "525769"
+    tcgplayer_sku_id: "7532582"
     finish: nf
   - display_key: mtg-lcc-232-nf
     qty: 1
     name: Apex Altisaur
     tcgplayer_product_id: "525774"
+    tcgplayer_sku_id: "7532762"
     finish: nf
   - display_key: mtg-lcc-236-nf
     qty: 1
     name: Deathgorge Scavenger
     tcgplayer_product_id: "525778"
+    tcgplayer_sku_id: "7532902"
     finish: nf
   - display_key: mtg-lcc-238-nf
     qty: 1
     name: "Descendants' Path"
     tcgplayer_product_id: "526231"
+    tcgplayer_sku_id: "7544322"
     finish: nf
   - display_key: mtg-lcc-247-nf
     qty: 1
     name: Rampaging Brontodon
     tcgplayer_product_id: "525782"
+    tcgplayer_sku_id: "7533042"
     finish: nf
   - display_key: mtg-lcc-251-nf
     qty: 1
     name: Regal Behemoth
     tcgplayer_product_id: "525785"
+    tcgplayer_sku_id: "7533147"
     finish: nf
   - display_key: mtg-lcc-252-nf
     qty: 1
     name: Return of the Wildspeaker
     tcgplayer_product_id: "525896"
+    tcgplayer_sku_id: "7537037"
     finish: nf
   - display_key: mtg-lcc-253-nf
     qty: 1
     name: Ripjaw Raptor
     tcgplayer_product_id: "525788"
+    tcgplayer_sku_id: "7533252"
     finish: nf
   - display_key: mtg-lcc-254-nf
     qty: 1
     name: "Rishkar's Expertise"
     tcgplayer_product_id: "525884"
+    tcgplayer_sku_id: "7536612"
     finish: nf
   - display_key: mtg-lcc-256-nf
     qty: 1
     name: Runic Armasaur
     tcgplayer_product_id: "525792"
+    tcgplayer_sku_id: "7533392"
     finish: nf
   - display_key: mtg-lcc-258-nf
     qty: 1
     name: Shifting Ceratops
     tcgplayer_product_id: "525796"
+    tcgplayer_sku_id: "7533532"
     finish: nf
   - display_key: mtg-lcc-261-nf
     qty: 1
     name: Topiary Stomper
     tcgplayer_product_id: "525802"
+    tcgplayer_sku_id: "7533742"
     finish: nf
   - display_key: mtg-lcc-262-nf
     qty: 1
     name: "Verdant Sun's Avatar"
     tcgplayer_product_id: "525807"
+    tcgplayer_sku_id: "7533917"
     finish: nf
   - display_key: mtg-lcc-263-nf
     qty: 1
     name: Wayward Swordtooth
     tcgplayer_product_id: "525810"
+    tcgplayer_sku_id: "7534022"
     finish: nf
   - display_key: mtg-lcc-281-nf
     qty: 1
     name: Quartzwood Crasher
     tcgplayer_product_id: "525813"
+    tcgplayer_sku_id: "7534127"
     finish: nf
   - display_key: mtg-lcc-286-nf
     qty: 1
     name: Regisaur Alpha
     tcgplayer_product_id: "525816"
+    tcgplayer_sku_id: "7534232"
     finish: nf
   - display_key: mtg-lcc-295-nf
     qty: 1
     name: "Xenagos, God of Revels"
     tcgplayer_product_id: "525829"
+    tcgplayer_sku_id: "7534687"
     finish: nf
   - display_key: mtg-lcc-296-nf
     qty: 1
     name: "Zacama, Primal Calamity"
     tcgplayer_product_id: "525833"
+    tcgplayer_sku_id: "7534827"
     finish: nf
   - display_key: mtg-lcc-307-nf
     qty: 1
     name: "Lifecrafter's Bestiary"
     tcgplayer_product_id: "525901"
+    tcgplayer_sku_id: "7537212"
     finish: nf
   - display_key: mtg-lcc-319-nf
     qty: 1
     name: Arch of Orazca
     tcgplayer_product_id: "525902"
+    tcgplayer_sku_id: "7537247"
     finish: nf
   - display_key: mtg-lcc-321-nf
     qty: 1
     name: Canopy Vista
     tcgplayer_product_id: "525906"
+    tcgplayer_sku_id: "7537387"
     finish: nf
   - display_key: mtg-lcc-323-nf
     qty: 1
     name: Cinder Glade
     tcgplayer_product_id: "525907"
+    tcgplayer_sku_id: "7537422"
     finish: nf
   - display_key: mtg-lcc-324-nf
     qty: 1
     name: Clifftop Retreat
     tcgplayer_product_id: "525909"
+    tcgplayer_sku_id: "7537492"
     finish: nf
   - display_key: mtg-lcc-329-nf
     qty: 1
@@ -222,51 +263,61 @@ components:
     qty: 1
     name: Fortified Village
     tcgplayer_product_id: "525911"
+    tcgplayer_sku_id: "7537562"
     finish: nf
   - display_key: mtg-lcc-333-nf
     qty: 1
     name: Furycalm Snarl
     tcgplayer_product_id: "525912"
+    tcgplayer_sku_id: "7537597"
     finish: nf
   - display_key: mtg-lcc-334-nf
     qty: 1
     name: Game Trail
     tcgplayer_product_id: "525913"
+    tcgplayer_sku_id: "7537632"
     finish: nf
   - display_key: mtg-lcc-340-nf
     qty: 1
     name: Kessig Wolf Run
     tcgplayer_product_id: "525915"
+    tcgplayer_sku_id: "7537702"
     finish: nf
   - display_key: mtg-lcc-342-nf
     qty: 1
     name: Mosswort Bridge
     tcgplayer_product_id: "525917"
+    tcgplayer_sku_id: "7537772"
     finish: nf
   - display_key: mtg-lcc-127-nf
     qty: 1
     name: Bellowing Aegisaur
     tcgplayer_product_id: "525837"
+    tcgplayer_sku_id: "7534967"
     finish: nf
   - display_key: mtg-lcc-128-nf
     qty: 1
     name: Generous Gift
     tcgplayer_product_id: "525897"
+    tcgplayer_sku_id: "7537072"
     finish: nf
   - display_key: mtg-lcc-131-nf
     qty: 1
     name: Majestic Heliopterus
     tcgplayer_product_id: "525840"
+    tcgplayer_sku_id: "7535072"
     finish: nf
   - display_key: mtg-lcc-134-nf
     qty: 1
     name: Path to Exile
     tcgplayer_product_id: "525898"
+    tcgplayer_sku_id: "7537107"
     finish: nf
   - display_key: mtg-lci-183-nf
     qty: 1
     name: Earthshaker Dreadmaw
     tcgplayer_product_id: "525160"
+    tcgplayer_sku_id: "7517689"
     finish: nf
   - display_key: mtg-lci-194-nf
     qty: 1
@@ -282,6 +333,7 @@ components:
     qty: 1
     name: Otepec Huntmaster
     tcgplayer_product_id: "525858"
+    tcgplayer_sku_id: "7535702"
     finish: nf
   - display_key: mtg-lci-230-nf
     qty: 1
@@ -292,6 +344,7 @@ components:
     qty: 1
     name: Cultivate
     tcgplayer_product_id: "525887"
+    tcgplayer_sku_id: "7536717"
     finish: nf
   - display_key: mtg-lcc-239-nf
     qty: 1
@@ -302,41 +355,49 @@ components:
     qty: 1
     name: Farseek
     tcgplayer_product_id: "525889"
+    tcgplayer_sku_id: "7536792"
     finish: nf
   - display_key: mtg-lcc-246-nf
     qty: 1
     name: Migration Path
     tcgplayer_product_id: "525890"
+    tcgplayer_sku_id: "7536827"
     finish: nf
   - display_key: mtg-lcc-248-nf
     qty: 1
     name: Rampant Growth
     tcgplayer_product_id: "525891"
+    tcgplayer_sku_id: "7536862"
     finish: nf
   - display_key: mtg-lcc-249-nf
     qty: 1
     name: Ranging Raptors
     tcgplayer_product_id: "525863"
+    tcgplayer_sku_id: "7535877"
     finish: nf
   - display_key: mtg-lcc-257-nf
     qty: 1
     name: Savage Stomp
     tcgplayer_product_id: "525893"
+    tcgplayer_sku_id: "7536932"
     finish: nf
   - display_key: mtg-lcc-259-nf
     qty: 1
     name: Thunderherd Migration
     tcgplayer_product_id: "525894"
+    tcgplayer_sku_id: "7536967"
     finish: nf
   - display_key: mtg-lcc-260-nf
     qty: 1
     name: Thundering Spineback
     tcgplayer_product_id: "525867"
+    tcgplayer_sku_id: "7536017"
     finish: nf
   - display_key: mtg-lcc-265-nf
     qty: 1
     name: Atzocan Seer
     tcgplayer_product_id: "525869"
+    tcgplayer_sku_id: "7536087"
     finish: nf
   - display_key: mtg-lcc-282-nf
     qty: 1
@@ -347,36 +408,43 @@ components:
     qty: 1
     name: Raging Swordtooth
     tcgplayer_product_id: "525873"
+    tcgplayer_sku_id: "7536227"
     finish: nf
   - display_key: mtg-lcc-287-nf
     qty: 1
     name: Rhythm of the Wild
     tcgplayer_product_id: "525923"
+    tcgplayer_sku_id: "7537982"
     finish: nf
   - display_key: mtg-lcc-299-nf
     qty: 1
     name: Arcane Signet
     tcgplayer_product_id: "524261"
+    tcgplayer_sku_id: "7504154"
     finish: nf
   - display_key: mtg-lcc-313-nf
     qty: 1
     name: Sol Ring
     tcgplayer_product_id: "525779"
+    tcgplayer_sku_id: "7532927"
     finish: nf
   - display_key: mtg-lcc-325-nf
     qty: 1
     name: Command Tower
     tcgplayer_product_id: "525809"
+    tcgplayer_sku_id: "7533987"
     finish: nf
   - display_key: mtg-lcc-328-nf
     qty: 1
     name: Evolving Wilds
     tcgplayer_product_id: "525846"
+    tcgplayer_sku_id: "7535282"
     finish: nf
   - display_key: mtg-lcc-338-nf
     qty: 1
     name: Jungle Shrine
     tcgplayer_product_id: "525918"
+    tcgplayer_sku_id: "7537807"
     finish: nf
   - display_key: mtg-lcc-343-nf
     qty: 1
@@ -387,31 +455,37 @@ components:
     qty: 1
     name: Path of Ancestry
     tcgplayer_product_id: "524267"
+    tcgplayer_sku_id: "7504262"
     finish: nf
   - display_key: mtg-lcc-349-nf
     qty: 1
     name: "Rogue's Passage"
     tcgplayer_product_id: "525818"
+    tcgplayer_sku_id: "7534302"
     finish: nf
   - display_key: mtg-lcc-350-nf
     qty: 1
     name: Secluded Courtyard
     tcgplayer_product_id: "525821"
+    tcgplayer_sku_id: "7534407"
     finish: nf
   - display_key: mtg-lcc-359-nf
     qty: 1
     name: Temple of the False God
     tcgplayer_product_id: "525826"
+    tcgplayer_sku_id: "7534582"
     finish: nf
   - display_key: mtg-lcc-360-nf
     qty: 1
     name: Terramorphic Expanse
     tcgplayer_product_id: "525850"
+    tcgplayer_sku_id: "7535422"
     finish: nf
   - display_key: mtg-lcc-361-nf
     qty: 1
     name: Thriving Bluff
     tcgplayer_product_id: "525851"
+    tcgplayer_sku_id: "7535457"
     finish: nf
   - display_key: mtg-lcc-362-nf
     qty: 1
@@ -427,6 +501,7 @@ components:
     qty: 1
     name: Unclaimed Territory
     tcgplayer_product_id: "525827"
+    tcgplayer_sku_id: "7534617"
     finish: nf
   - display_key: mtg-lci-401-nf
     qty: 4

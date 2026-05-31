@@ -11,12 +11,14 @@ components:
     qty: 1
     name: "Éowyn, Shieldmaiden"
     tcgplayer_product_id: "498469"
+    tcgplayer_sku_id: "7227421"
     finish: f
     note: commander
   - display_key: mtg-ltc-5-f
     qty: 1
     name: "Aragorn, King of Gondor"
     tcgplayer_product_id: "499739"
+    tcgplayer_sku_id: "7227416"
     finish: f
   - display_key: mtg-ltc-9-nf
     qty: 1
@@ -27,11 +29,13 @@ components:
     qty: 1
     name: Champions of Minas Tirith
     tcgplayer_product_id: "499761"
+    tcgplayer_sku_id: "7228229"
     finish: nf
   - display_key: mtg-ltc-13-nf
     qty: 1
     name: "Gilraen, Dúnedain Protector"
     tcgplayer_product_id: "499785"
+    tcgplayer_sku_id: "7228309"
     finish: nf
   - display_key: mtg-ltc-14-nf
     qty: 1
@@ -42,6 +46,7 @@ components:
     qty: 1
     name: Lossarnach Captain
     tcgplayer_product_id: "499792"
+    tcgplayer_sku_id: "7228429"
     finish: nf
   - display_key: mtg-ltc-18-nf
     qty: 1
@@ -57,41 +62,49 @@ components:
     qty: 1
     name: Fealty to the Realm
     tcgplayer_product_id: "499779"
+    tcgplayer_sku_id: "7232956"
     finish: nf
   - display_key: mtg-ltc-30-nf
     qty: 1
     name: Call for Aid
     tcgplayer_product_id: "499756"
+    tcgplayer_sku_id: "7233298"
     finish: nf
   - display_key: mtg-ltc-32-nf
     qty: 1
     name: Gimli of the Glittering Caves
     tcgplayer_product_id: "499786"
+    tcgplayer_sku_id: "7228349"
     finish: nf
   - display_key: mtg-ltc-49-nf
     qty: 1
     name: "Boromir, Gondor's Hope"
     tcgplayer_product_id: "499752"
+    tcgplayer_sku_id: "7232876"
     finish: nf
   - display_key: mtg-ltc-52-nf
     qty: 1
     name: "Éomer, King of Rohan"
     tcgplayer_product_id: "499771"
+    tcgplayer_sku_id: "7228189"
     finish: nf
   - display_key: mtg-ltc-54-nf
     qty: 1
     name: "Faramir, Steward of Gondor"
     tcgplayer_product_id: "499775"
+    tcgplayer_sku_id: "7233339"
     finish: nf
   - display_key: mtg-ltc-56-nf
     qty: 1
     name: "Forth Eorlingas!"
     tcgplayer_product_id: "499782"
+    tcgplayer_sku_id: "7228269"
     finish: nf
   - display_key: mtg-ltc-64-nf
     qty: 1
     name: Oath of Eorl
     tcgplayer_product_id: "499798"
+    tcgplayer_sku_id: "7232996"
     finish: nf
   - display_key: mtg-ltc-67-nf
     qty: 1
@@ -102,16 +115,19 @@ components:
     qty: 1
     name: Taunt from the Rampart
     tcgplayer_product_id: "499805"
+    tcgplayer_sku_id: "7228469"
     finish: nf
   - display_key: mtg-ltc-75-nf
     qty: 1
     name: Crown of Gondor
     tcgplayer_product_id: "499765"
+    tcgplayer_sku_id: "7232916"
     finish: nf
   - display_key: mtg-ltc-162-nf
     qty: 1
     name: Bastion Protector
     tcgplayer_product_id: "499790"
+    tcgplayer_sku_id: "7209256"
     finish: nf
   - display_key: mtg-ltc-165-nf
     qty: 1
@@ -122,11 +138,13 @@ components:
     qty: 1
     name: Frontline Medic
     tcgplayer_product_id: "499797"
+    tcgplayer_sku_id: "7209541"
     finish: nf
   - display_key: mtg-ltc-171-nf
     qty: 1
     name: Increasing Devotion
     tcgplayer_product_id: "499830"
+    tcgplayer_sku_id: "7210861"
     finish: nf
   - display_key: mtg-ltc-172-nf
     qty: 1
@@ -137,41 +155,49 @@ components:
     qty: 1
     name: Selfless Squire
     tcgplayer_product_id: "499800"
+    tcgplayer_sku_id: "7209661"
     finish: nf
   - display_key: mtg-ltc-179-nf
     qty: 1
     name: Unbreakable Formation
     tcgplayer_product_id: "499823"
+    tcgplayer_sku_id: "7210581"
     finish: nf
   - display_key: mtg-ltc-180-nf
     qty: 1
     name: Verge Rangers
     tcgplayer_product_id: "499803"
+    tcgplayer_sku_id: "7209781"
     finish: nf
   - display_key: mtg-ltc-182-nf
     qty: 1
     name: Visions of Glory
     tcgplayer_product_id: "499832"
+    tcgplayer_sku_id: "7210941"
     finish: nf
   - display_key: mtg-ltc-183-nf
     qty: 1
     name: Weathered Wayfarer
     tcgplayer_product_id: "499806"
+    tcgplayer_sku_id: "7209901"
     finish: nf
   - display_key: mtg-ltc-212-nf
     qty: 1
     name: Combat Celebrant
     tcgplayer_product_id: "499807"
+    tcgplayer_sku_id: "7209941"
     finish: nf
   - display_key: mtg-ltc-213-nf
     qty: 1
     name: Court of Ire
     tcgplayer_product_id: "499827"
+    tcgplayer_sku_id: "7210741"
     finish: nf
   - display_key: mtg-ltc-214-nf
     qty: 1
     name: Earthquake
     tcgplayer_product_id: "499833"
+    tcgplayer_sku_id: "7210981"
     finish: nf
   - display_key: mtg-ltc-216-nf
     qty: 1
@@ -182,86 +208,103 @@ components:
     qty: 1
     name: Frontier Warmonger
     tcgplayer_product_id: "499813"
+    tcgplayer_sku_id: "7210181"
     finish: nf
   - display_key: mtg-ltc-221-nf
     qty: 1
     name: Harsh Mentor
     tcgplayer_product_id: "499816"
+    tcgplayer_sku_id: "7210301"
     finish: nf
   - display_key: mtg-ltc-226-nf
     qty: 1
     name: Shared Animosity
     tcgplayer_product_id: "499828"
+    tcgplayer_sku_id: "7210781"
     finish: nf
   - display_key: mtg-ltc-231-nf
     qty: 1
     name: Zealous Conscripts
     tcgplayer_product_id: "499819"
+    tcgplayer_sku_id: "7210421"
     finish: nf
   - display_key: mtg-ltc-272-nf
     qty: 1
     name: Supreme Verdict
     tcgplayer_product_id: "499834"
+    tcgplayer_sku_id: "7211021"
     finish: nf
   - display_key: mtg-ltc-277-nf
     qty: 1
     name: Door of Destinies
     tcgplayer_product_id: "499810"
+    tcgplayer_sku_id: "7210061"
     finish: nf
   - display_key: mtg-ltc-289-nf
     qty: 1
     name: "Vanquisher's Banner"
     tcgplayer_product_id: "499811"
+    tcgplayer_sku_id: "7210101"
     finish: nf
   - display_key: mtg-ltc-296-nf
     qty: 1
     name: Battlefield Forge
     tcgplayer_product_id: "499737"
+    tcgplayer_sku_id: "7207166"
     finish: nf
   - display_key: mtg-ltc-300-nf
     qty: 1
     name: Clifftop Retreat
     tcgplayer_product_id: "499741"
+    tcgplayer_sku_id: "7207326"
     finish: nf
   - display_key: mtg-ltc-307-nf
     qty: 1
     name: Exotic Orchard
     tcgplayer_product_id: "499569"
+    tcgplayer_sku_id: "7200735"
     finish: nf
   - display_key: mtg-ltc-313-nf
     qty: 1
     name: Furycalm Snarl
     tcgplayer_product_id: "499746"
+    tcgplayer_sku_id: "7207526"
     finish: nf
   - display_key: mtg-ltc-315-nf
     qty: 1
     name: Glacial Fortress
     tcgplayer_product_id: "499751"
+    tcgplayer_sku_id: "7207726"
     finish: nf
   - display_key: mtg-ltc-323-nf
     qty: 1
     name: Port Town
     tcgplayer_product_id: "499757"
+    tcgplayer_sku_id: "7207966"
     finish: nf
   - display_key: mtg-ltc-324-nf
     qty: 1
     name: Prairie Stream
     tcgplayer_product_id: "499759"
+    tcgplayer_sku_id: "7208046"
     finish: nf
   - display_key: mtg-ltc-333-nf
     qty: 1
     name: Sulfur Falls
     tcgplayer_product_id: "499687"
+    tcgplayer_sku_id: "7205166"
     finish: nf
   - display_key: mtg-ltc-339-nf
     qty: 1
     name: Throne of the High City
     tcgplayer_product_id: "499763"
+    tcgplayer_sku_id: "7208206"
     finish: nf
   - display_key: mtg-ltc-345-nf
     qty: 1
     name: Windbrisk Heights
     tcgplayer_product_id: "499768"
+    tcgplayer_sku_id: "7208406"
     finish: nf
   - display_key: mtg-ltr-22-nf
     qty: 1
@@ -282,31 +325,37 @@ components:
     qty: 1
     name: Fiend Hunter
     tcgplayer_product_id: "499824"
+    tcgplayer_sku_id: "7210621"
     finish: nf
   - display_key: mtg-ltc-174-nf
     qty: 1
     name: Palace Jailer
     tcgplayer_product_id: "499826"
+    tcgplayer_sku_id: "7210701"
     finish: nf
   - display_key: mtg-ltc-175-nf
     qty: 1
     name: Path to Exile
     tcgplayer_product_id: "499536"
+    tcgplayer_sku_id: "7200080"
     finish: nf
   - display_key: mtg-ltc-177-nf
     qty: 1
     name: Sunset Revelry
     tcgplayer_product_id: "499835"
+    tcgplayer_sku_id: "7211061"
     finish: nf
   - display_key: mtg-ltc-178-nf
     qty: 1
     name: Swords to Plowshares
     tcgplayer_product_id: "499538"
+    tcgplayer_sku_id: "7200125"
     finish: nf
   - display_key: mtg-ltc-181-nf
     qty: 1
     name: Village Bell-Ringer
     tcgplayer_product_id: "499829"
+    tcgplayer_sku_id: "7210821"
     finish: nf
   - display_key: mtg-ltr-219-nf
     qty: 1
@@ -317,6 +366,7 @@ components:
     qty: 1
     name: Humble Defector
     tcgplayer_product_id: "499831"
+    tcgplayer_sku_id: "7210901"
     finish: nf
   - display_key: mtg-ltr-233-nf
     qty: 1
@@ -327,51 +377,61 @@ components:
     qty: 1
     name: Arcane Signet
     tcgplayer_product_id: "499562"
+    tcgplayer_sku_id: "7200490"
     finish: nf
   - display_key: mtg-ltc-276-nf
     qty: 1
     name: "Commander's Sphere"
     tcgplayer_product_id: "499563"
+    tcgplayer_sku_id: "7200530"
     finish: nf
   - display_key: mtg-ltc-279-nf
     qty: 1
     name: Heirloom Blade
     tcgplayer_product_id: "499814"
+    tcgplayer_sku_id: "7210221"
     finish: nf
   - display_key: mtg-ltc-280-nf
     qty: 1
     name: "Herald's Horn"
     tcgplayer_product_id: "499815"
+    tcgplayer_sku_id: "7210261"
     finish: nf
   - display_key: mtg-ltc-284-nf
     qty: 1
     name: Sol Ring
     tcgplayer_product_id: "488278"
+    tcgplayer_sku_id: "7029207"
     finish: nf
   - display_key: mtg-ltc-285-nf
     qty: 1
     name: Talisman of Conviction
     tcgplayer_product_id: "499817"
+    tcgplayer_sku_id: "7210341"
     finish: nf
   - display_key: mtg-ltc-286-nf
     qty: 1
     name: Talisman of Progress
     tcgplayer_product_id: "499820"
+    tcgplayer_sku_id: "7210461"
     finish: nf
   - display_key: mtg-ltc-287-nf
     qty: 1
     name: Thought Vessel
     tcgplayer_product_id: "499821"
+    tcgplayer_sku_id: "7210501"
     finish: nf
   - display_key: mtg-ltc-290-nf
     qty: 1
     name: "Wayfarer's Bauble"
     tcgplayer_product_id: "499822"
+    tcgplayer_sku_id: "7210541"
     finish: nf
   - display_key: mtg-ltc-301-nf
     qty: 1
     name: Command Tower
     tcgplayer_product_id: "499589"
+    tcgplayer_sku_id: "7201391"
     finish: nf
   - display_key: mtg-ltc-306-nf
     qty: 1
@@ -382,26 +442,31 @@ components:
     qty: 1
     name: Field of Ruin
     tcgplayer_product_id: "498410"
+    tcgplayer_sku_id: "7172410"
     finish: nf
   - display_key: mtg-ltc-322-nf
     qty: 1
     name: Path of Ancestry
     tcgplayer_product_id: "499591"
+    tcgplayer_sku_id: "7201471"
     finish: nf
   - display_key: mtg-ltc-326-nf
     qty: 1
     name: "Rogue's Passage"
     tcgplayer_product_id: "499592"
+    tcgplayer_sku_id: "7201511"
     finish: nf
   - display_key: mtg-ltc-330-nf
     qty: 1
     name: Secluded Courtyard
     tcgplayer_product_id: "499773"
+    tcgplayer_sku_id: "7208606"
     finish: nf
   - display_key: mtg-ltc-337-nf
     qty: 1
     name: Terramorphic Expanse
     tcgplayer_product_id: "499703"
+    tcgplayer_sku_id: "7205806"
     finish: nf
   - display_key: mtg-ltc-340-nf
     qty: 1
@@ -412,6 +477,7 @@ components:
     qty: 1
     name: Wind-Scarred Crag
     tcgplayer_product_id: "499781"
+    tcgplayer_sku_id: "7208896"
     finish: nf
   - display_key: mtg-ltr-262-nf
     qty: 5
@@ -427,19 +493,23 @@ components:
     qty: 3
     name: Island
     tcgplayer_product_id: "498402"
+    tcgplayer_sku_id: "7171810"
     finish: nf
   - display_key: mtg-ltr-265-nf
     qty: 2
     name: Island
     tcgplayer_product_id: "498401"
+    tcgplayer_sku_id: "7171730"
     finish: nf
   - display_key: mtg-ltr-268-nf
     qty: 3
     name: Mountain
     tcgplayer_product_id: "498404"
+    tcgplayer_sku_id: "7171970"
     finish: nf
   - display_key: mtg-ltr-269-nf
     qty: 2
     name: Mountain
     tcgplayer_product_id: "498403"
+    tcgplayer_sku_id: "7171890"
     finish: nf

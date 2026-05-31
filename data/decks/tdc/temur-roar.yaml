@@ -11,37 +11,44 @@ components:
     qty: 1
     name: "Eshki, Temur's Roar"
     tcgplayer_product_id: "623910"
+    tcgplayer_sku_id: "8613574"
     finish: f
     note: commander
   - display_key: mtg-tdc-9-f
     qty: 1
     name: Ureni of the Unwritten
     tcgplayer_product_id: "623916"
+    tcgplayer_sku_id: "8613879"
     finish: f
   - display_key: mtg-tdc-19-nf
     qty: 1
     name: Deceptive Frostkite
     tcgplayer_product_id: "625123"
+    tcgplayer_sku_id: "8645404"
     finish: nf
   - display_key: mtg-tdc-21-nf
     qty: 1
     name: Hammerhead Tyrant
     tcgplayer_product_id: "624915"
+    tcgplayer_sku_id: "8641163"
     finish: nf
   - display_key: mtg-tdc-24-nf
     qty: 1
     name: Will of the Temur
     tcgplayer_product_id: "624916"
+    tcgplayer_sku_id: "8641193"
     finish: nf
   - display_key: mtg-tdc-36-nf
     qty: 1
     name: Parapet Thrasher
     tcgplayer_product_id: "624922"
+    tcgplayer_sku_id: "8641373"
     finish: nf
   - display_key: mtg-tdc-38-nf
     qty: 1
     name: Thundermane Dragon
     tcgplayer_product_id: "624923"
+    tcgplayer_sku_id: "8641403"
     finish: nf
   - display_key: mtg-tdc-41-nf
     qty: 1
@@ -52,46 +59,55 @@ components:
     qty: 1
     name: Become the Avalanche
     tcgplayer_product_id: "624953"
+    tcgplayer_sku_id: "8642334"
     finish: nf
   - display_key: mtg-tdc-44-nf
     qty: 1
     name: Broodcaller Scourge
     tcgplayer_product_id: "624954"
+    tcgplayer_sku_id: "8642364"
     finish: nf
   - display_key: mtg-tdc-156-nf
     qty: 1
     name: "Keiga, the Tide Star"
     tcgplayer_product_id: "624918"
+    tcgplayer_sku_id: "8641253"
     finish: nf
   - display_key: mtg-tdc-164-nf
     qty: 1
     name: Reflections of Littjara
     tcgplayer_product_id: "624921"
+    tcgplayer_sku_id: "8641343"
     finish: nf
   - display_key: mtg-tdc-204-nf
     qty: 1
     name: "Atsushi, the Blazing Sky"
     tcgplayer_product_id: "624927"
+    tcgplayer_sku_id: "8641494"
     finish: nf
   - display_key: mtg-tdc-207-nf
     qty: 1
     name: Blasphemous Act
     tcgplayer_product_id: "624928"
+    tcgplayer_sku_id: "8641524"
     finish: nf
   - display_key: mtg-tdc-208-nf
     qty: 1
     name: Chaos Warp
     tcgplayer_product_id: "624929"
+    tcgplayer_sku_id: "8641554"
     finish: nf
   - display_key: mtg-tdc-211-nf
     qty: 1
     name: Dragonmaster Outcast
     tcgplayer_product_id: "624931"
+    tcgplayer_sku_id: "8641614"
     finish: nf
   - display_key: mtg-tdc-214-nf
     qty: 1
     name: "Gadrak, the Crown-Scourge"
     tcgplayer_product_id: "624932"
+    tcgplayer_sku_id: "8641644"
     finish: nf
   - display_key: mtg-tdc-215-nf
     qty: 1
@@ -102,61 +118,73 @@ components:
     qty: 1
     name: Hellkite Courser
     tcgplayer_product_id: "624934"
+    tcgplayer_sku_id: "8641704"
     finish: nf
   - display_key: mtg-tdc-219-nf
     qty: 1
     name: "Lathliss, Dragon Queen"
     tcgplayer_product_id: "624935"
+    tcgplayer_sku_id: "8641734"
     finish: nf
   - display_key: mtg-tdc-221-nf
     qty: 1
     name: Leyline Tyrant
     tcgplayer_product_id: "624936"
+    tcgplayer_sku_id: "8641764"
     finish: nf
   - display_key: mtg-tdc-225-nf
     qty: 1
     name: Nesting Dragon
     tcgplayer_product_id: "624937"
+    tcgplayer_sku_id: "8641794"
     finish: nf
   - display_key: mtg-tdc-226-nf
     qty: 1
     name: "Nogi, Draco-Zealot"
     tcgplayer_product_id: "624938"
+    tcgplayer_sku_id: "8641824"
     finish: nf
   - display_key: mtg-tdc-228-nf
     qty: 1
     name: Opportunistic Dragon
     tcgplayer_product_id: "624939"
+    tcgplayer_sku_id: "8641854"
     finish: nf
   - display_key: mtg-tdc-230-nf
     qty: 1
     name: Scourge of the Throne
     tcgplayer_product_id: "624941"
+    tcgplayer_sku_id: "8641914"
     finish: nf
   - display_key: mtg-tdc-233-nf
     qty: 1
     name: Skarrgan Hellkite
     tcgplayer_product_id: "624942"
+    tcgplayer_sku_id: "8641944"
     finish: nf
   - display_key: mtg-tdc-234-nf
     qty: 1
     name: Spit Flame
     tcgplayer_product_id: "624943"
+    tcgplayer_sku_id: "8641974"
     finish: nf
   - display_key: mtg-tdc-236-nf
     qty: 1
     name: "Storm's Wrath"
     tcgplayer_product_id: "624944"
+    tcgplayer_sku_id: "8642004"
     finish: nf
   - display_key: mtg-tdc-237-nf
     qty: 1
     name: Stormbreath Dragon
     tcgplayer_product_id: "624945"
+    tcgplayer_sku_id: "8642034"
     finish: nf
   - display_key: mtg-tdc-238-nf
     qty: 1
     name: Taurean Mauler
     tcgplayer_product_id: "624946"
+    tcgplayer_sku_id: "8642064"
     finish: nf
   - display_key: mtg-tdc-240-nf
     qty: 1
@@ -172,6 +200,7 @@ components:
     qty: 1
     name: Vengeful Ancestor
     tcgplayer_product_id: "624949"
+    tcgplayer_sku_id: "8642154"
     finish: nf
   - display_key: mtg-tdc-243-nf
     qty: 1
@@ -182,21 +211,25 @@ components:
     qty: 1
     name: Frontier Siege
     tcgplayer_product_id: "624957"
+    tcgplayer_sku_id: "8642454"
     finish: nf
   - display_key: mtg-tdc-269-nf
     qty: 1
     name: "Selvala's Stampede"
     tcgplayer_product_id: "624960"
+    tcgplayer_sku_id: "8642544"
     finish: nf
   - display_key: mtg-tdc-281-nf
     qty: 1
     name: "Atarka, World Render"
     tcgplayer_product_id: "624961"
+    tcgplayer_sku_id: "8642574"
     finish: nf
   - display_key: mtg-tdc-285-nf
     qty: 1
     name: Dragonlord Atarka
     tcgplayer_product_id: "624962"
+    tcgplayer_sku_id: "8642604"
     finish: nf
   - display_key: mtg-tdc-291-nf
     qty: 1
@@ -207,56 +240,67 @@ components:
     qty: 1
     name: "Sarkhan, Soul Aflame"
     tcgplayer_product_id: "624964"
+    tcgplayer_sku_id: "8642664"
     finish: nf
   - display_key: mtg-tdc-305-nf
     qty: 1
     name: Temur Ascendancy
     tcgplayer_product_id: "624965"
+    tcgplayer_sku_id: "8642694"
     finish: nf
   - display_key: mtg-tdc-317-nf
     qty: 1
     name: "Dragon's Hoard"
     tcgplayer_product_id: "624966"
+    tcgplayer_sku_id: "8642724"
     finish: nf
   - display_key: mtg-tdc-327-nf
     qty: 1
     name: Steel Hellkite
     tcgplayer_product_id: "624967"
+    tcgplayer_sku_id: "8642754"
     finish: nf
   - display_key: mtg-tdc-350-nf
     qty: 1
     name: Cinder Glade
     tcgplayer_product_id: "624972"
+    tcgplayer_sku_id: "8642904"
     finish: nf
   - display_key: mtg-tdc-360-nf
     qty: 1
     name: Exotic Orchard
     tcgplayer_product_id: "624207"
+    tcgplayer_sku_id: "8622705"
     finish: nf
   - display_key: mtg-tdc-364-nf
     qty: 1
     name: Flooded Grove
     tcgplayer_product_id: "624973"
+    tcgplayer_sku_id: "8642934"
     finish: nf
   - display_key: mtg-tdc-370-nf
     qty: 1
     name: Haven of the Spirit Dragon
     tcgplayer_product_id: "624974"
+    tcgplayer_sku_id: "8642964"
     finish: nf
   - display_key: mtg-tdc-371-nf
     qty: 1
     name: Hinterland Harbor
     tcgplayer_product_id: "624466"
+    tcgplayer_sku_id: "8631740"
     finish: nf
   - display_key: mtg-tdc-374-nf
     qty: 1
     name: Karplusan Forest
     tcgplayer_product_id: "624975"
+    tcgplayer_sku_id: "8642994"
     finish: nf
   - display_key: mtg-tdc-375-nf
     qty: 1
     name: Kessig Wolf Run
     tcgplayer_product_id: "624976"
+    tcgplayer_sku_id: "8643024"
     finish: nf
   - display_key: mtg-tdc-378-nf
     qty: 1
@@ -267,16 +311,19 @@ components:
     qty: 1
     name: Mosswort Bridge
     tcgplayer_product_id: "624978"
+    tcgplayer_sku_id: "8643084"
     finish: nf
   - display_key: mtg-tdc-387-nf
     qty: 1
     name: Rockfall Vale
     tcgplayer_product_id: "624979"
+    tcgplayer_sku_id: "8643114"
     finish: nf
   - display_key: mtg-tdc-388-nf
     qty: 1
     name: Rootbound Crag
     tcgplayer_product_id: "624980"
+    tcgplayer_sku_id: "8643144"
     finish: nf
   - display_key: mtg-tdc-392-nf
     qty: 1
@@ -287,11 +334,13 @@ components:
     qty: 1
     name: Shivan Reef
     tcgplayer_product_id: "624216"
+    tcgplayer_sku_id: "8622975"
     finish: nf
   - display_key: mtg-tdc-396-nf
     qty: 1
     name: Sulfur Falls
     tcgplayer_product_id: "624218"
+    tcgplayer_sku_id: "8623035"
     finish: nf
   - display_key: mtg-tdc-400-nf
     qty: 1
@@ -307,11 +356,13 @@ components:
     qty: 1
     name: Yavimaya Coast
     tcgplayer_product_id: "624984"
+    tcgplayer_sku_id: "8643264"
     finish: nf
   - display_key: mtg-tdc-94-nf
     qty: 1
     name: Dragon Tempest
     tcgplayer_product_id: "624926"
+    tcgplayer_sku_id: "8641464"
     finish: nf
   - display_key: mtg-tdm-101-nf
     qty: 1
@@ -322,21 +373,25 @@ components:
     qty: 1
     name: Temple of the Dragon Queen
     tcgplayer_product_id: "624970"
+    tcgplayer_sku_id: "8642844"
     finish: nf
   - display_key: mtg-tdc-105-nf
     qty: 1
     name: Arcane Signet
     tcgplayer_product_id: "624048"
+    tcgplayer_sku_id: "8619373"
     finish: nf
   - display_key: mtg-tdc-106-nf
     qty: 1
     name: Sol Ring
     tcgplayer_product_id: "624049"
+    tcgplayer_sku_id: "8619433"
     finish: nf
   - display_key: mtg-tdc-107-nf
     qty: 1
     name: Command Tower
     tcgplayer_product_id: "623982"
+    tcgplayer_sku_id: "8616599"
     finish: nf
   - display_key: mtg-tdm-124-nf
     qty: 1
@@ -352,26 +407,31 @@ components:
     qty: 1
     name: Draconic Lore
     tcgplayer_product_id: "624917"
+    tcgplayer_sku_id: "8641223"
     finish: nf
   - display_key: mtg-tdc-162-nf
     qty: 1
     name: Rapid Hybridization
     tcgplayer_product_id: "624919"
+    tcgplayer_sku_id: "8641283"
     finish: nf
   - display_key: mtg-tdc-163-nf
     qty: 1
     name: Reality Shift
     tcgplayer_product_id: "624920"
+    tcgplayer_sku_id: "8641313"
     finish: nf
   - display_key: mtg-tdc-210-nf
     qty: 1
     name: "Dragonlord's Servant"
     tcgplayer_product_id: "624930"
+    tcgplayer_sku_id: "8641584"
     finish: nf
   - display_key: mtg-tdc-229-nf
     qty: 1
     name: Rapacious Dragon
     tcgplayer_product_id: "624940"
+    tcgplayer_sku_id: "8641884"
     finish: nf
   - display_key: mtg-tdm-234-nf
     qty: 1
@@ -382,16 +442,19 @@ components:
     qty: 1
     name: Beast Within
     tcgplayer_product_id: "624955"
+    tcgplayer_sku_id: "8642394"
     finish: nf
   - display_key: mtg-tdc-254-nf
     qty: 1
     name: Elemental Bond
     tcgplayer_product_id: "624956"
+    tcgplayer_sku_id: "8642424"
     finish: nf
   - display_key: mtg-tdc-255-nf
     qty: 1
     name: Farseek
     tcgplayer_product_id: "624453"
+    tcgplayer_sku_id: "8631350"
     finish: nf
   - display_key: mtg-tdm-255-nf
     qty: 1
@@ -402,31 +465,37 @@ components:
     qty: 1
     name: Frontier Bivouac
     tcgplayer_product_id: "624264"
+    tcgplayer_sku_id: "8624866"
     finish: nf
   - display_key: mtg-tdc-261-nf
     qty: 1
     name: "Kodama's Reach"
     tcgplayer_product_id: "624958"
+    tcgplayer_sku_id: "8642484"
     finish: nf
   - display_key: mtg-tdc-262-nf
     qty: 1
     name: Migration Path
     tcgplayer_product_id: "624959"
+    tcgplayer_sku_id: "8642514"
     finish: nf
   - display_key: mtg-tdc-318-nf
     qty: 1
     name: Fellwar Stone
     tcgplayer_product_id: "624374"
+    tcgplayer_sku_id: "8627980"
     finish: nf
   - display_key: mtg-tdc-330-nf
     qty: 1
     name: Talisman of Creativity
     tcgplayer_product_id: "624968"
+    tcgplayer_sku_id: "8642784"
     finish: nf
   - display_key: mtg-tdc-332-nf
     qty: 1
     name: Talisman of Impulse
     tcgplayer_product_id: "624969"
+    tcgplayer_sku_id: "8642814"
     finish: nf
   - display_key: mtg-tdc-342-nf
     qty: 1
@@ -437,6 +506,7 @@ components:
     qty: 1
     name: Path of Ancestry
     tcgplayer_product_id: "624211"
+    tcgplayer_sku_id: "8622825"
     finish: nf
   - display_key: mtg-tdm-279-nf
     qty: 2

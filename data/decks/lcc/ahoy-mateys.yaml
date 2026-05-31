@@ -11,22 +11,26 @@ components:
     qty: 1
     name: "Admiral Brass, Unsinkable"
     tcgplayer_product_id: "524266"
+    tcgplayer_sku_id: "7504227"
     finish: f
     note: commander
   - display_key: mtg-lcc-6-f
     qty: 1
     name: "Don Andres, the Renegade"
     tcgplayer_product_id: "525707"
+    tcgplayer_sku_id: "7530427"
     finish: f
   - display_key: mtg-lcc-75-nf
     qty: 1
     name: The Indomitable
     tcgplayer_product_id: "526205"
+    tcgplayer_sku_id: "7543877"
     finish: nf
   - display_key: mtg-lcc-78-nf
     qty: 1
     name: Storm Fleet Negotiator
     tcgplayer_product_id: "526223"
+    tcgplayer_sku_id: "7544182"
     finish: nf
   - display_key: mtg-lcc-81-nf
     qty: 1
@@ -42,21 +46,25 @@ components:
     qty: 1
     name: Skeleton Crew
     tcgplayer_product_id: "526229"
+    tcgplayer_sku_id: "7544252"
     finish: nf
   - display_key: mtg-lcc-86-nf
     qty: 1
     name: Broadside Bombardiers
     tcgplayer_product_id: "526203"
+    tcgplayer_sku_id: "7543807"
     finish: nf
   - display_key: mtg-lcc-87-nf
     qty: 1
     name: Gemcutter Buccaneer
     tcgplayer_product_id: "526198"
+    tcgplayer_sku_id: "7543632"
     finish: nf
   - display_key: mtg-lcc-99-nf
     qty: 1
     name: Arm-Mounted Anchor
     tcgplayer_product_id: "526200"
+    tcgplayer_sku_id: "7543702"
     finish: nf
   - display_key: mtg-lcc-143-nf
     qty: 1
@@ -67,6 +75,7 @@ components:
     qty: 1
     name: Bident of Thassa
     tcgplayer_product_id: "525771"
+    tcgplayer_sku_id: "7532657"
     finish: nf
   - display_key: mtg-lcc-149-nf
     qty: 1
@@ -77,31 +86,37 @@ components:
     qty: 1
     name: Evacuation
     tcgplayer_product_id: "525795"
+    tcgplayer_sku_id: "7533497"
     finish: nf
   - display_key: mtg-lcc-178-nf
     qty: 1
     name: Timestream Navigator
     tcgplayer_product_id: "525725"
+    tcgplayer_sku_id: "7531027"
     finish: nf
   - display_key: mtg-lcc-179-nf
     qty: 1
     name: Warkite Marauder
     tcgplayer_product_id: "525726"
+    tcgplayer_sku_id: "7531062"
     finish: nf
   - display_key: mtg-lcc-181-nf
     qty: 1
     name: Black Market Connections
     tcgplayer_product_id: "525773"
+    tcgplayer_sku_id: "7532727"
     finish: nf
   - display_key: mtg-lcc-183-nf
     qty: 1
     name: Blood Money
     tcgplayer_product_id: "525806"
+    tcgplayer_sku_id: "7533882"
     finish: nf
   - display_key: mtg-lcc-192-nf
     qty: 1
     name: Dire Fleet Ravager
     tcgplayer_product_id: "525728"
+    tcgplayer_sku_id: "7531132"
     finish: nf
   - display_key: mtg-lcc-197-nf
     qty: 1
@@ -112,6 +127,7 @@ components:
     qty: 1
     name: Lethal Scheme
     tcgplayer_product_id: "525798"
+    tcgplayer_sku_id: "7533602"
     finish: nf
   - display_key: mtg-lcc-215-nf
     qty: 1
@@ -122,11 +138,13 @@ components:
     qty: 1
     name: Blasphemous Act
     tcgplayer_product_id: "525808"
+    tcgplayer_sku_id: "7533952"
     finish: nf
   - display_key: mtg-lcc-218-nf
     qty: 1
     name: Captain Lannery Storm
     tcgplayer_product_id: "525733"
+    tcgplayer_sku_id: "7531307"
     finish: nf
   - display_key: mtg-lcc-219-nf
     qty: 1
@@ -137,11 +155,13 @@ components:
     qty: 1
     name: Chaos Warp
     tcgplayer_product_id: "525799"
+    tcgplayer_sku_id: "7533637"
     finish: nf
   - display_key: mtg-lcc-222-nf
     qty: 1
     name: Coercive Recruiter
     tcgplayer_product_id: "525738"
+    tcgplayer_sku_id: "7531482"
     finish: nf
   - display_key: mtg-lcc-223-nf
     qty: 1
@@ -152,56 +172,67 @@ components:
     qty: 1
     name: "Kari Zev, Skyship Raider"
     tcgplayer_product_id: "525741"
+    tcgplayer_sku_id: "7531587"
     finish: nf
   - display_key: mtg-lcc-230-nf
     qty: 1
     name: Port Razer
     tcgplayer_product_id: "525742"
+    tcgplayer_sku_id: "7531622"
     finish: nf
   - display_key: mtg-lcc-231-nf
     qty: 1
     name: Shared Animosity
     tcgplayer_product_id: "525776"
+    tcgplayer_sku_id: "7532832"
     finish: nf
   - display_key: mtg-lcc-264-nf
     qty: 1
     name: Admiral Beckett Brass
     tcgplayer_product_id: "525708"
+    tcgplayer_sku_id: "7530462"
     finish: nf
   - display_key: mtg-lcc-271-nf
     qty: 1
     name: Hostage Taker
     tcgplayer_product_id: "525746"
+    tcgplayer_sku_id: "7531762"
     finish: nf
   - display_key: mtg-lcc-272-nf
     qty: 1
     name: "King Narfi's Betrayal"
     tcgplayer_product_id: "526215"
+    tcgplayer_sku_id: "7544007"
     finish: nf
   - display_key: mtg-lcc-279-nf
     qty: 1
     name: Prismari Command
     tcgplayer_product_id: "525801"
+    tcgplayer_sku_id: "7533707"
     finish: nf
   - display_key: mtg-lcc-297-nf
     qty: 1
     name: "Zara, Renegade Recruiter"
     tcgplayer_product_id: "525748"
+    tcgplayer_sku_id: "7531832"
     finish: nf
   - display_key: mtg-lcc-305-nf
     qty: 1
     name: Icon of Ancestry
     tcgplayer_product_id: "525777"
+    tcgplayer_sku_id: "7532867"
     finish: nf
   - display_key: mtg-lcc-316-nf
     qty: 1
     name: "Vanquisher's Banner"
     tcgplayer_product_id: "525781"
+    tcgplayer_sku_id: "7533007"
     finish: nf
   - display_key: mtg-lcc-322-nf
     qty: 1
     name: Choked Estuary
     tcgplayer_product_id: "525820"
+    tcgplayer_sku_id: "7534372"
     finish: nf
   - display_key: mtg-lcc-327-nf
     qty: 1
@@ -217,6 +248,7 @@ components:
     qty: 1
     name: Foreboding Ruins
     tcgplayer_product_id: "525825"
+    tcgplayer_sku_id: "7534547"
     finish: nf
   - display_key: mtg-lcc-332-nf
     qty: 1
@@ -227,26 +259,31 @@ components:
     qty: 1
     name: Geier Reach Sanitarium
     tcgplayer_product_id: "525830"
+    tcgplayer_sku_id: "7534722"
     finish: nf
   - display_key: mtg-lcc-344-nf
     qty: 1
     name: Nephalia Drownyard
     tcgplayer_product_id: "525831"
+    tcgplayer_sku_id: "7534757"
     finish: nf
   - display_key: mtg-lcc-353-nf
     qty: 1
     name: Smoldering Marsh
     tcgplayer_product_id: "525834"
+    tcgplayer_sku_id: "7534862"
     finish: nf
   - display_key: mtg-lcc-354-nf
     qty: 1
     name: Sulfur Falls
     tcgplayer_product_id: "525835"
+    tcgplayer_sku_id: "7534897"
     finish: nf
   - display_key: mtg-lcc-355-nf
     qty: 1
     name: Sunken Hollow
     tcgplayer_product_id: "525838"
+    tcgplayer_sku_id: "7535002"
     finish: nf
   - display_key: mtg-lcc-144-nf
     qty: 1
@@ -272,6 +309,7 @@ components:
     qty: 1
     name: Distant Melody
     tcgplayer_product_id: "525812"
+    tcgplayer_sku_id: "7534092"
     finish: nf
   - display_key: mtg-lcc-157-nf
     qty: 1
@@ -287,11 +325,13 @@ components:
     qty: 1
     name: Merchant Raiders
     tcgplayer_product_id: "525760"
+    tcgplayer_sku_id: "7532267"
     finish: nf
   - display_key: mtg-lcc-171-nf
     qty: 1
     name: Siren Stormtamer
     tcgplayer_product_id: "525762"
+    tcgplayer_sku_id: "7532337"
     finish: nf
   - display_key: mtg-lcc-172-nf
     qty: 1
@@ -302,16 +342,19 @@ components:
     qty: 1
     name: Windfall
     tcgplayer_product_id: "525814"
+    tcgplayer_sku_id: "7534162"
     finish: nf
   - display_key: mtg-lcc-198-nf
     qty: 1
     name: Feed the Swarm
     tcgplayer_product_id: "525817"
+    tcgplayer_sku_id: "7534267"
     finish: nf
   - display_key: mtg-lcc-208-nf
     qty: 1
     name: Pitiless Plunderer
     tcgplayer_product_id: "525765"
+    tcgplayer_sku_id: "7532442"
     finish: nf
   - display_key: mtg-lcc-217-nf
     qty: 1
@@ -322,76 +365,91 @@ components:
     qty: 1
     name: Faithless Looting
     tcgplayer_product_id: "525819"
+    tcgplayer_sku_id: "7534337"
     finish: nf
   - display_key: mtg-lcc-284-nf
     qty: 1
     name: Rakdos Charm
     tcgplayer_product_id: "525804"
+    tcgplayer_sku_id: "7533812"
     finish: nf
   - display_key: mtg-lcc-285-nf
     qty: 1
     name: "Ramirez DePietro, Pillager"
     tcgplayer_product_id: "526204"
+    tcgplayer_sku_id: "7543842"
     finish: nf
   - display_key: mtg-lcc-299-nf
     qty: 1
     name: Arcane Signet
     tcgplayer_product_id: "524261"
+    tcgplayer_sku_id: "7504154"
     finish: nf
   - display_key: mtg-lcc-301-nf
     qty: 1
     name: "Commander's Sphere"
     tcgplayer_product_id: "525766"
+    tcgplayer_sku_id: "7532477"
     finish: nf
   - display_key: mtg-lcc-302-nf
     qty: 1
     name: Dimir Signet
     tcgplayer_product_id: "525783"
+    tcgplayer_sku_id: "7533077"
     finish: nf
   - display_key: mtg-lcc-304-nf
     qty: 1
     name: "Herald's Horn"
     tcgplayer_product_id: "525784"
+    tcgplayer_sku_id: "7533112"
     finish: nf
   - display_key: mtg-lcc-306-nf
     qty: 1
     name: Izzet Signet
     tcgplayer_product_id: "525787"
+    tcgplayer_sku_id: "7533217"
     finish: nf
   - display_key: mtg-lcc-311-nf
     qty: 1
     name: Rakdos Signet
     tcgplayer_product_id: "525790"
+    tcgplayer_sku_id: "7533322"
     finish: nf
   - display_key: mtg-lcc-313-nf
     qty: 1
     name: Sol Ring
     tcgplayer_product_id: "525779"
+    tcgplayer_sku_id: "7532927"
     finish: nf
   - display_key: mtg-lcc-317-nf
     qty: 1
     name: "Wayfarer's Bauble"
     tcgplayer_product_id: "525789"
+    tcgplayer_sku_id: "7533287"
     finish: nf
   - display_key: mtg-lcc-325-nf
     qty: 1
     name: Command Tower
     tcgplayer_product_id: "525809"
+    tcgplayer_sku_id: "7533987"
     finish: nf
   - display_key: mtg-lcc-326-nf
     qty: 1
     name: Crumbling Necropolis
     tcgplayer_product_id: "525843"
+    tcgplayer_sku_id: "7535177"
     finish: nf
   - display_key: mtg-lcc-328-nf
     qty: 1
     name: Evolving Wilds
     tcgplayer_product_id: "525846"
+    tcgplayer_sku_id: "7535282"
     finish: nf
   - display_key: mtg-lcc-346-nf
     qty: 1
     name: Path of Ancestry
     tcgplayer_product_id: "524267"
+    tcgplayer_sku_id: "7504262"
     finish: nf
   - display_key: mtg-lcc-347-nf
     qty: 1
@@ -402,21 +460,25 @@ components:
     qty: 1
     name: "Rogue's Passage"
     tcgplayer_product_id: "525818"
+    tcgplayer_sku_id: "7534302"
     finish: nf
   - display_key: mtg-lcc-350-nf
     qty: 1
     name: Secluded Courtyard
     tcgplayer_product_id: "525821"
+    tcgplayer_sku_id: "7534407"
     finish: nf
   - display_key: mtg-lcc-360-nf
     qty: 1
     name: Terramorphic Expanse
     tcgplayer_product_id: "525850"
+    tcgplayer_sku_id: "7535422"
     finish: nf
   - display_key: mtg-lcc-361-nf
     qty: 1
     name: Thriving Bluff
     tcgplayer_product_id: "525851"
+    tcgplayer_sku_id: "7535457"
     finish: nf
   - display_key: mtg-lcc-364-nf
     qty: 1
@@ -432,6 +494,7 @@ components:
     qty: 1
     name: Unclaimed Territory
     tcgplayer_product_id: "525827"
+    tcgplayer_sku_id: "7534617"
     finish: nf
   - display_key: mtg-lci-395-nf
     qty: 3

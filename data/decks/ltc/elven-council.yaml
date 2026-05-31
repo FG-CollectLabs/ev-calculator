@@ -11,42 +11,50 @@ components:
     qty: 1
     name: "Galadriel, Elven-Queen"
     tcgplayer_product_id: "498467"
+    tcgplayer_sku_id: "7227431"
     finish: f
     note: commander
   - display_key: mtg-ltc-6-f
     qty: 1
     name: "Gandalf, Westward Voyager"
     tcgplayer_product_id: "499566"
+    tcgplayer_sku_id: "7227691"
     finish: f
   - display_key: mtg-ltc-23-nf
     qty: 1
     name: Raise the Palisade
     tcgplayer_product_id: "499572"
+    tcgplayer_sku_id: "7200820"
     finish: nf
   - display_key: mtg-ltc-25-nf
     qty: 1
     name: Trap the Trespassers
     tcgplayer_product_id: "499574"
+    tcgplayer_sku_id: "7200900"
     finish: nf
   - display_key: mtg-ltc-35-nf
     qty: 1
     name: "Arwen, Weaver of Hope"
     tcgplayer_product_id: "499578"
+    tcgplayer_sku_id: "7200990"
     finish: nf
   - display_key: mtg-ltc-38-nf
     qty: 1
     name: Galadhrim Ambush
     tcgplayer_product_id: "499582"
+    tcgplayer_sku_id: "7201150"
     finish: nf
   - display_key: mtg-ltc-39-nf
     qty: 1
     name: "Haldir, Lórien Lieutenant"
     tcgplayer_product_id: "499587"
+    tcgplayer_sku_id: "7201311"
     finish: nf
   - display_key: mtg-ltc-40-nf
     qty: 1
     name: Legolas Greenleaf
     tcgplayer_product_id: "499610"
+    tcgplayer_sku_id: "7202091"
     finish: nf
   - display_key: mtg-ltc-41-nf
     qty: 1
@@ -57,26 +65,31 @@ components:
     qty: 1
     name: Travel Through Caradhras
     tcgplayer_product_id: "499621"
+    tcgplayer_sku_id: "7202531"
     finish: nf
   - display_key: mtg-ltc-45-nf
     qty: 1
     name: Windswift Slice
     tcgplayer_product_id: "499625"
+    tcgplayer_sku_id: "7202691"
     finish: nf
   - display_key: mtg-ltc-50-nf
     qty: 1
     name: Círdan the Shipwright
     tcgplayer_product_id: "499646"
+    tcgplayer_sku_id: "7203526"
     finish: nf
   - display_key: mtg-ltc-51-nf
     qty: 1
     name: Elrond of the White Council
     tcgplayer_product_id: "499651"
+    tcgplayer_sku_id: "7203726"
     finish: nf
   - display_key: mtg-ltc-53-nf
     qty: 1
     name: Erestor of the Council
     tcgplayer_product_id: "499654"
+    tcgplayer_sku_id: "7203846"
     finish: nf
   - display_key: mtg-ltc-62-nf
     qty: 1
@@ -97,91 +110,109 @@ components:
     qty: 1
     name: Song of Eärendil
     tcgplayer_product_id: "499674"
+    tcgplayer_sku_id: "7204646"
     finish: nf
   - display_key: mtg-ltc-77-nf
     qty: 1
     name: Lothlórien Blade
     tcgplayer_product_id: "499677"
+    tcgplayer_sku_id: "7204766"
     finish: nf
   - display_key: mtg-ltc-78-nf
     qty: 1
     name: Model of Unity
     tcgplayer_product_id: "499682"
+    tcgplayer_sku_id: "7204966"
     finish: nf
   - display_key: mtg-ltc-186-nf
     qty: 1
     name: Colossal Whale
     tcgplayer_product_id: "499729"
+    tcgplayer_sku_id: "7206846"
     finish: nf
   - display_key: mtg-ltc-189-nf
     qty: 1
     name: Devastation Tide
     tcgplayer_product_id: "499740"
+    tcgplayer_sku_id: "7207286"
     finish: nf
   - display_key: mtg-ltc-193-nf
     qty: 1
     name: Mystic Confluence
     tcgplayer_product_id: "499745"
+    tcgplayer_sku_id: "7207486"
     finish: nf
   - display_key: mtg-ltc-195-nf
     qty: 1
     name: Plea for Power
     tcgplayer_product_id: "499747"
+    tcgplayer_sku_id: "7207566"
     finish: nf
   - display_key: mtg-ltc-197-nf
     qty: 1
     name: Swan Song
     tcgplayer_product_id: "499750"
+    tcgplayer_sku_id: "7207686"
     finish: nf
   - display_key: mtg-ltc-233-nf
     qty: 1
     name: Asceticism
     tcgplayer_product_id: "499776"
+    tcgplayer_sku_id: "7208726"
     finish: nf
   - display_key: mtg-ltc-237-nf
     qty: 1
     name: Elvish Archdruid
     tcgplayer_product_id: "499708"
+    tcgplayer_sku_id: "7206006"
     finish: nf
   - display_key: mtg-ltc-239-nf
     qty: 1
     name: Elvish Piper
     tcgplayer_product_id: "499711"
+    tcgplayer_sku_id: "7206126"
     finish: nf
   - display_key: mtg-ltc-241-nf
     qty: 1
     name: Elvish Warmaster
     tcgplayer_product_id: "499712"
+    tcgplayer_sku_id: "7206166"
     finish: nf
   - display_key: mtg-ltc-245-nf
     qty: 1
     name: Genesis Wave
     tcgplayer_product_id: "499753"
+    tcgplayer_sku_id: "7207806"
     finish: nf
   - display_key: mtg-ltc-249-nf
     qty: 1
     name: Heroic Intervention
     tcgplayer_product_id: "499755"
+    tcgplayer_sku_id: "7207886"
     finish: nf
   - display_key: mtg-ltc-250-nf
     qty: 1
     name: Hornet Queen
     tcgplayer_product_id: "499728"
+    tcgplayer_sku_id: "7206806"
     finish: nf
   - display_key: mtg-ltc-251-nf
     qty: 1
     name: Inscription of Abundance
     tcgplayer_product_id: "499760"
+    tcgplayer_sku_id: "7208086"
     finish: nf
   - display_key: mtg-ltc-254-nf
     qty: 1
     name: Overwhelming Stampede
     tcgplayer_product_id: "499762"
+    tcgplayer_sku_id: "7208166"
     finish: nf
   - display_key: mtg-ltc-258-nf
     qty: 1
     name: Realm Seekers
     tcgplayer_product_id: "499727"
+    tcgplayer_sku_id: "7206766"
     finish: nf
   - display_key: mtg-ltc-260-nf
     qty: 1
@@ -192,36 +223,43 @@ components:
     qty: 1
     name: Sylvan Offering
     tcgplayer_product_id: "499764"
+    tcgplayer_sku_id: "7208246"
     finish: nf
   - display_key: mtg-ltc-307-nf
     qty: 1
     name: Exotic Orchard
     tcgplayer_product_id: "499569"
+    tcgplayer_sku_id: "7200735"
     finish: nf
   - display_key: mtg-ltc-309-nf
     qty: 1
     name: Flooded Grove
     tcgplayer_product_id: "499780"
+    tcgplayer_sku_id: "7208856"
     finish: nf
   - display_key: mtg-ltc-317-nf
     qty: 1
     name: Hinterland Harbor
     tcgplayer_product_id: "499783"
+    tcgplayer_sku_id: "7208976"
     finish: nf
   - display_key: mtg-ltc-325-nf
     qty: 1
     name: Rejuvenating Springs
     tcgplayer_product_id: "499784"
+    tcgplayer_sku_id: "7209016"
     finish: nf
   - display_key: mtg-ltc-343-nf
     qty: 1
     name: Vineglimmer Snarl
     tcgplayer_product_id: "499788"
+    tcgplayer_sku_id: "7209176"
     finish: nf
   - display_key: mtg-ltr-60-nf
     qty: 1
     name: Lórien Revealed
     tcgplayer_product_id: "499960"
+    tcgplayer_sku_id: "7216698"
     finish: nf
   - display_key: mtg-ltr-156-nf
     qty: 1
@@ -232,6 +270,7 @@ components:
     qty: 1
     name: Elven Farsight
     tcgplayer_product_id: "499925"
+    tcgplayer_sku_id: "7213998"
     finish: nf
   - display_key: mtg-ltr-190-nf
     qty: 1
@@ -247,121 +286,145 @@ components:
     qty: 1
     name: Opt
     tcgplayer_product_id: "499731"
+    tcgplayer_sku_id: "7206926"
     finish: nf
   - display_key: mtg-ltc-196-nf
     qty: 1
     name: Preordain
     tcgplayer_product_id: "499733"
+    tcgplayer_sku_id: "7207006"
     finish: nf
   - display_key: mtg-ltc-232-nf
     qty: 1
     name: Arbor Elf
     tcgplayer_product_id: "499685"
+    tcgplayer_sku_id: "7205086"
     finish: nf
   - display_key: mtg-ltc-234-nf
     qty: 1
     name: Beast Within
     tcgplayer_product_id: "499734"
+    tcgplayer_sku_id: "7207046"
     finish: nf
   - display_key: mtg-ltc-236-nf
     qty: 1
     name: Cultivate
     tcgplayer_product_id: "499506"
+    tcgplayer_sku_id: "7199435"
     finish: nf
   - display_key: mtg-ltc-238-nf
     qty: 1
     name: Elvish Mystic
     tcgplayer_product_id: "499702"
+    tcgplayer_sku_id: "7205766"
     finish: nf
   - display_key: mtg-ltc-240-nf
     qty: 1
     name: Elvish Visionary
     tcgplayer_product_id: "499689"
+    tcgplayer_sku_id: "7205246"
     finish: nf
   - display_key: mtg-ltc-243-nf
     qty: 1
     name: Farhaven Elf
     tcgplayer_product_id: "499705"
+    tcgplayer_sku_id: "7205886"
     finish: nf
   - display_key: mtg-ltr-244-nf
     qty: 1
     name: Mirror of Galadriel
     tcgplayer_product_id: "499204"
+    tcgplayer_sku_id: "7189247"
     finish: nf
   - display_key: mtg-ltc-252-nf
     qty: 1
     name: Lignify
     tcgplayer_product_id: "499777"
+    tcgplayer_sku_id: "7208766"
     finish: nf
   - display_key: mtg-ltc-255-nf
     qty: 1
     name: Paradise Druid
     tcgplayer_product_id: "499716"
+    tcgplayer_sku_id: "7206326"
     finish: nf
   - display_key: mtg-ltc-257-nf
     qty: 1
     name: Rampant Growth
     tcgplayer_product_id: "499736"
+    tcgplayer_sku_id: "7207126"
     finish: nf
   - display_key: mtg-ltc-259-nf
     qty: 1
     name: Reclamation Sage
     tcgplayer_product_id: "499717"
+    tcgplayer_sku_id: "7206366"
     finish: nf
   - display_key: mtg-ltc-263-nf
     qty: 1
     name: Wood Elves
     tcgplayer_product_id: "499725"
+    tcgplayer_sku_id: "7206686"
     finish: nf
   - display_key: mtg-ltc-267-nf
     qty: 1
     name: Growth Spiral
     tcgplayer_product_id: "499738"
+    tcgplayer_sku_id: "7207206"
     finish: nf
   - display_key: mtg-ltc-273-nf
     qty: 1
     name: Arcane Signet
     tcgplayer_product_id: "499562"
+    tcgplayer_sku_id: "7200490"
     finish: nf
   - display_key: mtg-ltc-276-nf
     qty: 1
     name: "Commander's Sphere"
     tcgplayer_product_id: "499563"
+    tcgplayer_sku_id: "7200530"
     finish: nf
   - display_key: mtg-ltc-281-nf
     qty: 1
     name: Lightning Greaves
     tcgplayer_product_id: "499772"
+    tcgplayer_sku_id: "7208566"
     finish: nf
   - display_key: mtg-ltc-284-nf
     qty: 1
     name: Sol Ring
     tcgplayer_product_id: "488278"
+    tcgplayer_sku_id: "7029207"
     finish: nf
   - display_key: mtg-ltc-292-nf
     qty: 1
     name: Whispersilk Cloak
     tcgplayer_product_id: "499774"
+    tcgplayer_sku_id: "7208646"
     finish: nf
   - display_key: mtg-ltc-295-nf
     qty: 1
     name: Ash Barrens
     tcgplayer_product_id: "499588"
+    tcgplayer_sku_id: "7201351"
     finish: nf
   - display_key: mtg-ltc-301-nf
     qty: 1
     name: Command Tower
     tcgplayer_product_id: "499589"
+    tcgplayer_sku_id: "7201391"
     finish: nf
   - display_key: mtg-ltc-308-nf
     qty: 1
     name: Field of Ruin
     tcgplayer_product_id: "498410"
+    tcgplayer_sku_id: "7172410"
     finish: nf
   - display_key: mtg-ltc-319-nf
     qty: 1
     name: Lonely Sandbar
     tcgplayer_product_id: "499793"
+    tcgplayer_sku_id: "7209381"
     finish: nf
   - display_key: mtg-ltc-338-nf
     qty: 1
@@ -382,11 +445,13 @@ components:
     qty: 6
     name: Island
     tcgplayer_product_id: "498402"
+    tcgplayer_sku_id: "7171810"
     finish: nf
   - display_key: mtg-ltr-265-nf
     qty: 5
     name: Island
     tcgplayer_product_id: "498401"
+    tcgplayer_sku_id: "7171730"
     finish: nf
   - display_key: mtg-ltr-270-nf
     qty: 8

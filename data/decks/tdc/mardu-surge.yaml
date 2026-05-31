@@ -11,122 +11,146 @@ components:
     qty: 1
     name: Zurgo Stormrender
     tcgplayer_product_id: "623917"
+    tcgplayer_sku_id: "8613939"
     finish: f
     note: commander
   - display_key: mtg-tdc-6-f
     qty: 1
     name: "Neriv, Crackling Vanguard"
     tcgplayer_product_id: "623913"
+    tcgplayer_sku_id: "8613754"
     finish: f
   - display_key: mtg-tdc-11-nf
     qty: 1
     name: Ainok Strike Leader
     tcgplayer_product_id: "624277"
+    tcgplayer_sku_id: "8625646"
     finish: nf
   - display_key: mtg-tdc-13-nf
     qty: 1
     name: Ironwill Forger
     tcgplayer_product_id: "624278"
+    tcgplayer_sku_id: "8625676"
     finish: nf
   - display_key: mtg-tdc-17-nf
     qty: 1
     name: Will of the Mardu
     tcgplayer_product_id: "624279"
+    tcgplayer_sku_id: "8625706"
     finish: nf
   - display_key: mtg-tdc-26-nf
     qty: 1
     name: Bone Devourer
     tcgplayer_product_id: "624299"
+    tcgplayer_sku_id: "8626306"
     finish: nf
   - display_key: mtg-tdc-32-nf
     qty: 1
     name: Within Range
     tcgplayer_product_id: "624300"
+    tcgplayer_sku_id: "8626336"
     finish: nf
   - display_key: mtg-tdc-34-nf
     qty: 1
     name: Goldlust Triad
     tcgplayer_product_id: "624325"
+    tcgplayer_sku_id: "8627086"
     finish: nf
   - display_key: mtg-tdc-35-nf
     qty: 1
     name: Infantry Shield
     tcgplayer_product_id: "624326"
+    tcgplayer_sku_id: "8627116"
     finish: nf
   - display_key: mtg-tdc-37-nf
     qty: 1
     name: Redoubled Stormsinger
     tcgplayer_product_id: "624327"
+    tcgplayer_sku_id: "8627146"
     finish: nf
   - display_key: mtg-tdc-108-nf
     qty: 1
     name: "Adeline, Resplendent Cathar"
     tcgplayer_product_id: "624280"
+    tcgplayer_sku_id: "8625736"
     finish: nf
   - display_key: mtg-tdc-109-nf
     qty: 1
     name: Angel of Invention
     tcgplayer_product_id: "624281"
+    tcgplayer_sku_id: "8625766"
     finish: nf
   - display_key: mtg-tdc-111-nf
     qty: 1
     name: "Commander's Insignia"
     tcgplayer_product_id: "624282"
+    tcgplayer_sku_id: "8625796"
     finish: nf
   - display_key: mtg-tdc-113-nf
     qty: 1
     name: Divine Visitation
     tcgplayer_product_id: "624283"
+    tcgplayer_sku_id: "8625826"
     finish: nf
   - display_key: mtg-tdc-114-nf
     qty: 1
     name: Emeria Angel
     tcgplayer_product_id: "624284"
+    tcgplayer_sku_id: "8625856"
     finish: nf
   - display_key: mtg-tdc-118-nf
     qty: 1
     name: Grand Crescendo
     tcgplayer_product_id: "624286"
+    tcgplayer_sku_id: "8625916"
     finish: nf
   - display_key: mtg-tdc-119-nf
     qty: 1
     name: Hero of Bladehold
     tcgplayer_product_id: "624287"
+    tcgplayer_sku_id: "8625946"
     finish: nf
   - display_key: mtg-tdc-120-nf
     qty: 1
     name: Hour of Reckoning
     tcgplayer_product_id: "624288"
+    tcgplayer_sku_id: "8625976"
     finish: nf
   - display_key: mtg-tdc-122-nf
     qty: 1
     name: Legion Loyalty
     tcgplayer_product_id: "624289"
+    tcgplayer_sku_id: "8626006"
     finish: nf
   - display_key: mtg-tdc-129-nf
     qty: 1
     name: Selfless Spirit
     tcgplayer_product_id: "624292"
+    tcgplayer_sku_id: "8626096"
     finish: nf
   - display_key: mtg-tdc-133-nf
     qty: 1
     name: Sun Titan
     tcgplayer_product_id: "624296"
+    tcgplayer_sku_id: "8626216"
     finish: nf
   - display_key: mtg-tdc-135-nf
     qty: 1
     name: "Tocasia's Welcome"
     tcgplayer_product_id: "624297"
+    tcgplayer_sku_id: "8626246"
     finish: nf
   - display_key: mtg-tdc-136-nf
     qty: 1
     name: Twilight Drover
     tcgplayer_product_id: "624298"
+    tcgplayer_sku_id: "8626276"
     finish: nf
   - display_key: mtg-tdc-175-nf
     qty: 1
     name: Chittering Witch
     tcgplayer_product_id: "624304"
+    tcgplayer_sku_id: "8626456"
     finish: nf
   - display_key: mtg-tdc-179-nf
     qty: 1
@@ -137,76 +161,91 @@ components:
     qty: 1
     name: "Gix, Yawgmoth Praetor"
     tcgplayer_product_id: "624308"
+    tcgplayer_sku_id: "8626576"
     finish: nf
   - display_key: mtg-tdc-187-nf
     qty: 1
     name: Mindblade Render
     tcgplayer_product_id: "624309"
+    tcgplayer_sku_id: "8626606"
     finish: nf
   - display_key: mtg-tdc-193-nf
     qty: 1
     name: Ophiomancer
     tcgplayer_product_id: "624311"
+    tcgplayer_sku_id: "8626666"
     finish: nf
   - display_key: mtg-tdc-202-nf
     qty: 1
     name: "Yahenni, Undying Partisan"
     tcgplayer_product_id: "624314"
+    tcgplayer_sku_id: "8626756"
     finish: nf
   - display_key: mtg-tdc-216-nf
     qty: 1
     name: "Grenzo, Havoc Raiser"
     tcgplayer_product_id: "624329"
+    tcgplayer_sku_id: "8627206"
     finish: nf
   - display_key: mtg-tdc-220-nf
     qty: 1
     name: Legion Warboss
     tcgplayer_product_id: "624330"
+    tcgplayer_sku_id: "8627236"
     finish: nf
   - display_key: mtg-tdc-227-nf
     qty: 1
     name: Ogre Battledriver
     tcgplayer_product_id: "624333"
+    tcgplayer_sku_id: "8627326"
     finish: nf
   - display_key: mtg-tdc-232-nf
     qty: 1
     name: Siege-Gang Commander
     tcgplayer_product_id: "624335"
+    tcgplayer_sku_id: "8627386"
     finish: nf
   - display_key: mtg-tdc-239-nf
     qty: 1
     name: Tempt with Vengeance
     tcgplayer_product_id: "624337"
+    tcgplayer_sku_id: "8627446"
     finish: nf
   - display_key: mtg-tdc-294-nf
     qty: 1
     name: "Kaya, Geist Hunter"
     tcgplayer_product_id: "624336"
+    tcgplayer_sku_id: "8627416"
     finish: nf
   - display_key: mtg-tdc-313-nf
     qty: 1
     name: Blade of Selves
     tcgplayer_product_id: "624341"
+    tcgplayer_sku_id: "8627566"
     finish: nf
   - display_key: mtg-tdc-319-nf
     qty: 1
     name: Idol of Oblivion
     tcgplayer_product_id: "624342"
+    tcgplayer_sku_id: "8627596"
     finish: nf
   - display_key: mtg-tdc-322-nf
     qty: 1
     name: Myr Battlesphere
     tcgplayer_product_id: "624343"
+    tcgplayer_sku_id: "8627626"
     finish: nf
   - display_key: mtg-tdc-325-nf
     qty: 1
     name: Solemn Simulacrum
     tcgplayer_product_id: "624344"
+    tcgplayer_sku_id: "8627656"
     finish: nf
   - display_key: mtg-tdc-340-nf
     qty: 1
     name: Battlefield Forge
     tcgplayer_product_id: "624204"
+    tcgplayer_sku_id: "8622615"
     finish: nf
   - display_key: mtg-tdc-344-nf
     qty: 1
@@ -217,51 +256,61 @@ components:
     qty: 1
     name: Castle Ardenvale
     tcgplayer_product_id: "624302"
+    tcgplayer_sku_id: "8626396"
     finish: nf
   - display_key: mtg-tdc-347-nf
     qty: 1
     name: Castle Embereth
     tcgplayer_product_id: "624307"
+    tcgplayer_sku_id: "8626546"
     finish: nf
   - display_key: mtg-tdc-348-nf
     qty: 1
     name: Caves of Koilos
     tcgplayer_product_id: "624313"
+    tcgplayer_sku_id: "8626726"
     finish: nf
   - display_key: mtg-tdc-351-nf
     qty: 1
     name: Clifftop Retreat
     tcgplayer_product_id: "624206"
+    tcgplayer_sku_id: "8622675"
     finish: nf
   - display_key: mtg-tdc-357-nf
     qty: 1
     name: Dragonskull Summit
     tcgplayer_product_id: "624315"
+    tcgplayer_sku_id: "8626786"
     finish: nf
   - display_key: mtg-tdc-360-nf
     qty: 1
     name: Exotic Orchard
     tcgplayer_product_id: "624207"
+    tcgplayer_sku_id: "8622705"
     finish: nf
   - display_key: mtg-tdc-362-nf
     qty: 1
     name: Fetid Heath
     tcgplayer_product_id: "624316"
+    tcgplayer_sku_id: "8626816"
     finish: nf
   - display_key: mtg-tdc-373-nf
     qty: 1
     name: Isolated Chapel
     tcgplayer_product_id: "624317"
+    tcgplayer_sku_id: "8626846"
     finish: nf
   - display_key: mtg-tdc-391-nf
     qty: 1
     name: Shattered Sanctum
     tcgplayer_product_id: "624319"
+    tcgplayer_sku_id: "8626906"
     finish: nf
   - display_key: mtg-tdc-395-nf
     qty: 1
     name: Smoldering Marsh
     tcgplayer_product_id: "624320"
+    tcgplayer_sku_id: "8626936"
     finish: nf
   - display_key: mtg-tdc-406-nf
     qty: 1
@@ -277,11 +326,13 @@ components:
     qty: 1
     name: Vault of the Archangel
     tcgplayer_product_id: "624323"
+    tcgplayer_sku_id: "8627026"
     finish: nf
   - display_key: mtg-tdc-411-nf
     qty: 1
     name: Windbrisk Heights
     tcgplayer_product_id: "624324"
+    tcgplayer_sku_id: "8627056"
     finish: nf
   - display_key: mtg-tdc-101-nf
     qty: 1
@@ -292,26 +343,31 @@ components:
     qty: 1
     name: Lightning Greaves
     tcgplayer_product_id: "624339"
+    tcgplayer_sku_id: "8627506"
     finish: nf
   - display_key: mtg-tdc-103-nf
     qty: 1
     name: Skullclamp
     tcgplayer_product_id: "624340"
+    tcgplayer_sku_id: "8627536"
     finish: nf
   - display_key: mtg-tdc-105-nf
     qty: 1
     name: Arcane Signet
     tcgplayer_product_id: "624048"
+    tcgplayer_sku_id: "8619373"
     finish: nf
   - display_key: mtg-tdc-106-nf
     qty: 1
     name: Sol Ring
     tcgplayer_product_id: "624049"
+    tcgplayer_sku_id: "8619433"
     finish: nf
   - display_key: mtg-tdc-107-nf
     qty: 1
     name: Command Tower
     tcgplayer_product_id: "623982"
+    tcgplayer_sku_id: "8616599"
     finish: nf
   - display_key: mtg-tdc-117-nf
     qty: 1
@@ -327,61 +383,73 @@ components:
     qty: 1
     name: Release the Dogs
     tcgplayer_product_id: "624291"
+    tcgplayer_sku_id: "8626066"
     finish: nf
   - display_key: mtg-tdc-132-nf
     qty: 1
     name: Stroke of Midnight
     tcgplayer_product_id: "624294"
+    tcgplayer_sku_id: "8626156"
     finish: nf
   - display_key: mtg-tdc-134-nf
     qty: 1
     name: Swords to Plowshares
     tcgplayer_product_id: "624152"
+    tcgplayer_sku_id: "8621055"
     finish: nf
   - display_key: mtg-tdc-171-nf
     qty: 1
     name: Bastion of Remembrance
     tcgplayer_product_id: "624301"
+    tcgplayer_sku_id: "8626366"
     finish: nf
   - display_key: mtg-tdc-173-nf
     qty: 1
     name: Bitter Triumph
     tcgplayer_product_id: "624303"
+    tcgplayer_sku_id: "8626426"
     finish: nf
   - display_key: mtg-tdc-177-nf
     qty: 1
     name: Deadly Dispute
     tcgplayer_product_id: "624305"
+    tcgplayer_sku_id: "8626486"
     finish: nf
   - display_key: mtg-tdc-188-nf
     qty: 1
     name: Morbid Opportunist
     tcgplayer_product_id: "624310"
+    tcgplayer_sku_id: "8626636"
     finish: nf
   - display_key: mtg-tdc-199-nf
     qty: 1
     name: Viscera Seer
     tcgplayer_product_id: "624312"
+    tcgplayer_sku_id: "8626696"
     finish: nf
   - display_key: mtg-tdc-203-nf
     qty: 1
     name: Abrade
     tcgplayer_product_id: "624178"
+    tcgplayer_sku_id: "8621835"
     finish: nf
   - display_key: mtg-tdc-205-nf
     qty: 1
     name: Beetleback Chief
     tcgplayer_product_id: "624328"
+    tcgplayer_sku_id: "8627176"
     finish: nf
   - display_key: mtg-tdc-222-nf
     qty: 1
     name: Loyal Apprentice
     tcgplayer_product_id: "624332"
+    tcgplayer_sku_id: "8627296"
     finish: nf
   - display_key: mtg-tdm-263-nf
     qty: 1
     name: Nomad Outpost
     tcgplayer_product_id: "624269"
+    tcgplayer_sku_id: "8625166"
     finish: nf
   - display_key: mtg-tdc-280-nf
     qty: 1
@@ -397,41 +465,49 @@ components:
     qty: 1
     name: Fellwar Stone
     tcgplayer_product_id: "624374"
+    tcgplayer_sku_id: "8627980"
     finish: nf
   - display_key: mtg-tdc-329-nf
     qty: 1
     name: Talisman of Conviction
     tcgplayer_product_id: "624345"
+    tcgplayer_sku_id: "8627686"
     finish: nf
   - display_key: mtg-tdc-331-nf
     qty: 1
     name: Talisman of Hierarchy
     tcgplayer_product_id: "624346"
+    tcgplayer_sku_id: "8627716"
     finish: nf
   - display_key: mtg-tdc-335-nf
     qty: 1
     name: "Wayfarer's Bauble"
     tcgplayer_product_id: "624347"
+    tcgplayer_sku_id: "8627746"
     finish: nf
   - display_key: mtg-tdc-341-nf
     qty: 1
     name: Bojuka Bog
     tcgplayer_product_id: "624293"
+    tcgplayer_sku_id: "8626126"
     finish: nf
   - display_key: mtg-tdc-382-nf
     qty: 1
     name: Path of Ancestry
     tcgplayer_product_id: "624211"
+    tcgplayer_sku_id: "8622825"
     finish: nf
   - display_key: mtg-tdc-390-nf
     qty: 1
     name: Shattered Landscape
     tcgplayer_product_id: "624318"
+    tcgplayer_sku_id: "8626876"
     finish: nf
   - display_key: mtg-tdc-408-nf
     qty: 1
     name: Terramorphic Expanse
     tcgplayer_product_id: "624322"
+    tcgplayer_sku_id: "8626996"
     finish: nf
   - display_key: mtg-tdm-277-nf
     qty: 3
