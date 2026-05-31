@@ -597,7 +597,7 @@ components:
   - display_key: mtg-tmt-19-nf
     qty: 1
     name: "Lita, Little Orphan Amphibian"
-    tcgplayer_product_id: "679219"
+    tcgplayer_product_id: "679566"
     tcgplayer_sku_id: "9152802"
     finish: nf
     rarity: u
@@ -639,30 +639,30 @@ components:
   - display_key: mtg-tmt-315-nf
     qty: 2
     name: "Plains (0315)"
-    tcgplayer_product_id: "679649"
+    tcgplayer_product_id: "679225"
     tcgplayer_sku_id: "9150956"
     finish: nf
   - display_key: mtg-tmt-316-nf
     qty: 2
     name: "Island (0316)"
-    tcgplayer_product_id: "679650"
+    tcgplayer_product_id: "679226"
     tcgplayer_sku_id: "9150966"
     finish: nf
   - display_key: mtg-tmt-317-nf
     qty: 2
     name: "Swamp (0317)"
-    tcgplayer_product_id: "657786"
+    tcgplayer_product_id: "679227"
     tcgplayer_sku_id: "9150976"
     finish: nf
   - display_key: mtg-tmt-318-nf
     qty: 2
     name: "Mountain (0318)"
-    tcgplayer_product_id: "679651"
+    tcgplayer_product_id: "679228"
     tcgplayer_sku_id: "9150986"
     finish: nf
   - display_key: mtg-tmt-319-nf
     qty: 4
     name: "Forest (0319)"
-    tcgplayer_product_id: "679652"
+    tcgplayer_product_id: "679229"
     tcgplayer_sku_id: "9150996"
     finish: nf
