@@ -6,6 +6,7 @@ on:
     paths:
       - 'cmd/**'
       - 'internal/**'
+      - 'data/**'
       - 'go.mod'
       - 'go.sum'
       - 'Dockerfile'
