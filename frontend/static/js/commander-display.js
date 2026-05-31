@@ -230,9 +230,19 @@
   document.getElementById("case-cost").addEventListener("input", renderDecks);
 
   function updateStrategyPanel() {
-    document.getElementById("strategy-tcgplayer")?.classList.toggle("hidden", activePlat !== "tcgplayer");
+    const isTcg = activePlat === "tcgplayer";
+    document.getElementById("strategy-tcgplayer")?.classList.toggle("hidden", !isTcg);
     document.getElementById("strategy-ebay")?.classList.toggle("hidden",      activePlat !== "ebay");
     document.getElementById("strategy-manapool")?.classList.toggle("hidden",  activePlat !== "manapool");
+    // TCG sub-rows are siblings of strategy-tcgplayer and must be explicitly hidden/restored.
+    if (!isTcg) {
+      document.getElementById("tcg-capture-row")?.classList.add("hidden");
+      document.getElementById("tcg-simple-row")?.classList.add("hidden");
+    } else {
+      const mode = lsGet(LS.tcgPricingMode, "simple");
+      document.getElementById("tcg-capture-row")?.classList.toggle("hidden", mode !== "capture-pct");
+      document.getElementById("tcg-simple-row")?.classList.toggle("hidden",  mode !== "simple");
+    }
   }
 
   applySavedSettings();
