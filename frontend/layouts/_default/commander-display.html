@@ -27,8 +27,6 @@
     <div class="platform-toggle" id="tcg-pricing-mode-toggle">
       <button class="plat-btn" data-mode="capture-pct" title="List at the price that captures exactly X% of market value as net profit after all TCGPlayer fees, shipping, and supplies. The cleanest way to set consistent margins.">Capture %</button>
       <button class="plat-btn active" data-mode="simple">Simple</button>
-      <button class="plat-btn" data-mode="tiered" title="Tiered offsets for free-ship strategy: different rules for $5+ vs under-$5 cards">Tiered</button>
-      <button class="plat-btn" data-mode="beat-lowest" title="List at lowest Direct price minus your fixed shipping charge — undercuts Direct on total buyer cost">Beat Lowest</button>
     </div>
   </div>
   <!-- Capture % mode -->
@@ -59,52 +57,39 @@
       <input class="settings-input" id="tcg-offset-value" type="number" min="-50" max="200" step="1" value="0">
     </div>
   </div>
-  <!-- Tiered mode -->
-  <div class="settings-row hidden" id="tcg-tiered-rows">
-    <span class="settings-label"></span>
-    <div style="display:flex;flex-direction:column;gap:0.35rem">
-      <div class="settings-input-group" title="Cards with market price ≥ $5: add this many cents to market price">
-        <span class="settings-input-prefix" style="width:6rem">≥$5 + ¢</span>
-        <input class="settings-input" id="tcg-tier-high-cents" type="number" min="0" max="500" step="1" value="30" style="width:4rem">
-      </div>
-      <div class="settings-input-group" title="Cards under $5: add whichever is lower — flat cents or this % of market">
-        <span class="settings-input-prefix" style="width:6rem">&lt;$5 + ¢</span>
-        <input class="settings-input" id="tcg-tier-low-cents" type="number" min="0" max="200" step="1" value="15" style="width:4rem">
-        <span class="muted" style="margin:0 0.3rem;font-size:0.8rem">or</span>
-        <input class="settings-input" id="tcg-tier-low-pct" type="number" min="0" max="100" step="1" value="10" style="width:4rem">
-        <span class="muted" style="font-size:0.8rem">% (lower wins)</span>
-      </div>
-      <div class="settings-input-group" title="Minimum listing price — cards price-floored here still appear in EV totals (unlike Min list $, which excludes them)">
-        <span class="settings-input-prefix" style="width:6rem">Floor $</span>
-        <input class="settings-input" id="tcg-tier-floor" type="number" min="0" max="5" step="0.01" value="0.35" style="width:4rem">
-      </div>
-    </div>
-  </div>
-
-  <!-- Beat Lowest mode -->
-  <div class="settings-row hidden" id="tcg-beat-lowest-rows">
-    <span class="settings-label"></span>
-    <div style="display:flex;flex-direction:column;gap:0.35rem">
-      <div class="settings-input-group">
-        <span class="muted" style="font-size:0.8rem">List = Low Direct − Ship rate (Packaging &amp; Fees → Ship rate). Revenue &amp; Net automatically treat shipping as fixed-rate collected from buyer.</span>
-      </div>
-      <div class="settings-input-group" title="Minimum listing price floor — cards still appear in EV at this price">
-        <span class="settings-input-prefix" style="width:6rem">Floor $</span>
-        <input class="settings-input" id="tcg-beat-floor" type="number" min="0" max="5" step="0.01" value="0.35" style="width:4rem">
-      </div>
-    </div>
-  </div>
-
   <!-- eBay pricing strategy -->
   <div class="settings-row hidden" id="strategy-ebay">
     <span class="settings-label">eBay pricing</span>
-    <div class="settings-input-group">
-      <span class="settings-input-prefix">Sift $</span>
-      <input class="settings-input" id="sift-threshold" type="number" min="0" max="10" step="0.05" value="0.25">
+    <div style="display:flex;flex-direction:column;gap:0.35rem">
+      <div class="settings-input-group" title="Target net as a percentage of market value. Listing price is calculated to deliver exactly this % as take-home after all eBay fees, shipping, and supplies.">
+        <span class="settings-input-prefix" style="width:5rem">Target</span>
+        <input class="settings-input" id="ebay-capture-pct" type="number" min="50" max="100" step="1" value="90" style="width:3.5rem">
+        <span class="muted" style="font-size:0.8rem">% of market</span>
+      </div>
+      <div class="platform-toggle" id="ebay-capture-preset">
+        <button class="plat-btn" data-pct="90">90%</button>
+        <button class="plat-btn" data-pct="85">85%</button>
+        <button class="plat-btn" data-pct="80">80%</button>
+      </div>
+      <div class="muted" style="font-size:0.78rem;max-width:28rem">Cards ≥ $0.99 market: buyer pays ship. Cards &lt; $0.99: free ship, listed ≥ $0.99. 15.25% total fees (13.25% + 2% promo).</div>
     </div>
-    <div class="platform-toggle" id="ebay-mode-toggle" style="margin-left:0.75rem">
-      <button class="plat-btn ebay-mode-btn active" data-mode="freeship">Free Ship (+$1.30)</button>
-      <button class="plat-btn ebay-mode-btn" data-mode="bulk">Bulk Magnet</button>
+  </div>
+
+  <!-- Manapool pricing strategy -->
+  <div class="settings-row hidden" id="strategy-manapool">
+    <span class="settings-label">MP pricing</span>
+    <div style="display:flex;flex-direction:column;gap:0.35rem">
+      <div class="settings-input-group" title="Target net as a percentage of market value. Listing calculated to hit this % after Manapool 8% fee and fixed $1.30 shipping charged to buyer.">
+        <span class="settings-input-prefix" style="width:5rem">Target</span>
+        <input class="settings-input" id="mp-capture-pct" type="number" min="50" max="100" step="1" value="90" style="width:3.5rem">
+        <span class="muted" style="font-size:0.8rem">% of market</span>
+      </div>
+      <div class="platform-toggle" id="mp-capture-preset">
+        <button class="plat-btn" data-pct="90">90%</button>
+        <button class="plat-btn" data-pct="85">85%</button>
+        <button class="plat-btn" data-pct="80">80%</button>
+      </div>
+      <div class="muted" style="font-size:0.78rem;max-width:28rem">Manapool always charges $1.30 ship to buyers. 8% seller fee, no per-order flat.</div>
     </div>
   </div>
 
@@ -219,10 +204,11 @@
     <!-- Manapool pane -->
     <div class="pkg-pane hidden" id="pkg-pane-manapool">
       <div class="settings-row">
-        <span class="settings-label">Buyer shipping</span>
-        <div class="platform-toggle" id="mp-ship-toggle">
-          <button class="plat-btn active" data-ship="free">Free Ship</button>
-          <button class="plat-btn" data-ship="buyer">Buyer Pays</button>
+        <span class="settings-label">Ship charge</span>
+        <div class="settings-input-group">
+          <span class="settings-input-prefix">$</span>
+          <input class="settings-input" id="mp-ship-fixed-val" type="number" min="0" step="0.01" value="1.30" style="width:4.5rem">
+          <span class="muted" style="font-size:0.78rem;margin-left:0.35rem">fixed, always charged to buyer</span>
         </div>
       </div>
       <div class="supply-grid">
@@ -238,24 +224,24 @@
       </div>
       <div class="settings-row pkg-fee-note">
         <span class="settings-label">Fees</span>
-        <span class="muted">8% seller fee, no per-order flat</span>
+        <span class="muted">8% seller fee on item, no per-order flat. Shipping revenue offset in listing calculation.</span>
       </div>
     </div>
 
     <!-- eBay pane -->
     <div class="pkg-pane hidden" id="pkg-pane-ebay">
       <div class="settings-row">
-        <span class="settings-label">Shipping</span>
-        <div class="platform-toggle" id="ebay-pkg-ship-toggle">
-          <button class="plat-btn" data-ship="ese">eBay SE ($0.89)</button>
-          <button class="plat-btn active" data-ship="free">Free Ship</button>
-          <button class="plat-btn" data-ship="buyer">Buyer Pays</button>
+        <span class="settings-label">Ship charge</span>
+        <div class="settings-input-group">
+          <span class="settings-input-prefix">$</span>
+          <input class="settings-input" id="ebay-ship-fixed-val" type="number" min="0" step="0.01" value="1.50" style="width:4.5rem">
+          <span class="muted" style="font-size:0.78rem;margin-left:0.35rem">for cards ≥ $0.99 market (free ship below)</span>
         </div>
       </div>
       <div class="supply-grid">
         <div class="supply-header"><span>Supply item</span><span>$/card</span></div>
-        <label class="supply-row" id="ebay-postage-row"><span>Postage</span><span class="supply-prefix">$</span><input class="supply-input" id="ebay-s-stamp" type="number" min="0" step="0.01" value="0.73"></label>
-        <label class="supply-row"><span>Envelope</span><span class="supply-prefix">$</span><input class="supply-input" id="ebay-s-envelope" type="number" min="0" step="0.01" value="0.03"></label>
+        <label class="supply-row"><span>eBay envelope</span><span class="supply-prefix">$</span><input class="supply-input" id="ebay-s-stamp" type="number" min="0" step="0.01" value="0.74"></label>
+        <label class="supply-row"><span>Envelope (outer)</span><span class="supply-prefix">$</span><input class="supply-input" id="ebay-s-envelope" type="number" min="0" step="0.01" value="0.03"></label>
         <label class="supply-row"><span>Card saver</span><span class="supply-prefix">$</span><input class="supply-input" id="ebay-s-card-saver" type="number" min="0" step="0.01" value="0.08"></label>
         <label class="supply-row"><span>Penny sleeve</span><span class="supply-prefix">$</span><input class="supply-input" id="ebay-s-penny-sleeve" type="number" min="0" step="0.01" value="0.01"></label>
         <label class="supply-row"><span>4×6 label</span><span class="supply-prefix">$</span><input class="supply-input" id="ebay-s-label" type="number" min="0" step="0.01" value="0.01"></label>
@@ -265,7 +251,7 @@
       </div>
       <div class="settings-row pkg-fee-note">
         <span class="settings-label">Fees</span>
-        <span class="muted">13.25% FVF + $0.30/order (approximated per card)</span>
+        <span class="muted">15.25% on item+ship (13.25% FVF + 2% promo) + $0.30/order flat. Floor $0.99 for free-ship cards.</span>
       </div>
     </div>
   </details>

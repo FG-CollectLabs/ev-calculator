@@ -22,22 +22,18 @@
   // ── LocalStorage keys ──────────────────────────────────────────────────────
   const LS = {
     plat:          "ev_plat",
-    ebayMode:      "ev_ebay_mode",
     sort:          "ev_sort",
     skipRarities:  "ev_skip_rarities",
     tcgOffsetType:    "ev_tcg_offset_type",
     tcgOffsetVal:     "ev_tcg_offset_val",
-    tcgPricingMode:   "ev_tcg_pricing_mode",   // "simple"|"tiered"|"beat-lowest"|"capture-pct"
-    tcgCapturePct:    "ev_tcg_capture_pct",    // 50–100, target net % of market
-    tcgTieredHighC:   "ev_tcg_tier_high_cents",
-    tcgTieredLowC:    "ev_tcg_tier_low_cents",
-    tcgTieredLowPct:  "ev_tcg_tier_low_pct",
-    tcgTieredFloor:   "ev_tcg_tier_floor",
-    tcgBeatFloor:     "ev_tcg_beat_floor",   // cents minimum listing price
+    tcgPricingMode:   "ev_tcg_pricing_mode",   // "simple"|"capture-pct"
+    tcgCapturePct:    "ev_tcg_capture_pct",    // 50–100
+    ebayCapturePct:   "ev_ebay_capture_pct",   // 50–100
+    mpCapturePct:     "ev_mp_capture_pct",     // 50–100
     sift:          "ev_sift_threshold",
     // Packaging settings (stored as JSON objects keyed by platform)
     pkgSupplies:   "ev_pkg_supplies",   // { tcgplayer: {stamp,envelope,...}, manapool: {...}, ebay: {...} }
-    pkgShipping:   "ev_pkg_shipping",   // { tcgplayer: "free"|"fixed"|"buyer", manapool: ..., ebay: ... }
+    pkgShipping:   "ev_pkg_shipping",   // { tcgplayer: "free"|"fixed"|"buyer" }
     pkgShipFixed:  "ev_pkg_ship_fixed", // { tcgplayer: cents }
     pkgEnv:        "ev_pkg_env",        // { tcgplayer: "no-window"|"window" }
   };
@@ -61,7 +57,6 @@
 
   // ── State ──────────────────────────────────────────────────────────────────
   let activePlat   = lsGet(LS.plat, "tcgplayer");
-  let ebayMode     = lsGet(LS.ebayMode, "freeship");
   let csvSort      = lsGet(LS.sort, "name");
   const skipRarities  = new Set(lsGetJSON(LS.skipRarities, []));
   const userExcluded  = new Map();
@@ -90,37 +85,28 @@
     if ($type) $type.value = savedType;
     if ($val)  $val.value  = savedVal;
 
-    // TCG tiered pricing
+    // TCG pricing mode
     const tcgMode = lsGet(LS.tcgPricingMode, "simple");
     document.querySelectorAll("#tcg-pricing-mode-toggle .plat-btn").forEach(b =>
       b.classList.toggle("active", b.dataset.mode === tcgMode));
     document.getElementById("tcg-capture-row")?.classList.toggle("hidden", tcgMode !== "capture-pct");
     document.getElementById("tcg-simple-row")?.classList.toggle("hidden", tcgMode !== "simple");
-    document.getElementById("tcg-tiered-rows")?.classList.toggle("hidden", tcgMode !== "tiered");
     const $capturePct = document.getElementById("tcg-capture-pct");
     if ($capturePct) $capturePct.value = lsGet(LS.tcgCapturePct, "90");
     document.querySelectorAll("#tcg-capture-preset .plat-btn").forEach(b =>
       b.classList.toggle("active", b.dataset.pct === lsGet(LS.tcgCapturePct, "90")));
-    const $highC  = document.getElementById("tcg-tier-high-cents");
-    const $lowC   = document.getElementById("tcg-tier-low-cents");
-    const $lowPct = document.getElementById("tcg-tier-low-pct");
-    const $floor  = document.getElementById("tcg-tier-floor");
-    if ($highC)  $highC.value  = (lsGet(LS.tcgTieredHighC,  "30"));
-    if ($lowC)   $lowC.value   = (lsGet(LS.tcgTieredLowC,   "15"));
-    if ($lowPct) $lowPct.value = (lsGet(LS.tcgTieredLowPct, "10"));
-    if ($floor)  $floor.value  = (parseFloat(lsGet(LS.tcgTieredFloor, "35")) / 100).toFixed(2);
-    // Beat Lowest inputs
-    const $beatFloor = document.getElementById("tcg-beat-floor");
-    if ($beatFloor) $beatFloor.value = (parseFloat(lsGet(LS.tcgBeatFloor, "35"))  / 100).toFixed(2);
-    document.getElementById("tcg-beat-lowest-rows")?.classList.toggle("hidden", tcgMode !== "beat-lowest");
 
-    // Sift threshold
-    const $sift = document.getElementById("sift-threshold");
-    if ($sift) $sift.value = lsGet(LS.sift, "0.25");
+    // eBay capture pct
+    const $ebayPct = document.getElementById("ebay-capture-pct");
+    if ($ebayPct) $ebayPct.value = lsGet(LS.ebayCapturePct, "90");
+    document.querySelectorAll("#ebay-capture-preset .plat-btn").forEach(b =>
+      b.classList.toggle("active", b.dataset.pct === lsGet(LS.ebayCapturePct, "90")));
 
-    // eBay mode
-    document.querySelectorAll(".ebay-mode-btn").forEach(b =>
-      b.classList.toggle("active", b.dataset.mode === ebayMode));
+    // Manapool capture pct
+    const $mpPct = document.getElementById("mp-capture-pct");
+    if ($mpPct) $mpPct.value = lsGet(LS.mpCapturePct, "90");
+    document.querySelectorAll("#mp-capture-preset .plat-btn").forEach(b =>
+      b.classList.toggle("active", b.dataset.pct === lsGet(LS.mpCapturePct, "90")));
 
     updateStrategyPanel();
   }
@@ -147,10 +133,8 @@
       lsSet(LS.tcgPricingMode, mode);
       document.querySelectorAll("#tcg-pricing-mode-toggle .plat-btn")
         .forEach(b => b.classList.toggle("active", b === btn));
-      document.getElementById("tcg-capture-row")?.classList.toggle("hidden",     mode !== "capture-pct");
-      document.getElementById("tcg-simple-row")?.classList.toggle("hidden",       mode !== "simple");
-      document.getElementById("tcg-tiered-rows")?.classList.toggle("hidden",      mode !== "tiered");
-      document.getElementById("tcg-beat-lowest-rows")?.classList.toggle("hidden", mode !== "beat-lowest");
+      document.getElementById("tcg-capture-row")?.classList.toggle("hidden", mode !== "capture-pct");
+      document.getElementById("tcg-simple-row")?.classList.toggle("hidden",  mode !== "simple");
       renderDecks();
     });
   });
@@ -183,26 +167,38 @@
     renderDecks();
   });
 
-  // TCGPlayer tiered pricing inputs
-  [
-    ["tcg-tier-high-cents", LS.tcgTieredHighC,  v => Math.round(parseFloat(v) || 0)],
-    ["tcg-tier-low-cents",  LS.tcgTieredLowC,   v => Math.round(parseFloat(v) || 0)],
-    ["tcg-tier-low-pct",    LS.tcgTieredLowPct, v => Math.round(parseFloat(v) || 0)],
-    ["tcg-tier-floor",      LS.tcgTieredFloor,  v => Math.round((parseFloat(v) || 0) * 100)],
-    ["tcg-beat-floor",      LS.tcgBeatFloor,    v => Math.round((parseFloat(v) || 0) * 100)],
-  ].forEach(([id, key, parse]) => {
-    document.getElementById(id)?.addEventListener("input", function() {
-      lsSet(key, String(parse(this.value)));
+
+  // eBay capture pct
+  document.getElementById("ebay-capture-pct")?.addEventListener("input", function() {
+    lsSet(LS.ebayCapturePct, this.value);
+    document.querySelectorAll("#ebay-capture-preset .plat-btn")
+      .forEach(b => b.classList.toggle("active", b.dataset.pct === this.value));
+    renderDecks();
+  });
+  document.querySelectorAll("#ebay-capture-preset .plat-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      lsSet(LS.ebayCapturePct, btn.dataset.pct);
+      const el = document.getElementById("ebay-capture-pct");
+      if (el) el.value = btn.dataset.pct;
+      document.querySelectorAll("#ebay-capture-preset .plat-btn")
+        .forEach(b => b.classList.toggle("active", b === btn));
       renderDecks();
     });
   });
 
-  // eBay mode toggle
-  document.querySelectorAll("#ebay-mode-toggle .plat-btn").forEach(btn => {
+  // Manapool capture pct
+  document.getElementById("mp-capture-pct")?.addEventListener("input", function() {
+    lsSet(LS.mpCapturePct, this.value);
+    document.querySelectorAll("#mp-capture-preset .plat-btn")
+      .forEach(b => b.classList.toggle("active", b.dataset.pct === this.value));
+    renderDecks();
+  });
+  document.querySelectorAll("#mp-capture-preset .plat-btn").forEach(btn => {
     btn.addEventListener("click", () => {
-      ebayMode = btn.dataset.mode;
-      lsSet(LS.ebayMode, ebayMode);
-      document.querySelectorAll("#ebay-mode-toggle .plat-btn")
+      lsSet(LS.mpCapturePct, btn.dataset.pct);
+      const el = document.getElementById("mp-capture-pct");
+      if (el) el.value = btn.dataset.pct;
+      document.querySelectorAll("#mp-capture-preset .plat-btn")
         .forEach(b => b.classList.toggle("active", b === btn));
       renderDecks();
     });
@@ -239,7 +235,8 @@
 
   function updateStrategyPanel() {
     document.getElementById("strategy-tcgplayer").classList.toggle("hidden", activePlat !== "tcgplayer");
-    document.getElementById("strategy-ebay").classList.toggle("hidden", activePlat !== "ebay");
+    document.getElementById("strategy-ebay").classList.toggle("hidden",      activePlat !== "ebay");
+    document.getElementById("strategy-manapool").classList.toggle("hidden",  activePlat !== "manapool");
   }
 
   applySavedSettings();
@@ -265,15 +262,14 @@
   }
 
   function currentShipMode(plat) {
-    const saved = lsGetJSON(LS.pkgShipping, {})[plat] || "free";
-    // Beat Lowest pricing implies fixed-rate shipping — buyer always pays the fixed ship charge
-    if (saved === "free" && plat === "tcgplayer" && tcgPricingMode() === "beat-lowest") return "fixed";
-    return saved;
+    return lsGetJSON(LS.pkgShipping, {})[plat] || "free";
   }
 
   function currentFixedShipCents(plat) {
-    if (plat !== "tcgplayer") return 0;
-    const el = document.getElementById("tcg-ship-fixed-val");
+    const idMap = { tcgplayer: "tcg-ship-fixed-val" };
+    const id = idMap[plat];
+    if (!id) return 0;
+    const el = document.getElementById(id);
     const v  = el ? parseFloat(el.value) : 0;
     return isNaN(v) ? 0 : Math.round(v * 100);
   }
@@ -305,17 +301,19 @@
     switch (plat) {
       case "tcgplayer": return 0.8675; // 1 - 10.75% - 2.5%
       case "manapool":  return 0.92;   // 1 - 8%
-      case "ebay":      return 0.8675; // 1 - 13.25%
+      case "ebay":      return 0.8475; // 1 - 13.25% - 2% promo = 15.25%
       default:          return 0.8675;
     }
   }
 
-  // Keep rate on the shipping amount (payment processing only — no marketplace commission on shipping).
+  // Keep rate on the shipping amount.
+  // eBay charges the full combined fee on the total (item + shipping), so ship keepRate = item keepRate.
+  // TCGPlayer charges only 2.5% payment processing on shipping (no 10.75% commission).
   function shipKeepRate(plat) {
     switch (plat) {
       case "tcgplayer": return 0.975;  // 1 - 2.5% only
-      case "manapool":  return 0.92;
-      case "ebay":      return 0.8675;
+      case "manapool":  return 0.92;   // 8% on shipping too
+      case "ebay":      return 0.8475; // same as item keepRate
       default:          return 0.8675;
     }
   }
@@ -365,15 +363,46 @@
     return Math.round(listingCents * keepRate(plat));
   }
 
-  // Ship charge collected from the buyer, amortized per card.
+  // Ship charge collected from the buyer, amortized per card (TCGPlayer only — eBay/Manapool use per-card helpers).
   function buyerShipCentsPerCard(plat) {
+    if (plat !== "tcgplayer") return 0;
     const mode = currentShipMode(plat);
-    const isBeatLowest = plat === "tcgplayer" && tcgPricingMode() === "beat-lowest";
-    if (mode === "fixed" || isBeatLowest) {
-      return Math.round(currentFixedShipCents(plat) / avgCardsPerOrder(plat));
-    }
+    if (mode === "fixed") return Math.round(currentFixedShipCents(plat) / avgCardsPerOrder(plat));
     if (mode === "buyer") return Math.round(postageCents(plat) / avgCardsPerOrder(plat));
     return 0;
+  }
+
+  // ── eBay per-card helpers ─────────────────────────────────────────────────
+  function ebayCapturePct() {
+    return Math.min(100, Math.max(50, parseFloat(lsGet(LS.ebayCapturePct, "90")) || 90));
+  }
+  function ebayFixedShipCents() {
+    const el = document.getElementById("ebay-ship-fixed-val");
+    const v  = el ? parseFloat(el.value) : 1.50;
+    return isNaN(v) ? 150 : Math.round(v * 100);
+  }
+  function ebayIsFreeship(marketCents) {
+    return marketCents < 99; // < $0.99 market → free shipping
+  }
+  function ebayShipCents(marketCents) {
+    return ebayIsFreeship(marketCents) ? 0 : ebayFixedShipCents();
+  }
+
+  // ── Manapool per-card helpers ─────────────────────────────────────────────
+  function mpCapturePct() {
+    return Math.min(100, Math.max(50, parseFloat(lsGet(LS.mpCapturePct, "90")) || 90));
+  }
+  function mpFixedShipCents() {
+    const el = document.getElementById("mp-ship-fixed-val");
+    const v  = el ? parseFloat(el.value) : 1.30;
+    return isNaN(v) ? 130 : Math.round(v * 100);
+  }
+
+  // Ship cents per card for the active platform, per-card for eBay based on market price.
+  function platformShipCents(li) {
+    if (activePlat === "ebay")     return li.market_price_cents ? ebayShipCents(li.market_price_cents) : 0;
+    if (activePlat === "manapool") return mpFixedShipCents();
+    return buyerShipCentsPerCard(activePlat);
   }
 
   // Buyer's total cost per card = listing + ship charge.
@@ -452,11 +481,9 @@
         el.value = ((vals[key] != null ? vals[key] : def / 100)).toFixed(2);
       }
     }
-    // Load shipping mode
+    // Load shipping mode (TCGPlayer only — eBay/Manapool use fixed-rate inputs)
     const shipSaved = lsGetJSON(LS.pkgShipping, {});
-    setShipToggle("tcg-ship-toggle",      shipSaved.tcgplayer || "free");
-    setShipToggle("mp-ship-toggle",       shipSaved.manapool  || "free");
-    setShipToggle("ebay-pkg-ship-toggle", shipSaved.ebay      || "free");
+    setShipToggle("tcg-ship-toggle", shipSaved.tcgplayer || "free");
     // Load envelope toggle
     const envSaved = lsGetJSON(LS.pkgEnv, {});
     setEnvToggle("tcg-env-toggle", envSaved.tcgplayer || "no-window");
@@ -529,22 +556,12 @@
     const saved = lsGetJSON(LS.pkgShipFixed, {}); saved.tcgplayer = Math.round(parseFloat(this.value || "0") * 100);
     lsSetJSON(LS.pkgShipFixed, saved); renderDecks();
   });
-  document.querySelectorAll("#mp-ship-toggle .plat-btn").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const saved = lsGetJSON(LS.pkgShipping, {}); saved.manapool = btn.dataset.ship; lsSetJSON(LS.pkgShipping, saved);
-      setShipToggle("mp-ship-toggle", btn.dataset.ship);
-      updateSupplyTotal("manapool"); renderDecks();
-    });
+  // eBay and Manapool ship fixed-val inputs
+  document.getElementById("ebay-ship-fixed-val")?.addEventListener("input", () => {
+    updateSupplyTotal("ebay"); renderDecks();
   });
-  document.querySelectorAll("#ebay-pkg-ship-toggle .plat-btn").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const ship = btn.dataset.ship;
-      const saved = lsGetJSON(LS.pkgShipping, {}); saved.ebay = ship; lsSetJSON(LS.pkgShipping, saved);
-      setShipToggle("ebay-pkg-ship-toggle", ship);
-      // ESE and free ship both mean seller covers postage; buyer-pays hides the stamp
-      document.getElementById("ebay-postage-row")?.classList.toggle("hidden", ship === "buyer");
-      updateSupplyTotal("ebay"); renderDecks();
-    });
+  document.getElementById("mp-ship-fixed-val")?.addEventListener("input", () => {
+    updateSupplyTotal("manapool"); renderDecks();
   });
   document.querySelectorAll("#tcg-env-toggle .plat-btn").forEach(btn => {
     btn.addEventListener("click", () => {
@@ -627,35 +644,8 @@
   function tcgOffsetType()  { return document.getElementById("tcg-offset-type").value; }
   function tcgOffsetValue() { return parseFloat(document.getElementById("tcg-offset-value").value) || 0; }
 
-  function tcgPricingMode()   { return lsGet(LS.tcgPricingMode, "simple"); }
-  function tcgCapturePct()    { return Math.min(100, Math.max(50, parseFloat(lsGet(LS.tcgCapturePct, "90")) || 90)); }
-
-  function tcgBeatLowestListing(market, lowestLegit) {
-    // Ship charge = the Fixed Rate from Packaging & Fees (one source of truth)
-    const shipCharge = currentFixedShipCents("tcgplayer");
-    const floor      = parseInt(lsGet(LS.tcgBeatFloor, "35"), 10) || 0;
-    // If no Direct listing data, fall back to market price
-    const base = (lowestLegit > 0) ? lowestLegit - shipCharge : market;
-    return Math.max(base, floor);
-  }
-
-  function tcgTieredListing(market) {
-    const HIGH_THRESHOLD = 500; // $5
-    const highC  = parseInt(lsGet(LS.tcgTieredHighC,  "30"), 10)  || 0;
-    const lowC   = parseInt(lsGet(LS.tcgTieredLowC,   "15"), 10)  || 0;
-    const lowPct = parseInt(lsGet(LS.tcgTieredLowPct, "10"), 10)  || 0;
-    const floor  = parseInt(lsGet(LS.tcgTieredFloor,  "35"), 10)  || 0;
-
-    let listing;
-    if (market >= HIGH_THRESHOLD) {
-      listing = market + highC;
-    } else {
-      const pctAdd  = Math.round(market * lowPct / 100);
-      listing = market + Math.min(lowC, pctAdd);
-    }
-    if (floor > 0) listing = Math.max(listing, floor);
-    return listing;
-  }
+  function tcgPricingMode() { return lsGet(LS.tcgPricingMode, "simple"); }
+  function tcgCapturePct()  { return Math.min(100, Math.max(50, parseFloat(lsGet(LS.tcgCapturePct, "90")) || 90)); }
 
   function platformListingPrice(li) {
     if (!li.market_price_cents) return null;
@@ -665,13 +655,8 @@
       case "tcgplayer": {
         if (tcgPricingMode() === "capture-pct") {
           const capListing = tierListingCents(market, tcgCapturePct() / 100, "tcgplayer");
-          // If back-calculated listing exceeds 2× market, supplies dominate the card value —
-          // fall back to market price so the listing is realistic (net will be negative).
+          // Fall back to market when supplies dominate so the listing is realistic.
           listing = capListing > market * 2 ? market : capListing;
-        } else if (tcgPricingMode() === "tiered") {
-          listing = tcgTieredListing(market);
-        } else if (tcgPricingMode() === "beat-lowest") {
-          listing = tcgBeatLowestListing(market, li.price?.lowest_legit_cents || 0);
         } else {
           const ov = tcgOffsetValue();
           listing = tcgOffsetType() === "pct"
@@ -680,59 +665,55 @@
         }
         break;
       }
-      case "manapool": listing = market; break;
-      case "ebay":     listing = ebayListingPrice(market, ebayMode); break;
-      default:         listing = market;
+      case "manapool": {
+        const ship = mpFixedShipCents();
+        const capListing = tierListingCents(market, mpCapturePct() / 100, "manapool", ship);
+        listing = Math.max(capListing, 40);
+        break;
+      }
+      case "ebay": {
+        const ship = ebayShipCents(market);
+        const capListing = tierListingCents(market, ebayCapturePct() / 100, "ebay", ship);
+        // Free-ship cards must be ≥ $0.99 (eBay minimum); with-ship floor is $0.40
+        const floor = ebayIsFreeship(market) ? 99 : 40;
+        listing = Math.max(capListing, floor);
+        break;
+      }
+      default: listing = market;
     }
-    // Apply floors: min-list-$ is an absolute floor; target-net derives a per-platform floor.
-    // Both are MAX operations — they raise the price, never lower it.
-    const minList = minListCents();
-    if (minList > 0 && listing != null) listing = Math.max(listing, minList);
-    const targetFloor = requiredListingCents(activePlat);
-    if (targetFloor > 0 && listing != null) listing = Math.max(listing, targetFloor);
+    // Absolute and target-net floors (TCGPlayer only — raise price, never lower it)
+    if (activePlat === "tcgplayer") {
+      const minList = minListCents();
+      if (minList > 0 && listing != null) listing = Math.max(listing, minList);
+      const targetFloor = requiredListingCents(activePlat);
+      if (targetFloor > 0 && listing != null) listing = Math.max(listing, targetFloor);
+    }
     return listing;
   }
 
-  function platformNetBeforePkg(li) {
-    if (!li.market_price_cents) return null;
-    switch (activePlat) {
-      case "tcgplayer": {
-        const tcgNet = li.tcgplayer_net?.net_per_copy_cents;
-        if (tcgNet == null) return null;
-        const ov = tcgOffsetValue();
-        if (tcgOffsetType() === "pct") {
-          return Math.round(tcgNet * (1 + ov / 100));
-        } else {
-          const keepRate = tcgNet / li.market_price_cents;
-          return Math.round(tcgNet + Math.round(ov * 100) * keepRate);
-        }
-      }
-      case "manapool": return li.manapool_net_cents ?? null;
-      case "ebay":     return li.ebay_net_cents ?? null;
-      default:         return li.tcgplayer_net?.net_per_copy_cents ?? null;
-    }
-  }
-
-  function platformNet(li) {
+  // Revenue after marketplace fees, per card.
+  // Uses per-card ship for eBay/Manapool; uses global ship mode for TCGPlayer.
+  function platformRevenueCents(li) {
     const listing = platformListingPrice(li);
     if (listing == null) return null;
-    // revenue = (listing × keepRate) + (ship × shipKeepRate) − flat/card
-    // net     = revenue − physical supplies (stamp + packaging, no shipping revenue offset)
-    return revenueAfterFeesCents(listing, activePlat) - physicalSuppliesCents(activePlat);
+    const ship = platformShipCents(li);
+    return Math.round(listing * keepRate(activePlat))
+         + Math.round(ship * shipKeepRate(activePlat))
+         - perOrderFlatPerCard(activePlat);
   }
 
-  function siftThresholdCents() {
-    const v = parseFloat(document.getElementById("sift-threshold")?.value || "0.25");
-    return Math.round((isNaN(v) ? 25 : v) * 100);
+  // Net after fees and physical supplies.
+  function platformNet(li) {
+    const rev = platformRevenueCents(li);
+    if (rev == null) return null;
+    return rev - physicalSuppliesCents(activePlat);
   }
 
-  function ebayListingPrice(marketCents, mode) {
-    if (marketCents == null || marketCents < siftThresholdCents()) return null;
-    const ENVELOPE = 130;
-    if (mode === "freeship") return marketCents < 500 ? marketCents + ENVELOPE : marketCents;
-    if (marketCents < 100) return marketCents + ENVELOPE;
-    return marketCents;
+  // Net after fees, before supply deduction (for CSV export "net fees" column).
+  function platformNetBeforePkg(li) {
+    return platformRevenueCents(li);
   }
+
 
   function computeDeckNet(d) {
     let total = 0;
@@ -757,10 +738,11 @@
 
   // Listing price required to net exactly (market × captureRate) after all fees and supplies.
   // Formula: listing = ceil((market×rate + supplies + flat − ship×shipKeepRate) / keepRate)
-  function tierListingCents(market, captureRate, plat) {
-    const supplies = physicalSuppliesCents(plat);
-    const flat     = perOrderFlatPerCard(plat);
-    const ship     = buyerShipCentsPerCard(plat);
+  // shipOverride: explicit ship cents to use; falls back to buyerShipCentsPerCard when omitted.
+  function tierListingCents(market, captureRate, plat, shipOverride) {
+    const supplies  = physicalSuppliesCents(plat);
+    const flat      = perOrderFlatPerCard(plat);
+    const ship      = shipOverride != null ? shipOverride : buyerShipCentsPerCard(plat);
     const numerator = Math.round(market * captureRate) + supplies + flat - Math.round(ship * shipKeepRate(plat));
     return Math.ceil(numerator / keepRate(plat));
   }
@@ -774,9 +756,13 @@
         const pid = String(li.tcgplayer_product_id || "");
         if (userExcluded.get(pid)) continue;
         if (!li.market_price_cents) continue;
-        const tierListing = tierListingCents(li.market_price_cents, captureRate, activePlat);
+        const market = li.market_price_cents;
+        const ship   = (activePlat === "ebay") ? ebayShipCents(market)
+                     : (activePlat === "manapool") ? mpFixedShipCents()
+                     : buyerShipCentsPerCard(activePlat);
+        const tierListing = tierListingCents(market, captureRate, activePlat, ship);
         if (!userIncluded.get(pid) && autoFiltered(li, tierListing)) continue;
-        total += Math.round(li.market_price_cents * captureRate) * li.qty;
+        total += Math.round(market * captureRate) * li.qty;
       }
     }
     return total;
@@ -826,9 +812,12 @@
 
   function tierCell(li) {
     if (!li.market_price_cents) return `<td class="right tier-col muted">—</td>`;
-    const market = li.market_price_cents;
+    const market    = li.market_price_cents;
+    const shipCents = (activePlat === "ebay") ? ebayShipCents(market)
+                    : (activePlat === "manapool") ? mpFixedShipCents()
+                    : buyerShipCentsPerCard(activePlat);
     const parts  = CAPTURE_TIERS.map(r => {
-      const lc  = tierListingCents(market, r, activePlat);
+      const lc  = tierListingCents(market, r, activePlat, shipCents);
       const net = Math.round(market * r);
       return { r, lc, net };
     });
@@ -1090,29 +1079,25 @@
       const lowListedCell = `<td class="right" data-cents="${price.lowest_legit_cents ?? 0}" title="Lowest TCGPlayer Direct listing${price.lowest_legit_cents ? '' : ' — no data'}">${EV.fmtUSD(price.lowest_legit_cents)}</td>`;
 
       // Sale $ = listing + ship charge to buyer
-      const sale    = salePriceCents(listing, activePlat);
-      const revenue = revenueAfterFeesCents(listing, activePlat);
-      const shipAmt = buyerShipCentsPerCard(activePlat);
+      const shipAmt = platformShipCents(li);
+      const sale    = listing != null ? listing + shipAmt : null;
+      const revenue = platformRevenueCents(li);
 
-      // List $ tooltip: show derivation for beat-lowest and capture-pct modes
+      // List $ tooltip
       let listTip = "";
-      const tcgMode = activePlat === "tcgplayer" ? tcgPricingMode() : "";
-      if (tcgMode === "beat-lowest" && listing != null) {
-        const low  = price.lowest_legit_cents;
-        const ship = currentFixedShipCents("tcgplayer");
-        listTip = low
-          ? `title="Low Direct ${EV.fmtUSD(low)} − Ship ${EV.fmtUSD(ship)} = ${EV.fmtUSD(listing)}"`
-          : `title="No Direct data — using market price ${EV.fmtUSD(li.market_price_cents)}"`;
-      } else if (tcgMode === "capture-pct" && listing != null) {
-        const pct = tcgCapturePct();
-        listTip = `title="Capture ${pct}% of market ${EV.fmtUSD(li.market_price_cents)} after fees & supplies → list ${EV.fmtUSD(listing)}"`;
+      if (activePlat === "tcgplayer" && tcgPricingMode() === "capture-pct" && listing != null) {
+        listTip = `title="Capture ${tcgCapturePct()}% of market ${EV.fmtUSD(li.market_price_cents)} after fees & supplies → list ${EV.fmtUSD(listing)}"`;
+      } else if ((activePlat === "ebay" || activePlat === "manapool") && listing != null) {
+        const pct = activePlat === "ebay" ? ebayCapturePct() : mpCapturePct();
+        const freeship = activePlat === "ebay" && ebayIsFreeship(li.market_price_cents || 0);
+        listTip = `title="Capture ${pct}% of market ${EV.fmtUSD(li.market_price_cents)} after fees & supplies${freeship ? ' (free ship)' : ` + ship ${EV.fmtUSD(shipAmt)}`} → list ${EV.fmtUSD(listing)}"`;
       }
 
       const saleTip = shipAmt > 0
         ? `title="Buyer pays: List ${EV.fmtUSD(listing)} + Ship ${EV.fmtUSD(shipAmt)} = ${EV.fmtUSD(sale)}"`
-        : `title="Buyer pays list price only (no fixed shipping charge)"`;
+        : `title="Buyer pays list price only (free shipping)"`;
       const revTip = revenue != null
-        ? `title="Sale ${EV.fmtUSD(sale)} × ${(keepRate(activePlat)*100).toFixed(2)}% keep = ${EV.fmtUSD(revenue)}"`
+        ? `title="Revenue after ${(keepRate(activePlat)*100).toFixed(2)}% fees = ${EV.fmtUSD(revenue)}"`
         : "";
       const netTip = net != null
         ? `title="Revenue ${EV.fmtUSD(revenue)} − supplies ${EV.fmtUSD(physicalSuppliesCents(activePlat))} = ${EV.fmtUSD(net)}"`
@@ -1145,20 +1130,16 @@
     const avgCards = avgCardsPerOrder(activePlat);
     const platFeeNote = {
       tcgplayer: `10.75% on item + 2.5% on item+ship + $0.30/order (÷${avgCards} cards) = 13.25% on item, 2.5% on ship, $${(0.30/avgCards).toFixed(2)} flat/card`,
-      manapool:  "8% seller fee, minus packaging costs",
-      ebay:      `13.25% FVF + $0.30/order (÷${avgCards} cards)`,
+      manapool:  `8% seller fee on item+ship, $${(mpFixedShipCents()/100).toFixed(2)} fixed ship charged to buyer`,
+      ebay:      `15.25% on item+ship (13.25% FVF + 2% promo) + $0.30/order flat. Cards ≥ $0.99: buyer pays $${(ebayFixedShipCents()/100).toFixed(2)} ship. Below $0.99: free ship.`,
     }[activePlat] || "";
-    const tnActive  = targetNetCents() > 0;
-    const isBeatLow = activePlat === "tcgplayer" && tcgPricingMode() === "beat-lowest";
-    const shipAmt   = buyerShipCentsPerCard(activePlat);
+    const tnActive  = targetNetCents() > 0 && activePlat === "tcgplayer";
     const listingTh = `<th class="right" title="${
-      isBeatLow
-        ? `Beat Lowest: Low Direct − Ship rate (${EV.fmtUSD(currentFixedShipCents('tcgplayer'))}) = your list price. Hover a cell to see the exact derivation. Falls back to market price if no Direct data.`
-        : tnActive
-          ? `Target-net floor active — bumped up where needed to hit your target net after fees &amp; packaging.`
-          : `Your listing price. Set via Market ± offset above.`
+      tnActive
+        ? `Target-net floor active — bumped up where needed to hit your target net after fees &amp; packaging.`
+        : `Your listing price. Calculated to hit your capture % target after fees and supplies.`
     }">List $</th>`;
-    const saleTh    = `<th class="right muted" title="Total buyer cost = List + ${shipAmt > 0 ? `Ship (${EV.fmtUSD(shipAmt)})` : `no fixed ship charge`}. Hover a cell for the breakdown.">Sale $</th>`;
+    const saleTh    = `<th class="right muted" title="Total buyer cost = List + Ship (varies per card for eBay). Hover a cell for the breakdown.">Sale $</th>`;
     const revTh     = `<th class="right muted" title="Revenue after ${(keepRate(activePlat)*100).toFixed(2)}% marketplace fees. Sale price × keep rate. Hover a cell to verify.">Revenue</th>`;
 
     return `
