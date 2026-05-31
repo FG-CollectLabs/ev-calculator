@@ -1606,8 +1606,9 @@
     document.getElementById("deck-select-modal").classList.add("hidden");
   });
 
-  document.getElementById("export-tcg-csv-btn")?.addEventListener("click", buildTCGPlayerCSV);
-  document.getElementById("export-mp-csv-btn")?.addEventListener("click", buildManapoolCSV);
+  // TCGPlayer + Manapool CSV exports moved to Box Break App — disabled here.
+  // document.getElementById("export-tcg-csv-btn")?.addEventListener("click", buildTCGPlayerCSV);
+  // document.getElementById("export-mp-csv-btn")?.addEventListener("click", buildManapoolCSV);
   document.getElementById("export-price-list-btn")?.addEventListener("click", buildPriceListCSV);
 
   function escHtml(s) {
