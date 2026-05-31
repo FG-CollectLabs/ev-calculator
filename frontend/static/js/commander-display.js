@@ -1436,12 +1436,14 @@
         if (!userIncluded.get(pid) && autoFiltered(li, listing)) continue;
         if (listing == null) continue;
 
+        // Prefer SKU ID (encodes condition+printing) over product ID for mass-pricing import
+        const tcgId     = li.tcgplayer_sku_id ? String(li.tcgplayer_sku_id) : pid;
         const sf        = scryfallCache.get(li.display_key) || {};
         const market    = li.market_price_cents ? (li.market_price_cents / 100).toFixed(2) : "";
         const directLow = li.price?.lowest_legit_cents ? (li.price.lowest_legit_cents / 100).toFixed(2) : "";
 
         rows.push([
-          pid,
+          tcgId,
           "Magic",
           sf.set_name || "",
           li.name || li.display_key,
@@ -1453,8 +1455,8 @@
           directLow,
           "", // TCG Low Price With Shipping — not in our data
           "", // TCG Low Price — not in our data
-          0,  // Total Quantity (0 = adding new cards)
-          li.qty,
+          li.qty, // Total Quantity
+          0,      // Add to Quantity
           (listing / 100).toFixed(2),
           "", // Photo URL
         ]);
