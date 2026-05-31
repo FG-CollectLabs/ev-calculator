@@ -234,9 +234,9 @@
   document.getElementById("case-cost").addEventListener("input", renderDecks);
 
   function updateStrategyPanel() {
-    document.getElementById("strategy-tcgplayer").classList.toggle("hidden", activePlat !== "tcgplayer");
-    document.getElementById("strategy-ebay").classList.toggle("hidden",      activePlat !== "ebay");
-    document.getElementById("strategy-manapool").classList.toggle("hidden",  activePlat !== "manapool");
+    document.getElementById("strategy-tcgplayer")?.classList.toggle("hidden", activePlat !== "tcgplayer");
+    document.getElementById("strategy-ebay")?.classList.toggle("hidden",      activePlat !== "ebay");
+    document.getElementById("strategy-manapool")?.classList.toggle("hidden",  activePlat !== "manapool");
   }
 
   applySavedSettings();
