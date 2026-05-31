@@ -1286,6 +1286,18 @@
 
   // ── Export helpers ────────────────────────────────────────────────────────
 
+  // TCGPlayer single-letter rarity codes (basic lands → "L").
+  function tcgRarityCode(rarity, typeLine) {
+    if ((typeLine || "").toLowerCase().includes("basic land")) return "L";
+    return { mythic: "M", rare: "R", uncommon: "U", common: "C" }[rarity] || "";
+  }
+
+  // "Near Mint" vs "Near Mint Foil" based on display_key finish suffix.
+  function tcgCondition(displayKey) {
+    const finish = (displayKey || "").split("-").pop();
+    return (finish === "f" || finish === "e") ? "Near Mint Foil" : "Near Mint";
+  }
+
   function buildExportCSV(deckKeys) {
     const decksToExport = (report.decks || []).filter(d => deckKeys.includes(d.deck_key));
     const platLabel = { tcgplayer:"TCGPlayer", manapool:"Manapool", ebay:"eBay" }[activePlat] || activePlat;
@@ -1395,10 +1407,15 @@
     downloadText(csv, `${report.key || "case"}_price-list_${today}.csv`, "text/csv");
   }
 
-  // TCGPlayer bulk-listing CSV: TCGplayer Id, Condition, Add to Quantity, TCG Marketplace Price
+  // TCGPlayer bulk-listing CSV: full 16-column format matching TCGPlayer's own inventory export.
   function buildTCGPlayerCSV() {
-    const header = ["TCGplayer Id","Condition","Add to Quantity","TCG Marketplace Price"];
-    const rows   = [header];
+    const header = [
+      "TCGplayer Id","Product Line","Set Name","Product Name","Title","Number",
+      "Rarity","Condition","TCG Market Price","TCG Direct Low",
+      "TCG Low Price With Shipping","TCG Low Price","Total Quantity",
+      "Add to Quantity","TCG Marketplace Price","Photo URL",
+    ];
+    const rows = [header];
 
     for (const d of report.decks || []) {
       for (const li of d.line_items || []) {
@@ -1408,29 +1425,48 @@
         const listing = platformListingPrice(li);
         if (!userIncluded.get(pid) && autoFiltered(li, listing)) continue;
         if (listing == null) continue;
+
+        const sf        = scryfallCache.get(li.display_key) || {};
+        const market    = li.market_price_cents ? (li.market_price_cents / 100).toFixed(2) : "";
+        const directLow = li.price?.lowest_legit_cents ? (li.price.lowest_legit_cents / 100).toFixed(2) : "";
+
         rows.push([
           pid,
-          "Near Mint",
+          "Magic",
+          sf.set_name || "",
+          li.name || li.display_key,
+          "",
+          sf.collector_number || "",
+          tcgRarityCode(sf.rarity, sf.type_line),
+          tcgCondition(li.display_key),
+          market,
+          directLow,
+          "", // TCG Low Price With Shipping — not in our data
+          "", // TCG Low Price — not in our data
+          0,  // Total Quantity (0 = adding new cards)
           li.qty,
           (listing / 100).toFixed(2),
+          "", // Photo URL
         ]);
       }
     }
 
     const csv = rows.map(r => r.map(v => `"${String(v).replace(/"/g, '""')}"`).join(",")).join("\r\n");
     const today = new Date().toISOString().slice(0, 10);
-    const filename = `${report.key || "case"}_cards_${today}.csv`;
-    downloadText(csv, filename, "text/csv");
+    downloadText(csv, `${report.key || "case"}_cards_${today}.csv`, "text/csv");
   }
 
-  // Manapool listing CSV: all four capture tiers as separate price columns.
+  // Manapool listing CSV: metadata columns matching TCGPlayer layout + all four capture tier prices.
   function buildManapoolCSV() {
     const mpTiers = [0.95, 0.90, 0.85, 0.80];
     const ship    = mpFixedShipCents();
     const today   = new Date().toISOString().slice(0, 10);
-    const header  = ["Card Name", "TCGplayer Id", "Condition", "Qty", "Market ($)",
-      ...mpTiers.map(r => `${Math.round(r*100)}% List`),
-      `Ship ($${(ship/100).toFixed(2)})`];
+    const header  = [
+      "TCGplayer Id","Product Line","Set Name","Product Name","Number","Rarity","Condition",
+      "TCG Market Price","Total Quantity","Add to Quantity",
+      ...mpTiers.map(r => `MP ${Math.round(r*100)}% List`),
+      `MP Ship ($${(ship/100).toFixed(2)})`,
+    ];
     const rows = [header];
 
     for (const d of report.decks || []) {
@@ -1439,13 +1475,23 @@
         if (!pid || !li.market_price_cents) continue;
         if (userExcluded.get(pid)) continue;
         const market = li.market_price_cents;
-        // Use 90% listing as the canonical listing for filter check
         const refListing = Math.max(tierListingCents(market, 0.90, "manapool", ship), 40);
         if (!userIncluded.get(pid) && autoFiltered(li, refListing)) continue;
+
+        const sf         = scryfallCache.get(li.display_key) || {};
         const tierPrices = mpTiers.map(r => (Math.max(tierListingCents(market, r, "manapool", ship), 40) / 100).toFixed(2));
+
         rows.push([
-          li.name || li.display_key, pid, "Near Mint", li.qty,
+          pid,
+          "Magic",
+          sf.set_name || "",
+          li.name || li.display_key,
+          sf.collector_number || "",
+          tcgRarityCode(sf.rarity, sf.type_line),
+          tcgCondition(li.display_key),
           (market / 100).toFixed(2),
+          0,
+          li.qty,
           ...tierPrices,
           (ship / 100).toFixed(2),
         ]);
