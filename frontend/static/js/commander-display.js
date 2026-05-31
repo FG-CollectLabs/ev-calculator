@@ -225,10 +225,6 @@
     });
   });
 
-  // Sift threshold
-  document.getElementById("sift-threshold").addEventListener("input", function() {
-    lsSet(LS.sift, this.value);
-  });
 
   // Case cost
   document.getElementById("case-cost").addEventListener("input", renderDecks);
