@@ -14,6 +14,15 @@ import (
 	"gopkg.in/yaml.v3"
 )
 
+// DeckValidation records when a deck's data was confirmed correct end-to-end.
+// All date fields use YYYY-MM-DD strings. Nil means not yet validated.
+type DeckValidation struct {
+	EVCalcVerified       string `yaml:"ev_calc_verified,omitempty"       json:"ev_calc_verified,omitempty"`
+	TCGPlayerCSVVerified string `yaml:"tcgplayer_csv_verified,omitempty" json:"tcgplayer_csv_verified,omitempty"`
+	ManapoolCSVVerified  string `yaml:"manapool_csv_verified,omitempty"  json:"manapool_csv_verified,omitempty"`
+	Notes                string `yaml:"notes,omitempty"                  json:"notes,omitempty"`
+}
+
 // Deck is a fixed-contents product. ProductDisplayKey is the
 // market-tracker display_key of the sealed product itself (so we can
 // price the box). Components is what's inside.
@@ -31,8 +40,9 @@ type Deck struct {
 	// DeckPriceCents is a manual fallback for the sealed deck market price when
 	// market-tracker has no data for this product. Set to the known TCGPlayer
 	// market price in cents (e.g. 2500 = $25.00).
-	DeckPriceCents *int32      `yaml:"deck_price_cents,omitempty"`
-	Components     []Component `yaml:"components"`
+	DeckPriceCents *int32          `yaml:"deck_price_cents,omitempty"`
+	Validation     *DeckValidation `yaml:"validation,omitempty"`
+	Components     []Component     `yaml:"components"`
 }
 
 // Component is a card line in a deck. DisplayKey points at a card row

@@ -7,41 +7,48 @@ product_display_key: mtg-tmc-commander-turtle-power
 product_tcgplayer_id: "657865"
 image: /img/decks/tmc-commander-turtle-power.jpg
 channels: [tcgplayer, manapool]
+validation:
+  ev_calc_verified: "2026-05-31"
+  tcgplayer_csv_verified: "2026-05-31"
+  notes: "88 non-basic cards import cleanly. Foil names include (000X) (Borderless). All SKU IDs verified vs TEV reference export."
 components:
   # Generated from turtle-power-_cards_2026-05-22.csv by scripts/import-deck-csv.js
   # ── Foil — TMC ─────────────────────────────────────────────
   # Names must match TCGPlayer exactly (validated on CSV import)
-  - display_key: mtg-tmc-1-f
+  # display_key uses -nf because the market tracker DB maps product IDs 657747-657766 to mtg-tmc-X-nf entries.
+  # The foil SKU IDs (895xxxx) were incorrectly stored as product IDs in card_external_ids, causing stale prices.
+  # Using -nf gets fresh weekly prices; finish:f is still correct for TCGPlayer listing CSV condition.
+  - display_key: mtg-tmc-1-nf
     qty: 1
     name: "Leonardo, the Balance (0001) (Borderless)"
     tcgplayer_product_id: "657747"
     tcgplayer_sku_id: "8957800"
     finish: f
-  - display_key: mtg-tmc-2-f
+  - display_key: mtg-tmc-2-nf
     qty: 1
     name: "Donatello, the Brains (0002) (Borderless)"
     tcgplayer_product_id: "657752"
     tcgplayer_sku_id: "8957995"
     finish: f
-  - display_key: mtg-tmc-3-f
+  - display_key: mtg-tmc-3-nf
     qty: 1
     name: "Splinter, the Mentor (0003) (Borderless)"
     tcgplayer_product_id: "657756"
     tcgplayer_sku_id: "8958135"
     finish: f
-  - display_key: mtg-tmc-4-f
+  - display_key: mtg-tmc-4-nf
     qty: 1
     name: "Raphael, the Muscle (0004) (Borderless)"
     tcgplayer_product_id: "657760"
     tcgplayer_sku_id: "8958300"
     finish: f
-  - display_key: mtg-tmc-5-f
+  - display_key: mtg-tmc-5-nf
     qty: 1
     name: "Michelangelo, the Heart (0005) (Borderless)"
     tcgplayer_product_id: "657762"
     tcgplayer_sku_id: "8958370"
     finish: f
-  - display_key: mtg-tmc-6-f
+  - display_key: mtg-tmc-6-nf
     qty: 1
     name: "Heroes in a Half Shell (0006) (Borderless)"
     tcgplayer_product_id: "657766"

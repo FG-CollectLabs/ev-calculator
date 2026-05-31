@@ -147,11 +147,12 @@ func main() {
 			return
 		}
 		type deckEntry struct {
-			Key               string `json:"key"`
-			Name              string `json:"name"`
-			Game              string `json:"game"`
-			SetCode           string `json:"set_code"`
-			ProductDisplayKey string `json:"product_display_key"`
+			Key               string                  `json:"key"`
+			Name              string                  `json:"name"`
+			Game              string                  `json:"game"`
+			SetCode           string                  `json:"set_code"`
+			ProductDisplayKey string                  `json:"product_display_key"`
+			Validation        *decks.DeckValidation   `json:"validation,omitempty"`
 		}
 		entries := make([]deckEntry, 0, len(deckMap))
 		for _, d := range deckMap {
@@ -161,6 +162,7 @@ func main() {
 				Game:              d.Game,
 				SetCode:           d.SetCode,
 				ProductDisplayKey: d.ProductDisplayKey,
+				Validation:        d.Validation,
 			})
 		}
 		sort.Slice(entries, func(i, j int) bool { return entries[i].Key < entries[j].Key })
@@ -200,15 +202,16 @@ func main() {
 			Finish             string `json:"finish,omitempty"`
 		}
 		type deckResp struct {
-			Key               string      `json:"key"`
-			Name              string      `json:"name"`
-			Game              string      `json:"game"`
-			SetCode           string      `json:"set_code"`
-			TCGSetName        string      `json:"tcg_set_name,omitempty"`
-			ProductDisplayKey string      `json:"product_display_key"`
-			ProductTCGPlayerID string     `json:"product_tcgplayer_id,omitempty"`
-			Image             string      `json:"image,omitempty"`
-			Components        []compResp  `json:"components"`
+			Key                string                `json:"key"`
+			Name               string                `json:"name"`
+			Game               string                `json:"game"`
+			SetCode            string                `json:"set_code"`
+			TCGSetName         string                `json:"tcg_set_name,omitempty"`
+			ProductDisplayKey  string                `json:"product_display_key"`
+			ProductTCGPlayerID string                `json:"product_tcgplayer_id,omitempty"`
+			Image              string                `json:"image,omitempty"`
+			Validation         *decks.DeckValidation `json:"validation,omitempty"`
+			Components         []compResp            `json:"components"`
 		}
 		comps := make([]compResp, len(dk.Components))
 		for i, c := range dk.Components {
