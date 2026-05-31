@@ -63,6 +63,7 @@ type Component struct {
 	TCGPlayerProductID string `yaml:"tcgplayer_product_id,omitempty"`
 	TCGPlayerSKUID     string `yaml:"tcgplayer_sku_id,omitempty"`
 	Finish             string `yaml:"finish,omitempty"`             // "nf"|"f"|"e", used by TCGCSV pricer
+	Rarity             string `yaml:"rarity,omitempty"`             // "m"|"r"|"u"|"c" (mythic/rare/uncommon/common)
 	Note               string `yaml:"note,omitempty"`
 	ReplaceWith        string `yaml:"replace_with,omitempty"`
 	LowValueExempt     bool   `yaml:"low_value_exempt,omitempty"`

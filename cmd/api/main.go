@@ -200,6 +200,7 @@ func main() {
 			TCGPlayerProductID string `json:"tcgplayer_product_id,omitempty"`
 			TCGPlayerSKUID     string `json:"tcgplayer_sku_id,omitempty"`
 			Finish             string `json:"finish,omitempty"`
+			Rarity             string `json:"rarity,omitempty"`
 		}
 		type deckResp struct {
 			Key                string                `json:"key"`
@@ -222,6 +223,7 @@ func main() {
 				TCGPlayerProductID: c.TCGPlayerProductID,
 				TCGPlayerSKUID:     c.TCGPlayerSKUID,
 				Finish:             c.Finish,
+				Rarity:             c.Rarity,
 			}
 		}
 		writeJSON(w, deckResp{
