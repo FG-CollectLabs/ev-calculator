@@ -85,6 +85,7 @@
         <span class="muted" style="font-size:0.8rem">% of market</span>
       </div>
       <div class="platform-toggle" id="mp-capture-preset">
+        <button class="plat-btn" data-pct="95">95%</button>
         <button class="plat-btn" data-pct="90">90%</button>
         <button class="plat-btn" data-pct="85">85%</button>
         <button class="plat-btn" data-pct="80">80%</button>
@@ -261,8 +262,9 @@
   <span class="export-label">Export / Print:</span>
   <button class="export-btn" id="export-case-btn">↓ Full Case CSV</button>
   <button class="export-btn" id="export-deck-select-btn">↓ Select Decks…</button>
-  <button class="export-btn tcg-csv-btn" id="export-tcg-csv-btn" title="Export TCGPlayer bulk-listing CSV (TCGplayer Id, Condition, Qty, Price). Applies active filters.">↓ TCGPlayer CSV</button>
-  <button class="export-btn" id="export-price-list-btn" title="Export listing prices for every card that has a computed price — no qty, no filters. Use this to feed prices into the Box Break App.">↓ Price List</button>
+  <button class="export-btn tcg-csv-btn" id="export-tcg-csv-btn" title="Export for TCGPlayer's bulk CSV importer: Seller Hub → Inventory → Import. Applies active filters and EV exclusions.">↓ TCGPlayer CSV</button>
+  <button class="export-btn" id="export-mp-csv-btn" title="Export Manapool listing CSV. Includes all four capture tiers (95/90/85/80%) as price columns — pick the one you want when listing.">↓ Manapool CSV</button>
+<button class="export-btn" id="export-price-list-btn" title="Export listing prices for every card that has a computed price — no qty, no filters. Import into the Box Break App or Card Inventory app to pre-fill card prices when scanning your pulls.">↓ Price List</button>
   <button class="export-btn print-btn" id="print-pricing-btn">⎙ Print Pricing</button>
 </div>
 <div id="deck-select-modal" class="modal hidden">

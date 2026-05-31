@@ -729,8 +729,10 @@
     return (report.decks || []).reduce((s, d) => s + computeDeckNet(d), 0);
   }
 
-  // Configurable capture tiers (% of market value as net profit target).
-  const CAPTURE_TIERS = [0.90, 0.85, 0.80];
+  // Capture tiers per platform (% of market value as net profit target).
+  function captureTiers() {
+    return activePlat === "manapool" ? [0.95, 0.90, 0.85, 0.80] : [0.90, 0.85, 0.80];
+  }
 
   // Listing price required to net exactly (market × captureRate) after all fees and supplies.
   // Formula: listing = ceil((market×rate + supplies + flat − ship×shipKeepRate) / keepRate)
@@ -812,7 +814,7 @@
     const shipCents = (activePlat === "ebay") ? ebayShipCents(market)
                     : (activePlat === "manapool") ? mpFixedShipCents()
                     : buyerShipCentsPerCard(activePlat);
-    const parts  = CAPTURE_TIERS.map(r => {
+    const parts  = captureTiers().map(r => {
       const lc  = tierListingCents(market, r, activePlat, shipCents);
       const net = Math.round(market * r);
       return { r, lc, net };
@@ -886,7 +888,8 @@
 
   function renderDecks() {
     const singlesNet   = totalSinglesNet();
-    const [net90, net85, net80] = CAPTURE_TIERS.map(r => computeTierCaseNet(r));
+    const tiers    = captureTiers();
+    const tierNets = tiers.map(r => computeTierCaseNet(r));
     const caseCost     = caseCostCents() || report.case_cost_cents || 0;
     const decksBuyCost = report.sealed_decks_gross_cents || 0;
     const sealedNet    = report.sealed_decks_net_cents   || 0;
@@ -913,8 +916,8 @@
            <value>${EV.fmtUSD(sealedNet || null)}</value>
          </div>`;
 
-    const tierRows = CAPTURE_TIERS.map((r, i) => {
-      const nets   = [net90, net85, net80][i];
+    const tierRows = tiers.map((r, i) => {
+      const nets   = tierNets[i];
       const delta  = caseCost ? nets - caseCost : null;
       const cls    = EV.deltaClass(delta);
       const pct    = caseCost ? ` (${EV.fmtPct(delta / caseCost)})` : "";
@@ -1157,7 +1160,7 @@
               ${revTh}
               <th class="right" data-sort="num" title="Net profit per card = Revenue − physical supplies (${EV.fmtUSD(physicalSuppliesCents(activePlat))}/card). ${platFeeNote}. Hover a cell to verify.">${platLabel}</th>
               <th class="right" data-sort="num" title="Net profit × qty = total profit contribution of this card across all copies in the case">Case Total</th>
-              <th class="right tier-col" title="Listing price required to capture 90% / 85% / 80% of market value as net profit after all fees and supplies. Hover a cell for the breakdown. Future: velocity estimate per tier.">Tiers 90/85/80</th>
+              <th class="right tier-col" title="Listing price required to capture ${captureTiers().map(r=>Math.round(r*100)).join(' / ')}% of market value as net profit after all fees and supplies. Hover a cell for the breakdown.">Tiers ${captureTiers().map(r=>Math.round(r*100)).join('/')}</th>
               <th class="right st-col" data-sort="num" title="Active listings currently on TCGPlayer for this card. Lower = less competition.">Listed</th>
               <th class="right st-col" data-sort="num" title="Sales per day (units sold last 7 days ÷ 7). ↺ = re-list rate per day (new supply coming back to market). Net drain = sold − relisted.">Vel/d</th>
               <th class="right st-col" title="Recommended listing price based on sell-through velocity: the cheapest price tier where your copy sells within ~3 weeks. Badge shows tier. ROI shown vs case cost/card.">Rec Price</th>
@@ -1331,10 +1334,11 @@
     downloadText(csv, filename, "text/csv");
   }
 
-  // Price list CSV: all cards with a computed price, no qty/filter logic.
-  // Intended to feed listing prices into the Box Break App.
+  // Price list CSV: all three platforms side-by-side, no qty/filter logic.
+  // Intended to feed listing prices into the Box Break App / Card Inventory app.
   function buildPriceListCSV() {
-    const header = ["TCGplayer Id","Card Name","Listing Price"];
+    const ebayShipFixed = ebayFixedShipCents();
+    const header = ["TCGplayer Id","Card Name","Market ($)","TCGPlayer List","Manapool List","eBay Item Price","eBay Shipping"];
     const rows   = [];
     const seen   = new Set();
 
@@ -1343,15 +1347,52 @@
         const pid = String(li.tcgplayer_product_id || "");
         if (!pid || seen.has(pid)) continue;
         seen.add(pid);
-        const listing = platformListingPrice(li);
-        if (listing == null) continue;
-        rows.push([pid, li.name || li.display_key, (listing / 100).toFixed(2)]);
+        if (!li.market_price_cents) continue;
+        const market = li.market_price_cents;
+
+        // TCGPlayer — mirrors platformListingPrice tcgplayer branch
+        let tcgListing;
+        if (tcgPricingMode() === "capture-pct") {
+          const cap = tierListingCents(market, tcgCapturePct() / 100, "tcgplayer");
+          tcgListing = cap > market * 2 ? market : cap;
+          const minList = minListCents();
+          if (minList > 0) tcgListing = Math.max(tcgListing, minList);
+          const targetFloor = requiredListingCents("tcgplayer");
+          if (targetFloor > 0) tcgListing = Math.max(tcgListing, targetFloor);
+        } else {
+          const ov = tcgOffsetValue();
+          tcgListing = tcgOffsetType() === "pct"
+            ? Math.round(market * (1 + ov / 100))
+            : market + Math.round(ov * 100);
+        }
+
+        // Manapool
+        const mpShip    = mpFixedShipCents();
+        const mpListing = Math.max(tierListingCents(market, mpCapturePct() / 100, "manapool", mpShip), 40);
+
+        // eBay — free-ship below $0.99, separate ship at or above
+        const freeship    = ebayIsFreeship(market);
+        const ebayShip    = freeship ? 0 : ebayShipFixed;
+        const rawEbay     = tierListingCents(market, ebayCapturePct() / 100, "ebay", ebayShip);
+        const ebayListing = Math.max(rawEbay, freeship ? 99 : 40);
+        const ebayShipLabel = freeship ? "Free" : `$${(ebayShipFixed / 100).toFixed(2)}`;
+
+        rows.push([
+          pid,
+          li.name || li.display_key,
+          (market      / 100).toFixed(2),
+          (tcgListing  / 100).toFixed(2),
+          (mpListing   / 100).toFixed(2),
+          (ebayListing / 100).toFixed(2),
+          ebayShipLabel,
+        ]);
       }
     }
 
     rows.sort((a, b) => a[1].localeCompare(b[1]));
-    const csv = [header, ...rows].map(r => r.map(v => `"${String(v).replace(/"/g, '""')}"`).join(",")).join("\r\n");
-    downloadText(csv, `price-list-${report.key || "case"}.csv`, "text/csv");
+    const csv  = [header, ...rows].map(r => r.map(v => `"${String(v).replace(/"/g, '""')}"`).join(",")).join("\r\n");
+    const today = new Date().toISOString().slice(0, 10);
+    downloadText(csv, `${report.key || "case"}_price-list_${today}.csv`, "text/csv");
   }
 
   // TCGPlayer bulk-listing CSV: TCGplayer Id, Condition, Add to Quantity, TCG Marketplace Price
@@ -1377,8 +1418,42 @@
     }
 
     const csv = rows.map(r => r.map(v => `"${String(v).replace(/"/g, '""')}"`).join(",")).join("\r\n");
-    const filename = `tcgplayer-listing-${report.key || "case"}.csv`;
+    const today = new Date().toISOString().slice(0, 10);
+    const filename = `${report.key || "case"}_cards_${today}.csv`;
     downloadText(csv, filename, "text/csv");
+  }
+
+  // Manapool listing CSV: all four capture tiers as separate price columns.
+  function buildManapoolCSV() {
+    const mpTiers = [0.95, 0.90, 0.85, 0.80];
+    const ship    = mpFixedShipCents();
+    const today   = new Date().toISOString().slice(0, 10);
+    const header  = ["Card Name", "TCGplayer Id", "Condition", "Qty", "Market ($)",
+      ...mpTiers.map(r => `${Math.round(r*100)}% List`),
+      `Ship ($${(ship/100).toFixed(2)})`];
+    const rows = [header];
+
+    for (const d of report.decks || []) {
+      for (const li of d.line_items || []) {
+        const pid = String(li.tcgplayer_product_id || "");
+        if (!pid || !li.market_price_cents) continue;
+        if (userExcluded.get(pid)) continue;
+        const market = li.market_price_cents;
+        // Use 90% listing as the canonical listing for filter check
+        const refListing = Math.max(tierListingCents(market, 0.90, "manapool", ship), 40);
+        if (!userIncluded.get(pid) && autoFiltered(li, refListing)) continue;
+        const tierPrices = mpTiers.map(r => (Math.max(tierListingCents(market, r, "manapool", ship), 40) / 100).toFixed(2));
+        rows.push([
+          li.name || li.display_key, pid, "Near Mint", li.qty,
+          (market / 100).toFixed(2),
+          ...tierPrices,
+          (ship / 100).toFixed(2),
+        ]);
+      }
+    }
+
+    const csv = rows.map(r => r.map(v => `"${String(v).replace(/"/g, '""')}"`).join(",")).join("\r\n");
+    downloadText(csv, `${report.key || "case"}_manapool_${today}.csv`, "text/csv");
   }
 
   function downloadText(content, filename, mime) {
@@ -1474,6 +1549,7 @@
   });
 
   document.getElementById("export-tcg-csv-btn")?.addEventListener("click", buildTCGPlayerCSV);
+  document.getElementById("export-mp-csv-btn")?.addEventListener("click", buildManapoolCSV);
   document.getElementById("export-price-list-btn")?.addEventListener("click", buildPriceListCSV);
 
   function escHtml(s) {
