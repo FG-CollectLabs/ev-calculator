@@ -138,6 +138,64 @@ func main() {
 		buildReport(w, r, r.PathValue("key"))
 	}))
 
+	// Individual deck EV — no auth. Builds a synthetic single-deck display report so
+	// callers can price a standalone deck purchase (not a full case).
+	// Used by card-inventory-frontend receipt review EV column.
+	mux.HandleFunc("GET /v1/ev/decks/{key}", func(w http.ResponseWriter, r *http.Request) {
+		key := r.PathValue("key")
+		deckMap, err := decks.LoadAllDecks(dataDir)
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+			return
+		}
+		dk, ok := deckMap[key]
+		if !ok {
+			for _, d := range deckMap {
+				if d.ProductDisplayKey == key {
+					dk = d
+					ok = true
+					break
+				}
+			}
+		}
+		if !ok {
+			http.Error(w, "not found", http.StatusNotFound)
+			return
+		}
+		synthetic := decks.Display{
+			Key:               dk.Key,
+			Name:              dk.Name,
+			SetCode:           dk.SetCode,
+			ProductDisplayKey: dk.ProductDisplayKey,
+			Decks:             []decks.DeckCopies{{DeckKey: dk.Key, Copies: 1}},
+		}
+		var pricer pricing.Pricer
+		switch cfg.PriceSource {
+		case "tcgcsv":
+			pricer = pricing.NewTCGCSV()
+		default:
+			mt := pricing.NewMarketTracker(cfg.MarketTrackerBaseURL, cfg.MarketTrackerToken, "tcgplayer")
+			pricer = &pricing.FallbackPricer{Primary: mt, Fallback: pricing.NewTCGCSV()}
+		}
+		b := &ev.Builder{
+			Pricer: pricer,
+			Decks:  deckMap,
+			Opts: ev.Options{
+				LowValueFloorCents:    cfg.LowValueFloorCents,
+				TargetSellthroughDays: cfg.TargetSellthroughDays,
+				FeeProfile:            cfg.FeeProfile,
+				PriceSource:           "tcgplayer",
+				PriceColumn:           cfg.PriceColumn,
+			},
+		}
+		rep, err := b.BuildDisplay(r.Context(), synthetic)
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusBadGateway)
+			return
+		}
+		writeJSON(w, rep)
+	})
+
 	// Deck catalog listing — no auth, returns all known individual deck keys + names.
 	// Used by card-inventory-backend to resolve sealed products from receipts.
 	mux.HandleFunc("GET /v1/decks", func(w http.ResponseWriter, r *http.Request) {
