@@ -9,450 +9,541 @@ product_tcgplayer_id: "604259"
 product_manapool_slug: "drc/deck-eternal-might"
 image: /img/decks/aetherdrift-commander-eternal-might.jpg
 channels: [tcgplayer, ebay, manapool]
+validation:
+  tcgplayer_csv_verified: "2026-05-31"
 components:
   - display_key: mtg-drc-4-f
     qty: 1
     name: "Temmet, Naktamun's Will"
     tcgplayer_product_id: "614354"
+    tcgplayer_sku_id: "8525279"
     finish: f
     note: commander
   - display_key: mtg-drc-1-f
     qty: 1
     name: "Hashaton, Scarab's Fist"
     tcgplayer_product_id: "614335"
+    tcgplayer_sku_id: "8524719"
     finish: f
   - display_key: mtg-drc-5-nf
     qty: 1
     name: On Wings of Gold
     tcgplayer_product_id: "615115"
+    tcgplayer_sku_id: "8535352"
     finish: nf
   - display_key: mtg-drc-6-nf
     qty: 1
     name: Priest of the Crossing
     tcgplayer_product_id: "615069"
+    tcgplayer_sku_id: "8533942"
     finish: nf
   - display_key: mtg-drc-7-nf
     qty: 1
     name: Renewed Solidarity
     tcgplayer_product_id: "615058"
+    tcgplayer_sku_id: "8533612"
     finish: nf
   - display_key: mtg-drc-8-nf
     qty: 1
     name: Wizened Mentor
     tcgplayer_product_id: "615090"
+    tcgplayer_sku_id: "8534572"
     finish: nf
   - display_key: mtg-drc-9-nf
     qty: 1
     name: Prophet of the Scarab
     tcgplayer_product_id: "615091"
+    tcgplayer_sku_id: "8534602"
     finish: nf
   - display_key: mtg-drc-10-nf
     qty: 1
     name: "Rhet-Tomb Mystic"
     tcgplayer_product_id: "615121"
+    tcgplayer_sku_id: "8535532"
     finish: nf
   - display_key: mtg-drc-11-nf
     qty: 1
     name: Lost Monarch of Ifnir
     tcgplayer_product_id: "615075"
+    tcgplayer_sku_id: "8534122"
     finish: nf
   - display_key: mtg-drc-20-nf
     qty: 1
     name: Accursed Duneyard
     tcgplayer_product_id: "615097"
+    tcgplayer_sku_id: "8534812"
     finish: nf
   - display_key: mtg-drc-38-nf
     qty: 1
     name: Commence the Endgame
     tcgplayer_product_id: "615080"
+    tcgplayer_sku_id: "8534272"
     finish: nf
   - display_key: mtg-drc-41-nf
     qty: 1
     name: Cryptbreaker
     tcgplayer_product_id: "615117"
+    tcgplayer_sku_id: "8535412"
     finish: nf
   - display_key: mtg-drc-42-nf
     qty: 1
     name: Grave Titan
     tcgplayer_product_id: "615114"
+    tcgplayer_sku_id: "8535322"
     finish: nf
   - display_key: mtg-drc-43-nf
     qty: 1
     name: Gravecrawler
     tcgplayer_product_id: "615096"
+    tcgplayer_sku_id: "8534752"
     finish: nf
   - display_key: mtg-drc-44-nf
     qty: 1
     name: Midnight Reaper
     tcgplayer_product_id: "615083"
+    tcgplayer_sku_id: "8534362"
     finish: nf
   - display_key: mtg-drc-45-nf
     qty: 1
     name: Murderous Rider // Swift End
     tcgplayer_product_id: "615099"
+    tcgplayer_sku_id: "8534872"
     finish: nf
   - display_key: mtg-drc-46-nf
     qty: 1
     name: Zombie Master
     tcgplayer_product_id: "615052"
+    tcgplayer_sku_id: "8533432"
     finish: nf
   - display_key: mtg-drc-62-nf
     qty: 1
     name: Angel of Sanctions
     tcgplayer_product_id: "615111"
+    tcgplayer_sku_id: "8535232"
     finish: nf
   - display_key: mtg-drc-65-nf
     qty: 1
     name: Dusk // Dawn
     tcgplayer_product_id: "615102"
+    tcgplayer_sku_id: "8534962"
     finish: nf
   - display_key: mtg-drc-66-nf
     qty: 1
     name: "God-Eternal Oketra"
     tcgplayer_product_id: "615089"
+    tcgplayer_sku_id: "8534542"
     finish: nf
   - display_key: mtg-drc-67-nf
     qty: 1
     name: Timeless Dragon
     tcgplayer_product_id: "615085"
+    tcgplayer_sku_id: "8534422"
     finish: nf
   - display_key: mtg-drc-72-nf
     qty: 1
     name: Champion of Wits
     tcgplayer_product_id: "615123"
+    tcgplayer_sku_id: "8535592"
     finish: nf
   - display_key: mtg-drc-77-nf
     qty: 1
     name: Forgotten Creation
     tcgplayer_product_id: "615065"
+    tcgplayer_sku_id: "8533822"
     finish: nf
   - display_key: mtg-drc-81-nf
     qty: 1
     name: Pull from Tomorrow
     tcgplayer_product_id: "615107"
+    tcgplayer_sku_id: "8535112"
     finish: nf
   - display_key: mtg-drc-84-nf
     qty: 1
     name: Vizier of Many Faces
     tcgplayer_product_id: "615106"
+    tcgplayer_sku_id: "8535082"
     finish: nf
   - display_key: mtg-drc-86-nf
     qty: 1
     name: Archfiend of Ifnir
     tcgplayer_product_id: "615092"
+    tcgplayer_sku_id: "8534632"
     finish: nf
   - display_key: mtg-drc-87-nf
     qty: 1
     name: Cemetery Reaper
     tcgplayer_product_id: "615093"
+    tcgplayer_sku_id: "8534662"
     finish: nf
   - display_key: mtg-drc-88-nf
     qty: 1
     name: Crowded Crypt
     tcgplayer_product_id: "615056"
+    tcgplayer_sku_id: "8533552"
     finish: nf
   - display_key: mtg-drc-89-nf
     qty: 1
     name: Damn
     tcgplayer_product_id: "615076"
+    tcgplayer_sku_id: "8534152"
     finish: nf
   - display_key: mtg-drc-90-nf
     qty: 1
     name: Dread Summons
     tcgplayer_product_id: "615079"
+    tcgplayer_sku_id: "8534242"
     finish: nf
   - display_key: mtg-drc-91-nf
     qty: 1
     name: Dreadhorde Invasion
     tcgplayer_product_id: "615105"
+    tcgplayer_sku_id: "8535052"
     finish: nf
   - display_key: mtg-drc-94-nf
     qty: 1
     name: "Liliana, Death's Majesty"
     tcgplayer_product_id: "615073"
+    tcgplayer_sku_id: "8534062"
     finish: nf
   - display_key: mtg-drc-96-nf
     qty: 1
     name: Never // Return
     tcgplayer_product_id: "615053"
+    tcgplayer_sku_id: "8533462"
     finish: nf
   - display_key: mtg-drc-97-nf
     qty: 1
     name: Plague Belcher
     tcgplayer_product_id: "615060"
+    tcgplayer_sku_id: "8533672"
     finish: nf
   - display_key: mtg-drc-98-nf
     qty: 1
     name: Rot Hulk
     tcgplayer_product_id: "615071"
+    tcgplayer_sku_id: "8534002"
     finish: nf
   - display_key: mtg-drc-120-nf
     qty: 1
     name: The Scarab God
     tcgplayer_product_id: "615032"
+    tcgplayer_sku_id: "8532412"
     finish: nf
   - display_key: mtg-drc-131-nf
     qty: 1
     name: "God-Pharaoh's Gift"
     tcgplayer_product_id: "615103"
+    tcgplayer_sku_id: "8534992"
     finish: nf
   - display_key: mtg-drc-132-nf
     qty: 1
     name: Maskwood Nexus
     tcgplayer_product_id: "615110"
+    tcgplayer_sku_id: "8535202"
     finish: nf
   - display_key: mtg-drc-144-nf
     qty: 1
     name: Adarkar Wastes
     tcgplayer_product_id: "615062"
+    tcgplayer_sku_id: "8533732"
     finish: nf
   - display_key: mtg-drc-148-nf
     qty: 1
     name: Caves of Koilos
     tcgplayer_product_id: "615087"
+    tcgplayer_sku_id: "8534482"
     finish: nf
   - display_key: mtg-drc-152-nf
     qty: 1
     name: Drowned Catacomb
     tcgplayer_product_id: "615077"
+    tcgplayer_sku_id: "8534182"
     finish: nf
   - display_key: mtg-drc-155-nf
     qty: 1
     name: Exotic Orchard
     tcgplayer_product_id: "615163"
+    tcgplayer_sku_id: "8536582"
     finish: nf
   - display_key: mtg-drc-156-nf
     qty: 1
     name: Fetid Pools
     tcgplayer_product_id: "615072"
+    tcgplayer_sku_id: "8534032"
     finish: nf
   - display_key: mtg-drc-159-nf
     qty: 1
     name: Glacial Fortress
     tcgplayer_product_id: "615109"
+    tcgplayer_sku_id: "8535172"
     finish: nf
   - display_key: mtg-drc-161-nf
     qty: 1
     name: Irrigated Farmland
     tcgplayer_product_id: "615055"
+    tcgplayer_sku_id: "8533522"
     finish: nf
   - display_key: mtg-drc-162-nf
     qty: 1
     name: Isolated Chapel
     tcgplayer_product_id: "615101"
+    tcgplayer_sku_id: "8534932"
     finish: nf
   - display_key: mtg-drc-167-nf
     qty: 1
     name: Prairie Stream
     tcgplayer_product_id: "615070"
+    tcgplayer_sku_id: "8533972"
     finish: nf
   - display_key: mtg-drc-174-nf
     qty: 1
     name: Sunken Hollow
     tcgplayer_product_id: "615084"
+    tcgplayer_sku_id: "8534392"
     finish: nf
   - display_key: mtg-drc-176-nf
     qty: 1
     name: Temple of Deceit
     tcgplayer_product_id: "615120"
+    tcgplayer_sku_id: "8535502"
     finish: nf
   - display_key: mtg-drc-178-nf
     qty: 1
     name: Temple of Silence
     tcgplayer_product_id: "615068"
+    tcgplayer_sku_id: "8533912"
     finish: nf
   - display_key: mtg-drc-181-nf
     qty: 1
     name: Underground River
     tcgplayer_product_id: "615049"
+    tcgplayer_sku_id: "8533342"
     finish: nf
   - display_key: mtg-drc-182-nf
     qty: 1
     name: Unholy Grotto
     tcgplayer_product_id: "615108"
+    tcgplayer_sku_id: "8535142"
     finish: nf
   - display_key: mtg-drc-37-nf
     qty: 1
     name: Swords to Plowshares
     tcgplayer_product_id: "615059"
+    tcgplayer_sku_id: "8533642"
     finish: nf
   - display_key: mtg-drc-40-nf
     qty: 1
     name: Corpse Augur
     tcgplayer_product_id: "615116"
+    tcgplayer_sku_id: "8535382"
     finish: nf
   - display_key: mtg-drc-50-nf
     qty: 1
     name: Corpse Knight
     tcgplayer_product_id: "615028"
+    tcgplayer_sku_id: "8532292"
     finish: nf
   - display_key: mtg-drc-51-nf
     qty: 1
     name: Arcane Signet
     tcgplayer_product_id: "615074"
+    tcgplayer_sku_id: "8534092"
     finish: nf
   - display_key: mtg-drc-56-nf
     qty: 1
     name: Sol Ring
     tcgplayer_product_id: "615082"
+    tcgplayer_sku_id: "8534332"
     finish: nf
   - display_key: mtg-drc-59-nf
     qty: 1
     name: Command Tower
     tcgplayer_product_id: "615112"
+    tcgplayer_sku_id: "8535262"
     finish: nf
   - display_key: mtg-drc-61-nf
     qty: 1
     name: Path of Ancestry
     tcgplayer_product_id: "615078"
+    tcgplayer_sku_id: "8534212"
     finish: nf
   - display_key: mtg-drc-63-nf
     qty: 1
     name: Binding Mummy
     tcgplayer_product_id: "615051"
+    tcgplayer_sku_id: "8533402"
     finish: nf
   - display_key: mtg-drc-64-nf
     qty: 1
     name: Cast Out
     tcgplayer_product_id: "615094"
+    tcgplayer_sku_id: "8534692"
     finish: nf
   - display_key: mtg-drc-76-nf
     qty: 1
     name: Eternal Skylord
     tcgplayer_product_id: "615081"
+    tcgplayer_sku_id: "8534302"
     finish: nf
   - display_key: mtg-drc-92-nf
     qty: 1
     name: Fleshbag Marauder
     tcgplayer_product_id: "615104"
+    tcgplayer_sku_id: "8535022"
     finish: nf
   - display_key: mtg-drc-93-nf
     qty: 1
     name: Gempalm Polluter
     tcgplayer_product_id: "615100"
+    tcgplayer_sku_id: "8534902"
     finish: nf
   - display_key: mtg-drc-95-nf
     qty: 1
     name: Lord of the Accursed
     tcgplayer_product_id: "615098"
+    tcgplayer_sku_id: "8534842"
     finish: nf
   - display_key: mtg-drc-99-nf
     qty: 1
     name: Twisted Abomination
     tcgplayer_product_id: "615061"
+    tcgplayer_sku_id: "8533702"
     finish: nf
   - display_key: mtg-drc-100-nf
     qty: 1
     name: Undead Augur
     tcgplayer_product_id: "615095"
+    tcgplayer_sku_id: "8534722"
     finish: nf
   - display_key: mtg-drc-115-nf
     qty: 1
     name: Despark
     tcgplayer_product_id: "615029"
+    tcgplayer_sku_id: "8532322"
     finish: nf
   - display_key: mtg-drc-116-nf
     qty: 1
     name: Gleaming Overseer
     tcgplayer_product_id: "615030"
+    tcgplayer_sku_id: "8532352"
     finish: nf
   - display_key: mtg-drc-117-nf
     qty: 1
     name: Lazotep Chancellor
     tcgplayer_product_id: "615031"
+    tcgplayer_sku_id: "8532382"
     finish: nf
   - display_key: mtg-drc-121-nf
     qty: 1
     name: Wayward Servant
     tcgplayer_product_id: "615033"
+    tcgplayer_sku_id: "8532442"
     finish: nf
   - display_key: mtg-drc-124-nf
     qty: 1
     name: "Bontu's Monument"
     tcgplayer_product_id: "615113"
+    tcgplayer_sku_id: "8535292"
     finish: nf
   - display_key: mtg-drc-125-nf
     qty: 1
     name: "Commander's Sphere"
     tcgplayer_product_id: "615145"
+    tcgplayer_sku_id: "8536042"
     finish: nf
   - display_key: mtg-drc-129-nf
     qty: 1
     name: Dimir Signet
     tcgplayer_product_id: "615086"
+    tcgplayer_sku_id: "8534452"
     finish: nf
   - display_key: mtg-drc-130-nf
     qty: 1
     name: Gate to the Afterlife
     tcgplayer_product_id: "615063"
+    tcgplayer_sku_id: "8533762"
     finish: nf
   - display_key: mtg-drc-134-nf
     qty: 1
     name: Orzhov Signet
     tcgplayer_product_id: "615088"
+    tcgplayer_sku_id: "8534512"
     finish: nf
   - display_key: mtg-drc-141-nf
     qty: 1
     name: Talisman of Dominance
     tcgplayer_product_id: "615067"
+    tcgplayer_sku_id: "8533882"
     finish: nf
   - display_key: mtg-drc-142-nf
     qty: 1
     name: Talisman of Hierarchy
     tcgplayer_product_id: "615048"
+    tcgplayer_sku_id: "8533312"
     finish: nf
   - display_key: mtg-drc-146-nf
     qty: 1
     name: Arcane Sanctum
     tcgplayer_product_id: "615050"
+    tcgplayer_sku_id: "8533372"
     finish: nf
   - display_key: mtg-drc-147-nf
     qty: 1
     name: Ash Barrens
     tcgplayer_product_id: "615057"
+    tcgplayer_sku_id: "8533582"
     finish: nf
   - display_key: mtg-drc-149-nf
     qty: 1
     name: Desert of the Glorified
     tcgplayer_product_id: "615054"
+    tcgplayer_sku_id: "8533492"
     finish: nf
   - display_key: mtg-drc-150-nf
     qty: 1
     name: Desert of the Mindful
     tcgplayer_product_id: "615122"
+    tcgplayer_sku_id: "8535562"
     finish: nf
   - display_key: mtg-drc-151-nf
     qty: 1
     name: Desert of the True
     tcgplayer_product_id: "615119"
+    tcgplayer_sku_id: "8535472"
     finish: nf
   - display_key: mtg-drc-153-nf
     qty: 1
     name: Evolving Wilds
     tcgplayer_product_id: "615118"
+    tcgplayer_sku_id: "8535442"
     finish: nf
   - display_key: mtg-drc-164-nf
     qty: 1
     name: Orzhov Basilica
     tcgplayer_product_id: "615064"
+    tcgplayer_sku_id: "8533792"
     finish: nf
   - display_key: mtg-drc-179-nf
     qty: 1
     name: Terramorphic Expanse
     tcgplayer_product_id: "615066"
+    tcgplayer_sku_id: "8533852"
     finish: nf
   - display_key: mtg-dft-277-nf
     qty: 5
     name: Plains
     tcgplayer_product_id: "610780"
+    tcgplayer_sku_id: "8491659"
     finish: nf
   - display_key: mtg-dft-280-nf
     qty: 4
     name: Island
     tcgplayer_product_id: "610774"
+    tcgplayer_sku_id: "8491299"
     finish: nf
   - display_key: mtg-dft-283-nf
     qty: 5
     name: Swamp
     tcgplayer_product_id: "610783"
+    tcgplayer_sku_id: "8491839"
     finish: nf

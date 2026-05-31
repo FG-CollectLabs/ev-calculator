@@ -1360,7 +1360,7 @@
   // Intended to feed listing prices into the Box Break App / Card Inventory app.
   function buildPriceListCSV() {
     const ebayShipFixed = ebayFixedShipCents();
-    const header = ["TCGplayer Id","Card Name","Market ($)","TCGPlayer List","Manapool List","eBay Item Price","eBay Shipping"];
+    const header = ["TCGplayer Id","Card Name","Market ($)","TCGPlayer List","Manapool List","eBay List","eBay Shipping"];
     const rows   = [];
     const seen   = new Set();
 
@@ -1370,6 +1370,8 @@
         if (!pid || seen.has(pid)) continue;
         seen.add(pid);
         if (!li.market_price_cents) continue;
+        // Use SKU ID when available — TCGPlayer mass-pricing import requires SKU ID, not product ID.
+        const tcgId = li.tcgplayer_sku_id ? String(li.tcgplayer_sku_id) : pid;
         const market = li.market_price_cents;
 
         // TCGPlayer — mirrors platformListingPrice tcgplayer branch
@@ -1400,7 +1402,7 @@
         const ebayShipLabel = freeship ? "Free" : `$${(ebayShipFixed / 100).toFixed(2)}`;
 
         rows.push([
-          pid,
+          tcgId,
           li.name || li.display_key,
           (market      / 100).toFixed(2),
           (tcgListing  / 100).toFixed(2),

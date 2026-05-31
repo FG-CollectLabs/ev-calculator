@@ -7,475 +7,571 @@ product_tcgplayer_id: "541248"
 # deck_price_cents: 3500  # set to TCGPlayer market price in cents when market-tracker has no sealed data
 image: /img/decks/blc-commander-peace-offering.jpg
 channels: [tcgplayer, manapool]
+validation:
+  tcgplayer_csv_verified: "2026-05-31"
 components:
   - display_key: mtg-blc-3-f
     qty: 1
     name: Ms. Bumbleflower
     tcgplayer_product_id: "558384"
+    tcgplayer_sku_id: "8024616"
     finish: f
     note: commander
   - display_key: mtg-blc-6-f
     qty: 1
     name: Mr. Foxglove
     tcgplayer_product_id: "559995"
+    tcgplayer_sku_id: "8065475"
     finish: f
   - display_key: mtg-blc-100-f
     qty: 1
     name: "Tamiyo, Field Researcher"
     tcgplayer_product_id: "558393"
+    tcgplayer_sku_id: "8025116"
     finish: f
   - display_key: mtg-blc-159-nf
     qty: 1
     name: Tenuous Truce
     tcgplayer_product_id: "559895"
+    tcgplayer_sku_id: "8056367"
     finish: nf
   - display_key: mtg-blc-143-nf
     qty: 1
     name: Loran of the Third Path
     tcgplayer_product_id: "559901"
+    tcgplayer_sku_id: "8056542"
     finish: nf
   - display_key: mtg-blc-12-nf
     qty: 1
     name: Steelburr Champion
     tcgplayer_product_id: "559997"
+    tcgplayer_sku_id: "8058889"
     finish: nf
   - display_key: mtg-blc-13-nf
     qty: 1
     name: Tempt with Bunnies
     tcgplayer_product_id: "559998"
+    tcgplayer_sku_id: "8058914"
     finish: nf
   - display_key: mtg-blc-11-nf
     qty: 1
     name: Perch Protection
     tcgplayer_product_id: "560182"
+    tcgplayer_sku_id: "8062195"
     finish: nf
   - display_key: mtg-blc-158-nf
     qty: 1
     name: Sunscorch Regent
     tcgplayer_product_id: "559903"
+    tcgplayer_sku_id: "8056592"
     finish: nf
   - display_key: mtg-blc-148-nf
     qty: 1
     name: Promise of Loyalty
     tcgplayer_product_id: "559938"
+    tcgplayer_sku_id: "8057443"
     finish: nf
   - display_key: mtg-blc-140-nf
     qty: 1
     name: Hoofprints of the Stag
     tcgplayer_product_id: "559896"
+    tcgplayer_sku_id: "8056392"
     finish: nf
   - display_key: mtg-blc-145-nf
     qty: 1
     name: "Mangara, the Diplomat"
     tcgplayer_product_id: "559905"
+    tcgplayer_sku_id: "8056642"
     finish: nf
   - display_key: mtg-blc-149-nf
     qty: 1
     name: Realm-Cloaked Giant // Cast Off
     tcgplayer_product_id: "559907"
+    tcgplayer_sku_id: "8056692"
     finish: nf
   - display_key: mtg-blc-175-nf
     qty: 1
     name: Sphinx of Enlightenment
     tcgplayer_product_id: "559908"
+    tcgplayer_sku_id: "8056717"
     finish: nf
   - display_key: mtg-blc-217-nf
     qty: 1
     name: Forgotten Ancient
     tcgplayer_product_id: "559910"
+    tcgplayer_sku_id: "8056767"
     finish: nf
   - display_key: mtg-blc-27-nf
     qty: 1
     name: Bloodroot Apothecary
     tcgplayer_product_id: "559991"
+    tcgplayer_sku_id: "8058739"
     finish: nf
   - display_key: mtg-blc-29-nf
     qty: 1
     name: Communal Brewing
     tcgplayer_product_id: "559992"
+    tcgplayer_sku_id: "8058764"
     finish: nf
   - display_key: mtg-blc-230-nf
     qty: 1
     name: Managorger Hydra
     tcgplayer_product_id: "559911"
+    tcgplayer_sku_id: "8056792"
     finish: nf
   - display_key: mtg-blc-235-nf
     qty: 1
     name: "Rishkar, Peema Renegade"
     tcgplayer_product_id: "559913"
+    tcgplayer_sku_id: "8056842"
     finish: nf
   - display_key: mtg-blc-122-nf
     qty: 1
     name: Rites of Flourishing
     tcgplayer_product_id: "559898"
+    tcgplayer_sku_id: "8056467"
     finish: nf
   - display_key: mtg-blc-124-nf
     qty: 1
     name: Tempt with Discovery
     tcgplayer_product_id: "559798"
+    tcgplayer_sku_id: "8052024"
     finish: nf
   - display_key: mtg-blc-226-nf
     qty: 1
     name: Kalonian Hydra
     tcgplayer_product_id: "559916"
+    tcgplayer_sku_id: "8056917"
     finish: nf
   - display_key: mtg-blc-252-nf
     qty: 1
     name: Faeburrow Elder
     tcgplayer_product_id: "559917"
+    tcgplayer_sku_id: "8056942"
     finish: nf
   - display_key: mtg-blc-131-nf
     qty: 1
     name: Exotic Orchard
     tcgplayer_product_id: "559727"
+    tcgplayer_sku_id: "8049180"
     finish: nf
   - display_key: mtg-blc-260-nf
     qty: 1
     name: Simic Ascendancy
     tcgplayer_product_id: "559899"
+    tcgplayer_sku_id: "8056492"
     finish: nf
   - display_key: mtg-blc-270-nf
     qty: 1
     name: Ghirapur Orrery
     tcgplayer_product_id: "559949"
+    tcgplayer_sku_id: "8057718"
     finish: nf
   - display_key: mtg-blc-282-nf
     qty: 1
     name: Psychosis Crawler
     tcgplayer_product_id: "559919"
+    tcgplayer_sku_id: "8056992"
     finish: nf
   - display_key: mtg-blc-291-nf
     qty: 1
     name: Adarkar Wastes
     tcgplayer_product_id: "559858"
+    tcgplayer_sku_id: "8054709"
     finish: nf
   - display_key: mtg-blc-339-nf
     qty: 1
     name: Temple of Enlightenment
     tcgplayer_product_id: "559859"
+    tcgplayer_sku_id: "8054759"
     finish: nf
   - display_key: mtg-blc-328-nf
     qty: 1
     name: Seachrome Coast
     tcgplayer_product_id: "559864"
+    tcgplayer_sku_id: "8054866"
     finish: nf
   - display_key: mtg-blc-307-nf
     qty: 1
     name: Glacial Fortress
     tcgplayer_product_id: "559857"
+    tcgplayer_sku_id: "8054659"
     finish: nf
   - display_key: mtg-blc-312-nf
     qty: 1
     name: Hinterland Harbor
     tcgplayer_product_id: "559960"
+    tcgplayer_sku_id: "8057969"
     finish: nf
   - display_key: mtg-blc-325-nf
     qty: 1
     name: Razorverge Thicket
     tcgplayer_product_id: "559962"
+    tcgplayer_sku_id: "8058019"
     finish: nf
   - display_key: mtg-blc-304-nf
     qty: 1
     name: Flooded Grove
     tcgplayer_product_id: "559963"
+    tcgplayer_sku_id: "8058044"
     finish: nf
   - display_key: mtg-blc-332-nf
     qty: 1
     name: Skycloud Expanse
     tcgplayer_product_id: "559874"
+    tcgplayer_sku_id: "8055366"
     finish: nf
   - display_key: mtg-blc-296-nf
     qty: 1
     name: Canopy Vista
     tcgplayer_product_id: "559967"
+    tcgplayer_sku_id: "8058144"
     finish: nf
   - display_key: mtg-blc-323-nf
     qty: 1
     name: Prairie Stream
     tcgplayer_product_id: "559969"
+    tcgplayer_sku_id: "8058189"
     finish: nf
   - display_key: mtg-blc-295-nf
     qty: 1
     name: Brushland
     tcgplayer_product_id: "559972"
+    tcgplayer_sku_id: "8058264"
     finish: nf
   - display_key: mtg-blc-342-nf
     qty: 1
     name: Temple of Mystery
     tcgplayer_product_id: "559974"
+    tcgplayer_sku_id: "8058314"
     finish: nf
   - display_key: mtg-blc-355-nf
     qty: 1
     name: Yavimaya Coast
     tcgplayer_product_id: "559976"
+    tcgplayer_sku_id: "8058364"
     finish: nf
   - display_key: mtg-blc-321-nf
     qty: 1
     name: Overflowing Basin
     tcgplayer_product_id: "559981"
+    tcgplayer_sku_id: "8058489"
     finish: nf
   - display_key: mtg-blc-334-nf
     qty: 1
     name: Sungrass Prairie
     tcgplayer_product_id: "559985"
+    tcgplayer_sku_id: "8058589"
     finish: nf
   - display_key: mtg-blc-335-nf
     qty: 1
     name: Sunpetal Grove
     tcgplayer_product_id: "559987"
+    tcgplayer_sku_id: "8058639"
     finish: nf
   - display_key: mtg-blc-178-nf
     qty: 1
     name: Triskaidekaphile
     tcgplayer_product_id: "559920"
+    tcgplayer_sku_id: "8057017"
     finish: nf
   - display_key: mtg-blc-37-nf
     qty: 1
     name: Octomancer
     tcgplayer_product_id: "559996"
+    tcgplayer_sku_id: "8058864"
     finish: nf
   - display_key: mtg-blc-16-nf
     qty: 1
     name: Twenty-Toed Toad
     tcgplayer_product_id: "559999"
+    tcgplayer_sku_id: "8058939"
     finish: nf
   - display_key: mtg-blc-168-nf
     qty: 1
     name: Intellectual Offering
     tcgplayer_product_id: "560014"
+    tcgplayer_sku_id: "8059314"
     finish: nf
   - display_key: mtg-blc-166-nf
     qty: 1
     name: "Illusionist's Gambit"
     tcgplayer_product_id: "560015"
+    tcgplayer_sku_id: "8059339"
     finish: nf
   - display_key: mtg-blc-163-nf
     qty: 1
     name: Body of Knowledge
     tcgplayer_product_id: "559924"
+    tcgplayer_sku_id: "8057117"
     finish: nf
   - display_key: mtg-blc-164-nf
     qty: 1
     name: Chasm Skulker
     tcgplayer_product_id: "559923"
+    tcgplayer_sku_id: "8057092"
     finish: nf
   - display_key: mtg-blc-171-nf
     qty: 1
     name: Perplexing Test
     tcgplayer_product_id: "560022"
+    tcgplayer_sku_id: "8059506"
     finish: nf
   - display_key: mtg-blc-225-nf
     qty: 1
     name: "Jolrael, Mwonvuli Recluse"
     tcgplayer_product_id: "559927"
+    tcgplayer_sku_id: "8057192"
     finish: nf
   - display_key: mtg-blc-36-nf
     qty: 1
     name: "Fisher's Talent"
     tcgplayer_product_id: "559993"
+    tcgplayer_sku_id: "8058789"
     finish: nf
   - display_key: mtg-blc-259-nf
     qty: 1
     name: "Selvala, Explorer Returned"
     tcgplayer_product_id: "559929"
+    tcgplayer_sku_id: "8057242"
     finish: nf
   - display_key: mtg-blc-254-nf
     qty: 1
     name: "Kwain, Itinerant Meddler"
     tcgplayer_product_id: "560413"
+    tcgplayer_sku_id: "8065410"
     finish: nf
   - display_key: mtg-blc-268-nf
     qty: 1
     name: Coveted Jewel
     tcgplayer_product_id: "559951"
+    tcgplayer_sku_id: "8057768"
     finish: nf
   - display_key: mtg-blc-343-nf
     qty: 1
     name: Temple of Plenty
     tcgplayer_product_id: "559988"
+    tcgplayer_sku_id: "8058664"
     finish: nf
   - display_key: mtg-blc-106-nf
     qty: 1
     name: Generous Gift
     tcgplayer_product_id: "560025"
+    tcgplayer_sku_id: "8059589"
     finish: nf
   - display_key: mtg-blc-109-nf
     qty: 1
     name: Swords to Plowshares
     tcgplayer_product_id: "559797"
+    tcgplayer_sku_id: "8051974"
     finish: nf
   - display_key: mtg-blc-152-nf
     qty: 1
     name: Secret Rendezvous
     tcgplayer_product_id: "559942"
+    tcgplayer_sku_id: "8057543"
     finish: nf
   - display_key: mtg-blc-135-nf
     qty: 1
     name: "Baird, Steward of Argive"
     tcgplayer_product_id: "559931"
+    tcgplayer_sku_id: "8057292"
     finish: nf
   - display_key: mtg-blc-170-nf
     qty: 1
     name: "An Offer You Can't Refuse"
     tcgplayer_product_id: "560186"
+    tcgplayer_sku_id: "8062340"
     finish: nf
   - display_key: mtg-blc-112-nf
     qty: 1
     name: Wizard Class
     tcgplayer_product_id: "559800"
+    tcgplayer_sku_id: "8052079"
     finish: nf
   - display_key: mtg-blc-212-nf
     qty: 1
     name: Cultivate
     tcgplayer_product_id: "559946"
+    tcgplayer_sku_id: "8057643"
     finish: nf
   - display_key: mtg-blc-119-nf
     qty: 1
     name: Farseek
     tcgplayer_product_id: "559948"
+    tcgplayer_sku_id: "8057693"
     finish: nf
   - display_key: mtg-blc-208-nf
     qty: 1
     name: Broken Wings
     tcgplayer_product_id: "560028"
+    tcgplayer_sku_id: "8059664"
     finish: nf
   - display_key: mtg-blc-238-nf
     qty: 1
     name: Spore Frog
     tcgplayer_product_id: "559934"
+    tcgplayer_sku_id: "8057343"
     finish: nf
   - display_key: mtg-blb-203-nf
     qty: 1
     name: Wear Down
     tcgplayer_product_id: "558376"
+    tcgplayer_sku_id: "8024256"
     finish: nf
   - display_key: mtg-blb-188-nf
     qty: 1
     name: Peerless Recycling
     tcgplayer_product_id: "559071"
+    tcgplayer_sku_id: "8036766"
     finish: nf
   - display_key: mtg-blc-250-nf
     qty: 1
     name: Coiling Oracle
     tcgplayer_product_id: "559935"
+    tcgplayer_sku_id: "8057368"
     finish: nf
   - display_key: mtg-blc-151-nf
     qty: 1
     name: Riot Control
     tcgplayer_product_id: "560031"
+    tcgplayer_sku_id: "8059739"
     finish: nf
   - display_key: mtg-blc-108-nf
     qty: 1
     name: Martial Impetus
     tcgplayer_product_id: "559900"
+    tcgplayer_sku_id: "8056517"
     finish: nf
   - display_key: mtg-blb-19-nf
     qty: 1
     name: Jolly Gerbils
     tcgplayer_product_id: "559994"
+    tcgplayer_sku_id: "8058814"
     finish: nf
   - display_key: mtg-blb-58-nf
     qty: 1
     name: "Long River's Pull"
     tcgplayer_product_id: "559139"
+    tcgplayer_sku_id: "8039343"
     finish: nf
   - display_key: mtg-blc-289-nf
     qty: 1
     name: Thought Vessel
     tcgplayer_product_id: "559918"
+    tcgplayer_sku_id: "8056967"
     finish: nf
   - display_key: mtg-blc-127-nf
     qty: 1
     name: Arcane Signet
     tcgplayer_product_id: "559719"
+    tcgplayer_sku_id: "8048790"
     finish: nf
   - display_key: mtg-blc-286-nf
     qty: 1
     name: Swiftfoot Boots
     tcgplayer_product_id: "559954"
+    tcgplayer_sku_id: "8057843"
     finish: nf
   - display_key: mtg-blc-269-nf
     qty: 1
     name: Fellwar Stone
     tcgplayer_product_id: "559852"
+    tcgplayer_sku_id: "8054409"
     finish: nf
   - display_key: mtg-blc-129-nf
     qty: 1
     name: Sol Ring
     tcgplayer_product_id: "559736"
+    tcgplayer_sku_id: "8049630"
     finish: nf
   - display_key: mtg-blc-280-nf
     qty: 1
     name: Mind Stone
     tcgplayer_product_id: "559854"
+    tcgplayer_sku_id: "8054509"
     finish: nf
   - display_key: mtg-blc-348-nf
     qty: 1
     name: Thriving Heath
     tcgplayer_product_id: "559886"
+    tcgplayer_sku_id: "8055917"
     finish: nf
   - display_key: mtg-blc-349-nf
     qty: 1
     name: Thriving Isle
     tcgplayer_product_id: "559889"
+    tcgplayer_sku_id: "8056067"
     finish: nf
   - display_key: mtg-blc-347-nf
     qty: 1
     name: Thriving Grove
     tcgplayer_product_id: "560009"
+    tcgplayer_sku_id: "8059189"
     finish: nf
   - display_key: mtg-blc-345-nf
     qty: 1
     name: Terramorphic Expanse
     tcgplayer_product_id: "559882"
+    tcgplayer_sku_id: "8055717"
     finish: nf
   - display_key: mtg-blc-130-nf
     qty: 1
     name: Command Tower
     tcgplayer_product_id: "559724"
+    tcgplayer_sku_id: "8049040"
     finish: nf
   - display_key: mtg-blc-302-nf
     qty: 1
     name: Evolving Wilds
     tcgplayer_product_id: "559888"
+    tcgplayer_sku_id: "8056017"
     finish: nf
   - display_key: mtg-blc-132-nf
     qty: 1
     name: Reliquary Tower
     tcgplayer_product_id: "559973"
+    tcgplayer_sku_id: "8058289"
     finish: nf
   - display_key: mtg-blc-329-nf
     qty: 1
     name: Seaside Citadel
     tcgplayer_product_id: "560012"
+    tcgplayer_sku_id: "8059264"
     finish: nf
   - display_key: mtg-blb-369-nf
     qty: 2
     name: Plains
     tcgplayer_product_id: "559539"
+    tcgplayer_sku_id: "8045483"
     finish: nf
   - display_key: mtg-blb-370-nf
     qty: 2
     name: Plains
     tcgplayer_product_id: "559559"
+    tcgplayer_sku_id: "8045183"
     finish: nf
   - display_key: mtg-blb-371-nf
     qty: 2
     name: Island
     tcgplayer_product_id: "559548"
+    tcgplayer_sku_id: "8044523"
     finish: nf
   - display_key: mtg-blb-372-nf
     qty: 2
     name: Island
     tcgplayer_product_id: "559546"
+    tcgplayer_sku_id: "8044403"
     finish: nf
   - display_key: mtg-blb-377-nf
     qty: 2
     name: Forest
     tcgplayer_product_id: "559542"
+    tcgplayer_sku_id: "8044163"
     finish: nf
   - display_key: mtg-blb-378-nf
     qty: 2
     name: Forest
     tcgplayer_product_id: "559553"
+    tcgplayer_sku_id: "8044823"
     finish: nf

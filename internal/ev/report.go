@@ -71,6 +71,7 @@ type LineItem struct {
 	Quantity           int               `json:"qty"`
 	Note               string            `json:"note,omitempty"`
 	TCGPlayerProductID string            `json:"tcgplayer_product_id,omitempty"`
+	TCGPlayerSKUID     string            `json:"tcgplayer_sku_id,omitempty"`
 	Finish             string            `json:"finish,omitempty"` // "nf" | "f" | "e"
 	Price              *pricing.PriceRow `json:"price,omitempty"`
 	// MarketPriceCents is the TCGPlayer market price (midpoint of recent sales).
@@ -404,6 +405,7 @@ func (b *Builder) buildDeckReport(ctx context.Context, dk decks.Deck, prices map
 			Quantity:           c.Quantity,
 			Note:               c.Note,
 			TCGPlayerProductID: c.TCGPlayerProductID,
+			TCGPlayerSKUID:     c.TCGPlayerSKUID,
 			Finish:             c.Finish,
 		}
 		row, ok := prices[key]

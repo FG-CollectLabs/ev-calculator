@@ -9,440 +9,529 @@ product_tcgplayer_id: "604258"
 product_manapool_slug: "drc/deck-living-energy"
 image: /img/decks/aetherdrift-commander-living-energy.jpg
 channels: [tcgplayer, ebay, manapool]
+validation:
+  tcgplayer_csv_verified: "2026-05-31"
 components:
   - display_key: mtg-drc-3-f
     qty: 1
     name: "Saheeli, Radiant Creator"
     tcgplayer_product_id: "614353"
+    tcgplayer_sku_id: "8525239"
     finish: f
     note: commander
   - display_key: mtg-drc-2-f
     qty: 1
     name: "Pia Nalaar, Chief Mechanic"
     tcgplayer_product_id: "614345"
+    tcgplayer_sku_id: "8524944"
     finish: f
   - display_key: mtg-drc-12-nf
     qty: 1
     name: Territorial Aetherkite
     tcgplayer_product_id: "615202"
+    tcgplayer_sku_id: "8537723"
     finish: nf
   - display_key: mtg-drc-13-nf
     qty: 1
     name: "Nissa, Worldsoul Speaker"
     tcgplayer_product_id: "615195"
+    tcgplayer_sku_id: "8537513"
     finish: nf
   - display_key: mtg-drc-14-nf
     qty: 1
     name: Peema Trailblazer
     tcgplayer_product_id: "615160"
+    tcgplayer_sku_id: "8536492"
     finish: nf
   - display_key: mtg-drc-15-nf
     qty: 1
     name: Rampaging Aetherhood
     tcgplayer_product_id: "615209"
+    tcgplayer_sku_id: "8537933"
     finish: nf
   - display_key: mtg-drc-16-nf
     qty: 1
     name: Adaptive Omnitool
     tcgplayer_product_id: "615159"
+    tcgplayer_sku_id: "8536462"
     finish: nf
   - display_key: mtg-drc-17-nf
     qty: 1
     name: Aetherflux Conduit
     tcgplayer_product_id: "615162"
+    tcgplayer_sku_id: "8536552"
     finish: nf
   - display_key: mtg-drc-18-nf
     qty: 1
     name: Aetheric Amplifier
     tcgplayer_product_id: "615193"
+    tcgplayer_sku_id: "8537453"
     finish: nf
   - display_key: mtg-drc-19-nf
     qty: 1
     name: Stridehangar Automaton
     tcgplayer_product_id: "615206"
+    tcgplayer_sku_id: "8537843"
     finish: nf
   - display_key: mtg-drc-47-nf
     qty: 1
     name: Chain Reaction
     tcgplayer_product_id: "615182"
+    tcgplayer_sku_id: "8537123"
     finish: nf
   - display_key: mtg-drc-48-nf
     qty: 1
     name: Chaos Warp
     tcgplayer_product_id: "615184"
+    tcgplayer_sku_id: "8537183"
     finish: nf
   - display_key: mtg-drc-49-nf
     qty: 1
     name: Druid of Purification
     tcgplayer_product_id: "615170"
+    tcgplayer_sku_id: "8536792"
     finish: nf
   - display_key: mtg-drc-53-nf
     qty: 1
     name: Chromatic Lantern
     tcgplayer_product_id: "615167"
+    tcgplayer_sku_id: "8536702"
     finish: nf
   - display_key: mtg-drc-54-nf
     qty: 1
     name: Duplicant
     tcgplayer_product_id: "615191"
+    tcgplayer_sku_id: "8537393"
     finish: nf
   - display_key: mtg-drc-58-nf
     qty: 1
     name: Academy Ruins
     tcgplayer_product_id: "615224"
+    tcgplayer_sku_id: "8538383"
     finish: nf
   - display_key: mtg-drc-68-nf
     qty: 1
     name: Aethersquall Ancient
     tcgplayer_product_id: "615205"
+    tcgplayer_sku_id: "8537813"
     finish: nf
   - display_key: mtg-drc-69-nf
     qty: 1
     name: Aethertide Whale
     tcgplayer_product_id: "615153"
+    tcgplayer_sku_id: "8536282"
     finish: nf
   - display_key: mtg-drc-73-nf
     qty: 1
     name: Confiscation Coup
     tcgplayer_product_id: "615174"
+    tcgplayer_sku_id: "8536912"
     finish: nf
   - display_key: mtg-drc-74-nf
     qty: 1
     name: Disallow
     tcgplayer_product_id: "615189"
+    tcgplayer_sku_id: "8537333"
     finish: nf
   - display_key: mtg-drc-79-nf
     qty: 1
     name: Midnight Clock
     tcgplayer_product_id: "615178"
+    tcgplayer_sku_id: "8537032"
     finish: nf
   - display_key: mtg-drc-80-nf
     qty: 1
     name: One with the Machine
     tcgplayer_product_id: "615221"
+    tcgplayer_sku_id: "8538293"
     finish: nf
   - display_key: mtg-drc-82-nf
     qty: 1
     name: "Sai, Master Thopterist"
     tcgplayer_product_id: "615214"
+    tcgplayer_sku_id: "8538083"
     finish: nf
   - display_key: mtg-drc-83-nf
     qty: 1
     name: Thopter Spy Network
     tcgplayer_product_id: "615219"
+    tcgplayer_sku_id: "8538233"
     finish: nf
   - display_key: mtg-drc-101-nf
     qty: 1
     name: Blasphemous Act
     tcgplayer_product_id: "615171"
+    tcgplayer_sku_id: "8536822"
     finish: nf
   - display_key: mtg-drc-102-nf
     qty: 1
     name: Combustible Gearhulk
     tcgplayer_product_id: "615218"
+    tcgplayer_sku_id: "8538203"
     finish: nf
   - display_key: mtg-drc-103-nf
     qty: 1
     name: Lightning Runner
     tcgplayer_product_id: "615188"
+    tcgplayer_sku_id: "8537303"
     finish: nf
   - display_key: mtg-drc-105-nf
     qty: 1
     name: Pia and Kiran Nalaar
     tcgplayer_product_id: "615177"
+    tcgplayer_sku_id: "8537002"
     finish: nf
   - display_key: mtg-drc-107-nf
     qty: 1
     name: Aetherwind Basker
     tcgplayer_product_id: "615169"
+    tcgplayer_sku_id: "8536762"
     finish: nf
   - display_key: mtg-drc-108-nf
     qty: 1
     name: Architect of the Untamed
     tcgplayer_product_id: "615147"
+    tcgplayer_sku_id: "8536102"
     finish: nf
   - display_key: mtg-drc-110-nf
     qty: 1
     name: "Bootleggers' Stash"
     tcgplayer_product_id: "615200"
+    tcgplayer_sku_id: "8537663"
     finish: nf
   - display_key: mtg-drc-111-nf
     qty: 1
     name: Elder Gargaroth
     tcgplayer_product_id: "615176"
+    tcgplayer_sku_id: "8536972"
     finish: nf
   - display_key: mtg-drc-123-nf
     qty: 1
     name: Aetherworks Marvel
     tcgplayer_product_id: "615156"
+    tcgplayer_sku_id: "8536372"
     finish: nf
   - display_key: mtg-drc-126-nf
     qty: 1
     name: "Conjurer's Closet"
     tcgplayer_product_id: "615204"
+    tcgplayer_sku_id: "8537783"
     finish: nf
   - display_key: mtg-drc-127-nf
     qty: 1
     name: "Cultivator's Caravan"
     tcgplayer_product_id: "615212"
+    tcgplayer_sku_id: "8538023"
     finish: nf
   - display_key: mtg-drc-135-nf
     qty: 1
     name: Panharmonicon
     tcgplayer_product_id: "615216"
+    tcgplayer_sku_id: "8538143"
     finish: nf
   - display_key: mtg-drc-136-nf
     qty: 1
     name: Retrofitter Foundry
     tcgplayer_product_id: "615161"
+    tcgplayer_sku_id: "8536522"
     finish: nf
   - display_key: mtg-drc-138-nf
     qty: 1
     name: Solemn Simulacrum
     tcgplayer_product_id: "615201"
+    tcgplayer_sku_id: "8537693"
     finish: nf
   - display_key: mtg-drc-143-nf
     qty: 1
     name: Triplicate Titan
     tcgplayer_product_id: "615198"
+    tcgplayer_sku_id: "8537603"
     finish: nf
   - display_key: mtg-drc-155-nf
     qty: 1
     name: Exotic Orchard
     tcgplayer_product_id: "615163"
+    tcgplayer_sku_id: "8536582"
     finish: nf
   - display_key: mtg-drc-158-nf
     qty: 1
     name: Frostboil Snarl
     tcgplayer_product_id: "615222"
+    tcgplayer_sku_id: "8538323"
     finish: nf
   - display_key: mtg-drc-160-nf
     qty: 1
     name: Hinterland Harbor
     tcgplayer_product_id: "615164"
+    tcgplayer_sku_id: "8536612"
     finish: nf
   - display_key: mtg-drc-163-nf
     qty: 1
     name: Karplusan Forest
     tcgplayer_product_id: "615197"
+    tcgplayer_sku_id: "8537573"
     finish: nf
   - display_key: mtg-drc-165-nf
     qty: 1
     name: Overflowing Basin
     tcgplayer_product_id: "615166"
+    tcgplayer_sku_id: "8536672"
     finish: nf
   - display_key: mtg-drc-168-nf
     qty: 1
     name: Rootbound Crag
     tcgplayer_product_id: "615225"
+    tcgplayer_sku_id: "8538413"
     finish: nf
   - display_key: mtg-drc-169-nf
     qty: 1
     name: Sheltered Thicket
     tcgplayer_product_id: "615152"
+    tcgplayer_sku_id: "8536252"
     finish: nf
   - display_key: mtg-drc-170-nf
     qty: 1
     name: Shivan Reef
     tcgplayer_product_id: "615213"
+    tcgplayer_sku_id: "8538053"
     finish: nf
   - display_key: mtg-drc-172-nf
     qty: 1
     name: Spire of Industry
     tcgplayer_product_id: "615211"
+    tcgplayer_sku_id: "8537993"
     finish: nf
   - display_key: mtg-drc-173-nf
     qty: 1
     name: Sulfur Falls
     tcgplayer_product_id: "615187"
+    tcgplayer_sku_id: "8537273"
     finish: nf
   - display_key: mtg-drc-177-nf
     qty: 1
     name: Temple of Epiphany
     tcgplayer_product_id: "615220"
+    tcgplayer_sku_id: "8538263"
     finish: nf
   - display_key: mtg-drc-180-nf
     qty: 1
     name: Treasure Vault
     tcgplayer_product_id: "615181"
+    tcgplayer_sku_id: "8537093"
     finish: nf
   - display_key: mtg-drc-183-nf
     qty: 1
     name: Vineglimmer Snarl
     tcgplayer_product_id: "615173"
+    tcgplayer_sku_id: "8536882"
     finish: nf
   - display_key: mtg-drc-184-nf
     qty: 1
     name: Yavimaya Coast
     tcgplayer_product_id: "615192"
+    tcgplayer_sku_id: "8537423"
     finish: nf
   - display_key: mtg-drc-39-nf
     qty: 1
     name: Reality Shift
     tcgplayer_product_id: "615155"
+    tcgplayer_sku_id: "8536342"
     finish: nf
   - display_key: mtg-drc-52-nf
     qty: 1
     name: Arcane Signet
     tcgplayer_product_id: "615180"
+    tcgplayer_sku_id: "8537063"
     finish: nf
   - display_key: mtg-drc-55-nf
     qty: 1
     name: Lightning Greaves
     tcgplayer_product_id: "615183"
+    tcgplayer_sku_id: "8537153"
     finish: nf
   - display_key: mtg-drc-57-nf
     qty: 1
     name: Sol Ring
     tcgplayer_product_id: "615157"
+    tcgplayer_sku_id: "8536402"
     finish: nf
   - display_key: mtg-drc-60-nf
     qty: 1
     name: Command Tower
     tcgplayer_product_id: "615149"
+    tcgplayer_sku_id: "8536162"
     finish: nf
   - display_key: mtg-drc-70-nf
     qty: 1
     name: Arcane Denial
     tcgplayer_product_id: "615186"
+    tcgplayer_sku_id: "8537243"
     finish: nf
   - display_key: mtg-drc-71-nf
     qty: 1
     name: Bespoke Battlewagon
     tcgplayer_product_id: "615207"
+    tcgplayer_sku_id: "8537873"
     finish: nf
   - display_key: mtg-drc-75-nf
     qty: 1
     name: Era of Innovation
     tcgplayer_product_id: "615227"
+    tcgplayer_sku_id: "8538473"
     finish: nf
   - display_key: mtg-drc-78-nf
     qty: 1
     name: Glimmer of Genius
     tcgplayer_product_id: "615215"
+    tcgplayer_sku_id: "8538113"
     finish: nf
   - display_key: mtg-drc-85-nf
     qty: 1
     name: Whirler Rogue
     tcgplayer_product_id: "615154"
+    tcgplayer_sku_id: "8536312"
     finish: nf
   - display_key: mtg-drc-104-nf
     qty: 1
     name: Loyal Apprentice
     tcgplayer_product_id: "615148"
+    tcgplayer_sku_id: "8536132"
     finish: nf
   - display_key: mtg-drc-106-nf
     qty: 1
     name: Reckless Fireweaver
     tcgplayer_product_id: "615226"
+    tcgplayer_sku_id: "8538443"
     finish: nf
   - display_key: mtg-drc-109-nf
     qty: 1
     name: Attune with Aether
     tcgplayer_product_id: "615210"
+    tcgplayer_sku_id: "8537963"
     finish: nf
   - display_key: mtg-drc-112-nf
     qty: 1
     name: Explosive Vegetation
     tcgplayer_product_id: "615185"
+    tcgplayer_sku_id: "8537213"
     finish: nf
   - display_key: mtg-drc-113-nf
     qty: 1
     name: "Peema Aether-Seer"
     tcgplayer_product_id: "615165"
+    tcgplayer_sku_id: "8536642"
     finish: nf
   - display_key: mtg-drc-114-nf
     qty: 1
     name: Servant of the Conduit
     tcgplayer_product_id: "615194"
+    tcgplayer_sku_id: "8537483"
     finish: nf
   - display_key: mtg-drc-118-nf
     qty: 1
     name: Rogue Refiner
     tcgplayer_product_id: "615146"
+    tcgplayer_sku_id: "8536072"
     finish: nf
   - display_key: mtg-drc-119-nf
     qty: 1
     name: "Saheeli, Sublime Artificer"
     tcgplayer_product_id: "615203"
+    tcgplayer_sku_id: "8537753"
     finish: nf
   - display_key: mtg-drc-122-nf
     qty: 1
     name: Whirler Virtuoso
     tcgplayer_product_id: "615150"
+    tcgplayer_sku_id: "8536192"
     finish: nf
   - display_key: mtg-drc-125-nf
     qty: 1
     name: "Commander's Sphere"
     tcgplayer_product_id: "615145"
+    tcgplayer_sku_id: "8536042"
     finish: nf
   - display_key: mtg-drc-128-nf
     qty: 1
     name: Decoction Module
     tcgplayer_product_id: "615217"
+    tcgplayer_sku_id: "8538173"
     finish: nf
   - display_key: mtg-drc-133-nf
     qty: 1
     name: Ornithopter of Paradise
     tcgplayer_product_id: "615168"
+    tcgplayer_sku_id: "8536732"
     finish: nf
   - display_key: mtg-drc-137-nf
     qty: 1
     name: Solar Transformer
     tcgplayer_product_id: "615175"
+    tcgplayer_sku_id: "8536942"
     finish: nf
   - display_key: mtg-drc-139-nf
     qty: 1
     name: "Soul-Guide Lantern"
     tcgplayer_product_id: "615199"
+    tcgplayer_sku_id: "8537633"
     finish: nf
   - display_key: mtg-drc-140-nf
     qty: 1
     name: Talisman of Curiosity
     tcgplayer_product_id: "615190"
+    tcgplayer_sku_id: "8537363"
     finish: nf
   - display_key: mtg-drc-145-nf
     qty: 1
     name: Aether Hub
     tcgplayer_product_id: "615196"
+    tcgplayer_sku_id: "8537543"
     finish: nf
   - display_key: mtg-drc-154-nf
     qty: 1
     name: Evolving Wilds
     tcgplayer_product_id: "615151"
+    tcgplayer_sku_id: "8536222"
     finish: nf
   - display_key: mtg-drc-157-nf
     qty: 1
     name: Frontier Bivouac
     tcgplayer_product_id: "615208"
+    tcgplayer_sku_id: "8537903"
     finish: nf
   - display_key: mtg-drc-166-nf
     qty: 1
     name: Path of Ancestry
     tcgplayer_product_id: "615172"
+    tcgplayer_sku_id: "8536852"
     finish: nf
   - display_key: mtg-drc-171-nf
     qty: 1
     name: Slagwoods Bridge
     tcgplayer_product_id: "615223"
+    tcgplayer_sku_id: "8538353"
     finish: nf
   - display_key: mtg-drc-175-nf
     qty: 1
     name: Tanglepool Bridge
     tcgplayer_product_id: "615158"
+    tcgplayer_sku_id: "8536432"
     finish: nf
   - display_key: mtg-dft-280-nf
     qty: 5
     name: Island
     tcgplayer_product_id: "610774"
+    tcgplayer_sku_id: "8491299"
     finish: nf
   - display_key: mtg-dft-286-nf
     qty: 5
     name: Mountain
     tcgplayer_product_id: "610777"
+    tcgplayer_sku_id: "8491479"
     finish: nf
   - display_key: mtg-dft-289-nf
     qty: 6
     name: Forest
     tcgplayer_product_id: "610771"
+    tcgplayer_sku_id: "8491119"
     finish: nf

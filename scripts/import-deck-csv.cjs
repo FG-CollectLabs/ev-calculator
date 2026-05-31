@@ -38,8 +38,12 @@ const SET_GROUP = {
   fic: 24220, fin: 24219,
   lcc: 23316, lci: 23312,
   ltc: 23071, ltr: 23019,
+  mkc: 23363, mkm: 23363,
+  otc: 23440, otj: 23439,
+  pip: 23337,
   tdc: 24234, tdm: 24232,
   tmc: 24496, tmt: 24495,
+  who: 23165,
 };
 const CACHE_DIR = process.env.TCGCSV_CACHE || 'C:/tmp/tcgcsv';
 
@@ -283,6 +287,7 @@ async function main() {
     lines.push(`    qty: ${c.qty}`);
     lines.push(`    name: ${quoteYAMLString(c.name)}`);
     lines.push(`    tcgplayer_product_id: "${c.tcgId}"`);
+    lines.push(`    tcgplayer_sku_id: "${c.skuId}"`);
     lines.push(`    finish: ${c.finish}`);
   }
 
