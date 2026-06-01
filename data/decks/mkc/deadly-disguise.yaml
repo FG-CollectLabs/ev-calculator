@@ -17,12 +17,14 @@ components:
     tcgplayer_product_id: "532995"
     tcgplayer_sku_id: "7672766"
     finish: f
+    rarity: m
   - display_key: mtg-mkc-5-f
     qty: 1
     name: "Duskana, the Rage Mother"
     tcgplayer_product_id: "535823"
     tcgplayer_sku_id: "7715898"
     finish: f
+    rarity: m
   # â”€â”€ Non-foil â€” MKC â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   - display_key: mtg-mkc-16-nf
     qty: 1
@@ -30,510 +32,595 @@ components:
     tcgplayer_product_id: "535814"
     tcgplayer_sku_id: "7715673"
     finish: nf
+    rarity: r
   - display_key: mtg-mkc-17-nf
     qty: 1
     name: Unexplained Absence
     tcgplayer_product_id: "535815"
     tcgplayer_sku_id: "7715698"
     finish: nf
+    rarity: r
   - display_key: mtg-mkc-18-nf
     qty: 1
     name: Veiled Ascension
     tcgplayer_product_id: "535816"
     tcgplayer_sku_id: "7715723"
     finish: nf
+    rarity: r
   - display_key: mtg-mkc-30-nf
     qty: 1
     name: Boltbender
     tcgplayer_product_id: "535817"
     tcgplayer_sku_id: "7715748"
     finish: nf
+    rarity: r
   - display_key: mtg-mkc-35-nf
     qty: 1
     name: Showstopping Surprise
     tcgplayer_product_id: "535822"
     tcgplayer_sku_id: "7715873"
     finish: nf
+    rarity: r
   - display_key: mtg-mkc-36-nf
     qty: 1
     name: "Tesak, Judith's Hellhound"
     tcgplayer_product_id: "535821"
     tcgplayer_sku_id: "7715848"
     finish: nf
+    rarity: r
   - display_key: mtg-mkc-37-nf
     qty: 1
     name: Experiment Twelve
     tcgplayer_product_id: "535819"
     tcgplayer_sku_id: "7715798"
     finish: nf
+    rarity: r
   - display_key: mtg-mkc-40-nf
     qty: 1
     name: Printlifter Ooze
     tcgplayer_product_id: "535818"
     tcgplayer_sku_id: "7715773"
     finish: nf
+    rarity: r
   - display_key: mtg-mkc-44-nf
     qty: 1
     name: Panoptic Projektor
     tcgplayer_product_id: "535820"
     tcgplayer_sku_id: "7715823"
     finish: nf
+    rarity: r
   - display_key: mtg-mkc-47-nf
     qty: 1
     name: Ransom Note
     tcgplayer_product_id: "535812"
     tcgplayer_sku_id: "7715623"
     finish: nf
+    rarity: r
   - display_key: mtg-mkc-53-nf
     qty: 1
     name: "Ugin's Mastery"
     tcgplayer_product_id: "535880"
     tcgplayer_sku_id: "7717323"
     finish: nf
+    rarity: r
   - display_key: mtg-mkc-56-nf
     qty: 1
     name: Austere Command
     tcgplayer_product_id: "535824"
     tcgplayer_sku_id: "7715923"
     finish: nf
+    rarity: r
   - display_key: mtg-mkc-61-nf
     qty: 1
     name: Dusk // Dawn
     tcgplayer_product_id: "535881"
     tcgplayer_sku_id: "7717348"
     finish: nf
+    rarity: r
   - display_key: mtg-mkc-63-nf
     qty: 1
     name: Exalted Angel
     tcgplayer_product_id: "535829"
     tcgplayer_sku_id: "7716048"
     finish: nf
+    rarity: r
   - display_key: mtg-mkc-65-nf
     qty: 1
     name: Fell the Mighty
     tcgplayer_product_id: "535825"
     tcgplayer_sku_id: "7715948"
     finish: nf
+    rarity: r
   - display_key: mtg-mkc-69-nf
     qty: 1
     name: Hidden Dragonslayer
     tcgplayer_product_id: "535830"
     tcgplayer_sku_id: "7716073"
     finish: nf
+    rarity: r
   - display_key: mtg-mkc-73-nf
     qty: 1
     name: Master of Pearls
     tcgplayer_product_id: "535831"
     tcgplayer_sku_id: "7716098"
     finish: nf
+    rarity: r
   - display_key: mtg-mkc-74-nf
     qty: 1
     name: Mastery of the Unseen
     tcgplayer_product_id: "535859"
     tcgplayer_sku_id: "7716798"
     finish: nf
+    rarity: r
   - display_key: mtg-mkc-75-nf
     qty: 1
     name: Mirror Entity
     tcgplayer_product_id: "535832"
     tcgplayer_sku_id: "7716123"
     finish: nf
+    rarity: r
   - display_key: mtg-mkc-78-nf
     qty: 1
     name: Path to Exile
     tcgplayer_product_id: "535864"
     tcgplayer_sku_id: "7716923"
     finish: nf
+    rarity: u
   - display_key: mtg-mkc-91-nf
     qty: 1
     name: Welcoming Vampire
     tcgplayer_product_id: "535833"
     tcgplayer_sku_id: "7716148"
     finish: nf
+    rarity: r
   - display_key: mtg-mkc-146-nf
     qty: 1
     name: "Akroma, Angel of Fury"
     tcgplayer_product_id: "535834"
     tcgplayer_sku_id: "7716173"
     finish: nf
+    rarity: m
   - display_key: mtg-mkc-147-nf
     qty: 1
     name: Ashcloud Phoenix
     tcgplayer_product_id: "535835"
     tcgplayer_sku_id: "7716198"
     finish: nf
+    rarity: m
   - display_key: mtg-mkc-149-nf
     qty: 1
     name: Chaos Warp
     tcgplayer_product_id: "535862"
     tcgplayer_sku_id: "7716873"
     finish: nf
+    rarity: r
   - display_key: mtg-mkc-155-nf
     qty: 1
     name: Imperial Hellkite
     tcgplayer_product_id: "535836"
     tcgplayer_sku_id: "7716223"
     finish: nf
+    rarity: r
   - display_key: mtg-mkc-156-nf
     qty: 1
     name: "Jeska's Will"
     tcgplayer_product_id: "535882"
     tcgplayer_sku_id: "7717373"
     finish: nf
+    rarity: r
   - display_key: mtg-mkc-158-nf
     qty: 1
     name: "Neheb, the Eternal"
     tcgplayer_product_id: "535837"
     tcgplayer_sku_id: "7716248"
     finish: nf
+    rarity: m
   - display_key: mtg-mkc-160-nf
     qty: 1
     name: Scourge of the Throne
     tcgplayer_product_id: "535838"
     tcgplayer_sku_id: "7716273"
     finish: nf
+    rarity: r
   - display_key: mtg-mkc-165-nf
     qty: 1
     name: Ainok Survivalist
     tcgplayer_product_id: "535854"
     tcgplayer_sku_id: "7716673"
     finish: nf
+    rarity: u
   - display_key: mtg-mkc-166-nf
     qty: 1
     name: Beast Whisperer
     tcgplayer_product_id: "535839"
     tcgplayer_sku_id: "7716298"
     finish: nf
+    rarity: r
   - display_key: mtg-mkc-167-nf
     qty: 1
     name: Broodhatch Nantuko
     tcgplayer_product_id: "535855"
     tcgplayer_sku_id: "7716698"
     finish: nf
+    rarity: u
   - display_key: mtg-mkc-168-nf
     qty: 1
     name: Deathmist Raptor
     tcgplayer_product_id: "535840"
     tcgplayer_sku_id: "7716323"
     finish: nf
+    rarity: m
   - display_key: mtg-mkc-169-nf
     qty: 1
     name: Den Protector
     tcgplayer_product_id: "535841"
     tcgplayer_sku_id: "7716348"
     finish: nf
+    rarity: r
   - display_key: mtg-mkc-171-nf
     qty: 1
     name: Hooded Hydra
     tcgplayer_product_id: "535842"
     tcgplayer_sku_id: "7716373"
     finish: nf
+    rarity: m
   - display_key: mtg-mkc-175-nf
     qty: 1
     name: Krosan Cloudscraper
     tcgplayer_product_id: "535843"
     tcgplayer_sku_id: "7716398"
     finish: nf
+    rarity: r
   - display_key: mtg-mkc-176-nf
     qty: 1
     name: Krosan Colossus
     tcgplayer_product_id: "535844"
     tcgplayer_sku_id: "7716423"
     finish: nf
+    rarity: r
   - display_key: mtg-mkc-177-nf
     qty: 1
     name: Nantuko Vigilante
     tcgplayer_product_id: "535856"
     tcgplayer_sku_id: "7716723"
     finish: nf
+    rarity: c
   - display_key: mtg-mkc-178-nf
     qty: 1
     name: "Nature's Lore"
     tcgplayer_product_id: "535827"
     tcgplayer_sku_id: "7715998"
     finish: nf
+    rarity: u
   - display_key: mtg-mkc-179-nf
     qty: 1
     name: Obscuring Aether
     tcgplayer_product_id: "535883"
     tcgplayer_sku_id: "7717398"
     finish: nf
+    rarity: r
   - display_key: mtg-mkc-180-nf
     qty: 1
     name: Ohran Frostfang
     tcgplayer_product_id: "535845"
     tcgplayer_sku_id: "7716448"
     finish: nf
+    rarity: r
   - display_key: mtg-mkc-181-nf
     qty: 1
     name: Return of the Wildspeaker
     tcgplayer_product_id: "535863"
     tcgplayer_sku_id: "7716898"
     finish: nf
+    rarity: r
   - display_key: mtg-mkc-182-nf
     qty: 1
     name: Root Elemental
     tcgplayer_product_id: "535846"
     tcgplayer_sku_id: "7716473"
     finish: nf
+    rarity: r
   - display_key: mtg-mkc-183-nf
     qty: 1
     name: Sakura-Tribe Elder
     tcgplayer_product_id: "535857"
     tcgplayer_sku_id: "7716748"
     finish: nf
+    rarity: c
   - display_key: mtg-mkc-184-nf
     qty: 1
     name: Salt Road Ambushers
     tcgplayer_product_id: "535858"
     tcgplayer_sku_id: "7716773"
     finish: nf
+    rarity: u
   - display_key: mtg-mkc-185-nf
     qty: 1
     name: "Saryth, the Viper's Fang"
     tcgplayer_product_id: "535884"
     tcgplayer_sku_id: "7717423"
     finish: nf
+    rarity: r
   - display_key: mtg-mkc-186-nf
     qty: 1
     name: Seedborn Muse
     tcgplayer_product_id: "535847"
     tcgplayer_sku_id: "7716498"
     finish: nf
+    rarity: r
   - display_key: mtg-mkc-187-nf
     qty: 1
     name: Temur War Shaman
     tcgplayer_product_id: "535848"
     tcgplayer_sku_id: "7716523"
     finish: nf
+    rarity: r
   - display_key: mtg-mkc-188-nf
     qty: 1
     name: Thelonite Hermit
     tcgplayer_product_id: "535849"
     tcgplayer_sku_id: "7716548"
     finish: nf
+    rarity: r
   - display_key: mtg-mkc-189-nf
     qty: 1
     name: Three Visits
     tcgplayer_product_id: "535828"
     tcgplayer_sku_id: "7716023"
     finish: nf
+    rarity: u
   - display_key: mtg-mkc-191-nf
     qty: 1
     name: "Toski, Bearer of Secrets"
     tcgplayer_product_id: "535850"
     tcgplayer_sku_id: "7716573"
     finish: nf
+    rarity: r
   - display_key: mtg-mkc-192-nf
     qty: 1
     name: Trail of Mystery
     tcgplayer_product_id: "535860"
     tcgplayer_sku_id: "7716823"
     finish: nf
+    rarity: r
   - display_key: mtg-mkc-194-nf
     qty: 1
     name: Whisperwood Elemental
     tcgplayer_product_id: "535851"
     tcgplayer_sku_id: "7716598"
     finish: nf
+    rarity: m
   - display_key: mtg-mkc-195-nf
     qty: 1
     name: Wild Growth
     tcgplayer_product_id: "535861"
     tcgplayer_sku_id: "7716848"
     finish: nf
+    rarity: c
   - display_key: mtg-mkc-197-nf
     qty: 1
     name: "Yedora, Grave Gardener"
     tcgplayer_product_id: "535852"
     tcgplayer_sku_id: "7716623"
     finish: nf
+    rarity: r
   - display_key: mtg-mkc-204-nf
     qty: 1
     name: Decimate
     tcgplayer_product_id: "535826"
     tcgplayer_sku_id: "7715973"
     finish: nf
+    rarity: r
   - display_key: mtg-mkc-219-nf
     qty: 1
     name: Sidar Kondo of Jamuraa
     tcgplayer_product_id: "535853"
     tcgplayer_sku_id: "7716648"
     finish: nf
+    rarity: m
   - display_key: mtg-mkc-223-nf
     qty: 1
     name: Arcane Signet
     tcgplayer_product_id: "535604"
     tcgplayer_sku_id: "7710473"
     finish: nf
+    rarity: c
   - display_key: mtg-mkc-231-nf
     qty: 1
     name: "Lifecrafter's Bestiary"
     tcgplayer_product_id: "535865"
     tcgplayer_sku_id: "7716948"
     finish: nf
+    rarity: r
   - display_key: mtg-mkc-235-nf
     qty: 1
     name: Scroll of Fate
     tcgplayer_product_id: "535866"
     tcgplayer_sku_id: "7716973"
     finish: nf
+    rarity: r
   - display_key: mtg-mkc-237-nf
     qty: 1
     name: Sol Ring
     tcgplayer_product_id: "535608"
     tcgplayer_sku_id: "7710573"
     finish: nf
+    rarity: u
   - display_key: mtg-mkc-251-nf
     qty: 1
     name: Boros Garrison
     tcgplayer_product_id: "535623"
     tcgplayer_sku_id: "7710948"
     finish: nf
+    rarity: u
   - display_key: mtg-mkc-252-nf
     qty: 1
     name: Canopy Vista
     tcgplayer_product_id: "535759"
     tcgplayer_sku_id: "7714298"
     finish: nf
+    rarity: r
   - display_key: mtg-mkc-255-nf
     qty: 1
     name: Cinder Glade
     tcgplayer_product_id: "535867"
     tcgplayer_sku_id: "7716998"
     finish: nf
+    rarity: r
   - display_key: mtg-mkc-256-nf
     qty: 1
     name: Command Tower
     tcgplayer_product_id: "535624"
     tcgplayer_sku_id: "7710973"
     finish: nf
+    rarity: c
   - display_key: mtg-mkc-260-nf
     qty: 1
     name: Exotic Orchard
     tcgplayer_product_id: "535612"
     tcgplayer_sku_id: "7710673"
     finish: nf
+    rarity: r
   - display_key: mtg-mkc-262-nf
     qty: 1
     name: Fortified Village
     tcgplayer_product_id: "535868"
     tcgplayer_sku_id: "7717023"
     finish: nf
+    rarity: r
   - display_key: mtg-mkc-263-nf
     qty: 1
     name: Furycalm Snarl
     tcgplayer_product_id: "535613"
     tcgplayer_sku_id: "7710698"
     finish: nf
+    rarity: r
   - display_key: mtg-mkc-264-nf
     qty: 1
     name: Game Trail
     tcgplayer_product_id: "535869"
     tcgplayer_sku_id: "7717048"
     finish: nf
+    rarity: r
   - display_key: mtg-mkc-265-nf
     qty: 1
     name: Gruul Turf
     tcgplayer_product_id: "535876"
     tcgplayer_sku_id: "7717223"
     finish: nf
+    rarity: u
   - display_key: mtg-mkc-268-nf
     qty: 1
     name: Jungle Shrine
     tcgplayer_product_id: "535877"
     tcgplayer_sku_id: "7717248"
     finish: nf
+    rarity: u
   - display_key: mtg-mkc-269-nf
     qty: 1
     name: Kessig Wolf Run
     tcgplayer_product_id: "535870"
     tcgplayer_sku_id: "7717073"
     finish: nf
+    rarity: r
   - display_key: mtg-mkc-271-nf
     qty: 1
     name: Krosan Verge
     tcgplayer_product_id: "535785"
     tcgplayer_sku_id: "7714948"
     finish: nf
+    rarity: u
   - display_key: mtg-mkc-274-nf
     qty: 1
     name: Mossfire Valley
     tcgplayer_product_id: "535871"
     tcgplayer_sku_id: "7717098"
     finish: nf
+    rarity: r
   - display_key: mtg-mkc-275-nf
     qty: 1
     name: Mosswort Bridge
     tcgplayer_product_id: "535872"
     tcgplayer_sku_id: "7717123"
     finish: nf
+    rarity: r
   - display_key: mtg-mkc-285-nf
     qty: 1
     name: Sacred Peaks
     tcgplayer_product_id: "535878"
     tcgplayer_sku_id: "7717273"
     finish: nf
+    rarity: c
   - display_key: mtg-mkc-286-nf
     qty: 1
     name: Scattered Groves
     tcgplayer_product_id: "535767"
     tcgplayer_sku_id: "7714498"
     finish: nf
+    rarity: r
   - display_key: mtg-mkc-290-nf
     qty: 1
     name: Selesnya Sanctuary
     tcgplayer_product_id: "535799"
     tcgplayer_sku_id: "7715298"
     finish: nf
+    rarity: u
   - display_key: mtg-mkc-291-nf
     qty: 1
     name: Sheltered Thicket
     tcgplayer_product_id: "535873"
     tcgplayer_sku_id: "7717148"
     finish: nf
+    rarity: r
   - display_key: mtg-mkc-292-nf
     qty: 1
     name: Shrine of the Forsaken Gods
     tcgplayer_product_id: "535874"
     tcgplayer_sku_id: "7717173"
     finish: nf
+    rarity: r
   - display_key: mtg-mkc-297-nf
     qty: 1
     name: Sungrass Prairie
     tcgplayer_product_id: "535774"
     tcgplayer_sku_id: "7714673"
     finish: nf
+    rarity: r
   - display_key: mtg-mkc-301-nf
     qty: 1
     name: Temple of Abandon
     tcgplayer_product_id: "535875"
     tcgplayer_sku_id: "7717198"
     finish: nf
+    rarity: r
   - display_key: mtg-mkc-304-nf
     qty: 1
     name: Temple of Plenty
     tcgplayer_product_id: "535782"
     tcgplayer_sku_id: "7714873"
     finish: nf
+    rarity: r
   - display_key: mtg-mkc-305-nf
     qty: 1
     name: Temple of the False God
     tcgplayer_product_id: "535629"
     tcgplayer_sku_id: "7711098"
     finish: nf
+    rarity: u
   - display_key: mtg-mkc-306-nf
     qty: 1
     name: Temple of Triumph
     tcgplayer_product_id: "535618"
     tcgplayer_sku_id: "7710823"
     finish: nf
+    rarity: r
   - display_key: mtg-mkc-311-nf
     qty: 1
     name: Zoetic Cavern
     tcgplayer_product_id: "535879"
     tcgplayer_sku_id: "7717298"
     finish: nf
+    rarity: u
   # â”€â”€ Non-foil â€” MKM â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   - display_key: mtg-mkm-169-nf
     qty: 1
@@ -541,45 +628,53 @@ components:
     tcgplayer_product_id: "535841"
     tcgplayer_sku_id: "7678678"
     finish: nf
+    rarity: c
   - display_key: mtg-mkm-258-nf
     qty: 1
     name: Branch of Vitu-Ghazi
     tcgplayer_product_id: "535802"
     tcgplayer_sku_id: "7665238"
     finish: nf
+    rarity: u
   - display_key: mtg-mkm-277-nf
     qty: 2
     name: Plains
     tcgplayer_product_id: "535804"
     tcgplayer_sku_id: "7674522"
     finish: nf
+    rarity: c
   - display_key: mtg-mkm-278-nf
     qty: 2
     name: Plains
     tcgplayer_product_id: "535616"
     tcgplayer_sku_id: "7674442"
     finish: nf
+    rarity: c
   - display_key: mtg-mkm-283-nf
     qty: 2
     name: Mountain
     tcgplayer_product_id: "535797"
     tcgplayer_sku_id: "7674607"
     finish: nf
+    rarity: c
   - display_key: mtg-mkm-284-nf
     qty: 1
     name: Mountain
     tcgplayer_product_id: "535627"
     tcgplayer_sku_id: "7674687"
     finish: nf
+    rarity: c
   - display_key: mtg-mkm-285-nf
     qty: 2
     name: Forest
     tcgplayer_product_id: "535878"
     tcgplayer_sku_id: "7674197"
     finish: nf
+    rarity: c
   - display_key: mtg-mkm-286-nf
     qty: 2
     name: Forest
     tcgplayer_product_id: "535767"
     tcgplayer_sku_id: "7674112"
     finish: nf
+    rarity: c

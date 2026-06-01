@@ -14,6 +14,7 @@ components:
     tcgplayer_product_id: "498468"
     tcgplayer_sku_id: "7227446"
     finish: f
+    rarity: m
     note: commander
   - display_key: mtg-ltc-8-f
     qty: 1
@@ -21,502 +22,588 @@ components:
     tcgplayer_product_id: "499735"
     tcgplayer_sku_id: "7207086"
     finish: f
+    rarity: m
   - display_key: mtg-ltc-19-nf
     qty: 1
     name: Corsairs of Umbar
     tcgplayer_product_id: "499726"
     tcgplayer_sku_id: "7206726"
     finish: nf
+    rarity: r
   - display_key: mtg-ltc-22-nf
     qty: 1
     name: Monstrosity of the Lake
     tcgplayer_product_id: "499723"
     tcgplayer_sku_id: "7206606"
     finish: nf
+    rarity: r
   - display_key: mtg-ltc-24-nf
     qty: 1
     name: Subjugate the Hobbits
     tcgplayer_product_id: "499724"
     tcgplayer_sku_id: "7206646"
     finish: nf
+    rarity: r
   - display_key: mtg-ltc-29-nf
     qty: 1
     name: "Shelob, Dread Weaver"
     tcgplayer_product_id: "499742"
     tcgplayer_sku_id: "7207366"
     finish: nf
+    rarity: r
   - display_key: mtg-ltc-31-nf
     qty: 1
     name: Cavern-Hoard Dragon
     tcgplayer_product_id: "499732"
     tcgplayer_sku_id: "7206966"
     finish: nf
+    rarity: r
   - display_key: mtg-ltc-33-nf
     qty: 1
     name: Orcish Siegemaster
     tcgplayer_product_id: "499698"
     tcgplayer_sku_id: "7205606"
     finish: nf
+    rarity: r
   - display_key: mtg-ltc-34-nf
     qty: 1
     name: Rampaging War Mammoth
     tcgplayer_product_id: "499721"
     tcgplayer_sku_id: "7206526"
     finish: nf
+    rarity: r
   - display_key: mtg-ltc-46-nf
     qty: 1
     name: The Balrog of Moria
     tcgplayer_product_id: "500087"
     tcgplayer_sku_id: "7218719"
     finish: nf
+    rarity: r
   - display_key: mtg-ltc-57-nf
     qty: 1
     name: "Gríma, Saruman's Footman"
     tcgplayer_product_id: "499749"
     tcgplayer_sku_id: "7207646"
     finish: nf
+    rarity: r
   - display_key: mtg-ltc-58-nf
     qty: 1
     name: In the Darkness Bind Them
     tcgplayer_product_id: "499606"
     tcgplayer_sku_id: "7201931"
     finish: nf
+    rarity: r
   - display_key: mtg-ltc-59-nf
     qty: 1
     name: Lidless Gaze
     tcgplayer_product_id: "499604"
     finish: nf
+    rarity: r
   - display_key: mtg-ltc-60-nf
     qty: 1
     name: Lord of the Nazgûl
     tcgplayer_product_id: "499605"
     tcgplayer_sku_id: "7201891"
     finish: nf
+    rarity: r
   - display_key: mtg-ltc-63-nf
     qty: 1
     name: Moria Scavenger
     tcgplayer_product_id: "499603"
     tcgplayer_sku_id: "7201811"
     finish: nf
+    rarity: r
   - display_key: mtg-ltc-70-nf
     qty: 1
     name: Summons of Saruman
     tcgplayer_product_id: "499600"
     tcgplayer_sku_id: "7201761"
     finish: nf
+    rarity: r
   - display_key: mtg-ltc-72-nf
     qty: 1
     name: "Too Greedily, Too Deep"
     tcgplayer_product_id: "499599"
     tcgplayer_sku_id: "7201721"
     finish: nf
+    rarity: r
   - display_key: mtg-ltc-74-nf
     qty: 1
     name: Wake the Dragon
     tcgplayer_product_id: "499707"
     tcgplayer_sku_id: "7205966"
     finish: nf
+    rarity: r
   - display_key: mtg-ltc-79-nf
     qty: 1
     name: Relic of Sauron
     tcgplayer_product_id: "499597"
     tcgplayer_sku_id: "7201676"
     finish: nf
+    rarity: r
   - display_key: mtg-ltc-80-nf
     qty: 1
     name: The Black Gate
     tcgplayer_product_id: "499595"
     tcgplayer_sku_id: "7201631"
     finish: nf
+    rarity: r
   - display_key: mtg-ltc-199-nf
     qty: 1
     name: Decree of Pain
     tcgplayer_product_id: "499607"
     tcgplayer_sku_id: "7201971"
     finish: nf
+    rarity: r
   - display_key: mtg-ltc-202-nf
     qty: 1
     name: Languish
     tcgplayer_product_id: "499608"
     tcgplayer_sku_id: "7202011"
     finish: nf
+    rarity: r
   - display_key: mtg-ltc-203-nf
     qty: 1
     name: Living Death
     tcgplayer_product_id: "499609"
     tcgplayer_sku_id: "7202051"
     finish: nf
+    rarity: r
   - display_key: mtg-ltc-206-nf
     qty: 1
     name: Reanimate
     tcgplayer_product_id: "499611"
     tcgplayer_sku_id: "7202131"
     finish: nf
+    rarity: r
   - display_key: mtg-ltc-211-nf
     qty: 1
     name: Blasphemous Act
     tcgplayer_product_id: "499613"
     tcgplayer_sku_id: "7202211"
     finish: nf
+    rarity: r
   - display_key: mtg-ltc-219-nf
     qty: 1
     name: Goblin Dark-Dwellers
     tcgplayer_product_id: "499626"
     tcgplayer_sku_id: "7202731"
     finish: nf
+    rarity: r
   - display_key: mtg-ltc-223-nf
     qty: 1
     name: Inferno Titan
     tcgplayer_product_id: "499628"
     finish: nf
+    rarity: m
   - display_key: mtg-ltc-224-nf
     qty: 1
     name: Knollspine Dragon
     tcgplayer_product_id: "499630"
     tcgplayer_sku_id: "7202891"
     finish: nf
+    rarity: r
   - display_key: mtg-ltc-225-nf
     qty: 1
     name: Scourge of the Throne
     tcgplayer_product_id: "499632"
     tcgplayer_sku_id: "7202971"
     finish: nf
+    rarity: m
   - display_key: mtg-ltc-228-nf
     qty: 1
     name: Siege-Gang Commander
     tcgplayer_product_id: "499634"
     tcgplayer_sku_id: "7203051"
     finish: nf
+    rarity: r
   - display_key: mtg-ltc-230-nf
     qty: 1
     name: Treasure Nabber
     tcgplayer_product_id: "499635"
     tcgplayer_sku_id: "7203091"
     finish: nf
+    rarity: r
   - display_key: mtg-ltc-268-nf
     qty: 1
     name: Hostage Taker
     tcgplayer_product_id: "499637"
     tcgplayer_sku_id: "7203171"
     finish: nf
+    rarity: r
   - display_key: mtg-ltc-270-nf
     qty: 1
     name: Notion Thief
     tcgplayer_product_id: "499638"
     tcgplayer_sku_id: "7203211"
     finish: nf
+    rarity: r
   - display_key: mtg-ltc-299-nf
     qty: 1
     name: Choked Estuary
     tcgplayer_product_id: "499670"
     tcgplayer_sku_id: "7204486"
     finish: nf
+    rarity: r
   - display_key: mtg-ltc-303-nf
     qty: 1
     name: Desolate Lighthouse
     tcgplayer_product_id: "499672"
     finish: nf
+    rarity: r
   - display_key: mtg-ltc-304-nf
     qty: 1
     name: Dragonskull Summit
     tcgplayer_product_id: "499678"
     tcgplayer_sku_id: "7204806"
     finish: nf
+    rarity: r
   - display_key: mtg-ltc-305-nf
     qty: 1
     name: Drowned Catacomb
     tcgplayer_product_id: "499679"
     tcgplayer_sku_id: "7204846"
     finish: nf
+    rarity: r
   - display_key: mtg-ltc-310-nf
     qty: 1
     name: Foreboding Ruins
     tcgplayer_product_id: "499680"
     tcgplayer_sku_id: "7204886"
     finish: nf
+    rarity: r
   - display_key: mtg-ltc-312-nf
     qty: 1
     name: Frostboil Snarl
     tcgplayer_product_id: "499683"
     tcgplayer_sku_id: "7205006"
     finish: nf
+    rarity: r
   - display_key: mtg-ltc-332-nf
     qty: 1
     name: Smoldering Marsh
     tcgplayer_product_id: "499684"
     tcgplayer_sku_id: "7205046"
     finish: nf
+    rarity: r
   - display_key: mtg-ltc-333-nf
     qty: 1
     name: Sulfur Falls
     tcgplayer_product_id: "499687"
     tcgplayer_sku_id: "7205166"
     finish: nf
+    rarity: r
   - display_key: mtg-ltc-334-nf
     qty: 1
     name: Sulfurous Springs
     tcgplayer_product_id: "499691"
     tcgplayer_sku_id: "7205326"
     finish: nf
+    rarity: r
   - display_key: mtg-ltc-335-nf
     qty: 1
     name: Sunken Hollow
     tcgplayer_product_id: "499693"
     tcgplayer_sku_id: "7205406"
     finish: nf
+    rarity: r
   - display_key: mtg-ltc-342-nf
     qty: 1
     name: Underground River
     tcgplayer_product_id: "499695"
     tcgplayer_sku_id: "7205486"
     finish: nf
+    rarity: r
   - display_key: mtg-ltr-74-nf
     qty: 1
     name: Treason of Isengard
     tcgplayer_product_id: "498392"
     tcgplayer_sku_id: "7171040"
     finish: nf
+    rarity: c
   - display_key: mtg-ltr-77-nf
     qty: 1
     name: Bitter Downfall
     tcgplayer_product_id: "498823"
     finish: nf
+    rarity: u
   - display_key: mtg-ltr-111-nf
     qty: 1
     name: Troll of Khazad-dûm
     tcgplayer_product_id: "498752"
     tcgplayer_sku_id: "7185050"
     finish: nf
+    rarity: c
   - display_key: mtg-ltr-113-nf
     qty: 1
     name: Voracious Fell Beast
     tcgplayer_product_id: "498394"
     finish: nf
+    rarity: u
   - display_key: mtg-ltr-126-nf
     qty: 1
     name: Fiery Inscription
     tcgplayer_product_id: "499208"
     tcgplayer_sku_id: "7189562"
     finish: nf
+    rarity: u
   - display_key: mtg-ltr-134-nf
     qty: 1
     name: "Grishnákh, Brash Instigator"
     tcgplayer_product_id: "498336"
     finish: nf
+    rarity: u
   - display_key: mtg-ltc-184-nf
     qty: 1
     name: Arcane Denial
     tcgplayer_product_id: "499644"
     tcgplayer_sku_id: "7203446"
     finish: nf
+    rarity: c
   - display_key: mtg-ltc-185-nf
     qty: 1
     name: Boon of the Wish-Giver
     tcgplayer_product_id: "499614"
     tcgplayer_sku_id: "7202251"
     finish: nf
+    rarity: u
   - display_key: mtg-ltc-187-nf
     qty: 1
     name: Consider
     tcgplayer_product_id: "499647"
     tcgplayer_sku_id: "7203566"
     finish: nf
+    rarity: c
   - display_key: mtg-ltc-188-nf
     qty: 1
     name: Deep Analysis
     tcgplayer_product_id: "499618"
     finish: nf
+    rarity: c
   - display_key: mtg-ltc-190-nf
     qty: 1
     name: Fact or Fiction
     tcgplayer_product_id: "499649"
     tcgplayer_sku_id: "7203646"
     finish: nf
+    rarity: u
   - display_key: mtg-ltc-191-nf
     qty: 1
     name: Forbidden Alchemy
     tcgplayer_product_id: "499650"
     tcgplayer_sku_id: "7203686"
     finish: nf
+    rarity: c
   - display_key: mtg-ltc-200-nf
     qty: 1
     name: Feed the Swarm
     tcgplayer_product_id: "498318"
     tcgplayer_sku_id: "7165435"
     finish: nf
+    rarity: c
   - display_key: mtg-ltc-204-nf
     qty: 1
     name: Merciless Executioner
     tcgplayer_product_id: "499639"
     tcgplayer_sku_id: "7203251"
     finish: nf
+    rarity: u
   - display_key: mtg-ltc-207-nf
     qty: 1
     name: Revenge of Ravens
     tcgplayer_product_id: "499656"
     tcgplayer_sku_id: "7203926"
     finish: nf
+    rarity: u
   - display_key: mtg-ltc-210-nf
     qty: 1
     name: Anger
     tcgplayer_product_id: "499640"
     tcgplayer_sku_id: "7203286"
     finish: nf
+    rarity: u
   - display_key: mtg-ltc-215-nf
     qty: 1
     name: Faithless Looting
     tcgplayer_product_id: "499620"
     tcgplayer_sku_id: "7202491"
     finish: nf
+    rarity: c
   - display_key: mtg-ltr-216-nf
     qty: 1
     name: The Mouth of Sauron
     tcgplayer_product_id: "499215"
     finish: nf
+    rarity: u
   - display_key: mtg-ltc-218-nf
     qty: 1
     name: Goblin Cratermaker
     tcgplayer_product_id: "499642"
     tcgplayer_sku_id: "7203366"
     finish: nf
+    rarity: u
   - display_key: mtg-ltc-220-nf
     qty: 1
     name: Guttersnipe
     tcgplayer_product_id: "499643"
     tcgplayer_sku_id: "7203406"
     finish: nf
+    rarity: u
   - display_key: mtg-ltc-227-nf
     qty: 1
     name: Shiny Impetus
     tcgplayer_product_id: "499659"
     tcgplayer_sku_id: "7204046"
     finish: nf
+    rarity: u
   - display_key: mtg-ltc-229-nf
     qty: 1
     name: Thrill of Possibility
     tcgplayer_product_id: "499652"
     tcgplayer_sku_id: "7203766"
     finish: nf
+    rarity: c
   - display_key: mtg-ltc-266-nf
     qty: 1
     name: Extract from Darkness
     tcgplayer_product_id: "499622"
     tcgplayer_sku_id: "7202571"
     finish: nf
+    rarity: u
   - display_key: mtg-ltc-273-nf
     qty: 1
     name: Arcane Signet
     tcgplayer_product_id: "499562"
     tcgplayer_sku_id: "7200490"
     finish: nf
+    rarity: c
   - display_key: mtg-ltc-274-nf
     qty: 1
     name: Basalt Monolith
     tcgplayer_product_id: "499661"
     tcgplayer_sku_id: "7204126"
     finish: nf
+    rarity: u
   - display_key: mtg-ltc-276-nf
     qty: 1
     name: "Commander's Sphere"
     tcgplayer_product_id: "499563"
     tcgplayer_sku_id: "7200530"
     finish: nf
+    rarity: c
   - display_key: mtg-ltc-278-nf
     qty: 1
     name: Everflowing Chalice
     tcgplayer_product_id: "499662"
     tcgplayer_sku_id: "7204166"
     finish: nf
+    rarity: u
   - display_key: mtg-ltc-282-nf
     qty: 1
     name: Mind Stone
     tcgplayer_product_id: "498351"
     tcgplayer_sku_id: "7167885"
     finish: nf
+    rarity: u
   - display_key: mtg-ltc-284-nf
     qty: 1
     name: Sol Ring
     tcgplayer_product_id: "488278"
     tcgplayer_sku_id: "7029207"
     finish: nf
+    rarity: u
   - display_key: mtg-ltc-293-nf
     qty: 1
     name: Worn Powerstone
     tcgplayer_product_id: "499664"
     tcgplayer_sku_id: "7204246"
     finish: nf
+    rarity: u
   - display_key: mtg-ltc-301-nf
     qty: 1
     name: Command Tower
     tcgplayer_product_id: "499589"
     tcgplayer_sku_id: "7201391"
     finish: nf
+    rarity: c
   - display_key: mtg-ltc-302-nf
     qty: 1
     name: Crumbling Necropolis
     tcgplayer_product_id: "499699"
     tcgplayer_sku_id: "7205646"
     finish: nf
+    rarity: u
   - display_key: mtg-ltc-306-nf
     qty: 1
     name: Evolving Wilds
     tcgplayer_product_id: "498317"
     finish: nf
+    rarity: c
   - display_key: mtg-ltc-308-nf
     qty: 1
     name: Field of Ruin
     tcgplayer_product_id: "498410"
     tcgplayer_sku_id: "7172410"
     finish: nf
+    rarity: u
   - display_key: mtg-ltc-322-nf
     qty: 1
     name: Path of Ancestry
     tcgplayer_product_id: "499591"
     tcgplayer_sku_id: "7201471"
     finish: nf
+    rarity: c
   - display_key: mtg-ltc-326-nf
     qty: 1
     name: "Rogue's Passage"
     tcgplayer_product_id: "499592"
     tcgplayer_sku_id: "7201511"
     finish: nf
+    rarity: u
   - display_key: mtg-ltc-337-nf
     qty: 1
     name: Terramorphic Expanse
     tcgplayer_product_id: "499703"
     tcgplayer_sku_id: "7205806"
     finish: nf
+    rarity: c
   - display_key: mtg-ltr-264-nf
     qty: 3
     name: Island
     tcgplayer_product_id: "498402"
     tcgplayer_sku_id: "7171810"
     finish: nf
+    rarity: c
   - display_key: mtg-ltr-265-nf
     qty: 3
     name: Island
     tcgplayer_product_id: "498401"
     tcgplayer_sku_id: "7171730"
     finish: nf
+    rarity: c
   - display_key: mtg-ltr-266-nf
     qty: 3
     name: Swamp
     tcgplayer_product_id: "498408"
     finish: nf
+    rarity: c
   - display_key: mtg-ltr-267-nf
     qty: 3
     name: Swamp
     tcgplayer_product_id: "498407"
     finish: nf
+    rarity: c
   - display_key: mtg-ltr-268-nf
     qty: 4
     name: Mountain
     tcgplayer_product_id: "498404"
     tcgplayer_sku_id: "7171970"
     finish: nf
+    rarity: c
   - display_key: mtg-ltr-269-nf
     qty: 3
     name: Mountain
     tcgplayer_product_id: "498403"
     tcgplayer_sku_id: "7171890"
     finish: nf
+    rarity: c

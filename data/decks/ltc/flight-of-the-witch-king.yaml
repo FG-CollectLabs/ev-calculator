@@ -10,28 +10,34 @@ components:
     name: Call Forth the Tempest
     tcgplayer_product_id: "517252"
     finish: f
+    rarity: r
   - display_key: mtg-ltc-510-f
     qty: 1
     name: Nazgûl Battle-Mace
     tcgplayer_product_id: "517259"
     finish: f
+    rarity: r
   - display_key: mtg-ltc-511-f
     qty: 1
     name: "Witch-king, Sky Scourge"
     tcgplayer_product_id: "517261"
     finish: f
+    rarity: m
   - display_key: mtg-ltc-512-f
     qty: 1
     name: Mordor on the March
     tcgplayer_product_id: "517258"
     finish: f
+    rarity: r
   - display_key: mtg-ltc-513-f
     qty: 1
     name: Fell Beast of Mordor
     tcgplayer_product_id: "517253"
     finish: f
+    rarity: r
   - display_key: mtg-ltc-514-f
     qty: 1
     name: "Minas Morgul, Dark Fortress"
     tcgplayer_product_id: "517257"
     finish: f
+    rarity: r

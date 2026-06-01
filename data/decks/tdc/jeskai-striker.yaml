@@ -14,6 +14,7 @@ components:
     tcgplayer_product_id: "623914"
     tcgplayer_sku_id: "8613814"
     finish: f
+    rarity: m
     note: commander
   - display_key: mtg-tdc-2-f
     qty: 1
@@ -21,529 +22,620 @@ components:
     tcgplayer_product_id: "623909"
     tcgplayer_sku_id: "8613514"
     finish: f
+    rarity: m
   - display_key: mtg-tdc-12-nf
     qty: 1
     name: Aligned Heart
     tcgplayer_product_id: "624145"
     tcgplayer_sku_id: "8620815"
     finish: nf
+    rarity: r
   - display_key: mtg-tdc-16-nf
     qty: 1
     name: Tempest Technique
     tcgplayer_product_id: "624146"
     tcgplayer_sku_id: "8620875"
     finish: nf
+    rarity: r
   - display_key: mtg-tdc-18-nf
     qty: 1
     name: Adaptive Training Post
     tcgplayer_product_id: "624153"
     finish: nf
+    rarity: r
   - display_key: mtg-tdc-22-nf
     qty: 1
     name: Transcendent Dragon
     tcgplayer_product_id: "624154"
     tcgplayer_sku_id: "8621115"
     finish: nf
+    rarity: r
   - display_key: mtg-tdc-23-nf
     qty: 1
     name: Voracious Bibliophile
     tcgplayer_product_id: "624155"
     tcgplayer_sku_id: "8621145"
     finish: nf
+    rarity: r
   - display_key: mtg-tdc-33-nf
     qty: 1
     name: Caldera Pyremaw
     tcgplayer_product_id: "624174"
     tcgplayer_sku_id: "8621715"
     finish: nf
+    rarity: r
   - display_key: mtg-tdc-39-nf
     qty: 1
     name: Transforming Flourish
     tcgplayer_product_id: "624175"
     finish: nf
+    rarity: r
   - display_key: mtg-tdc-40-nf
     qty: 1
     name: Will of the Jeskai
     tcgplayer_product_id: "624176"
     tcgplayer_sku_id: "8621775"
     finish: nf
+    rarity: r
   - display_key: mtg-tdc-91-nf
     qty: 1
     name: Vanquish the Horde
     tcgplayer_product_id: "624147"
     tcgplayer_sku_id: "8620905"
     finish: nf
+    rarity: r
   - display_key: mtg-tdc-92-nf
     qty: 1
     name: "Narset's Reversal"
     tcgplayer_product_id: "624156"
     tcgplayer_sku_id: "8621175"
     finish: nf
+    rarity: r
   - display_key: mtg-tdc-112-nf
     qty: 1
     name: Dismantling Wave
     tcgplayer_product_id: "624148"
     tcgplayer_sku_id: "8620935"
     finish: nf
+    rarity: r
   - display_key: mtg-tdc-124-nf
     qty: 1
     name: "Mangara, the Diplomat"
     tcgplayer_product_id: "624150"
     tcgplayer_sku_id: "8620995"
     finish: nf
+    rarity: r
   - display_key: mtg-tdc-125-nf
     qty: 1
     name: Monastery Mentor
     tcgplayer_product_id: "624151"
     tcgplayer_sku_id: "8621025"
     finish: nf
+    rarity: m
   - display_key: mtg-tdc-144-nf
     qty: 1
     name: Ancestral Vision
     tcgplayer_product_id: "624157"
     tcgplayer_sku_id: "8621205"
     finish: nf
+    rarity: r
   - display_key: mtg-tdc-145-nf
     qty: 1
     name: Archmage Emeritus
     tcgplayer_product_id: "624158"
     tcgplayer_sku_id: "8621235"
     finish: nf
+    rarity: r
   - display_key: mtg-tdc-146-nf
     qty: 1
     name: "Baral's Expertise"
     tcgplayer_product_id: "624159"
     tcgplayer_sku_id: "8621265"
     finish: nf
+    rarity: r
   - display_key: mtg-tdc-149-nf
     qty: 1
     name: Curse of the Swine
     tcgplayer_product_id: "624162"
     tcgplayer_sku_id: "8621355"
     finish: nf
+    rarity: r
   - display_key: mtg-tdc-154-nf
     qty: 1
     name: Haughty Djinn
     tcgplayer_product_id: "624165"
     tcgplayer_sku_id: "8621445"
     finish: nf
+    rarity: r
   - display_key: mtg-tdc-157-nf
     qty: 1
     name: "Lier, Disciple of the Drowned"
     tcgplayer_product_id: "624166"
     tcgplayer_sku_id: "8621475"
     finish: nf
+    rarity: m
   - display_key: mtg-tdc-165-nf
     qty: 1
     name: Rite of Replication
     tcgplayer_product_id: "624171"
     tcgplayer_sku_id: "8621625"
     finish: nf
+    rarity: r
   - display_key: mtg-tdc-167-nf
     qty: 1
     name: Sublime Epiphany
     tcgplayer_product_id: "624172"
     finish: nf
+    rarity: r
   - display_key: mtg-tdc-212-nf
     qty: 1
     name: Electrodominance
     tcgplayer_product_id: "624181"
     tcgplayer_sku_id: "8621925"
     finish: nf
+    rarity: r
   - display_key: mtg-tdc-224-nf
     qty: 1
     name: Manaform Hellkite
     tcgplayer_product_id: "624185"
     tcgplayer_sku_id: "8622045"
     finish: nf
+    rarity: m
   - display_key: mtg-tdc-282-nf
     qty: 1
     name: Baral and Kari Zev
     tcgplayer_product_id: "624189"
     tcgplayer_sku_id: "8622165"
     finish: nf
+    rarity: r
   - display_key: mtg-tdc-287-nf
     qty: 1
     name: Expansion // Explosion
     tcgplayer_product_id: "625632"
     tcgplayer_sku_id: "8655214"
     finish: nf
+    rarity: r
   - display_key: mtg-tdc-296-nf
     qty: 1
     name: Magma Opus
     tcgplayer_product_id: "624191"
     tcgplayer_sku_id: "8622225"
     finish: nf
+    rarity: m
   - display_key: mtg-tdc-299-nf
     qty: 1
     name: Prismari Command
     tcgplayer_product_id: "624192"
     tcgplayer_sku_id: "8622255"
     finish: nf
+    rarity: r
   - display_key: mtg-tdc-308-nf
     qty: 1
     name: Time Wipe
     tcgplayer_product_id: "624194"
     tcgplayer_sku_id: "8622315"
     finish: nf
+    rarity: r
   - display_key: mtg-tdc-309-nf
     qty: 1
     name: Velomachus Lorehold
     tcgplayer_product_id: "624195"
     tcgplayer_sku_id: "8622345"
     finish: nf
+    rarity: m
   - display_key: mtg-tdc-310-nf
     qty: 1
     name: "Veyran, Voice of Duality"
     tcgplayer_product_id: "624196"
     tcgplayer_sku_id: "8622375"
     finish: nf
+    rarity: m
   - display_key: mtg-tdc-311-nf
     qty: 1
     name: Whirlwind of Thought
     tcgplayer_product_id: "624197"
     tcgplayer_sku_id: "8622405"
     finish: nf
+    rarity: r
   - display_key: mtg-tdc-338-nf
     qty: 1
     name: Adarkar Wastes
     tcgplayer_product_id: "624202"
     tcgplayer_sku_id: "8622555"
     finish: nf
+    rarity: r
   - display_key: mtg-tdc-340-nf
     qty: 1
     name: Battlefield Forge
     tcgplayer_product_id: "624204"
     tcgplayer_sku_id: "8622615"
     finish: nf
+    rarity: r
   - display_key: mtg-tdc-345-nf
     qty: 1
     name: Cascade Bluffs
     tcgplayer_product_id: "624205"
     tcgplayer_sku_id: "8622645"
     finish: nf
+    rarity: r
   - display_key: mtg-tdc-351-nf
     qty: 1
     name: Clifftop Retreat
     tcgplayer_product_id: "624206"
     tcgplayer_sku_id: "8622675"
     finish: nf
+    rarity: r
   - display_key: mtg-tdc-360-nf
     qty: 1
     name: Exotic Orchard
     tcgplayer_product_id: "624207"
     tcgplayer_sku_id: "8622705"
     finish: nf
+    rarity: r
   - display_key: mtg-tdc-361-nf
     qty: 1
     name: Ferrous Lake
     tcgplayer_product_id: "624208"
     tcgplayer_sku_id: "8622735"
     finish: nf
+    rarity: r
   - display_key: mtg-tdc-367-nf
     qty: 1
     name: Glacial Fortress
     tcgplayer_product_id: "624209"
     tcgplayer_sku_id: "8622765"
     finish: nf
+    rarity: r
   - display_key: mtg-tdc-372-nf
     qty: 1
     name: Irrigated Farmland
     tcgplayer_product_id: "624210"
     tcgplayer_sku_id: "8622795"
     finish: nf
+    rarity: r
   - display_key: mtg-tdc-384-nf
     qty: 1
     name: Prairie Stream
     tcgplayer_product_id: "624213"
     tcgplayer_sku_id: "8622885"
     finish: nf
+    rarity: r
   - display_key: mtg-tdc-389-nf
     qty: 1
     name: Rugged Prairie
     tcgplayer_product_id: "624215"
     tcgplayer_sku_id: "8622945"
     finish: nf
+    rarity: r
   - display_key: mtg-tdc-393-nf
     qty: 1
     name: Shivan Reef
     tcgplayer_product_id: "624216"
     tcgplayer_sku_id: "8622975"
     finish: nf
+    rarity: r
   - display_key: mtg-tdc-394-nf
     qty: 1
     name: Skycloud Expanse
     tcgplayer_product_id: "624217"
     tcgplayer_sku_id: "8623005"
     finish: nf
+    rarity: r
   - display_key: mtg-tdc-396-nf
     qty: 1
     name: Sulfur Falls
     tcgplayer_product_id: "624218"
     tcgplayer_sku_id: "8623035"
     finish: nf
+    rarity: r
   - display_key: mtg-tdc-401-nf
     qty: 1
     name: Temple of Enlightenment
     tcgplayer_product_id: "624219"
     finish: nf
+    rarity: r
   - display_key: mtg-tdc-402-nf
     qty: 1
     name: Temple of Epiphany
     tcgplayer_product_id: "624220"
     tcgplayer_sku_id: "8623095"
     finish: nf
+    rarity: r
   - display_key: mtg-tdc-407-nf
     qty: 1
     name: Temple of Triumph
     tcgplayer_product_id: "624221"
     finish: nf
+    rarity: r
   - display_key: mtg-tdc-95-nf
     qty: 1
     name: Young Pyromancer
     tcgplayer_product_id: "624177"
     finish: nf
+    rarity: u
   - display_key: mtg-tdc-99-nf
     qty: 1
     name: Goblin Electromancer
     tcgplayer_product_id: "624188"
     tcgplayer_sku_id: "8622135"
     finish: nf
+    rarity: c
   - display_key: mtg-tdc-105-nf
     qty: 1
     name: Arcane Signet
     tcgplayer_product_id: "624048"
     tcgplayer_sku_id: "8619373"
     finish: nf
+    rarity: u
   - display_key: mtg-tdc-106-nf
     qty: 1
     name: Sol Ring
     tcgplayer_product_id: "624049"
     tcgplayer_sku_id: "8619433"
     finish: nf
+    rarity: u
   - display_key: mtg-tdc-107-nf
     qty: 1
     name: Command Tower
     tcgplayer_product_id: "623982"
     tcgplayer_sku_id: "8616599"
     finish: nf
+    rarity: c
   - display_key: mtg-tdc-116-nf
     qty: 1
     name: Ghostly Prison
     tcgplayer_product_id: "624149"
     tcgplayer_sku_id: "8620965"
     finish: nf
+    rarity: u
   - display_key: mtg-tdc-134-nf
     qty: 1
     name: Swords to Plowshares
     tcgplayer_product_id: "624152"
     tcgplayer_sku_id: "8621055"
     finish: nf
+    rarity: u
   - display_key: mtg-tdc-147-nf
     qty: 1
     name: Compulsive Research
     tcgplayer_product_id: "624160"
     tcgplayer_sku_id: "8621295"
     finish: nf
+    rarity: c
   - display_key: mtg-tdc-148-nf
     qty: 1
     name: Consider
     tcgplayer_product_id: "624161"
     tcgplayer_sku_id: "8621325"
     finish: nf
+    rarity: c
   - display_key: mtg-tdc-150-nf
     qty: 1
     name: Deep Analysis
     tcgplayer_product_id: "624163"
     tcgplayer_sku_id: "8621385"
     finish: nf
+    rarity: c
   - display_key: mtg-tdc-153-nf
     qty: 1
     name: Frantic Search
     tcgplayer_product_id: "624164"
     tcgplayer_sku_id: "8621415"
     finish: nf
+    rarity: c
   - display_key: mtg-tdc-158-nf
     qty: 1
     name: Opt
     tcgplayer_product_id: "624167"
     tcgplayer_sku_id: "8621505"
     finish: nf
+    rarity: c
   - display_key: mtg-tdc-159-nf
     qty: 1
     name: Ponder
     tcgplayer_product_id: "624168"
     tcgplayer_sku_id: "8621535"
     finish: nf
+    rarity: c
   - display_key: mtg-tdc-160-nf
     qty: 1
     name: Pongify
     tcgplayer_product_id: "624169"
     tcgplayer_sku_id: "8621565"
     finish: nf
+    rarity: u
   - display_key: mtg-tdc-161-nf
     qty: 1
     name: Preordain
     tcgplayer_product_id: "624170"
     tcgplayer_sku_id: "8621595"
     finish: nf
+    rarity: c
   - display_key: mtg-tdc-168-nf
     qty: 1
     name: Think Twice
     tcgplayer_product_id: "624173"
     finish: nf
+    rarity: c
   - display_key: mtg-tdc-203-nf
     qty: 1
     name: Abrade
     tcgplayer_product_id: "624178"
     tcgplayer_sku_id: "8621835"
     finish: nf
+    rarity: u
   - display_key: mtg-tdc-206-nf
     qty: 1
     name: Big Score
     tcgplayer_product_id: "624179"
     tcgplayer_sku_id: "8621865"
     finish: nf
+    rarity: c
   - display_key: mtg-tdc-209-nf
     qty: 1
     name: Curse of Opulence
     tcgplayer_product_id: "624180"
     tcgplayer_sku_id: "8621895"
     finish: nf
+    rarity: u
   - display_key: mtg-tdc-213-nf
     qty: 1
     name: Faithless Looting
     tcgplayer_product_id: "624182"
     tcgplayer_sku_id: "8621955"
     finish: nf
+    rarity: c
   - display_key: mtg-tdc-217-nf
     qty: 1
     name: Guttersnipe
     tcgplayer_product_id: "624183"
     tcgplayer_sku_id: "8621985"
     finish: nf
+    rarity: u
   - display_key: mtg-tdc-223-nf
     qty: 1
     name: Mana Geyser
     tcgplayer_product_id: "624184"
     tcgplayer_sku_id: "8622015"
     finish: nf
+    rarity: c
   - display_key: mtg-tdc-231-nf
     qty: 1
     name: Shiny Impetus
     tcgplayer_product_id: "624186"
     tcgplayer_sku_id: "8622075"
     finish: nf
+    rarity: c
   - display_key: mtg-tdc-235-nf
     qty: 1
     name: Storm-Kiln Artist
     tcgplayer_product_id: "624187"
     tcgplayer_sku_id: "8622105"
     finish: nf
+    rarity: u
   - display_key: mtg-tdm-255-nf
     qty: 1
     name: Evolving Wilds
     tcgplayer_product_id: "624263"
     finish: nf
+    rarity: c
   - display_key: mtg-tdm-262-nf
     qty: 1
     name: Mystic Monastery
     tcgplayer_product_id: "624268"
     tcgplayer_sku_id: "8625106"
     finish: nf
+    rarity: u
   - display_key: mtg-tdc-288-nf
     qty: 1
     name: Expressive Iteration
     tcgplayer_product_id: "624190"
     tcgplayer_sku_id: "8622195"
     finish: nf
+    rarity: u
   - display_key: mtg-tdc-307-nf
     qty: 1
     name: Third Path Iconoclast
     tcgplayer_product_id: "624193"
     tcgplayer_sku_id: "8622285"
     finish: nf
+    rarity: u
   - display_key: mtg-tdc-312-nf
     qty: 1
     name: Azorius Signet
     tcgplayer_product_id: "624198"
     tcgplayer_sku_id: "8622435"
     finish: nf
+    rarity: u
   - display_key: mtg-tdc-314-nf
     qty: 1
     name: Boros Signet
     tcgplayer_product_id: "624199"
     tcgplayer_sku_id: "8622465"
     finish: nf
+    rarity: u
   - display_key: mtg-tdc-318-nf
     qty: 1
     name: Fellwar Stone
     tcgplayer_product_id: "624374"
     tcgplayer_sku_id: "8627980"
     finish: nf
+    rarity: u
   - display_key: mtg-tdc-320-nf
     qty: 1
     name: Izzet Signet
     tcgplayer_product_id: "624200"
     tcgplayer_sku_id: "8622495"
     finish: nf
+    rarity: c
   - display_key: mtg-tdc-333-nf
     qty: 1
     name: Talisman of Progress
     tcgplayer_product_id: "624201"
     tcgplayer_sku_id: "8622525"
     finish: nf
+    rarity: u
   - display_key: mtg-tdc-339-nf
     qty: 1
     name: Ash Barrens
     tcgplayer_product_id: "624203"
     tcgplayer_sku_id: "8622585"
     finish: nf
+    rarity: c
   - display_key: mtg-tdc-382-nf
     qty: 1
     name: Path of Ancestry
     tcgplayer_product_id: "624211"
     tcgplayer_sku_id: "8622825"
     finish: nf
+    rarity: c
   - display_key: mtg-tdc-383-nf
     qty: 1
     name: Perilous Landscape
     tcgplayer_product_id: "624212"
     tcgplayer_sku_id: "8622855"
     finish: nf
+    rarity: c
   - display_key: mtg-tdc-386-nf
     qty: 1
     name: Reliquary Tower
     tcgplayer_product_id: "624214"
     tcgplayer_sku_id: "8622915"
     finish: nf
+    rarity: u
   - display_key: mtg-tdm-277-nf
     qty: 2
     name: Plains
     tcgplayer_product_id: "623965"
     finish: nf
+    rarity: c
   - display_key: mtg-tdm-278-nf
     qty: 2
     name: Plains
     tcgplayer_product_id: "623966"
     finish: nf
+    rarity: c
   - display_key: mtg-tdm-279-nf
     qty: 3
     name: Island
     tcgplayer_product_id: "623968"
     finish: nf
+    rarity: c
   - display_key: mtg-tdm-280-nf
     qty: 2
     name: Island
     tcgplayer_product_id: "623969"
     finish: nf
+    rarity: c
   - display_key: mtg-tdm-283-nf
     qty: 3
     name: Mountain
     tcgplayer_product_id: "623975"
     finish: nf
+    rarity: c
   - display_key: mtg-tdm-284-nf
     qty: 2
     name: Mountain
     tcgplayer_product_id: "623977"
     finish: nf
+    rarity: c

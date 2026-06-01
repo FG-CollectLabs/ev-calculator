@@ -10,28 +10,34 @@ components:
     name: Arboreal Alliance
     tcgplayer_product_id: "517238"
     finish: f
+    rarity: r
   - display_key: mtg-ltc-498-f
     qty: 1
     name: "Galadriel, Light of Valinor"
     tcgplayer_product_id: "517243"
     finish: f
+    rarity: m
   - display_key: mtg-ltc-499-f
     qty: 1
     name: Rally the Galadhrim
     tcgplayer_product_id: "517248"
     finish: f
+    rarity: r
   - display_key: mtg-ltc-500-f
     qty: 1
     name: "Galadriel's Dismissal"
     tcgplayer_product_id: "517244"
     finish: f
+    rarity: r
   - display_key: mtg-ltc-501-f
     qty: 1
     name: Mists of Lórien
     tcgplayer_product_id: "517246"
     finish: f
+    rarity: r
   - display_key: mtg-ltc-502-f
     qty: 1
     name: Galadhrim Brigade
     tcgplayer_product_id: "517241"
     finish: f
+    rarity: r

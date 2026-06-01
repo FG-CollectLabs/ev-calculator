@@ -17,12 +17,14 @@ components:
     tcgplayer_product_id: "544320"
     tcgplayer_sku_id: "7822103"
     finish: f
+    rarity: m
   - display_key: mtg-otc-8-f
     qty: 1
     name: "Vihaan, Goldwaker"
     tcgplayer_product_id: "545279"
     tcgplayer_sku_id: "7857672"
     finish: f
+    rarity: m
   # â”€â”€ Non-foil â€” OTC â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   - display_key: mtg-otc-10-nf
     qty: 1
@@ -30,522 +32,609 @@ components:
     tcgplayer_product_id: "545390"
     tcgplayer_sku_id: "7860792"
     finish: nf
+    rarity: r
   - display_key: mtg-otc-12-nf
     qty: 1
     name: We Ride at Dawn
     tcgplayer_product_id: "545397"
     tcgplayer_sku_id: "7861002"
     finish: nf
+    rarity: r
   - display_key: mtg-otc-18-nf
     qty: 1
     name: Back in Town
     tcgplayer_product_id: "545391"
     tcgplayer_sku_id: "7860822"
     finish: nf
+    rarity: r
   - display_key: mtg-otc-19-nf
     qty: 1
     name: Charred Graverobber
     tcgplayer_product_id: "545393"
     tcgplayer_sku_id: "7860882"
     finish: nf
+    rarity: r
   - display_key: mtg-otc-20-nf
     qty: 1
     name: Discreet Retreat
     tcgplayer_product_id: "545395"
     tcgplayer_sku_id: "7860942"
     finish: nf
+    rarity: r
   - display_key: mtg-otc-26-nf
     qty: 1
     name: Dead Before Sunrise
     tcgplayer_product_id: "545394"
     tcgplayer_sku_id: "7860912"
     finish: nf
+    rarity: r
   - display_key: mtg-otc-36-nf
     qty: 1
     name: "Graywater's Fixer"
     tcgplayer_product_id: "545396"
     tcgplayer_sku_id: "7860972"
     finish: nf
+    rarity: r
   - display_key: mtg-otc-37-nf
     qty: 1
     name: Bounty Board
     tcgplayer_product_id: "545392"
     tcgplayer_sku_id: "7860852"
     finish: nf
+    rarity: r
   - display_key: mtg-otc-79-nf
     qty: 1
     name: "Council's Judgment"
     tcgplayer_product_id: "545281"
     tcgplayer_sku_id: "7857732"
     finish: nf
+    rarity: r
   - display_key: mtg-otc-81-nf
     qty: 1
     name: "Heliod's Intervention"
     tcgplayer_product_id: "545289"
     tcgplayer_sku_id: "7857972"
     finish: nf
+    rarity: r
   - display_key: mtg-otc-83-nf
     qty: 1
     name: Mirror Entity
     tcgplayer_product_id: "545331"
     tcgplayer_sku_id: "7859082"
     finish: nf
+    rarity: r
   - display_key: mtg-otc-84-nf
     qty: 1
     name: Mistmeadow Skulk
     tcgplayer_product_id: "545436"
     tcgplayer_sku_id: "7861617"
     finish: nf
+    rarity: u
   - display_key: mtg-otc-125-nf
     qty: 1
     name: Aetherborn Marauder
     tcgplayer_product_id: "545456"
     tcgplayer_sku_id: "7862432"
     finish: nf
+    rarity: u
   - display_key: mtg-otc-128-nf
     qty: 1
     name: Changeling Outcast
     tcgplayer_product_id: "545343"
     tcgplayer_sku_id: "7859382"
     finish: nf
+    rarity: c
   - display_key: mtg-otc-130-nf
     qty: 1
     name: "Curtains' Call"
     tcgplayer_product_id: "545438"
     tcgplayer_sku_id: "7861652"
     finish: nf
+    rarity: r
   - display_key: mtg-otc-131-nf
     qty: 1
     name: Deadly Dispute
     tcgplayer_product_id: "545290"
     tcgplayer_sku_id: "7858002"
     finish: nf
+    rarity: c
   - display_key: mtg-otc-132-nf
     qty: 1
     name: Dire Fleet Ravager
     tcgplayer_product_id: "545329"
     tcgplayer_sku_id: "7859052"
     finish: nf
+    rarity: m
   - display_key: mtg-otc-133-nf
     qty: 1
     name: "Fain, the Broker"
     tcgplayer_product_id: "545295"
     tcgplayer_sku_id: "7858152"
     finish: nf
+    rarity: r
   - display_key: mtg-otc-134-nf
     qty: 1
     name: Feed the Swarm
     tcgplayer_product_id: "545207"
     tcgplayer_sku_id: "7855602"
     finish: nf
+    rarity: c
   - display_key: mtg-otc-136-nf
     qty: 1
     name: Hex
     tcgplayer_product_id: "545284"
     tcgplayer_sku_id: "7857822"
     finish: nf
+    rarity: r
   - display_key: mtg-otc-137-nf
     qty: 1
     name: "Kamber, the Plunderer"
     tcgplayer_product_id: "545301"
     tcgplayer_sku_id: "7858332"
     finish: nf
+    rarity: r
   - display_key: mtg-otc-138-nf
     qty: 1
     name: "Mari, the Killing Quill"
     tcgplayer_product_id: "545450"
     tcgplayer_sku_id: "7862172"
     finish: nf
+    rarity: r
   - display_key: mtg-otc-139-nf
     qty: 1
     name: Marshland Bloodcaster
     tcgplayer_product_id: "545326"
     tcgplayer_sku_id: "7858962"
     finish: nf
+    rarity: r
   - display_key: mtg-otc-140-nf
     qty: 1
     name: Massacre Girl
     tcgplayer_product_id: "545293"
     tcgplayer_sku_id: "7858092"
     finish: nf
+    rarity: r
   - display_key: mtg-otc-141-nf
     qty: 1
     name: Misfortune Teller
     tcgplayer_product_id: "545300"
     tcgplayer_sku_id: "7858302"
     finish: nf
+    rarity: r
   - display_key: mtg-otc-142-nf
     qty: 1
     name: Morbid Opportunist
     tcgplayer_product_id: "545344"
     tcgplayer_sku_id: "7859412"
     finish: nf
+    rarity: u
   - display_key: mtg-otc-144-nf
     qty: 1
     name: Nighthawk Scavenger
     tcgplayer_product_id: "545298"
     tcgplayer_sku_id: "7858242"
     finish: nf
+    rarity: r
   - display_key: mtg-otc-145-nf
     qty: 1
     name: Ogre Slumlord
     tcgplayer_product_id: "545302"
     tcgplayer_sku_id: "7858362"
     finish: nf
+    rarity: r
   - display_key: mtg-otc-146-nf
     qty: 1
     name: Painful Truths
     tcgplayer_product_id: "545282"
     tcgplayer_sku_id: "7857762"
     finish: nf
+    rarity: r
   - display_key: mtg-otc-148-nf
     qty: 1
     name: "Rankle, Master of Pranks"
     tcgplayer_product_id: "545328"
     tcgplayer_sku_id: "7859022"
     finish: nf
+    rarity: r
   - display_key: mtg-otc-149-nf
     qty: 1
     name: Tenured Inkcaster
     tcgplayer_product_id: "545346"
     tcgplayer_sku_id: "7859472"
     finish: nf
+    rarity: u
   - display_key: mtg-otc-151-nf
     qty: 1
     name: Veinwitch Coven
     tcgplayer_product_id: "545327"
     tcgplayer_sku_id: "7858992"
     finish: nf
+    rarity: r
   - display_key: mtg-otc-152-nf
     qty: 1
     name: Witch of the Moors
     tcgplayer_product_id: "545296"
     tcgplayer_sku_id: "7858182"
     finish: nf
+    rarity: r
   - display_key: mtg-otc-153-nf
     qty: 1
     name: "Angrath's Marauders"
     tcgplayer_product_id: "545334"
     tcgplayer_sku_id: "7859172"
     finish: nf
+    rarity: r
   - display_key: mtg-otc-158-nf
     qty: 1
     name: Captain Lannery Storm
     tcgplayer_product_id: "545333"
     tcgplayer_sku_id: "7859142"
     finish: nf
+    rarity: r
   - display_key: mtg-otc-159-nf
     qty: 1
     name: Captivating Crew
     tcgplayer_product_id: "545335"
     tcgplayer_sku_id: "7859202"
     finish: nf
+    rarity: r
   - display_key: mtg-otc-162-nf
     qty: 1
     name: Dire Fleet Daredevil
     tcgplayer_product_id: "545332"
     tcgplayer_sku_id: "7859112"
     finish: nf
+    rarity: r
   - display_key: mtg-otc-167-nf
     qty: 1
     name: Glittering Stockpile
     tcgplayer_product_id: "545355"
     tcgplayer_sku_id: "7859742"
     finish: nf
+    rarity: u
   - display_key: mtg-otc-168-nf
     qty: 1
     name: "Grenzo, Havoc Raiser"
     tcgplayer_product_id: "545460"
     tcgplayer_sku_id: "7862612"
     finish: nf
+    rarity: r
   - display_key: mtg-otc-170-nf
     qty: 1
     name: Humble Defector
     tcgplayer_product_id: "545348"
     tcgplayer_sku_id: "7859532"
     finish: nf
+    rarity: u
   - display_key: mtg-otc-171-nf
     qty: 1
     name: Impulsive Pilferer
     tcgplayer_product_id: "545347"
     tcgplayer_sku_id: "7859502"
     finish: nf
+    rarity: c
   - display_key: mtg-otc-172-nf
     qty: 1
     name: "Laurine, the Diversion"
     tcgplayer_product_id: "545337"
     tcgplayer_sku_id: "7859232"
     finish: nf
+    rarity: r
   - display_key: mtg-otc-174-nf
     qty: 1
     name: Mass Mutiny
     tcgplayer_product_id: "545287"
     tcgplayer_sku_id: "7857912"
     finish: nf
+    rarity: r
   - display_key: mtg-otc-177-nf
     qty: 1
     name: Rain of Riches
     tcgplayer_product_id: "545349"
     tcgplayer_sku_id: "7859562"
     finish: nf
+    rarity: r
   - display_key: mtg-otc-179-nf
     qty: 1
     name: Seize the Spotlight
     tcgplayer_product_id: "545286"
     tcgplayer_sku_id: "7857882"
     finish: nf
+    rarity: r
   - display_key: mtg-otc-180-nf
     qty: 1
     name: Shiny Impetus
     tcgplayer_product_id: "545351"
     tcgplayer_sku_id: "7859622"
     finish: nf
+    rarity: u
   - display_key: mtg-otc-216-nf
     qty: 1
     name: Boros Charm
     tcgplayer_product_id: "545291"
     tcgplayer_sku_id: "7858032"
     finish: nf
+    rarity: u
   - display_key: mtg-otc-217-nf
     qty: 1
     name: "Breena, the Demagogue"
     tcgplayer_product_id: "545338"
     tcgplayer_sku_id: "7859262"
     finish: nf
+    rarity: m
   - display_key: mtg-otc-233-nf
     qty: 1
     name: Life Insurance
     tcgplayer_product_id: "545350"
     tcgplayer_sku_id: "7859592"
     finish: nf
+    rarity: r
   - display_key: mtg-otc-239-nf
     qty: 1
     name: Queen Marchesa
     tcgplayer_product_id: "545339"
     tcgplayer_sku_id: "7859292"
     finish: nf
+    rarity: r
   - display_key: mtg-otc-251-nf
     qty: 1
     name: Academy Manufactor
     tcgplayer_product_id: "545341"
     tcgplayer_sku_id: "7859322"
     finish: nf
+    rarity: r
   - display_key: mtg-otc-252-nf
     qty: 1
     name: Arcane Signet
     tcgplayer_product_id: "545100"
     tcgplayer_sku_id: "7851857"
     finish: nf
+    rarity: c
   - display_key: mtg-otc-258-nf
     qty: 1
     name: Idol of Oblivion
     tcgplayer_product_id: "545352"
     tcgplayer_sku_id: "7859652"
     finish: nf
+    rarity: r
   - display_key: mtg-otc-260-nf
     qty: 1
     name: Lightning Greaves
     tcgplayer_product_id: "545353"
     tcgplayer_sku_id: "7859682"
     finish: nf
+    rarity: u
   - display_key: mtg-otc-261-nf
     qty: 1
     name: Orzhov Signet
     tcgplayer_product_id: "545357"
     tcgplayer_sku_id: "7859802"
     finish: nf
+    rarity: u
   - display_key: mtg-otc-265-nf
     qty: 1
     name: Rakdos Signet
     tcgplayer_product_id: "545358"
     tcgplayer_sku_id: "7859832"
     finish: nf
+    rarity: u
   - display_key: mtg-otc-267-nf
     qty: 1
     name: Sol Ring
     tcgplayer_product_id: "545098"
     tcgplayer_sku_id: "7851797"
     finish: nf
+    rarity: u
   - display_key: mtg-otc-269-nf
     qty: 1
     name: "Trailblazer's Boots"
     tcgplayer_product_id: "545356"
     tcgplayer_sku_id: "7859772"
     finish: nf
+    rarity: u
   - display_key: mtg-otc-271-nf
     qty: 1
     name: Battlefield Forge
     tcgplayer_product_id: "545373"
     tcgplayer_sku_id: "7860282"
     finish: nf
+    rarity: r
   - display_key: mtg-otc-272-nf
     qty: 1
     name: Blackcleave Cliffs
     tcgplayer_product_id: "545382"
     tcgplayer_sku_id: "7860552"
     finish: nf
+    rarity: r
   - display_key: mtg-otc-273-nf
     qty: 1
     name: Bojuka Bog
     tcgplayer_product_id: "545383"
     tcgplayer_sku_id: "7860582"
     finish: nf
+    rarity: c
   - display_key: mtg-otc-274-nf
     qty: 1
     name: "Bonders' Enclave"
     tcgplayer_product_id: "545614"
     tcgplayer_sku_id: "7868692"
     finish: nf
+    rarity: r
   - display_key: mtg-otc-275-nf
     qty: 1
     name: Canyon Slough
     tcgplayer_product_id: "545379"
     tcgplayer_sku_id: "7860462"
     finish: nf
+    rarity: r
   - display_key: mtg-otc-277-nf
     qty: 1
     name: Caves of Koilos
     tcgplayer_product_id: "545371"
     tcgplayer_sku_id: "7860222"
     finish: nf
+    rarity: r
   - display_key: mtg-otc-278-nf
     qty: 1
     name: Clifftop Retreat
     tcgplayer_product_id: "545368"
     tcgplayer_sku_id: "7860132"
     finish: nf
+    rarity: r
   - display_key: mtg-otc-279-nf
     qty: 1
     name: Command Beacon
     tcgplayer_product_id: "545361"
     tcgplayer_sku_id: "7859922"
     finish: nf
+    rarity: r
   - display_key: mtg-otc-280-nf
     qty: 1
     name: Command Tower
     tcgplayer_product_id: "545058"
     tcgplayer_sku_id: "7850597"
     finish: nf
+    rarity: c
   - display_key: mtg-otc-283-nf
     qty: 1
     name: Demolition Field
     tcgplayer_product_id: "545386"
     tcgplayer_sku_id: "7860672"
     finish: nf
+    rarity: u
   - display_key: mtg-otc-287-nf
     qty: 1
     name: Desolate Mire
     tcgplayer_product_id: "545376"
     tcgplayer_sku_id: "7860372"
     finish: nf
+    rarity: r
   - display_key: mtg-otc-289-nf
     qty: 1
     name: Dragonskull Summit
     tcgplayer_product_id: "545364"
     tcgplayer_sku_id: "7860012"
     finish: nf
+    rarity: r
   - display_key: mtg-otc-293-nf
     qty: 1
     name: Exotic Orchard
     tcgplayer_product_id: "545235"
     tcgplayer_sku_id: "7856412"
     finish: nf
+    rarity: r
   - display_key: mtg-otc-295-nf
     qty: 1
     name: Fetid Heath
     tcgplayer_product_id: "545359"
     tcgplayer_sku_id: "7859862"
     finish: nf
+    rarity: r
   - display_key: mtg-otc-301-nf
     qty: 1
     name: Isolated Chapel
     tcgplayer_product_id: "545370"
     tcgplayer_sku_id: "7860192"
     finish: nf
+    rarity: r
   - display_key: mtg-otc-306-nf
     qty: 1
     name: Nomad Outpost
     tcgplayer_product_id: "545389"
     tcgplayer_sku_id: "7860762"
     finish: nf
+    rarity: u
   - display_key: mtg-otc-310-nf
     qty: 1
     name: Path of Ancestry
     tcgplayer_product_id: "545384"
     tcgplayer_sku_id: "7860612"
     finish: nf
+    rarity: c
   - display_key: mtg-otc-313-nf
     qty: 1
     name: "Rogue's Passage"
     tcgplayer_product_id: "545385"
     tcgplayer_sku_id: "7860642"
     finish: nf
+    rarity: u
   - display_key: mtg-otc-314-nf
     qty: 1
     name: Rugged Prairie
     tcgplayer_product_id: "545375"
     tcgplayer_sku_id: "7860342"
     finish: nf
+    rarity: r
   - display_key: mtg-otc-317-nf
     qty: 1
     name: Shadowblood Ridge
     tcgplayer_product_id: "545377"
     tcgplayer_sku_id: "7860402"
     finish: nf
+    rarity: r
   - display_key: mtg-otc-321-nf
     qty: 1
     name: Smoldering Marsh
     tcgplayer_product_id: "545380"
     tcgplayer_sku_id: "7860492"
     finish: nf
+    rarity: r
   - display_key: mtg-otc-323-nf
     qty: 1
     name: Sulfurous Springs
     tcgplayer_product_id: "545374"
     tcgplayer_sku_id: "7860312"
     finish: nf
+    rarity: r
   - display_key: mtg-otc-324-nf
     qty: 1
     name: "Sunhome, Fortress of the Legion"
     tcgplayer_product_id: "545388"
     tcgplayer_sku_id: "7860732"
     finish: nf
+    rarity: u
   - display_key: mtg-otc-327-nf
     qty: 1
     name: Tainted Peak
     tcgplayer_product_id: "545387"
     tcgplayer_sku_id: "7860702"
     finish: nf
+    rarity: u
   - display_key: mtg-otc-331-nf
     qty: 1
     name: Temple of Malice
     tcgplayer_product_id: "545366"
     tcgplayer_sku_id: "7860072"
     finish: nf
+    rarity: r
   - display_key: mtg-otc-333-nf
     qty: 1
     name: Temple of Silence
     tcgplayer_product_id: "545365"
     tcgplayer_sku_id: "7860042"
     finish: nf
+    rarity: r
   - display_key: mtg-otc-334-nf
     qty: 1
     name: Temple of the False God
     tcgplayer_product_id: "545323"
     tcgplayer_sku_id: "7858902"
     finish: nf
+    rarity: u
   - display_key: mtg-otc-335-nf
     qty: 1
     name: Temple of Triumph
     tcgplayer_product_id: "545367"
     tcgplayer_sku_id: "7860102"
     finish: nf
+    rarity: r
   - display_key: mtg-otc-339-nf
     qty: 1
     name: Vault of the Archangel
     tcgplayer_product_id: "545362"
     tcgplayer_sku_id: "7859952"
     finish: nf
+    rarity: r
   # â”€â”€ Non-foil â€” OTJ â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   - display_key: mtg-otj-26-nf
     qty: 1
@@ -553,51 +642,60 @@ components:
     tcgplayer_product_id: "544454"
     tcgplayer_sku_id: "7830044"
     finish: nf
+    rarity: u
   - display_key: mtg-otj-106-nf
     qty: 1
     name: Shoot the Sheriff
     tcgplayer_product_id: "544398"
     tcgplayer_sku_id: "7826482"
     finish: nf
+    rarity: u
   - display_key: mtg-otj-240-nf
     qty: 1
     name: "Bandit's Haul"
     tcgplayer_product_id: "544457"
     tcgplayer_sku_id: "7830284"
     finish: nf
+    rarity: u
   - display_key: mtg-otj-277-nf
     qty: 1
     name: Plains
     tcgplayer_product_id: "545654"
     tcgplayer_sku_id: "7870272"
     finish: nf
+    rarity: c
   - display_key: mtg-otj-278-nf
     qty: 1
     name: Plains
     tcgplayer_product_id: "545655"
     tcgplayer_sku_id: "7870352"
     finish: nf
+    rarity: c
   - display_key: mtg-otj-281-nf
     qty: 2
     name: Swamp
     tcgplayer_product_id: "545656"
     tcgplayer_sku_id: "7870432"
     finish: nf
+    rarity: c
   - display_key: mtg-otj-282-nf
     qty: 2
     name: Swamp
     tcgplayer_product_id: "545657"
     tcgplayer_sku_id: "7870512"
     finish: nf
+    rarity: c
   - display_key: mtg-otj-283-nf
     qty: 1
     name: Mountain
     tcgplayer_product_id: "545652"
     tcgplayer_sku_id: "7870112"
     finish: nf
+    rarity: c
   - display_key: mtg-otj-284-nf
     qty: 1
     name: Mountain
     tcgplayer_product_id: "545653"
     tcgplayer_sku_id: "7870192"
     finish: nf
+    rarity: c

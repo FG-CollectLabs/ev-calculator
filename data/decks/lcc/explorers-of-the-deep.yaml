@@ -14,6 +14,7 @@ components:
     tcgplayer_product_id: "524264"
     tcgplayer_sku_id: "7504191"
     finish: f
+    rarity: m
     note: commander
   - display_key: mtg-lcc-8-f
     qty: 1
@@ -21,484 +22,567 @@ components:
     tcgplayer_product_id: "525722"
     tcgplayer_sku_id: "7530922"
     finish: f
+    rarity: m
   - display_key: mtg-lcc-76-nf
     qty: 1
     name: Mist Dancer
     tcgplayer_product_id: "525832"
     tcgplayer_sku_id: "7534792"
     finish: nf
+    rarity: r
   - display_key: mtg-lcc-77-nf
     qty: 1
     name: Ripples of Potential
     tcgplayer_product_id: "525842"
     tcgplayer_sku_id: "7535142"
     finish: nf
+    rarity: r
   - display_key: mtg-lcc-79-nf
     qty: 1
     name: Wave Goodbye
     tcgplayer_product_id: "525857"
     tcgplayer_sku_id: "7535667"
     finish: nf
+    rarity: r
   - display_key: mtg-lcc-89-nf
     qty: 1
     name: Bygone Marvels
     tcgplayer_product_id: "525865"
     finish: nf
+    rarity: r
   - display_key: mtg-lcc-91-nf
     qty: 1
     name: Deeproot Historian
     tcgplayer_product_id: "525878"
     tcgplayer_sku_id: "7536402"
     finish: nf
+    rarity: r
   - display_key: mtg-lcc-95-nf
     qty: 1
     name: Topography Tracker
     tcgplayer_product_id: "525895"
     tcgplayer_sku_id: "7537002"
     finish: nf
+    rarity: r
   - display_key: mtg-lcc-96-nf
     qty: 1
     name: Tributary Instructor
     tcgplayer_product_id: "525899"
     tcgplayer_sku_id: "7537142"
     finish: nf
+    rarity: r
   - display_key: mtg-lcc-98-nf
     qty: 1
     name: Singer of Swift Rivers
     tcgplayer_product_id: "525900"
     tcgplayer_sku_id: "7537177"
     finish: nf
+    rarity: r
   - display_key: mtg-lcc-145-nf
     qty: 1
     name: Benthic Biomancer
     tcgplayer_product_id: "525903"
     tcgplayer_sku_id: "7537282"
     finish: nf
+    rarity: r
   - display_key: mtg-lcc-147-nf
     qty: 1
     name: Commit // Memory
     tcgplayer_product_id: "526197"
     tcgplayer_sku_id: "7543597"
     finish: nf
+    rarity: r
   - display_key: mtg-lcc-148-nf
     qty: 1
     name: Coralhelm Commander
     tcgplayer_product_id: "525904"
     tcgplayer_sku_id: "7537317"
     finish: nf
+    rarity: r
   - display_key: mtg-lcc-150-nf
     qty: 1
     name: Curse of the Swine
     tcgplayer_product_id: "526077"
     tcgplayer_sku_id: "7540047"
     finish: nf
+    rarity: r
   - display_key: mtg-lcc-155-nf
     qty: 1
     name: Emperor Mihail II
     tcgplayer_product_id: "525905"
     tcgplayer_sku_id: "7537352"
     finish: nf
+    rarity: r
   - display_key: mtg-lcc-158-nf
     qty: 1
     name: Herald of Secret Streams
     tcgplayer_product_id: "525908"
     tcgplayer_sku_id: "7537457"
     finish: nf
+    rarity: r
   - display_key: mtg-lcc-159-nf
     qty: 1
     name: Kindred Discovery
     tcgplayer_product_id: "526081"
     tcgplayer_sku_id: "7540187"
     finish: nf
+    rarity: r
   - display_key: mtg-lcc-160-nf
     qty: 1
     name: "Kopala, Warden of Waves"
     tcgplayer_product_id: "525910"
     tcgplayer_sku_id: "7537527"
     finish: nf
+    rarity: r
   - display_key: mtg-lcc-162-nf
     qty: 1
     name: Master of the Pearl Trident
     tcgplayer_product_id: "525914"
     tcgplayer_sku_id: "7537667"
     finish: nf
+    rarity: r
   - display_key: mtg-lcc-164-nf
     qty: 1
     name: Merfolk Sovereign
     tcgplayer_product_id: "525916"
     tcgplayer_sku_id: "7537737"
     finish: nf
+    rarity: r
   - display_key: mtg-lcc-168-nf
     qty: 1
     name: Reflections of Littjara
     tcgplayer_product_id: "526082"
     tcgplayer_sku_id: "7540222"
     finish: nf
+    rarity: r
   - display_key: mtg-lcc-170-nf
     qty: 1
     name: Seafloor Oracle
     tcgplayer_product_id: "525919"
     tcgplayer_sku_id: "7537842"
     finish: nf
+    rarity: r
   - display_key: mtg-lcc-174-nf
     qty: 1
     name: Surgespanner
     tcgplayer_product_id: "525920"
     tcgplayer_sku_id: "7537877"
     finish: nf
+    rarity: r
   - display_key: mtg-lcc-175-nf
     qty: 1
     name: Svyelun of Sea and Sky
     tcgplayer_product_id: "525924"
     tcgplayer_sku_id: "7538017"
     finish: nf
+    rarity: m
   - display_key: mtg-lcc-176-nf
     qty: 1
     name: "Thassa, God of the Sea"
     tcgplayer_product_id: "525925"
     tcgplayer_sku_id: "7538052"
     finish: nf
+    rarity: m
   - display_key: mtg-lcc-177-nf
     qty: 1
     name: Thieving Skydiver
     tcgplayer_product_id: "525939"
     tcgplayer_sku_id: "7538217"
     finish: nf
+    rarity: r
   - display_key: mtg-lcc-234-nf
     qty: 1
     name: Branching Evolution
     tcgplayer_product_id: "526083"
     tcgplayer_sku_id: "7540257"
     finish: nf
+    rarity: r
   - display_key: mtg-lcc-237-nf
     qty: 1
     name: Deeproot Elite
     tcgplayer_product_id: "525940"
     tcgplayer_sku_id: "7538252"
     finish: nf
+    rarity: r
   - display_key: mtg-lcc-243-nf
     qty: 1
     name: Hardened Scales
     tcgplayer_product_id: "526084"
     tcgplayer_sku_id: "7540292"
     finish: nf
+    rarity: r
   - display_key: mtg-lcc-250-nf
     qty: 1
     name: Realmwalker
     tcgplayer_product_id: "525942"
     tcgplayer_sku_id: "7538297"
     finish: nf
+    rarity: r
   - display_key: mtg-lcc-255-nf
     qty: 1
     name: Ruinous Intrusion
     tcgplayer_product_id: "526087"
     tcgplayer_sku_id: "7540397"
     finish: nf
+    rarity: r
   - display_key: mtg-lcc-266-nf
     qty: 1
     name: Cold-Eyed Selkie
     tcgplayer_product_id: "525945"
     tcgplayer_sku_id: "7538352"
     finish: nf
+    rarity: r
   - display_key: mtg-lcc-274-nf
     qty: 1
     name: "Kumena, Tyrant of Orazca"
     tcgplayer_product_id: "525946"
     tcgplayer_sku_id: "7538387"
     finish: nf
+    rarity: m
   - display_key: mtg-lcc-278-nf
     qty: 1
     name: Prime Speaker Zegana
     tcgplayer_product_id: "525947"
     tcgplayer_sku_id: "7538422"
     finish: nf
+    rarity: m
   - display_key: mtg-lcc-280-nf
     qty: 1
     name: Quandrix Command
     tcgplayer_product_id: "526088"
     tcgplayer_sku_id: "7540467"
     finish: nf
+    rarity: r
   - display_key: mtg-lcc-288-nf
     qty: 1
     name: Simic Ascendancy
     tcgplayer_product_id: "526085"
     tcgplayer_sku_id: "7540327"
     finish: nf
+    rarity: r
   - display_key: mtg-lcc-291-nf
     qty: 1
     name: "Tishana, Voice of Thunder"
     tcgplayer_product_id: "525948"
     tcgplayer_sku_id: "7538457"
     finish: nf
+    rarity: m
   - display_key: mtg-lcc-294-nf
     qty: 1
     name: Vorel of the Hull Clade
     tcgplayer_product_id: "525950"
     tcgplayer_sku_id: "7538502"
     finish: nf
+    rarity: r
   - display_key: mtg-lcc-298-nf
     qty: 1
     name: "Zegana, Utopian Speaker"
     tcgplayer_product_id: "525952"
     tcgplayer_sku_id: "7538547"
     finish: nf
+    rarity: r
   - display_key: mtg-lcc-308-nf
     qty: 1
     name: Metallic Mimic
     tcgplayer_product_id: "525954"
     tcgplayer_sku_id: "7538592"
     finish: nf
+    rarity: r
   - display_key: mtg-lcc-318-nf
     qty: 1
     name: "Alchemist's Refuge"
     tcgplayer_product_id: "526094"
     tcgplayer_sku_id: "7540682"
     finish: nf
+    rarity: r
   - display_key: mtg-lcc-336-nf
     qty: 1
     name: Hinterland Harbor
     tcgplayer_product_id: "526095"
     tcgplayer_sku_id: "7540717"
     finish: nf
+    rarity: r
   - display_key: mtg-lcc-339-nf
     qty: 1
     name: "Karn's Bastion"
     tcgplayer_product_id: "526096"
     tcgplayer_sku_id: "7540752"
     finish: nf
+    rarity: r
   - display_key: mtg-lcc-342-nf
     qty: 1
     name: Mosswort Bridge
     tcgplayer_product_id: "525917"
     tcgplayer_sku_id: "7537772"
     finish: nf
+    rarity: r
   - display_key: mtg-lcc-357-nf
     qty: 1
     name: Temple of Mystery
     tcgplayer_product_id: "526097"
     finish: nf
+    rarity: r
   - display_key: mtg-lcc-368-nf
     qty: 1
     name: Vineglimmer Snarl
     tcgplayer_product_id: "526098"
     tcgplayer_sku_id: "7540822"
     finish: nf
+    rarity: r
   - display_key: mtg-lci-65-nf
     qty: 1
     name: Merfolk Cave-Diver
     tcgplayer_product_id: "525351"
     finish: nf
+    rarity: u
   - display_key: mtg-lcc-142-nf
     qty: 1
     name: Aetherize
     tcgplayer_product_id: "526089"
     tcgplayer_sku_id: "7540477"
     finish: nf
+    rarity: u
   - display_key: mtg-lcc-152-nf
     qty: 1
     name: Deeproot Waters
     tcgplayer_product_id: "526086"
     tcgplayer_sku_id: "7540362"
     finish: nf
+    rarity: u
   - display_key: mtg-lcc-165-nf
     qty: 1
     name: Merrow Reejerey
     tcgplayer_product_id: "525957"
     tcgplayer_sku_id: "7538647"
     finish: nf
+    rarity: u
   - display_key: mtg-lcc-166-nf
     qty: 1
     name: Rapid Hybridization
     tcgplayer_product_id: "526090"
     tcgplayer_sku_id: "7540542"
     finish: nf
+    rarity: u
   - display_key: mtg-lcc-167-nf
     qty: 1
     name: Ravenform
     tcgplayer_product_id: "526078"
     tcgplayer_sku_id: "7540082"
     finish: nf
+    rarity: c
   - display_key: mtg-lcc-169-nf
     qty: 1
     name: Sage of Fables
     tcgplayer_product_id: "525960"
     tcgplayer_sku_id: "7538702"
     finish: nf
+    rarity: u
   - display_key: mtg-lcc-173-nf
     qty: 1
     name: Stonybrook Banneret
     tcgplayer_product_id: "526227"
     tcgplayer_sku_id: "7544217"
     finish: nf
+    rarity: c
   - display_key: mtg-lcc-233-nf
     qty: 1
     name: Beast Within
     tcgplayer_product_id: "526091"
     tcgplayer_sku_id: "7540577"
     finish: nf
+    rarity: u
   - display_key: mtg-lci-236-nf
     qty: 1
     name: "Nicanzil, Current Conductor"
     tcgplayer_product_id: "525253"
     finish: nf
+    rarity: u
   - display_key: mtg-lcc-240-nf
     qty: 1
     name: Evolution Sage
     tcgplayer_product_id: "525963"
     tcgplayer_sku_id: "7538782"
     finish: nf
+    rarity: u
   - display_key: mtg-lcc-241-nf
     qty: 1
     name: Explore
     tcgplayer_product_id: "526079"
     finish: nf
+    rarity: c
   - display_key: mtg-lcc-244-nf
     qty: 1
     name: Inspiring Call
     tcgplayer_product_id: "526092"
     tcgplayer_sku_id: "7540612"
     finish: nf
+    rarity: u
   - display_key: mtg-lcc-245-nf
     qty: 1
     name: "Kodama's Reach"
     tcgplayer_product_id: "526080"
     tcgplayer_sku_id: "7540152"
     finish: nf
+    rarity: c
   - display_key: mtg-lcc-270-nf
     qty: 1
     name: Growth Spiral
     tcgplayer_product_id: "526093"
     tcgplayer_sku_id: "7540647"
     finish: nf
+    rarity: c
   - display_key: mtg-lcc-273-nf
     qty: 1
     name: "Kiora's Follower"
     tcgplayer_product_id: "525965"
     tcgplayer_sku_id: "7538827"
     finish: nf
+    rarity: u
   - display_key: mtg-lcc-276-nf
     qty: 1
     name: Merfolk Mistbinder
     tcgplayer_product_id: "525967"
     finish: nf
+    rarity: u
   - display_key: mtg-lcc-277-nf
     qty: 1
     name: Merfolk Skydiver
     tcgplayer_product_id: "525969"
     tcgplayer_sku_id: "7538917"
     finish: nf
+    rarity: u
   - display_key: mtg-lcc-290-nf
     qty: 1
     name: "Tatyova, Benthic Druid"
     tcgplayer_product_id: "525971"
     tcgplayer_sku_id: "7538962"
     finish: nf
+    rarity: u
   - display_key: mtg-lcc-299-nf
     qty: 1
     name: Arcane Signet
     tcgplayer_product_id: "524261"
     tcgplayer_sku_id: "7504154"
     finish: nf
+    rarity: c
   - display_key: mtg-lcc-301-nf
     qty: 1
     name: "Commander's Sphere"
     tcgplayer_product_id: "525766"
     tcgplayer_sku_id: "7532477"
     finish: nf
+    rarity: c
   - display_key: mtg-lcc-312-nf
     qty: 1
     name: Simic Signet
     tcgplayer_product_id: "526102"
     tcgplayer_sku_id: "7540962"
     finish: nf
+    rarity: u
   - display_key: mtg-lcc-313-nf
     qty: 1
     name: Sol Ring
     tcgplayer_product_id: "525779"
     tcgplayer_sku_id: "7532927"
     finish: nf
+    rarity: u
   - display_key: mtg-lcc-314-nf
     qty: 1
     name: Swiftfoot Boots
     tcgplayer_product_id: "525780"
     tcgplayer_sku_id: "7532972"
     finish: nf
+    rarity: u
   - display_key: mtg-lcc-325-nf
     qty: 1
     name: Command Tower
     tcgplayer_product_id: "525809"
     tcgplayer_sku_id: "7533987"
     finish: nf
+    rarity: c
   - display_key: mtg-lcc-341-nf
     qty: 1
     name: Llanowar Reborn
     tcgplayer_product_id: "526099"
     tcgplayer_sku_id: "7540857"
     finish: nf
+    rarity: u
   - display_key: mtg-lcc-343-nf
     qty: 1
     name: Myriad Landscape
     tcgplayer_product_id: "525811"
     finish: nf
+    rarity: u
   - display_key: mtg-lcc-346-nf
     qty: 1
     name: Path of Ancestry
     tcgplayer_product_id: "524267"
     tcgplayer_sku_id: "7504262"
     finish: nf
+    rarity: c
   - display_key: mtg-lcc-348-nf
     qty: 1
     name: Reliquary Tower
     tcgplayer_product_id: "526100"
     tcgplayer_sku_id: "7540892"
     finish: nf
+    rarity: u
   - display_key: mtg-lcc-349-nf
     qty: 1
     name: "Rogue's Passage"
     tcgplayer_product_id: "525818"
     tcgplayer_sku_id: "7534302"
     finish: nf
+    rarity: u
   - display_key: mtg-lcc-350-nf
     qty: 1
     name: Secluded Courtyard
     tcgplayer_product_id: "525821"
     tcgplayer_sku_id: "7534407"
     finish: nf
+    rarity: u
   - display_key: mtg-lcc-352-nf
     qty: 1
     name: Simic Growth Chamber
     tcgplayer_product_id: "526101"
     tcgplayer_sku_id: "7540927"
     finish: nf
+    rarity: c
   - display_key: mtg-lcc-359-nf
     qty: 1
     name: Temple of the False God
     tcgplayer_product_id: "525826"
     tcgplayer_sku_id: "7534582"
     finish: nf
+    rarity: u
   - display_key: mtg-lcc-366-nf
     qty: 1
     name: Unclaimed Territory
     tcgplayer_product_id: "525827"
     tcgplayer_sku_id: "7534617"
     finish: nf
+    rarity: u
   - display_key: mtg-lci-401-nf
     qty: 4
     name: Forest
     tcgplayer_product_id: "524188"
     finish: nf
+    rarity: c
   - display_key: mtg-lci-402-nf
     qty: 3
     name: Forest
     tcgplayer_product_id: "524204"
     finish: nf
+    rarity: c
   - display_key: mtg-lci-395-nf
     qty: 7
     name: Island
     tcgplayer_product_id: "524197"
     finish: nf
+    rarity: c
   - display_key: mtg-lci-396-nf
     qty: 6
     name: Island
     tcgplayer_product_id: "524176"
     finish: nf
+    rarity: c

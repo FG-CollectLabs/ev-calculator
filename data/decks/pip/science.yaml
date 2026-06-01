@@ -17,12 +17,14 @@ components:
     tcgplayer_product_id: "523026"
     tcgplayer_sku_id: "7490324"
     finish: f
+    rarity: m
   - display_key: mtg-pip-5-f
     qty: 1
     name: "Liberty Prime, Recharged"
     tcgplayer_product_id: "539452"
     tcgplayer_sku_id: "7757856"
     finish: f
+    rarity: m
   # â”€â”€ Non-foil â€” PIP â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   - display_key: mtg-pip-10-nf
     qty: 1
@@ -30,543 +32,634 @@ components:
     tcgplayer_product_id: "541212"
     tcgplayer_sku_id: "7788119"
     finish: nf
+    rarity: r
   - display_key: mtg-pip-13-nf
     qty: 1
     name: Brotherhood Scribe
     tcgplayer_product_id: "541217"
     tcgplayer_sku_id: "7788244"
     finish: nf
+    rarity: r
   - display_key: mtg-pip-18-nf
     qty: 1
     name: Overencumbered
     tcgplayer_product_id: "522914"
     tcgplayer_sku_id: "7489665"
     finish: nf
+    rarity: r
   - display_key: mtg-pip-20-nf
     qty: 1
     name: "Paladin Danse, Steel Maverick"
     tcgplayer_product_id: "541232"
     tcgplayer_sku_id: "7788365"
     finish: nf
+    rarity: u
   - display_key: mtg-pip-22-nf
     qty: 1
     name: "The Prydwen, Steel Flagship"
     tcgplayer_product_id: "541346"
     tcgplayer_sku_id: "7794503"
     finish: nf
+    rarity: r
   - display_key: mtg-pip-24-nf
     qty: 1
     name: Sentry Bot
     tcgplayer_product_id: "541371"
     tcgplayer_sku_id: "7795018"
     finish: nf
+    rarity: r
   - display_key: mtg-pip-26-nf
     qty: 1
     name: "Vault 13: Dweller's Journey"
     tcgplayer_product_id: "541386"
     tcgplayer_sku_id: "7795483"
     finish: nf
+    rarity: r
   - display_key: mtg-pip-30-nf
     qty: 1
     name: "Curie, Emergent Intelligence"
     tcgplayer_product_id: "541400"
     tcgplayer_sku_id: "7795813"
     finish: nf
+    rarity: r
   - display_key: mtg-pip-31-nf
     qty: 1
     name: "James, Wandering Dad"
     tcgplayer_product_id: "541406"
     tcgplayer_sku_id: "7795933"
     finish: nf
+    rarity: r
   - display_key: mtg-pip-34-nf
     qty: 1
     name: Nerd Rage
     tcgplayer_product_id: "541412"
     tcgplayer_sku_id: "7796053"
     finish: nf
+    rarity: u
   - display_key: mtg-pip-35-nf
     qty: 1
     name: "Nick Valentine, Private Eye"
     tcgplayer_product_id: "539383"
     tcgplayer_sku_id: "7756498"
     finish: nf
+    rarity: r
   - display_key: mtg-pip-38-nf
     qty: 1
     name: Robobrain War Mind
     tcgplayer_product_id: "541414"
     tcgplayer_sku_id: "7796118"
     finish: nf
+    rarity: u
   - display_key: mtg-pip-40-nf
     qty: 1
     name: Synth Infiltrator
     tcgplayer_product_id: "541416"
     tcgplayer_sku_id: "7796183"
     finish: nf
+    rarity: r
   - display_key: mtg-pip-54-nf
     qty: 1
     name: Assaultron Dominator
     tcgplayer_product_id: "541420"
     tcgplayer_sku_id: "7796293"
     finish: nf
+    rarity: r
   - display_key: mtg-pip-55-nf
     qty: 1
     name: Bottle-Cap Blast
     tcgplayer_product_id: "541424"
     tcgplayer_sku_id: "7796403"
     finish: nf
+    rarity: u
   - display_key: mtg-pip-62-nf
     qty: 1
     name: "The Motherlode, Excavator"
     tcgplayer_product_id: "541426"
     tcgplayer_sku_id: "7796468"
     finish: nf
+    rarity: r
   - display_key: mtg-pip-64-nf
     qty: 1
     name: Plasma Caster
     tcgplayer_product_id: "541431"
     tcgplayer_sku_id: "7796579"
     finish: nf
+    rarity: r
   - display_key: mtg-pip-67-nf
     qty: 1
     name: Synth Eradicator
     tcgplayer_product_id: "541440"
     tcgplayer_sku_id: "7796710"
     finish: nf
+    rarity: r
   - display_key: mtg-pip-92-nf
     qty: 1
     name: Arcade Gannon
     tcgplayer_product_id: "541459"
     tcgplayer_sku_id: "7797245"
     finish: nf
+    rarity: r
   - display_key: mtg-pip-103-nf
     qty: 1
     name: Elder Owyn Lyons
     tcgplayer_product_id: "541468"
     tcgplayer_sku_id: "7797480"
     finish: nf
+    rarity: u
   - display_key: mtg-pip-104-nf
     qty: 1
     name: Electrosiphon
     tcgplayer_product_id: "541470"
     tcgplayer_sku_id: "7797545"
     finish: nf
+    rarity: r
   - display_key: mtg-pip-116-nf
     qty: 1
     name: "Red Death, Shipwrecker"
     tcgplayer_product_id: "541446"
     tcgplayer_sku_id: "7796830"
     finish: nf
+    rarity: r
   - display_key: mtg-pip-117-nf
     qty: 1
     name: "Rex, Cyber-Hound"
     tcgplayer_product_id: "523048"
     tcgplayer_sku_id: "7490434"
     finish: nf
+    rarity: r
   - display_key: mtg-pip-118-nf
     qty: 1
     name: Sentinel Sarah Lyons
     tcgplayer_product_id: "541454"
     tcgplayer_sku_id: "7797085"
     finish: nf
+    rarity: r
   - display_key: mtg-pip-119-nf
     qty: 1
     name: "Shaun, Father of Synths"
     tcgplayer_product_id: "541478"
     tcgplayer_sku_id: "7797771"
     finish: nf
+    rarity: r
   - display_key: mtg-pip-123-nf
     qty: 1
     name: "Vault 112: Sadistic Simulation"
     tcgplayer_product_id: "539408"
     tcgplayer_sku_id: "7757164"
     finish: nf
+    rarity: r
   - display_key: mtg-pip-127-nf
     qty: 1
     name: Behemoth of Vault 0
     tcgplayer_product_id: "541466"
     tcgplayer_sku_id: "7797415"
     finish: nf
+    rarity: u
   - display_key: mtg-pip-128-nf
     qty: 1
     name: Brotherhood Vertibird
     tcgplayer_product_id: "541458"
     tcgplayer_sku_id: "7797195"
     finish: nf
+    rarity: r
   - display_key: mtg-pip-129-nf
     qty: 1
     name: C.A.M.P.
     tcgplayer_product_id: "541471"
     tcgplayer_sku_id: "7797595"
     finish: nf
+    rarity: u
   - display_key: mtg-pip-132-nf
     qty: 1
     name: Endurance Bobblehead
     tcgplayer_product_id: "541477"
     tcgplayer_sku_id: "7797721"
     finish: nf
+    rarity: u
   - display_key: mtg-pip-133-nf
     qty: 1
     name: Expert-Level Safe
     tcgplayer_product_id: "541485"
     tcgplayer_sku_id: "7797898"
     finish: nf
+    rarity: u
   - display_key: mtg-pip-134-nf
     qty: 1
     name: Intelligence Bobblehead
     tcgplayer_product_id: "523114"
     tcgplayer_sku_id: "7490824"
     finish: nf
+    rarity: u
   - display_key: mtg-pip-137-nf
     qty: 1
     name: Nuka-Cola Vending Machine
     tcgplayer_product_id: "522937"
     tcgplayer_sku_id: "7489795"
     finish: nf
+    rarity: u
   - display_key: mtg-pip-145-nf
     qty: 1
     name: T-45 Power Armor
     tcgplayer_product_id: "539374"
     tcgplayer_sku_id: "7756353"
     finish: nf
+    rarity: r
   - display_key: mtg-pip-148-nf
     qty: 1
     name: Ferrous Lake
     tcgplayer_product_id: "539355"
     tcgplayer_sku_id: "7755828"
     finish: nf
+    rarity: r
   - display_key: mtg-pip-149-nf
     qty: 1
     name: HELIOS One
     tcgplayer_product_id: "541450"
     tcgplayer_sku_id: "7796940"
     finish: nf
+    rarity: r
   - display_key: mtg-pip-156-nf
     qty: 1
     name: Austere Command
     tcgplayer_product_id: "540928"
     tcgplayer_sku_id: "7783370"
     finish: nf
+    rarity: r
   - display_key: mtg-pip-158-nf
     qty: 1
     name: Crush Contraband
     tcgplayer_product_id: "540933"
     tcgplayer_sku_id: "7783600"
     finish: nf
+    rarity: u
   - display_key: mtg-pip-159-nf
     qty: 1
     name: Dispatch
     tcgplayer_product_id: "540935"
     tcgplayer_sku_id: "7783665"
     finish: nf
+    rarity: u
   - display_key: mtg-pip-168-nf
     qty: 1
     name: Open the Vaults
     tcgplayer_product_id: "539326"
     tcgplayer_sku_id: "7755218"
     finish: nf
+    rarity: r
   - display_key: mtg-pip-173-nf
     qty: 1
     name: Swords to Plowshares
     tcgplayer_product_id: "540937"
     tcgplayer_sku_id: "7783730"
     finish: nf
+    rarity: u
   - display_key: mtg-pip-176-nf
     qty: 1
     name: Glimmer of Genius
     tcgplayer_product_id: "540938"
     tcgplayer_sku_id: "7783780"
     finish: nf
+    rarity: u
   - display_key: mtg-pip-178-nf
     qty: 1
     name: Mechanized Production
     tcgplayer_product_id: "539370"
     tcgplayer_sku_id: "7756243"
     finish: nf
+    rarity: m
   - display_key: mtg-pip-179-nf
     qty: 1
     name: One with the Machine
     tcgplayer_product_id: "540929"
     tcgplayer_sku_id: "7783420"
     finish: nf
+    rarity: r
   - display_key: mtg-pip-180-nf
     qty: 1
     name: Thirst for Knowledge
     tcgplayer_product_id: "540940"
     tcgplayer_sku_id: "7783880"
     finish: nf
+    rarity: u
   - display_key: mtg-pip-181-nf
     qty: 1
     name: Whirler Rogue
     tcgplayer_product_id: "540988"
     tcgplayer_sku_id: "7785575"
     finish: nf
+    rarity: u
   - display_key: mtg-pip-190-nf
     qty: 1
     name: Loyal Apprentice
     tcgplayer_product_id: "540990"
     tcgplayer_sku_id: "7785660"
     finish: nf
+    rarity: u
   - display_key: mtg-pip-193-nf
     qty: 1
     name: Unexpected Windfall
     tcgplayer_product_id: "540945"
     tcgplayer_sku_id: "7784040"
     finish: nf
+    rarity: c
   - display_key: mtg-pip-221-nf
     qty: 1
     name: Wake the Past
     tcgplayer_product_id: "540930"
     tcgplayer_sku_id: "7783470"
     finish: nf
+    rarity: r
   - display_key: mtg-pip-224-nf
     qty: 1
     name: Arcane Signet
     tcgplayer_product_id: "539403"
     tcgplayer_sku_id: "7757039"
     finish: nf
+    rarity: u
   - display_key: mtg-pip-230-nf
     qty: 1
     name: Everflowing Chalice
     tcgplayer_product_id: "540958"
     tcgplayer_sku_id: "7784475"
     finish: nf
+    rarity: u
   - display_key: mtg-pip-233-nf
     qty: 1
     name: Lightning Greaves
     tcgplayer_product_id: "540960"
     tcgplayer_sku_id: "7784575"
     finish: nf
+    rarity: u
   - display_key: mtg-pip-235-nf
     qty: 1
     name: Mind Stone
     tcgplayer_product_id: "540962"
     tcgplayer_sku_id: "7784655"
     finish: nf
+    rarity: u
   - display_key: mtg-pip-236-nf
     qty: 1
     name: Mystic Forge
     tcgplayer_product_id: "540954"
     tcgplayer_sku_id: "7784310"
     finish: nf
+    rarity: r
   - display_key: mtg-pip-237-nf
     qty: 1
     name: Panharmonicon
     tcgplayer_product_id: "540956"
     tcgplayer_sku_id: "7784375"
     finish: nf
+    rarity: r
   - display_key: mtg-pip-239-nf
     qty: 1
     name: Sol Ring
     tcgplayer_product_id: "539393"
     tcgplayer_sku_id: "7756734"
     finish: nf
+    rarity: u
   - display_key: mtg-pip-240-nf
     qty: 1
     name: Solemn Simulacrum
     tcgplayer_product_id: "539384"
     tcgplayer_sku_id: "7756548"
     finish: nf
+    rarity: r
   - display_key: mtg-pip-241-nf
     qty: 1
     name: Steel Overseer
     tcgplayer_product_id: "540982"
     tcgplayer_sku_id: "7785400"
     finish: nf
+    rarity: r
   - display_key: mtg-pip-243-nf
     qty: 1
     name: Talisman of Conviction
     tcgplayer_product_id: "539966"
     tcgplayer_sku_id: "7769414"
     finish: nf
+    rarity: u
   - display_key: mtg-pip-244-nf
     qty: 1
     name: Talisman of Creativity
     tcgplayer_product_id: "540963"
     tcgplayer_sku_id: "7784705"
     finish: nf
+    rarity: u
   - display_key: mtg-pip-249-nf
     qty: 1
     name: Talisman of Progress
     tcgplayer_product_id: "540969"
     tcgplayer_sku_id: "7784905"
     finish: nf
+    rarity: u
   - display_key: mtg-pip-251-nf
     qty: 1
     name: Thought Vessel
     tcgplayer_product_id: "540971"
     tcgplayer_sku_id: "7784970"
     finish: nf
+    rarity: c
   - display_key: mtg-pip-252-nf
     qty: 1
     name: "Wayfarer's Bauble"
     tcgplayer_product_id: "540975"
     tcgplayer_sku_id: "7785100"
     finish: nf
+    rarity: c
   - display_key: mtg-pip-253-nf
     qty: 1
     name: Ash Barrens
     tcgplayer_product_id: "539369"
     tcgplayer_sku_id: "7756193"
     finish: nf
+    rarity: c
   - display_key: mtg-pip-254-nf
     qty: 1
     name: Buried Ruin
     tcgplayer_product_id: "539604"
     tcgplayer_sku_id: "7760669"
     finish: nf
+    rarity: u
   - display_key: mtg-pip-258-nf
     qty: 1
     name: Clifftop Retreat
     tcgplayer_product_id: "539592"
     tcgplayer_sku_id: "7760069"
     finish: nf
+    rarity: r
   - display_key: mtg-pip-259-nf
     qty: 1
     name: Command Tower
     tcgplayer_product_id: "522978"
     tcgplayer_sku_id: "7490050"
     finish: nf
+    rarity: c
   - display_key: mtg-pip-263-nf
     qty: 1
     name: Evolving Wilds
     tcgplayer_product_id: "539363"
     tcgplayer_sku_id: "7756018"
     finish: nf
+    rarity: c
   - display_key: mtg-pip-264-nf
     qty: 1
     name: Exotic Orchard
     tcgplayer_product_id: "539593"
     tcgplayer_sku_id: "7760119"
     finish: nf
+    rarity: r
   - display_key: mtg-pip-266-nf
     qty: 1
     name: Glacial Fortress
     tcgplayer_product_id: "540991"
     tcgplayer_sku_id: "7785710"
     finish: nf
+    rarity: r
   - display_key: mtg-pip-268-nf
     qty: 1
     name: Irrigated Farmland
     tcgplayer_product_id: "540993"
     tcgplayer_sku_id: "7785795"
     finish: nf
+    rarity: r
   - display_key: mtg-pip-274-nf
     qty: 1
     name: Myriad Landscape
     tcgplayer_product_id: "539886"
     tcgplayer_sku_id: "7767219"
     finish: nf
+    rarity: u
   - display_key: mtg-pip-275-nf
     qty: 1
     name: Mystic Monastery
     tcgplayer_product_id: "541004"
     tcgplayer_sku_id: "7786285"
     finish: nf
+    rarity: u
   - display_key: mtg-pip-279-nf
     qty: 1
     name: Path of Ancestry
     tcgplayer_product_id: "539349"
     tcgplayer_sku_id: "7755698"
     finish: nf
+    rarity: c
   - display_key: mtg-pip-280-nf
     qty: 1
     name: Prairie Stream
     tcgplayer_product_id: "540994"
     tcgplayer_sku_id: "7785845"
     finish: nf
+    rarity: r
   - display_key: mtg-pip-281-nf
     qty: 1
     name: Razortide Bridge
     tcgplayer_product_id: "540976"
     tcgplayer_sku_id: "7785150"
     finish: nf
+    rarity: c
   - display_key: mtg-pip-285-nf
     qty: 1
     name: Rustvale Bridge
     tcgplayer_product_id: "540978"
     tcgplayer_sku_id: "7785235"
     finish: nf
+    rarity: c
   - display_key: mtg-pip-290-nf
     qty: 1
     name: Silverbluff Bridge
     tcgplayer_product_id: "540980"
     tcgplayer_sku_id: "7785335"
     finish: nf
+    rarity: c
   - display_key: mtg-pip-291-nf
     qty: 1
     name: Skycloud Expanse
     tcgplayer_product_id: "540995"
     tcgplayer_sku_id: "7785895"
     finish: nf
+    rarity: r
   - display_key: mtg-pip-293-nf
     qty: 1
     name: Spire of Industry
     tcgplayer_product_id: "540996"
     tcgplayer_sku_id: "7785945"
     finish: nf
+    rarity: r
   - display_key: mtg-pip-294-nf
     qty: 1
     name: Sulfur Falls
     tcgplayer_product_id: "540998"
     tcgplayer_sku_id: "7786030"
     finish: nf
+    rarity: r
   - display_key: mtg-pip-304-nf
     qty: 1
     name: Temple of Enlightenment
     tcgplayer_product_id: "540999"
     tcgplayer_sku_id: "7786080"
     finish: nf
+    rarity: r
   - display_key: mtg-pip-305-nf
     qty: 1
     name: Temple of Epiphany
     tcgplayer_product_id: "541001"
     tcgplayer_sku_id: "7786165"
     finish: nf
+    rarity: r
   - display_key: mtg-pip-313-nf
     qty: 1
     name: Terramorphic Expanse
     tcgplayer_product_id: "539333"
     tcgplayer_sku_id: "7755368"
     finish: nf
+    rarity: c
   - display_key: mtg-pip-314-nf
     qty: 1
     name: Treasure Vault
     tcgplayer_product_id: "540957"
     tcgplayer_sku_id: "7784425"
     finish: nf
+    rarity: r
   - display_key: mtg-pip-317-nf
     qty: 2
     name: Plains
     tcgplayer_product_id: "522987"
     tcgplayer_sku_id: "7490099"
     finish: nf
+    rarity: c
   - display_key: mtg-pip-318-nf
     qty: 2
     name: Plains
     tcgplayer_product_id: "523002"
     tcgplayer_sku_id: "7490189"
     finish: nf
+    rarity: c
   - display_key: mtg-pip-319-nf
     qty: 3
     name: Island
     tcgplayer_product_id: "523005"
     tcgplayer_sku_id: "7490209"
     finish: nf
+    rarity: c
   - display_key: mtg-pip-320-nf
     qty: 2
     name: Island
     tcgplayer_product_id: "522948"
     tcgplayer_sku_id: "7489860"
     finish: nf
+    rarity: c
   - display_key: mtg-pip-323-nf
     qty: 2
     name: Mountain
     tcgplayer_product_id: "522931"
     tcgplayer_sku_id: "7489760"
     finish: nf
+    rarity: c
   - display_key: mtg-pip-324-nf
     qty: 2
     name: Mountain
     tcgplayer_product_id: "523000"
     tcgplayer_sku_id: "7490174"
     finish: nf
+    rarity: c

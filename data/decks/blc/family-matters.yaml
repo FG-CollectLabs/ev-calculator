@@ -16,6 +16,7 @@ components:
     tcgplayer_product_id: "558385"
     tcgplayer_sku_id: "8024666"
     finish: f
+    rarity: m
     note: commander
   - display_key: mtg-blc-5-f
     qty: 1
@@ -23,549 +24,641 @@ components:
     tcgplayer_product_id: "559720"
     tcgplayer_sku_id: "8048865"
     finish: f
+    rarity: m
   - display_key: mtg-blc-97-f
     qty: 1
     name: "Elspeth, Sun's Champion"
     tcgplayer_product_id: "559726"
     tcgplayer_sku_id: "8049160"
     finish: f
+    rarity: m
   - display_key: mtg-blc-142-nf
     qty: 1
     name: Jazal Goldmane
     tcgplayer_product_id: "559802"
     tcgplayer_sku_id: "8052134"
     finish: nf
+    rarity: r
   - display_key: mtg-blc-146-nf
     qty: 1
     name: Martial Coup
     tcgplayer_product_id: "559838"
     tcgplayer_sku_id: "8053709"
     finish: nf
+    rarity: r
   - display_key: mtg-blc-156-nf
     qty: 1
     name: Storm of Souls
     tcgplayer_product_id: "559839"
     tcgplayer_sku_id: "8053759"
     finish: nf
+    rarity: r
   - display_key: mtg-blc-153-nf
     qty: 1
     name: Selfless Spirit
     tcgplayer_product_id: "559803"
     tcgplayer_sku_id: "8052184"
     finish: nf
+    rarity: r
   - display_key: mtg-blc-10-nf
     qty: 1
     name: Murmuration
     tcgplayer_product_id: "559731"
     tcgplayer_sku_id: "8049380"
     finish: nf
+    rarity: r
   - display_key: mtg-blc-136-nf
     qty: 1
     name: Blade Splicer
     tcgplayer_product_id: "559804"
     tcgplayer_sku_id: "8052234"
     finish: nf
+    rarity: r
   - display_key: mtg-blc-139-nf
     qty: 1
     name: Hanged Executioner
     tcgplayer_product_id: "559807"
     tcgplayer_sku_id: "8052294"
     finish: nf
+    rarity: r
   - display_key: mtg-blc-107-nf
     qty: 1
     name: Loyal Warhound
     tcgplayer_product_id: "559730"
     tcgplayer_sku_id: "8049330"
     finish: nf
+    rarity: r
   - display_key: mtg-blc-150-nf
     qty: 1
     name: Restoration Angel
     tcgplayer_product_id: "559808"
     tcgplayer_sku_id: "8052344"
     finish: nf
+    rarity: r
   - display_key: mtg-blc-9-nf
     qty: 1
     name: Jacked Rabbit
     tcgplayer_product_id: "559729"
     tcgplayer_sku_id: "8049280"
     finish: nf
+    rarity: r
   - display_key: mtg-blc-154-nf
     qty: 1
     name: Skyclave Apparition
     tcgplayer_product_id: "560179"
     tcgplayer_sku_id: "8062090"
     finish: nf
+    rarity: r
   - display_key: mtg-blc-138-nf
     qty: 1
     name: Dusk // Dawn
     tcgplayer_product_id: "560149"
     tcgplayer_sku_id: "8061229"
     finish: nf
+    rarity: r
   - display_key: mtg-blc-137-nf
     qty: 1
     name: "Boss's Chauffeur"
     tcgplayer_product_id: "560147"
     tcgplayer_sku_id: "8061174"
     finish: nf
+    rarity: r
   - display_key: mtg-blc-134-nf
     qty: 1
     name: Angel of the Ruins
     tcgplayer_product_id: "559810"
     tcgplayer_sku_id: "8052399"
     finish: nf
+    rarity: r
   - display_key: mtg-blc-144-nf
     qty: 1
     name: Luminous Broodmoth
     tcgplayer_product_id: "560172"
     tcgplayer_sku_id: "8061885"
     finish: nf
+    rarity: m
   - display_key: mtg-blc-157-nf
     qty: 1
     name: Sun Titan
     tcgplayer_product_id: "559811"
     tcgplayer_sku_id: "8052449"
     finish: nf
+    rarity: m
   - display_key: mtg-blc-15-nf
     qty: 1
     name: Pollywog Prodigy
     tcgplayer_product_id: "559733"
     tcgplayer_sku_id: "8049480"
     finish: nf
+    rarity: r
   - display_key: mtg-blc-14-nf
     qty: 1
     name: "Fortune Teller's Talent"
     tcgplayer_product_id: "559728"
     tcgplayer_sku_id: "8049230"
     finish: nf
+    rarity: r
   - display_key: mtg-blc-160-nf
     qty: 1
     name: Aether Channeler
     tcgplayer_product_id: "559812"
     tcgplayer_sku_id: "8052499"
     finish: nf
+    rarity: r
   - display_key: mtg-blc-172-nf
     qty: 1
     name: Pull from Tomorrow
     tcgplayer_product_id: "559844"
     tcgplayer_sku_id: "8054009"
     finish: nf
+    rarity: r
   - display_key: mtg-blc-174-nf
     qty: 1
     name: Shield Broker
     tcgplayer_product_id: "559814"
     tcgplayer_sku_id: "8052554"
     finish: nf
+    rarity: r
   - display_key: mtg-blc-176-nf
     qty: 1
     name: Stolen by the Fae
     tcgplayer_product_id: "559840"
     tcgplayer_sku_id: "8053809"
     finish: nf
+    rarity: r
   - display_key: mtg-blc-38-nf
     qty: 1
     name: Rapid Augmenter
     tcgplayer_product_id: "559734"
     tcgplayer_sku_id: "8049530"
     finish: nf
+    rarity: r
   - display_key: mtg-blc-162-nf
     qty: 1
     name: Bident of Thassa
     tcgplayer_product_id: "559848"
     tcgplayer_sku_id: "8054209"
     finish: nf
+    rarity: r
   - display_key: mtg-blc-165-nf
     qty: 1
     name: Curiosity Crafter
     tcgplayer_product_id: "559815"
     tcgplayer_sku_id: "8052604"
     finish: nf
+    rarity: r
   - display_key: mtg-blc-195-nf
     qty: 1
     name: Devilish Valet
     tcgplayer_product_id: "559816"
     tcgplayer_sku_id: "8052654"
     finish: nf
+    rarity: r
   - display_key: mtg-blc-202-nf
     qty: 1
     name: Siege-Gang Commander
     tcgplayer_product_id: "559817"
     tcgplayer_sku_id: "8052704"
     finish: nf
+    rarity: r
   - display_key: mtg-blc-24-nf
     qty: 1
     name: Echoing Assault
     tcgplayer_product_id: "560229"
     tcgplayer_sku_id: "8063355"
     finish: nf
+    rarity: r
   - display_key: mtg-blc-21-nf
     qty: 1
     name: Agate Instigator
     tcgplayer_product_id: "559718"
     tcgplayer_sku_id: "8048740"
     finish: nf
+    rarity: r
   - display_key: mtg-blc-23-nf
     qty: 1
     name: Calamity of Cinders
     tcgplayer_product_id: "559722"
     tcgplayer_sku_id: "8048940"
     finish: nf
+    rarity: r
   - display_key: mtg-blc-201-nf
     qty: 1
     name: Rose Room Treasurer
     tcgplayer_product_id: "559818"
     tcgplayer_sku_id: "8052754"
     finish: nf
+    rarity: r
   - display_key: mtg-blc-194-nf
     qty: 1
     name: Combat Celebrant
     tcgplayer_product_id: "559819"
     tcgplayer_sku_id: "8052804"
     finish: nf
+    rarity: m
   - display_key: mtg-blc-198-nf
     qty: 1
     name: Inferno Titan
     tcgplayer_product_id: "559820"
     tcgplayer_sku_id: "8052854"
     finish: nf
+    rarity: m
   - display_key: mtg-blc-262-nf
     qty: 1
     name: Time Wipe
     tcgplayer_product_id: "559842"
     tcgplayer_sku_id: "8053909"
     finish: nf
+    rarity: r
   - display_key: mtg-blc-284-nf
     qty: 1
     name: Solemn Simulacrum
     tcgplayer_product_id: "559821"
     tcgplayer_sku_id: "8052904"
     finish: nf
+    rarity: r
   - display_key: mtg-blc-276-nf
     qty: 1
     name: Helm of the Host
     tcgplayer_product_id: "559849"
     tcgplayer_sku_id: "8054259"
     finish: nf
+    rarity: r
   - display_key: mtg-blc-307-nf
     qty: 1
     name: Glacial Fortress
     tcgplayer_product_id: "559857"
     tcgplayer_sku_id: "8054659"
     finish: nf
+    rarity: r
   - display_key: mtg-blc-291-nf
     qty: 1
     name: Adarkar Wastes
     tcgplayer_product_id: "559858"
     tcgplayer_sku_id: "8054709"
     finish: nf
+    rarity: r
   - display_key: mtg-blc-339-nf
     qty: 1
     name: Temple of Enlightenment
     tcgplayer_product_id: "559859"
     tcgplayer_sku_id: "8054759"
     finish: nf
+    rarity: r
   - display_key: mtg-blc-298-nf
     qty: 1
     name: Castle Ardenvale
     tcgplayer_product_id: "559861"
     tcgplayer_sku_id: "8054810"
     finish: nf
+    rarity: r
   - display_key: mtg-blc-328-nf
     qty: 1
     name: Seachrome Coast
     tcgplayer_product_id: "559864"
     tcgplayer_sku_id: "8054866"
     finish: nf
+    rarity: r
   - display_key: mtg-blc-333-nf
     qty: 1
     name: Sulfur Falls
     tcgplayer_product_id: "559865"
     tcgplayer_sku_id: "8054916"
     finish: nf
+    rarity: r
   - display_key: mtg-blc-297-nf
     qty: 1
     name: Cascade Bluffs
     tcgplayer_product_id: "559867"
     tcgplayer_sku_id: "8054976"
     finish: nf
+    rarity: r
   - display_key: mtg-blc-131-nf
     qty: 1
     name: Exotic Orchard
     tcgplayer_product_id: "559727"
     tcgplayer_sku_id: "8049180"
     finish: nf
+    rarity: r
   - display_key: mtg-blc-300-nf
     qty: 1
     name: Clifftop Retreat
     tcgplayer_product_id: "559868"
     tcgplayer_sku_id: "8055026"
     finish: nf
+    rarity: r
   - display_key: mtg-blc-331-nf
     qty: 1
     name: Shivan Reef
     tcgplayer_product_id: "559870"
     tcgplayer_sku_id: "8055126"
     finish: nf
+    rarity: r
   - display_key: mtg-blc-344-nf
     qty: 1
     name: Temple of Triumph
     tcgplayer_product_id: "559871"
     tcgplayer_sku_id: "8055216"
     finish: nf
+    rarity: r
   - display_key: mtg-blc-293-nf
     qty: 1
     name: Battlefield Forge
     tcgplayer_product_id: "559872"
     tcgplayer_sku_id: "8055266"
     finish: nf
+    rarity: r
   - display_key: mtg-blc-332-nf
     qty: 1
     name: Skycloud Expanse
     tcgplayer_product_id: "559874"
     tcgplayer_sku_id: "8055366"
     finish: nf
+    rarity: r
   - display_key: mtg-blc-340-nf
     qty: 1
     name: Temple of Epiphany
     tcgplayer_product_id: "559875"
     tcgplayer_sku_id: "8055416"
     finish: nf
+    rarity: r
   - display_key: mtg-blc-303-nf
     qty: 1
     name: Ferrous Lake
     tcgplayer_product_id: "559878"
     tcgplayer_sku_id: "8055517"
     finish: nf
+    rarity: r
   - display_key: mtg-blc-327-nf
     qty: 1
     name: Rugged Prairie
     tcgplayer_product_id: "559879"
     tcgplayer_sku_id: "8055567"
     finish: nf
+    rarity: r
   - display_key: mtg-blc-336-nf
     qty: 1
     name: Sunscorched Divide
     tcgplayer_product_id: "559881"
     tcgplayer_sku_id: "8055667"
     finish: nf
+    rarity: r
   - display_key: mtg-blc-155-nf
     qty: 1
     name: Spirited Companion
     tcgplayer_product_id: "559822"
     tcgplayer_sku_id: "8052954"
     finish: nf
+    rarity: c
   - display_key: mtg-blc-141-nf
     qty: 1
     name: Inspiring Overseer
     tcgplayer_product_id: "559823"
     tcgplayer_sku_id: "8053004"
     finish: nf
+    rarity: c
   - display_key: mtg-blc-105-nf
     qty: 1
     name: Cut a Deal
     tcgplayer_product_id: "559725"
     tcgplayer_sku_id: "8049090"
     finish: nf
+    rarity: u
   - display_key: mtg-blc-147-nf
     qty: 1
     name: Path to Exile
     tcgplayer_product_id: "559845"
     tcgplayer_sku_id: "8054059"
     finish: nf
+    rarity: u
   - display_key: mtg-blc-167-nf
     qty: 1
     name: Illusory Ambusher
     tcgplayer_product_id: "559825"
     tcgplayer_sku_id: "8053104"
     finish: nf
+    rarity: u
   - display_key: mtg-blc-173-nf
     qty: 1
     name: Rowdy Research
     tcgplayer_product_id: "559846"
     tcgplayer_sku_id: "8054109"
     finish: nf
+    rarity: u
   - display_key: mtg-blb-65-nf
     qty: 1
     name: Plumecreed Escort
     tcgplayer_product_id: "559144"
     tcgplayer_sku_id: "8039643"
     finish: nf
+    rarity: u
   - display_key: mtg-blc-111-nf
     qty: 1
     name: Rapid Hybridization
     tcgplayer_product_id: "559735"
     tcgplayer_sku_id: "8049580"
     finish: nf
+    rarity: u
   - display_key: mtg-blc-169-nf
     qty: 1
     name: Junk Winder
     tcgplayer_product_id: "559827"
     tcgplayer_sku_id: "8053204"
     finish: nf
+    rarity: u
   - display_key: mtg-blc-161-nf
     qty: 1
     name: Aetherize
     tcgplayer_product_id: "559847"
     tcgplayer_sku_id: "8054159"
     finish: nf
+    rarity: u
   - display_key: mtg-blc-110-nf
     qty: 1
     name: Chart a Course
     tcgplayer_product_id: "559723"
     tcgplayer_sku_id: "8048990"
     finish: nf
+    rarity: u
   - display_key: mtg-blc-177-nf
     qty: 1
     name: "Tetsuko Umezawa, Fugitive"
     tcgplayer_product_id: "559828"
     tcgplayer_sku_id: "8053254"
     finish: nf
+    rarity: u
   - display_key: mtg-blc-204-nf
     qty: 1
     name: Thopter Engineer
     tcgplayer_product_id: "559830"
     tcgplayer_sku_id: "8053354"
     finish: nf
+    rarity: u
   - display_key: mtg-blc-249-nf
     qty: 1
     name: Cloudblazer
     tcgplayer_product_id: "559833"
     tcgplayer_sku_id: "8053459"
     finish: nf
+    rarity: u
   - display_key: mtg-blc-127-nf
     qty: 1
     name: Arcane Signet
     tcgplayer_product_id: "559719"
     tcgplayer_sku_id: "8048790"
     finish: nf
+    rarity: c
   - display_key: mtg-blc-128-nf
     qty: 1
     name: Boros Signet
     tcgplayer_product_id: "559721"
     tcgplayer_sku_id: "8048890"
     finish: nf
+    rarity: u
   - display_key: mtg-blc-281-nf
     qty: 1
     name: Ornithopter of Paradise
     tcgplayer_product_id: "559835"
     tcgplayer_sku_id: "8053559"
     finish: nf
+    rarity: c
   - display_key: mtg-blc-265-nf
     qty: 1
     name: Azorius Signet
     tcgplayer_product_id: "559850"
     tcgplayer_sku_id: "8054309"
     finish: nf
+    rarity: u
   - display_key: mtg-blc-278-nf
     qty: 1
     name: Izzet Signet
     tcgplayer_product_id: "559851"
     tcgplayer_sku_id: "8054359"
     finish: nf
+    rarity: u
   - display_key: mtg-blc-267-nf
     qty: 1
     name: Circuit Mender
     tcgplayer_product_id: "559837"
     tcgplayer_sku_id: "8053659"
     finish: nf
+    rarity: u
   - display_key: mtg-blc-269-nf
     qty: 1
     name: Fellwar Stone
     tcgplayer_product_id: "559852"
     tcgplayer_sku_id: "8054409"
     finish: nf
+    rarity: u
   - display_key: mtg-blc-129-nf
     qty: 1
     name: Sol Ring
     tcgplayer_product_id: "559736"
     tcgplayer_sku_id: "8049630"
     finish: nf
+    rarity: u
   - display_key: mtg-blc-280-nf
     qty: 1
     name: Mind Stone
     tcgplayer_product_id: "559854"
     tcgplayer_sku_id: "8054509"
     finish: nf
+    rarity: u
   - display_key: mtg-blc-345-nf
     qty: 1
     name: Terramorphic Expanse
     tcgplayer_product_id: "559882"
     tcgplayer_sku_id: "8055717"
     finish: nf
+    rarity: c
   - display_key: mtg-blc-322-nf
     qty: 1
     name: Path of Ancestry
     tcgplayer_product_id: "559884"
     tcgplayer_sku_id: "8055817"
     finish: nf
+    rarity: c
   - display_key: mtg-blc-348-nf
     qty: 1
     name: Thriving Heath
     tcgplayer_product_id: "559886"
     tcgplayer_sku_id: "8055917"
     finish: nf
+    rarity: c
   - display_key: mtg-blc-302-nf
     qty: 1
     name: Evolving Wilds
     tcgplayer_product_id: "559888"
     tcgplayer_sku_id: "8056017"
     finish: nf
+    rarity: c
   - display_key: mtg-blc-349-nf
     qty: 1
     name: Thriving Isle
     tcgplayer_product_id: "559889"
     tcgplayer_sku_id: "8056067"
     finish: nf
+    rarity: c
   - display_key: mtg-blc-346-nf
     qty: 1
     name: Thriving Bluff
     tcgplayer_product_id: "559891"
     tcgplayer_sku_id: "8056167"
     finish: nf
+    rarity: c
   - display_key: mtg-blc-130-nf
     qty: 1
     name: Command Tower
     tcgplayer_product_id: "559724"
     tcgplayer_sku_id: "8049040"
     finish: nf
+    rarity: c
   - display_key: mtg-blc-318-nf
     qty: 1
     name: Mystic Monastery
     tcgplayer_product_id: "559892"
     tcgplayer_sku_id: "8056217"
     finish: nf
+    rarity: u
   - display_key: mtg-blb-369-nf
     qty: 3
     name: Plains
     tcgplayer_product_id: "559539"
     tcgplayer_sku_id: "8045483"
     finish: nf
+    rarity: c
   - display_key: mtg-blb-370-nf
     qty: 2
     name: Plains
     tcgplayer_product_id: "559559"
     tcgplayer_sku_id: "8045183"
     finish: nf
+    rarity: c
   - display_key: mtg-blb-371-nf
     qty: 2
     name: Island
     tcgplayer_product_id: "559548"
     tcgplayer_sku_id: "8044523"
     finish: nf
+    rarity: c
   - display_key: mtg-blb-372-nf
     qty: 2
     name: Island
     tcgplayer_product_id: "559546"
     tcgplayer_sku_id: "8044403"
     finish: nf
+    rarity: c
   - display_key: mtg-blb-375-nf
     qty: 2
     name: Mountain
     tcgplayer_product_id: "559558"
     tcgplayer_sku_id: "8045123"
     finish: nf
+    rarity: c
   - display_key: mtg-blb-376-nf
     qty: 2
     name: Mountain
     tcgplayer_product_id: "559557"
     tcgplayer_sku_id: "8045063"
     finish: nf
+    rarity: c

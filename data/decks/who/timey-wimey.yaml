@@ -17,12 +17,14 @@ components:
     tcgplayer_product_id: "507037"
     tcgplayer_sku_id: "7296791"
     finish: f
+    rarity: m
   - display_key: mtg-who-5-f
     qty: 1
     name: Rose Tyler
     tcgplayer_product_id: "509575"
     tcgplayer_sku_id: "7334096"
     finish: f
+    rarity: r
   # â”€â”€ Non-foil â€” WHO â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   - display_key: mtg-who-10-nf
     qty: 1
@@ -30,570 +32,665 @@ components:
     tcgplayer_product_id: "519255"
     tcgplayer_sku_id: "7458943"
     finish: nf
+    rarity: r
   - display_key: mtg-who-11-nf
     qty: 1
     name: Astrid Peth
     tcgplayer_product_id: "519215"
     tcgplayer_sku_id: "7457873"
     finish: nf
+    rarity: r
   - display_key: mtg-who-12-nf
     qty: 1
     name: Atraxi Warden
     tcgplayer_product_id: "519227"
     tcgplayer_sku_id: "7458203"
     finish: nf
+    rarity: u
   - display_key: mtg-who-16-nf
     qty: 1
     name: Crack in Time
     tcgplayer_product_id: "519260"
     tcgplayer_sku_id: "7459053"
     finish: nf
+    rarity: r
   - display_key: mtg-who-18-nf
     qty: 1
     name: "Everybody Lives!"
     tcgplayer_product_id: "518879"
     tcgplayer_sku_id: "7452880"
     finish: nf
+    rarity: r
   - display_key: mtg-who-19-nf
     qty: 1
     name: Everything Comes to Dust
     tcgplayer_product_id: "519256"
     tcgplayer_sku_id: "7458973"
     finish: nf
+    rarity: r
   - display_key: mtg-who-20-nf
     qty: 1
     name: Four Knocks
     tcgplayer_product_id: "509579"
     tcgplayer_sku_id: "7334196"
     finish: nf
+    rarity: r
   - display_key: mtg-who-21-nf
     qty: 1
     name: The Girl in the Fireplace
     tcgplayer_product_id: "514526"
     tcgplayer_sku_id: "7419085"
     finish: nf
+    rarity: r
   - display_key: mtg-who-25-nf
     qty: 1
     name: The Pandorica
     tcgplayer_product_id: "519213"
     tcgplayer_sku_id: "7457838"
     finish: nf
+    rarity: r
   - display_key: mtg-who-31-nf
     qty: 1
     name: The Wedding of River Song
     tcgplayer_product_id: "519310"
     tcgplayer_sku_id: "7460183"
     finish: nf
+    rarity: r
   - display_key: mtg-who-32-nf
     qty: 1
     name: Wilfred Mott
     tcgplayer_product_id: "519211"
     tcgplayer_sku_id: "7457803"
     finish: nf
+    rarity: r
   - display_key: mtg-who-34-nf
     qty: 1
     name: "All of History, All at Once"
     tcgplayer_product_id: "519306"
     tcgplayer_sku_id: "7460073"
     finish: nf
+    rarity: r
   - display_key: mtg-who-41-nf
     qty: 1
     name: The Eleventh Hour
     tcgplayer_product_id: "509571"
     tcgplayer_sku_id: "7333996"
     finish: nf
+    rarity: r
   - display_key: mtg-who-44-nf
     qty: 1
     name: Flesh Duplicate
     tcgplayer_product_id: "519221"
     tcgplayer_sku_id: "7458043"
     finish: nf
+    rarity: r
   - display_key: mtg-who-48-nf
     qty: 1
     name: Martha Jones
     tcgplayer_product_id: "519309"
     tcgplayer_sku_id: "7460153"
     finish: nf
+    rarity: r
   - display_key: mtg-who-49-nf
     qty: 1
     name: Nanogene Conversion
     tcgplayer_product_id: "519249"
     tcgplayer_sku_id: "7458763"
     finish: nf
+    rarity: r
   - display_key: mtg-who-55-nf
     qty: 1
     name: Star Whale
     tcgplayer_product_id: "519334"
     tcgplayer_sku_id: "7460713"
     finish: nf
+    rarity: u
   - display_key: mtg-who-58-nf
     qty: 1
     name: Time Beetle
     tcgplayer_product_id: "519300"
     tcgplayer_sku_id: "7459933"
     finish: nf
+    rarity: u
   - display_key: mtg-who-62-nf
     qty: 1
     name: "Wibbly-wobbly, Timey-wimey"
     tcgplayer_product_id: "518887"
     tcgplayer_sku_id: "7453071"
     finish: nf
+    rarity: c
   - display_key: mtg-who-75-nf
     qty: 1
     name: Amy Pond
     tcgplayer_product_id: "518913"
     tcgplayer_sku_id: "7454001"
     finish: nf
+    rarity: r
   - display_key: mtg-who-77-nf
     qty: 1
     name: Coward // Killer
     tcgplayer_product_id: "519266"
     tcgplayer_sku_id: "7459173"
     finish: nf
+    rarity: r
   - display_key: mtg-who-82-nf
     qty: 1
     name: Donna Noble
     tcgplayer_product_id: "514529"
     tcgplayer_sku_id: "7419140"
     finish: nf
+    rarity: r
   - display_key: mtg-who-83-nf
     qty: 1
     name: Ecstatic Beauty
     tcgplayer_product_id: "519228"
     tcgplayer_sku_id: "7458233"
     finish: nf
+    rarity: r
   - display_key: mtg-who-91-nf
     qty: 1
     name: The Parting of the Ways
     tcgplayer_product_id: "507044"
     tcgplayer_sku_id: "7296951"
     finish: nf
+    rarity: r
   - display_key: mtg-who-93-nf
     qty: 1
     name: RMS Titanic
     tcgplayer_product_id: "519277"
     tcgplayer_sku_id: "7459463"
     finish: nf
+    rarity: r
   - display_key: mtg-who-95-nf
     qty: 1
     name: Sibylline Soothsayer
     tcgplayer_product_id: "519253"
     tcgplayer_sku_id: "7458883"
     finish: nf
+    rarity: u
   - display_key: mtg-who-121-nf
     qty: 1
     name: The Day of the Doctor
     tcgplayer_product_id: "518909"
     tcgplayer_sku_id: "7453751"
     finish: nf
+    rarity: r
   - display_key: mtg-who-122-nf
     qty: 1
     name: Dinosaurs on a Spaceship
     tcgplayer_product_id: "519199"
     tcgplayer_sku_id: "7457675"
     finish: nf
+    rarity: r
   - display_key: mtg-who-125-nf
     qty: 1
     name: The Eleventh Doctor
     tcgplayer_product_id: "518906"
     tcgplayer_sku_id: "7453641"
     finish: nf
+    rarity: r
   - display_key: mtg-who-126-nf
     qty: 1
     name: The Face of Boe
     tcgplayer_product_id: "509573"
     tcgplayer_sku_id: "7334046"
     finish: nf
+    rarity: r
   - display_key: mtg-who-131-nf
     qty: 1
     name: Gallifrey Falls // No More
     tcgplayer_product_id: "518809"
     tcgplayer_sku_id: "7452423"
     finish: nf
+    rarity: r
   - display_key: mtg-who-135-nf
     qty: 1
     name: "Idris, Soul of the TARDIS"
     tcgplayer_product_id: "519254"
     tcgplayer_sku_id: "7458913"
     finish: nf
+    rarity: r
   - display_key: mtg-who-137-nf
     qty: 1
     name: "Jenny, Generated Anomaly"
     tcgplayer_product_id: "519245"
     tcgplayer_sku_id: "7458683"
     finish: nf
+    rarity: r
   - display_key: mtg-who-138-nf
     qty: 1
     name: Judoon Enforcers
     tcgplayer_product_id: "519321"
     tcgplayer_sku_id: "7460433"
     finish: nf
+    rarity: u
   - display_key: mtg-who-139-nf
     qty: 1
     name: Kate Stewart
     tcgplayer_product_id: "519244"
     tcgplayer_sku_id: "7458653"
     finish: nf
+    rarity: r
   - display_key: mtg-who-148-nf
     qty: 1
     name: The Ninth Doctor
     tcgplayer_product_id: "518898"
     tcgplayer_sku_id: "7453359"
     finish: nf
+    rarity: r
   - display_key: mtg-who-151-nf
     qty: 1
     name: Regenerations Restored
     tcgplayer_product_id: "519204"
     tcgplayer_sku_id: "7457738"
     finish: nf
+    rarity: r
   - display_key: mtg-who-153-nf
     qty: 1
     name: Rory Williams
     tcgplayer_product_id: "519268"
     tcgplayer_sku_id: "7459233"
     finish: nf
+    rarity: r
   - display_key: mtg-who-154-nf
     qty: 1
     name: Run for Your Life
     tcgplayer_product_id: "518806"
     tcgplayer_sku_id: "7452363"
     finish: nf
+    rarity: r
   - display_key: mtg-who-155-nf
     qty: 1
     name: Sally Sparrow
     tcgplayer_product_id: "519307"
     tcgplayer_sku_id: "7460103"
     finish: nf
+    rarity: r
   - display_key: mtg-who-167-nf
     qty: 1
     name: The War Doctor
     tcgplayer_product_id: "519142"
     tcgplayer_sku_id: "7457163"
     finish: nf
+    rarity: r
   - display_key: mtg-who-180-nf
     qty: 1
     name: The Moment
     tcgplayer_product_id: "519315"
     tcgplayer_sku_id: "7460293"
     finish: nf
+    rarity: r
   - display_key: mtg-who-181-nf
     qty: 1
     name: Psychic Paper
     tcgplayer_product_id: "519296"
     tcgplayer_sku_id: "7459833"
     finish: nf
+    rarity: u
   - display_key: mtg-who-183-nf
     qty: 1
     name: Rotating Fireplace
     tcgplayer_product_id: "519219"
     tcgplayer_sku_id: "7457983"
     finish: nf
+    rarity: r
   - display_key: mtg-who-185-nf
     qty: 1
     name: Sonic Screwdriver
     tcgplayer_product_id: "519332"
     tcgplayer_sku_id: "7460653"
     finish: nf
+    rarity: u
   - display_key: mtg-who-187-nf
     qty: 1
     name: TARDIS
     tcgplayer_product_id: "507041"
     tcgplayer_sku_id: "7296896"
     finish: nf
+    rarity: u
   - display_key: mtg-who-189-nf
     qty: 1
     name: Ominous Cemetery
     tcgplayer_product_id: "519143"
     tcgplayer_sku_id: "7457193"
     finish: nf
+    rarity: u
   - display_key: mtg-who-190-nf
     qty: 1
     name: Trenzalore Clocktower
     tcgplayer_product_id: "519267"
     tcgplayer_sku_id: "7459203"
     finish: nf
+    rarity: r
   - display_key: mtg-who-196-nf
     qty: 2
     name: Plains
     tcgplayer_product_id: "518926"
     tcgplayer_sku_id: "7454381"
     finish: nf
+    rarity: c
   - display_key: mtg-who-197-nf
     qty: 1
     name: Plains
     tcgplayer_product_id: "496081"
     tcgplayer_sku_id: "7151391"
     finish: nf
+    rarity: c
   - display_key: mtg-who-198-nf
     qty: 2
     name: Island
     tcgplayer_product_id: "519085"
     tcgplayer_sku_id: "7456417"
     finish: nf
+    rarity: c
   - display_key: mtg-who-199-nf
     qty: 1
     name: Island
     tcgplayer_product_id: "496080"
     tcgplayer_sku_id: "7151341"
     finish: nf
+    rarity: c
   - display_key: mtg-who-202-nf
     qty: 2
     name: Mountain
     tcgplayer_product_id: "518934"
     tcgplayer_sku_id: "7454511"
     finish: nf
+    rarity: c
   - display_key: mtg-who-203-nf
     qty: 1
     name: Mountain
     tcgplayer_product_id: "496082"
     tcgplayer_sku_id: "7151441"
     finish: nf
+    rarity: c
   - display_key: mtg-who-207-nf
     qty: 1
     name: Farewell
     tcgplayer_product_id: "518857"
     tcgplayer_sku_id: "7452727"
     finish: nf
+    rarity: r
   - display_key: mtg-who-208-nf
     qty: 1
     name: Grasp of Fate
     tcgplayer_product_id: "519222"
     tcgplayer_sku_id: "7458073"
     finish: nf
+    rarity: r
   - display_key: mtg-who-209-nf
     qty: 1
     name: Out of Time
     tcgplayer_product_id: "519327"
     tcgplayer_sku_id: "7460533"
     finish: nf
+    rarity: r
   - display_key: mtg-who-213-nf
     qty: 1
     name: Wedding Ring
     tcgplayer_product_id: "518919"
     tcgplayer_sku_id: "7454201"
     finish: nf
+    rarity: m
   - display_key: mtg-who-214-nf
     qty: 1
     name: As Foretold
     tcgplayer_product_id: "519280"
     tcgplayer_sku_id: "7459523"
     finish: nf
+    rarity: r
   - display_key: mtg-who-215-nf
     qty: 1
     name: Clockspinning
     tcgplayer_product_id: "519270"
     tcgplayer_sku_id: "7459273"
     finish: nf
+    rarity: c
   - display_key: mtg-who-216-nf
     qty: 1
     name: Inspiring Refrain
     tcgplayer_product_id: "519274"
     tcgplayer_sku_id: "7459373"
     finish: nf
+    rarity: r
   - display_key: mtg-who-236-nf
     qty: 1
     name: Fractured Identity
     tcgplayer_product_id: "519230"
     tcgplayer_sku_id: "7458293"
     finish: nf
+    rarity: r
   - display_key: mtg-who-239-nf
     qty: 1
     name: Arcane Signet
     tcgplayer_product_id: "519216"
     tcgplayer_sku_id: "7457903"
     finish: nf
+    rarity: c
   - display_key: mtg-who-243-nf
     qty: 1
     name: Lightning Greaves
     tcgplayer_product_id: "519257"
     tcgplayer_sku_id: "7459003"
     finish: nf
+    rarity: u
   - display_key: mtg-who-244-nf
     qty: 1
     name: Mind Stone
     tcgplayer_product_id: "519238"
     tcgplayer_sku_id: "7458483"
     finish: nf
+    rarity: u
   - display_key: mtg-who-245-nf
     qty: 1
     name: Sol Ring
     tcgplayer_product_id: "519305"
     tcgplayer_sku_id: "7460043"
     finish: nf
+    rarity: u
   - display_key: mtg-who-247-nf
     qty: 1
     name: Talisman of Conviction
     tcgplayer_product_id: "519331"
     tcgplayer_sku_id: "7460623"
     finish: nf
+    rarity: u
   - display_key: mtg-who-248-nf
     qty: 1
     name: Talisman of Creativity
     tcgplayer_product_id: "519271"
     tcgplayer_sku_id: "7459303"
     finish: nf
+    rarity: u
   - display_key: mtg-who-255-nf
     qty: 1
     name: Thought Vessel
     tcgplayer_product_id: "519283"
     tcgplayer_sku_id: "7459573"
     finish: nf
+    rarity: u
   - display_key: mtg-who-264-nf
     qty: 1
     name: Command Tower
     tcgplayer_product_id: "519243"
     tcgplayer_sku_id: "7458623"
     finish: nf
+    rarity: c
   - display_key: mtg-who-270-nf
     qty: 1
     name: Deserted Beach
     tcgplayer_product_id: "519206"
     tcgplayer_sku_id: "7457769"
     finish: nf
+    rarity: r
   - display_key: mtg-who-275-nf
     qty: 1
     name: Evolving Wilds
     tcgplayer_product_id: "519313"
     tcgplayer_sku_id: "7460253"
     finish: nf
+    rarity: c
   - display_key: mtg-who-276-nf
     qty: 1
     name: Exotic Orchard
     tcgplayer_product_id: "519200"
     tcgplayer_sku_id: "7457705"
     finish: nf
+    rarity: r
   - display_key: mtg-who-278-nf
     qty: 1
     name: Fiery Islet
     tcgplayer_product_id: "519239"
     tcgplayer_sku_id: "7458513"
     finish: nf
+    rarity: r
   - display_key: mtg-who-282-nf
     qty: 1
     name: Frostboil Snarl
     tcgplayer_product_id: "519242"
     tcgplayer_sku_id: "7458593"
     finish: nf
+    rarity: r
   - display_key: mtg-who-283-nf
     qty: 1
     name: Furycalm Snarl
     tcgplayer_product_id: "519250"
     tcgplayer_sku_id: "7458793"
     finish: nf
+    rarity: r
   - display_key: mtg-who-285-nf
     qty: 1
     name: Glacial Fortress
     tcgplayer_product_id: "519289"
     tcgplayer_sku_id: "7459703"
     finish: nf
+    rarity: r
   - display_key: mtg-who-288-nf
     qty: 1
     name: Irrigated Farmland
     tcgplayer_product_id: "519224"
     tcgplayer_sku_id: "7458133"
     finish: nf
+    rarity: r
   - display_key: mtg-who-290-nf
     qty: 1
     name: Myriad Landscape
     tcgplayer_product_id: "519217"
     tcgplayer_sku_id: "7457933"
     finish: nf
+    rarity: u
   - display_key: mtg-who-291-nf
     qty: 1
     name: Mystic Monastery
     tcgplayer_product_id: "519263"
     tcgplayer_sku_id: "7459113"
     finish: nf
+    rarity: u
   - display_key: mtg-who-293-nf
     qty: 1
     name: Path of Ancestry
     tcgplayer_product_id: "519251"
     tcgplayer_sku_id: "7458823"
     finish: nf
+    rarity: c
   - display_key: mtg-who-294-nf
     qty: 1
     name: Port Town
     tcgplayer_product_id: "519290"
     tcgplayer_sku_id: "7459733"
     finish: nf
+    rarity: r
   - display_key: mtg-who-295-nf
     qty: 1
     name: Prairie Stream
     tcgplayer_product_id: "519233"
     tcgplayer_sku_id: "7458363"
     finish: nf
+    rarity: r
   - display_key: mtg-who-299-nf
     qty: 1
     name: "Rogue's Passage"
     tcgplayer_product_id: "519220"
     tcgplayer_sku_id: "7458013"
     finish: nf
+    rarity: u
   - display_key: mtg-who-306-nf
     qty: 1
     name: Skycloud Expanse
     tcgplayer_product_id: "519248"
     tcgplayer_sku_id: "7458733"
     finish: nf
+    rarity: r
   - display_key: mtg-who-308-nf
     qty: 1
     name: Stormcarved Coast
     tcgplayer_product_id: "519301"
     tcgplayer_sku_id: "7459963"
     finish: nf
+    rarity: r
   - display_key: mtg-who-309-nf
     qty: 1
     name: Sunbaked Canyon
     tcgplayer_product_id: "519318"
     tcgplayer_sku_id: "7460363"
     finish: nf
+    rarity: r
   - display_key: mtg-who-310-nf
     qty: 1
     name: Sundown Pass
     tcgplayer_product_id: "519234"
     tcgplayer_sku_id: "7458393"
     finish: nf
+    rarity: r
   - display_key: mtg-who-315-nf
     qty: 1
     name: Temple of Enlightenment
     tcgplayer_product_id: "519333"
     tcgplayer_sku_id: "7460683"
     finish: nf
+    rarity: r
   - display_key: mtg-who-316-nf
     qty: 1
     name: Temple of Epiphany
     tcgplayer_product_id: "519223"
     tcgplayer_sku_id: "7458103"
     finish: nf
+    rarity: r
   - display_key: mtg-who-320-nf
     qty: 1
     name: Temple of the False God
     tcgplayer_product_id: "519241"
     tcgplayer_sku_id: "7458563"
     finish: nf
+    rarity: u
   - display_key: mtg-who-321-nf
     qty: 1
     name: Temple of Triumph
     tcgplayer_product_id: "519298"
     tcgplayer_sku_id: "7459893"
     finish: nf
+    rarity: r
   - display_key: mtg-who-323-nf
     qty: 1
     name: "Thespian's Stage"
     tcgplayer_product_id: "519275"
     tcgplayer_sku_id: "7459403"
     finish: nf
+    rarity: r
   - display_key: mtg-who-324-nf
     qty: 1
     name: Thriving Bluff
     tcgplayer_product_id: "519285"
     tcgplayer_sku_id: "7459623"
     finish: nf
+    rarity: c
   - display_key: mtg-who-330-nf
     qty: 1
     name: War Room
     tcgplayer_product_id: "519294"
     tcgplayer_sku_id: "7459793"
     finish: nf
+    rarity: r
   # ── Planechase — WHO ───────────────────────────────────────────────────────
   - display_key: mtg-who-566-nf
     qty: 1
@@ -601,57 +698,67 @@ components:
     tcgplayer_product_id: "518811"
     tcgplayer_sku_id: "7452463"
     finish: nf
+    rarity: c
   - display_key: mtg-who-569-nf
     qty: 1
     name: Bad Wolf Bay
     tcgplayer_product_id: "507032"
     tcgplayer_sku_id: "7296671"
     finish: nf
+    rarity: c
   - display_key: mtg-who-585-nf
     qty: 1
     name: Human-Time Lord Meta-Crisis
     tcgplayer_product_id: "519473"
     tcgplayer_sku_id: "7462498"
     finish: nf
+    rarity: c
   - display_key: mtg-who-587-nf
     qty: 1
     name: Lake Silencio
     tcgplayer_product_id: "519470"
     tcgplayer_sku_id: "7462438"
     finish: nf
+    rarity: c
   - display_key: mtg-who-588-nf
     qty: 1
     name: The Lux Foundation Library
     tcgplayer_product_id: "496083"
     tcgplayer_sku_id: "7151491"
     finish: nf
+    rarity: c
   - display_key: mtg-who-592-nf
     qty: 1
     name: New New York
     tcgplayer_product_id: "519472"
     tcgplayer_sku_id: "7462478"
     finish: nf
+    rarity: c
   - display_key: mtg-who-594-nf
     qty: 1
     name: Ood Sphere
     tcgplayer_product_id: "519474"
     tcgplayer_sku_id: "7462518"
     finish: nf
+    rarity: c
   - display_key: mtg-who-595-nf
     qty: 1
     name: Pompeii
     tcgplayer_product_id: "519188"
     tcgplayer_sku_id: "7457610"
     finish: nf
+    rarity: c
   - display_key: mtg-who-596-nf
     qty: 1
     name: "Prime Minister's Cabinet Room"
     tcgplayer_product_id: "519471"
     tcgplayer_sku_id: "7462458"
     finish: nf
+    rarity: c
   - display_key: mtg-who-603-nf
     qty: 1
     name: Two Streams Facility
     tcgplayer_product_id: "519469"
     tcgplayer_sku_id: "7462418"
     finish: nf
+    rarity: c

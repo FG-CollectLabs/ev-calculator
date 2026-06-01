@@ -10,28 +10,34 @@ components:
     name: "Olórin's Searing Light"
     tcgplayer_product_id: "517247"
     finish: f
+    rarity: r
   - display_key: mtg-ltc-504-f
     qty: 1
     name: Sorcerous Squall
     tcgplayer_product_id: "517250"
     finish: f
+    rarity: r
   - display_key: mtg-ltc-505-f
     qty: 1
     name: "Rammas Echor, Ancient Shield"
     tcgplayer_product_id: "517249"
     finish: f
+    rarity: r
   - display_key: mtg-ltc-506-f
     qty: 1
     name: Courageous Resolve
     tcgplayer_product_id: "517239"
     finish: f
+    rarity: r
   - display_key: mtg-ltc-507-f
     qty: 1
     name: Gandalf of the Secret Fire
     tcgplayer_product_id: "517245"
     finish: f
+    rarity: m
   - display_key: mtg-ltc-508-f
     qty: 1
     name: "Fell Beast's Shriek"
     tcgplayer_product_id: "517240"
     finish: f
+    rarity: r

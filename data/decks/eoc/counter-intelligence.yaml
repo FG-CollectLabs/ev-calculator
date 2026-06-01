@@ -14,6 +14,7 @@ components:
     tcgplayer_product_id: "641865"
     tcgplayer_sku_id: "8807777"
     finish: f
+    rarity: m
     note: commander
   - display_key: mtg-eoc-3-f
     qty: 1
@@ -21,573 +22,669 @@ components:
     tcgplayer_product_id: "638906"
     tcgplayer_sku_id: "8785883"
     finish: f
+    rarity: m
   - display_key: mtg-eoc-5-nf
     qty: 1
     name: Patrolling Peacemaker
     tcgplayer_product_id: "642782"
     tcgplayer_sku_id: "8817322"
     finish: nf
+    rarity: r
   - display_key: mtg-eoc-6-nf
     qty: 1
     name: Insight Engine
     tcgplayer_product_id: "642789"
     tcgplayer_sku_id: "8817532"
     finish: nf
+    rarity: r
   - display_key: mtg-eoc-7-nf
     qty: 1
     name: Uthros Research Craft
     tcgplayer_product_id: "642790"
     tcgplayer_sku_id: "8817562"
     finish: nf
+    rarity: r
   - display_key: mtg-eoc-9-nf
     qty: 1
     name: Depthshaker Titan
     tcgplayer_product_id: "642811"
     tcgplayer_sku_id: "8818105"
     finish: nf
+    rarity: r
   - display_key: mtg-eoc-11-nf
     qty: 1
     name: Long-Range Sensor
     tcgplayer_product_id: "642812"
     tcgplayer_sku_id: "8818135"
     finish: nf
+    rarity: r
   - display_key: mtg-eoc-17-nf
     qty: 1
     name: Moxite Refinery
     tcgplayer_product_id: "642821"
     tcgplayer_sku_id: "8818380"
     finish: nf
+    rarity: r
   - display_key: mtg-eoc-18-nf
     qty: 1
     name: Solar Array
     tcgplayer_product_id: "642822"
     tcgplayer_sku_id: "8818410"
     finish: nf
+    rarity: r
   - display_key: mtg-eoc-19-nf
     qty: 1
     name: Surge Conductor
     tcgplayer_product_id: "642823"
     tcgplayer_sku_id: "8818440"
     finish: nf
+    rarity: r
   - display_key: mtg-eoc-22-nf
     qty: 1
     name: Glittering Massif
     tcgplayer_product_id: "642843"
     tcgplayer_sku_id: "8819040"
     finish: nf
+    rarity: r
   - display_key: mtg-eoc-23-nf
     qty: 1
     name: Radiant Summit
     tcgplayer_product_id: "642844"
     tcgplayer_sku_id: "8819070"
     finish: nf
+    rarity: r
   - display_key: mtg-eoc-46-nf
     qty: 1
     name: Swan Song
     tcgplayer_product_id: "642791"
     tcgplayer_sku_id: "8817592"
     finish: nf
+    rarity: r
   - display_key: mtg-eoc-49-nf
     qty: 1
     name: Chaos Warp
     tcgplayer_product_id: "642813"
     tcgplayer_sku_id: "8818165"
     finish: nf
+    rarity: r
   - display_key: mtg-eoc-54-nf
     qty: 1
     name: Cloud Key
     tcgplayer_product_id: "642824"
     tcgplayer_sku_id: "8818470"
     finish: nf
+    rarity: r
   - display_key: mtg-eoc-55-nf
     qty: 1
     name: Gavel of the Righteous
     tcgplayer_product_id: "642825"
     tcgplayer_sku_id: "8818500"
     finish: nf
+    rarity: r
   - display_key: mtg-eoc-58-nf
     qty: 1
     name: Battlefield Forge
     tcgplayer_product_id: "642845"
     tcgplayer_sku_id: "8819100"
     finish: nf
+    rarity: r
   - display_key: mtg-eoc-63-nf
     qty: 1
     name: Angel of the Ruins
     tcgplayer_product_id: "642784"
     tcgplayer_sku_id: "8817382"
     finish: nf
+    rarity: r
   - display_key: mtg-eoc-65-nf
     qty: 1
     name: Fumigate
     tcgplayer_product_id: "644794"
     tcgplayer_sku_id: "8846246"
     finish: nf
+    rarity: r
   - display_key: mtg-eoc-66-nf
     qty: 1
     name: Organic Extinction
     tcgplayer_product_id: "642787"
     tcgplayer_sku_id: "8817472"
     finish: nf
+    rarity: r
   - display_key: mtg-eoc-67-nf
     qty: 1
     name: Resourceful Defense
     tcgplayer_product_id: "642788"
     tcgplayer_sku_id: "8817502"
     finish: nf
+    rarity: r
   - display_key: mtg-eoc-68-nf
     qty: 1
     name: Chrome Host Seedshark
     tcgplayer_product_id: "642794"
     tcgplayer_sku_id: "8817682"
     finish: nf
+    rarity: r
   - display_key: mtg-eoc-69-nf
     qty: 1
     name: Cyberdrive Awakener
     tcgplayer_product_id: "642795"
     tcgplayer_sku_id: "8817712"
     finish: nf
+    rarity: r
   - display_key: mtg-eoc-70-nf
     qty: 1
     name: Deepglow Skate
     tcgplayer_product_id: "642796"
     tcgplayer_sku_id: "8817742"
     finish: nf
+    rarity: r
   - display_key: mtg-eoc-71-nf
     qty: 1
     name: "Emry, Lurker of the Loch"
     tcgplayer_product_id: "642797"
     tcgplayer_sku_id: "8817772"
     finish: nf
+    rarity: r
   - display_key: mtg-eoc-74-nf
     qty: 1
     name: Kappa Cannoneer
     tcgplayer_product_id: "642803"
     tcgplayer_sku_id: "8817865"
     finish: nf
+    rarity: r
   - display_key: mtg-eoc-75-nf
     qty: 1
     name: Phyrexian Metamorph
     tcgplayer_product_id: "642804"
     tcgplayer_sku_id: "8817895"
     finish: nf
+    rarity: r
   - display_key: mtg-eoc-76-nf
     qty: 1
     name: Pull from Tomorrow
     tcgplayer_product_id: "642805"
     tcgplayer_sku_id: "8817925"
     finish: nf
+    rarity: r
   - display_key: mtg-eoc-77-nf
     qty: 1
     name: Ripples of Potential
     tcgplayer_product_id: "642806"
     tcgplayer_sku_id: "8817955"
     finish: nf
+    rarity: r
   - display_key: mtg-eoc-78-nf
     qty: 1
     name: "Tekuthal, Inquiry Dominus"
     tcgplayer_product_id: "642807"
     tcgplayer_sku_id: "8817985"
     finish: nf
+    rarity: m
   - display_key: mtg-eoc-79-nf
     qty: 1
     name: Thought Monitor
     tcgplayer_product_id: "642808"
     tcgplayer_sku_id: "8818015"
     finish: nf
+    rarity: r
   - display_key: mtg-eoc-81-nf
     qty: 1
     name: Universal Surveillance
     tcgplayer_product_id: "642810"
     tcgplayer_sku_id: "8818075"
     finish: nf
+    rarity: r
   - display_key: mtg-eoc-87-nf
     qty: 1
     name: Chain Reaction
     tcgplayer_product_id: "642814"
     tcgplayer_sku_id: "8818195"
     finish: nf
+    rarity: r
   - display_key: mtg-eoc-113-nf
     qty: 1
     name: "Alibou, Ancient Witness"
     tcgplayer_product_id: "642815"
     tcgplayer_sku_id: "8818225"
     finish: nf
+    rarity: m
   - display_key: mtg-eoc-118-nf
     qty: 1
     name: "Jhoira, Weatherlight Captain"
     tcgplayer_product_id: "642818"
     tcgplayer_sku_id: "8818290"
     finish: nf
+    rarity: r
   - display_key: mtg-eoc-128-nf
     qty: 1
     name: Wake the Past
     tcgplayer_product_id: "642819"
     tcgplayer_sku_id: "8818320"
     finish: nf
+    rarity: r
   - display_key: mtg-eoc-131-nf
     qty: 1
     name: Astral Cornucopia
     tcgplayer_product_id: "642827"
     tcgplayer_sku_id: "8818560"
     finish: nf
+    rarity: r
   - display_key: mtg-eoc-133-nf
     qty: 1
     name: Crystalline Crawler
     tcgplayer_product_id: "642829"
     tcgplayer_sku_id: "8818620"
     finish: nf
+    rarity: r
   - display_key: mtg-eoc-134-nf
     qty: 1
     name: Darksteel Reactor
     tcgplayer_product_id: "642830"
     tcgplayer_sku_id: "8818650"
     finish: nf
+    rarity: r
   - display_key: mtg-eoc-135-nf
     qty: 1
     name: Empowered Autogenerator
     tcgplayer_product_id: "642831"
     tcgplayer_sku_id: "8818680"
     finish: nf
+    rarity: r
   - display_key: mtg-eoc-139-nf
     qty: 1
     name: Hangarback Walker
     tcgplayer_product_id: "642835"
     tcgplayer_sku_id: "8818800"
     finish: nf
+    rarity: r
   - display_key: mtg-eoc-140-nf
     qty: 1
     name: Lux Artillery
     tcgplayer_product_id: "642836"
     tcgplayer_sku_id: "8818830"
     finish: nf
+    rarity: r
   - display_key: mtg-eoc-141-nf
     qty: 1
     name: Lux Cannon
     tcgplayer_product_id: "642837"
     tcgplayer_sku_id: "8818860"
     finish: nf
+    rarity: r
   - display_key: mtg-eoc-144-nf
     qty: 1
     name: Steel Overseer
     tcgplayer_product_id: "642840"
     tcgplayer_sku_id: "8818950"
     finish: nf
+    rarity: r
   - display_key: mtg-eoc-145-nf
     qty: 1
     name: Threefold Thunderhulk
     tcgplayer_product_id: "642841"
     tcgplayer_sku_id: "8818980"
     finish: nf
+    rarity: r
   - display_key: mtg-eoc-146-nf
     qty: 1
     name: Titan Forge
     tcgplayer_product_id: "642842"
     tcgplayer_sku_id: "8819010"
     finish: nf
+    rarity: r
   - display_key: mtg-eoc-147-nf
     qty: 1
     name: Adarkar Wastes
     tcgplayer_product_id: "642846"
     tcgplayer_sku_id: "8819130"
     finish: nf
+    rarity: r
   - display_key: mtg-eoc-153-nf
     qty: 1
     name: Cascade Bluffs
     tcgplayer_product_id: "642849"
     tcgplayer_sku_id: "8819220"
     finish: nf
+    rarity: r
   - display_key: mtg-eoc-155-nf
     qty: 1
     name: Clifftop Retreat
     tcgplayer_product_id: "642850"
     tcgplayer_sku_id: "8819250"
     finish: nf
+    rarity: r
   - display_key: mtg-eoc-159-nf
     qty: 1
     name: Exotic Orchard
     tcgplayer_product_id: "642851"
     tcgplayer_sku_id: "8819280"
     finish: nf
+    rarity: r
   - display_key: mtg-eoc-160-nf
     qty: 1
     name: Glacial Fortress
     tcgplayer_product_id: "642852"
     tcgplayer_sku_id: "8819310"
     finish: nf
+    rarity: r
   - display_key: mtg-eoc-162-nf
     qty: 1
     name: Irrigated Farmland
     tcgplayer_product_id: "642854"
     tcgplayer_sku_id: "8819370"
     finish: nf
+    rarity: r
   - display_key: mtg-eoc-163-nf
     qty: 1
     name: "Karn's Bastion"
     tcgplayer_product_id: "642855"
     tcgplayer_sku_id: "8819400"
     finish: nf
+    rarity: r
   - display_key: mtg-eoc-168-nf
     qty: 1
     name: The Mycosynth Gardens
     tcgplayer_product_id: "642857"
     tcgplayer_sku_id: "8819460"
     finish: nf
+    rarity: r
   - display_key: mtg-eoc-174-nf
     qty: 1
     name: Rugged Prairie
     tcgplayer_product_id: "642860"
     tcgplayer_sku_id: "8819550"
     finish: nf
+    rarity: r
   - display_key: mtg-eoc-179-nf
     qty: 1
     name: Shivan Reef
     tcgplayer_product_id: "642864"
     tcgplayer_sku_id: "8819670"
     finish: nf
+    rarity: r
   - display_key: mtg-eoc-181-nf
     qty: 1
     name: Skycloud Expanse
     tcgplayer_product_id: "642866"
     tcgplayer_sku_id: "8819730"
     finish: nf
+    rarity: r
   - display_key: mtg-eoc-183-nf
     qty: 1
     name: Spire of Industry
     tcgplayer_product_id: "642867"
     tcgplayer_sku_id: "8819760"
     finish: nf
+    rarity: r
   - display_key: mtg-eoc-184-nf
     qty: 1
     name: Sulfur Falls
     tcgplayer_product_id: "642868"
     tcgplayer_sku_id: "8819790"
     finish: nf
+    rarity: r
   - display_key: mtg-eoc-186-nf
     qty: 1
     name: Temple of Enlightenment
     tcgplayer_product_id: "642869"
     tcgplayer_sku_id: "8819820"
     finish: nf
+    rarity: r
   - display_key: mtg-eoc-187-nf
     qty: 1
     name: Temple of Epiphany
     tcgplayer_product_id: "642870"
     tcgplayer_sku_id: "8819850"
     finish: nf
+    rarity: r
   - display_key: mtg-eoc-188-nf
     qty: 1
     name: Temple of Triumph
     tcgplayer_product_id: "642871"
     tcgplayer_sku_id: "8819880"
     finish: nf
+    rarity: r
   - display_key: mtg-eoc-45-nf
     qty: 1
     name: Swords to Plowshares
     tcgplayer_product_id: "642783"
     tcgplayer_sku_id: "8817352"
     finish: nf
+    rarity: u
   - display_key: mtg-eoc-47-nf
     qty: 1
     name: "Tezzeret's Gambit"
     tcgplayer_product_id: "642792"
     tcgplayer_sku_id: "8817622"
     finish: nf
+    rarity: u
   - display_key: mtg-eoc-48-nf
     qty: 1
     name: Thirst for Knowledge
     tcgplayer_product_id: "642793"
     tcgplayer_sku_id: "8817652"
     finish: nf
+    rarity: u
   - display_key: mtg-eoc-53-nf
     qty: 1
     name: Arcane Signet
     tcgplayer_product_id: "642024"
     tcgplayer_sku_id: "8810791"
     finish: nf
+    rarity: c
   - display_key: mtg-eoc-56-nf
     qty: 1
     name: Pentad Prism
     tcgplayer_product_id: "642826"
     tcgplayer_sku_id: "8818530"
     finish: nf
+    rarity: u
   - display_key: mtg-eoc-57-nf
     qty: 1
     name: Sol Ring
     tcgplayer_product_id: "642025"
     tcgplayer_sku_id: "8810821"
     finish: nf
+    rarity: u
   - display_key: mtg-eoc-59-nf
     qty: 1
     name: Command Tower
     tcgplayer_product_id: "642032"
     tcgplayer_sku_id: "8811001"
     finish: nf
+    rarity: c
   - display_key: mtg-eoc-64-nf
     qty: 1
     name: Dispatch
     tcgplayer_product_id: "642785"
     tcgplayer_sku_id: "8817412"
     finish: nf
+    rarity: u
   - display_key: mtg-eoc-72-nf
     qty: 1
     name: Etherium Sculptor
     tcgplayer_product_id: "642801"
     tcgplayer_sku_id: "8817805"
     finish: nf
+    rarity: c
   - display_key: mtg-eoc-73-nf
     qty: 1
     name: Experimental Augury
     tcgplayer_product_id: "642802"
     tcgplayer_sku_id: "8817835"
     finish: nf
+    rarity: c
   - display_key: mtg-eoc-80-nf
     qty: 1
     name: Thrummingbird
     tcgplayer_product_id: "642809"
     tcgplayer_sku_id: "8818045"
     finish: nf
+    rarity: u
   - display_key: mtg-eoc-114-nf
     qty: 1
     name: Enthusiastic Mechanaut
     tcgplayer_product_id: "642816"
     tcgplayer_sku_id: "8818255"
     finish: nf
+    rarity: u
   - display_key: mtg-eoc-132-nf
     qty: 1
     name: Coretapper
     tcgplayer_product_id: "642828"
     tcgplayer_sku_id: "8818590"
     finish: nf
+    rarity: u
   - display_key: mtg-eoc-136-nf
     qty: 1
     name: Etched Oracle
     tcgplayer_product_id: "642832"
     tcgplayer_sku_id: "8818710"
     finish: nf
+    rarity: u
   - display_key: mtg-eoc-137-nf
     qty: 1
     name: Everflowing Chalice
     tcgplayer_product_id: "642833"
     tcgplayer_sku_id: "8818740"
     finish: nf
+    rarity: u
   - display_key: mtg-eoc-138-nf
     qty: 1
     name: Golem Foundry
     tcgplayer_product_id: "642834"
     tcgplayer_sku_id: "8818770"
     finish: nf
+    rarity: c
   - display_key: mtg-eoc-142-nf
     qty: 1
     name: Mindless Automaton
     tcgplayer_product_id: "642838"
     tcgplayer_sku_id: "8818890"
     finish: nf
+    rarity: u
   - display_key: mtg-eoc-143-nf
     qty: 1
     name: Soul-Guide Lantern
     tcgplayer_product_id: "642839"
     tcgplayer_sku_id: "8818920"
     finish: nf
+    rarity: u
   - display_key: mtg-eoc-148-nf
     qty: 1
     name: Ancient Den
     tcgplayer_product_id: "642847"
     tcgplayer_sku_id: "8819160"
     finish: nf
+    rarity: c
   - display_key: mtg-eoc-150-nf
     qty: 1
     name: Buried Ruin
     tcgplayer_product_id: "642848"
     tcgplayer_sku_id: "8819190"
     finish: nf
+    rarity: u
   - display_key: mtg-eoc-158-nf
     qty: 1
     name: Evolving Wilds
     tcgplayer_product_id: "642062"
     tcgplayer_sku_id: "8811321"
     finish: nf
+    rarity: c
   - display_key: mtg-eoc-161-nf
     qty: 1
     name: Great Furnace
     tcgplayer_product_id: "642853"
     tcgplayer_sku_id: "8819340"
     finish: nf
+    rarity: c
   - display_key: mtg-eoc-166-nf
     qty: 1
     name: Lonely Sandbar
     tcgplayer_product_id: "642856"
     tcgplayer_sku_id: "8819430"
     finish: nf
+    rarity: c
   - display_key: mtg-eoc-170-nf
     qty: 1
     name: Mystic Monastery
     tcgplayer_product_id: "642858"
     tcgplayer_sku_id: "8819490"
     finish: nf
+    rarity: u
   - display_key: mtg-eoc-171-nf
     qty: 1
     name: Razortide Bridge
     tcgplayer_product_id: "642859"
     tcgplayer_sku_id: "8819520"
     finish: nf
+    rarity: c
   - display_key: mtg-eoc-175-nf
     qty: 1
     name: Rustvale Bridge
     tcgplayer_product_id: "642861"
     tcgplayer_sku_id: "8819580"
     finish: nf
+    rarity: c
   - display_key: mtg-eoc-176-nf
     qty: 1
     name: Seat of the Synod
     tcgplayer_product_id: "642862"
     tcgplayer_sku_id: "8819610"
     finish: nf
+    rarity: c
   - display_key: mtg-eoc-177-nf
     qty: 1
     name: Secluded Steppe
     tcgplayer_product_id: "642863"
     tcgplayer_sku_id: "8819640"
     finish: nf
+    rarity: c
   - display_key: mtg-eoc-180-nf
     qty: 1
     name: Silverbluff Bridge
     tcgplayer_product_id: "642865"
     tcgplayer_sku_id: "8819700"
     finish: nf
+    rarity: c
   - display_key: mtg-eoe-267-nf
     qty: 2
     name: Plains
     tcgplayer_product_id: "641838"
     tcgplayer_sku_id: "8806712"
     finish: nf
+    rarity: c
   - display_key: mtg-eoe-268-nf
     qty: 1
     name: Plains
     tcgplayer_product_id: "641839"
     tcgplayer_sku_id: "8806772"
     finish: nf
+    rarity: c
   - display_key: mtg-eoe-269-nf
     qty: 2
     name: Island
     tcgplayer_product_id: "641840"
     tcgplayer_sku_id: "8806832"
     finish: nf
+    rarity: c
   - display_key: mtg-eoe-270-nf
     qty: 1
     name: Island
     tcgplayer_product_id: "641841"
     tcgplayer_sku_id: "8806892"
     finish: nf
+    rarity: c
   - display_key: mtg-eoe-273-nf
     qty: 2
     name: Mountain
     tcgplayer_product_id: "641844"
     tcgplayer_sku_id: "8807072"
     finish: nf
+    rarity: c
   - display_key: mtg-eoe-274-nf
     qty: 1
     name: Mountain
     tcgplayer_product_id: "641845"
     tcgplayer_sku_id: "8807132"
     finish: nf
+    rarity: c

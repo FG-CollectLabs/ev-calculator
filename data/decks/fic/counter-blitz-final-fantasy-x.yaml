@@ -15,6 +15,7 @@ components:
     tcgplayer_product_id: "618873"
     tcgplayer_sku_id: "8581055"
     finish: f
+    rarity: m
     note: commander
   - display_key: mtg-fic-8-f
     qty: 1
@@ -22,591 +23,690 @@ components:
     tcgplayer_product_id: "630780"
     tcgplayer_sku_id: "8690591"
     finish: f
+    rarity: m
   - display_key: mtg-fic-10-nf
     qty: 1
     name: "Auron, Venerated Guardian"
     tcgplayer_product_id: "631134"
     tcgplayer_sku_id: "8702979"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-12-nf
     qty: 1
     name: Chocobo Knights
     tcgplayer_product_id: "631141"
     tcgplayer_sku_id: "8703219"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-19-nf
     qty: 1
     name: Gatta and Luzzu
     tcgplayer_product_id: "631148"
     tcgplayer_sku_id: "8703459"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-23-nf
     qty: 1
     name: Lord Jyscal Guado
     tcgplayer_product_id: "631151"
     tcgplayer_sku_id: "8703549"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-24-nf
     qty: 1
     name: Protection Magic
     tcgplayer_product_id: "631154"
     tcgplayer_sku_id: "8703639"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-27-nf
     qty: 1
     name: "Summon: Ixion"
     tcgplayer_product_id: "631157"
     tcgplayer_sku_id: "8703729"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-28-nf
     qty: 1
     name: "Summon: Yojimbo"
     tcgplayer_product_id: "631165"
     tcgplayer_sku_id: "8703969"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-29-nf
     qty: 1
     name: "Summoner's Sending"
     tcgplayer_product_id: "631168"
     tcgplayer_sku_id: "8704059"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-34-nf
     qty: 1
     name: Blitzball Stadium
     tcgplayer_product_id: "631232"
     tcgplayer_sku_id: "8705979"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-38-nf
     qty: 1
     name: "Lulu, Stern Guardian"
     tcgplayer_product_id: "631236"
     tcgplayer_sku_id: "8706099"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-39-nf
     qty: 1
     name: "O'aka, Traveling Merchant"
     tcgplayer_product_id: "631242"
     tcgplayer_sku_id: "8706279"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-41-nf
     qty: 1
     name: "Rikku, Resourceful Guardian"
     tcgplayer_product_id: "631247"
     tcgplayer_sku_id: "8706429"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-42-nf
     qty: 1
     name: "Summon: Valefor"
     tcgplayer_product_id: "631254"
     tcgplayer_sku_id: "8706639"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-68-nf
     qty: 1
     name: Maester Seymour
     tcgplayer_product_id: "631517"
     tcgplayer_sku_id: "8711369"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-70-nf
     qty: 1
     name: Sphere Grid
     tcgplayer_product_id: "631529"
     tcgplayer_sku_id: "8711533"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-71-nf
     qty: 1
     name: "Summon: Magus Sisters"
     tcgplayer_product_id: "631532"
     tcgplayer_sku_id: "8711623"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-73-nf
     qty: 1
     name: "Tromell, Seymour's Butler"
     tcgplayer_product_id: "631534"
     tcgplayer_sku_id: "8711663"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-74-nf
     qty: 1
     name: "Yuna's Decision"
     tcgplayer_product_id: "631536"
     tcgplayer_sku_id: "8711703"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-75-nf
     qty: 1
     name: "Yuna's Whistle"
     tcgplayer_product_id: "631538"
     tcgplayer_sku_id: "8711743"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-85-nf
     qty: 1
     name: "Kimahri, Valiant Guardian"
     tcgplayer_product_id: "631320"
     tcgplayer_sku_id: "8708619"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-94-nf
     qty: 1
     name: "Shelinda, Yevon Acolyte"
     tcgplayer_product_id: "631323"
     tcgplayer_sku_id: "8708709"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-95-nf
     qty: 1
     name: "Sin, Unending Cataclysm"
     tcgplayer_product_id: "631325"
     tcgplayer_sku_id: "8708769"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-97-nf
     qty: 1
     name: "Wakka, Devoted Guardian"
     tcgplayer_product_id: "631326"
     tcgplayer_sku_id: "8708799"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-237-nf
     qty: 1
     name: Collective Effort
     tcgplayer_product_id: "631172"
     tcgplayer_sku_id: "8704179"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-239-nf
     qty: 1
     name: Damning Verdict
     tcgplayer_product_id: "631176"
     tcgplayer_sku_id: "8704299"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-242-nf
     qty: 1
     name: Farewell
     tcgplayer_product_id: "631183"
     tcgplayer_sku_id: "8704509"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-246-nf
     qty: 1
     name: Luminous Broodmoth
     tcgplayer_product_id: "631192"
     tcgplayer_sku_id: "8704779"
     finish: nf
+    rarity: m
   - display_key: mtg-fic-249-nf
     qty: 1
     name: Promise of Loyalty
     tcgplayer_product_id: "631211"
     tcgplayer_sku_id: "8705349"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-251-nf
     qty: 1
     name: Resourceful Defense
     tcgplayer_product_id: "631214"
     tcgplayer_sku_id: "8705439"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-252-nf
     qty: 1
     name: Scholar of New Horizons
     tcgplayer_product_id: "631218"
     tcgplayer_sku_id: "8705559"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-255-nf
     qty: 1
     name: Sunscorch Regent
     tcgplayer_product_id: "631222"
     tcgplayer_sku_id: "8705679"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-257-nf
     qty: 1
     name: Together Forever
     tcgplayer_product_id: "631227"
     tcgplayer_sku_id: "8705829"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-262-nf
     qty: 1
     name: Chasm Skulker
     tcgplayer_product_id: "631260"
     tcgplayer_sku_id: "8706819"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-265-nf
     qty: 1
     name: Inexorable Tide
     tcgplayer_product_id: "631262"
     tcgplayer_sku_id: "8706879"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-269-nf
     qty: 1
     name: Pull from Tomorrow
     tcgplayer_product_id: "631269"
     tcgplayer_sku_id: "8707089"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-299-nf
     qty: 1
     name: Bane of Progress
     tcgplayer_product_id: "631542"
     tcgplayer_sku_id: "8711823"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-303-nf
     qty: 1
     name: Fight Rigging
     tcgplayer_product_id: "631552"
     tcgplayer_sku_id: "8712023"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-304-nf
     qty: 1
     name: Forgotten Ancient
     tcgplayer_product_id: "631555"
     tcgplayer_sku_id: "8712093"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-305-nf
     qty: 1
     name: Generous Patron
     tcgplayer_product_id: "631559"
     tcgplayer_sku_id: "8712173"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-306-nf
     qty: 1
     name: Gyre Sage
     tcgplayer_product_id: "631302"
     tcgplayer_sku_id: "8708079"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-307-nf
     qty: 1
     name: Hardened Scales
     tcgplayer_product_id: "631305"
     tcgplayer_sku_id: "8708169"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-309-nf
     qty: 1
     name: Incubation Druid
     tcgplayer_product_id: "631307"
     tcgplayer_sku_id: "8708229"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-312-nf
     qty: 1
     name: Path of Discovery
     tcgplayer_product_id: "631310"
     tcgplayer_sku_id: "8708319"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-314-nf
     qty: 1
     name: Rampant Rejuvenator
     tcgplayer_product_id: "631312"
     tcgplayer_sku_id: "8708379"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-316-nf
     qty: 1
     name: Tireless Tracker
     tcgplayer_product_id: "631317"
     tcgplayer_sku_id: "8708529"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-317-nf
     qty: 1
     name: Altered Ego
     tcgplayer_product_id: "631328"
     tcgplayer_sku_id: "8708859"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-324-nf
     qty: 1
     name: Endless Detour
     tcgplayer_product_id: "631487"
     tcgplayer_sku_id: "8710549"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-325-nf
     qty: 1
     name: Fathom Mage
     tcgplayer_product_id: "631489"
     tcgplayer_sku_id: "8710609"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-371-nf
     qty: 1
     name: Walking Ballista
     tcgplayer_product_id: "631496"
     tcgplayer_sku_id: "8710819"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-377-nf
     qty: 1
     name: Brushland
     tcgplayer_product_id: "631253"
     tcgplayer_sku_id: "8706609"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-378-nf
     qty: 1
     name: Canopy Vista
     tcgplayer_product_id: "631255"
     tcgplayer_sku_id: "8706669"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-390-nf
     qty: 1
     name: Exotic Orchard
     tcgplayer_product_id: "631261"
     tcgplayer_sku_id: "8706849"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-393-nf
     qty: 1
     name: Flooded Grove
     tcgplayer_product_id: "631497"
     tcgplayer_sku_id: "8710849"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-396-nf
     qty: 1
     name: Fortified Village
     tcgplayer_product_id: "631267"
     tcgplayer_sku_id: "8707029"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-400-nf
     qty: 1
     name: Glacial Fortress
     tcgplayer_product_id: "631321"
     tcgplayer_sku_id: "8708649"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-403-nf
     qty: 1
     name: Hinterland Harbor
     tcgplayer_product_id: "631499"
     tcgplayer_sku_id: "8710909"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-410-nf
     qty: 1
     name: Overflowing Basin
     tcgplayer_product_id: "631501"
     tcgplayer_sku_id: "8710969"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-412-nf
     qty: 1
     name: Port Town
     tcgplayer_product_id: "631327"
     tcgplayer_sku_id: "8708829"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-413-nf
     qty: 1
     name: Prairie Stream
     tcgplayer_product_id: "631329"
     tcgplayer_sku_id: "8708889"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-423-nf
     qty: 1
     name: Skycloud Expanse
     tcgplayer_product_id: "631478"
     tcgplayer_sku_id: "8710419"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-428-nf
     qty: 1
     name: Sungrass Prairie
     tcgplayer_product_id: "631283"
     tcgplayer_sku_id: "8707509"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-432-nf
     qty: 1
     name: Sunpetal Grove
     tcgplayer_product_id: "631285"
     tcgplayer_sku_id: "8707569"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-435-nf
     qty: 1
     name: Temple of Enlightenment
     tcgplayer_product_id: "631504"
     tcgplayer_sku_id: "8711059"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-436-nf
     qty: 1
     name: Temple of Mystery
     tcgplayer_product_id: "631505"
     tcgplayer_sku_id: "8711089"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-437-nf
     qty: 1
     name: Temple of Plenty
     tcgplayer_product_id: "631506"
     tcgplayer_sku_id: "8711119"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-440-nf
     qty: 1
     name: Vineglimmer Snarl
     tcgplayer_product_id: "631507"
     tcgplayer_sku_id: "8711149"
     finish: nf
+    rarity: r
   - display_key: mtg-fic-240-nf
     qty: 1
     name: Destroy Evil
     tcgplayer_product_id: "631180"
     tcgplayer_sku_id: "8704419"
     finish: nf
+    rarity: c
   - display_key: mtg-fic-244-nf
     qty: 1
     name: Grateful Apparition
     tcgplayer_product_id: "631185"
     tcgplayer_sku_id: "8704569"
     finish: nf
+    rarity: u
   - display_key: mtg-fic-248-nf
     qty: 1
     name: Path to Exile
     tcgplayer_product_id: "631196"
     tcgplayer_sku_id: "8704899"
     finish: nf
+    rarity: u
   - display_key: mtg-fic-267-nf
     qty: 1
     name: "An Offer You Can't Refuse"
     tcgplayer_product_id: "631265"
     tcgplayer_sku_id: "8706969"
     finish: nf
+    rarity: u
   - display_key: mtg-fic-301-nf
     qty: 1
     name: Duskshell Crawler
     tcgplayer_product_id: "631545"
     tcgplayer_sku_id: "8711873"
     finish: nf
+    rarity: c
   - display_key: mtg-fic-302-nf
     qty: 1
     name: Farseek
     tcgplayer_product_id: "631548"
     tcgplayer_sku_id: "8711943"
     finish: nf
+    rarity: c
   - display_key: mtg-fic-310-nf
     qty: 1
     name: Inspiring Call
     tcgplayer_product_id: "631308"
     tcgplayer_sku_id: "8708259"
     finish: nf
+    rarity: u
   - display_key: mtg-fic-315-nf
     qty: 1
     name: Three Visits
     tcgplayer_product_id: "631315"
     tcgplayer_sku_id: "8708469"
     finish: nf
+    rarity: u
   - display_key: mtg-fic-321-nf
     qty: 1
     name: Bred for the Hunt
     tcgplayer_product_id: "631330"
     tcgplayer_sku_id: "8708919"
     finish: nf
+    rarity: u
   - display_key: mtg-fic-334-nf
     qty: 1
     name: Arcane Signet
     tcgplayer_product_id: "631491"
     tcgplayer_sku_id: "8710669"
     finish: nf
+    rarity: c
   - display_key: mtg-fic-343-nf
     qty: 1
     name: Everflowing Chalice
     tcgplayer_product_id: "631494"
     tcgplayer_sku_id: "8710759"
     finish: nf
+    rarity: u
   - display_key: mtg-fic-358-nf
     qty: 1
     name: Sol Ring
     tcgplayer_product_id: "631495"
     tcgplayer_sku_id: "8710789"
     finish: nf
+    rarity: u
   - display_key: mtg-fic-374-nf
     qty: 1
     name: Ash Barrens
     tcgplayer_product_id: "631288"
     tcgplayer_sku_id: "8707659"
     finish: nf
+    rarity: c
   - display_key: mtg-fic-389-nf
     qty: 1
     name: Evolving Wilds
     tcgplayer_product_id: "631290"
     tcgplayer_sku_id: "8707719"
     finish: nf
+    rarity: c
   - display_key: mtg-fic-395-nf
     qty: 1
     name: Forge of Heroes
     tcgplayer_product_id: "631498"
     tcgplayer_sku_id: "8710879"
     finish: nf
+    rarity: c
   - display_key: mtg-fic-404-nf
     qty: 1
     name: Idyllic Beachfront
     tcgplayer_product_id: "631322"
     tcgplayer_sku_id: "8708679"
     finish: nf
+    rarity: c
   - display_key: mtg-fic-408-nf
     qty: 1
     name: Nesting Grounds
     tcgplayer_product_id: "631500"
     tcgplayer_sku_id: "8710939"
     finish: nf
+    rarity: u
   - display_key: mtg-fic-411-nf
     qty: 1
     name: Path of Ancestry
     tcgplayer_product_id: "631295"
     tcgplayer_sku_id: "8707869"
     finish: nf
+    rarity: c
   - display_key: mtg-fic-414-nf
     qty: 1
     name: Radiant Grove
     tcgplayer_product_id: "631297"
     tcgplayer_sku_id: "8707929"
     finish: nf
+    rarity: c
   - display_key: mtg-fic-420-nf
     qty: 1
     name: Seaside Citadel
     tcgplayer_product_id: "631502"
     tcgplayer_sku_id: "8710999"
     finish: nf
+    rarity: u
   - display_key: mtg-fic-434-nf
     qty: 1
     name: Tangled Islet
     tcgplayer_product_id: "631503"
     tcgplayer_sku_id: "8711029"
     finish: nf
+    rarity: c
   - display_key: mtg-fic-438-nf
     qty: 1
     name: Temple of the False God
     tcgplayer_product_id: "631492"
     tcgplayer_sku_id: "8710699"
     finish: nf
+    rarity: u
   - display_key: mtg-fic-486-nf
     qty: 1
     name: Command Tower
     tcgplayer_product_id: "631508"
     tcgplayer_sku_id: "8711179"
     finish: nf
+    rarity: c
   - display_key: mtg-fin-297-nf
     qty: 1
     name: Island
     tcgplayer_product_id: "630882"
     tcgplayer_sku_id: "8692805"
     finish: nf
+    rarity: c
   - display_key: mtg-fin-298-nf
     qty: 1
     name: Island
     tcgplayer_product_id: "630885"
     tcgplayer_sku_id: "8692925"
     finish: nf
+    rarity: c
   - display_key: mtg-fin-299-nf
     qty: 1
     name: Island
     tcgplayer_product_id: "630886"
     tcgplayer_sku_id: "8692985"
     finish: nf
+    rarity: c
   - display_key: mtg-fin-306-nf
     qty: 1
     name: Forest
     tcgplayer_product_id: "630899"
     tcgplayer_sku_id: "8693575"
     finish: nf
+    rarity: c
   - display_key: mtg-fin-307-nf
     qty: 1
     name: Forest
     tcgplayer_product_id: "630901"
     tcgplayer_sku_id: "8693640"
     finish: nf
+    rarity: c
   - display_key: mtg-fin-308-nf
     qty: 1
     name: Forest
     tcgplayer_product_id: "630903"
     tcgplayer_sku_id: "8693760"
     finish: nf
+    rarity: c
   - display_key: mtg-fin-294-nf
     qty: 1
     name: Plains
     tcgplayer_product_id: "630875"
     tcgplayer_sku_id: "8692460"
     finish: nf
+    rarity: c
   - display_key: mtg-fin-295-nf
     qty: 1
     name: Plains
     tcgplayer_product_id: "630879"
     tcgplayer_sku_id: "8692645"
     finish: nf
+    rarity: c
   - display_key: mtg-fin-296-nf
     qty: 1
     name: Plains
     tcgplayer_product_id: "630881"
     tcgplayer_sku_id: "8692745"
     finish: nf
+    rarity: c
