@@ -205,12 +205,13 @@ func main() {
 			return
 		}
 		type deckEntry struct {
-			Key               string                  `json:"key"`
-			Name              string                  `json:"name"`
-			Game              string                  `json:"game"`
-			SetCode           string                  `json:"set_code"`
-			ProductDisplayKey string                  `json:"product_display_key"`
-			Validation        *decks.DeckValidation   `json:"validation,omitempty"`
+			Key               string                `json:"key"`
+			Name              string                `json:"name"`
+			Game              string                `json:"game"`
+			SetCode           string                `json:"set_code"`
+			TCGSetName        string                `json:"tcg_set_name,omitempty"`
+			ProductDisplayKey string                `json:"product_display_key"`
+			Validation        *decks.DeckValidation `json:"validation,omitempty"`
 		}
 		entries := make([]deckEntry, 0, len(deckMap))
 		for _, d := range deckMap {
@@ -219,6 +220,7 @@ func main() {
 				Name:              d.Name,
 				Game:              d.Game,
 				SetCode:           d.SetCode,
+				TCGSetName:        d.TCGSetName,
 				ProductDisplayKey: d.ProductDisplayKey,
 				Validation:        d.Validation,
 			})
