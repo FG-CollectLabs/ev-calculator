@@ -582,3 +582,64 @@ components:
     tcgplayer_product_id: "519273"
     tcgplayer_sku_id: "7459343"
     finish: nf
+  # ── Planechase — WHO ───────────────────────────────────────────────────────
+  - display_key: mtg-who-570-nf
+    qty: 1
+    name: Besieged Viking Village
+    tcgplayer_product_id: "518812"
+    tcgplayer_sku_id: "7452483"
+    finish: nf
+  - display_key: mtg-who-578-nf
+    qty: 1
+    name: The Dining Car
+    tcgplayer_product_id: "519680"
+    tcgplayer_sku_id: "7465923"
+    finish: nf
+  - display_key: mtg-who-579-nf
+    qty: 1
+    name: "The Doctor's Childhood Barn"
+    tcgplayer_product_id: "519189"
+    tcgplayer_sku_id: "7457630"
+    finish: nf
+  - display_key: mtg-who-581-nf
+    qty: 1
+    name: The Drum
+    tcgplayer_product_id: "519683"
+    tcgplayer_sku_id: "7465968"
+    finish: nf
+  - display_key: mtg-who-582-nf
+    qty: 1
+    name: Fixed Point in Time
+    tcgplayer_product_id: "507033"
+    tcgplayer_sku_id: "7296696"
+    finish: nf
+  - display_key: mtg-who-586-nf
+    qty: 1
+    name: "Kerblam! Warehouse"
+    tcgplayer_product_id: "519686"
+    tcgplayer_sku_id: "7466013"
+    finish: nf
+  - display_key: mtg-who-593-nf
+    qty: 1
+    name: North Pole Research Base
+    tcgplayer_product_id: "519682"
+    tcgplayer_sku_id: "7465948"
+    finish: nf
+  - display_key: mtg-who-598-nf
+    qty: 1
+    name: Singing Towers of Darillium
+    tcgplayer_product_id: "519690"
+    tcgplayer_sku_id: "7466063"
+    finish: nf
+  - display_key: mtg-who-600-nf
+    qty: 1
+    name: Stormcage Containment Facility
+    tcgplayer_product_id: "519688"
+    tcgplayer_sku_id: "7466038"
+    finish: nf
+  - display_key: mtg-who-602-nf
+    qty: 1
+    name: Temple of Atropos
+    tcgplayer_product_id: "519685"
+    tcgplayer_sku_id: "7465993"
+    finish: nf

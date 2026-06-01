@@ -612,3 +612,64 @@ components:
     tcgplayer_product_id: "520015"
     tcgplayer_sku_id: "7469817"
     finish: nf
+  # ── Planechase — WHO ───────────────────────────────────────────────────────
+  - display_key: mtg-who-568-nf
+    qty: 1
+    name: Aplan Mortarium
+    tcgplayer_product_id: "518810"
+    tcgplayer_sku_id: "7452443"
+    finish: nf
+  - display_key: mtg-who-571-nf
+    qty: 1
+    name: Bowie Base One
+    tcgplayer_product_id: "520116"
+    tcgplayer_sku_id: "7470984"
+    finish: nf
+  - display_key: mtg-who-575-nf
+    qty: 1
+    name: City of the Daleks
+    tcgplayer_product_id: "520120"
+    tcgplayer_sku_id: "7471064"
+    finish: nf
+  - display_key: mtg-who-577-nf
+    qty: 1
+    name: Dalek Intensive Care
+    tcgplayer_product_id: "520114"
+    tcgplayer_sku_id: "7470944"
+    finish: nf
+  - display_key: mtg-who-580-nf
+    qty: 1
+    name: "The Doctor's Tomb"
+    tcgplayer_product_id: "507035"
+    tcgplayer_sku_id: "7296746"
+    finish: nf
+  - display_key: mtg-who-584-nf
+    qty: 1
+    name: Hotel of Fears
+    tcgplayer_product_id: "520115"
+    tcgplayer_sku_id: "7470964"
+    finish: nf
+  - display_key: mtg-who-589-nf
+    qty: 1
+    name: The Matrix of Time
+    tcgplayer_product_id: "520117"
+    tcgplayer_sku_id: "7471004"
+    finish: nf
+  - display_key: mtg-who-590-nf
+    qty: 1
+    name: Mondassian Colony Ship
+    tcgplayer_product_id: "520118"
+    tcgplayer_sku_id: "7471024"
+    finish: nf
+  - display_key: mtg-who-591-nf
+    qty: 1
+    name: The Moonbase
+    tcgplayer_product_id: "520122"
+    tcgplayer_sku_id: "7471085"
+    finish: nf
+  - display_key: mtg-who-605-nf
+    qty: 1
+    name: Unleash the Flux
+    tcgplayer_product_id: "520119"
+    tcgplayer_sku_id: "7471044"
+    finish: nf

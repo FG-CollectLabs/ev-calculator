@@ -606,3 +606,64 @@ components:
     tcgplayer_product_id: "519273"
     tcgplayer_sku_id: "7459343"
     finish: nf
+  # ── Planechase — WHO ───────────────────────────────────────────────────────
+  - display_key: mtg-who-567-nf
+    qty: 1
+    name: Antarctic Research Base
+    tcgplayer_product_id: "520334"
+    tcgplayer_sku_id: "7473860"
+    finish: nf
+  - display_key: mtg-who-572-nf
+    qty: 1
+    name: Caught in a Parallel Universe
+    tcgplayer_product_id: "520338"
+    tcgplayer_sku_id: "7473940"
+    finish: nf
+  - display_key: mtg-who-573-nf
+    qty: 1
+    name: The Cave of Skulls
+    tcgplayer_product_id: "520335"
+    tcgplayer_sku_id: "7473880"
+    finish: nf
+  - display_key: mtg-who-574-nf
+    qty: 1
+    name: The Cheetah Planet
+    tcgplayer_product_id: "520331"
+    tcgplayer_sku_id: "7473800"
+    finish: nf
+  - display_key: mtg-who-576-nf
+    qty: 1
+    name: Coal Hill School
+    tcgplayer_product_id: "520333"
+    tcgplayer_sku_id: "7473840"
+    finish: nf
+  - display_key: mtg-who-583-nf
+    qty: 1
+    name: Gardens of Tranquil Repose
+    tcgplayer_product_id: "520332"
+    tcgplayer_sku_id: "7473820"
+    finish: nf
+  - display_key: mtg-who-597-nf
+    qty: 1
+    name: The Pyramid of Mars
+    tcgplayer_product_id: "520336"
+    tcgplayer_sku_id: "7473900"
+    finish: nf
+  - display_key: mtg-who-599-nf
+    qty: 1
+    name: Spectrox Mines
+    tcgplayer_product_id: "520337"
+    tcgplayer_sku_id: "7473920"
+    finish: nf
+  - display_key: mtg-who-601-nf
+    qty: 1
+    name: TARDIS Bay
+    tcgplayer_product_id: "507034"
+    tcgplayer_sku_id: "7296721"
+    finish: nf
+  - display_key: mtg-who-604-nf
+    qty: 1
+    name: UNIT Headquarters
+    tcgplayer_product_id: "518813"
+    tcgplayer_sku_id: "7452503"
+    finish: nf

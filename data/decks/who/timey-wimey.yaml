@@ -594,3 +594,64 @@ components:
     tcgplayer_product_id: "519294"
     tcgplayer_sku_id: "7459793"
     finish: nf
+  # ── Planechase — WHO ───────────────────────────────────────────────────────
+  - display_key: mtg-who-566-nf
+    qty: 1
+    name: "Amy's Home"
+    tcgplayer_product_id: "518811"
+    tcgplayer_sku_id: "7452463"
+    finish: nf
+  - display_key: mtg-who-569-nf
+    qty: 1
+    name: Bad Wolf Bay
+    tcgplayer_product_id: "507032"
+    tcgplayer_sku_id: "7296671"
+    finish: nf
+  - display_key: mtg-who-585-nf
+    qty: 1
+    name: Human-Time Lord Meta-Crisis
+    tcgplayer_product_id: "519473"
+    tcgplayer_sku_id: "7462498"
+    finish: nf
+  - display_key: mtg-who-587-nf
+    qty: 1
+    name: Lake Silencio
+    tcgplayer_product_id: "519470"
+    tcgplayer_sku_id: "7462438"
+    finish: nf
+  - display_key: mtg-who-588-nf
+    qty: 1
+    name: The Lux Foundation Library
+    tcgplayer_product_id: "496083"
+    tcgplayer_sku_id: "7151491"
+    finish: nf
+  - display_key: mtg-who-592-nf
+    qty: 1
+    name: New New York
+    tcgplayer_product_id: "519472"
+    tcgplayer_sku_id: "7462478"
+    finish: nf
+  - display_key: mtg-who-594-nf
+    qty: 1
+    name: Ood Sphere
+    tcgplayer_product_id: "519474"
+    tcgplayer_sku_id: "7462518"
+    finish: nf
+  - display_key: mtg-who-595-nf
+    qty: 1
+    name: Pompeii
+    tcgplayer_product_id: "519188"
+    tcgplayer_sku_id: "7457610"
+    finish: nf
+  - display_key: mtg-who-596-nf
+    qty: 1
+    name: "Prime Minister's Cabinet Room"
+    tcgplayer_product_id: "519471"
+    tcgplayer_sku_id: "7462458"
+    finish: nf
+  - display_key: mtg-who-603-nf
+    qty: 1
+    name: Two Streams Facility
+    tcgplayer_product_id: "519469"
+    tcgplayer_sku_id: "7462418"
+    finish: nf
