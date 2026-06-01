@@ -635,7 +635,7 @@ components:
     tcgplayer_product_id: "679610"
     tcgplayer_sku_id: "9154572"
     finish: nf
-    rarity: r
+    rarity: u
   - display_key: mtg-tmt-315-nf
     qty: 2
     name: "Plains (0315)"
